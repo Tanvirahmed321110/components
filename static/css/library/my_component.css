@@ -366,22 +366,14 @@
 
 /******  Hover button 1  ******/
 .hover-btn1 {
-    background-color: rgb(34, 31, 31);
-    color: rgb(255, 255, 255);
-    width: 127px;
-    height: 40px;
-    font-size: 12px;
+    width: fit-content;
     font-weight: 600;
-    line-height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 19px;
-    margin: 26px auto auto;
     position: relative;
     z-index: 1;
     outline: none;
-    border: 2px solid rgb(176, 175, 175);
     /* Make sure ::after can be behind text */
     overflow: hidden;
     /* Hide ::after overflow during animation */
@@ -395,12 +387,12 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(237, 27, 52);
+    background-color: var(--my-primary-color);
     transform: scaleX(0);
     /* Start compressed horizontally */
     transform-origin: center;
-    transition: transform 0.5s ease;
-    border-radius: 19px;
+    transition: transform .5s ease;
+    border-radius: 60px;
     z-index: -1;
     /* Push it behind the text */
 }
@@ -420,6 +412,8 @@
 
 
 
+
+
 /*___________||  Spinner End Here  ||___________ */
 
 
@@ -432,8 +426,7 @@
 .my-btn-sm {
     cursor: pointer;
     user-select: none;
-    font-size: var(--fs-sm);
-    padding: 12px 20px;
+    padding: 12px 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,24 +437,22 @@
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    gap: 8px;
+    font-size: var(--fs-md);
+    line-height: var(--fs-md);
 }
 
+.my-btn.my-btn-sm i {
+    font-size: var(--fs-md);
+}
 
-
+/*
+#########  For Pill Button  #########
+*/
 .my-btn.my-btn-pill {
     border-radius: var(--radius-pill);
     padding: 13px 26px;
 }
-
-.my-btn.my-btn-outline {
-    border: 1px solid var(--my-border-color2);
-}
-
-.my-btn.my-btn-outline:hover {
-    background-color: var(--my-border-color);
-    color: var(--my-primary-color);
-}
-
 
 .my-btn.my-btn-sm {
     padding: 8px 14px;
@@ -469,31 +460,56 @@
     border-radius: 6px;
 }
 
-.my-btn.my-btn-sm i {
-    font-size: 16px;
+
+/*
+#########  For Outline Button  #########
+*/
+.my-btn.my-outline-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--my-border-gray);
+    background-color: var(--my-white);
+    color: var(--my-text-quaternary);
 }
 
+.my-btn.my-outline-btn:hover {
+    color: var(--my-text-quaternary);
+}
+
+.my-btn.my-outline-btn.active {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+}
+
+
+/*
+#########  For Primary Button  #########
+*/
 .my-primary-btn {
     background-color: var(--my-primary-color);
     color: var(--my-white);
 }
 
+.my-primary-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+
+/*
+#########  For Secondary Button  #########
+*/
 .my-secondary-btn {
-    background-color: #13AA52;
+    background-color: var(--my-bg-yellow);
     color: var(--my-white);
 }
 
 .my-secondary-btn:hover {
-    background-color: #109246;
+    background-color: var(--my-warring);
 }
 
 
-
-.my-primary-btn:hover {
-    background-color: var(--my-primary-hover-color);
-}
-
-/* close button */
+/**
+*******  For Close Button  *******
+**/
 .close-btn-right {
     position: absolute;
     right: 0;
@@ -1641,6 +1657,10 @@ input[type="radio"]:checked::after {
 /*==========  click dropdown  ==========*/
 .click-dropdown-parent {
     position: relative;
+}
+
+.click-dropdown-btn {
+    cursor: pointer !important;
 }
 
 .click-dropdown {
