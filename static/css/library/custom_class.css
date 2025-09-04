@@ -383,10 +383,11 @@ section {
     color: var(--my-text-primary);
 }
 
-.cart-title-sub {
+.cart-sub-title {
     font-size: var(--fs-md);
     font-weight: var(--fw-600);
     line-height: var(--line-height-md);
+    color: var(--my-text-primary);
 }
 
 .title-sm {
@@ -1168,7 +1169,7 @@ section {
 }
 
 .my-text-primary {
-    color: var(--my-primary-color);
+    color: var(--my-text-primary);
 }
 
 .my-text-navy {

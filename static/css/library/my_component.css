@@ -1664,10 +1664,10 @@ input[type="radio"]:checked::after {
 }
 
 .click-dropdown {
-    min-width: 200px;
+    min-width: 100%;
     border-radius: 4px;
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 12px);
     right: 0;
     background-color: var(--my-white);
     box-shadow: var(--shadow-3);
@@ -1676,6 +1676,16 @@ input[type="radio"]:checked::after {
     animation: slideDown .5s ease-out;
     display: none;
     opacity: 0;
+    width: 100%;
+}
+
+.click-dropdown.lg {
+    width: 100%;
+    min-width: 1020px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--my-white-off);
+    border-bottom: none;
 }
 
 .click-dropdown.mobile {
@@ -1683,10 +1693,10 @@ input[type="radio"]:checked::after {
     bottom: calc(100% + 16px);
 }
 
-.click-dropdown ul {
+/* .click-dropdown ul {
     max-height: 320px;
     overflow-y: auto;
-}
+} */
 
 .click-dropdown ul li {
     position: relative;
@@ -1705,9 +1715,7 @@ input[type="radio"]:checked::after {
     border-radius: 50%;
 }
 
-.click-dropdown.lg {
-    width: 300px;
-}
+
 
 .click-dropdown.active {
     display: block;
@@ -1723,14 +1731,28 @@ input[type="radio"]:checked::after {
     font-size: var(--fs-sm);
     width: 100%;
     font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
 }
 
 .click-dropdown .item:hover {
-    background-color: var(--my-white-off);
+    background-color: var(--my-bg-primary-hover);
+    border: 1px solid var(--my-border-color);
 }
 
 .click-dropdown .item.active {
-    background-color: var(--my-border-color);
+    background-color: var(--my-bg-primary-hover);
+    border: 1px solid var(--my-border-color);
+}
+
+.click-dropdown.lg .item {
+    font-size: var(--fs-md);
+    padding: 8px 12px;
+}
+
+.click-dropdown.lg .item:hover {
+    background-color: var(--my-bg-primary-hover);
+    border: 1px solid var(--my-border-color);
 }
 
 .click-dropdown::after,
@@ -1743,6 +1765,7 @@ input[type="radio"]:checked::after {
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
     border-bottom: 14px solid var(--my-white);
+    box-shadow: var(--shadow-lg);
 }
 
 .my-dropdown::after {
