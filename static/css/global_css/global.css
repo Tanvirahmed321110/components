@@ -8,6 +8,7 @@
     --my-primary-color: #0F4638;
     --my-secondary-color: #FC5A31;
 
+    --my-white: #FFFFFF;
     --my-bg-dark: #000;
     --my-bg-primary: #FFF;
     --my-bg-primary-hover: #FAFAFA;
@@ -17,6 +18,10 @@
     --my-bg-yellow: #DDED59;
     --my-bg-warring: #FDB022;
 
+    --my-white-off: #f1f1f1;
+    --my-white-off2: #e0e0e0;
+    --my-border-color: #E9D7FE;
+
     --my-text-primary: #181D27;
     --my-text-secondary: #414651;
     --my-text-quaternary: #717680;
@@ -25,7 +30,8 @@
     --my-text-yellow: #DDED59;
     --my-text-rating: #FFBE0B;
     --my-text-warring: #FDB022;
-
+    --my-text-white-off2: #ededed;
+    --my-text-red: red;
 
     /* For Border color */
     --my-border-primary: #D5D7DA;
@@ -35,29 +41,7 @@
 
 
 
-    /* Other  */
-    --my-text-green: #9a5545;
-    --my-body-bg: #faeded;
 
-    --my-white: #FFFFFF;
-    --my-black: #000;
-    --my-gold: #72f714;
-    --my-warring: #e2ac09;
-    --my-green: #9a5545;
-    --my-gray: #767676;
-    --my-gray2: #b0adad;
-
-    --my-white: #FFFFFF;
-    --my-white-off: #F0F3F2;
-    --my-white-off2: #ECF3FE;
-    --my-border-color: #ededed;
-    --my-border-color2: #c7c7c7;
-    --my-red: #EE1B24;
-    --my-blue: rgb(59, 59, 244);
-    --my-after: #1878F2;
-    --my-before: #256fd1ca;
-    --my-input: #1876f25b;
-    --my-dark: #333;
 
 
     /* ______ bg color in section ______ */
@@ -188,15 +172,15 @@ header .header-top {
 */
 header .header-top .become-supplier-btn {
     padding: 10px 16px;
-    background-color: var(--my-bg-white-off);
+    background-color: var(--my-white-off);
     border-radius: 40px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid var(--my-white-off);
     transition: .3s;
 }
 
 header .header-top .become-supplier-btn:hover {
     background-color: transparent;
-    border: 1px solid #f1f1f1;
+    border: 1px solid var(--my-white-off);
 }
 
 header .header-top .become-supplier-btn:hover span {
@@ -272,10 +256,6 @@ header .header-top .right .other-btns .item {
 }
 
 
-
-
-
-
 /*
 =================||    Header Main    ||===================
 */
@@ -312,13 +292,16 @@ footer {
 }
 
 
+/*
+=================||    Footer Top    ||===================
+*/
 footer .footer-top .left {
     max-width: 320px;
 }
 
 footer .footer-top .right .footer-nav-item {
     font-size: var(--fs-sm);
-    color: var(--my-border-color);
+    color: var(--my-text-white-off2);
 }
 
 footer .footer-top .right {
@@ -326,7 +309,9 @@ footer .footer-top .right {
 }
 
 
-
+/*
+=================||    Footer Bottom    ||===================
+*/
 footer .footer-bottom .left {
     display: flex;
     align-items: flex-end;
