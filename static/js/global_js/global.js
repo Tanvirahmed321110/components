@@ -38,40 +38,45 @@ mobileMenuF();
 
 
 
-
-/// For click dropdown
 function dropdownToggleF() {
-    const btns = document.querySelectorAll('.dropdown-btn');
+    const btns = document.querySelectorAll('.click-dropdown-btn');
 
     if (btns) {
         btns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                const dropdownParent = btn.closest('.click-dropdown-parent');
-                const dropdown = dropdownParent.querySelector('.click-dropdown')
-                if (dropdown) {
-                    dropdown.classList.toggle('active');
-                }
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent outside click handler from firing immediately
 
-                // Close all other dropdowns
-                document.querySelectorAll('.click-dropdown').forEach(other => {
-                    if (other !== dropdown) other.classList.remove('active');
+                const dropdownParent = btn.closest('.click-dropdown-parent');
+                const dropdown = dropdownParent.querySelector('.click-dropdown');
+
+                // Close all other dropdowns + buttons first
+                document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
+                    if (parent !== dropdownParent) {
+                        parent.querySelector('.click-dropdown')?.classList.remove('active');
+                        parent.querySelector('.click-dropdown-btn')?.classList.remove('active');
+                    }
                 });
 
+                // Toggle current one
+                btn.classList.toggle('active');
+                dropdown?.classList.toggle('active');
             });
         });
     }
 
-
     // Click outside to close
     document.addEventListener('click', function (e) {
-        document.querySelectorAll('.click-dropdown').forEach(dropdown => {
-            if (!e.target.closest('.click-dropdown-parent')) {
-                dropdown.classList.remove('active');
-            }
-        });
+        if (!e.target.closest('.click-dropdown-parent')) {
+            document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
+                parent.querySelector('.click-dropdown')?.classList.remove('active');
+                parent.querySelector('.click-dropdown-btn')?.classList.remove('active');
+            });
+        }
     });
 }
-dropdownToggleF()
+
+dropdownToggleF();
+
 
 
 
