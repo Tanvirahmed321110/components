@@ -100,13 +100,13 @@ button {
 
 
 /* When active button */
-button:active {
+/* button:active {
     transform: translateY(-3px);
 }
 
 a.my-btn:active {
     transform: translateY(-3px);
-}
+} */
 
 
 p {
@@ -444,6 +444,126 @@ section {
 
 .my-h-100 {
     height: 100%;
+}
+
+.my-h-1 {
+    height: 2px;
+}
+
+.my-h-2 {
+    height: 4px;
+}
+
+.my-h-3 {
+    height: 6px;
+}
+
+.my-h-4 {
+    height: 8px;
+}
+
+.my-h-5 {
+    height: 10px;
+}
+
+.my-h-6 {
+    height: 12px;
+}
+
+.my-h-7 {
+    height: 14px;
+}
+
+.my-h-8 {
+    height: 16px;
+}
+
+.my-h-9 {
+    height: 18px;
+}
+
+.my-h-10 {
+    height: 20px;
+}
+
+.my-h-11 {
+    height: 22px;
+}
+
+.my-h-12 {
+    height: 24px;
+}
+
+.my-h-13 {
+    height: 26px;
+}
+
+.my-h-14 {
+    height: 28px;
+}
+
+.my-h-15 {
+    height: 30px;
+}
+
+.my-h-16 {
+    height: 32px;
+}
+
+.my-h-17 {
+    height: 34px;
+}
+
+.my-h-18 {
+    height: 36px;
+}
+
+.my-h-19 {
+    height: 38px;
+}
+
+.my-h-20 {
+    height: 40px;
+}
+
+.my-h-21 {
+    height: 42px;
+}
+
+.my-h-22 {
+    height: 44px;
+}
+
+.my-h-23 {
+    height: 46px;
+}
+
+.my-h-24 {
+    height: 48px;
+}
+
+.my-h-25 {
+    height: 50px;
+}
+
+.my-h-26 {
+    height: 52px;
+}
+
+.my-h-27 {
+    height: 54px;
+}
+
+.my-h-28 {
+    height: 56px;
+}
+
+.my-h-29 {
+    height: 58px;
+}
+
+.my-h-30 {
+    height: 60px;
 }
 
 
@@ -1345,7 +1465,15 @@ section {
 }
 
 .my-text-gray {
-    color: var(--my-gray);
+    color: var(--my-border-gray);
+}
+
+.my-text-quaternary {
+    color: var(--my-text-quaternary);
+}
+
+.my-text-tertiary {
+    color: var(--my-text-tertiary);
 }
 
 .my-text-warring {
