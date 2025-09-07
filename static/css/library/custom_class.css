@@ -1393,7 +1393,7 @@ section {
 }
 
 .my-text-secondary {
-    color: var(--my-secondary-hover);
+    color: var(--my-secondary-color);
 }
 
 .my-text-color {
@@ -1401,11 +1401,11 @@ section {
 }
 
 .my-text-gold {
-    color: var(--my-gold);
+    color: var(--my-text-rating);
 }
 
 .my-text-yellow {
-    color: var(--my-yellow);
+    color: var(--my-text-yellow);
 }
 
 /*______  Bg Color ______ */

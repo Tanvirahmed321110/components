@@ -213,10 +213,12 @@ header .header-top .right .other-btns .item:hover,
 header .header-top .right .item:not(.item):hover,
 header .header-top .click-dropdown-btn.active,
 header .header-top .click-dropdown-btn:hover {
-    opacity: .64;
-    transition: .3s;
+    opacity: .62;
+    transition: .3s linear;
     user-select: none;
 }
+
+
 
 /*
 ======  Click Dropdown Button  ======
@@ -231,10 +233,10 @@ header .header-top .click-dropdown-btn::after {
     top: 0px;
     right: 34%;
     z-index: 13;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-bottom: 18px solid var(--my-white);
-    filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.2))
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid var(--my-white);
+    filter: drop-shadow(0 0px 1px rgba(0, 0, 0, 0.1))
         /* top */
         drop-shadow(0px 0 2px rgba(0, 0, 0, 0.1))
         /* left */
@@ -246,7 +248,7 @@ header .header-top .click-dropdown-btn::after {
 }
 
 header .header-top .click-dropdown-btn.active::after {
-    top: 35px;
+    top: 36px;
     opacity: 1;
     display: block;
 }
@@ -262,14 +264,26 @@ header .header-top .right .other-btns .item {
 header .header-main .item {
     font-weight: var(--fw-600);
     font-size: var(--fs-md);
-    transition: .3s;
+    transition: .2s linear;
 }
 
-header .header-main .item:hover {
-    opacity: .64;
+header .header-main .item:hover,
+header .header-main .item.active {
+    color: var(--my-secondary-color);
 }
 
 
+header .header-main .item:hover svg path {
+    transition: .2s linear;
+    fill: var(--my-secondary-color);
+}
+
+header .header-main .click-dropdown-btn:hover svg path,
+header .header-main .item:hover svg path,
+header .header-main .item.active svg path {
+    fill: var(--my-secondary-color);
+    transition: .2s linear;
+}
 
 
 
@@ -299,9 +313,56 @@ footer .footer-top .left {
     max-width: 320px;
 }
 
+footer .footer-top .right .item li {
+    width: 100%;
+}
+
+footer .footer-top .right .nav-item-title {
+    position: relative;
+    width: fit-content;
+}
+
+footer .footer-top .right .nav-item-title::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--my-white-off2);
+    border-radius: var(--radius-sm);
+}
+
 footer .footer-top .right .footer-nav-item {
     font-size: var(--fs-sm);
-    color: var(--my-text-white-off2);
+    color: var(--my-white-off2);
+    padding: 2px 0;
+    position: relative;
+    padding-right: 8px;
+}
+
+footer .footer-top .right .footer-nav-item:hover {
+    color: var(--my-text-yellow);
+}
+
+footer .footer-top .right .footer-nav-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 4px;
+    transition: .3s linear;
+    background-color: var(--my-text-yellow);
+    border-radius: var(--radius-round);
+    transform: scale(0);
+}
+
+
+footer .footer-top .right .footer-nav-item:hover::after {
+
+    transform: scale(1);
 }
 
 footer .footer-top .right {
@@ -315,4 +376,38 @@ footer .footer-top .right {
 footer .footer-bottom .left {
     display: flex;
     align-items: flex-end;
+}
+
+
+/*
+=========||    Footer Social Icons    ||==========
+*/
+.footer-bottom .footer-social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    color: var(--my-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    border: 2px solid var(--my-white-off2);
+}
+
+.footer-bottom .footer-social-icons a:hover {
+    background-color: var(--my-white);
+    color: var(--my-primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.footer-bottom .footer-social-icons a svg {
+    transition: .3s;
+    width: 20px;
+}
+
+.footer-bottom .footer-social-icons a:hover svg {
+    fill: currentColor;
+    stroke: currentColor;
+    transition: .3s;
 }
