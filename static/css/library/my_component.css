@@ -594,16 +594,18 @@
 
 .my-input-control input {
     padding: 11px 14px;
-    border: 1px solid var(--my-border-color2);
+    border: 1px solid var(--my-white-off2);
     outline: none;
     border-radius: 8px;
     transition: .15s linear;
     max-width: 540px;
     width: 100%;
-    color: var(--my-gray);
+    color: var(--my-text-secondary);
     background-color: transparent;
     font-weight: var(--fw-500);
 }
+
+
 
 .my-input-control.full-width input {
     max-width: 100%;
@@ -1681,7 +1683,7 @@ input[type="radio"]:checked::after {
     display: none;
     opacity: 0;
     width: 100%;
-    max-height: 500px;
+    max-height: 560px;
     overflow-y: auto;
 }
 
@@ -1696,7 +1698,7 @@ input[type="radio"]:checked::after {
 .click-dropdown.sm {
     width: 100%;
     max-width: 300px;
-    min-width: 310px;
+    min-width: 320px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--my-white-off);
     border-radius: var(--radius-md);
@@ -3962,7 +3964,7 @@ ______________________________________*/
 .common-form input,
 .common-form textarea {
     max-width: 100%;
-    border: 1px solid var(--my-border-color2);
+    border: 1px solid var(--my-border-color);
     background-color: var(--my-white);
 }
 

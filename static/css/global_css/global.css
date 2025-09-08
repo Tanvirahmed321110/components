@@ -28,7 +28,7 @@
     --my-text-secondary: #414651;
     --my-text-quaternary: #717680;
     --my-text-tertiary: #535862;
-    --my-text-placeholder: #afb3b2;
+    --my-text-placeholder: #7c7c7c;
     --my-text-yellow: #DDED59;
     --my-text-rating: #FFBE0B;
     --my-text-warring: #FDB022;
@@ -156,7 +156,7 @@
 */
 header {
     background-color: var(--my-white);
-    padding: 12px 12px 16px 12px;
+    padding: 0px 12px 16px 12px;
 }
 
 
@@ -271,8 +271,31 @@ header .profile-dropdown .head {
     color: var(--my-text-tertiary);
 }
 
-.profile-dropdown::after {
-    content: unset;
+.other-btns .click-dropdown-btn {
+    position: relative;
+}
+
+
+.other-btns .click-dropdown-btn::after {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 0px;
+    right: 0;
+    z-index: 13;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid var(--my-white);
+    filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.2))
+        /* top */
+        drop-shadow(0px 0 0px rgba(0, 0, 0, 0.1))
+        /* left */
+        drop-shadow(0px 0 1px rgba(0, 0, 0, 0.1));
+}
+
+.other-btns .click-dropdown-btn.active::after {
+    bottom: 0;
+    display: block;
 }
 
 .click-dropdown.profile-dropdown .item {
@@ -334,6 +357,7 @@ header .profile-dropdown .head {
     border: 2px solid var(--my-white);
 }
 
+
 /*
 =================||    Header Main    ||===================
 */
@@ -341,6 +365,7 @@ header .header-main .item {
     font-weight: var(--fw-600);
     font-size: var(--fs-md);
     transition: .2s linear;
+    padding-left: 8px;
 }
 
 header .header-main .item:hover,

@@ -1,0 +1,300 @@
+/*
+======================================
+=====||   Hero 1 Start Here    ||=====
+======================================
+*/
+.g-hero-area {
+    /* background-color: whitesmoke; */
+    height: 546px;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.g-hero-banner-img img {
+    border-radius: var(--radius-lg);
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*
+========||   Bottom Search   ||========
+*/
+.g-hero-area .bottom-search {
+    background-color: var(--my-white);
+    position: absolute;
+    bottom: 144px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1024px;
+    height: 144px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--my-white-off);
+}
+
+
+
+/*
+======  Search Tabs   ======
+*/
+.g-hero-area .tab-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+
+.g-hero-area .tab-wrapper {
+    margin: 0 auto;
+    background-color: var(--my-primary-color);
+    border-radius: var(--radius-pill);
+    max-width: 953px;
+    margin: 0 auto;
+    margin-top: -22px;
+    padding: 7px;
+}
+
+.g-hero-area .search-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-left: 4px;
+    padding-right: 12px;
+}
+
+.g-hero-area .search-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+===== Scroll Button  =====
+*/
+.g-hero-area .scroll-btn {
+    position: absolute;
+    top: 15%;
+    transform: translateY(-50%);
+    background: var(--my-white-off);
+    color: var(--my-primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.g-hero-area .scroll-btn:hover {
+    background-color: var(--my-text-quaternary);
+    color: var(--my-white);
+}
+
+.g-hero-area .scroll-btn:hover path {
+    stroke: var(--my-white);
+}
+
+.g-hero-area .scroll-btn.left {
+    left: 44px;
+}
+
+.g-hero-area .scroll-btn.right {
+    right: 44px;
+}
+
+.g-hero-area .tab-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+.g-hero-area .search-tabs .tab-btn {
+    padding: 7px 16px;
+    color: var(--my-white);
+    font-size: 15px;
+    font-weight: var(--fw-600);
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.g-hero-area .search-tabs .tab-btn.active,
+.g-hero-area .search-tabs .tab-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+/*
+======  Search  Button  ======
+*/
+.g-hero-area .search-btn {
+    position: absolute;
+    bottom: 70px;
+}
+
+.search-group {
+    display: none;
+}
+
+.search-group.active {
+    display: flex;
+}
+
+.search-group .my-input-control {
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    background-color: var(--my-white);
+    border: 1px solid var(--my-white-off2);
+    border-radius: var(--radius-md);
+    padding: 12px;
+}
+
+.search-group .small .my-input-control {
+    max-width: 140px;
+}
+
+.search-group .big.my-input-control {
+    max-width: 300px;
+    min-width: 280px;
+}
+
+.search-group .my-input-control input {
+    border: none;
+    padding: 0px 0px;
+    border-radius: 0;
+}
+
+.search-group .my-input-control label {
+    color: var(--my-text-placeholder);
+    width: 100%;
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+======================================
+=====||   Hero 2 Start Here    ||=====
+======================================
+*/
+.g-hero-2-area .slider-top {
+    height: 400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--my-white-off);
+}
+
+.g-hero-2-area .slider-top .swiper {
+    height: 100%;
+}
+
+.g-hero-2-area .slider-top img {
+    height: 100%;
+    width: 100%;
+}
+
+.g-hero-2-area .slider-top {
+    position: relative;
+}
+
+
+/* Style both buttons */
+.g-hero-2-area .slider-top .swiper-button-next,
+.g-hero-2-area .slider-top .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    color: #000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--my-border-secondary);
+    bottom: 100px;
+    top: auto !important;
+    bottom: 80px !important;
+    width: 44px;
+    height: 44px;
+    color: var(--my-white);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.g-hero-2-area .slider-top .swiper-button-next:hover,
+.g-hero-2-area .slider-top .swiper-button-prev:hover {
+    background-color: var(--my-white);
+    color: var(--my-text-quaternary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Make arrow icons smaller and centered */
+.g-hero-2-area .slider-top .swiper-button-next::after,
+.g-hero-2-area .slider-top .swiper-button-prev::after {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+/* Position both buttons on the right side */
+.g-hero-2-area .slider-top .swiper-button-next {
+    right: 46px;
+}
+
+.g-hero-2-area .slider-top .swiper-button-prev {
+    right: 110px;
+    left: auto;
+}
+
+
+/*
+================||   Slider Bottom  ||================
+*/
+.g-hero-2-area .slider-bottom {
+    margin-top: -40px;
+    height: 190px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    margin-top: -40px;
+}
+
+.g-hero-2-area .slider-bottom .bottom {
+    height: 100%;
+}
+
+
+.slider-bottom .item img:hover {
+    border-color: transparent;
+}
+
+.slider-bottom .item img {
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--my-white);
+}
+
+.slider-bottom .swiper-pagination-bullet-active {
+    padding: 4px 8px;
+    background-color: var(--my-primary-color);
+    border-radius: 8px;
+}
