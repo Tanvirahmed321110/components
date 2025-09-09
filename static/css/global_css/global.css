@@ -29,7 +29,7 @@
     --my-text-secondary: #414651;
     --my-text-quaternary: #717680;
     --my-text-tertiary: #535862;
-    --my-text-placeholder: #7c7c7c;
+    --my-text-placeholder: #717680;
     --my-text-yellow: #DDED59;
     --my-text-rating: #FFBE0B;
     --my-text-warring: #FDB022;
@@ -81,6 +81,7 @@
     --radius-lg: 10px;
     --radius-xl: 14px;
     --radius-xxl: 16px;
+    --radius-4xl: 24px;
     --radius-pill: 200px;
     --radius-round: 50%;
 

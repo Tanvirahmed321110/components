@@ -435,11 +435,10 @@
     border-radius: var(--radius-md);
     transition: .3s linear;
     position: relative;
-    overflow: hidden;
     white-space: nowrap;
     gap: 8px;
     font-size: var(--fs-md);
-    line-height: var(--fs-md);
+    line-height: var(--line-height-md);
 }
 
 .my-btn.my-btn-sm i {
@@ -499,11 +498,12 @@
 */
 .my-secondary-btn {
     background-color: var(--my-bg-yellow);
-    color: var(--my-white);
+    color: var(--my-text-secondary);
+    padding: 12px 20px;
 }
 
 .my-secondary-btn:hover {
-    background-color: var(--my-warring);
+    background-color: var(--my-bg-warring);
 }
 
 
@@ -3758,8 +3758,8 @@ input[type="radio"]:checked::after {
 }
 
 .profile-img-md {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
 }
 
 .profile-img-lg {
