@@ -1,100 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Swiper Slider Example</title>
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Hidden Scrollbar Drag Slider</title>
         <style>
+            :root {
+                --gap: 16px;
+                --card-w: 260px;
+                --card-h: 160px;
+                --bg: #0f172a;
+                --card-bg: #0ea5a4;
+                --text: #fff;
+            }
+
+            html,
             body {
-                font-family: 'Segoe UI', sans-serif;
-                padding: 20px;
-                background-color: #f5f5f5;
+                height: 100%;
+                margin: 0;
+                font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+                background: linear-gradient(180deg, #071024 0%, #0b1526 100%);
+                color: var(--text);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
 
-            .swiper {
-                width: 100%;
-                max-width: 900px;
-                height: 300px;
-                margin: auto;
-                background-color: #fff;
-                border-radius: 10px;
+            .wrap {
+                max-width: 1100px;
+                margin: 40px auto;
                 padding: 20px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
 
-            .swiper-slide {
-                background-color: #4f83cc;
-                color: #fff;
-                font-size: 24px;
+            h1 {
+                margin: 0 0 18px 0;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            /* Slider container */
+            .slider {
+                position: relative;
+                overflow: hidden;
+                /* hide overflow visuals */
+                padding-bottom: 8px;
+                /* a little breathing room under items */
+                user-select: none;
+                /* disable text selection while dragging */
+            }
+
+            /* The actual track that scrolls */
+            .slider-track {
                 display: flex;
-                justify-content: center;
+                gap: var(--gap);
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                padding: 12px;
+                cursor: grab;
+                /* shows grab cursor */
+            }
+
+            .slider-track:active {
+                cursor: grabbing;
+            }
+
+            /* Hide scrollbar - Webkit */
+            .slider-track::-webkit-scrollbar {
+                height: 0;
+                /* hide horizontal scrollbar */
+            }
+
+            /* Firefox */
+            .slider-track {
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE 10+ */
+            }
+
+            .slider-track::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* card items */
+            .card {
+                min-width: var(--card-w);
+                height: var(--card-h);
+                flex: 0 0 auto;
+                border-radius: 12px;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+                display: flex;
                 align-items: center;
+                justify-content: center;
+                color: var(--text);
+                font-weight: 700;
+                letter-spacing: 0.2px;
+                font-size: 18px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* simple visual for each item */
+            .card .inner {
+                width: 92%;
+                height: 82%;
                 border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(180deg, rgba(14, 165, 164, 0.95), rgba(6, 95, 92, 0.95));
+                transform: translateY(-2px);
             }
 
-            /* Optional: style navigation buttons */
-            .swiper-button-next,
-            .swiper-button-prev {
-                color: #333;
+            /* Make it responsive: on small screens show smaller cards */
+            @media (max-width:600px) {
+                :root {
+                    --card-w: 200px;
+                    --card-h: 130px;
+                }
+
+                .wrap {
+                    padding: 12px;
+                }
             }
 
-            /* Optional: style pagination dots */
-            .swiper-pagination-bullet {
-                background: #333;
+            /* Optional: keyboard visible hints for accessibility */
+            .hint {
+                margin-top: 12px;
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            /* Optional: hide native focus outline but keep accessible focus */
+            .slider-track:focus {
+                outline: 2px dashed rgba(255, 255, 255, 0.08);
+                outline-offset: 6px;
             }
         </style>
     </head>
 
     <body>
+        <div class="wrap">
+            <h1>Hidden Scrollbar — Drag with Mouse</h1>
 
-        <h2>Swiper Slider Demo</h2>
-
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
+            <div class="slider" aria-label="Image slider">
+                <div class="slider-track" tabindex="0">
+                    <!-- items -->
+                    <div class="card">
+                        <div class="inner">Item 1</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 2</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 3</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 4</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 5</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 6</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 7</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 8</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 9</div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">Item 10</div>
+                    </div>
+                </div>
             </div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+
+            <div class="hint">Tip: click and drag left/right with your mouse (or use touch/trackpad). Arrow keys also
+                scroll when the track is focused.</div>
         </div>
 
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script>
-            const swiper = new Swiper(".mySwiper", {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                breakpoints: {
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 1 },
-                },
-            });
-        </script>
+            // Minimal JS to allow mouse dragging to scroll horizontally.
+            // Put this at the end of the body (already here).
+            (function () {
+                const sliders = document.querySelectorAll('.slider-track'); // grab all sliders
 
+                sliders.forEach((slider) => {
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+
+                    slider.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        slider.classList.add('active');
+                        startX = e.pageX - slider.offsetLeft;
+                        scrollLeft = slider.scrollLeft;
+                        e.preventDefault(); // prevent text selection
+                    });
+
+                    window.addEventListener('mouseup', () => {
+                        isDown = false;
+                        slider.classList.remove('active');
+                    });
+
+                    slider.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        slider.classList.remove('active');
+                    });
+
+                    slider.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        const x = e.pageX - slider.offsetLeft;
+                        const walk = (x - startX) * 1.2;
+                        slider.scrollLeft = scrollLeft - walk;
+                    });
+
+                    // keyboard arrows work per slider
+                    slider.addEventListener('keydown', (e) => {
+                        const step = 120;
+                        if (e.key === 'ArrowRight') {
+                            slider.scrollBy({ left: step, behavior: 'smooth' });
+                            e.preventDefault();
+                        } else if (e.key === 'ArrowLeft') {
+                            slider.scrollBy({ left: -step, behavior: 'smooth' });
+                            e.preventDefault();
+                        }
+                    });
+                });
+            })();
+        </script>
     </body>
 
 </html>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Multiple Tab Sliders</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+
+            /* Tabs */
+            .tab-section {
+                margin-bottom: 60px;
+                border: 2px solid #ccc;
+            }
+
+            .tab-btns {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+                list-style: none;
+            }
+
+            .tab-btns .tab-btn {
+                padding: 8px 16px;
+                border: 1px solid #333;
+                background: #f2f2f2;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            .tab-btn.active {
+                background: #333;
+                color: #fff;
+            }
+
+            /* Tab Content */
+            .tab-content {
+                display: none;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            /* Slider */
+            .slider-wrapper {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .my-slider {
+                display: flex;
+                gap: 16px;
+                scroll-behavior: smooth;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .my-slider::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card {
+                min-width: calc(50% - 8px);
+                background: #eee;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    min-width: 100%;
+                }
+            }
+
+            /* Prev/Next buttons */
+            .slider-controls {
+                position: absolute;
+                bottom: 0px;
+                left: 20px;
+                display: flex;
+                gap: 30px;
+            }
+
+            .slider-controls button {
+                padding: 8px 12px;
+                background: #333;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .slider-controls button:hover {
+                background: #555;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- TAB SECTION 1 -->
+        <div class="tab-section">
+            <h2>Section 1</h2>
+            <ul class="tab-btns">
+                <li><button class="tab-btn active" data-tab="1">Tab 1</button></li>
+                <li><button class="tab-btn" data-tab="2">Tab 2</button></li>
+                <li><button class="tab-btn" data-tab="3">Tab 3</button></li>
+            </ul>
+
+            <div class="tab-contents">
+                <!-- Tab 1 -->
+                <div class="tab-content active" data-tab="1">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S1 Tab 1 - Card 1</div>
+                            <div class="card">S1 Tab 1 - Card 2</div>
+                            <div class="card">S1 Tab 1 - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 2 -->
+                <div class="tab-content" data-tab="2">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S1 Tab 2 - Card 1</div>
+                            <div class="card">S1 Tab 2 - Card 2</div>
+                            <div class="card">S1 Tab 2 - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 3 -->
+                <div class="tab-content" data-tab="3">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S1 Tab 3 - Card 1</div>
+                            <div class="card">S1 Tab 3 - Card 2</div>
+                            <div class="card">S1 Tab 3 - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB SECTION 2 -->
+        <div class="tab-section">
+            <h2>Section 2</h2>
+            <ul class="tab-btns">
+                <li><button class="tab-btn active" data-tab="1">Tab A</button></li>
+                <li><button class="tab-btn" data-tab="2">Tab B</button></li>
+            </ul>
+
+            <div class="tab-contents">
+                <!-- Tab A -->
+                <div class="tab-content active" data-tab="1">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S2 Tab A - Card 1</div>
+                            <div class="card">S2 Tab A - Card 2</div>
+                            <div class="card">S2 Tab A - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab B -->
+                <div class="tab-content" data-tab="2">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S2 Tab B - Card 1</div>
+                            <div class="card">S2 Tab B - Card 2</div>
+                            <div class="card">S2 Tab B - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB SECTION 3 -->
+        <div class="tab-section">
+            <h2>Section 3</h2>
+            <ul class="tab-btns">
+                <li><button class="tab-btn active" data-tab="1">Tab 3</button></li>
+                <li><button class="tab-btn" data-tab="2">Tab 3</button></li>
+            </ul>
+
+            <div class="tab-contents">
+                <!-- Tab A -->
+                <div class="tab-content active" data-tab="1">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S2 Tab 3 - Card 1</div>
+                            <div class="card">S2 Tab 3A - Card 2</div>
+                            <div class="card">S2 Tab 3A - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab B -->
+                <div class="tab-content" data-tab="2">
+                    <div class="slider-wrapper">
+                        <div class="my-slider">
+                            <div class="card">S2 Tab3 B - Card 1</div>
+                            <div class="card">S2 Tab 3B - Card 2</div>
+                            <div class="card">S2 Tab3 B - Card 3</div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev">Prev</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Handle each tab section separately
+            document.querySelectorAll(".tab-section").forEach(section => {
+                const tabBtns = section.querySelectorAll(".tab-btn");
+                const tabContents = section.querySelectorAll(".tab-content");
+
+                if (tabBtns.length && tabContents.length) {
+                    // Tab switching
+                    tabBtns.forEach(btn => {
+                        btn.addEventListener("click", () => {
+                            const tabId = btn.dataset.tab;
+
+                            // Remove active from all
+                            tabBtns.forEach(b => b.classList.remove("active"));
+                            btn.classList.add("active");
+
+                            tabContents.forEach(content => {
+                                content.classList.toggle("active", content.dataset.tab === tabId);
+                            });
+                        });
+                    });
+                }
+
+                // Slider controls
+                section.querySelectorAll(".slider-wrapper").forEach(wrapper => {
+                    const slider = wrapper.querySelector(".my-slider");
+                    const prevBtn = wrapper.querySelector(".prev");
+                    const nextBtn = wrapper.querySelector(".next");
+
+                    if (!slider) return; // skip if slider not found
+
+                    if (prevBtn) {
+                        prevBtn.addEventListener("click", () => {
+                            slider.scrollBy({ left: -slider.clientWidth / 2, behavior: "smooth" });
+                        });
+                    }
+
+                    if (nextBtn) {
+                        nextBtn.addEventListener("click", () => {
+                            slider.scrollBy({ left: slider.clientWidth / 2, behavior: "smooth" });
+                        });
+                    }
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

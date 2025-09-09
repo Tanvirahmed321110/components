@@ -104,3 +104,93 @@ const slider_bottom = new Swiper(".slider-bottom .bottom", {
         1024: { slidesPerView: 5 },
     },
 });
+
+
+
+
+
+//===========  Customer Tab Section  ===========
+document.querySelectorAll(".my-tab-section").forEach(section => {
+    const tabBtns = section.querySelectorAll(".tab-btn");
+    const tabContents = section.querySelectorAll(".tab-content");
+
+    if (tabBtns.length && tabContents.length) {
+        // Tab switching
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const tabId = btn.dataset.tab;
+
+                tabBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                tabContents.forEach(content => {
+                    content.classList.toggle("active", content.dataset.tab === tabId);
+                });
+            });
+        });
+    }
+
+    // Slider controls + mouse scroll
+    section.querySelectorAll(".my-slider-wrapper").forEach(wrapper => {
+        const slider = wrapper.querySelector(".my-slider");
+        const prevBtn = wrapper.querySelector(".prev");
+        const nextBtn = wrapper.querySelector(".next");
+
+        if (!slider) return;
+
+        // ===== Prev/Next Buttons =====
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                slider.scrollBy({ left: -slider.clientWidth / 2, behavior: "smooth" });
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                slider.scrollBy({ left: slider.clientWidth / 2, behavior: "smooth" });
+            });
+        }
+
+        // ===== Mouse Drag Scroll =====
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("mousedown", (e) => {
+            isDown = true;
+            slider.classList.add("active");
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            e.preventDefault(); // prevent text selection
+        });
+
+        slider.addEventListener("mouseleave", () => {
+            isDown = false;
+            slider.classList.remove("active");
+        });
+
+        window.addEventListener("mouseup", () => {
+            isDown = false;
+            slider.classList.remove("active");
+        });
+
+        slider.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1.2; // scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // ===== Keyboard Arrows =====
+        slider.setAttribute("tabindex", "0"); // make focusable
+        slider.addEventListener("keydown", (e) => {
+            const step = 250;
+            if (e.key === "ArrowRight") {
+                slider.scrollBy({ left: step, behavior: "smooth" });
+                e.preventDefault();
+            } else if (e.key === "ArrowLeft") {
+                slider.scrollBy({ left: -step, behavior: "smooth" });
+                e.preventDefault();
+            }
+        });
+    });
+});

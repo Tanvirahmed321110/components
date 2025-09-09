@@ -290,11 +290,19 @@
 
 .slider-bottom .item img {
     border-radius: var(--radius-lg);
-    border: 2px solid var(--my-white);
 }
 
 .slider-bottom .swiper-pagination-bullet-active {
     padding: 4px 8px;
     background-color: var(--my-primary-color);
     border-radius: 8px;
+}
+
+
+.recently-view .tab-content {
+    height: 558px;
+}
+
+.recently-view .tab-content .my-slider {
+    height: 470px;
 }

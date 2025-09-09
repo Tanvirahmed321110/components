@@ -1,6 +1,6 @@
 /* Font Awesome Icon CDN */
 @import url("https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap');
 
 
 :root {
@@ -19,6 +19,7 @@
     --my-bg-warring: #FDB022;
     --my-gray: #A4A7AE;
     --my-success: #17B26A;
+    --my-red: red;
 
     --my-white-off: #f1f1f1;
     --my-white-off2: #e0e0e0;
@@ -33,7 +34,6 @@
     --my-text-rating: #FFBE0B;
     --my-text-warring: #FDB022;
     --my-text-white-off2: #ededed;
-    --my-text-red: red;
 
     /* For Border color */
     --my-border-primary: #D5D7DA;
@@ -70,7 +70,7 @@
     --line-height-lg: 28px;
     --line-height-xl: 30px;
     --line-height-xxl: 44px;
-    --line-height-xxl: 72px;
+    --line-height-xxxl: 72px;
 
 
 

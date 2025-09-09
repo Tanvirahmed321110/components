@@ -347,7 +347,9 @@ tr {
 
 
 
-
+.section-margin {
+    margin-top: 96px;
+}
 
 /*******   All  Title   ******/
 .banner-title {
@@ -983,6 +985,18 @@ tr {
     width: 25%;
 }
 
+/* max-width */
+.my-max-w-50 {
+    max-width: 50px;
+}
+
+.my-max-w-100 {
+    max-width: 100px;
+}
+
+.my-max-w-120 {
+    max-width: 100px;
+}
 
 .my-w-fit-content {
     width: fit-content;
