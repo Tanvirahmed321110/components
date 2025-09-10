@@ -11,6 +11,7 @@
     --my-white: #FFFFFF;
     --my-bg-dark: #000;
     --my-bg-primary: #FFF;
+    --my-bg-secondary: #FAFAFA;
     --my-bg-primary-hover: #FAFAFA;
     --my-bg-white-off: #f4f4f4;
     --my-bg-white-off2: #e0e0e0;
@@ -133,13 +134,13 @@
 @media (max-width:991px) {
     :root {
         /*______  Font Size  ______ */
-        --fs-xs: 13px;
+        /* --fs-xs: 13px;
         --fs-sm: 15px;
         --fs-md: 17px;
         --fs-lg: 19px;
         --fs-xl: 22px;
         --fs-xxl: 25px;
-        --fs-xxxl: 36px;
+        --fs-xxxl: 36px; */
     }
 }
 

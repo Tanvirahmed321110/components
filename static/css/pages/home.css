@@ -283,7 +283,7 @@
     height: 100%;
 }
 
-
+/*==========   Subcribe Right Side  ==========*/
 .slider-bottom .item img:hover {
     border-color: var(--my-white);
 }
@@ -311,7 +311,11 @@
 
 
 
-
+/*
+=================================================
+=====||   Best Deal Section Start Here    ||=====
+=================================================
+*/
 .best-deal .tab-content {
     height: 500px;
 }
@@ -330,19 +334,104 @@
 }
 
 
+
+.our-achivements {
+    background-color: var(--my-bg-secondary);
+    padding-top: 96px;
+    position: relative;
+}
+
+.our-achivements .head {
+    max-width: 768px;
+    margin: auto;
+}
+
+
+.our-achivements .items {
+    padding: 64px 168px;
+    position: relative;
+    z-index: 3;
+}
+
+.our-achivements .items .item {
+    border: 0.79px solid var(--my-secondary-color);
+    border-radius: var(--radius-lg);
+    padding: 26px 0;
+    background-color: var(--my-white);
+    justify-content: space-between;
+    transition: .2s linear;
+}
+
+.our-achivements .items .item:hover {
+    outline: 1px solid var(--my-primary-color);
+}
+
+.our-achivements .item .section-title {
+    font-weight: var(--fw-400);
+    color: var(--my-primary-color);
+}
+
+.our-achivements .items .item img {
+    width: fit-content !important
+}
+
+/*===== Bg Image =====*/
+.our-achivements .bg-img {
+    background-image: url('../../images/achivement-main.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 518px;
+    width: 1400px;
+    margin-top: -300px;
+    position: relative;
+}
+
+.our-achivements .bg-img .img {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: -80px;
+    width: fit-content;
+}
+
+/*
+================================================
+=====||   Subcribe Section Start Here    ||=====
+================================================
+*/
+.get-touch {
+    margin-bottom: 96px;
+}
+
+.get-touch .get-touch-area {
+    background-color: var(--my-bg-secondary);
+    height: 306px;
+}
+
+
+
+
+
+
+
+/*
+================================================
+=====||   Subcribe Section Start Here    ||=====
+================================================
+*/
 .subcribe-sec .subcribe-area {
     background-color: var(--my-primary-color);
     border-radius: var(--radius-4xl);
     overflow: hidden;
 }
 
+/*
+================||   Subcribe Left Side  ||================
+*/
 .subcribe-sec .left-side {
     padding: 64px 64px 64px 48px;
 }
-
-
-
-.subcribe-sec .left-side form {}
 
 .subcribe-sec .left-side form input {
     border: none;
@@ -354,10 +443,15 @@
     box-shadow: none;
 }
 
+
+/*
+================||   Subcribe Right Side  ||================
+*/
 .subcribe-sec .right-side {
     position: relative;
 }
 
+/*==========  Notificaion  ===========*/
 .subcribe-sec .right-side .notificaion {
     max-width: 320px;
     width: 320px;
@@ -385,4 +479,75 @@
     height: 615px;
     width: 100%;
     object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+===============================================
+=====||   Responsive 1024 Start Here    ||=====
+===============================================
+*/
+@media (max-width: 1024px) {
+
+    /*
+    ================||   Achivements Section Start Here  ||================
+    */
+    .our-achivements .items {
+        padding: 64px 0px;
+    }
+
+    /*
+    ================||   Subcribe Section Start Here  ||================
+    */
+    .subcribe-sec .left-side {
+        padding: 96px 16px 16px 0px;
+        height: 500px;
+    }
+
+    .subcribe-sec .right-side {
+        margin-top: -50px;
+    }
+
+    .subcribe-sec .right-side .img-wrapper {
+        height: unset;
+        top: -64px;
+        left: 0;
+    }
+
+    .subcribe-sec .subcribe-area {
+        height: 1000px;
+    }
+
+    .subcribe-sec .right-side .img-wrapper img {
+        height: unset;
+        width: 100%;
+    }
+
+    .subcribe-sec .right-side .notificaion {
+        display: none;
+    }
+
+
+    /*===== Bg Image =====*/
+    .our-achivements .bg-img {
+        display: none;
+    }
+
+    .our-achivements .mobile-bg {
+        margin-top: -100px;
+    }
+
 }
