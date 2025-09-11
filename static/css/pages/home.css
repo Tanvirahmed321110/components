@@ -334,6 +334,24 @@
 }
 
 
+.trip-plan-area .section-sub-title {
+    max-width: 838px;
+}
+
+.trip-plan-area .img-btn {
+    position: relative;
+    height: 128px;
+}
+
+.trip-plan-area .img-btn img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+
 
 /*
 ===================================================
