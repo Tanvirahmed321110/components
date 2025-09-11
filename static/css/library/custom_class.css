@@ -350,11 +350,13 @@ tr {
     border-right: 1px solid var(--my-border-color);
 }
 
-
 .my-border-blue {
     border: 1px solid var(--my-blue);
 }
 
+.my-border-none {
+    border: none;
+}
 
 /* border primary and secondary */
 .my-border-primary {
@@ -2710,6 +2712,54 @@ tr {
     margin-top: 50px;
 }
 
+.my-mt-24 {
+    margin-top: 48px;
+}
+
+.my-mt-25 {
+    margin-top: 50px;
+}
+
+.my-mt-26 {
+    margin-top: 52px;
+}
+
+.my-mt-27 {
+    margin-top: 54px;
+}
+
+.my-mt-28 {
+    margin-top: 56px;
+}
+
+.my-mt-29 {
+    margin-top: 58px;
+}
+
+.my-mt-30 {
+    margin-top: 60px;
+}
+
+.my-mt-31 {
+    margin-top: 62px;
+}
+
+.my-mt-32 {
+    margin-top: 64px;
+}
+
+.my-mt-33 {
+    margin-top: 66px;
+}
+
+.my-mt-34 {
+    margin-top: 68px;
+}
+
+.my-mt-35 {
+    margin-top: 70px;
+}
+
 /* ______ Margin Bottom (mb) ______ */
 .my-mb-0 {
     margin-bottom: 0;
@@ -3399,6 +3449,10 @@ tr {
     border-radius: var(--radius-xl)
 }
 
+.my-radius-xxl {
+    border-radius: var(--radius-xxl)
+}
+
 .my-radius-pill {
     border-radius: var(--radius-pill)
 }
@@ -3407,11 +3461,6 @@ tr {
     border-radius: var(--radius-round);
 }
 
-
-
-.my-border-none {
-    border: none;
-}
 
 
 /*____  Position  _____*/

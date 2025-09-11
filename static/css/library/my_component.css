@@ -2828,6 +2828,7 @@ input[type="radio"]:checked::after {
 
 
 
+
 /* Prev/Next buttons */
 .slider-controls {
     position: absolute;
@@ -3745,8 +3746,6 @@ input[type="radio"]:checked::after {
 .profile-img-sm,
 .profile-img-xxl {
     border-radius: 50%;
-    border: 1px solid var(--my-border-color);
-    padding: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3763,11 +3762,9 @@ input[type="radio"]:checked::after {
 }
 
 .profile-img-lg {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 1px solid var(--my-border-color);
-    padding: 2px;
 }
 
 .profile-img-xl {
@@ -3836,8 +3833,6 @@ input[type="radio"]:checked::after {
 
 
 
-
-.section-1
 
 /* ____________ Offer  Start  ___________ */
 .section-1 {

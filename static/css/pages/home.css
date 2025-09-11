@@ -335,6 +335,130 @@
 
 
 
+/*
+===================================================
+=====||   Testimonial Section Start Here    ||=====
+===================================================
+*/
+.testimonial {
+    height: 765px;
+}
+
+.testimonial-area {
+    border-bottom: 1px solid var(--my-white-off);
+    padding: 64px 0;
+}
+
+.testimonial .my-slider-wrapper {
+    position: relative;
+    padding-bottom: 110px;
+}
+
+.testimonial .for-3 .slider-item {
+    min-width: calc(33% - 12px);
+}
+
+
+.testimonial .slider-controls {
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial .card {
+    padding: 32px;
+    background-color: var(--my-bg-secondary);
+    border-radius: var(--radius-xl);
+}
+
+.testimonial .star i {
+    color: var(--my-warring);
+}
+
+/*
+=================================================
+=====||   Our Brand Section Start Here    ||=====
+=================================================
+*/
+.our-brand-area .head {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: var(--my-text-quaternary);
+}
+
+.our-brand-area {
+    overflow: hidden;
+    padding: 86px 0;
+    background: #fff;
+}
+
+
+/*===== Left Before =====*/
+.our-brand-area .brandSwiper {
+    position: relative;
+}
+
+.our-brand-area .brandSwiper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(246, 255, 255, 255), rgba(155, 144, 144, 0));
+    pointer-events: none;
+    z-index: 10;
+}
+
+/*===== Right After =====*/
+.our-brand-area .brandSwiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 255), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+/*
+=================================================
+=====||   Our Blogs Section Start Here    ||=====
+=================================================
+*/
+.our-blog .item .profile-img-lg {
+    border: none;
+    padding: 0px;
+    width: 42px;
+    height: 42px;
+}
+
+.our-blog .item {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.our-blog .item:hover {
+    outline: 4px solid var(--my-white-off);
+}
+
+
+
+
+/*
+=======================================================
+=====||   Our Achivements Section Start Here    ||=====
+=======================================================
+*/
 .our-achivements {
     background-color: var(--my-bg-secondary);
     padding-top: 96px;
@@ -394,6 +518,8 @@
     top: -80px;
     width: fit-content;
 }
+
+
 
 /*
 ================================================
@@ -548,6 +674,50 @@
 
     .our-achivements .mobile-bg {
         margin-top: -100px;
+    }
+
+
+    /*
+    ================||   Testimonial Section Start Here  ||================
+    */
+    .testimonial .for-3 .slider-item {
+        min-width: unset;
+    }
+
+    .testimonial .for-md-1 .slider-item {
+        min-width: calc(100% - 0px);
+        width: 100%;
+    }
+
+    .testimonial .for-md-2 .slider-item {
+        min-width: calc(50% - 12px);
+        width: 100%;
+    }
+
+
+
+
+
+}
+
+/*
+================================================
+=====||   Responsive 769px Start Here    ||=====
+================================================
+*/
+@media (max-width: 769px) {
+
+    /*
+    ================||   Testimonial Section Start Here  ||================
+    */
+    .testimonial .for-sm-1 .slider-item {
+        min-width: calc(100% - 0px);
+        width: 100%;
+    }
+
+    .testimonial .for-sm-2 .slider-item {
+        min-width: calc(50% - 0px);
+        width: 100%;
     }
 
 }

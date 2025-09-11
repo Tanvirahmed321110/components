@@ -108,6 +108,31 @@ const slider_bottom = new Swiper(".slider-bottom .bottom", {
 
 
 
+//===========  Brand Section Slider Here  ===========
+var swiper = new Swiper(".brandSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 0, // no gap between transitions
+        disableOnInteraction: false,
+    },
+    speed: 5000, // higher = slower, smoother
+    freeMode: true, // enables smooth continuous movement
+    freeModeMomentum: false, // keeps constant speed
+    allowTouchMove: false, // optional: prevent dragging
+    breakpoints: {
+        320: { slidesPerView: 2, spaceBetween: 10 },
+        576: { slidesPerView: 3, spaceBetween: 15 },
+        768: { slidesPerView: 4, spaceBetween: 20 },
+        1024: { slidesPerView: 5, spaceBetween: 30 }
+    }
+});
+
+
+
+
+
 
 //===========  Customer Tab Section  ===========
 document.querySelectorAll(".my-tab-section").forEach(section => {
