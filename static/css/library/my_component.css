@@ -426,7 +426,7 @@
 .my-btn-sm {
     cursor: pointer;
     user-select: none;
-    padding: 12px 18px;
+    padding: 10px 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -434,11 +434,18 @@
     font-family: inherit;
     border-radius: var(--radius-md);
     transition: .3s linear;
-    position: relative;
-    white-space: nowrap;
+    /* position: relative;
+    white-space: nowrap; */
     gap: 8px;
     font-size: var(--fs-md);
     line-height: var(--line-height-md);
+    border: 3px solid;
+    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 1.48px 2.96px 0px #0A0D120D;
+    box-shadow: 0px -2.96px 0px 0px #0A0D120D inset;
+    box-shadow: 0px 0px 0px 1.48px #0A0D120D inset;
+    box-sizing: border-box;
+    width: fit-content;
 }
 
 .my-btn.my-btn-sm i {
@@ -454,9 +461,15 @@
 }
 
 .my-btn.my-btn-sm {
-    padding: 8px 14px;
-    font-size: var(--fs-sm) !important;
-    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 11.2px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    border: 1.6px solid;
+    line-height: var(--line-height-low);
+
+
+    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 
@@ -585,18 +598,18 @@
 
 .my-input-control textarea {
     transition: .15s;
-    border: 1px solid var(--my-border-color2);
+    border: 1px solid var(--my-border-primary);
     border-radius: 10px;
     padding: 16px;
-    color: var(--my-gray);
+    color: var(--my-text-quaternary);
     font-family: inherit;
 }
 
 .my-input-control input {
-    padding: 11px 14px;
-    border: 1px solid var(--my-white-off2);
+    padding: 10px 12px;
+    border: 1px solid var(--my-border-primary);
     outline: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     transition: .15s linear;
     max-width: 540px;
     width: 100%;
@@ -619,8 +632,7 @@
 .my-input-control input::placeholder,
 textarea::placeholder {
     font-weight: var(--fw-500);
-    color: #a39e9e;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
     font-family: inherit;
 }
 
@@ -669,7 +681,10 @@ textarea::placeholder {
     display: block;
 }
 
-
+input::placeholder {
+    color: var(--my-text-placeholder);
+    font-size: var(--fs-md);
+}
 
 
 
@@ -2796,6 +2811,8 @@ input[type="radio"]:checked::after {
 .my-slider .slider-item .card {
     height: 100%;
     border: 1px solid var(--my-border-secondary);
+    padding: 12px;
+    border-radius: var(--radius-md);
 }
 
 .my-slider .slider-item img {
@@ -2808,22 +2825,22 @@ input[type="radio"]:checked::after {
 
 .my-slider.for-2 .slider-item {
     min-width: calc(50% -80px);
-    width: 100%;
+    width: min(100%, calc(50% - 80px));
 }
 
 .my-slider.for-3 .slider-item {
     min-width: calc(33% - 80px);
-    width: 100%;
+    width: min(100%, calc(33% - 80px));
 }
 
 .my-slider.for-4 .slider-item {
     min-width: calc(25% -80px);
-    width: 100%;
+    width: min(100%, calc(25% - 80px));
 }
 
 .my-slider.for-5 .slider-item {
     min-width: calc(20% -80px);
-    width: 100%;
+    width: min(100%, calc(20% - 80px));
 }
 
 
@@ -2848,6 +2865,11 @@ input[type="radio"]:checked::after {
     width: 56px;
     border-radius: 50%;
     border: 1px solid var(--my-border-secondary);
+    /* box-shadow: var(--shadow-all-sm); */
+}
+
+.slider-controls button svg {
+    width: 22px;
 }
 
 .slider-controls button:hover {
@@ -2860,6 +2882,9 @@ input[type="radio"]:checked::after {
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
+    /* box-shadow: var(--shadow-all-sm);
+    padding: 12px;
+    border-radius: var(--radius-lg); */
 }
 
 .tab-btns .tab-btn {

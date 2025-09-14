@@ -283,7 +283,7 @@
     height: 100%;
 }
 
-/*==========   Subcribe Right Side  ==========*/
+/*-----------✦   Subcribe Right Side  ✦------------*/
 .slider-bottom .item img:hover {
     border-color: var(--my-white);
 }
@@ -300,12 +300,33 @@
 }
 
 
-.recently-view .tab-content {
-    height: 558px;
+
+/*
+=====================================================
+=====||   Recently View Section Start Here    ||=====
+=====================================================
+*/
+.recently-view .tab-content .my-slider .slider-item {
+    min-height: 170px;
+    height: 100%;
 }
 
-.recently-view .tab-content .my-slider {
-    height: 470px;
+/*-----✦  Section Name Here  ✦------*/
+.recently-view .slider-controls,
+.trip-plan-area .slider-controls {
+    position: unset;
+    margin-top: 42px;
+}
+
+
+
+/*
+=================================================
+=====||   Best Deal Section Start Here    ||=====
+=================================================
+*/
+.recommendation-area .item:hover {
+    background-color: var(--my-white-off);
 }
 
 
@@ -333,7 +354,126 @@
     right: 0;
 }
 
+.hot-destination {
+    margin-bottom: 60px;
+}
 
+.hot-destination .search {
+    position: relative;
+    width: min(100%, 400px);
+}
+
+.hot-destination .search input {
+    transition: all 0.3s ease;
+    padding: 12px 18px;
+}
+
+.hot-destination .search span {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--my-text-placeholder);
+    transition: color 0.3s ease;
+}
+
+.hot-destination .grid-item .item {
+    padding: 12px;
+}
+
+.hot-destination .grid-item .item:hover,
+.hot-destination .grid-item .item.active {
+    background-color: var(--my-bg-secondary);
+}
+
+/*
+================================================
+=====||   Map View Section Start Here    ||=====
+================================================
+*/
+.map-view .section-sub-title {
+    max-width: 1085px;
+}
+
+.map-view .map-wrapper {
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.map-view .map-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #16161618;
+    transition: .3s;
+}
+
+.map-view .map-wrapper:hover::after {
+    top: 100%;
+    cursor: pointer;
+}
+
+.map-view iframe {
+    height: 254px;
+    width: 100%;
+    border: none;
+    border-radius: var(--radius-xl);
+}
+
+.map-view .shop-map {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--my-white);
+    padding: 8px 12px;
+    border: none;
+    z-index: 2;
+    font-size: var(--fs-sm);
+    line-height: 20px;
+}
+
+.map-tabs li.tab-btn {
+    /* background-color: gainsboro; */
+    border-radius: 50%;
+    width: 126px;
+    height: 126px;
+    flex-direction: column;
+    border: none;
+    color: var(--my-text-color);
+}
+
+
+.map-tabs li img {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+
+.map-view .tab-btns {
+    padding: 12px;
+    /* background-color: var(--my-bg-secondary); */
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--my-border-secondary);
+}
+
+.map-view .my-slider-wrapper .slider-controls,
+.testimonial .slider-controls {
+    position: unset;
+    margin-top: 32px;
+}
+
+
+
+/*
+=================================================
+=====||   Trip Plan Section Start Here    ||=====
+=================================================
+*/
 .trip-plan-area .section-sub-title {
     max-width: 838px;
 }
@@ -341,6 +481,7 @@
 .trip-plan-area .img-btn {
     position: relative;
     height: 128px;
+    z-index: 1;
 }
 
 .trip-plan-area .img-btn img {
@@ -349,18 +490,64 @@
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
+    z-index: -1;
 }
 
 
+.trip-plan-slider .swiper-button-next,
+.trip-plan-slider .swiper-button-prev {
+    background: var(--my-white);
+    color: var(--my-text-placeholder);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    border: 1px solid var(--my-border-secondary);
+    font-size: 12px;
+}
+
+.trip-plan-slider .slider-controls {
+    position: relative;
+    z-index: 3;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trip-plan-slider {
+    position: relative;
+}
+
+
+/*
+=====  Trip plan single item =====
+*/
+.trip-plan-slider .item {
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+
+}
+
+.trip-plan-slider .item.active,
+.trip-plan-slider .item:hover {
+    background-color: var(--my-bg-secondary);
+    border: 1px solid var(--my-white-off);
+}
+
+.trip-plan-slider .item img {
+    height: 96px;
+
+}
 
 /*
 ===================================================
 =====||   Testimonial Section Start Here    ||=====
 ===================================================
 */
-.testimonial {
-    height: 765px;
-}
+
 
 .testimonial-area {
     border-bottom: 1px solid var(--my-white-off);
@@ -378,9 +565,11 @@
 
 
 .testimonial .slider-controls {
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: unset;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonial .card {

@@ -131,7 +131,25 @@ var swiper = new Swiper(".brandSwiper", {
 
 
 
-
+var swiper = new Swiper(".trip-plan-slider", {
+    slidesPerView: 3.5, // এখানে 3.2 দিলে 3টা পূর্ণ + 0.2 অংশ দেখা যাবে
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".trip-plan-slider .next",
+        prevEl: ".trip-plan-slider .prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1.3, // Mobile
+        },
+        768: {
+            slidesPerView: 2.3, // Tablet
+        },
+        1024: {
+            slidesPerView: 3.5, // Desktop (3 full + partial)
+        }
+    }
+});
 
 
 //===========  Customer Tab Section  ===========
