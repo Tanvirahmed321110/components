@@ -1,4 +1,6 @@
 
+
+//===========  Tab Click Slider  ===========
 document.addEventListener("DOMContentLoaded", () => {
     const leftBtn = document.querySelector(".scroll-btn.left");
     const rightBtn = document.querySelector(".scroll-btn.right");
@@ -131,8 +133,9 @@ var swiper = new Swiper(".brandSwiper", {
 
 
 
+//===========  Trip Plan Slider  Here  ===========
 var swiper = new Swiper(".trip-plan-slider", {
-    slidesPerView: 3.5, // এখানে 3.2 দিলে 3টা পূর্ণ + 0.2 অংশ দেখা যাবে
+    slidesPerView: 3.5,
     spaceBetween: 20,
     navigation: {
         nextEl: ".trip-plan-slider .next",
@@ -150,6 +153,8 @@ var swiper = new Swiper(".trip-plan-slider", {
         }
     }
 });
+
+
 
 
 //===========  Customer Tab Section  ===========

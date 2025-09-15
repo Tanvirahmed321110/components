@@ -39,7 +39,6 @@
 }
 
 
-
 /*
 ======  Search Tabs   ======
 */
@@ -49,8 +48,6 @@
     align-items: center;
     max-width: 100%;
 }
-
-
 
 .g-hero-area .tab-wrapper {
     margin: 0 auto;
@@ -75,6 +72,7 @@
 .g-hero-area .search-tabs::-webkit-scrollbar {
     display: none;
 }
+
 
 /*
 ===== Scroll Button  =====
@@ -190,8 +188,6 @@
 
 
 
-
-
 /*
 ======================================
 =====||   Hero 2 Start Here    ||=====
@@ -283,7 +279,6 @@
     height: 100%;
 }
 
-/*-----------✦   Subcribe Right Side  ✦------------*/
 .slider-bottom .item img:hover {
     border-color: var(--my-white);
 }
@@ -301,17 +296,24 @@
 
 
 
+
+
+
+
 /*
 =====================================================
 =====||   Recently View Section Start Here    ||=====
 =====================================================
 */
+.recently-view {
+    margin-bottom: 55px;
+}
+
 .recently-view .tab-content .my-slider .slider-item {
     min-height: 170px;
     height: 100%;
 }
 
-/*-----✦  Section Name Here  ✦------*/
 .recently-view .slider-controls,
 .trip-plan-area .slider-controls {
     position: unset;
@@ -320,25 +322,52 @@
 
 
 
+
+
+
 /*
-=================================================
-=====||   Best Deal Section Start Here    ||=====
-=================================================
+=======================================================
+=====||   Recommendation  Section Start Here    ||=====
+=======================================================
 */
 .recommendation-area .item:hover {
     background-color: var(--my-white-off);
 }
 
+.recommendation .tab-contents {
+    margin-top: 20px;
+    padding-bottom: 24px;
+}
+
+
+
+
 
 
 
 /*
-=================================================
-=====||   Best Deal Section Start Here    ||=====
-=================================================
+==================================================
+=====||   Best Deal  Section Start Here    ||=====
+==================================================
 */
-.best-deal .tab-content {
-    height: 500px;
+.best-deal .slider-controls {
+    position: unset;
+    margin-top: 32px;
+    padding-bottom: 22px;
+}
+
+
+
+
+
+
+/*
+====================================================
+=====||   Tending Deal Section Start Here    ||=====
+====================================================
+*/
+.tending {
+    padding-bottom: 100px;
 }
 
 .tending .slider-controls {
@@ -354,8 +383,19 @@
     right: 0;
 }
 
+
+
+
+
+
+
+/*
+=======================================================
+=====||   Hot Destination Section Start Here    ||=====
+=======================================================
+*/
 .hot-destination {
-    margin-bottom: 60px;
+    padding: 60px 0;
 }
 
 .hot-destination .search {
@@ -386,6 +426,12 @@
 .hot-destination .grid-item .item.active {
     background-color: var(--my-bg-secondary);
 }
+
+
+
+
+
+
 
 /*
 ================================================
@@ -469,6 +515,8 @@
 
 
 
+
+
 /*
 =================================================
 =====||   Trip Plan Section Start Here    ||=====
@@ -480,17 +528,19 @@
 
 .trip-plan-area .img-btn {
     position: relative;
-    height: 128px;
     z-index: 1;
+    height: 128px;
 }
 
-.trip-plan-area .img-btn img {
+.trip-plan-area .btn-wrap {
     position: absolute;
-    top: 0;
+    top: 32px;
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content;
-    z-index: -1;
+}
+
+.trip-plan-area .btn-wrap .my-btn {
+    text-wrap: nowrap;
 }
 
 
@@ -542,6 +592,12 @@
 
 }
 
+
+
+
+
+
+
 /*
 ===================================================
 =====||   Testimonial Section Start Here    ||=====
@@ -556,7 +612,6 @@
 
 .testimonial .my-slider-wrapper {
     position: relative;
-    padding-bottom: 110px;
 }
 
 .testimonial .for-3 .slider-item {
@@ -570,6 +625,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 64px;
 }
 
 .testimonial .card {
@@ -581,6 +637,12 @@
 .testimonial .star i {
     color: var(--my-warring);
 }
+
+
+
+
+
+
 
 /*
 =================================================
@@ -637,6 +699,7 @@
 
 
 
+
 /*
 =================================================
 =====||   Our Blogs Section Start Here    ||=====
@@ -657,6 +720,8 @@
 .our-blog .item:hover {
     outline: 4px solid var(--my-white-off);
 }
+
+
 
 
 
@@ -706,6 +771,7 @@
     width: fit-content !important
 }
 
+
 /*===== Bg Image =====*/
 .our-achivements .bg-img {
     background-image: url('../../images/achivement-main.png');
@@ -728,6 +794,8 @@
 
 
 
+
+
 /*
 ================================================
 =====||   Subcribe Section Start Here    ||=====
@@ -741,7 +809,6 @@
     background-color: var(--my-bg-secondary);
     height: 306px;
 }
-
 
 
 
@@ -768,7 +835,7 @@
 
 .subcribe-sec .left-side form input {
     border: none;
-    padding: 14px;
+    padding: 16px;
     border-radius: var(--radius-md);
 }
 
@@ -814,12 +881,9 @@
     object-fit: cover;
 }
 
-
-
-
-
-
-
+.subcribe-sec .my-secondary-btn:hover {
+    background-color: var(--my-warring);
+}
 
 
 
@@ -900,12 +964,11 @@
         min-width: calc(50% - 12px);
         width: 100%;
     }
-
-
-
-
-
 }
+
+
+
+
 
 /*
 ================================================

@@ -53,14 +53,22 @@
 
 
     /*______  Font Size  ______ */
-    --fs-low: 11px;
-    --fs-xs: 12px;
-    --fs-sm: 14px;
-    --fs-md: 16px;
-    --fs-lg: 18px;
-    --fs-xl: 20px;
-    --fs-xxl: 36px;
-    --fs-xxxl: 60px;
+    --fs-low: 0.6875rem;
+    /* 11px */
+    --fs-xs: 0.75rem;
+    /* 12px */
+    --fs-sm: 0.875rem;
+    /* 14px */
+    --fs-md: 1rem;
+    /* 16px */
+    --fs-lg: 1.125rem;
+    /* 18px */
+    --fs-xl: 1.25rem;
+    /* 20px */
+    --fs-xxl: 2.25rem;
+    /* 36px */
+    --fs-xxxl: 3.75rem;
+    /* 60px */
 
 
     /*______  Line Height  ______ */
@@ -189,21 +197,12 @@ header .header-top {
 ======  Become Supplier Button  ======
 */
 header .header-top .become-supplier-btn {
-    padding: 10px 16px;
-    background-color: var(--my-white-off);
-    border-radius: 40px;
-    border: 1px solid var(--my-white-off);
+    padding: 10px 12px;
     transition: .3s;
 }
 
 header .header-top .become-supplier-btn:hover {
-    background-color: transparent;
-    border: 1px solid var(--my-white-off);
-}
-
-header .header-top .become-supplier-btn:hover span {
-    color: var(--my-primary-color);
-    transition: .3s;
+    color: var(--my-secondary-color);
 }
 
 
@@ -255,8 +254,8 @@ header .header-top .meddile .click-dropdown-btn::after {
     top: 0px;
     right: 34%;
     z-index: 13;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
     border-bottom: 16px solid var(--my-white);
     filter: drop-shadow(0 0px 1px rgba(0, 0, 0, 0.1))
         /* top */
@@ -283,6 +282,38 @@ header .header-top .right .other-btns .item {
 /*
 ======  Profile Dropdown Button  ======
 */
+header .profile-dropdown {
+    padding: 12px 0;
+}
+
+.wrapper.my-has-scrollbar-sm {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+/* Chrome, Safari, Edge */
+.wrapper.my-has-scrollbar-sm::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wrapper.my-has-scrollbar-sm::-webkit-scrollbar-track {
+    background-color: var(--my-bg-secondary);
+    background-color: var(--my-white);
+    border-bottom-right-radius: 36px;
+    border-top-right-radius: 36px;
+}
+
+.wrapper.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
+    background-color: var(--my-bg-white-off2);
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    min-height: 40px;
+}
+
+.wrapper.my-has-scrollbar-sm::-webkit-scrollbar-thumb:hover {
+    background-color: var(--my-secondary-color);
+}
+
 header .profile-dropdown .head {
     color: var(--my-text-tertiary);
 }
@@ -295,10 +326,10 @@ header .profile-dropdown .head {
 .other-btns .click-dropdown-btn::after {
     content: '';
     position: absolute;
-    display: none;
     top: 0px;
     right: 0;
     z-index: 13;
+    display: none;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
     border-bottom: 14px solid var(--my-white);
@@ -307,11 +338,17 @@ header .profile-dropdown .head {
         drop-shadow(0px 0 0px rgba(0, 0, 0, 0.1))
         /* left */
         drop-shadow(0px 0 1px rgba(0, 0, 0, 0.1));
+    transition-delay: 4s;
+    opacity: 0;
 }
+
+
+
+
 
 .other-btns .click-dropdown-btn.active::after {
     bottom: 0;
-    display: block;
+    opacity: 0;
 }
 
 .click-dropdown.profile-dropdown .item {
@@ -331,6 +368,8 @@ header .profile-dropdown .head {
     border-bottom: 1px solid var(--my-white-off);
     padding: 12px 6px;
 }
+
+
 
 /*
 ====== Account ======

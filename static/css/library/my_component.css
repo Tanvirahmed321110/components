@@ -1337,48 +1337,30 @@ input::placeholder {
 .my-has-scrollbar::-webkit-scrollbar {
     width: 10px;
     height: 14px;
-    background-color: rgb(243, 204, 204);
+    background-color: var(--my-text-color);
     border-radius: 12px;
 }
 
 .my-has-scrollbar-sm::-webkit-scrollbar {
     width: 8px;
     height: 8px;
-    background-color: whitesmoke;
-    border-radius: 12px;
+    background-color: var(--my-white-off);
 }
 
 .my-has-scrollbar:hover::-webkit-scrollbar,
 .my-has-scrollbar-sm:hover::-webkit-scrollbar {
-    border: 1px solid var(--my-white-off2);
     border-radius: 0px;
-    border-radius: 12px;
 }
 
 .my-has-scrollbar:hover::-webkit-scrollbar {
-    border: 1px solid wheat;
-    border-radius: 12px;
+    border: 1px solid var(--my-bg-secondary);
 }
 
 .my-has-scrollbar::-webkit-scrollbar-thumb,
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
-    background-color: var(--my-border-color);
-    border-radius: 12px;
+    background-color: var(--my-bg-white-off2);
 }
 
-.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
-    background-color: var(--my-gray);
-    /* border-radius: 12px; */
-    border-radius: 12px;
-}
-
-.my-has-scrollbar:hover::-webkit-scrollbar-thumb {
-    background-color: var(--my-gray);
-}
-
-.my-has-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--my-secondary-color);
-}
 
 
 
@@ -1712,8 +1694,9 @@ input[type="radio"]:checked::after {
 
 .click-dropdown.sm {
     width: 100%;
-    max-width: 300px;
-    min-width: 320px;
+    max-width: 350px;
+    min-width: 335px;
+    max-height: 500px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--my-white-off);
     border-radius: var(--radius-md);
@@ -2912,7 +2895,7 @@ input[type="radio"]:checked::after {
 
 
 /* tab content */
-.tab-contens {
+.tab-contents {
     margin-top: 64px;
 }
 
@@ -4210,7 +4193,7 @@ ___________________________________*/
 }
 
 .search .search-dropdown .body.my-has-scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--my-border-color2);
+    background-color: var(--my-white-off);
 }
 
 .search-dropdown.my-cart {
