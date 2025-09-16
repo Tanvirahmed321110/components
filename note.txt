@@ -1,0 +1,102 @@
+<!--==================||  How To Use Padding and Margin?   ||==================-->
+    { There are 25 classes padding and margin }
+
+    ### For Padding (1*2 = 2px)
+    padding top = my-pt-0 = 0px
+    padding bottom = my-pb-1 = 2px
+    padding left =  my-pl-2 = 4px
+    padding right = my-pr-23 = 46px
+    padding top bottom = my-py-20 = 40px
+    padding left right = my-px-25 = 50px
+
+
+    ### For Margin (1*2 = 2px)
+    margin top = my-mt-0 = 0px
+    margin bottom = my-mb-1 = 2px
+    margin left =  my-ml-2 = 4px
+    margin right = my-mr-23 = 46px
+    margin top bottom = my-my-20 = 40px
+    margin left right = my-mx-25 = 50px
+
+
+
+<!--==================||  How To Border Radius?  ||==================-->
+    my-radius-0 = 0px
+    my-radius-xs = 2px
+    my-radius-sm = 4px
+    my-radius-md = 8px
+    my-radius-lg = 10px
+    my-radius-xl = 14px
+    my-radius-pill = 100px
+    my-radius-round = 50%
+
+
+
+<!--==================||  How To Font Size?  ||==================-->
+    my-fs-low = 10px
+    my-fs-xs = 12px
+    my-fs-sm = 14px
+    my-fs-md = 16px
+    my-fs-lg = 18px
+    my-fs-xl = 20px
+    my-fs-xxl = 36px
+    my-fs-xxxl = 60px
+
+
+<!--==================||  How To Use Text Color?   ||==================-->
+    my-text-white = white Color
+    my-text-primary = primary text color
+    my-text-quaternary =
+    my-text-tertiary
+    my-text-warring
+    my-text-yellow
+    my-text-orange
+    my-text-green
+    my-text-red
+
+
+<!--==================||  How To Use Background Color?   ||==================-->
+    my-bg-none = Background Transparent
+    my-bg-white
+    my-bg-green
+    my-bg-gold
+    my-bg-orange
+    my-bg-warring
+    my-bg-primary
+    my-bg-secondary
+    my-bg-border
+    my-bg-white-off
+    my-bg-white-off2
+
+
+
+<!--==================||  How To Use Button   ||==================-->
+    .my-btn.my-btn-primary
+    .my-btn.my-btn-secondary
+    .my-btn.my-outline-btn
+    .my-btn.my-sm-btn
+    .my-btn.my-sm-btn
+    .my-btn.my-btn-danger
+
+
+
+
+<!--==================||  How To Use Flex   ||==================-->
+    .my-d-flex = display flex
+    .my-d-flex.my-align-center = align-item: center
+    .my-d-flex.my-justify-center = justify:center
+    .my-flex-center = display:flex,align:center and justify:center
+    .my-flex-column = flex-derection : column
+    .my-flex-sm-column = mobile flex direction column
+
+    ###Gap:
+    { There are 25 classes flex row and col gap }
+    .my-gap-1 = 2px
+    .my-gap-2 = 4px
+    .my-gap-3 = 6px
+    .my-gap-25 = 50px
+
+    ###Row Gap:
+    my-row-gap-1 = row gap: 2px
+    my-row-gap-2 = row gap: 4px
+    my-row-gap-25 = row gap: 50px

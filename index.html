@@ -28,7 +28,7 @@
                         <!--======||  Header Top Left  ||======-->
                         <div class="left">
                             <!-- Logo Here -->
-                            <a href="index.html">
+                            <a href="index.html" aria-label="Go to Homepage">
                                 <img src="./static/images/Logo.svg" alt="Logo Here" loading="lazy">
                             </a>
                         </div>
@@ -38,7 +38,8 @@
 
                             <!-- Supplier Button -->
                             <div class="my-mr-4">
-                                <a href="#" class="my-fw-bold become-supplier-btn my-fs-sm ">
+                                <a href="#" class="my-fw-bold become-supplier-btn my-fs-sm " role="button"
+                                    aria-label="Become a Supplier">
                                     <span class="my-w-100 my-d-block">Become a
                                         supplier</span>
                                 </a>
@@ -49,7 +50,8 @@
                                 <div class="click-dropdown-parent ">
                                     <!--#NOTE: When click (.click-dropdown-btn) Then will add active class for the click-dropdown-btn button -->
                                     <div class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex">
-                                        <div class="my-fw-bold my-align-center my-d-flex my-gap-4">
+                                        <button class="my-fw-bold my-align-center my-d-flex my-gap-4"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-label="Select Language">
 
                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +60,7 @@
                                                     stroke="#9C9FA6" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                             <div>Global</div>
-                                        </div>
+                                        </button>
 
                                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -76,10 +78,12 @@
                                                     Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2">
+                                                    <ul class="my-grid-4 my-gap-2" role="listbox"
+                                                        aria-labelledby="languageDropdownBtn">
 
                                                         <!-- single language -->
-                                                        <li class="my-d-flex my-align-center  my-gap-6 item">
+                                                        <li class="my-d-flex my-align-center my-gap-6 item"
+                                                            aria-selected="true">
                                                             <div class="my-flex-center">
                                                                 <svg width="21" height="18" viewBox="0 0 21 18"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,8 +102,11 @@
                                                             <div class="my-text-primary my-fs-sm my-fw-bold">Bangladesh
                                                             </div>
                                                         </li>
+
+
                                                         <!-- single language -->
-                                                        <li class="my-d-flex my-align-center active my-gap-6 item">
+                                                        <li class="my-d-flex my-align-center active my-gap-6 item"
+                                                            aria-selected="false">
                                                             <div class="my-flex-center">
                                                                 <svg width="21" height="20" viewBox="0 0 21 20"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -785,7 +792,9 @@
 
                                 <!--=====  For USD Dropdown  =====-->
                                 <div class="click-dropdown-parent ">
-                                    <div class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex">
+                                    <button
+                                        class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex"
+                                        aria-haspopup="listbox" aria-expanded="false" aria-label="Select Currency">
                                         <div class="my-fw-bold">
                                             USD
                                         </div>
@@ -795,7 +804,7 @@
                                             <path d="M1 1.5L6 6.5L11 1.5" stroke="#A4A7AE" stroke-width="1.66667"
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                    </div>
+                                    </button>
 
                                     <!--#NOTE:  When Click (.click-dropdown-btn) Then Show It (will add .active class for click dropdown) -->
                                     <div class="click-dropdown lg my-pb-8  my-px-15">
@@ -806,10 +815,12 @@
                                                     Currency
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2">
+                                                    <ul class="my-grid-4 my-gap-2" role="listbox"
+                                                        aria-labelledby="currencyDropdownBtn">
 
                                                         <!-- single item -->
-                                                        <li class="my-d-flex my-align-center active my-gap-6 item">
+                                                        <li class="my-d-flex my-align-center active my-gap-6 item"
+                                                            role="option" aria-selected="true">
                                                             <div class="my-flex-center">
                                                                 <svg width="21" height="18" viewBox="0 0 21 18"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1569,7 +1580,9 @@
                                 <div class="click-dropdown-parent ">
 
                                     <!--#NOTE: When click (.click-dropdown-btn) Then will add active class for the click-dropdown-btn button -->
-                                    <div class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex">
+                                    <button
+                                        class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex"
+                                        aria-haspopup="listbox" aria-expanded="false" aria-label="Select Country">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1606,8 +1619,7 @@
                                             <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-
-                                    </div>
+                                    </button>
 
                                     <!--#NOTE:  When Click (.click-dropdown-btn) Then Show It (will add .active class for click dropdown) -->
                                     <div class="click-dropdown lg my-pb-8  my-px-15">
@@ -1618,10 +1630,12 @@
                                                     Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2">
+                                                    <ul class="my-grid-4 my-gap-2" role="listbox"
+                                                        aria-labelledby="currencyDropdownBtn">
 
                                                         <!-- single language -->
-                                                        <li class="my-d-flex my-align-center active my-gap-6 item">
+                                                        <li class="my-d-flex my-align-center active my-gap-6 item"
+                                                            role="option" aria-selected="true">
                                                             <div class="my-flex-center">
                                                                 <svg width="21" height="18" viewBox="0 0 21 18"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1641,7 +1655,8 @@
                                                             </div>
                                                         </li>
                                                         <!-- single language -->
-                                                        <li class="my-d-flex my-align-center my-gap-6 item">
+                                                        <li class="my-d-flex my-align-center my-gap-6 item"
+                                                            role="option" aria-selected="false">
                                                             <div class="my-flex-center">
                                                                 <svg width="21" height="20" viewBox="0 0 21 20"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2330,7 +2345,8 @@
                                 <ul class="my-d-flex my-align-center  my-ml-1">
                                     <!-- For Wishlist -->
                                     <li>
-                                        <a class="my-flex-column item my-gap-3 my-align-center" href="#">
+                                        <a class="my-flex-column item my-gap-3 my-align-center" href="#"
+                                            aria-label="Wishlist">
                                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -2345,7 +2361,8 @@
 
                                     <!-- For Cart -->
                                     <li>
-                                        <a class="my-flex-column my-gap-3 item my-align-center" href="#">
+                                        <a class="my-flex-column my-gap-3 item my-align-center" href="#"
+                                            aria-label="Cart">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_637_10422)">
@@ -2368,7 +2385,8 @@
 
                                     <!--======||  For Profile  ||======-->
                                     <li class="click-dropdown-parent">
-                                        <div class="my-flex-column click-dropdown-btn my-gap-2 item my-align-center">
+                                        <button class="my-flex-column click-dropdown-btn my-gap-2 item my-align-center"
+                                            aria-haspopup="false">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -2377,7 +2395,7 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                             <span class="my-fw-bold">Profile</span>
-                                        </div>
+                                        </button>
 
                                         <!--=====  Profile Dropdown Here  =====-->
                                         <div class="click-dropdown  profile-dropdown sm my-pt-6 my-pb-3 ">
@@ -2385,9 +2403,9 @@
 
                                             <div class="wrapper my-has-scrollbar-sm">
                                                 <!--=====  For Setting and Login  =====-->
-                                                <div class="my-px-4 my-mt-6">
+                                                <div class="my-px-4 my-mt-6" role="menu">
                                                     <!-- For Login -->
-                                                    <a href="#" class="my-p-3 item">
+                                                    <a href="#" class="my-p-3 item" role="menuitem">
                                                         <div
                                                             class="my-fs-sm my-d-flex my-align-center my-fw-bold my-gap-4">
                                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -2407,7 +2425,7 @@
                                                     </a>
 
                                                     <!-- For Setting -->
-                                                    <a href="#" class="my-p-3 item active my-mt-1">
+                                                    <a href="#" class="my-p-3 item active my-mt-1" role="menuitem">
                                                         <div
                                                             class="my-fs-sm my-d-flex my-align-center my-fw-bold my-gap-4">
                                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -2443,7 +2461,7 @@
                                                 <!--=====  For Support and Download  =====-->
                                                 <div class="my-px-4 my-mt-6 support-download">
                                                     <!-- For Support -->
-                                                    <a href="" class="my-p-3 item">
+                                                    <a href="" class="my-p-3 item" role="menuitem">
                                                         <div
                                                             class="my-fs-sm my-d-flex my-align-center my-fw-bold my-gap-4">
                                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -2462,7 +2480,7 @@
                                                     </a>
 
                                                     <!-- For Account Setting -->
-                                                    <a href="#" class="my-p-3 item  my-mt-1">
+                                                    <a href="#" class="my-p-3 item  my-mt-1" role="menuitem">
                                                         <div
                                                             class="my-fs-sm my-d-flex my-align-center my-fw-bold my-gap-4">
                                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -2482,7 +2500,8 @@
                                                 </div>
 
                                                 <!--=====  For Account  =====-->
-                                                <div class="my-px-4 my-mt-6 account my-flex-column my-gap-2">
+                                                <div class="my-px-4 my-mt-6 account my-flex-column my-gap-2"
+                                                    aria-labelledby="account-section-title">
                                                     <div class="my-fs-xs my-fw-medium my-pl-2 my-mb-4">Account</div>
 
 
@@ -2541,7 +2560,8 @@
 
                                                     <div class="my-pb-4 ">
                                                         <button
-                                                            class="my-flex-center my-gap-4 my-w-100 add-more my-mt-2 ">
+                                                            class="my-flex-center my-gap-4 my-w-100 add-more my-mt-2 "
+                                                            aria-label="Add a new account">
                                                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -2556,7 +2576,8 @@
 
                                                 <!--=====  For Logout  =====-->
                                                 <div class="my-mt-4 my-px-3">
-                                                    <div class="item my-d-flex my-align-center my-gap-4">
+                                                    <a href="#" class="item my-d-flex my-align-center my-gap-4"
+                                                        role="menuitem">
                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -2567,7 +2588,7 @@
                                                         <div>
                                                             Sign Out
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </div>
                                             </div>
 
@@ -2582,12 +2603,13 @@
 
                     <!--==================||   Header Main Start Here   ||==================-->
                     <div class="my-mt-8  header-main">
-                        <nav>
+                        <nav aria-label="Main site navigation">
                             <ul class="my-d-flex my-align-center my-gap-14 my-pt-5 my-pb-5 ">
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3 active">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3 active"
+                                        aria-current="page" aria-label="Tours">
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2600,7 +2622,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Flight">
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2620,7 +2642,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Cars">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2634,7 +2656,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Activities">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2648,7 +2670,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3 ">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3 " aria-label="Planner">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2665,7 +2687,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Tour">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2682,7 +2704,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Food">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2699,7 +2721,8 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3"
+                                        aria-label="Travel Gear">
                                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -2713,7 +2736,7 @@
 
                                 <!--=====  Single Nav  =====-->
                                 <li>
-                                    <a href="#" class="item my-d-flex my-align-center my-gap-3">
+                                    <a href="#" class="item my-d-flex my-align-center my-gap-3" aria-label="Blogs">
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -3133,10 +3156,11 @@
                             </h2>
 
                             <!--=======||   Tab Buttons  Start Here  ||=======-->
-                            <ul class="tab-btns my-d-flex  my-mt-10">
+                            <ul class="tab-btns my-d-flex  my-mt-10" role="tablist">
                                 <!--#Note: [will active class add when use click tab button (.tab-btn.active) ] -->
                                 <li>
-                                    <button class="tab-btn active" data-tab="1">
+                                    <button class="tab-btn active" data-tab="1" role="tab" aria-selected="true"
+                                        aria-controls="tab-1">
                                         Hotels
                                         <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3149,7 +3173,8 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="2">
+                                    <button class="tab-btn" data-tab="2" role="tab" aria-selected="false"
+                                        aria-controls="tab-2">
                                         Activities
                                         <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3163,7 +3188,8 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="3">
+                                    <button class="tab-btn" data-tab="3" role="tab" aria-selected="false"
+                                        aria-controls="tab-3">
                                         Tour
                                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3177,7 +3203,8 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="4">
+                                    <button class="tab-btn" data-tab="4" role="tab" aria-selected="false"
+                                        aria-controls="tab-4">
                                         Flight
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3190,7 +3217,8 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="5">
+                                    <button class="tab-btn" data-tab="5" role="tab" aria-selected="false"
+                                        aria-controls="tab-5">
                                         Flight
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3203,7 +3231,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-6">
                                         Food
                                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3216,7 +3244,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-7">
                                         Transportation
                                         <svg width="18" height="23" viewBox="0 0 18 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3228,7 +3256,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-7">
                                         Transportation
                                         <svg width="18" height="23" viewBox="0 0 18 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3241,7 +3269,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-7">
                                         Guide
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3261,7 +3289,7 @@
 
                             <!--#Note: [will active class add then show tab content (.tab-content.active)] -->
                             <!--==================||   Slider One   ||==================-->
-                            <div class="tab-content active" data-tab="1">
+                            <div class="tab-content active" data-tab="1" role="tabpanel" aria-labelledby="tab-btn-1">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3 for-sm-2 for-xs-1 my-gap-15 my-gap-sm-4">
                                         <div class="slider-item">
@@ -3330,7 +3358,7 @@
 
 
                             <!--==================||   Slider 2   ||==================-->
-                            <div class="tab-content" data-tab="2">
+                            <div class="tab-content" data-tab="2" role="tabpanel" aria-labelledby="tab-btn-1">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3 for-sm-2 my-gap-15 my-gap-sm-4">
                                         <div class="slider-item">
@@ -3370,7 +3398,7 @@
                             </div>
 
                             <!--==================||   Slider 3   ||==================-->
-                            <div class="tab-content" data-tab="3">
+                            <div class="tab-content" data-tab="3" role="tabpanel" aria-labelledby="tab-btn-1">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3">
                                         <div class="slider-item">
@@ -3436,10 +3464,10 @@
                             </h2>
 
                             <!--=======||   Tab Buttons  Start Here  ||=======-->
-                            <ul class="tab-btns my-d-flex  my-mt-10">
+                            <ul class="tab-btns my-d-flex  my-mt-10" role="tablist">
                                 <!--#Note: [will active class add when use click tab button (.tab-btn.active) ] -->
                                 <li>
-                                    <button class="tab-btn active" data-tab="1">
+                                    <button class="tab-btn active" data-tab="1" role="tab" aria-selected="true">
                                         Hotels
                                         <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3452,7 +3480,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn " data-tab="2">
+                                    <button class="tab-btn " data-tab="2" role="tab" aria-selected="true">
                                         Activities
                                         <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3466,7 +3494,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="3">
+                                    <button class="tab-btn" data-tab="3" role="tab" aria-selected="true">
                                         Tour
                                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3480,7 +3508,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="4">
+                                    <button class="tab-btn" data-tab="4" role="tab" aria-selected="true">
                                         Flight
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3493,7 +3521,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="5">
+                                    <button class="tab-btn" data-tab="5" role="tab" aria-selected="true">
                                         Flight
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3506,7 +3534,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="true">
                                         Food
                                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3519,7 +3547,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="true">
                                         Transportation
                                         <svg width="18" height="23" viewBox="0 0 18 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3531,7 +3559,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="true">
                                         Transportation
                                         <svg width="18" height="23" viewBox="0 0 18 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3544,7 +3572,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn">
+                                    <button class="tab-btn" role="tab" aria-selected="true">
                                         Guide
                                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -3564,7 +3592,7 @@
 
                             <!--#Note: [will active class add then show tab content (.tab-content.active)] -->
                             <!--==================||   Content Hotel   ||==================-->
-                            <div class="tab-content active" data-tab="1">
+                            <div class="tab-content active" data-tab="1" role="tabpanel">
                                 <div class="my-grid-3 my-gap-6 my-grid-md-2 my-grid-sm-1">
 
                                     <!--==========||  Single Cart Item   ||=========-->
@@ -3906,7 +3934,7 @@
 
 
                             <!--==================||   Content Activities   ||==================-->
-                            <div class="tab-content" data-tab="2">
+                            <div class="tab-content" data-tab="2" role="tabpanel">
                                 <div class="my-grid-3 my-gap-6 my-grid-md-2 my-grid-sm-1">
                                     <!--==========||  Single Cart Item   ||=========-->
                                     <div>
@@ -5601,23 +5629,23 @@
         ======================================================
         -->
         <section>
-            <div class="testimonial ">
+            <div class="testimonial">
                 <div class="my-container">
                     <div class="testimonial-area my-tab-section">
 
                         <!--=================||  Head Start Here  ||==================-->
                         <div class="head my-text-center">
                             <div>
-                                <div class="section-title">Wall of love</div>
-                                <p class="section-sub-title my-mt-10">Hear first-hand from our incredible community of
-                                    customers.</p>
+                                <h2 class="section-title">Wall of love</h2>
+                                <h3 class="section-sub-title my-mt-10">Hear first-hand from our incredible community of
+                                    customers.</h3>
                             </div>
 
                             <!--=======||   Tab Buttons  Start Here  ||=======-->
-                            <ul class="tab-btns my-d-flex  my-mt-32">
+                            <ul class="tab-btns my-d-flex  my-mt-32" role="tablist">
                                 <!--#Note: [will active class add when use click tab button (.tab-btn.active) ] -->
                                 <li>
-                                    <button class="tab-btn active" data-tab="1">
+                                    <button class="tab-btn active" data-tab="1" aria-selected="true" role="tab">
                                         Google
                                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -5640,7 +5668,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn " data-tab="2">
+                                    <button class="tab-btn " data-tab="2" aria-selected="false" role="tab">
                                         Facebook
                                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -5663,7 +5691,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="3">
+                                    <button class="tab-btn" data-tab="3" aria-selected="false" role="tab">
                                         Trip Advisor
                                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -5695,7 +5723,7 @@
                                 </li>
 
                                 <li>
-                                    <button class="tab-btn" data-tab="4">
+                                    <button class="tab-btn" data-tab="4" aria-selected="false" role="tab">
                                         Trust Pilot
                                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -5720,7 +5748,7 @@
 
                             <!--#Note: [will active class add then show tab content (.tab-content.active)] -->
                             <!--===========||   Slider One   ||===========-->
-                            <div class="tab-content active" data-tab="1">
+                            <div class="tab-content active" data-tab="1" role="tabpanel">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3 for-md-2  for-sm-1 my-gap-12 my-gap-sm-4">
 
@@ -5780,13 +5808,14 @@
                                                 <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
                                                     <div>
                                                         <img class="profile-img-lg"
-                                                            src="./static/images/profile (1).jpg" alt="Google Image">
+                                                            src="./static/images/profile (1).jpg" alt="Google Image"
+                                                            loading="lazy">
                                                     </div>
                                                     <div class="">
                                                         <div class="my-d-flex my-align-center my-gap-2">
                                                             <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
                                                             <img class="my-w-8" src="./static/images/Verified tick.png"
-                                                                alt="Verified Icon">
+                                                                alt="Verified Icon" loading="lazy">
                                                         </div>
                                                         <div class="my-fs-md">@siennahewitt</div>
                                                     </div>
@@ -5814,13 +5843,14 @@
                                                 <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
                                                     <div>
                                                         <img class="profile-img-lg"
-                                                            src="./static/images/profile (1).jpg" alt="Google Image">
+                                                            src="./static/images/profile (1).jpg" alt="Google Image"
+                                                            loading="lazy">
                                                     </div>
                                                     <div class="">
                                                         <div class="my-d-flex my-align-center my-gap-2">
                                                             <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
                                                             <img class="my-w-8" src="./static/images/Verified tick.png"
-                                                                alt="Verified Icon">
+                                                                alt="Verified Icon" loading="lazy">
                                                         </div>
                                                         <div class="my-fs-md">@siennahewitt</div>
                                                     </div>
@@ -5848,19 +5878,21 @@
                                                 <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
                                                     <div>
                                                         <img class="profile-img-lg"
-                                                            src="./static/images/profile (1).jpg" alt="Google Image">
+                                                            src="./static/images/profile (1).jpg" alt="Google Image"
+                                                            loading="lazy">
                                                     </div>
                                                     <div class="">
                                                         <div class="my-d-flex my-align-center my-gap-2">
                                                             <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
                                                             <img class="my-w-8" src="./static/images/Verified tick.png"
-                                                                alt="Verified Icon">
+                                                                alt="Verified Icon" loading="lazy">
                                                         </div>
                                                         <div class="my-fs-md">@siennahewitt</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <!--=====  single review ====-->
                                         <div class="slider-item">
                                             <div class="card">
@@ -5888,7 +5920,7 @@
                                                         <div class="my-d-flex my-align-center my-gap-2">
                                                             <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
                                                             <img class="my-w-8" src="./static/images/Verified tick.png"
-                                                                alt="Verified Icon">
+                                                                alt="Verified Icon" loading="lazy">
                                                         </div>
                                                         <div class="my-fs-md">@siennahewitt</div>
                                                     </div>
@@ -5902,7 +5934,7 @@
 
                                     <!--========  Slider Next Prev Button  =======-->
                                     <div class="slider-controls">
-                                        <button class="prev">
+                                        <button class="prev" aria-label="Previous slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19 12.0562H5M5 12.0562L12 19.0562M5 12.0562L12 5.05615"
@@ -5910,7 +5942,7 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </button>
-                                        <button class="next">
+                                        <button class="next" aria-label="Next slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5 12.0562H19M19 12.0562L12 5.05615M19 12.0562L12 19.0562"
@@ -5924,7 +5956,7 @@
 
 
                             <!--===========||   Slider 2   ||============-->
-                            <div class="tab-content " data-tab="2">
+                            <div class="tab-content " data-tab="2" role="tabpanel">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3 for-sm-2 for-xs-1 my-gap-15 my-gap-sm-4">
                                         <div class="slider-item">
@@ -5935,32 +5967,32 @@
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                         <div class="slider-item">
                                             <div class="card">
-                                                <img src="./static/images/cart-demo2.png" alt="">
+                                                <img src="./static/images/cart-demo2.png" alt="" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -5969,7 +6001,7 @@
 
                                     <!--========  Slider Next Prev Button  =======-->
                                     <div class="slider-controls">
-                                        <button class="prev">
+                                        <button class="prev" aria-label="Previous slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19 12.0562H5M5 12.0562L12 19.0562M5 12.0562L12 5.05615"
@@ -5977,7 +6009,7 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </button>
-                                        <button class="next">
+                                        <button class="next" aria-label="Next slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5 12.0562H19M19 12.0562L12 5.05615M19 12.0562L12 19.0562"
@@ -5990,7 +6022,7 @@
                             </div>
 
                             <!--==========||   Slider 3   ||===========-->
-                            <div class="tab-content" data-tab="3">
+                            <div class="tab-content" data-tab="3" role="tabpanel">
                                 <div class="my-slider-wrapper">
                                     <div class="my-slider for-3">
                                         <div class="slider-item">
@@ -6010,7 +6042,7 @@
 
                                     <!--========  Slider Next Prev Button  =======-->
                                     <div class="slider-controls">
-                                        <button class="prev">
+                                        <button class="prev" aria-label="Previous slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19 12.0562H5M5 12.0562L12 19.0562M5 12.0562L12 5.05615"
@@ -6018,7 +6050,7 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </button>
-                                        <button class="next">
+                                        <button class="next" aria-label="Next slide">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5 12.0562H19M19 12.0562L12 5.05615M19 12.0562L12 19.0562"
@@ -6030,9 +6062,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
+            </div>
             </div>
         </section>
 
@@ -6043,15 +6076,15 @@
         =======||   Our Brand Section  Start Here   ||======
         ====================================================
         -->
-        <section>
-            <div class="our-brand ">
+        <section aria-labelledby="brand-heading">
+            <div class="our-brand">
                 <div class="my-container">
                     <div class="our-brand-area">
                         <!-- Head -->
-                        <h2 class="head">We have the best partners</h2>
+                        <h2 class="head" id="brand-heading"> We have the best partners</h2>
 
                         <!--=================||  Slider  ||==================-->
-                        <div class="swiper brandSwiper my-mt-16">
+                        <div class="swiper brandSwiper my-mt-16" role="region" aria-label="Our brand partners carousel">
                             <div class="swiper-wrapper ">
                                 <!-- single item -->
                                 <div class="swiper-slide"><a href="#"><img
@@ -6132,7 +6165,7 @@
         =======||   Our Blogs Section  Start Here   ||======
         ====================================================
         -->
-        <section>
+        <section aria-labelledby="blog-heading">
             <div class="our-blog section-margin">
                 <div class="my-container">
                     <div class="our-blog-area">
@@ -6140,15 +6173,16 @@
                         <!--=====================||  Blogs Head  ||======================-->
                         <div class="head my-flex-between my-align-start">
                             <div class="left">
-                                <h5>Our blog</h5>
-                                <h2 class="my-text-primary my-mt-6">Lastest blog posts</h2>
-                                <p class="my-mt-10  section-sub-title">Tool and strategies modern teams need to
+                                <div class="my-fs-md my-fw-bold">Our Blog</div>
+                                <h2 class="my-text-primary my-mt-6" id="blog-heading">Latest blog posts</h2>
+                                <h3 class="my-mt-10  section-sub-title">Tool and strategies modern teams need to
                                     help their
                                     companies grow.
-                                </p>
+                                </h3>
                             </div>
                             <div class="right">
-                                <a class="my-btn my-primary-btn " href="#">View all blogs</a>
+                                <a class="my-btn my-primary-btn" href="#" aria-label="Go to all blog page">View all
+                                    blogs</a>
                             </div>
                         </div>
 
@@ -6162,7 +6196,7 @@
                                 <article class="item my-p-4 my-border-secondary my-radius-xxl">
 
                                     <!-- For Image -->
-                                    <a href="#">
+                                    <a href="#" aria-label="Read full article on Software Engineering">
                                         <img class="my-radius-xxl" src="./static/images/blogs/blog (1).jpg"
                                             alt="Blog Image" loading="lazy">
                                     </a>
@@ -6172,114 +6206,22 @@
                                     <div class="my-px-4">
                                         <!-- For Content -->
                                         <div class="my-mt-8">
-                                            <h6>Design</h6>
-                                            <a href="#" class="my-mt-4 my-flex-between my-align-start my-gap-3">
-                                                <div class="cart-title text-hover-secondary">UX review presentations
-                                                </div>
-                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                            <p class="my-fs-md my-fw-bold">Design</p>
+
+                                            <div class="my-mt-4 my-flex-between my-align-start my-gap-3">
+                                                <h3 class="cart-title text-hover-secondary">
+                                                    <a href="#" aria-label="Read full article on Software Engineering">
+                                                        UX review presentations
+                                                    </a>
+                                                </h3>
+                                                <svg width="24" height="25" aria-hidden="true" viewBox="0 0 24 25"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M7 17.7227L17 7.72266M17 7.72266H7M17 7.72266V17.7227"
                                                         stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round" />
                                                 </svg>
-
-                                            </a>
-
-                                            <p class="my-text-tertiary my-mt-2 my-fs-md">How do you create compelling
-                                                presentations
-                                                that wow
-                                                your colleagues and
-                                                impress your managers?</p>
-                                        </div>
-
-                                        <!-- author -->
-                                        <div class="my-mt-10 my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <img class="profile-img-lg" src="./static/images/profile (1).jpg"
-                                                    alt="author image" loading="lazy">
                                             </div>
 
-                                            <div>
-                                                <div class="name my-fs-sm my-text-primary my-fw-bold">Olivia Rhye</div>
-                                                <p class="my-text-tertiary">20 Jan 2025</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!--========  Blogs Item  ========-->
-                                <article class="item my-p-4 my-border-secondary my-radius-xxl">
-
-                                    <!-- For Image -->
-                                    <a href="#">
-                                        <img class="my-radius-xxl" src="./static/images/blogs/blog (1).png"
-                                            alt="Blog Image" loading="lazy">
-                                    </a>
-
-
-                                    <!--===== Bottom Content =====  -->
-                                    <div class="my-px-4">
-                                        <!-- For Content -->
-                                        <div class="my-mt-8">
-                                            <h6>Product</h6>
-                                            <a href="#" class="my-mt-4 my-flex-between my-align-start my-gap-3">
-                                                <div class="cart-title text-hover-secondary">Migrating to Linear 101
-                                                </div>
-                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 17.7227L17 7.72266M17 7.72266H7M17 7.72266V17.7227"
-                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-
-                                            </a>
-
-                                            <p class="my-text-tertiary my-mt-2 my-fs-md">Linear helps streamline
-                                                software projects, sprints, tasks, and bug tracking. Here’s how to get
-                                                started.</p>
-                                        </div>
-
-                                        <!-- author -->
-                                        <div class="my-mt-10 my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <img class="profile-img-lg" src="./static/images/profile (3).png"
-                                                    alt="author image" loading="lazy">
-                                            </div>
-
-                                            <div>
-                                                <div class="name my-fs-sm my-text-primary my-fw-bold">Tanvir Ahmed</div>
-                                                <p class="my-text-tertiary">21 Jan 2025</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!--========  Blogs Item  ========-->
-                                <article class="item my-p-4 my-border-secondary my-radius-xxl">
-
-                                    <!-- For Image -->
-                                    <a href="#">
-                                        <img class="my-radius-xxl" src="./static/images/blogs/blog (2).jpg"
-                                            alt="Blog Image" loading="lazy">
-                                    </a>
-
-
-                                    <!--===== Bottom Content =====  -->
-                                    <div class="my-px-4">
-                                        <!-- For Content -->
-                                        <div class="my-mt-8">
-                                            <h6>Design</h6>
-                                            <a href="#" class="my-mt-4 my-flex-between my-align-start my-gap-3">
-                                                <div class="cart-title text-hover-secondary">Software Engineering
-                                                </div>
-                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7 17.7227L17 7.72266M17 7.72266H7M17 7.72266V17.7227"
-                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-
-                                            </a>
 
                                             <p class="my-text-tertiary my-mt-2 my-fs-md">How do you create compelling
                                                 presentations
@@ -6297,12 +6239,115 @@
 
                                             <div>
                                                 <div class="name my-fs-sm my-text-primary my-fw-bold">Olivia Rhye</div>
-                                                <p class="my-text-tertiary">20 Jan 2025</p>
+                                                <time class="my-text-tertiary">20 Jan 2025</time>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
+                                <!--========  Blogs Item  ========-->
+                                <article class="item my-p-4 my-border-secondary my-radius-xxl">
 
+                                    <!-- For Image -->
+                                    <a href="#" aria-label="Read full article on Software Engineering">
+                                        <img class="my-radius-xxl" src="./static/images/blogs/blog (1).png"
+                                            alt="Blog Image" loading="lazy">
+                                    </a>
+
+
+                                    <!--===== Bottom Content =====  -->
+                                    <div class="my-px-4">
+                                        <!-- For Content -->
+                                        <div class="my-mt-8">
+                                            <p class="my-fs-md my-fw-bold">Design</p>
+
+                                            <div class="my-mt-4 my-flex-between my-align-start my-gap-3">
+                                                <h3 class="cart-title text-hover-secondary">
+                                                    <a href="#" aria-label="Read full article on Software Engineering">
+                                                        UX review presentations
+                                                    </a>
+                                                </h3>
+                                                <svg width="24" height="25" aria-hidden="true" viewBox="0 0 24 25"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 17.7227L17 7.72266M17 7.72266H7M17 7.72266V17.7227"
+                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+
+
+                                            <p class="my-text-tertiary my-mt-2 my-fs-md">How do you create compelling
+                                                presentations
+                                                that wow
+                                                your colleagues and
+                                                impress your managers?</p>
+                                        </div>
+
+                                        <!--===== author =====-->
+                                        <div class="my-mt-10 my-d-flex my-align-center my-gap-4">
+                                            <div>
+                                                <img class="profile-img-lg" src="./static/images/profile (3).png"
+                                                    alt="author image" loading="lazy">
+                                            </div>
+
+                                            <div>
+                                                <div class="name my-fs-sm my-text-primary my-fw-bold">Olivia Rhye</div>
+                                                <time class="my-text-tertiary">20 Jan 2025</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!--========  Blogs Item  ========-->
+                                <article class="item my-p-4 my-border-secondary my-radius-xxl">
+
+                                    <!-- For Image -->
+                                    <a href="#" aria-label="Read full article on Software Engineering">
+                                        <img class="my-radius-xxl" src="./static/images/blogs/blog (2).jpg"
+                                            alt="Blog Image" loading="lazy">
+                                    </a>
+
+
+                                    <!--===== Bottom Content =====  -->
+                                    <div class="my-px-4">
+                                        <!-- For Content -->
+                                        <div class="my-mt-8">
+                                            <p class="my-fs-md my-fw-bold">Wifi</p>
+
+                                            <div class="my-mt-4 my-flex-between my-align-start my-gap-3">
+                                                <h3 class="cart-title text-hover-secondary">
+                                                    <a href="#" aria-label="Read full article on Software Engineering">
+                                                        Software Engineering
+                                                    </a>
+                                                </h3>
+                                                <svg width="24" height="25" aria-hidden="true" viewBox="0 0 24 25"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 17.7227L17 7.72266M17 7.72266H7M17 7.72266V17.7227"
+                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+
+
+                                            <p class="my-text-tertiary my-mt-2 my-fs-md">How do you create compelling
+                                                presentations
+                                                that wow
+                                                your colleagues and
+                                                impress your managers?</p>
+                                        </div>
+
+                                        <!--===== author =====-->
+                                        <div class="my-mt-10 my-d-flex my-align-center my-gap-4">
+                                            <div>
+                                                <img class="profile-img-lg" src="./static/images/profile (2).png"
+                                                    alt="author image" loading="lazy">
+                                            </div>
+
+                                            <div>
+                                                <div class="name my-fs-sm my-text-primary my-fw-bold">Olivia Rhye</div>
+                                                <time class="my-text-tertiary">20 Jan 2025</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
                             </div>
                         </div>
@@ -6316,24 +6361,24 @@
 
         <!--
         ==========================================================
-        =======||   Our Achivements Section  Start Here   ||======
+        =======||   Our Achievements Section  Start Here   ||======
         ==========================================================
         -->
-        <section>
+        <section aria-labelledby="achievements-heading">
             <div class="our-achivements section-margin">
                 <div class="my-container">
                     <div class="our-achivements-area">
 
-                        <!--=====================||  Achivement Head  ||===================-->
+                        <!--=====================||  Achievements Head  ||===================-->
                         <div class="head my-text-center">
-                            <h2 class="section-title">
+                            <h2 class="section-title" id="achievements-heading">
                                 Your Travel Universe in One Platform
                             </h2>
-                            <p class="my-mt-10 my-pb-20 section-sub-title">Explore thousands of options across hotels,
+                            <h3 class="my-mt-10 my-pb-20 section-sub-title">Explore thousands of options across hotels,
                                 flights,
                                 activities, tours,
                                 and more – all in
-                                one place</p>
+                                one place</h3>
 
                             <!--========|| Bg Images For Mobile  ||==========  -->
                             <div class="mobile-bg my-d-none  my-d-md-block">
@@ -6343,73 +6388,73 @@
                         </div>
 
 
-                        <!--=====================||  Achivement Body  ||===================-->
+                        <!--=====================||  Achievements Body  ||===================-->
                         <div class="achivement-body">
                             <div class="items my-grid-4 my-grid-md-2 my-grid-xs-1 my-gap-16 my-row-gap-32">
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (1).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Hotels & Resort</h6>
-                                    <h2 class="section-title">1,000+</h2>
-                                </div>
+                                    <h4 class="title-sm">Hotels & Resort</h4>
+                                    <p class="section-title">1,000+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (7).png"
                                         alt="Hotels & Resort">
-                                    <h6>Airlines & Flight</h6>
-                                    <h2 class="section-title">500+</h2>
-                                </div>
+                                    <h4 class="title-sm">Airlines & Flight</h4>
+                                    <p class="section-title">500+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (8).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Activities & Attraction</h6>
-                                    <h2 class="section-title">4000+</h2>
-                                </div>
+                                    <h4 class="title-sm">Activities & Attraction</h4>
+                                    <p class="section-title">4000+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (6).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Tours</h6>
-                                    <h2 class="section-title">1,00+</h2>
-                                </div>
+                                    <h4 class="title-sm">Tours</h4>
+                                    <p class="section-title">100+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (5).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Transportation</h6>
-                                    <h2 class="section-title">4,00+</h2>
-                                </div>
+                                    <h4 class="title-sm">Transportation</h4>
+                                    <p class="section-title">400+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (4).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Food & Dining Plans</h6>
-                                    <h2 class="section-title">2,000+</h2>
-                                </div>
+                                    <h4 class="title-sm">Food & Dining Plans</h4>
+                                    <p class="section-title">2,000+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (3).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Guides</h6>
-                                    <h2 class="section-title">5000+</h2>
-                                </div>
+                                    <h4 class="title-sm">Guides</h4>
+                                    <p class="section-title">5000+</p>
+                                </article>
 
                                 <!--=====  Single Item  =====-->
-                                <div class="item my-flex-column my-align-center my-gap-5">
+                                <article class="item my-flex-column my-align-center my-gap-5">
                                     <img class="my-w-18" src="./static/images/achivements (2).png" alt="Hotels & Resort"
                                         loading="lazy">
-                                    <h6>Travel Gear</h6>
-                                    <h2 class="section-title">10000+</h2>
-                                </div>
+                                    <h4 class="title-sm">Travel Gear</h4>
+                                    <p class="section-title">10000+</p>
+                                </article>
                             </div>
 
                             <!--============|| Bg Images For Desktop  ||=============  -->
@@ -6431,7 +6476,7 @@
         =======||   Get Touch Section  Start Here   ||======
         ====================================================
         -->
-        <section>
+        <section aria-labelledby="contact-heading">
             <div class="get-touch section-margin">
                 <div class="my-container">
                     <div
@@ -6445,13 +6490,14 @@
 
                         <!--=================||   Details Here   ||=================-->
                         <div class="my-mt-16">
-                            <h3 class="my-text-primary">Still have questions?</h3>
+                            <h2 class="my-text-primary my-fs-xl" id="contact-heading">Still have questions?</h2>
                             <p class="my-mt-4">Can’t find the answer you’re looking for? Please chat to our friendly
                                 team.</p>
 
                             <!-- Get in Tourch Button -->
                             <div class="my-mt-16 my-flex-center">
-                                <a href="#" class=" my-btn my-primary-btn">Get in touch</a>
+                                <a href="#" class=" my-btn my-primary-btn"
+                                    aria-label="Get in touch with support team">Get in touch</a>
                             </div>
                         </div>
                     </div>
@@ -6475,25 +6521,26 @@
                         <div class="left-side  my-p-md-1">
                             <div>
                                 <h2 class="section-title my-text-white">
-                                    Sign UP to Reveal Secret Deals and See Prices Drops
+                                    Sign Up to Reveal Secret Deals and See Price Drops
                                 </h2>
-                                <p class="section-sub-title my-fw-normal my-text-white my-mt-10">
+                                <h3 class="section-sub-title my-fw-normal my-text-white my-mt-10">
                                     Personal performance tracking made easy.
-                                </p>
+                                </h3>
                             </div>
 
                             <!--==========||  Subcribe Form  ||=========== -->
                             <div class="my-mt-24">
                                 <form action="#"
                                     class="subcribe-form my-mt-24 my-flex-xs-column my-justify-xs-start my-align-xs-start my-d-flex my-align-center my-gap-5">
-                                    <input type="email" placeholder="Enter your email" required>
-                                    <button class="my-btn my-secondary-btn">
+                                    <input type="email" placeholder="Enter your email" aria-label="Email Address"
+                                        required>
+                                    <button class="my-btn my-secondary-btn" aria-label="Subscribe to newsletter">
                                         Subscribe
                                     </button>
                                 </form>
 
                                 <p class="my-mt-3 my-text-white my-fw-normal">We care about your data in our <a href="#"
-                                        class="my-text-underline ">privacy
+                                        class="my-text-underline" aria-label="Privacy Policy">privacy
                                         policy.</a> </p>
                             </div>
                         </div>
@@ -6548,7 +6595,8 @@
                             </ul>
 
                             <div class="img-wrapper">
-                                <img src="./static/images/subcribe-sec.png" alt="subcirbe section image" />
+                                <img src="./static/images/subcribe-sec.png" alt="subcirbe section image"
+                                    loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -6571,7 +6619,7 @@
                 <div class="footer-top my-d-flex my-gap-16 my-gap-md-24 my-flex-md-column">
                     <!--======||  Footer Top Left  ||======-->
                     <div class="left my-flex-column my-gap-12">
-                        <a href="#">
+                        <a href="./index.html" aria-label="Tourgull home">
                             <img class="my-w-70" src="./static/images/footer-logo.svg" alt="tourgull logo"
                                 loading="lazy">
                         </a>
@@ -6588,63 +6636,76 @@
                         </div>
                     </div>
 
-                    <!--======||  Footer Top Right  ||======-->
-                    <div class="right ">
-                        <div class="my-grid-4  my-gap-16 my-gap-md-25 my-grid-md-2">
+                    <!--======|| Footer Top Right ||======-->
+                    <div class="right">
+                        <div class="my-grid-4 my-gap-16 my-gap-md-25 my-grid-md-2">
+
                             <div class="item">
-                                <h5 class="nav-item-title">Explore</h5>
+                                <h4 class="nav-item-title">Explore</h4>
                                 <ul class="my-mt-8 my-flex-column my-gap-4">
-                                    <li><a href="#" class="footer-nav-item">Tour</a></li>
-                                    <li><a href="#" class="footer-nav-item">Hotels</a></li>
-                                    <li><a href="#" class="footer-nav-item">Flight</a></li>
-                                    <li><a href="#" class="footer-nav-item">Car Rentals</a></li>
-                                    <li><a href="#" class="footer-nav-item">Tour Guide</a></li>
-                                    <li><a href="#" class="footer-nav-item">Tour Planner</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Tours">Tour</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Hotels">Hotels</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Flight">Flight</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Car Rentals">Car
+                                            Rentals</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Tour Guide">Tour
+                                            Guide</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Explore Tour Planner">Tour
+                                            Planner</a></li>
                                 </ul>
                             </div>
 
                             <div class="item">
-                                <h5 class="nav-item-title">Company</h5>
+                                <h4 class="nav-item-title">Company</h4>
                                 <ul class="my-mt-8 my-flex-column my-gap-4">
-                                    <li><a href="#" class="footer-nav-item">About us</a></li>
-                                    <li><a href="#" class="footer-nav-item">Careers</a></li>
-                                    <li><a href="#" class="footer-nav-item">Blogs</a></li>
-                                    <li><a href="#" class="footer-nav-item">Press & Newsroom</a>
+                                    <li><a href="#" class="footer-nav-item" aria-label="About Tourgull">About us</a>
                                     </li>
-                                    <li><a href="#" class="footer-nav-item">Media kit</a></li>
-                                    <li><a href="#" class="footer-nav-item">Contact</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="item">
-                                <h5 class="nav-item-title">Support</h5>
-                                <ul class="my-mt-8 my-flex-column my-gap-4">
-                                    <li><a href="#" class="footer-nav-item">Help Center</a></li>
-                                    <li><a href="#" class="footer-nav-item">FAQs</a></li>
-                                    <li><a href="#" class="footer-nav-item">Payment</a></li>
-                                    <li><a href="#" class="footer-nav-item">Customer Support</a>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Careers at Tourgull">Careers</a>
                                     </li>
-                                    <li><a href="#" class="footer-nav-item">Tutorials</a></li>
-                                    <li><a href="#" class="footer-nav-item">Loyalty & Rewards</a>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Read Tourgull Blogs">Blogs</a>
+                                    </li>
+                                    <li><a href="#" class="footer-nav-item"
+                                            aria-label="Press and Newsroom of Tourgull">Press & Newsroom</a>
+                                    </li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Media kit">Media kit</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Contact Tourgull">Contact</a>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="item">
-                                <h5 class="nav-item-title">Partnership</h5>
+                                <h4 class="nav-item-title">Support</h4>
                                 <ul class="my-mt-8 my-flex-column my-gap-4">
-                                    <li><a href="#" class="footer-nav-item">List Your Property</a>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Help Center">Help Center</a>
                                     </li>
-                                    <li><a href="#" class="footer-nav-item">Become an Afflifiate</a>
+                                    <li><a href="#" class="footer-nav-item" aria-label="FAQs">FAQs</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Payment information">Payment</a>
                                     </li>
-                                    <li><a href="#" class="footer-nav-item">For Travel Agent</a>
-                                    </li>
-                                    <li><a href="#" class="footer-nav-item">Business Partnership</a>
-                                    </li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Customer Support">Customer
+                                            Support</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Tutorials">Tutorials</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Loyalty & Rewards">Loyalty &
+                                            Rewards</a></li>
                                 </ul>
                             </div>
+
+                            <div class="item">
+                                <h4 class="nav-item-title">Partnership</h4>
+                                <ul class="my-mt-8 my-flex-column my-gap-4">
+                                    <li><a href="#" class="footer-nav-item" aria-label="List Your Property">List Your
+                                            Property</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Become an Affiliate">Become an
+                                            Affiliate</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="For Travel Agents">For Travel
+                                            Agent</a></li>
+                                    <li><a href="#" class="footer-nav-item" aria-label="Business Partnership">Business
+                                            Partnership</a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
 
 
@@ -6652,7 +6713,8 @@
                 <div class="my-mt-24 footer-bottom">
                     <div class="my-grid-2 my-grid-md-1  my-gap-md-12">
                         <div class="left my-order-md-2">
-                            <p>© 2025 <a href="#" class="my-text-yellow">Tourgull</a>. All rights
+                            <p>© 2025 <a href="#" class="my-text-yellow" aria-label="Tourgull Home">Tourgull</a>. All
+                                rights
                                 reserved. |
                                 Designed
                                 with ❤️ for Travelers
@@ -6678,8 +6740,8 @@
                                 <!--======||  Footer Social Icons  ||======-->
                                 <ul class="footer-social-icons my-d-flex my-gap-6 my-pl-12 my-mt-md-12 my-p-md-0">
                                     <li>
-                                        <a href=""><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
+                                        <a href="" aria-label="Tourgull Twitter"><svg width="24" height="25"
+                                                viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M15.7663 23.2227L10.4691 15.6723L3.83773 23.2227H1.03223L9.22444 13.8978L1.03223 2.22266H8.23518L13.2277 9.33881L19.4831 2.22266H22.2886L14.4766 11.1157L22.9692 23.2227H15.7663ZM18.8905 21.094H17.0018L5.04928 4.35129H6.93832L11.7254 11.0552L12.5532 12.2185L18.8905 21.094Z"
                                                     fill="white" />
@@ -6687,7 +6749,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="" aria-label="Tourgull Instagram">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <rect x="1.5" y="2.22266" width="21" height="21" rx="10.5"
@@ -6701,11 +6763,10 @@
                                                     d="M12.9897 10.1937H10.6701V17.2227H12.9897C12.9897 17.2227 12.9897 15.0098 12.9897 13.6263C12.9897 12.7959 13.2732 11.9618 14.4046 11.9618C15.6833 11.9618 15.6756 13.0486 15.6696 13.8905C15.6618 14.991 15.6804 16.114 15.6804 17.2227H18V13.5129C17.9804 11.1442 17.3631 10.0527 15.3325 10.0527C14.1265 10.0527 13.379 10.6002 12.9897 11.0955V10.1937Z"
                                                     fill="white" />
                                             </svg>
-
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="" aria-label="Tourgull Facebook">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="12" cy="12.7227" r="10.5"
@@ -6721,11 +6782,10 @@
                                                     </linearGradient>
                                                 </defs>
                                             </svg>
-
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="" aria-label="Tourgull Instagram">
                                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <rect x="1.5" y="2.22266" width="21" height="21" rx="6"
@@ -6775,6 +6835,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </footer>
 

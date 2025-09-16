@@ -147,8 +147,14 @@
 
 }
 
+.hero-slider .carousel .carousel-inner .carousel-item img {
+    object-fit: cover !important;
+}
 
-
+.right-banner img {
+    object-fit: cover;
+    border-radius: 0;
+}
 
 
 
