@@ -321,16 +321,13 @@ tr {
 
 /*________  Border  ________*/
 .my-border {
-    border: 1px solid var(--my-border-color);
-}
-
-.my-border-white-off {
-    border: 1px solid var(--my-white-off);
+    border: 1px solid var(--my-border-off);
 }
 
 .my-border2 {
-    border: 1px solid var(--my-border-color2);
+    border: 2px solid var(--my-border-off);
 }
+
 
 .my-border-top {
     border-top: 1px solid var(--my-border-color2);
@@ -341,7 +338,11 @@ tr {
 }
 
 .my-border-bottom {
-    border-bottom: 1px solid var(--my-border-color2);
+    border-bottom: 1px solid var(--my-white-off);
+}
+
+.my-border-bottom-primary {
+    border-bottom: 1px solid var(--my-border-primary);
 }
 
 .my-border-bottom-1 {
@@ -363,6 +364,10 @@ tr {
 /* border primary and secondary */
 .my-border-primary {
     border: 1px solid var(--my-border-primary);
+}
+
+.my-border-primary2 {
+    border: 2px solid var(--my-border-primary);
 }
 
 .my-border-secondary {
@@ -1313,38 +1318,407 @@ tr {
 }
 
 /* Width */
-.my-w-100 {
+.my-w-100-p {
     width: 100%;
 }
 
-.my-w-75 {
+.my-w-75-p {
     width: 75%;
 }
 
-.my-w-50 {
+.my-w-50-p {
     width: 50%;
 }
 
-.my-w-25 {
+.my-w-25-p {
     width: 25%;
 }
 
+
+
 /* max-width */
-.my-max-w-50 {
+.my-max-w-50-p {
     max-width: 50px;
 }
 
-.my-max-w-100 {
+.my-max-w-100-p {
     max-width: 100px;
 }
 
-.my-max-w-120 {
+.my-max-w-120-p {
     max-width: 100px;
 }
 
 .my-w-fit-content {
     width: fit-content;
 }
+
+
+/* Max width fix px */
+.my-max-w-10 {
+    max-width: 20px;
+}
+
+.my-max-w-11 {
+    max-width: 22px;
+}
+
+.my-max-w-12 {
+    max-width: 24px;
+}
+
+.my-max-w-13 {
+    max-width: 26px;
+}
+
+.my-max-w-14 {
+    max-width: 28px;
+}
+
+.my-max-w-15 {
+    max-width: 30px;
+}
+
+.my-max-w-16 {
+    max-width: 32px;
+}
+
+.my-max-w-17 {
+    max-width: 34px;
+}
+
+.my-max-w-18 {
+    max-width: 36px;
+}
+
+.my-max-w-19 {
+    max-width: 38px;
+}
+
+.my-max-w-20 {
+    max-width: 40px;
+}
+
+.my-max-w-21 {
+    max-width: 42px;
+}
+
+.my-max-w-22 {
+    max-width: 44px;
+}
+
+.my-max-w-23 {
+    max-width: 46px;
+}
+
+.my-max-w-24 {
+    max-width: 48px;
+}
+
+.my-max-w-25 {
+    max-width: 50px;
+}
+
+.my-max-w-26 {
+    max-width: 52px;
+}
+
+.my-max-w-27 {
+    max-width: 54px;
+}
+
+.my-max-w-28 {
+    max-width: 56px;
+}
+
+.my-max-w-29 {
+    max-width: 58px;
+}
+
+.my-max-w-30 {
+    max-width: 60px;
+}
+
+.my-max-w-31 {
+    max-width: 62px;
+}
+
+.my-max-w-32 {
+    max-width: 64px;
+}
+
+.my-max-w-33 {
+    max-width: 66px;
+}
+
+.my-max-w-34 {
+    max-width: 68px;
+}
+
+.my-max-w-35 {
+    max-width: 70px;
+}
+
+.my-max-w-36 {
+    max-width: 72px;
+}
+
+.my-max-w-37 {
+    max-width: 74px;
+}
+
+.my-max-w-38 {
+    max-width: 76px;
+}
+
+.my-max-w-39 {
+    max-width: 78px;
+}
+
+.my-max-w-40 {
+    max-width: 80px;
+}
+
+.my-max-w-41 {
+    max-width: 82px;
+}
+
+.my-max-w-42 {
+    max-width: 84px;
+}
+
+.my-max-w-43 {
+    max-width: 86px;
+}
+
+.my-max-w-44 {
+    max-width: 88px;
+}
+
+.my-max-w-45 {
+    max-width: 90px;
+}
+
+.my-max-w-46 {
+    max-width: 92px;
+}
+
+.my-max-w-47 {
+    max-width: 94px;
+}
+
+.my-max-w-48 {
+    max-width: 96px;
+}
+
+.my-max-w-49 {
+    max-width: 98px;
+}
+
+.my-max-w-50 {
+    max-width: 100px;
+}
+
+.my-max-w-51 {
+    max-width: 102px;
+}
+
+.my-max-w-52 {
+    max-width: 104px;
+}
+
+.my-max-w-53 {
+    max-width: 106px;
+}
+
+.my-max-w-54 {
+    max-width: 108px;
+}
+
+.my-max-w-55 {
+    max-width: 110px;
+}
+
+.my-max-w-56 {
+    max-width: 112px;
+}
+
+.my-max-w-57 {
+    max-width: 114px;
+}
+
+.my-max-w-58 {
+    max-width: 116px;
+}
+
+.my-max-w-59 {
+    max-width: 118px;
+}
+
+.my-max-w-60 {
+    max-width: 120px;
+}
+
+.my-max-w-61 {
+    max-width: 122px;
+}
+
+.my-max-w-62 {
+    max-width: 124px;
+}
+
+.my-max-w-63 {
+    max-width: 126px;
+}
+
+.my-max-w-64 {
+    max-width: 128px;
+}
+
+.my-max-w-65 {
+    max-width: 130px;
+}
+
+.my-max-w-66 {
+    max-width: 132px;
+}
+
+.my-max-w-67 {
+    max-width: 134px;
+}
+
+.my-max-w-68 {
+    max-width: 136px;
+}
+
+.my-max-w-69 {
+    max-width: 138px;
+}
+
+.my-max-w-70 {
+    max-width: 140px;
+}
+
+.my-max-w-71 {
+    max-width: 142px;
+}
+
+.my-max-w-72 {
+    max-width: 144px;
+}
+
+.my-max-w-73 {
+    max-width: 146px;
+}
+
+.my-max-w-74 {
+    max-width: 148px;
+}
+
+.my-max-w-75 {
+    max-width: 150px;
+}
+
+.my-max-w-76 {
+    max-width: 152px;
+}
+
+.my-max-w-77 {
+    max-width: 154px;
+}
+
+.my-max-w-78 {
+    max-width: 156px;
+}
+
+.my-max-w-79 {
+    max-width: 158px;
+}
+
+.my-max-w-80 {
+    max-width: 160px;
+}
+
+.my-max-w-81 {
+    max-width: 162px;
+}
+
+.my-max-w-82 {
+    max-width: 164px;
+}
+
+.my-max-w-83 {
+    max-width: 166px;
+}
+
+.my-max-w-84 {
+    max-width: 168px;
+}
+
+.my-max-w-85 {
+    max-width: 170px;
+}
+
+.my-max-w-86 {
+    max-width: 172px;
+}
+
+.my-max-w-87 {
+    max-width: 174px;
+}
+
+.my-max-w-88 {
+    max-width: 176px;
+}
+
+.my-max-w-89 {
+    max-width: 178px;
+}
+
+.my-max-w-90 {
+    max-width: 180px;
+}
+
+.my-max-w-91 {
+    max-width: 182px;
+}
+
+.my-max-w-92 {
+    max-width: 184px;
+}
+
+.my-max-w-93 {
+    max-width: 186px;
+}
+
+.my-max-w-94 {
+    max-width: 188px;
+}
+
+.my-max-w-95 {
+    max-width: 190px;
+}
+
+.my-max-w-96 {
+    max-width: 192px;
+}
+
+.my-max-w-97 {
+    max-width: 194px;
+}
+
+.my-max-w-98 {
+    max-width: 196px;
+}
+
+.my-max-w-99 {
+    max-width: 198px;
+}
+
+.my-max-w-100 {
+    max-width: 200px;
+}
+
 
 /* max-width */
 .my-w-max-10 {
@@ -1877,7 +2251,7 @@ tr {
 }
 
 .my-text-secondary {
-    color: var(--my-secondary-color);
+    color: var(--my-text-secondary);
 }
 
 .my-text-color {
@@ -6450,44 +6824,44 @@ tr {
 
 
     /* width */
-    .my-w-md-25 {
+    .my-w-md-25-p {
         width: 25%;
     }
 
-    .my-w-md-50 {
+    .my-w-md-50-p {
         width: 50%;
     }
 
-    .my-w-md-75 {
+    .my-w-md-75-p {
         width: 75%;
     }
 
-    .my-w-md-100 {
+    .my-w-md-100-p {
         width: 100%;
     }
 
     /* max-width */
-    .my-max-w-md-50 {
+    .my-max-w-md-50-p {
         max-width: 50px;
     }
 
-    .my-max-w-md-100 {
+    .my-max-w-md-100-p {
         max-width: 100px;
     }
 
-    .my-max-w-md-120 {
+    .my-max-w-md-120-p {
         max-width: 100px;
     }
 
-    .my-w-md-50 {
+    .my-w-md-50-p {
         width: 50%;
     }
 
-    .my-w-md-75 {
+    .my-w-md-75-p {
         width: 75%;
     }
 
-    .my-w-md-100 {
+    .my-w-md-100-p {
         width: 100%;
     }
 

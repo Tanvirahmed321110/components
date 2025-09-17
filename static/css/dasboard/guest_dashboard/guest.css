@@ -1,0 +1,230 @@
+/*
+=======================================
+=====||   Header  Start Here    ||=====
+=======================================
+*/
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-bottom: 0;
+    box-shadow: var(--shadow-3);
+    border: 1px solid var(--my-white-off);
+}
+
+header .header-top {
+    border-bottom: 1px solid var(--my-border-gray);
+    padding-top: 2px;
+    position: relative;
+}
+
+header .header-main {
+    margin-top: 6px;
+    padding-bottom: 6px;
+}
+
+.main-content-header .my-secondary-btn {
+    font-size: var(--fs-md);
+    padding: 11px 14px;
+}
+
+header .header-main .my-gap-14 {
+    gap: 20px;
+}
+
+
+
+
+
+
+/*
+=======================================
+=====||   Sidebar Start Here    ||=====
+=======================================
+*/
+.sidebar-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--my-secondary-color);
+}
+
+aside.sidebar {
+    width: 296px;
+    background-color: var(--my-primary-color);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 126px;
+    height: calc(100dvh - 126px);
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    box-shadow: var(--shadow-1);
+}
+
+.sidebar .top {
+    height: fit-content;
+    flex-shrink: 0;
+    padding-bottom: 16px;
+}
+
+.sidebar .top img {
+    border: 5px solid #5f5f5f;
+    padding: 2px;
+    width: 68px;
+    height: 68px;
+}
+
+.sidebar .top .star {
+    margin-top: -6px;
+}
+
+.sidebar .top .star i {
+    font-size: var(--fs-sm);
+    color: var(--my-text-rating);
+}
+
+aside .bottom {
+    overflow-y: auto;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* max-height: fit-content; */
+    /* height: 100%; */
+    /* background-color: red;
+    background-color: rgb(67, 67, 68); */
+    border-top: 1px solid var(--my-text-tertiary);
+    padding-top: 4px;
+}
+
+.sidebar .bottom .general-nav {
+    padding: 0 12px;
+    padding-bottom: 8px;
+}
+
+.sidebar .bottom nav .item {
+    display: flex;
+    padding: 10px 12px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0px;
+    border-radius: 6px;
+    font-size: var(--fs-md);
+    gap: 8px;
+}
+
+.sidebar .bottom nav .item:hover,
+.sidebar .bottom nav .item.active {
+    background-color: var(--my-secondary-color);
+}
+
+.switch-to-host:hover path {
+    animation: shakeLR 1s ease;
+}
+
+
+
+.sidebar .bottom .miscellaneous-nav {
+    border-top: 1px solid var(--my-text-tertiary);
+    padding: 8px 12px 4px 12px;
+}
+
+.sidebar .bottom.my-has-scrollbar-sm::-webkit-scrollbar {
+    background-color: var(--my-primary-color);
+    background-color: var(--my-white);
+}
+
+.sidebar .bottom.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
+    background-color: var(--my-primary-color);
+    border-left: 1px solid var(--my-text-tertiary);
+}
+
+
+/*
+============================================
+=====||   Main Content Start Here    ||=====
+============================================
+*/
+main {
+    background-color: var(--my-white-off);
+    margin-left: 296px;
+    width: calc(100% - 296px);
+    overflow-y: auto;
+    /* display: flex; */
+    margin-top: 126px;
+    height: calc(100dvh - 126px);
+    padding-bottom: 20px;
+}
+
+
+
+/*
+========================||    Total Point Seciton  Start Here   ||==========================
+*/
+.total-points {
+    width: 160px;
+}
+
+.total-points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.total-points {
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+circle {
+    fill: none;
+    stroke-width: 9;
+}
+
+.bg {
+    stroke: var(--my-white-off);
+}
+
+.progress {
+    stroke-linecap: round;
+    stroke-dasharray: 490;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 1s ease;
+}
+
+/* Individual colors */
+.red {
+    stroke: var(--my-red);
+}
+
+.green {
+    stroke: var(--my-primary-color);
+}
+
+.purple {
+    stroke: var(--my-blue);
+}
+
+/* Total Point Text */
+.points-text {
+    position: absolute;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.total-trips-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

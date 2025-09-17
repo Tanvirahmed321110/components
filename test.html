@@ -1,265 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Hidden Scrollbar Drag Slider</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Total Trips Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <style>
-            :root {
-                --gap: 16px;
-                --card-w: 260px;
-                --card-h: 160px;
-                --bg: #0f172a;
-                --card-bg: #0ea5a4;
-                --text: #fff;
-            }
-
-            html,
-            body {
-                height: 100%;
+            * {
                 margin: 0;
-                font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
-                background: linear-gradient(180deg, #071024 0%, #0b1526 100%);
-                color: var(--text);
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
-            .wrap {
-                max-width: 1100px;
-                margin: 40px auto;
+            body {
+                background-color: #f8f9fa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
                 padding: 20px;
             }
 
-            h1 {
-                margin: 0 0 18px 0;
-                font-size: 20px;
-                font-weight: 600;
-            }
-
-            /* Slider container */
-            .slider {
-                position: relative;
-                overflow: hidden;
-                /* hide overflow visuals */
-                padding-bottom: 8px;
-                /* a little breathing room under items */
-                user-select: none;
-                /* disable text selection while dragging */
-            }
-
-            /* The actual track that scrolls */
-            .slider-track {
-                display: flex;
-                gap: var(--gap);
-                overflow-x: auto;
-                scroll-behavior: smooth;
-                padding: 12px;
-                cursor: grab;
-                /* shows grab cursor */
-            }
-
-            .slider-track:active {
-                cursor: grabbing;
-            }
-
-            /* Hide scrollbar - Webkit */
-            .slider-track::-webkit-scrollbar {
-                height: 0;
-                /* hide horizontal scrollbar */
-            }
-
-            /* Firefox */
-            .slider-track {
-                scrollbar-width: none;
-                /* Firefox */
-                -ms-overflow-style: none;
-                /* IE 10+ */
-            }
-
-            .slider-track::-webkit-scrollbar {
-                display: none;
-            }
-
-            /* card items */
-            .card {
-                min-width: var(--card-w);
-                height: var(--card-h);
-                flex: 0 0 auto;
+            .dashboard {
+                background: white;
                 border-radius: 12px;
-                background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: var(--text);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+                width: 380px;
+                padding: 25px;
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            h1 {
+                color: #2c3e50;
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            .total-number {
+                font-size: 32px;
                 font-weight: 700;
-                letter-spacing: 0.2px;
-                font-size: 18px;
-                position: relative;
-                overflow: hidden;
+                color: #2c3e50;
+                margin: 10px 0;
             }
 
-            /* simple visual for each item */
-            .card .inner {
-                width: 92%;
-                height: 82%;
-                border-radius: 10px;
+            .chart-container {
+                position: relative;
+                height: 220px;
+                margin: 15px 0 25px 0;
+            }
+
+            .legend {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+
+            .legend-item {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                background: linear-gradient(180deg, rgba(14, 165, 164, 0.95), rgba(6, 95, 92, 0.95));
-                transform: translateY(-2px);
+                gap: 10px;
+                font-size: 16px;
+                color: #2c3e50;
             }
 
-            /* Make it responsive: on small screens show smaller cards */
-            @media (max-width:600px) {
-                :root {
-                    --card-w: 200px;
-                    --card-h: 130px;
-                }
-
-                .wrap {
-                    padding: 12px;
-                }
+            .color-dot {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
             }
 
-            /* Optional: keyboard visible hints for accessibility */
-            .hint {
-                margin-top: 12px;
-                font-size: 13px;
-                color: rgba(255, 255, 255, 0.6);
+            .stats {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 18px;
+                margin-top: 15px;
             }
 
-            /* Optional: hide native focus outline but keep accessible focus */
-            .slider-track:focus {
-                outline: 2px dashed rgba(255, 255, 255, 0.08);
-                outline-offset: 6px;
+            .stats-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+
+            .stats-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .stats-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 15px;
+                color: #2c3e50;
+            }
+
+            .stats-value {
+                font-weight: 600;
+                color: #2c3e50;
+            }
+
+            .stats-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #1B4332;
+            }
+
+            .stats-secondary {
+                padding-left: 18px;
+                display: flex;
+                gap: 15px;
+            }
+
+            .stats-secondary span {
+                font-size: 14px;
+                color: #718096;
+            }
+
+            .stats-secondary .value {
+                font-weight: 600;
+                color: #2c3e50;
             }
         </style>
     </head>
 
     <body>
-
-        <header>
-            <h1>Header</h1>
-        </header>
-
-        <section>
-            <h2>My section</h2>
-            <div class="item">
-                <h3>Item titrle</h3>
-                <p>Desc</p>
-                <h4>Tag one </h4>
+        <div class="dashboard">
+            <div class="header">
+                <h1>Total Trips</h1>
+                <div class="total-number">2280</div>
             </div>
-        </section>
 
-        <section>
-            <h3>Postes</h3>
-            <div class="item">
-                <h4>Hello</h4>
-                <h4>Hello</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta eius. Nobis ea dolore
-                    harum aspernatur omnis non. Vero, asperiores. Optio facere ut reprehenderit ratione cum non
-                    recusandae maiores et.</p>
-                <h6>Tanvir</h6>
+            <div class="chart-container">
+                <canvas id="donutChart"></canvas>
             </div>
-        </section>
 
-
-        <div class="wrap">
-            <h1>Hidden Scrollbar — Drag with Mouse</h1>
-
-            <div class="slider" aria-label="Image slider">
-                <div class="slider-track" tabindex="0">
-                    <!-- items -->
-                    <div class="card">
-                        <div class="inner">Item 1</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 2</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 3</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 4</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 5</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 6</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 7</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 8</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 9</div>
-                    </div>
-                    <div class="card">
-                        <div class="inner">Item 10</div>
-                    </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="color-dot" style="background-color: #1B4332;"></div>
+                    <span>Done</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-dot" style="background-color: #2A6F5F;"></div>
+                    <span>Staying</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-dot" style="background-color: #B0BEC5;"></div>
+                    <span>Food</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-dot" style="background-color: #DCE1E3;"></div>
+                    <span>Tour</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-dot" style="background-color: #E6E0F0;"></div>
+                    <span>Others</span>
                 </div>
             </div>
 
-            <div class="hint">Tip: click and drag left/right with your mouse (or use touch/trackpad). Arrow keys also
-                scroll when the track is focused.</div>
+            <div class="stats">
+                <div class="stats-item">
+                    <div class="stats-label">
+                        <div class="stats-dot"></div>
+                        <span>Done 620</span>
+                    </div>
+                </div>
+                <div class="stats-secondary">
+                    <span>● Booked <span class="value">652</span></span>
+                    <span>● Canceled <span class="value">652</span></span>
+                </div>
+            </div>
         </div>
 
         <script>
-            // Minimal JS to allow mouse dragging to scroll horizontally.
-            // Put this at the end of the body (already here).
-            (function () {
-                const sliders = document.querySelectorAll('.slider-track'); // grab all sliders
+            document.addEventListener('DOMContentLoaded', function () {
+                const ctx = document.getElementById('donutChart').getContext('2d');
 
-                sliders.forEach((slider) => {
-                    let isDown = false;
-                    let startX;
-                    let scrollLeft;
-
-                    slider.addEventListener('mousedown', (e) => {
-                        isDown = true;
-                        slider.classList.add('active');
-                        startX = e.pageX - slider.offsetLeft;
-                        scrollLeft = slider.scrollLeft;
-                        e.preventDefault(); // prevent text selection
-                    });
-
-                    window.addEventListener('mouseup', () => {
-                        isDown = false;
-                        slider.classList.remove('active');
-                    });
-
-                    slider.addEventListener('mouseleave', () => {
-                        isDown = false;
-                        slider.classList.remove('active');
-                    });
-
-                    slider.addEventListener('mousemove', (e) => {
-                        if (!isDown) return;
-                        const x = e.pageX - slider.offsetLeft;
-                        const walk = (x - startX) * 1.2;
-                        slider.scrollLeft = scrollLeft - walk;
-                    });
-
-                    // keyboard arrows work per slider
-                    slider.addEventListener('keydown', (e) => {
-                        const step = 120;
-                        if (e.key === 'ArrowRight') {
-                            slider.scrollBy({ left: step, behavior: 'smooth' });
-                            e.preventDefault();
-                        } else if (e.key === 'ArrowLeft') {
-                            slider.scrollBy({ left: -step, behavior: 'smooth' });
-                            e.preventDefault();
+                // Create the donut chart
+                const chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Done', 'Staying', 'Food', 'Tour', 'Others'],
+                        datasets: [{
+                            data: [620, 480, 390, 510, 280],
+                            backgroundColor: ['#1B4332', '#2A6F5F', '#B0BEC5', '#DCE1E3', '#E6E0F0'],
+                            borderWidth: 0,
+                            borderRadius: 0,
+                            cutout: '75%',
+                            spacing: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                enabled: false
+                            }
                         }
-                    });
+                    }
                 });
-            })();
+
+                // Change stroke width to 10px after chart is rendered
+                setTimeout(() => {
+                    const canvas = document.getElementById('donutChart');
+                    const paths = canvas.nextSibling.querySelectorAll('path');
+                    paths.forEach(path => {
+                        path.style.strokeWidth = '10px';
+                    });
+                }, 100);
+            });
         </script>
     </body>
 

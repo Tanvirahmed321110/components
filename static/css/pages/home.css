@@ -826,6 +826,10 @@
     overflow: hidden;
 }
 
+.subcribe-form .my-secondary-btn {
+    background-color: var(--my-warring);
+}
+
 /*
 ================||   Subcribe Left Side  ||================
 */

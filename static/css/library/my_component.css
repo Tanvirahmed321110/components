@@ -17,7 +17,7 @@
     bottom: -32px;
     right: 2px;
     z-index: 6;
-    background-color: var(--my-dark);
+    background-color: var(--my-primary-color);
     color: var(--my-white-off);
     padding: 6px 8px !important;
     border-radius: 2px;
@@ -39,8 +39,8 @@
     clip-path: polygon(48% 26%, 100% 100%, 100% 45%);
     height: 25px;
     width: 25px;
-    background-color: var(--my-dark);
-    z-index: 6;
+    background-color: var(--my-primary-color);
+    z-index: 12;
 }
 
 .my-tooltip:hover .show-text {
@@ -510,13 +510,13 @@
 #########  For Secondary Button  #########
 */
 .my-secondary-btn {
-    background-color: var(--my-bg-yellow);
-    color: var(--my-text-secondary);
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
     padding: 12px 20px;
 }
 
 .my-secondary-btn:hover {
-    background-color: var(--my-bg-warring);
+    background-color: var(--my-primary-color);
 }
 
 
@@ -748,7 +748,26 @@ input::placeholder {
 }
 
 
+/*_______________________________*\
+  ||     Sidebara Close Button     ||
+\*_______________________________*/
+.sidebar-close-btn.my-btn {
+    padding: 6px 14px;
+    font-size: var(--fs-lg);
+}
 
+.sidebar-close-btn.my-btn i {
+    font-size: var(--fs-xl);
+}
+
+.sidebar-close-btn.my-btn i {
+    font-size: var(--fs-xl);
+    display: inline-block;
+}
+
+.sidebar-close-btn.my-btn:hover i {
+    animation: shakeLR 1s ease;
+}
 
 
 /*_______________________________*\
@@ -1335,9 +1354,9 @@ input::placeholder {
   ||     Scrollbar Start Here     ||
 \*__________________________________*/
 .my-has-scrollbar::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     height: 14px;
-    background-color: var(--my-text-color);
+    background-color: var(--my-white);
     border-radius: 12px;
 }
 
@@ -1356,7 +1375,14 @@ input::placeholder {
     border: 1px solid var(--my-bg-secondary);
 }
 
-.my-has-scrollbar::-webkit-scrollbar-thumb,
+.my-has-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--my-gray);
+}
+
+.my-has-scrollbar::-webkit-scrollbar {
+    /* border-left: 1px solid var(--my-white-off2) !important; */
+}
+
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
     background-color: var(--my-bg-white-off2);
 }
@@ -3622,8 +3648,11 @@ input[type="radio"]:checked::after {
 .icon-hover {
     position: relative;
     font-size: 18px;
-    padding: 8px;
+    padding: 9px 12px;
     z-index: 2;
+    border: 1px solid var(--my-white-off);
+    /* border: 1px solid var(--my-border-primary); */
+    border-radius: 50%;
 }
 
 .icon-hover:hover::before {
@@ -3647,7 +3676,7 @@ input[type="radio"]:checked::after {
     transform: translate(-50%, -50%);
     transform-origin: 50% 50%;
     content: '';
-    background-color: #e5e9f2;
+    background-color: var(--my-white-off2);
     border-radius: 50%;
     opacity: 0;
     transition: all .3s;
@@ -5419,6 +5448,51 @@ _____________________________________*/
     }
 }
 
+@keyframes shakeLR {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-5px);
+    }
+
+    20% {
+        transform: translateX(5px);
+    }
+
+    30% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    60% {
+        transform: translateX(4px);
+    }
+
+    70% {
+        transform: translateX(-3px);
+    }
+
+    80% {
+        transform: translateX(3px);
+    }
+
+    90% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 
 
 /*________________________________*\
