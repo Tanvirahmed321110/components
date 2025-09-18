@@ -64,6 +64,10 @@ aside.sidebar {
     box-shadow: var(--shadow-1);
 }
 
+
+/*
+=========||  Sidebar Top  Start Here  ||===========
+*/
 .sidebar .top {
     height: fit-content;
     flex-shrink: 0;
@@ -86,6 +90,11 @@ aside.sidebar {
     color: var(--my-text-rating);
 }
 
+
+
+/*
+=========||  Sidebar Bottom  Start Here  ||===========
+*/
 aside .bottom {
     overflow-y: auto;
     flex: 1;
@@ -99,6 +108,10 @@ aside .bottom {
     padding-top: 4px;
 }
 
+
+/*
+======||  General Nav Start Here  ||=======
+*/
 .sidebar .bottom .general-nav {
     padding: 0 12px;
     padding-bottom: 8px;
@@ -107,12 +120,17 @@ aside .bottom {
 .sidebar .bottom nav .item {
     display: flex;
     padding: 10px 12px;
-    color: #fff;
+    color: var(--my-white);
     text-decoration: none;
     margin-bottom: 0px;
     border-radius: 6px;
     font-size: var(--fs-md);
+    /* font-size: var(--fs-sm); */
     gap: 8px;
+}
+
+.sidebar .bottom nav .item:hover svg {
+    animation: shakeLR 1s ease;
 }
 
 .sidebar .bottom nav .item:hover,
@@ -125,10 +143,17 @@ aside .bottom {
 }
 
 
+/*
+======|| Miscellaneous  Start Here  ||=======
+*/
+
+.sidebar .bottom .miscellaneous-nav .item {
+    font-size: var(--fs-sm);
+}
 
 .sidebar .bottom .miscellaneous-nav {
     border-top: 1px solid var(--my-text-tertiary);
-    padding: 8px 12px 4px 12px;
+    padding: 8px 12px 8px 12px;
 }
 
 .sidebar .bottom.my-has-scrollbar-sm::-webkit-scrollbar {
@@ -140,6 +165,11 @@ aside .bottom {
     background-color: var(--my-primary-color);
     border-left: 1px solid var(--my-text-tertiary);
 }
+
+
+
+
+
 
 
 /*
@@ -157,7 +187,6 @@ main {
     height: calc(100dvh - 126px);
     padding-bottom: 20px;
 }
-
 
 
 /*
@@ -222,9 +251,89 @@ circle {
     font-family: sans-serif;
 }
 
+.circle-chart {
+    position: relative;
+    width: 340px;
+    /* same as canvas max-width */
+    height: 340px;
+    /* same as canvas max-height */
+}
+
 .total-trips-text {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 32%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circle-chart .complete {
+    position: absolute;
+    bottom: 20px;
+    left: 4px;
+    font-size: var(--fs-xs);
+}
+
+
+
+
+
+
+/*
+========================||    Total Point Seciton  Start Here   ||==========================
+*/
+
+.booking-upcoming {
+    display: grid;
+    grid-template-columns: 300px 1fr 370px;
+    gap: 24px;
+}
+
+/*
+============||    Booking Status   ||=============
+*/
+.booking-status .item {
+    width: 304px;
+    background-color: var(--my-white);
+    margin-left: -30px;
+    border-color: var(--my-border-secondary);
+    transition: .3s linear;
+}
+
+.booking-status .item:hover {
+    transform: translateY(-4px);
+    border-color: var(--my-secondary-color);
+}
+
+.booking-status .paymant-status span {
+    position: relative;
+}
+
+.booking-status .paymant-status .round {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--my-success);
+}
+
+
+
+/*
+============||    Upcoming Trips   ||=============
+*/
+
+.upcoming-trips .items .item {
+    transition: .3s linear;
+}
+
+.upcoming-trips .items .item:hover {
+    transform: translateY(6px);
+    border-color: var(--my-secondary-color);
+}
+
+
+
+.invite-wishlist .copy-btn:hover svg path {
+
+    stroke: var(--my-secondary-color);
 }

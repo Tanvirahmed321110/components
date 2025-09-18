@@ -21,6 +21,7 @@
     --my-gray: #A4A7AE;
     --my-success: #17B26A;
     --my-red: red;
+    --my-orange: #FC5A31;
     --my-blue: #9b5de5;
 
     --my-white-off: #f1f1f1;
@@ -125,7 +126,7 @@
     --shadow-4: 0 1px 6px 0 rgb(0 0 0 / 20%); */
 
     --shadow-sm:
-        0px 1px 2px 0px #0A0D120A;
+        0px 1px 2px 0px #afafaf0a;
 
     /* Medium shadow */
     --shadow-md:
@@ -512,8 +513,27 @@ header .profile-dropdown .head {
     position: absolute;
     z-index: 222;
     border: 2px solid var(--my-white);
+    animation: pulse 1.3s infinite ease-in-out;
 }
 
+/* Keyframes */
+@keyframes pulse {
+    0% {
+        transform: scale(.9);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+        background-color: var(--my-orange);
+    }
+
+    100% {
+        transform: scale(.9);
+        opacity: 1;
+    }
+}
 
 /*
 =================||    Header Main    ||===================

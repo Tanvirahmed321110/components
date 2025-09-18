@@ -4,224 +4,236 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Total Trips Dashboard</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Custom Calendar</title>
         <style>
             * {
-                margin: 0;
-                padding: 0;
                 box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
             body {
-                background-color: #f8f9fa;
+                font-family: Arial, sans-serif;
+                background: #f0f0f0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-height: 100vh;
-                padding: 20px;
+                height: 100vh;
             }
 
-            .dashboard {
-                background: white;
+            .calendar {
+                width: 340px;
+                background: #fff;
+                border: 1px solid #ddd;
                 border-radius: 12px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-                width: 380px;
-                padding: 25px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
 
-            .header {
-                text-align: center;
-                margin-bottom: 25px;
-            }
-
-            h1 {
-                color: #2c3e50;
-                font-size: 24px;
-                font-weight: 600;
-                margin-bottom: 5px;
-            }
-
-            .total-number {
-                font-size: 32px;
-                font-weight: 700;
-                color: #2c3e50;
-                margin: 10px 0;
-            }
-
-            .chart-container {
-                position: relative;
-                height: 220px;
-                margin: 15px 0 25px 0;
-            }
-
-            .legend {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-bottom: 25px;
-            }
-
-            .legend-item {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 16px;
-                color: #2c3e50;
-            }
-
-            .color-dot {
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-            }
-
-            .stats {
-                background-color: #f8f9fa;
-                border-radius: 10px;
-                padding: 18px;
-                margin-top: 15px;
-            }
-
-            .stats-item {
+            /* Header */
+            .calendar-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom: 12px;
+                padding: 12px;
+                background: #f9f9f9;
+                border-bottom: 1px solid #eee;
             }
 
-            .stats-item:last-child {
-                margin-bottom: 0;
+            .calendar-header button {
+                background: none;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
             }
 
-            .stats-label {
+            .month-name {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            /* Tools */
+            .calendar-tools {
                 display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 15px;
-                color: #2c3e50;
+                gap: 10px;
+                padding: 10px;
+                border-bottom: 1px solid #eee;
             }
 
-            .stats-value {
-                font-weight: 600;
-                color: #2c3e50;
+            .date-input {
+                flex: 1;
+                padding: 6px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
             }
 
-            .stats-dot {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: #1B4332;
+            .today-btn {
+                padding: 6px 12px;
+                border: none;
+                border-radius: 6px;
+                background: #007bff;
+                color: #fff;
+                cursor: pointer;
             }
 
-            .stats-secondary {
-                padding-left: 18px;
+            /* Body */
+            .calendar-body {
+                padding: 10px;
+            }
+
+            .day-names,
+            .dates-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                text-align: center;
+            }
+
+            .day-names div {
+                font-weight: bold;
+                padding: 6px 0;
+            }
+
+            .date {
+                padding: 8px 0;
+                margin: 2px;
+                cursor: pointer;
+                border-radius: 6px;
+                transition: background 0.2s;
+            }
+
+            .date:hover {
+                background: #007bff;
+                color: #fff;
+            }
+
+            .date.other-month {
+                opacity: 0.8;
+                color: #888;
+            }
+
+            .date.today {
+                border: 1px solid #007bff;
+                font-weight: bold;
+                color: #007bff;
+            }
+
+            /* Footer */
+            .calendar-footer {
                 display: flex;
-                gap: 15px;
+                justify-content: flex-end;
+                gap: 10px;
+                padding: 10px;
+                border-top: 1px solid #eee;
             }
 
-            .stats-secondary span {
-                font-size: 14px;
-                color: #718096;
+            .calendar-footer button {
+                padding: 6px 12px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
             }
 
-            .stats-secondary .value {
-                font-weight: 600;
-                color: #2c3e50;
+            .cancel-btn {
+                background: #eee;
+            }
+
+            .apply-btn {
+                background: #007bff;
+                color: #fff;
             }
         </style>
     </head>
 
     <body>
-        <div class="dashboard">
-            <div class="header">
-                <h1>Total Trips</h1>
-                <div class="total-number">2280</div>
-            </div>
 
-            <div class="chart-container">
-                <canvas id="donutChart"></canvas>
-            </div>
-
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="color-dot" style="background-color: #1B4332;"></div>
-                    <span>Done</span>
-                </div>
-                <div class="legend-item">
-                    <div class="color-dot" style="background-color: #2A6F5F;"></div>
-                    <span>Staying</span>
-                </div>
-                <div class="legend-item">
-                    <div class="color-dot" style="background-color: #B0BEC5;"></div>
-                    <span>Food</span>
-                </div>
-                <div class="legend-item">
-                    <div class="color-dot" style="background-color: #DCE1E3;"></div>
-                    <span>Tour</span>
-                </div>
-                <div class="legend-item">
-                    <div class="color-dot" style="background-color: #E6E0F0;"></div>
-                    <span>Others</span>
-                </div>
-            </div>
-
-            <div class="stats">
-                <div class="stats-item">
-                    <div class="stats-label">
-                        <div class="stats-dot"></div>
-                        <span>Done 620</span>
-                    </div>
-                </div>
-                <div class="stats-secondary">
-                    <span>● Booked <span class="value">652</span></span>
-                    <span>● Canceled <span class="value">652</span></span>
-                </div>
-            </div>
-        </div>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const ctx = document.getElementById('donutChart').getContext('2d');
+            const datesGrid = document.querySelector('.dates-grid');
+            const monthName = document.querySelector('.month-name');
+            const prevBtn = document.querySelector('.prev-month');
+            const nextBtn = document.querySelector('.next-month');
+            const todayBtn = document.querySelector('.today-btn');
+            const dateInput = document.querySelector('.date-input');
 
-                // Create the donut chart
-                const chart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Done', 'Staying', 'Food', 'Tour', 'Others'],
-                        datasets: [{
-                            data: [620, 480, 390, 510, 280],
-                            backgroundColor: ['#1B4332', '#2A6F5F', '#B0BEC5', '#DCE1E3', '#E6E0F0'],
-                            borderWidth: 0,
-                            borderRadius: 0,
-                            cutout: '75%',
-                            spacing: 0
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: {
-                                display: false
-                            },
-                            tooltip: {
-                                enabled: false
-                            }
-                        }
+            let today = new Date();
+            let currentMonth = today.getMonth();
+            let currentYear = today.getFullYear();
+
+            function renderCalendar(year, month) {
+                datesGrid.innerHTML = "";
+
+                let firstDay = new Date(year, month, 1).getDay();
+                let lastDate = new Date(year, month + 1, 0).getDate();
+                let prevLastDate = new Date(year, month, 0).getDate();
+
+                monthName.textContent = new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' });
+
+                // Previous month dates
+                for (let i = firstDay; i > 0; i--) {
+                    const div = document.createElement("div");
+                    div.classList.add("date", "other-month");
+                    div.textContent = prevLastDate - i + 1;
+                    datesGrid.appendChild(div);
+                }
+
+                // Current month dates
+                for (let i = 1; i <= lastDate; i++) {
+                    const div = document.createElement("div");
+                    div.classList.add("date");
+                    div.textContent = i;
+
+                    // Highlight today
+                    if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                        div.classList.add("today");
                     }
-                });
 
-                // Change stroke width to 10px after chart is rendered
-                setTimeout(() => {
-                    const canvas = document.getElementById('donutChart');
-                    const paths = canvas.nextSibling.querySelectorAll('path');
-                    paths.forEach(path => {
-                        path.style.strokeWidth = '10px';
+                    // Select date
+                    div.addEventListener("click", () => {
+                        document.querySelectorAll(".date").forEach(d => d.classList.remove("selected"));
+                        div.classList.add("selected");
+                        dateInput.value = `${year}-${String(month + 1).padStart(2, "0")}-${String(i).padStart(2, "0")}`;
                     });
-                }, 100);
+
+                    datesGrid.appendChild(div);
+                }
+
+                // Next month dates
+                let totalCells = datesGrid.childElementCount;
+                let nextDays = 7 - (totalCells % 7);
+                if (nextDays < 7) {
+                    for (let i = 1; i <= nextDays; i++) {
+                        const div = document.createElement("div");
+                        div.classList.add("date", "other-month");
+                        div.textContent = i;
+                        datesGrid.appendChild(div);
+                    }
+                }
+            }
+
+            // Buttons
+            prevBtn.addEventListener("click", () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                renderCalendar(currentYear, currentMonth);
             });
+
+            nextBtn.addEventListener("click", () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                renderCalendar(currentYear, currentMonth);
+            });
+
+            todayBtn.addEventListener("click", () => {
+                currentMonth = today.getMonth();
+                currentYear = today.getFullYear();
+                renderCalendar(currentYear, currentMonth);
+            });
+
+            renderCalendar(currentYear, currentMonth);
         </script>
     </body>
 
