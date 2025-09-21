@@ -3414,7 +3414,7 @@
 
 
                     <!--======================|| Upcoming Trips  ||===========================-->
-                    <div class="my-bg-white my-p-7 my-px-8 my-shadow-1 my-radius-md  upcoming-trips">
+                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md  upcoming-trips">
 
                         <!--============||  Head Here ||===========-->
                         <div class="my-mt-0 my-flex-between my-align-center">
@@ -3592,7 +3592,7 @@
 
                         <!--====== Load More Button ======-->
                         <div class="my-text-center my-mt-5">
-                            <button class="my-fw-bold text-hover-secondary">Load More</button>
+                            <a href="#" class="my-fw-bold text-hover-secondary">Load More</a>
                         </div>
 
                     </div>
@@ -3780,16 +3780,116 @@
 
                         </div>
 
-                        <div class="my-mt-12 my-shadow-1 my-p-10 my-py-8 my-radius-md my-bg-white">
+
+                        <!--=====================||  Currency Converter  ||====================-->
+                        <div class="my-mt-12 my-shadow-1 my-p-10 my-pt-8 my-pb-12 my-radius-md my-bg-white">
                             <h5 class="my-fs-lg my-text-primary my-fw-bold">Currency Converter</h5>
 
-                            <div class="my-mt-10 my-grid-2">
-                                <div class="item">
-                                    <h5>Amount</h5>
+                            <div class="my-mt-10 my-flex-between my-align-end my-gap-4">
+                                <!--=======  Left  ======-->
+                                <div class="common-dropdown-1">
+                                    <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
+                                    <div class="my-d-flex area my-mt-1">
+                                        <div class="my-input-control">
+                                            <input type="number" placeholder="Enter amount" id="amount" />
+                                        </div>
+
+                                        <!-- Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle" type="button">
+                                                <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>BDT</span>
+                                                    <i class="ri-arrow-down-s-line"></i>
+                                                </div>
+                                            </button>
+
+                                            <!-- Dropdwon Here -->
+                                            <ul class="dropdown-items">
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
+                                                    <div>BDT</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="">
+                                                    <div>USD</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="">
+                                                    <div>EUR</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="">
+                                                    <div>INR</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--===  Error {add class .my-d-block then show it and my-d-none hide it}  ==-->
+                                    <small class="my-d-none my-text-red ">Error Message</small>
                                 </div>
-                                <div class="item">
-                                    <h5>Amount</h5>
+
+
+                                <!--====== compare button ======-->
+                                <div class="my-d-flex my-align-end my-justify-end">
+                                    <!-- button -->
+                                    <button
+                                        class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 17H20M20 17L16 13M20 17L16 21M20 7H4M4 7L8 3M4 7L8 11"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
                                 </div>
+
+
+                                <!--=======  Right  ======-->
+                                <div class="common-dropdown-1">
+                                    <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
+                                    <div class="my-d-flex area my-mt-1">
+                                        <div class="my-input-control">
+                                            <input type="number" placeholder="Enter amount" id="amount" />
+                                        </div>
+
+                                        <!-- Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle">
+                                                <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>BDT</span>
+                                                    <i class="ri-arrow-down-s-line"></i>
+                                                </div>
+                                            </button>
+
+                                            <!-- Dropdwon Here -->
+                                            <ul class="dropdown-items">
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
+                                                    <div>BDT</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="">
+                                                    <div>USD</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="">
+                                                    <div>EUR</div>
+                                                </li>
+                                                <li class="item">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="">
+                                                    <div>INR</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--===  Error {add class .my-d-block then show it and my-d-none hide it}  ==-->
+                                    <small class="my-d-none my-text-red ">Error Message</small>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -3970,6 +4070,10 @@
                             </div>
 
                         </div>
+                        <!--====== Load More Button ======-->
+                        <div class="my-text-center my-mt-5">
+                            <a href="#" class="my-fw-bold text-hover-secondary">Load More</a>
+                        </div>
 
                     </div>
                 </div>
@@ -3982,6 +4086,7 @@
 
 
 
+        <script src="/static/js/global_js/global.js"></script>
         <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
 
@@ -4084,6 +4189,7 @@
                     }
                 }
             });
+
         </script>
     </body>
 

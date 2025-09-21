@@ -2345,6 +2345,11 @@ tr {
     background-color: var(--my-gold);
 }
 
+.bg-hover-secondary:hover {
+    background-color: var(--my-secondary-color);
+    transition: .2s linear;
+}
+
 /*______  Word spacing _____*/
 .my-word-space-1 {
     word-spacing: 1px;

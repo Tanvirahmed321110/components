@@ -1390,6 +1390,97 @@ input::placeholder {
 
 
 
+/*______________________________________*\
+  ||        Common Dropdwon 1        ||
+\*______________________________________*/
+.common-dropdown-1 {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.common-dropdown-1 .my-input-control {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.common-dropdown-1 .my-input-control input {
+    padding: 8px;
+}
+
+/* Dropdown */
+.common-dropdown-1 .dropdown {
+    position: relative;
+    min-width: 90px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    height: 100%;
+    background: var(--my-white);
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+.common-dropdown-1 .dropdown-items {
+    display: none;
+    position: absolute;
+    top: 108%;
+    left: 0;
+    width: 100%;
+    background: var(--my-white);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.common-dropdown-1 .dropdown-items .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.common-dropdown-1 .dropdown-items .item:hover,
+.common-dropdown-1 .dropdown-items .item.active {
+    background: var(--my-white-off);
+}
+
+.common-dropdown-1 .dropdown.active .dropdown-items {
+    display: block;
+}
+
+.common-dropdown-1 .my-w-10 {
+    width: 20px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.common-dropdown-1 .area {
+    border: 1px solid var(--my-border-secondary);
+    border-radius: 4px;
+    padding: 0 2px;
+}
+
+.common-dropdown-1 input {
+    border: none;
+    border-right: 1px solid var(--my-border-secondary);
+    border-radius: 0;
+}
+
+.common-dropdown-1 input::placeholder {
+    font-size: var(--fs-sm);
+}
+
+
 
 /*______________________________________*\
   ||        Small Banner Start        ||
@@ -5675,52 +5766,6 @@ _____________________________________*/
         margin-top: 6px;
     }
 
-    /* .table {
-            width: 100%;
-            overflow-x: auto;
-        } */
-
-    /* .table {
-            display: flex;
-            width: 100%;
-            min-width: 100%;
-            flex-direction: row;
-        }
-
-        .table .head {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            text-align: left;
-            align-items: stretch;
-            width: 40%;
-        }
-
-
-        .table .table-body li {
-            display: flex;
-            flex-direction: column;
-            text-align: left !important;
-            padding: 0;
-        }
-
-        .table .head .th {
-            text-align: left;
-            height: 48px;
-        }
-
-        .table .table-body {
-            width: 60%;
-            padding: 0;
-        }
-
-        .table .table-body li .td {
-            text-align: left;
-            border-bottom: 1px solid var(--my-border-color2);
-            padding: 8px;
-            height: 48px;
-        } */
     .search .search-dropdown {
         width: 100%;
         max-height: 400px;
@@ -5738,9 +5783,6 @@ _____________________________________*/
     .my-btn-sm {
         padding: 12px 20px !important;
     }
-
-
-
 
 
     /****** Product Modal *****/

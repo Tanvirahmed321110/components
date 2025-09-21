@@ -1,3 +1,56 @@
+// Common Dropdown 1
+function initDropdowns() {
+    const allDropdown = document.querySelectorAll('.common-dropdown-1 .dropdown')
+    if (allDropdown) {
+        allDropdown.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const items = dropdown.querySelectorAll('.item');
+
+
+            // Toggle dropdown open/close
+            if (toggle) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    allDropdown.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+                    dropdown.classList.toggle('active');
+                });
+            }
+
+            if (items) {
+                // Select an item
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const img = item.querySelector('img').src;
+                        const text = item.querySelector('div').textContent;
+
+                        toggle.querySelector('img').src = img;
+                        toggle.querySelector('span').textContent = text;
+
+                        dropdown.classList.remove('active');
+
+                        // active class check
+                        items.forEach(i => i.classList.remove('active'));
+                        item.classList.toggle('active')
+                    });
+                });
+            }
+        });
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+        allDropdown.forEach(d => d.classList.remove('active'));
+    });
+}
+
+// 🔥 Initialize all dropdowns on page load
+initDropdowns();
+
+
+
+
 
 // Open Modal Function
 function openModalF(modalId, btnSelector) {
