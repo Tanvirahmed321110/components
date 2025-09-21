@@ -2788,10 +2788,11 @@
         =======||   Sidebar Section  Start Here   ||======
         ==================================================
         -->
-        <aside aria-label="Dashboard navigation" class="sidebar">
+        <aside aria-label="Dashboard navigation" class="sidebar " id="sidebar">
             <!--====== Sidebar Close Button ======-->
             <div>
-                <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip">
+                <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip" id="close-sidebar-btn"
+                    aria-label="Toggle Sidebar" aria-expanded="true" aria-controls="sidebar">
                     <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
                     <div class="show-text">Toggle Sidebar</div>
                 </button>
@@ -2801,19 +2802,23 @@
 
             <!--==================||  Sidebar Top Profile Here  ||==================-->
             <div class="top my-flex-center my-flex-column my-p-10 my-py-12">
-                <img class="profile-img-xl" src="/static/images/profile (1).jpg" loading="lazy" alt="profile image">
-                <h3 class="my-fs-xl my-mt-4">Mst Lamia Khatun</h3>
-                <div class="my-d-flex my-gap-2 my-gap-2 my-align-center my-mt-3">
-                    <p>Your Point</p>
-                    <h5>(<span>3106</span>)</h5>
+                <div class="wrap">
+                    <img class="profile-img-xl" src="/static/images/profile (1).jpg" loading="lazy" alt="profile image">
                 </div>
-                <ul class="my-d-flex my-gap-1 star my-align-center ">
-                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
-                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
-                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
-                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
-                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
-                </ul>
+                <div class="content my-flex-center my-flex-column">
+                    <h3 class="my-fs-xl my-mt-4">Mst Lamia Khatun</h3>
+                    <div class="my-d-flex my-gap-2 my-gap-2 my-align-center my-mt-3" aria-label="User points">
+                        <p>Your Point</p>
+                        <h5>(<span>3106</span>)</h5>
+                    </div>
+                    <ul class="my-d-flex my-gap-1 star my-align-center" role="img" aria-label="5 out of 5 stars">
+                        <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                        <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                        <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                        <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                        <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                    </ul>
+                </div>
             </div>
 
 
@@ -2822,10 +2827,11 @@
             <div class="bottom my-has-scrollbar-sm">
 
                 <!--====== Sidebar General Nav ======-->
-                <div class="general-nav">
-                    <div class="my-mt-4 my-fs-xs">GENERAL</div>
-                    <nav class="my-flex-column my-mt-4 my-gap-2">
-                        <a class="item my-d-flex my-align-center active  my-gap-4" href="#overview" aria-current="page">
+                <div class="general-nav" role="navigation" aria-label="General Navigation">
+                    <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
+                    <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
+                        <a class="item my-d-flex my-align-center active  my-gap-4" href="#overview" aria-current="page"
+                            aria-label="Dashboard Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2837,7 +2843,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#profile">
+                        <a class="item" href="#profile" aria-label="Booking/Order Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2847,8 +2853,9 @@
 
                             <span>Booking/Order</span>
                         </a>
+
                         <!-- single nav item -->
-                        <a class="item" href="#settings">
+                        <a class="item" href="#settings" aria-label="Financial Dashboard">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2863,7 +2870,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#messages">
+                        <a class="item" href="#messages" aria-label="My Tour Plan">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2875,7 +2882,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#logout">
+                        <a class="item" href="#logout" aria-label="Family Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2887,7 +2894,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#overview" aria-current="page">
+                        <a class="item" href="#overview" aria-label="Travel for work Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2898,7 +2905,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#profile">
+                        <a class="item" href="#profile" aria-label="Coupon/Offers Page">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2912,12 +2919,13 @@
 
 
                 <!--====== Sidebar Miscellaneous Nav ======-->
-                <div class="my-pt-5 miscellaneous-nav">
-                    <p class="my-fs-xs">Miscellaneous</p>
-                    <nav class="my-flex-column my-gap-1 my-mt-2">
+                <div class="my-pt-5 miscellaneous-nav" role="navigation" aria-label="Miscellaneous Navigation">
+                    <p class="my-fs-xs" id="misc-nav-heading">Miscellaneous</p>
+                    <nav class="my-flex-column my-gap-1 my-mt-2" aria-labelledby="misc-nav-heading">
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page">
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page"
+                            aria-label="Support page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1236_15925)">
@@ -2937,7 +2945,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page">
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-label="Setting Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1236_18471)">
@@ -2962,7 +2970,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page">
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-label="Legal Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2974,7 +2982,8 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page">
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview"
+                            aria-label="Invites a Firends Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2998,7 +3007,7 @@
         =======||   Main Content  Start Here   ||======
         ===============================================
         -->
-        <main class="my-has-scrollbar">
+        <main class="my-has-scrollbar " id="main-content">
 
             <!--
             ============================================================
@@ -3008,7 +3017,7 @@
             <section>
                 <div class="main-content-header my-p-6 my-bg-white my-flex-between my-gap-6">
 
-                    <!--Do not delete Empty (Div) -->
+                    <!--Do not delete Empty (Div) "Thank You Razzak / Fahim v" -->
                     <div class="left"></div>
 
 
@@ -3032,13 +3041,14 @@
                                 </defs>
                             </svg>
 
-                            <span class="my-fw-bold my-fs-sm my-text-secondary">14:02 AM Today Nov, 2025</span>
+                            <span class="my-fw-bold my-fs-sm my-text-secondary" datetime="2025-11-21T14:02">14:02 AM
+                                Today Nov, 2025</span>
                         </div>
 
                         <div class="my-d-flex my-align-center my-gap-2">
                             <!--===== Message =====-->
                             <div>
-                                <button class="icon-hover my-tooltip">
+                                <button class="icon-hover my-tooltip" aria-label="Open Messages">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_17037)">
@@ -3061,7 +3071,7 @@
 
                             <div>
                                 <!--===== Notification ======-->
-                                <button class="icon-hover my-tooltip">
+                                <button class="icon-hover my-tooltip" aria-label="Open Notification">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3079,7 +3089,8 @@
 
                         <!--====== Switch To Host Button ======-->
                         <div>
-                            <button class="my-btn my-secondary-btn my-btn-sm switch-to-host ">
+                            <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
+                                aria-label="Switch to host view">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_1199_19948)">
@@ -3110,93 +3121,98 @@
             ======================================================
             -->
             <section>
-                <div class="points my-bg-white my-p-10 my-mt-16 my-mx-16 my-radius-md my-d-flex my-gap-8 my-shadow-1">
+                <div
+                    class="points my-bg-white my-p-10 my-mt-16 my-mx-16 my-mx-lg-10 my-mt-lg-10  my-radius-md my-d-flex my-gap-8 my-shadow-1">
                     <!--=============||  Total Point  ||=============-->
-                    <div class="total-points">
-                        <svg class="progress-ring" width="200" height="200" viewBox="0 0 160 160">
+                    <div class="total-points" role="region" aria-labelledby="total-points-title">
+                        <svg class="progress-ring" width="180" height="180" viewBox="0 0 160 160">
                             <!-- Background circles -->
-                            <circle class="bg" cx="80" cy="80" r="70"></circle>
-                            <circle class="bg" cx="80" cy="80" r="55"></circle>
-                            <circle class="bg" cx="80" cy="80" r="40"></circle>
+                            <circle class="bg" cx="80" cy="80" r="70" aria-hidden="true"></circle>
+                            <circle class="bg" cx="80" cy="80" r="55" aria-hidden="true"></circle>
+                            <circle class="bg" cx="80" cy="80" r="40" aria-hidden="true"></circle>
 
                             <!-- Progress circles -->
-                            <circle class="progress red" cx="80" cy="80" r="70"></circle>
-                            <circle class="progress green" cx="80" cy="80" r="55"></circle>
-                            <circle class="progress purple" cx="80" cy="80" r="40"></circle>
+                            <circle class="progress red" cx="80" cy="80" r="70" role="presentation"></circle>
+                            <circle class="progress green" cx="80" cy="80" r="55" role="presentation"></circle>
+                            <circle class="progress purple" cx="80" cy="80" r="40" role="presentation"></circle>
                         </svg>
 
                         <div class="points-text">
                             <div class="my-fs-xs my-mt-3 my-fw-bold">Total Point</div>
-                            <h4>3106</h4>
+                            <h4 aria-live="polite">3106</h4>
                         </div>
                     </div>
 
 
 
-                    <!--=============||  Items ||============-->
-                    <div class="my-grid-6 items flex-1 my-grid-lg-3 my-gap-5">
+                    <!--=============|| Point  Items ||============-->
+                    <div class="my-grid-6 items flex-1 my-grid-lg-3 my-gap-5" role="list"
+                        aria-labelledby="point-items-title">
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img src="https://i.ibb.co.com/nVXsXj6/Group.png" class="my-w-24" alt="Group"
                                 loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Flight Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">746.22</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746.22 points">
+                                    746.22</p>
                             </div>
                         </div>
 
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img class="my-w-24" src="https://i.ibb.co.com/s9fSBKbG/Group.png" alt="Group"
                                 loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Activities Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">150</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="150 points">150</p>
                             </div>
                         </div>
 
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img class="my-w-24" src="https://i.ibb.co.com/F4XqJzGL/res.png" alt="Group" loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Food Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">746.22</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746 points">746.22
+                                </p>
                             </div>
                         </div>
 
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img class="my-w-24" src="https://i.ibb.co.com/s9fSBKbG/Group.png" alt="Group"
                                 loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Tour Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">746.22</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746 points">746.22
+                                </p>
                             </div>
                         </div>
 
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img class="my-w-24" src="https://i.ibb.co.com/nVXsXj6/Group.png" class="my-w-24"
                                 alt="Group" loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Hotels Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">200</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="200 points">200</p>
                             </div>
                         </div>
 
                         <!-- single item -->
-                        <div
-                            class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7">
+                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
+                            role="listitem">
                             <img class="my-w-24" src="https://i.ibb.co.com/rJ4Prxd/Group.png" alt="Group"
                                 loading="lazy">
                             <div class="my-mt-10">
                                 <h4 class="my-text-sm my-text-tertiary">Gear Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary">00</p>
+                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="00 points">00</p>
                             </div>
                         </div>
                     </div>
@@ -3212,17 +3228,20 @@
             =======||   Total Trips Section  Start Here   ||======
             ======================================================
             -->
-            <section>
-                <div class="total-trips  my-bg-white my-p-10 my-mt-16 my-mx-16 my-radius-md my-shadow-1">
+            <section aria-labelledby="total-trips-title">
+                <div
+                    class="total-trips  my-bg-white my-p-10 my-mx-lg-10 my-mt-lg-10 my-mt-16 my-mx-16 my-radius-md my-shadow-1">
                     <div class="my-pb-5 my-border-bottom">
-                        <h2 class="cart-title">Total Trips</h2>
+                        <h2 class="cart-title" id="total-trips-title">Total Trips</h2>
                     </div>
 
                     <div class="my-mt-10">
                         <div class="chart my-grid-350-remain my-gap-5">
 
                             <!-- Left -->
-                            <div class="circle-chart my-p-relative">
+                            <div class="circle-chart my-p-relative"
+                                aria-label="Donut chart showing trip distribution: Done, Booked, and Canceled"
+                                role="img">
                                 <canvas id="donutChart" style="max-width: 340px; max-height: 340px;"></canvas>
                                 <div class="total-trips-text my-text-center">
                                     <h5 class="">Total Trips </h5>
@@ -3230,7 +3249,8 @@
                                 </div>
 
                                 <!-- How Much Done Book cancle -->
-                                <ul class="complete my-d-flex my-align-center my-gap-6">
+                                <ul class="complete my-d-flex my-align-center my-gap-6"
+                                    aria-label="Trip status breakdown">
                                     <li>Done <span class="my-fw-bold" id="doneCount">12</span></li>
                                     <li>Booked <span class="my-fw-bold" id="bookedCount">3</span></li>
                                     <li>Canceled <spa class="my-fw-bold" id="canceledCount">4</spa>
@@ -3253,21 +3273,24 @@
             =======||   Booking Upcoming Section  Start Here   ||======
             ============================================================
             -->
-            <section>
-                <div class="booking-upcoming my-grid-3   my-mt-16 my-mx-16 my-radius-md">
+            <section aria-labelledby="booking-upcoming-title">
+                <div class="booking-upcoming my-grid-3 my-mx-lg-10 my-mt-lg-10  my-mt-16 my-mx-16 my-radius-md">
 
                     <!--==================|| Booking Status  ||===================-->
                     <div class="booking-status my-p-relative my-bg-white my-mx-8 my-shadow-1  my-radius-md">
                         <div class="my-p-6 my-pb-8">
                             <div class="my-mt-4">
-                                <h5 class="my-fs-lg my-text-primary my-fw-bold">Booking Status/Order</h5>
+                                <h5 class="my-fs-lg my-text-primary my-fw-bold" id="booking-status-title">Booking
+                                    Status/Order</h5>
                             </div>
 
-                            <div class="items my-flex-column my-gap-8 my-mt-6">
+                            <div class="items my-flex-column my-gap-8 my-mt-6" role="list"
+                                aria-labelledby="booking-status-title">
 
-                                <!--======= single item =======-->
-                                <div
-                                    class="item my-d-flex my-align-center my-gap-10 my-radius-xl my-border-primary my-px-8 my-p-5">
+                                <!--===========||  single item   ||===========-->
+                                <a href="#"
+                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
+                                    role="listitem">
                                     <!--===== Left =====-->
                                     <div>
                                         <img class=" my-radius-md my-h-40 my-w-46"
@@ -3276,7 +3299,7 @@
 
                                     <!--===== right =====-->
                                     <div>
-                                        <h4 class="my-text-primary">Raddison Blue</h4>
+                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
                                         <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
                                             <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
                                             <!-- payment status -->
@@ -3299,11 +3322,12 @@
                                             <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <!--======= single item =======-->
-                                <div
-                                    class="item my-d-flex my-align-center my-gap-10 my-radius-xl my-border-primary my-px-8 my-p-5">
+                                <!--===========||  single item   ||===========-->
+                                <a href="#"
+                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
+                                    role="listitem">
                                     <!--===== Left =====-->
                                     <div>
                                         <img class=" my-radius-md my-h-40 my-w-46" src="/static/images/cart-img (2).jpg"
@@ -3312,7 +3336,7 @@
 
                                     <!--===== right =====-->
                                     <div>
-                                        <h4 class="my-text-primary">Raddison Blue</h4>
+                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
                                         <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
                                             <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
                                             <!-- payment status -->
@@ -3335,11 +3359,12 @@
                                             <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <!--======= single item =======-->
-                                <div
-                                    class="item my-d-flex my-align-center my-gap-10 my-radius-xl my-border-primary my-px-8 my-p-5">
+                                <!--===========||  single item   ||===========-->
+                                <a href="#"
+                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
+                                    role="listitem">
                                     <!--===== Left =====-->
                                     <div>
                                         <img class=" my-radius-md my-h-40 my-w-46"
@@ -3348,7 +3373,7 @@
 
                                     <!--===== right =====-->
                                     <div>
-                                        <h4 class="my-text-primary">Raddison Blue</h4>
+                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
                                         <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
                                             <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
                                             <!-- payment status -->
@@ -3371,11 +3396,13 @@
                                             <div class="my-fs-md my-fw-medium my-text-tertiary">963</div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <!--======= single item =======-->
-                                <div
-                                    class="item my-d-flex my-align-center my-gap-10 my-radius-xl my-border-primary my-px-8 my-p-5">
+
+                                <!--===========||  single item   ||===========-->
+                                <a href="#"
+                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
+                                    role="listitem">
                                     <!--===== Left =====-->
                                     <div>
                                         <img class=" my-radius-md my-h-40 my-w-46"
@@ -3384,7 +3411,7 @@
 
                                     <!--===== right =====-->
                                     <div>
-                                        <h4 class="my-text-primary">Raddison Blue</h4>
+                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
                                         <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
                                             <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
                                             <!-- payment status -->
@@ -3407,21 +3434,24 @@
                                             <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
 
 
                     <!--======================|| Upcoming Trips  ||===========================-->
-                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md  upcoming-trips">
+                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md upcoming-trips" role="region"
+                        aria-labelledby="upcoming-trips-heading">
 
                         <!--============||  Head Here ||===========-->
                         <div class="my-mt-0 my-flex-between my-align-center">
-                            <h5 class="my-fs-lg my-text-primary my-fw-bold">Upcoming Trips</h5>
+                            <h5 class="my-fs-lg my-text-primary my-fw-bold" id="upcoming-trips-heading">Upcoming Trips
+                            </h5>
                             <div>
                                 <button class="my-btn my-primary-btn my-btn-sm"><svg width="25" height="24"
-                                        viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        aria-label="Add new trip">
                                         <path
                                             d="M12.5 8V16M8.5 12H16.5M22.5 12C22.5 17.5228 18.0228 22 12.5 22C6.97715 22 2.5 17.5228 2.5 12C2.5 6.47715 6.97715 2 12.5 2C18.0228 2 22.5 6.47715 22.5 12Z"
                                             stroke="white" stroke-width="2" stroke-linecap="round"
@@ -3432,10 +3462,11 @@
                         </div>
 
                         <!--============||  Items  Here  ||===========-->
-                        <div class="items my-mt-10 my-flex-column my-gap-10">
+                        <div class="items my-mt-10 my-flex-column my-gap-10" role="list">
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).jpg"
@@ -3445,8 +3476,9 @@
                                 <!--===== right =====-->
                                 <div class="flex-1">
                                     <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-10 my-align-center my-w-100-p">
+                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <div
+                                        class="my-bg- my-mt-5 my-flex-between flex-wrap my-gap-10 my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
                                             <!-- profile group -->
@@ -3483,10 +3515,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).png"
@@ -3496,8 +3530,9 @@
                                 <!--===== right =====-->
                                 <div class="flex-1">
                                     <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-10 my-align-center my-w-100-p">
+                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <div
+                                        class="my-bg- my-mt-5 my-flex-between my-gap-10 flex-wrap my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
                                             <!-- profile group -->
@@ -3534,11 +3569,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/cart-img (1).jpg"
@@ -3548,8 +3584,9 @@
                                 <!--===== right =====-->
                                 <div class="flex-1">
                                     <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-10 my-align-center my-w-100-p">
+                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <div
+                                        class="my-bg- my-mt-5 my-flex-between my-gap-10 flex-wrap my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
                                             <!-- profile group -->
@@ -3586,49 +3623,54 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
+                            </a>
                         </div>
 
                         <!--====== Load More Button ======-->
                         <div class="my-text-center my-mt-5">
-                            <a href="#" class="my-fw-bold text-hover-secondary">Load More</a>
+                            <a href="#" class="my-fw-bold text-hover-secondary"
+                                aria-label="Load more upcoming trips">Load More</a>
                         </div>
 
                     </div>
 
 
                     <!--======================|| Calendar Start  ||===========================-->
-                    <div class="my-bg-white my-p-7 my-px-8 my-shadow-1 my-radius-md">
+                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md" role="region"
+                        aria-label="Event Calendar">
                         <div class="calendar my-mt-4">
                             <!-- Header -->
                             <div class="my-flex-between head">
-                                <button class="btn"><i class="ri-arrow-left-s-line"></i></button>
+                                <button class="btn" aria-label="Previous month"><i
+                                        class="ri-arrow-left-s-line"></i></button>
                                 <div class="month-name">September</div>
-                                <button class="btn"><i class="ri-arrow-right-s-line"></i></button>
+                                <button class="btn" aria-label="Next month"><i
+                                        class="ri-arrow-right-s-line"></i></button>
                             </div>
 
                             <!-- Tools -->
-                            <div class="my-flex-between  my-gap-6 my-mt-10">
+                            <div class="my-flex-between  my-gap-6 my-mt-6">
                                 <div class="my-input-control">
-                                    <input class="select-date" type="text" placeholder="Select date" readonly>
-                                </div><button class="today-btn">Today</button>
+                                    <input class="select-date" aria-label="Selected date" type="text"
+                                        placeholder="Select date" readonly>
+                                </div>
+                                <button class="today-btn" aria-label="Go to today">Today</button>
                             </div>
 
                             <!-- Body -->
-                            <div class="calendar-body my-mt-10">
-                                <div class="day-names">
-                                    <div>Sun</div>
-                                    <div>Mon</div>
-                                    <div>Tue</div>
-                                    <div>Wed</div>
-                                    <div>Thu</div>
-                                    <div>Fri</div>
-                                    <div>Sat</div>
+                            <div class="calendar-body my-mt-6" aria-labelledby="calendar-month">
+                                <div class="day-names" role="row">
+                                    <div role="columnheader">Sun</div>
+                                    <div role="columnheader">Mon</div>
+                                    <div role="columnheader">Tue</div>
+                                    <div role="columnheader">Wed</div>
+                                    <div role="columnheader">Thu</div>
+                                    <div role="columnheader">Fri</div>
+                                    <div role="columnheader">Sat</div>
                                 </div>
                                 <div class="dates-grid">
                                     <!-- Previous month (August 2025) -->
-                                    <div class="date prev-month">25</div>
+                                    <div class="date prev-month" role="gridcell" aria-label="August 25, 2025">25</div>
                                     <div class="date prev-month">26</div>
                                     <div class="date prev-month">27</div>
                                     <div class="date prev-month">28</div>
@@ -3682,13 +3724,14 @@
                             </div>
 
                             <!-- Footer -->
-                            <div class="calendar-footer my-mt-10 my-grid-2">
+                            <div class="calendar-footer my-mt-12 my-grid-2">
 
-                                <button class="my-btn my-outline-btn my-w-100-p">Cancel</button>
+                                <button class="my-btn my-outline-btn my-w-100-p"
+                                    aria-label="Cancel selection">Cancel</button>
 
 
-                                <button class="my-btn my-primary-btn my-w-100-p">Apply</button>
-
+                                <button class="my-btn my-primary-btn my-w-100-p"
+                                    aria-label="Apply selection">Apply</button>
                             </div>
                         </div>
                     </div>
@@ -3701,8 +3744,8 @@
             =======||   Invite And Save List Section  Start Here   ||======
             ===============================================================
             -->
-            <section>
-                <div class="invite-wishlist my-grid-remain-480 my-gap-12  my-mt-16 my-mx-16 ">
+            <section aria-label="Invite your friend and earn money">
+                <div class="invite-wishlist my-grid-remain-480 my-gap-12 my-mx-lg-10 my-mt-lg-10  my-mt-16 my-mx-16 ">
                     <!--======================|| Invite Your Firend  ||===========================-->
                     <div>
                         <div class="my-shadow-1 my-bg-white my-py-8 my-p-10 my-radius-md">
@@ -3711,10 +3754,11 @@
 
 
                                 <!--====== Items ======-->
-                                <div class="items my-mt-10 my-grid-3  my-gap-16">
+                                <div class="items my-mt-10 my-grid-3  my-gap-16 my-gap-lg-6">
 
                                     <!-- single item -->
-                                    <div class="item my-border-secondary my-radius-xl my-p-12">
+                                    <div class="item my-border-secondary my-radius-xl my-p-12" role="region"
+                                        aria-label="Approved Orders">
                                         <h5 class="my-text-primary my-fs-md">Approves Order</h5>
                                         <p class="my-mt-2">12</p>
 
@@ -3724,7 +3768,8 @@
                                     </div>
 
                                     <!-- single item -->
-                                    <div class="item my-border-secondary my-radius-xl my-p-12">
+                                    <div class="item my-border-secondary my-radius-xl my-p-12" role="region"
+                                        aria-label="Approved Orders">
                                         <h5 class="my-text-primary my-fs-md">Total Earned</h5>
                                         <p class="my-mt-2"><span>$</span>12</p>
 
@@ -3734,7 +3779,8 @@
                                     </div>
 
                                     <!-- single item -->
-                                    <div class="item  my-radius-xl my-border-secondary  my-p-12">
+                                    <div class="item  my-radius-xl my-border-secondary  my-p-12" role="region"
+                                        aria-label="Approved Orders">
                                         <h5 class="my-text-primary my-fs-md">Available Balance</h5>
                                         <p class="my-mt-2">12</p>
 
@@ -3745,16 +3791,17 @@
                                 </div>
 
                                 <!--====== Share Input Button ======-->
-                                <div class="my-mt-10 ">
-                                    <h6>Copy Url</h6>
+                                <div class="my-mt-10" aria-label="Copy your referral URL">
+                                    <h6 class="my-text-primary">Copy Url</h6>
                                     <div class="my-border-secondary my-radius-md my-d-flex my-mt-2">
-                                        <div class="my-text-tertiary my-fw-medium my-p-6 my-fs-md my-border-right">
+                                        <div class="my-text-tertiary my-fw-medium my-p-6 my-fs-sm my-border-right">
                                             tourgull.com/profile/</div>
                                         <div class="my-p-6 my-flex-between flex-1">
-                                            <div class="account-path my-text-primary my-fs-md">Tanvir12</div>
+                                            <div class="account-path my-text-primary my-fs-sm">Tanvir12</div>
 
                                             <!-- copy button -->
-                                            <button class="my-px-2 copy-btn text-hover-secondary my-tooltip">
+                                            <button class="my-px-2 copy-btn text-hover-secondary my-tooltip"
+                                                aria-label="Copy referral URL">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_1305_26231)">
@@ -3782,7 +3829,8 @@
 
 
                         <!--=====================||  Currency Converter  ||====================-->
-                        <div class="my-mt-12 my-shadow-1 my-p-10 my-pt-8 my-pb-12 my-radius-md my-bg-white">
+                        <div class="my-mt-12 my-shadow-1 my-p-10 my-pt-8 my-pb-12 my-radius-md my-bg-white"
+                            aria-label="Currency Converter">
                             <h5 class="my-fs-lg my-text-primary my-fw-bold">Currency Converter</h5>
 
                             <div class="my-mt-10 my-flex-between my-align-end my-gap-4">
@@ -3791,35 +3839,42 @@
                                     <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
                                     <div class="my-d-flex area my-mt-1">
                                         <div class="my-input-control">
-                                            <input type="number" placeholder="Enter amount" id="amount" />
+                                            <input type="number" placeholder="Enter amount" id="amount"
+                                                aria-label="Amount to convert" />
                                         </div>
 
                                         <!-- Dropdown -->
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle" type="button">
+                                            <button class="dropdown-toggle" type="button" aria-haspopup="listbox"
+                                                aria-expanded="false" aria-label="Select source currency">
                                                 <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
                                                 <div class="my-d-flex my-align-center my-gap-2">
-                                                    <span>BDT</span>
+                                                    <span>USD</span>
                                                     <i class="ri-arrow-down-s-line"></i>
                                                 </div>
                                             </button>
 
                                             <!-- Dropdwon Here -->
-                                            <ul class="dropdown-items">
-                                                <li class="item">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
+                                            <ul class="dropdown-items" role="listbox"
+                                                aria-label="Source currency options">
+                                                <li class="item" role="option">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png"
+                                                        alt="Country image" loading="lazy">
                                                     <div>BDT</div>
                                                 </li>
-                                                <li class="item">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="">
+                                                <li class="item active" role="option" aria-selected="true">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="img"
+                                                        loading="lazy">
                                                     <div>USD</div>
                                                 </li>
-                                                <li class="item">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="">
+                                                <li class="item" role="option">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="img"
+                                                        loading="lazy">
                                                     <div>EUR</div>
                                                 </li>
-                                                <li class="item">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="">
+                                                <li class="item" role="option">
+                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img"
+                                                        loading="lazy">
                                                     <div>INR</div>
                                                 </li>
                                             </ul>
@@ -3827,15 +3882,15 @@
                                     </div>
 
                                     <!--===  Error {add class .my-d-block then show it and my-d-none hide it}  ==-->
-                                    <small class="my-d-none my-text-red ">Error Message</small>
+                                    <small class="my-d-none my-text-red" ole="alert">Error Message</small>
                                 </div>
 
 
                                 <!--====== compare button ======-->
                                 <div class="my-d-flex my-align-end my-justify-end">
                                     <!-- button -->
-                                    <button
-                                        class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm">
+                                    <button class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm"
+                                        aria-label="Convert currency">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4 17H20M20 17L16 13M20 17L16 21M20 7H4M4 7L8 3M4 7L8 11"
@@ -3851,12 +3906,13 @@
                                     <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
                                     <div class="my-d-flex area my-mt-1">
                                         <div class="my-input-control">
-                                            <input type="number" placeholder="Enter amount" id="amount" />
+                                            <input type="number" id="amount" aria-label="Converted amount" />
                                         </div>
 
                                         <!-- Dropdown -->
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle">
+                                            <button class="dropdown-toggle" aria-haspopup="listbox"
+                                                aria-expanded="false" aria-label="Select target currency">
                                                 <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
                                                 <div class="my-d-flex my-align-center my-gap-2">
                                                     <span>BDT</span>
@@ -3865,20 +3921,21 @@
                                             </button>
 
                                             <!-- Dropdwon Here -->
-                                            <ul class="dropdown-items">
-                                                <li class="item">
+                                            <ul class="dropdown-items" role="listbox"
+                                                aria-label="Target currency options">
+                                                <li class="item active" role="option" aria-selected="true">
                                                     <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
                                                     <div>BDT</div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item" role="option">
                                                     <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="">
                                                     <div>USD</div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item" role="option">
                                                     <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="">
                                                     <div>EUR</div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item" role="option">
                                                     <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="">
                                                     <div>INR</div>
                                                 </li>
@@ -3895,17 +3952,18 @@
                     </div>
 
                     <!--======================|| Save List Here  ||===========================-->
-                    <div class="my-shadow-1 my-bg-white my-p-8 my-radius-md">
+                    <div class="my-shadow-1 my-bg-white my-p-8 my-radius-md save-list" aria-label="Saved blog list">
                         <!--=============||  Head Here ||============-->
                         <div class="my-mt-0 my-flex-between my-align-center">
                             <h5 class="my-fs-lg my-text-primary my-fw-bold">Save list</h5>
                             <div>
-                                <button class="my-btn my-primary-btn my-btn-sm"><svg width="25" height="24"
-                                        viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12.5 8V16M8.5 12H16.5M22.5 12C22.5 17.5228 18.0228 22 12.5 22C6.97715 22 2.5 17.5228 2.5 12C2.5 6.47715 6.97715 2 12.5 2C18.0228 2 22.5 6.47715 22.5 12Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                <button class="my-btn my-primary-btn my-btn-sm" aria-label="Add new saved item">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" aria-label="Add new saved item"></svg>>
+                                    <path
+                                        d="M12.5 8V16M8.5 12H16.5M22.5 12C22.5 17.5228 18.0228 22 12.5 22C6.97715 22 2.5 17.5228 2.5 12C2.5 6.47715 6.97715 2 12.5 2C18.0228 2 22.5 6.47715 22.5 12Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                     </svg>
                                 </button>
                             </div>
@@ -3913,10 +3971,11 @@
 
 
                         <!--==============||  Items  Here  ||==============-->
-                        <div class="items my-mt-10 my-flex-column my-gap-10">
+                        <div class="items my-mt-10 my-flex-column my-gap-8" role="list">
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).jpg"
@@ -3926,8 +3985,8 @@
                                 <!--===== right =====-->
                                 <div class="flex-1">
                                     <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
+                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <div class=" my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
                                             <!-- profile group -->
@@ -3960,14 +4019,17 @@
                                             </div>
 
                                             <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
+                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+
+
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).png"
@@ -3977,7 +4039,7 @@
                                 <!--===== right =====-->
                                 <div class="flex-1">
                                     <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
                                     <div class="my-bg- my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
@@ -4011,15 +4073,16 @@
                                             </div>
 
                                             <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
+                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
                             <!--======= single item =======-->
-                            <div
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary">
+                            <a href="#"
+                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
+                                role="listitem">
                                 <!--===== Left =====-->
                                 <div class="flex-shring-no">
                                     <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/cart-img (1).jpg"
@@ -4028,9 +4091,9 @@
 
                                 <!--===== right =====-->
                                 <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-lg my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
+                                    <h4 class="my-text-orange my-fs-sm  my-fw-bold">Romantic Germany</h4>
+                                    <p class="my-fs-md  my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
+                                    <div class=" my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
 
                                         <div class="my-d-flex my-align-center my-gap-4">
                                             <!-- profile group -->
@@ -4063,16 +4126,17 @@
                                             </div>
 
                                             <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
+                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
                         </div>
                         <!--====== Load More Button ======-->
                         <div class="my-text-center my-mt-5">
-                            <a href="#" class="my-fw-bold text-hover-secondary">Load More</a>
+                            <a href="#" class="my-fw-bold text-hover-secondary" aria-label="Load more saved items">Load
+                                More</a>
                         </div>
 
                     </div>
@@ -4088,109 +4152,7 @@
 
         <script src="/static/js/global_js/global.js"></script>
         <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-
-            // ==========  For Total Point ===========
-            function setProgress(circle, percent) {
-                const radius = circle.r.baseVal.value;
-                const circumference = 2 * Math.PI * radius;
-
-                circle.style.strokeDasharray = circumference;
-                circle.style.strokeDashoffset = circumference; // start hidden
-
-                // force reflow so animation triggers
-                circle.getBoundingClientRect();
-
-                // set target with animation
-                circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
-            }
-
-            // Example: 3 circle progress
-            window.addEventListener("DOMContentLoaded", () => {
-                setProgress(document.querySelector('.red'), 90);    // outer red 90%
-                setProgress(document.querySelector('.green'), 80);  // middle green 80%
-                setProgress(document.querySelector('.purple'), 70); // inner purple 70%
-            });
-
-
-
-
-            // Circle Chart
-
-            new Chart(document.getElementById('donutChart'), {
-                type: 'doughnut',
-                data: {
-                    labels: ['Done', 'Booked', 'Canceled'],
-                    datasets: [{
-                        data: [12, 3, 3],
-                        backgroundColor: ['#1B4332', '#2A6F5F', '#B0BEC5'],
-                        borderWidth: 5,   // stock width 5px
-                        borderColor: '#fff' // optional, makes gaps visible
-                    }]
-                },
-                options: {
-                    cutout: '70%',  // size of donut hole
-                    plugins: {
-                        legend: { position: 'right' }
-                    }
-                }
-            });
-
-
-            // Stacked bar chart
-            new Chart(document.getElementById('barChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    datasets: [
-                        {
-                            "label": "Done",
-                            "data": [11, 15, 27, 12, 16, 17, 19, 27, 28, 24, 17, 15],
-                            "backgroundColor": "#1B4332"
-                        },
-                        {
-                            "label": "Staying",
-                            "data": [25, 12, 13, 10, 29, 27, 13, 30, 11, 16, 21, 10],
-                            "backgroundColor": "#2A6F5F"
-                        },
-                        {
-                            "label": "Food",
-                            "data": [14, 18, 22, 30, 29, 16, 29, 26, 26, 15, 30, 16],
-                            "backgroundColor": "#B0BEC5"
-                        },
-                        {
-                            "label": "Tour",
-                            "data": [28, 26, 14, 10, 16, 19, 11, 17, 17, 17, 12, 19],
-                            "backgroundColor": "#DCE1E3"
-                        },
-                        {
-                            "label": "Others",
-                            "data": [19, 26, 10, 27, 10, 25, 24, 14, 11, 25, 20, 18],
-                            "backgroundColor": "#E6E0F0"
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top'
-                        }
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
-                            barPercentage: 0.2, // Adjust this value to control the bar width.
-                            categoryPercentage: 0.8
-                        },
-                        y: {
-                            stacked: true
-                        }
-                    }
-                }
-            });
-
-        </script>
+        <script src="/static/js/dashboard/guest_dashboard/index.js"></script>
     </body>
 
 </html>

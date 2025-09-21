@@ -132,7 +132,7 @@
     --shadow-md:
         0px 1px 3px 0px #0A0D120A,
         0px 4px 6px -1px #0A0D120A;
-    --shadow-lg: 0px 2px 2px -1px #0A0D120A, 0px 4px 6px -2px #0A0D1208, 0px 12px 16px -4px #0A0D1214;
+    --shadow-lg: 0px 2px 2px -1px #0A0D120A, 0px 4px 6px -2px #0A0D1208, 0px 12px 16px -4px #0a0d1221;
     --shadow-all-sm:
         0 0 4px rgba(0, 0, 0, 0.05),
         0 0 5px rgba(0, 0, 0, 0.07);
@@ -319,6 +319,13 @@ header .click-dropdown-parent .click-dropdown {
     top: 75px;
 }
 
+header .click-dropdown-parent .click-dropdown.lg {
+    /* left: 50%;
+    transform: translateX(-50%); */
+    max-width: 1220px;
+    box-shadow: var(--shadow-all-sm);
+}
+
 header .header-top .right .other-btns .item:hover,
 header .header-top .right .item:not(.item):hover,
 header .header-top .click-dropdown-btn.active,
@@ -377,6 +384,7 @@ header .header-top .right .other-btns .item {
 */
 header .profile-dropdown {
     padding: 12px 0;
+    box-shadow: var(--shadow-all-md) !important;
 }
 
 .wrapper.my-has-scrollbar-sm {

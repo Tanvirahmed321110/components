@@ -11,6 +11,7 @@ header {
     padding-bottom: 0;
     box-shadow: var(--shadow-3);
     border: 1px solid var(--my-white-off);
+    z-index: 3;
 }
 
 header .header-top {
@@ -34,7 +35,9 @@ header .header-main .my-gap-14 {
 }
 
 
-
+header .click-dropdown-parent .click-dropdown {
+    top: 65px;
+}
 
 
 
@@ -51,19 +54,49 @@ header .header-main .my-gap-14 {
 }
 
 aside.sidebar {
-    width: 296px;
+    width: 300px;
     background-color: var(--my-primary-color);
-    color: #fff;
+    color: var(--my-white);
     position: fixed;
     left: 0;
-    top: 126px;
-    height: calc(100dvh - 126px);
+    top: 125px;
+    height: calc(100dvh - 125px);
     display: flex;
     flex-direction: column;
     z-index: 3;
-    box-shadow: var(--shadow-1);
+    box-shadow: var(--shadow-lg);
+    transition: .2s linear;
 }
 
+
+/* Active Class */
+aside.sidebar.active {
+    width: 90px;
+}
+
+aside.active .top .content {
+    display: none;
+}
+
+aside.active .top {
+    padding-top: 66px;
+}
+
+aside.active .bottom .item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--my-text-tertiary);
+    margin-bottom: 4px !important;
+}
+
+aside.active .bottom .item span {
+    display: none;
+}
 
 /*
 =========||  Sidebar Top  Start Here  ||===========
@@ -75,10 +108,30 @@ aside.sidebar {
 }
 
 .sidebar .top img {
-    border: 5px solid #5f5f5f;
+    border: 5px solid var(--my-text-tertiary);
     padding: 2px;
     width: 68px;
     height: 68px;
+}
+
+.sidebar .top .wrap {
+    position: relative;
+}
+
+/* animation */
+.sidebar .top .wrap::after {
+    position: absolute;
+    content: '';
+    bottom: 7px;
+    right: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-round);
+    background-color: var(--my-success);
+    position: absolute;
+    z-index: 222;
+    border: 2px solid var(--my-white-off2);
+    animation: pulse 1.3s infinite ease-in-out;
 }
 
 .sidebar .top .star {
@@ -100,10 +153,6 @@ aside .bottom {
     flex: 1;
     flex-grow: 1;
     flex-shrink: 1;
-    /* max-height: fit-content; */
-    /* height: 100%; */
-    /* background-color: red;
-    background-color: rgb(67, 67, 68); */
     border-top: 1px solid var(--my-text-tertiary);
     padding-top: 4px;
 }
@@ -179,15 +228,21 @@ aside .bottom {
 */
 main {
     background-color: var(--my-white-off);
-    margin-left: 296px;
-    width: calc(100% - 296px);
+    margin-left: 307px;
+    width: calc(100% - 307px);
     overflow-y: auto;
-    /* display: flex; */
-    margin-top: 126px;
-    height: calc(100dvh - 126px);
+    margin-top: 125px;
+    height: calc(100dvh - 125px);
     padding-bottom: 20px;
+    border-left: 1px solid var(--my-white-off);
+    transition: .3s linear;
 }
 
+/* Active Class */
+main.active {
+    width: calc(100% - 98px);
+    margin-left: 98px;
+}
 
 /*
 ========================||    Total Point Seciton  Start Here   ||==========================
@@ -205,7 +260,7 @@ main {
 
 .total-points {
     position: relative;
-    width: 200px;
+    width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,6 +268,34 @@ main {
 
 .progress-ring {
     transform: rotate(-90deg);
+}
+
+.points .items .item {
+    transition: .2s linear;
+    position: relative;
+    overflow: hidden;
+}
+
+/*  */
+.points .items .item::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 12px;
+    height: 10px;
+    z-index: 2;
+    background-color: var(--my-primary-color);
+    transition: .2s linear;
+}
+
+.points .items .item:hover::after {
+    right: 0;
+    transition: .2s linear;
+}
+
+.points .items .item:hover {
+    border-radius: 12px;
 }
 
 circle {
@@ -322,11 +405,13 @@ circle {
 ============||    Upcoming Trips   ||=============
 */
 
-.upcoming-trips .items .item {
+.upcoming-trips .items .item,
+.save-list .items .item {
     transition: .3s linear;
 }
 
-.upcoming-trips .items .item:hover {
+.upcoming-trips .items .item:hover,
+.save-list .items .item:hover {
     transform: translateY(6px);
     border-color: var(--my-secondary-color);
 }
@@ -334,6 +419,45 @@ circle {
 
 
 .invite-wishlist .copy-btn:hover svg path {
-
     stroke: var(--my-secondary-color);
+}
+
+
+
+
+@media (max-width:1400px) {
+    aside.sidebar {
+        width: 280px;
+    }
+
+    main {
+        margin-left: 288px;
+        width: calc(100% - 288px);
+        margin-top: 126px;
+        height: calc(100dvh - 126px);
+    }
+
+    .booking-upcoming {
+        grid-template-columns: 260px 1fr 350px;
+        gap: 20px;
+    }
+
+    .booking-status .item {
+        width: 264px;
+    }
+
+    .points {
+        justify-content: space-between;
+
+    }
+
+    .points .total-points {
+        width: 360px;
+    }
+
+    .points .total-points .progress-ring {
+        width: 220px;
+        height: 220px;
+    }
+
 }
