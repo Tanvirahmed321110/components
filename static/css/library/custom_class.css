@@ -157,8 +157,9 @@ select {
     border-radius: 4px;
 }
 
+.my-input-control input,
 input::placeholder {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-sm) !important;
 }
 
 input:focus,
@@ -238,7 +239,7 @@ tr {
     width: 25px;
 }
 
-.my-user-select-none {
+.user-select-none {
     user-select: none;
 }
 
@@ -1717,6 +1718,10 @@ tr {
     max-width: 200px;
 }
 
+.my-max-w-160 {
+    max-width: 320px;
+}
+
 
 /* max-width */
 .my-w-max-10 {
@@ -2110,7 +2115,7 @@ tr {
 }
 
 .disabled {
-    cursor: no-drop;
+    cursor: no-drop !important;
     opacity: .5;
 }
 

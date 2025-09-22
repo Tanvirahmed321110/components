@@ -4,143 +4,109 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Amount Dropdown</title>
+        <title>Multi Tabs Example</title>
         <style>
-            body {
-                font-family: Arial, sans-serif;
-                padding: 30px;
-                background: #f9f9f9;
+            /* Basic tab styles */
+            .tabs {
+                margin: 20px 0;
             }
 
-            .common-dropdown-1 {
-                max-width: 350px;
-                margin: auto;
-            }
-
-            label {
-                font-size: 14px;
-                font-weight: 600;
-                margin-bottom: 6px;
-                display: block;
-            }
-
-            .my-d-flex {
+            .tab-buttons {
                 display: flex;
-                align-items: center;
                 gap: 10px;
+                margin-bottom: 15px;
             }
 
-            input[type="text"] {
-                flex: 1;
-                padding: 8px 10px;
-                border: 1px solid #ccc;
-                border-radius: 6px;
-                font-size: 14px;
-            }
-
-            /* Dropdown */
-            .dropdown {
-                position: relative;
-                min-width: 100px;
-            }
-
-            .dropdown-toggle {
-                display: flex;
-                align-items: center;
-                gap: 6px;
+            .tab-buttons button {
+                padding: 8px 16px;
+                border: none;
+                background: #eee;
                 cursor: pointer;
-                border: 1px solid #ccc;
-                padding: 6px 10px;
-                background: #fff;
                 border-radius: 6px;
-                font-size: 14px;
-                width: 100%;
+                transition: 0.3s;
             }
 
-            .dropdown-items {
+            .tab-buttons button.active {
+                background: #007bff;
+                color: #fff;
+            }
+
+            .tab-content {
                 display: none;
-                position: absolute;
-                top: 110%;
-                left: 0;
-                width: 100%;
-                background: #fff;
+                padding: 15px;
                 border: 1px solid #ddd;
                 border-radius: 6px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                z-index: 99;
+                background: #fafafa;
             }
 
-            .dropdown-items .item {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                padding: 8px 12px;
-                cursor: pointer;
-            }
-
-            .dropdown-items .item:hover {
-                background: #f2f2f2;
-            }
-
-            .dropdown.open .dropdown-items {
+            .tab-content.active {
                 display: block;
+                animation: fadeIn 0.4s ease-in-out;
             }
 
-            .my-w-10 {
-                width: 20px;
-                height: 20px;
-                object-fit: cover;
-            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
 
-            .common-dropdown-1 .area {
-                border: 1px solid gray;
-                border-radius: 4px;
-            }
-
-            .common-dropdown-1 input {
-                border: none;
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
         </style>
     </head>
 
     <body>
 
+        <!-- Tabs Section 1 -->
+        <div class="tabs" data-tabs>
+            <div class="tab-buttons">
+                <button data-tab="tab1" class="active">Tab 1</button>
+                <button data-tab="tab2">Tab 2</button>
+                <button data-tab="tab3">Tab 3</button>
+            </div>
+            <div class="tab-content active" id="tab1">Content for Tab 1</div>
+            <div class="tab-content" id="tab2">Content for Tab 2</div>
+            <div class="tab-content" id="tab3">Content for Tab 3</div>
+        </div>
 
+        <!-- Tabs Section 2 -->
+        <div class="tabs" data-tabs>
+            <div class="tab-buttons">
+                <button data-tab="tab4" class="active">Overview</button>
+                <button data-tab="tab5">Details</button>
+                <button data-tab="tab6">Reviews</button>
+            </div>
+            <div class="tab-content active" id="tab4">Overview content</div>
+            <div class="tab-content" id="tab5">Details content</div>
+            <div class="tab-content" id="tab6">Reviews content</div>
+        </div>
 
         <script>
-            document.querySelectorAll('.dropdown').forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-                const items = dropdown.querySelectorAll('.item');
+            // One global script for all tabs
+            document.querySelectorAll('[data-tabs]').forEach(tabGroup => {
+                const buttons = tabGroup.querySelectorAll('.tab-buttons button');
+                const contents = tabGroup.querySelectorAll('.tab-content');
 
-                // Toggle dropdown open/close
-                toggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    document.querySelectorAll('.dropdown').forEach(d => {
-                        if (d !== dropdown) d.classList.remove('open');
-                    });
-                    dropdown.classList.toggle('open');
-                });
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active from all buttons in this group
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
 
-                // Select an item
-                items.forEach(item => {
-                    item.addEventListener('click', () => {
-                        const img = item.querySelector('img').src;
-                        const text = item.querySelector('div').textContent;
+                        // Hide all contents in this group
+                        contents.forEach(content => content.classList.remove('active'));
 
-                        toggle.querySelector('img').src = img;
-                        toggle.querySelector('span').textContent = text;
-
-                        dropdown.classList.remove('open');
+                        // Show the target
+                        const targetId = button.getAttribute('data-tab');
+                        const targetContent = tabGroup.querySelector('#' + targetId);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
                     });
                 });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', () => {
-                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
             });
         </script>
 

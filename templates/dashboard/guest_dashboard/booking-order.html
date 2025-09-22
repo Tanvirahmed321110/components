@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
         <link rel="stylesheet" href="/static/css/dasboard/guest_dashboard/guest.css">
+        <link rel="stylesheet" href="/static/css/dasboard/guest_dashboard/booking-order.css">
     </head>
 
     <body>
@@ -2420,7 +2421,7 @@
                                             </button>
                                         </div>
 
-                                        <!--=====  when Already Login {when active class add then show ".login-have-no .active"} =====-->
+                                        <!--=====  when Already Login {when active class add then show "login-have-no active"} =====-->
                                         <div class="login-have-no active">
                                             <button
                                                 class="my-fs-sm login-user my-d-flex my-align-center my-fw-bold my-gap-4 my-pr-5 click-dropdown-btn">
@@ -2848,7 +2849,7 @@
                 <div class="general-nav" role="navigation" aria-label="General Navigation">
                     <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
                     <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
-                        <a class="item my-d-flex my-align-center active my-gap-4" href="#overview" aria-current="page"
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page"
                             aria-label="Dashboard Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2861,7 +2862,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item " href="#profile" aria-label="Booking/Order Page">
+                        <a class="item active" href="#profile" aria-label="Booking/Order Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -3025,7 +3026,7 @@
         =======||   Main Content  Start Here   ||======
         ===============================================
         -->
-        <main class="my-has-scrollbar " id="main-content">
+        <main class="my-has-scrollbar booking " id="main-content">
 
             <!--
             ============================================================
@@ -3139,1026 +3140,328 @@
             ======================================================
             -->
             <section>
-                <div
-                    class="points my-bg-white my-p-10 my-mt-16 my-mx-16 my-mx-lg-10 my-mt-lg-10  my-radius-md my-d-flex my-gap-8 my-shadow-1">
-                    <!--=============||  Total Point  ||=============-->
-                    <div class="total-points" role="region" aria-labelledby="total-points-title">
-                        <svg class="progress-ring" width="180" height="180" viewBox="0 0 160 160">
-                            <!-- Background circles -->
-                            <circle class="bg" cx="80" cy="80" r="70" aria-hidden="true"></circle>
-                            <circle class="bg" cx="80" cy="80" r="55" aria-hidden="true"></circle>
-                            <circle class="bg" cx="80" cy="80" r="40" aria-hidden="true"></circle>
-
-                            <!-- Progress circles -->
-                            <circle class="progress red" cx="80" cy="80" r="70" role="presentation"></circle>
-                            <circle class="progress green" cx="80" cy="80" r="55" role="presentation"></circle>
-                            <circle class="progress purple" cx="80" cy="80" r="40" role="presentation"></circle>
-                        </svg>
-
-                        <div class="points-text">
-                            <div class="my-fs-xs my-mt-3 my-fw-bold">Total Point</div>
-                            <h4 aria-live="polite">3106</h4>
-                        </div>
+                <div class="my-m-12 my-m-lg-8 tabs">
+                    <!--======================||  Tab Buttons  ||=====================-->
+                    <div class="my-bg-white  my-p-6 my-radius-md">
+                        <ul class="tab1-btns my-bg-white">
+                            <li class="tab-btn active" data-tab="booking">
+                                Booking
+                            </li>
+                            <li class="tab-btn" data-tab="history">
+                                History
+                            </li>
+                            <li class="tab-btn" data-tab="reviews">
+                                Reviews
+                            </li>
+                        </ul>
                     </div>
 
 
-
-                    <!--=============|| Point  Items ||============-->
-                    <div class="my-grid-6 items flex-1 my-grid-lg-3 my-gap-5" role="list"
-                        aria-labelledby="point-items-title">
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img src="https://i.ibb.co.com/nVXsXj6/Group.png" class="my-w-24" alt="Group"
-                                loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Flight Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746.22 points">
-                                    746.22</p>
-                            </div>
-                        </div>
-
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img class="my-w-24" src="https://i.ibb.co.com/s9fSBKbG/Group.png" alt="Group"
-                                loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Activities Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="150 points">150</p>
-                            </div>
-                        </div>
-
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img class="my-w-24" src="https://i.ibb.co.com/F4XqJzGL/res.png" alt="Group" loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Food Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746 points">746.22
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img class="my-w-24" src="https://i.ibb.co.com/s9fSBKbG/Group.png" alt="Group"
-                                loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Tour Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="746 points">746.22
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img class="my-w-24" src="https://i.ibb.co.com/nVXsXj6/Group.png" class="my-w-24"
-                                alt="Group" loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Hotels Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="200 points">200</p>
-                            </div>
-                        </div>
-
-                        <!-- single item -->
-                        <div class="item my-w-100-p my-max-w-100 my-flex-column my-align-center my-justify-center my-text-center my-border2 my-radius-md  my-py-7"
-                            role="listitem">
-                            <img class="my-w-24" src="https://i.ibb.co.com/rJ4Prxd/Group.png" alt="Group"
-                                loading="lazy">
-                            <div class="my-mt-10">
-                                <h4 class="my-text-sm my-text-tertiary">Gear Point</h4>
-                                <p class="my-mt-4 my-fs-md my-fw-bolder my-text-primary" aria-label="00 points">00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-            <!--
-            ======================================================
-            =======||   Total Trips Section  Start Here   ||======
-            ======================================================
-            -->
-            <section aria-labelledby="total-trips-title">
-                <div
-                    class="total-trips  my-bg-white my-p-10 my-mx-lg-10 my-mt-lg-10 my-mt-16 my-mx-16 my-radius-md my-shadow-1">
-                    <div class="my-pb-5 my-border-bottom">
-                        <h2 class="cart-title" id="total-trips-title">Total Trips</h2>
-                    </div>
-
-                    <div class="my-mt-10">
-                        <div class="chart my-grid-350-remain my-gap-5">
-
-                            <!-- Left -->
-                            <div class="circle-chart my-p-relative"
-                                aria-label="Donut chart showing trip distribution: Done, Booked, and Canceled"
-                                role="img">
-                                <canvas id="donutChart" style="max-width: 340px; max-height: 340px;"></canvas>
-                                <div class="total-trips-text my-text-center">
-                                    <h5 class="">Total Trips </h5>
-                                    <h4 class="my-fw-bolder">200</h4>
+                    <!--======================||  Filter Head  ||=====================-->
+                    <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
+                        <!--=============||  Left Area  ||=============-->
+                        <div class="my-d-flex my-gap-6 my-align-center">
+                            <!--===== For All Services =====-->
+                            <div class="click-dropdown-parent">
+                                <div
+                                    class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md">
+                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                        Services</span>
+                                    <span class="my-fs-lg my-text-quaternary"><i
+                                            class="ri-arrow-down-s-line"></i></span>
                                 </div>
-
-                                <!-- How Much Done Book cancle -->
-                                <ul class="complete my-d-flex my-align-center my-gap-6"
-                                    aria-label="Trip status breakdown">
-                                    <li>Done <span class="my-fw-bold" id="doneCount">12</span></li>
-                                    <li>Booked <span class="my-fw-bold" id="bookedCount">3</span></li>
-                                    <li>Canceled <spa class="my-fw-bold" id="canceledCount">4</spa>
-                                    </li>
+                                <!-- Dropdown Here -->
+                                <ul class="click-dropdown">
+                                    <li class="item">Flight</li>
+                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                    <li class="item">Car</li>
+                                    <li class="item">Hotel</li>
                                 </ul>
                             </div>
 
-                            <!-- Right -->
-                            <div>
-                                <canvas id="barChart" style="max-width: 100% ; max-height: 300px;"></canvas>
+                            <!--===== For All Items =====-->
+                            <div class="click-dropdown-parent">
+                                <div
+                                    class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md">
+                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                        Items</span>
+                                    <span class="my-fs-lg my-text-quaternary"><i
+                                            class="ri-arrow-down-s-line"></i></span>
+                                </div>
+                                <!-- Dropdown Here -->
+                                <ul class="click-dropdown">
+                                    <li class="item">Items one</li>
+                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                    <li class="item">Items two</li>
+                                    <li class="item">Items 3</li>
+                                    <li class="item">Items 4</li>
+                                    <li class="item">Items 5</li>
+                                    <li class="item">Lorem ipsum</li>
+                                </ul>
                             </div>
+
+                            <!--===== For All Status =====-->
+                            <div class="click-dropdown-parent">
+                                <div
+                                    class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md">
+                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                        Status</span>
+                                    <span class="my-fs-lg my-text-quaternary"><i
+                                            class="ri-arrow-down-s-line"></i></span>
+                                </div>
+                                <!-- Dropdown Here -->
+                                <ul class="click-dropdown">
+                                    <li class="item">Paid</li>
+                                    <li class="item active">Pending</li>
+                                    <li class="item">Cancel</li>
+                                    <li class="item">Done</li>
+                                </ul>
+                            </div>
+
+                            <!--===== For Reset Filter =====-->
+                            <button class=" my-p-5 my-px-7 my-border-secondary my-flex-between my-gap-3 my-radius-md">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="my-fw-bold">Rest Filter</span>
+
+                            </button>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-
-            <!--
-            ============================================================
-            =======||   Booking Upcoming Section  Start Here   ||======
-            ============================================================
-            -->
-            <section aria-labelledby="booking-upcoming-title">
-                <div class="booking-upcoming my-grid-3 my-mx-lg-10 my-mt-lg-10  my-mt-16 my-mx-16 my-radius-md">
-
-                    <!--==================|| Booking Status  ||===================-->
-                    <div class="booking-status my-p-relative my-bg-white my-mx-8 my-shadow-1  my-radius-md">
-                        <div class="my-p-6 my-pb-8">
-                            <div class="my-mt-4">
-                                <h5 class="my-fs-lg my-text-primary my-fw-bold" id="booking-status-title">Booking
-                                    Status/Order</h5>
-                            </div>
-
-                            <div class="items my-flex-column my-gap-8 my-mt-6" role="list"
-                                aria-labelledby="booking-status-title">
-
-                                <!--===========||  single item   ||===========-->
-                                <a href="#"
-                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
-                                    role="listitem">
-                                    <!--===== Left =====-->
-                                    <div>
-                                        <img class=" my-radius-md my-h-40 my-w-46"
-                                            src="/static/images/blogs/blog (2).jpg" alt="blog img" loading="lazy">
-                                    </div>
-
-                                    <!--===== right =====-->
-                                    <div>
-                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
-                                        <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
-                                            <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
-                                            <!-- payment status -->
-                                            <div
-                                                class="my-p-1 my-radius-sm paymant-status my-d-flex my-align-center my-gap-3 my-px-4 my-text-secondary my-border-primary my-fs-xs">
-                                                <div class="round"></div>
-                                                <span class="">Paid</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- price -->
-                                        <div class="my-d-flex my-align-center my-gap-5">
-                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.58268 12.7223C7.58268 13.7962 8.45324 14.6667 9.52713 14.6667H11.3327C12.4833 14.6667 13.416 13.734 13.416 12.5834C13.416 11.4328 12.4833 10.5001 11.3327 10.5001H9.66602C8.51542 10.5001 7.58268 9.56734 7.58268 8.41675C7.58268 7.26616 8.51542 6.33341 9.66602 6.33341H11.4716C12.5455 6.33341 13.416 7.20397 13.416 8.27786M10.4993 5.08341V6.33341M10.4993 14.6667V15.9167M18.8327 10.5001C18.8327 15.1025 15.1017 18.8334 10.4993 18.8334C5.89698 18.8334 2.16602 15.1025 2.16602 10.5001C2.16602 5.89771 5.89698 2.16675 10.4993 2.16675C15.1017 2.16675 18.8327 5.89771 18.8327 10.5001Z"
-                                                    stroke="#A4A7AE" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-
-                                            <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!--===========||  single item   ||===========-->
-                                <a href="#"
-                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
-                                    role="listitem">
-                                    <!--===== Left =====-->
-                                    <div>
-                                        <img class=" my-radius-md my-h-40 my-w-46" src="/static/images/cart-img (2).jpg"
-                                            alt="blog img" loading="lazy">
-                                    </div>
-
-                                    <!--===== right =====-->
-                                    <div>
-                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
-                                        <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
-                                            <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
-                                            <!-- payment status -->
-                                            <div
-                                                class="my-p-1 my-radius-sm paymant-status my-d-flex my-align-center my-gap-3 my-px-4 my-text-secondary my-border-primary my-fs-xs">
-                                                <div class="round"></div>
-                                                <span class="">Paid</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- price -->
-                                        <div class="my-d-flex my-align-center my-gap-5">
-                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.58268 12.7223C7.58268 13.7962 8.45324 14.6667 9.52713 14.6667H11.3327C12.4833 14.6667 13.416 13.734 13.416 12.5834C13.416 11.4328 12.4833 10.5001 11.3327 10.5001H9.66602C8.51542 10.5001 7.58268 9.56734 7.58268 8.41675C7.58268 7.26616 8.51542 6.33341 9.66602 6.33341H11.4716C12.5455 6.33341 13.416 7.20397 13.416 8.27786M10.4993 5.08341V6.33341M10.4993 14.6667V15.9167M18.8327 10.5001C18.8327 15.1025 15.1017 18.8334 10.4993 18.8334C5.89698 18.8334 2.16602 15.1025 2.16602 10.5001C2.16602 5.89771 5.89698 2.16675 10.4993 2.16675C15.1017 2.16675 18.8327 5.89771 18.8327 10.5001Z"
-                                                    stroke="#A4A7AE" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-
-                                            <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!--===========||  single item   ||===========-->
-                                <a href="#"
-                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
-                                    role="listitem">
-                                    <!--===== Left =====-->
-                                    <div>
-                                        <img class=" my-radius-md my-h-40 my-w-46"
-                                            src="/static/images/blogs/blog (1).jpg" alt="blog img" loading="lazy">
-                                    </div>
-
-                                    <!--===== right =====-->
-                                    <div>
-                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
-                                        <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
-                                            <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
-                                            <!-- payment status -->
-                                            <div
-                                                class="my-p-1 my-radius-sm paymant-status my-d-flex my-align-center my-gap-3 my-px-4 my-text-secondary my-border-primary my-fs-xs">
-                                                <div class="round"></div>
-                                                <span class="">Refund</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- price -->
-                                        <div class="my-d-flex my-align-center my-gap-5">
-                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.58268 12.7223C7.58268 13.7962 8.45324 14.6667 9.52713 14.6667H11.3327C12.4833 14.6667 13.416 13.734 13.416 12.5834C13.416 11.4328 12.4833 10.5001 11.3327 10.5001H9.66602C8.51542 10.5001 7.58268 9.56734 7.58268 8.41675C7.58268 7.26616 8.51542 6.33341 9.66602 6.33341H11.4716C12.5455 6.33341 13.416 7.20397 13.416 8.27786M10.4993 5.08341V6.33341M10.4993 14.6667V15.9167M18.8327 10.5001C18.8327 15.1025 15.1017 18.8334 10.4993 18.8334C5.89698 18.8334 2.16602 15.1025 2.16602 10.5001C2.16602 5.89771 5.89698 2.16675 10.4993 2.16675C15.1017 2.16675 18.8327 5.89771 18.8327 10.5001Z"
-                                                    stroke="#A4A7AE" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-
-                                            <div class="my-fs-md my-fw-medium my-text-tertiary">963</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-
-                                <!--===========||  single item   ||===========-->
-                                <a href="#"
-                                    class="item my-d-flex my-align-center my-gap-10  my-gap-lg-6  my-radius-xl my-border-primary my-px-8 my-px-lg-6 my-p-5"
-                                    role="listitem">
-                                    <!--===== Left =====-->
-                                    <div>
-                                        <img class=" my-radius-md my-h-40 my-w-46"
-                                            src="/static/images/blogs/blog (1).png" alt="blog img" loading="lazy">
-                                    </div>
-
-                                    <!--===== right =====-->
-                                    <div>
-                                        <h4 class="my-text-primary my-fs-md">Raddison Blue</h4>
-                                        <div class="my-my-2 my-d-flex my-gap-10 my-align-center">
-                                            <div class="my-text-orange my-fw-bold my-fs-sm">Flight</div>
-                                            <!-- payment status -->
-                                            <div
-                                                class="my-p-1 my-radius-sm paymant-status my-d-flex my-align-center my-gap-3 my-px-4 my-text-secondary my-border-primary my-fs-xs">
-                                                <div class="round"></div>
-                                                <span class="">Refund</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- price -->
-                                        <div class="my-d-flex my-align-center my-gap-5">
-                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.58268 12.7223C7.58268 13.7962 8.45324 14.6667 9.52713 14.6667H11.3327C12.4833 14.6667 13.416 13.734 13.416 12.5834C13.416 11.4328 12.4833 10.5001 11.3327 10.5001H9.66602C8.51542 10.5001 7.58268 9.56734 7.58268 8.41675C7.58268 7.26616 8.51542 6.33341 9.66602 6.33341H11.4716C12.5455 6.33341 13.416 7.20397 13.416 8.27786M10.4993 5.08341V6.33341M10.4993 14.6667V15.9167M18.8327 10.5001C18.8327 15.1025 15.1017 18.8334 10.4993 18.8334C5.89698 18.8334 2.16602 15.1025 2.16602 10.5001C2.16602 5.89771 5.89698 2.16675 10.4993 2.16675C15.1017 2.16675 18.8327 5.89771 18.8327 10.5001Z"
-                                                    stroke="#A4A7AE" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-
-                                            <div class="my-fs-md my-fw-medium my-text-tertiary">1260</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                        <!--=============||  Input Area  ||=============-->
+                        <div class="search-input my-input-control ">
+                            <input type="text" placeholder="Search Booking" aria-label="Search">
+                            <span>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
+                                        stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
                         </div>
                     </div>
 
+                    <!--======================||  Booking History And Reviews Contents  ||=====================-->
+                    <div class="tab-contents">
 
-                    <!--======================|| Upcoming Trips  ||===========================-->
-                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md upcoming-trips" role="region"
-                        aria-labelledby="upcoming-trips-heading">
-
-                        <!--============||  Head Here ||===========-->
-                        <div class="my-mt-0 my-flex-between my-align-center">
-                            <h5 class="my-fs-lg my-text-primary my-fw-bold" id="upcoming-trips-heading">Upcoming Trips
-                            </h5>
-                            <div>
-                                <button class="my-btn my-primary-btn my-btn-sm"><svg width="25" height="24"
-                                        viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                        aria-label="Add new trip">
-                                        <path
-                                            d="M12.5 8V16M8.5 12H16.5M22.5 12C22.5 17.5228 18.0228 22 12.5 22C6.97715 22 2.5 17.5228 2.5 12C2.5 6.47715 6.97715 2 12.5 2C18.0228 2 22.5 6.47715 22.5 12Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!--============||  Items  Here  ||===========-->
-                        <div class="items my-mt-10 my-flex-column my-gap-10" role="list">
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).jpg"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div
-                                        class="my-bg- my-mt-5 my-flex-between flex-wrap my-gap-10 my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).png"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div
-                                        class="my-bg- my-mt-5 my-flex-between my-gap-10 flex-wrap my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/cart-img (1).jpg"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div
-                                        class="my-bg- my-mt-5 my-flex-between my-gap-10 flex-wrap my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-md my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!--====== Load More Button ======-->
-                        <div class="my-text-center my-mt-5">
-                            <a href="#" class="my-fw-bold text-hover-secondary"
-                                aria-label="Load more upcoming trips">Load More</a>
-                        </div>
-
-                    </div>
-
-
-                    <!--======================|| Calendar Start  ||===========================-->
-                    <div class="my-bg-white my-p-6 my-px-8 my-shadow-1 my-radius-md" role="region"
-                        aria-label="Event Calendar">
-                        <div class="calendar my-mt-4">
-                            <!-- Header -->
-                            <div class="my-flex-between head">
-                                <button class="btn" aria-label="Previous month"><i
-                                        class="ri-arrow-left-s-line"></i></button>
-                                <div class="month-name">September</div>
-                                <button class="btn" aria-label="Next month"><i
-                                        class="ri-arrow-right-s-line"></i></button>
-                            </div>
-
-                            <!-- Tools -->
-                            <div class="my-flex-between  my-gap-6 my-mt-6">
-                                <div class="my-input-control">
-                                    <input class="select-date" aria-label="Selected date" type="text"
-                                        placeholder="Select date" readonly>
-                                </div>
-                                <button class="today-btn" aria-label="Go to today">Today</button>
-                            </div>
-
-                            <!-- Body -->
-                            <div class="calendar-body my-mt-6" aria-labelledby="calendar-month">
-                                <div class="day-names" role="row">
-                                    <div role="columnheader">Sun</div>
-                                    <div role="columnheader">Mon</div>
-                                    <div role="columnheader">Tue</div>
-                                    <div role="columnheader">Wed</div>
-                                    <div role="columnheader">Thu</div>
-                                    <div role="columnheader">Fri</div>
-                                    <div role="columnheader">Sat</div>
-                                </div>
-                                <div class="dates-grid">
-                                    <!-- Previous month (August 2025) -->
-                                    <div class="date prev-month" role="gridcell" aria-label="August 25, 2025">25</div>
-                                    <div class="date prev-month">26</div>
-                                    <div class="date prev-month">27</div>
-                                    <div class="date prev-month">28</div>
-                                    <div class="date prev-month">29</div>
-                                    <div class="date prev-month event my-tooltip">30 <span class="show-text">Cox's Bazar
-                                            Event</span> </div>
-                                    <div class="date prev-month event my-tooltip">31 <span class="show-text">Cox's Bazar
-                                            Event</span></div>
-
-                                    <!-- Current month (September 2025) -->
-                                    <div class="date">1</div>
-                                    <div class="date">2</div>
-                                    <div class="date">3</div>
-                                    <div class="date">4</div>
-                                    <div class="date">5</div>
-                                    <div class="date">6</div>
-                                    <div class="date">7</div>
-                                    <div class="date">8</div>
-                                    <div class="date">9</div>
-                                    <div class="date">10</div>
-                                    <div class="date">11</div>
-                                    <div class="date">12</div>
-                                    <div class="date today">13</div>
-                                    <div class="date">14</div>
-                                    <div class="date">15</div>
-                                    <div class="date">16</div>
-                                    <div class="date">17</div>
-                                    <div class="date">18</div>
-                                    <div class="date">19</div>
-                                    <div class="date">20</div>
-                                    <div class="date">21</div>
-                                    <div class="date">22</div>
-                                    <div class="date event my-tooltip">23 <span class="show-text">Panchagorh Tour</span>
-                                    </div>
-                                    <div class="date">24</div>
-                                    <div class="date">25</div>
-                                    <div class="date">26</div>
-                                    <div class="date">27</div>
-                                    <div class="date">28</div>
-                                    <div class="date">29</div>
-                                    <div class="date">30</div>
-
-                                    <!-- Next month (October 2025) -->
-                                    <div class="date next-month">1</div>
-                                    <div class="date next-month">2</div>
-                                    <div class="date next-month">3</div>
-                                    <div class="date next-month">4</div>
-                                    <div class="date next-month">5</div>
-                                </div>
-
-                            </div>
-
-                            <!-- Footer -->
-                            <div class="calendar-footer my-mt-12 my-grid-2">
-
-                                <button class="my-btn my-outline-btn my-w-100-p"
-                                    aria-label="Cancel selection">Cancel</button>
-
-
-                                <button class="my-btn my-primary-btn my-w-100-p"
-                                    aria-label="Apply selection">Apply</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!--
-            ===============================================================
-            =======||   Invite And Save List Section  Start Here   ||======
-            ===============================================================
-            -->
-            <section aria-label="Invite your friend and earn money">
-                <div class="invite-wishlist my-grid-remain-480 my-gap-12 my-mx-lg-10 my-mt-lg-10  my-mt-16 my-mx-16 ">
-                    <!--======================|| Invite Your Firend  ||===========================-->
-                    <div>
-                        <div class="my-shadow-1 my-bg-white my-py-8 my-p-10 my-radius-md">
-                            <div class="my-mt-2">
-                                <h5 class="my-fs-lg my-text-primary my-fw-bold">Invite your friend and earn money</h5>
-
-
-                                <!--====== Items ======-->
-                                <div class="items my-mt-10 my-grid-3  my-gap-16 my-gap-lg-6">
-
-                                    <!-- single item -->
-                                    <div class="item my-border-secondary my-radius-xl my-p-12" role="region"
-                                        aria-label="Approved Orders">
-                                        <h5 class="my-text-primary my-fs-md">Approves Order</h5>
-                                        <p class="my-mt-2">12</p>
-
-                                        <div class="my-mt-10">
-                                            <a class="my-btn my-btn-sm my-primary-btn" href="#">View Details</a>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="item my-border-secondary my-radius-xl my-p-12" role="region"
-                                        aria-label="Approved Orders">
-                                        <h5 class="my-text-primary my-fs-md">Total Earned</h5>
-                                        <p class="my-mt-2"><span>$</span>12</p>
-
-                                        <div class="my-mt-10">
-                                            <a class="my-btn my-btn-sm my-primary-btn" href="#">View Details</a>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="item  my-radius-xl my-border-secondary  my-p-12" role="region"
-                                        aria-label="Approved Orders">
-                                        <h5 class="my-text-primary my-fs-md">Available Balance</h5>
-                                        <p class="my-mt-2">12</p>
-
-                                        <div class="my-mt-10">
-                                            <a class="my-btn my-btn-sm  my-primary-btn" href="#">View Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--====== Share Input Button ======-->
-                                <div class="my-mt-10" aria-label="Copy your referral URL">
-                                    <h6 class="my-text-primary">Copy Url</h6>
-                                    <div class="my-border-secondary my-radius-md my-d-flex my-mt-2">
-                                        <div class="my-text-tertiary my-fw-medium my-p-6 my-fs-sm my-border-right">
-                                            tourgull.com/profile/</div>
-                                        <div class="my-p-6 my-flex-between flex-1">
-                                            <div class="account-path my-text-primary my-fs-sm">Tanvir12</div>
-
-                                            <!-- copy button -->
-                                            <button class="my-px-2 copy-btn text-hover-secondary my-tooltip"
-                                                aria-label="Copy referral URL">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_1305_26231)">
-                                                        <path
-                                                            d="M5.33398 5.33325V3.46659C5.33398 2.71985 5.33398 2.34648 5.47931 2.06126C5.60714 1.81038 5.81111 1.60641 6.062 1.47858C6.34721 1.33325 6.72058 1.33325 7.46732 1.33325H12.534C13.2807 1.33325 13.6541 1.33325 13.9393 1.47858C14.1902 1.60641 14.3942 1.81038 14.522 2.06126C14.6673 2.34648 14.6673 2.71985 14.6673 3.46659V8.53325C14.6673 9.27999 14.6673 9.65336 14.522 9.93857C14.3942 10.1895 14.1902 10.3934 13.9393 10.5213C13.6541 10.6666 13.2807 10.6666 12.534 10.6666H10.6673M3.46732 14.6666H8.53398C9.28072 14.6666 9.65409 14.6666 9.93931 14.5213C10.1902 14.3934 10.3942 14.1895 10.522 13.9386C10.6673 13.6534 10.6673 13.28 10.6673 12.5333V7.46659C10.6673 6.71985 10.6673 6.34648 10.522 6.06126C10.3942 5.81038 10.1902 5.60641 9.93931 5.47858C9.65409 5.33325 9.28072 5.33325 8.53398 5.33325H3.46732C2.72058 5.33325 2.34721 5.33325 2.062 5.47858C1.81111 5.60641 1.60714 5.81038 1.47931 6.06126C1.33398 6.34648 1.33398 6.71985 1.33398 7.46659V12.5333C1.33398 13.28 1.33398 13.6534 1.47931 13.9386C1.60714 14.1895 1.81111 14.3934 2.062 14.5213C2.34721 14.6666 2.72058 14.6666 3.46732 14.6666Z"
-                                                            stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1305_26231">
-                                                            <rect width="16" height="16" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-
-                                                <!-- show hover text -->
-                                                <div class="show-text">Copy Now</div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <!--=====================||  Currency Converter  ||====================-->
-                        <div class="my-mt-12 my-shadow-1 my-p-10 my-pt-8 my-pb-12 my-radius-md my-bg-white"
-                            aria-label="Currency Converter">
-                            <h5 class="my-fs-lg my-text-primary my-fw-bold">Currency Converter</h5>
-
-                            <div class="my-mt-10 my-flex-between my-align-end my-gap-4">
-                                <!--=======  Left  ======-->
-                                <div class="common-dropdown-1">
-                                    <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
-                                    <div class="my-d-flex area my-mt-1">
-                                        <div class="my-input-control">
-                                            <input type="number" placeholder="Enter amount" id="amount"
-                                                aria-label="Amount to convert" />
-                                        </div>
-
-                                        <!-- Dropdown -->
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle" type="button" aria-haspopup="listbox"
-                                                aria-expanded="false" aria-label="Select source currency">
-                                                <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img"
-                                                    loading="lazy">
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <span>IND</span>
-                                                    <i class="ri-arrow-down-s-line"></i>
-                                                </div>
-                                            </button>
-
-                                            <!-- Dropdwon Here -->
-                                            <ul class="dropdown-items" role="listbox"
-                                                aria-label="Source currency options">
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png"
-                                                        alt="Country image" loading="lazy">
-                                                    <div>BDT</div>
-                                                </li>
-                                                <li class="item active" role="option" aria-selected="true">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="img"
-                                                        loading="lazy">
-                                                    <div>USD</div>
-                                                </li>
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="img"
-                                                        loading="lazy">
-                                                    <div>EUR</div>
-                                                </li>
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img"
-                                                        loading="lazy">
-                                                    <div>INR</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!--===  Error {add class .my-d-block then show it and my-d-none hide it}  ==-->
-                                    <small class="my-d-none my-text-red" ole="alert">Error Message</small>
-                                </div>
-
-
-                                <!--====== compare button ======-->
-                                <div class="my-d-flex my-align-end my-justify-end">
-                                    <!-- button -->
-                                    <button class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm"
-                                        aria-label="Convert currency">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <!--=============|| For Review Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="reviews">
+                            <div class="table">
+                                <!-- Table Header Here -->
+                                <ul class="table-head">
+                                    <li class="my-d-flex my-align-center my-gap-2">Booking ID
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 17H20M20 17L16 13M20 17L16 21M20 7H4M4 7L8 3M4 7L8 11"
-                                                stroke="white" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                    </button>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Booking Date
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Travel Date
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Status
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Payment Status
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Action
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                </ul>
+
+                                <!--===== Table Body Here =====-->
+                                <div class="table-body">
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1001</li>
+                                        <li>Flight</li>
+                                        <li>Raddison and other</li>
+                                        <li>Jan 15, 2025</li>
+                                        <li>Jan 19, 2025</li>
+                                        <li>
+                                            <div class="status danger">
+                                                <div class="round"></div> Cancelled
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status cancel">
+                                                <div class="round"></div> Cancelled
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1001</li>
+                                        <li>Flight</li>
+                                        <li>Raddison blue </li>
+                                        <li>April 12, 2025</li>
+                                        <li>April 19, 2025</li>
+                                        <li>
+                                            <div class="status success">
+                                                <div class="round"></div> Done
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status paid">
+                                                <div class="round"></div>Paid
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1001</li>
+                                        <li>Flight</li>
+                                        <li>Raddison blue </li>
+                                        <li>April 12, 2025</li>
+                                        <li>April 19, 2025</li>
+                                        <li>
+                                            <div class="status success">
+                                                <div class="round"></div> Done
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status paid">
+                                                <div class="round"></div>Paid
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1001</li>
+                                        <li>Flight</li>
+                                        <li>Raddison blue </li>
+                                        <li>April 12, 2025</li>
+                                        <li>April 19, 2025</li>
+                                        <li>
+                                            <div class="status success">
+                                                <div class="round"></div> Done
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status paid">
+                                                <div class="round"></div>Paid
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1001</li>
+                                        <li>Flight</li>
+                                        <li>Raddison blue and </li>
+                                        <li>May 16, 2025</li>
+                                        <li>May 19, 2025</li>
+                                        <li>
+                                            <div class="status warring">
+                                                <div class="round"></div> Pending
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status warring">
+                                                <div class="round"></div> Pay on Property
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id">#BK1002</li>
+                                        <li>Flight</li>
+                                        <li>Raddison blue and </li>
+                                        <li>Feb 15, 2025</li>
+                                        <li>Feb 19, 2025</li>
+                                        <li>
+                                            <div class="status warring">
+                                                <div class="round"></div> Pending
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p-status paid">
+                                                <div class="round"></div> Paid
+                                            </div>
+                                        </li>
+                                        <li><button class="view-btn">View</button></li>
+                                    </ul>
+
                                 </div>
-
-
-                                <!--=======  Right  ======-->
-                                <div class="common-dropdown-1">
-                                    <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
-                                    <div class="my-d-flex area my-mt-1">
-                                        <div class="my-input-control">
-                                            <input type="number" id="amount" aria-label="Converted amount" />
-                                        </div>
-
-                                        <!-- Dropdown -->
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle" aria-haspopup="listbox"
-                                                aria-expanded="false" aria-label="Select target currency">
-                                                <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <span>BDT</span>
-                                                    <i class="ri-arrow-down-s-line"></i>
-                                                </div>
-                                            </button>
-
-                                            <!-- Dropdwon Here -->
-                                            <ul class="dropdown-items" role="listbox"
-                                                aria-label="Target currency options">
-                                                <li class="item active" role="option" aria-selected="true">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="">
-                                                    <div>BDT</div>
-                                                </li>
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="">
-                                                    <div>USD</div>
-                                                </li>
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/eu.png" alt="">
-                                                    <div>EUR</div>
-                                                </li>
-                                                <li class="item" role="option">
-                                                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="">
-                                                    <div>INR</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!--===  Error {add class .my-d-block then show it and my-d-none hide it}  ==-->
-                                    <small class="my-d-none my-text-red ">Error Message</small>
-                                </div>
-
                             </div>
+
+                            <!--======  For Review Content  ======-->
+                            <div class="pagination my-p-8 my-mt-4 my-flex-between">
+                                <button class="prev disabled" disabled><i class="ri-arrow-left-line"></i>
+                                    Previous</button>
+                                <div class="pages my-d-flex my-gap-2">
+                                    <div class="page active">1</div>
+                                    <div class="page">2</div>
+                                    <div class="page">3</div>
+                                    <div class="jumper">...</div>
+                                    <div class="page">6</div>
+                                    <div class="page">7</div>
+                                    <div class="page">8</div>
+                                </div>
+                                <button class="next">Next <i class="ri-arrow-right-line"></i></button>
+                            </div>
+                        </div>
+
+
+
+                        <div class="tab-content" id="history">
+                            History
+                        </div>
+                        <div class="tab-content" id="booking">
+                            Booking
                         </div>
                     </div>
 
-                    <!--======================|| Save List Here  ||===========================-->
-                    <div class="my-shadow-1 my-bg-white my-p-8 my-radius-md save-list" aria-label="Saved blog list">
-                        <!--=============||  Head Here ||============-->
-                        <div class="my-mt-0 my-flex-between my-align-center">
-                            <h5 class="my-fs-lg my-text-primary my-fw-bold">Save list</h5>
-                            <div>
-                                <button class="my-btn my-primary-btn my-btn-sm" aria-label="Add new saved item">
-                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" aria-label="Add new trip">
-                                        <path
-                                            d="M12.5 8V16M8.5 12H16.5M22.5 12C22.5 17.5228 18.0228 22 12.5 22C6.97715 22 2.5 17.5228 2.5 12C2.5 6.47715 6.97715 2 12.5 2C18.0228 2 22.5 6.47715 22.5 12Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-
-                        <!--==============||  Items  Here  ||==============-->
-                        <div class="items my-mt-10 my-flex-column my-gap-8" role="list">
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).jpg"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class=" my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/blogs/blog (1).png"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class="my-bg- my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!--======= single item =======-->
-                            <a href="#"
-                                class="item my-radius-xl my-p-8 my-gap-10 my-d-flex my-align-center my-border-secondary"
-                                role="listitem">
-                                <!--===== Left =====-->
-                                <div class="flex-shring-no">
-                                    <img class=" my-radius-md my-h-45 my-w-60" src="/static/images/cart-img (1).jpg"
-                                        alt="blog img" loading="lazy">
-                                </div>
-
-                                <!--===== right =====-->
-                                <div class="flex-1">
-                                    <h4 class="my-text-orange my-fs-sm  my-fw-bold">Romantic Germany</h4>
-                                    <p class="my-fs-md  my-text-primary my-fw-bold my-mt-2">Designer NY style loft</p>
-                                    <div class=" my-mt-5 my-flex-between my-gap-3 my-align-center my-w-100-p">
-
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <!-- profile group -->
-                                            <div class="profile-group-sm my-ml-4">
-                                                <img src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (3).png" alt="Profile 2"
-                                                    class="profile" loading="lazy">
-                                                <img src="/static/images/profile4 (1).png" alt="Profile 3"
-                                                    class="profile" loading="lazy"><img
-                                                    src="/static/images/profile4 (2).png" alt="Profile 1"
-                                                    class="profile" loading="lazy">
-                                            </div>
-
-                                            <div class="my-text-tertiary my-fs-md my-fw-medium">
-                                                +<span>17</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Date and icon -->
-                                        <div class="my-d-flex my-align-center my-gap-4">
-                                            <div>
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18 8.33329H3M13.8333 1.66663V4.99996M7.16667 1.66663V4.99996M9.25 11.6666L10.5 10.8333V15M9.45833 15H11.5417M7 18.3333H14C15.4001 18.3333 16.1002 18.3333 16.635 18.0608C17.1054 17.8211 17.4878 17.4387 17.7275 16.9683C18 16.4335 18 15.7334 18 14.3333V7.33329C18 5.93316 18 5.2331 17.7275 4.69832C17.4878 4.22791 17.1054 3.84546 16.635 3.60578C16.1002 3.33329 15.4001 3.33329 14 3.33329H7C5.59987 3.33329 4.8998 3.33329 4.36502 3.60578C3.89462 3.84546 3.51217 4.22791 3.27248 4.69832C3 5.2331 3 5.93316 3 7.33329V14.3333C3 15.7334 3 16.4335 3.27248 16.9683C3.51217 17.4387 3.89462 17.8211 4.36502 18.0608C4.8998 18.3333 5.59987 18.3333 7 18.3333Z"
-                                                        stroke="#A4A7AE" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </div>
-
-                                            <!-- date -->
-                                            <p class="my-text-tertiary my-fs-sm my-fw-bold">5-16 Jul</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
-                        <!--====== Load More Button ======-->
-                        <div class="my-text-center my-mt-5">
-                            <a href="#" class="my-fw-bold text-hover-secondary" aria-label="Load more saved items">Load
-                                More</a>
-                        </div>
-
-                    </div>
                 </div>
             </section>
 
@@ -4166,52 +3469,7 @@
 
 
 
-        <!--
-        =========================================================
-        =======||   Video Or Image Content  Start Here   ||======
-        =========================================================
-        -->
-        <div class="my-modal" id="offer-video-modal">
-            <div class="modal-content video-modal my-px-3 my-pt-3">
 
-                <!-- Modal Head -->
-                <div class="header my-mt-2">
-                    <h3 class="my-text-primary">New Discount Available!</h3>
-                    <p class="my-mt-1 my-fs-sm my-text-quaternary">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
-                    <button class="icon-hover close-btn "><i class="ri-close-fill"></i></button>
-                </div>
-
-                <div class="my-p-8">
-                    <div class="my-video my-radius-md">
-                        <!-- Thum Image -->
-                        <div class="img-wrap">
-                            <img src="/static/images/blogs/blog (2).jpg" class="my-radius-md thum-img" alt="imgage thum"
-                                loading="lazy">
-                        </div>
-
-                        <!-- Play Button -->
-                        <div class="my-play-btn my-flex-center">
-                            <!-- play Icon -->
-                            <span></span>
-                        </div>
-
-                        <!-- YouTube Video (hidden by default) -->
-                        <div class="video-frame my-d-none">
-                            <iframe src="https://www.youtube.com/embed/4PseNalfS5E?si=ORbs4diV8mKWzzNI"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="my-mt-10 my-d-flex my-justify-end footer">
-                        <a href="#" class="my-btn my-primary-btn my-btn-sm" aria-label="Visit Now">Visit Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Modal Overlay -->
         <div class="modal-overlay" id="modal-overlay"></div>
@@ -4220,7 +3478,41 @@
 
         <script src="/static/js/global_js/global.js"></script>
         <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="/static/js/dashboard/guest_dashboard/index.js"></script>
+
+        <script>
+            const dropdownParents = document.querySelectorAll(".filter-header .click-dropdown-parent");
+
+            if (dropdownParents) {
+                dropdownParents.forEach(parent => {
+                    const btn = parent.querySelector(".click-dropdown-btn span:first-child"); // button text span
+                    const items = parent.querySelectorAll(".click-dropdown .item");
+
+                    // Only proceed if items and button exist
+                    if (items && btn) {
+                        items.forEach(item => {
+                            item.addEventListener("click", () => {
+                                // Remove active from all items
+                                items.forEach(i => i.classList.remove("active"));
+
+                                // Add active to clicked item
+                                item.classList.add("active");
+
+                                // remove active class closet dropdown
+                                const dropdown = item.closest('.click-dropdown')
+                                dropdown.classList.remove('active')
+
+                                // Update button text with max 16 chars + "…"
+                                btn.textContent = item.textContent.length > 16
+                                    ? item.textContent.slice(0, 16) + "…"
+                                    : item.textContent;
+                            });
+                        });
+                    }
+                });
+            }
+
+
+        </script>
 
     </body>
 

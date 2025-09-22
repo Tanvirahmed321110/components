@@ -428,34 +428,65 @@ function activeF(selector) {
 
 
 // For Tabs here
-function setupTabs(buttonSelector, contentSelector, tabMap) {
-    const tabButtons = document.querySelectorAll(buttonSelector);
-    const tabContents = document.querySelectorAll(contentSelector);
+// function setupTabs(buttonSelector, contentSelector, tabMap) {
+//     const tabButtons = document.querySelectorAll(buttonSelector);
+//     const tabContents = document.querySelectorAll(contentSelector);
 
-    if (tabButtons.length === 0 || tabContents.length === 0) return;
+//     if (tabButtons.length === 0 || tabContents.length === 0) return;
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+//     tabButtons.forEach(button => {
+//         button.addEventListener('click', () => {
+//             // Remove active class from all buttons
+//             tabButtons.forEach(btn => btn.classList.remove('active'));
+//             button.classList.add('active');
 
-            // Hide all tab contents
-            tabContents.forEach(content => content.classList.remove('active'));
+//             // Hide all tab contents
+//             tabContents.forEach(content => content.classList.remove('active'));
 
-            // Get target content id from map
-            const tabName = button.getAttribute('data-tab');
-            const targetContentId = tabMap[tabName];
+//             // Get target content id from map
+//             const tabName = button.getAttribute('data-tab');
+//             const targetContentId = tabMap[tabName];
 
-            const targetContent = document.getElementById(targetContentId);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
+//             const targetContent = document.getElementById(targetContentId);
+//             if (targetContent) {
+//                 targetContent.classList.add('active');
+//             }
+//         });
+//     });
+// }
+
+
+
+
+// For Tab 2
+document.querySelectorAll('.tabs').forEach(tabGroup => {
+    const buttons = tabGroup.querySelectorAll('.tab-btn');
+    const contents = tabGroup.querySelectorAll('.tab-content');
+
+    if (buttons) {
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Hide all contents
+                contents.forEach(content => content.classList.remove('active'));
+
+                // Show the target (only if it exists)
+                const targetId = button.getAttribute('data-tab');
+                if (!targetId) return; // return
+
+                const targetContent = tabGroup.querySelector('#' + targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                } else {
+                    console.warn(`⚠️ No tab content found for: #${targetId}`);
+                }
+            });
         });
-    });
-}
-
-
+    }
+});
 
 
 
