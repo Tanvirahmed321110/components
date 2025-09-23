@@ -1,0 +1,133 @@
+/*================  Filter Head  ================*/
+.filter-header .click-dropdown {
+    border: 1px solid var(--my-border-secondary);
+    padding: 4px;
+    border-radius: var(--radius-md);
+    max-width: fit-content;
+    width: fit-content;
+    animation: slidseUp .1s ease-out;
+}
+
+.filter-header .click-dropdown .item {
+    font-size: var(--fs-xs);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 2px;
+    text-wrap: nowrap;
+    color: var(--my-text-quaternary);
+}
+
+.filter-header .click-dropdown .item.active {
+    color: var(--my-text-secondary);
+}
+
+
+.filter-header .click-dropdown-btn {
+    user-select: none;
+}
+
+.filter-header .click-dropdown.active {
+    top: 42px;
+    left: 0;
+}
+
+.filter-header .search-input {
+    max-width: 320px;
+}
+
+
+
+/*===================  Booking Page  =================*/
+.common.tab-contents {
+    margin-top: 0px;
+}
+
+
+.booking .feedback-btn {
+    color: var(--my-text-secondary);
+    font-size: 13px;
+
+}
+
+
+
+/*===================  Financial Page  =================*/
+.select-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrap .select {
+    padding-left: 26px;
+    color: var(--my-text-secondary);
+    font-weight: var(--fw-600);
+}
+
+.select-wrap .select option {
+    color: var(--my-text-secondary);
+    background-color: var(--my-white-off);
+    margin: 4px 0;
+    padding: 0 12px;
+
+}
+
+.select-wrap::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--my-success);
+    /* এখানে color change করতে পারবে */
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    /* select-এর right side */
+    transform: translateY(-50%);
+    border-radius: 50%;
+    /* ছোট circle চাইলে */
+    pointer-events: none;
+}
+
+
+/*=======  Financial Page Filter Button =======*/
+.financial .filters .filter-btn {
+    border: 1px solid var(--my-border-secondary);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    color: var(--my-text-quaternary);
+}
+
+.financial .filters .filter-btn.active,
+.financial .filters .filter-btn:hover {
+    color: var(--my-primary-color);
+    border: 1px solid var(--my-primary-color);
+}
+
+.financial .expensesChart {
+    width: 100%;
+}
+
+.financial #expensesChart {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.body .chart-container canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 110px !important;
+}
+
+.financial .top .item {
+    overflow: hidden;
+}
+
+.search-input input {
+    padding: 12.5px;
+}
+
+
+/*===================  Tour Plan Page =================*/
+.new-tour-plan .plan-create-btn:hover {
+    outline: 3px solid var(--my-white-off);
+    border: 1px solid transparent;
+}

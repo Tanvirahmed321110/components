@@ -325,11 +325,15 @@ tr {
 
 
 .my-border-top {
-    border-top: 1px solid var(--my-border-color2);
+    border-top: 1px solid var(--my-border-color);
+}
+
+.my-border-top-secondary {
+    border-top: 1px solid var(--my-border-secondary);
 }
 
 .my-border-top2 {
-    border-top: 1px solid var(--my-border-color);
+    border-top: 1px solid var(--my-border-color2);
 }
 
 .my-border-bottom {
@@ -454,6 +458,18 @@ tr {
 
 .my-shadow-4 {
     box-shadow: var(--shadow-4);
+}
+
+.my-shadow-all-sm {
+    box-shadow: var(--shadow-all-sm);
+}
+
+.my-shadow-all-md {
+    box-shadow: var(--shadow-all-md);
+}
+
+.my-shadow-all-lg {
+    box-shadow: var(--shadow-all-lg);
 }
 
 
@@ -2221,8 +2237,12 @@ tr {
     color: var(--my-red);
 }
 
+.my-text-success {
+    color: var(--my-success);
+}
+
 .my-text-green {
-    color: var(--my-text-green);
+    color: var(--my-success);
 }
 
 .my-text-primary {
@@ -2278,8 +2298,12 @@ tr {
     background-color: var(--my-white);
 }
 
+.my-bg-white-s {
+    background-color: var(--my-bg-secondary);
+}
+
 .my-bg-white-off {
-    background-color: var(--my-white-off) !important;
+    background-color: var(--my-white-off);
 }
 
 .my-bg-white-off2 {
@@ -4078,6 +4102,11 @@ tr {
 .my-fs-xxl {
     font-size: var(--fs-xxl);
     line-height: var(--line-height-xxl);
+}
+
+.my-fs-title {
+    font-size: 26px;
+    line-height: 38px;
 }
 
 .my-fs-xxxl {

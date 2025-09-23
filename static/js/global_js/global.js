@@ -74,26 +74,6 @@ function openModalF(modalId, btnSelector) {
 
 
 
-// =====  For Sidebar Menu  =====
-function sidebarCloseF() {
-    const closeBtn = document.getElementById('close-sidebar-btn')
-    if (closeBtn) {
-        const sidebar = document.getElementById('sidebar')
-        const main = document.getElementById('main-content')
-
-        if (sidebar || main) {
-            closeBtn.addEventListener('click', function () {
-                sidebar.classList.toggle('active')
-                main.classList.toggle('active')
-            })
-        }
-    }
-}
-
-sidebarCloseF()
-
-
-
 function dropdownToggleF() {
     const btns = document.querySelectorAll('.click-dropdown-btn');
 

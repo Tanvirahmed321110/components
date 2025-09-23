@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
         <link rel="stylesheet" href="/static/css/dasboard/guest_dashboard/guest.css">
-        <link rel="stylesheet" href="/static/css/dasboard/guest_dashboard/booking-order.css">
+        <link rel="stylesheet" href="/static/css/dasboard/guest_dashboard/other-page.css">
     </head>
 
     <body>
@@ -2849,7 +2849,7 @@
                 <div class="general-nav" role="navigation" aria-label="General Navigation">
                     <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
                     <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page"
+                        <a class="item my-d-flex my-align-center my-gap-4" href="./index.html" aria-current="page"
                             aria-label="Dashboard Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2862,7 +2862,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item active" href="#profile" aria-label="Booking/Order Page">
+                        <a class="item active" href="./booking-order.html" aria-label="Booking/Order Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2874,7 +2874,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#settings" aria-label="Financial Dashboard">
+                        <a class="item" href="./financial.html" aria-label="Financial Dashboard">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2889,7 +2889,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#messages" aria-label="My Tour Plan">
+                        <a class="item" href="./tour_plan.html" aria-label="My Tour Plan">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -3249,7 +3249,7 @@
                     </div>
 
                     <!--======================||  Booking History And Reviews Contents  ||=====================-->
-                    <div class="tab-contents">
+                    <div class="tab-contents common">
 
                         <!--=============|| For Review Content  ||=============-->
                         <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="booking">
@@ -3872,42 +3872,8 @@
 
 
         <script src="/static/js/global_js/global.js"></script>
-        <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/static/js/dashboard/dashboard_common.js"></script>
 
-        <script>
-            const dropdownParents = document.querySelectorAll(".filter-header .click-dropdown-parent");
-
-            if (dropdownParents) {
-                dropdownParents.forEach(parent => {
-                    const btn = parent.querySelector(".click-dropdown-btn span:first-child"); // button text span
-                    const items = parent.querySelectorAll(".click-dropdown .item");
-
-                    // Only proceed if items and button exist
-                    if (items && btn) {
-                        items.forEach(item => {
-                            item.addEventListener("click", () => {
-                                // Remove active from all items
-                                items.forEach(i => i.classList.remove("active"));
-
-                                // Add active to clicked item
-                                item.classList.add("active");
-
-                                // remove active class closet dropdown
-                                const dropdown = item.closest('.click-dropdown')
-                                dropdown.classList.remove('active')
-
-                                // Update button text with max 16 chars + "…"
-                                btn.textContent = item.textContent.length > 16
-                                    ? item.textContent.slice(0, 16) + "…"
-                                    : item.textContent;
-                            });
-                        });
-                    }
-                });
-            }
-
-
-        </script>
 
     </body>
 

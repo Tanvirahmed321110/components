@@ -233,7 +233,7 @@ main {
     overflow-y: auto;
     margin-top: 125px;
     height: calc(100dvh - 125px);
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
 }

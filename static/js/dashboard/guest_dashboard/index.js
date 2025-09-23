@@ -24,7 +24,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Circle Chart
-
 new Chart(document.getElementById('donutChart'), {
     type: 'doughnut',
     data: {

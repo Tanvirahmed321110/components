@@ -3,113 +3,130 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Multi Tabs Example</title>
+        <title>Expenses Overview</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <style>
-            /* Basic tab styles */
-            .tabs {
-                margin: 20px 0;
+            body {
+                font-family: Arial, sans-serif;
+                background: #fff;
+                padding: 20px;
             }
 
-            .tab-buttons {
+            .chart-container {
+                width: 100%;
+                max-width: 900px;
+                margin: auto;
+            }
+
+            .filters {
                 display: flex;
                 gap: 10px;
                 margin-bottom: 15px;
             }
 
-            .tab-buttons button {
-                padding: 8px 16px;
-                border: none;
-                background: #eee;
-                cursor: pointer;
-                border-radius: 6px;
-                transition: 0.3s;
-            }
-
-            .tab-buttons button.active {
-                background: #007bff;
-                color: #fff;
-            }
-
-            .tab-content {
-                display: none;
-                padding: 15px;
+            .filters button {
                 border: 1px solid #ddd;
+                background: #fff;
+                padding: 6px 12px;
                 border-radius: 6px;
-                background: #fafafa;
+                cursor: pointer;
             }
 
-            .tab-content.active {
-                display: block;
-                animation: fadeIn 0.4s ease-in-out;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(10px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .filters button.active {
+                background: #000;
+                color: #fff;
             }
         </style>
     </head>
 
     <body>
+        <h3>Expenses overview <span style="color: green;">+104%</span></h3>
 
-        <!-- Tabs Section 1 -->
-        <div class="tabs" data-tabs>
-            <div class="tab-buttons">
-                <button data-tab="tab1" class="active">Tab 1</button>
-                <button data-tab="tab2">Tab 2</button>
-                <button data-tab="tab3">Tab 3</button>
-            </div>
-            <div class="tab-content active" id="tab1">Content for Tab 1</div>
-            <div class="tab-content" id="tab2">Content for Tab 2</div>
-            <div class="tab-content" id="tab3">Content for Tab 3</div>
+        <div class="filters">
+            <button data-range="12m" class="active">12 months</button>
+            <button data-range="30d">30 days</button>
+            <button data-range="7d">7 days</button>
+            <button data-range="24h">24 hours</button>
         </div>
 
-        <!-- Tabs Section 2 -->
-        <div class="tabs" data-tabs>
-            <div class="tab-buttons">
-                <button data-tab="tab4" class="active">Overview</button>
-                <button data-tab="tab5">Details</button>
-                <button data-tab="tab6">Reviews</button>
-            </div>
-            <div class="tab-content active" id="tab4">Overview content</div>
-            <div class="tab-content" id="tab5">Details content</div>
-            <div class="tab-content" id="tab6">Reviews content</div>
+        <div class="chart-container">
+            <canvas id="expensesChart"></canvas>
         </div>
 
         <script>
-            // One global script for all tabs
-            document.querySelectorAll('[data-tabs]').forEach(tabGroup => {
-                const buttons = tabGroup.querySelectorAll('.tab-buttons button');
-                const contents = tabGroup.querySelectorAll('.tab-content');
+            const ctx = document.getElementById('expensesChart').getContext('2d');
 
-                buttons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        // Remove active from all buttons in this group
-                        buttons.forEach(btn => btn.classList.remove('active'));
-                        button.classList.add('active');
+            // Sample datasets
+            const datasets = {
+                "12m": {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    bars: [12, 18, 10, 25, 14, 22, 19, 23, 25, 29, 27, 15],
+                    trend: [10, 12, 14, 16, 18, 20, 21, 22, 24, 25, 26, 27]
+                },
+                "30d": {
+                    labels: Array.from({ length: 30 }, (_, i) => `Day ${i + 1}`),
+                    bars: Array.from({ length: 30 }, () => Math.floor(Math.random() * 30) + 5),
+                    trend: Array.from({ length: 30 }, (_, i) => 10 + i * 0.5)
+                },
+                "7d": {
+                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    bars: [15, 20, 18, 25, 22, 19, 14],
+                    trend: [12, 14, 16, 18, 20, 21, 22]
+                },
+                "24h": {
+                    labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
+                    bars: Array.from({ length: 24 }, () => Math.floor(Math.random() * 20) + 5),
+                    trend: Array.from({ length: 24 }, (_, i) => 5 + i * 0.5)
+                }
+            };
 
-                        // Hide all contents in this group
-                        contents.forEach(content => content.classList.remove('active'));
-
-                        // Show the target
-                        const targetId = button.getAttribute('data-tab');
-                        const targetContent = tabGroup.querySelector('#' + targetId);
-                        if (targetContent) {
-                            targetContent.classList.add('active');
+            // Chart instance
+            let chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: datasets["12m"].labels,
+                    datasets: [
+                        {
+                            type: 'bar',
+                            data: datasets["12m"].bars,
+                            backgroundColor: '#FF5733',
+                            borderRadius: 4
+                        },
+                        {
+                            type: 'line',
+                            data: datasets["12m"].trend,
+                            borderColor: '#666',
+                            borderDash: [4, 4],
+                            fill: false,
+                            tension: 0.3,
+                            pointRadius: 0
                         }
-                    });
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+
+            // Filter buttons
+            document.querySelectorAll('.filters button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const range = btn.dataset.range;
+                    chart.data.labels = datasets[range].labels;
+                    chart.data.datasets[0].data = datasets[range].bars;
+                    chart.data.datasets[1].data = datasets[range].trend;
+                    chart.update();
                 });
             });
         </script>
-
     </body>
 
 </html>
