@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guest Dashboard | Booking</title>
+        <title>Guest Dashboard | Financial</title>
         <meta name="description"
             content="Manage your account, view messages, and update settings on your Guest Dashboard.">
         <meta name="robots" content="index, follow">
@@ -3145,16 +3145,20 @@
                     <div class="my-bg-white  my-p-6 my-radius-md">
                         <ul class="tab1-btns my-bg-white" role="tablist">
                             <li>
-                                <button class="tab-btn active" data-tab="booking" role="tab"
-                                    aria-controls="panel-booking"> Booking</button>
+                                <button class="tab-btn active" data-tab="overview" role="tab"
+                                    aria-controls="panel-booking"> Overview</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="history" role="tab"
-                                    aria-controls="panel-history">History</button>
+                                <button class="tab-btn" data-tab="transaction-history" role="tab"
+                                    aria-controls="panel-history">Transaction History</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="reviews" role="tab"
-                                    aria-controls="panel-reviews">Reviews</button>
+                                <button class="tab-btn" data-tab="cupon-reviews" role="tab"
+                                    aria-controls="panel-reviews">Cupon Reviews</button>
+                            </li>
+                            <li>
+                                <button class="tab-btn" data-tab="wallet" role="tab" aria-controls="panel-reviews">Cupon
+                                    Wallet</button>
                             </li>
                         </ul>
                     </div>
@@ -3256,7 +3260,7 @@
                             <div class="table" role="tabpanel" aria-labelledby="tab-booking">
                                 <!-- Table Header Here -->
                                 <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2">Booking ID
+                                    <li class="my-d-flex my-align-center my-gap-2">Order ID
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
@@ -3438,34 +3442,13 @@
                                 </div>
                             </div>
 
-                            <!--======  For Pagination Content  ======-->
-                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                aria-label="Pagination">
-                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                        class="ri-arrow-left-line"></i>
-                                    Previous</button>
-
-                                <!-- pages -->
-                                <div class="pages my-d-flex my-gap-2">
-                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
-                                    <button class="page" aria-label="Page 2">2</button>
-                                    <button class="page" aria-label="Page 3">3</button>
-                                    <span class="jumper" aria-hidden="true">…</span>
-                                    <button class="page" aria-label="Page 6">6</button>
-                                    <button class="page" aria-label="Page 7">7</button>
-                                    <button class="page" aria-label="Page 8">8</button>
-                                </div>
-
-                                <button class="next" aria-label="Go to next page">Next <i
-                                        class="ri-arrow-right-line"></i></button>
-                            </div>
                         </div>
 
 
 
-                        <!--=============|| For History Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md history-table my-shadow-1 " id="history"
-                            role="tabpanel" aria-labelledby="tab-history">
+                        <!--=============|| For Transaction History Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 " id="transaction-history"
+                            role="tabpanel" aria-labelledby="transaction-history">
                             <div class="table">
                                 <!-- Table Header Here -->
                                 <ul class="table-head">
@@ -3476,28 +3459,21 @@
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Date
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction Date
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction Medium
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 status-col">Status
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction ID
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
@@ -3505,13 +3481,6 @@
                                         </svg>
                                     </li>
                                     <li class="my-d-flex my-align-center my-gap-2">Amount
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Payment Status
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
@@ -3526,111 +3495,49 @@
                                     <ul class="row">
                                         <li class="id small-col">#BK1001</li>
                                         <li>Jan 15, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison and other</li>
-                                        <li class="small-col">
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                        </li>
+                                        <li>Bkash</li>
+                                        <li>KM34340100</li>
                                         <li class="small-col"><span>$</span>102.00</li>
-                                        <li>
-                                            <div class="p-status cancel">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>99.00</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
                                     </ul>
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
+                                        <li class="id small-col">#BK1002</li>
+                                        <li>Jan 19, 2025</li>
+                                        <li>Bkash</li>
+                                        <li>KM113434M0</li>
+                                        <li class="small-col"><span>$</span>63.00</li>
                                     </ul>
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
+                                        <li class="id small-col">#BK1003</li>
+                                        <li>Jan 16, 2025</li>
+                                        <li>Nogod</li>
+                                        <li>KM343434M</li>
+                                        <li class="small-col"><span>$</span>42.00</li>
                                     </ul>
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status warring">
-                                                <div class="round"></div> pending
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
+                                        <li class="id small-col">#BK1004</li>
+                                        <li>Jan 17, 2025</li>
+                                        <li>SSL Commereze</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>112.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1005</li>
+                                        <li>Feb 17, 2025</li>
+                                        <li>Nogod</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>110.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1006</li>
+                                        <li>Feb 16, 2025</li>
+                                        <li>Bkash</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>110.00</li>
                                     </ul>
                                 </div>
                             </div>
@@ -3658,48 +3565,42 @@
                             </div>
                         </div>
 
-                        <!--=============|| For Review Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md reviews-table my-shadow-1 " id="reviews"
-                            role="tabpanel" aria-labelledby="tab-reviews">
+
+                        <!--=============|| For Cupon Review Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 " id="cupon-reviews"
+                            role="tabpanel" aria-labelledby="transaction-history">
                             <div class="table">
                                 <!-- Table Header Here -->
                                 <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Booking ID
+                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Cupon ID
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Order Date
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction Date
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction Medium
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
+                                    <li class="my-d-flex my-align-center my-gap-2">Transaction ID
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
                                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 status-col">Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Feedback
+                                    <li class="my-d-flex my-align-center my-gap-2">Amount
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
@@ -3714,120 +3615,207 @@
                                     <ul class="row">
                                         <li class="id small-col">#BK1001</li>
                                         <li>Jan 15, 2025</li>
-                                        <li>Tour</li>
+                                        <li>Bkash</li>
+                                        <li>KM34340100</li>
+                                        <li class="small-col"><span>$</span>102.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1002</li>
+                                        <li>Jan 19, 2025</li>
+                                        <li>Bkash</li>
+                                        <li>KM113434M0</li>
+                                        <li class="small-col"><span>$</span>63.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1003</li>
+                                        <li>Jan 16, 2025</li>
+                                        <li>Nogod</li>
+                                        <li>KM343434M</li>
+                                        <li class="small-col"><span>$</span>42.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1004</li>
+                                        <li>Jan 17, 2025</li>
+                                        <li>SSL Commereze</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>112.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1005</li>
+                                        <li>Feb 17, 2025</li>
+                                        <li>Nogod</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>110.00</li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="id small-col">#BK1006</li>
+                                        <li>Feb 16, 2025</li>
+                                        <li>Bkash</li>
+                                        <li>KM553434M</li>
+                                        <li class="small-col"><span>$</span>110.00</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--======  For Pagination Here  ======-->
+                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                aria-label="Pagination">
+                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                        class="ri-arrow-left-line"></i>
+                                    Previous</button>
+
+                                <!-- pages -->
+                                <div class="pages my-d-flex my-gap-2">
+                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
+                                    <button class="page" aria-label="Page 2">2</button>
+                                    <button class="page" aria-label="Page 3">3</button>
+                                    <span class="jumper" aria-hidden="true">…</span>
+                                    <button class="page" aria-label="Page 6">6</button>
+                                    <button class="page" aria-label="Page 7">7</button>
+                                    <button class="page" aria-label="Page 8">8</button>
+                                </div>
+
+                                <button class="next" aria-label="Go to next page">Next <i
+                                        class="ri-arrow-right-line"></i></button>
+                            </div>
+                        </div>
+
+
+
+                        <!--=============|| For Wallet Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md reviews-table my-shadow-1 " id="wallet"
+                            role="tabpanel" aria-labelledby="tab-reviews">
+                            <div class="table">
+                                <!-- Table Header Here -->
+                                <ul class="table-head">
+                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Payment Methods
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Status
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                    <li class="my-d-flex my-align-center my-gap-2">Action
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </li>
+                                </ul>
+
+                                <!--===== Table Body Here =====-->
+                                <div class="table-body">
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method icon.png"
+                                                alt="payment icon" loading="lazy">
+                                            <div>Feb 12, 2025</div>
+                                        </li>
+
                                         <li>Raddison and other</li>
-                                        <li class="small-col">
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
                                         </li>
                                     </ul>
 
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method icon3.png"
+                                                alt=" payment icon" loading="lazy">
+                                            <div>Feb 22, 2025</div>
                                         </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                feedback</button>
+
+                                        <li>Raddison and other</li>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
                                         </li>
                                     </ul>
 
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method1 icon.png"
+                                                alt="payment icon" loading="lazy">
+                                            <div>May 06, 2025</div>
                                         </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                Feedback</button>
+
+                                        <li>Raddison and other</li>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
                                         </li>
                                     </ul>
 
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method icon.png"
+                                                alt="payment icon" loading="lazy">
+                                            <div>Feb 12, 2025</div>
                                         </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
+
+                                        <li>Raddison and other</li>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
                                         </li>
                                     </ul>
 
                                     <!-- single row -->
                                     <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status warring">
-                                                <div class="round"></div> pending
-                                            </div>
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method icon3.png"
+                                                alt=" payment icon" loading="lazy">
+                                            <div>Feb 22, 2025</div>
                                         </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <i class="ri-star-line"></i>
-                                            </ul>
+
+                                        <li>Raddison and other</li>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
+                                        </li>
+                                    </ul>
+                                    <!-- single row -->
+                                    <ul class="row">
+                                        <li class="my-d-flex my-gap-5 my-align-center">
+                                            <img class="my-w-22" src="/static/images/Payment method1 icon.png"
+                                                alt="payment icon" loading="lazy">
+                                            <div>May 06, 2025</div>
+                                        </li>
+
+                                        <li>Raddison and other</li>
+
+                                        <!-- Action Buttons -->
+                                        <li class="my-d-flex my-align-center my-gap-6">
+                                            <button class="my-text-red my-fw-bold ">Delete</button>
+                                            <button class="my-fw-bold my-text-primary">Edit</button>
                                         </li>
                                     </ul>
                                 </div>

@@ -2565,6 +2565,10 @@ input[type="radio"]:checked::after {
     border-radius: 4px;
 }
 
+.stars i {
+    color: var(--my-warring);
+    font-size: var(--fs-md);
+}
 
 
 /*****  Base  *****/
@@ -3746,8 +3750,8 @@ input[type="radio"]:checked::after {
 .table .table-head,
 .table .table-body .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 16px;
     padding: 10px;
 }
 
@@ -5672,6 +5676,19 @@ _____________________________________*/
     }
 }
 
+
+
+/*________________________________*\
+  ||     Responsive For 1400px     ||
+\*________________________________*/
+@media (max-width:1400px) {
+
+    .table .table-head,
+    .table .table-body .row {
+        display: grid;
+        gap: 8px;
+    }
+}
 
 /*________________________________*\
   ||     Responsive For 991px     ||

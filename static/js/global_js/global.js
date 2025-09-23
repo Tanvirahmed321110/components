@@ -74,20 +74,23 @@ function openModalF(modalId, btnSelector) {
 
 
 
-// =====  For Mobile Menu  =====
-function mobileMenuF() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+// =====  For Sidebar Menu  =====
+function sidebarCloseF() {
+    const closeBtn = document.getElementById('close-sidebar-btn')
+    if (closeBtn) {
+        const sidebar = document.getElementById('sidebar')
+        const main = document.getElementById('main-content')
 
-    if (mobileMenuBtn) {
-        const sidebar = document.getElementById('sidebar');
-
-        mobileMenuBtn.addEventListener('click', function () {
-            sidebar.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active'); // Toggle X animation
-        });
+        if (sidebar || main) {
+            closeBtn.addEventListener('click', function () {
+                sidebar.classList.toggle('active')
+                main.classList.toggle('active')
+            })
+        }
     }
 }
-mobileMenuF();
+
+sidebarCloseF()
 
 
 

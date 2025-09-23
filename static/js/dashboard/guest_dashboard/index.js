@@ -101,21 +101,6 @@ new Chart(document.getElementById('barChart'), {
 
 
 
-// For Sidebar Toggle
-function sidebarCloseF() {
-    const closeBtn = document.getElementById('close-sidebar-btn')
-    if (closeBtn) {
-        const sidebar = document.getElementById('sidebar')
-        const main = document.getElementById('main-content')
-
-        closeBtn.addEventListener('click', function () {
-            sidebar.classList.toggle('active')
-            main.classList.toggle('active')
-        })
-    }
-}
-
-sidebarCloseF()
 
 
 
