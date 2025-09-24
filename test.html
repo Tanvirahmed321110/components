@@ -1,132 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 
     <head>
         <meta charset="UTF-8">
-        <title>Expenses Overview</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nested Tabs Working</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background: #fff;
                 padding: 20px;
             }
 
-            .chart-container {
-                width: 100%;
-                max-width: 900px;
-                margin: auto;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
             }
 
-            .filters {
-                display: flex;
-                gap: 10px;
-                margin-bottom: 15px;
+            li {
+                display: inline-block;
+                margin-right: 5px;
             }
 
-            .filters button {
-                border: 1px solid #ddd;
-                background: #fff;
-                padding: 6px 12px;
-                border-radius: 6px;
+            button.tab-btn {
+                padding: 8px 16px;
                 cursor: pointer;
+                border: 1px solid #ccc;
+                background: #f7f7f7;
             }
 
-            .filters button.active {
-                background: #000;
+            button.tab-btn.active {
+                background: #3498db;
                 color: #fff;
+                border-color: #3498db;
+            }
+
+            .tab-content {
+                display: none;
+                padding: 10px;
+                border: 1px solid #ddd;
+                margin-top: 5px;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            /* Nested tab styling */
+            .tab-contents .tab-contents {
+                margin-top: 10px;
+            }
+
+            .tab-contents .tab-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
             }
         </style>
     </head>
 
     <body>
-        <h3>Expenses overview <span style="color: green;">+104%</span></h3>
 
-        <div class="filters">
-            <button data-range="12m" class="active">12 months</button>
-            <button data-range="30d">30 days</button>
-            <button data-range="7d">7 days</button>
-            <button data-range="24h">24 hours</button>
-        </div>
+        <h2>Nested Tabs Example</h2>
 
-        <div class="chart-container">
-            <canvas id="expensesChart"></canvas>
+        <div class="tabs">
+            <ul class="tab-btns" role="tablist">
+                <li><button class="tab-btn active" data-tab="cupon1" role="tab">Cupon</button></li>
+                <li><button class="tab-btn" data-tab="offer1" role="tab">Offer</button></li>
+            </ul>
+
+            <div class="tab-contents">
+                <div class="tab-content active" id="cupon1">
+                    <h4>Cupon Content</h4>
+                    <p>This is the cupon tab content.</p>
+                </div>
+
+                <div class="tab-content" id="offer1">
+                    <h4>Offer Content</h4>
+
+                    <ul class="tab-btns" role="tablist">
+                        <li><button class="tab-btn active" data-tab="nested1">Nested 1</button></li>
+                        <li><button class="tab-btn" data-tab="nested2">Nested 2</button></li>
+                    </ul>
+
+                    <div class="tab-contents">
+                        <div class="tab-content active" id="nested1">Nested 1 Content</div>
+                        <div class="tab-content" id="nested2">Nested 2 Content</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script>
-            const ctx = document.getElementById('expensesChart').getContext('2d');
+            document.addEventListener('click', (event) => {
+                // Check if the clicked element is a tab button.
+                if (event.target.classList.contains('tab-btn')) {
+                    const clickedBtn = event.target;
 
-            // Sample datasets
-            const datasets = {
-                "12m": {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                    bars: [12, 18, 10, 25, 14, 22, 19, 23, 25, 29, 27, 15],
-                    trend: [10, 12, 14, 16, 18, 20, 21, 22, 24, 25, 26, 27]
-                },
-                "30d": {
-                    labels: Array.from({ length: 30 }, (_, i) => `Day ${i + 1}`),
-                    bars: Array.from({ length: 30 }, () => Math.floor(Math.random() * 30) + 5),
-                    trend: Array.from({ length: 30 }, (_, i) => 10 + i * 0.5)
-                },
-                "7d": {
-                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-                    bars: [15, 20, 18, 25, 22, 19, 14],
-                    trend: [12, 14, 16, 18, 20, 21, 22]
-                },
-                "24h": {
-                    labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
-                    bars: Array.from({ length: 24 }, () => Math.floor(Math.random() * 20) + 5),
-                    trend: Array.from({ length: 24 }, (_, i) => 5 + i * 0.5)
-                }
-            };
+                    // Find the closest ancestor that is a tab group (.tabs or .tab-contents).
+                    const tabGroup = clickedBtn.closest('.tabs, .tab-contents');
 
-            // Chart instance
-            let chart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: datasets["12m"].labels,
-                    datasets: [
-                        {
-                            type: 'bar',
-                            data: datasets["12m"].bars,
-                            backgroundColor: '#FF5733',
-                            borderRadius: 4
-                        },
-                        {
-                            type: 'line',
-                            data: datasets["12m"].trend,
-                            borderColor: '#666',
-                            borderDash: [4, 4],
-                            fill: false,
-                            tension: 0.3,
-                            pointRadius: 0
+                    if (tabGroup) {
+                        // Find all buttons and contents within the same group.
+                        const buttons = tabGroup.querySelectorAll('.tab-btn');
+                        const contents = tabGroup.querySelectorAll('.tab-content');
+
+                        // Remove 'active' class from all buttons and contents in the group.
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        contents.forEach(content => content.classList.remove('active'));
+
+                        // Add 'active' class to the clicked button.
+                        clickedBtn.classList.add('active');
+
+                        // Show the corresponding content.
+                        const targetId = clickedBtn.getAttribute('data-tab');
+                        const targetContent = tabGroup.querySelector('#' + targetId);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
                         }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        x: { grid: { display: false } },
-                        y: { beginAtZero: true }
                     }
                 }
             });
-
-            // Filter buttons
-            document.querySelectorAll('.filters button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    const range = btn.dataset.range;
-                    chart.data.labels = datasets[range].labels;
-                    chart.data.datasets[0].data = datasets[range].bars;
-                    chart.data.datasets[1].data = datasets[range].trend;
-                    chart.update();
-                });
-            });
         </script>
+
     </body>
 
 </html>

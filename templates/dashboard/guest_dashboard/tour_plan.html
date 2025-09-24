@@ -3135,9 +3135,9 @@
 
 
             <!--
-            ======================================================
-            =======||   Total Point Section  Start Here   ||======
-            ======================================================
+            ===================================================
+            =======||   Main Tab Section  Start Here   ||======
+            ===================================================
             -->
             <section>
                 <div class="my-m-12 my-m-lg-8 tabs">
@@ -3200,11 +3200,9 @@
                         </div>
                     </div>
 
+
                     <!--======================||  Booking History And Reviews Contents  ||=====================-->
                     <div class="tab-contents common">
-
-
-
 
                         <!--=============|| For In-Planing Content  ||=============-->
                         <div class="tab-content my-bg-white my-radius-md reviews-table active my-shadow-1"
@@ -3777,34 +3775,38 @@
             =======||   New Tour Plan  Start Here   ||======
             ================================================
             -->
-            <section>
+            <section aria-labelledby="tour-plan-heading">
                 <div class="new-tour-plan my-bg-white my-shadow-1 my-m-12 my-m-lg-8 my-p-6 my-radius-md">
+
+                    <!-- Head -->
                     <div class="head my-flex-between my-pb-10 my-border-bottom my-m-5">
                         <div>
-                            <h4 class="my-text-primary">Start creating new tour plan</h4>
+                            <h4 class="my-text-primary" id="tour-plan-heading">Start creating new tour plan</h4>
                             <p class="my-text-tertiary my-mt-1">Add a strong one liner supporting the heading and giving
                                 user a
                                 reason to click on the
                                 button
                                 below</p>
                         </div>
-                        <button class="right my-text-tertiary my-fs-md">
+                        <button class="right my-text-tertiary my-fs-md" aria-label="More options for tour plan"
+                            aria-haspopup="menu">
                             <i class="ri-more-2-fill"></i>
                         </button>
                     </div>
 
                     <!-- Create Button -->
                     <div class="my-mt-12">
-                        <div
-                            class="my-p-10 my-radius-xl plan-create-btn my-border-primary my-w-fit-content my-d-flex my-gap-6 my-cursor-pointer">
+                        <button
+                            class="my-p-10 my-radius-xl plan-create-btn my-border-primary-color my-w-fit-content my-d-flex my-gap-6 my-cursor-pointer"
+                            aria-label="Create a new tour plan">
                             <span class="my-flex-center my-p-4 my-px-6 my-radius-md my-border-secondary">
                                 <i class="ri-edit-line"></i>
                             </span>
                             <span>
-                                <p class="my-text-secondary my-fw-bold">Create a new Plan</p>
+                                <p class="my-text-secondary my-fw-bold my-text-left">Create a new Plan</p>
                                 <p class="my-fs-xs">Dive into the editor and start creating</p>
                             </span>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </section>

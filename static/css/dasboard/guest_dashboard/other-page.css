@@ -128,6 +128,6 @@
 
 /*===================  Tour Plan Page =================*/
 .new-tour-plan .plan-create-btn:hover {
-    outline: 3px solid var(--my-white-off);
-    border: 1px solid transparent;
+    border: 1px solid var(--my-border-secondary);
+    transition: .2s linear;
 }

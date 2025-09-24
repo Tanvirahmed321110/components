@@ -1869,7 +1869,48 @@ input[type="radio"]:checked::after {
     box-shadow: var(--shadow-lg);
 }
 
-.click-dropdown.lg {
+
+
+/*_________________________________*\
+  ||     Scrollbar Start Here     ||
+\*__________________________________*/
+.click-dropdown::-webkit-scrollbar {
+    width: 12px;
+    height: 14px;
+    background-color: var(--my-white);
+    border-radius: 12px;
+    padding: 8px;
+    margin: 12px;
+}
+
+.click-dropdown::-webkit-scrollbar {
+    width: 6px;
+    height: 2px;
+    background-color: var(--my-white-off);
+}
+
+.click-dropdown:hover::-webkit-scrollbar,
+.click-dropdown:hover::-webkit-scrollbar {
+    border-radius: 10px;
+}
+
+.click-dropdown:hover::-webkit-scrollbar {
+    border: 1px solid var(--my-bg-secondary);
+    border-radius: 10px;
+}
+
+.click-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--my-gray);
+    border-radius: 10px;
+}
+
+
+.click-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--my-bg-white-off2);
+    border-radius: 10px;
+}
+
+.click-dropdown .click-dropdown.lg {
     width: 100%;
     min-width: 1020px;
     max-width: 1200px;

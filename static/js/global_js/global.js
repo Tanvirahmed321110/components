@@ -73,7 +73,7 @@ function openModalF(modalId, btnSelector) {
 
 
 
-
+// Dropdown Toggle
 function dropdownToggleF() {
     const btns = document.querySelectorAll('.click-dropdown-btn');
 
@@ -443,6 +443,36 @@ function activeF(selector) {
 
 // For Tab 2
 document.querySelectorAll('.tabs').forEach(tabGroup => {
+    const buttons = tabGroup.querySelectorAll('.tab-btn');
+    const contents = tabGroup.querySelectorAll('.tab-content');
+
+    if (buttons) {
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Hide all contents
+                contents.forEach(content => content.classList.remove('active'));
+
+                // Show the target (only if it exists)
+                const targetId = button.getAttribute('data-tab');
+                if (!targetId) return; // return
+
+                const targetContent = tabGroup.querySelector('#' + targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                } else {
+                    console.warn(`⚠️ No tab content found for: #${targetId}`);
+                }
+            });
+        });
+    }
+});
+
+// For Nested Tab
+document.querySelectorAll('.nested-tab').forEach(tabGroup => {
     const buttons = tabGroup.querySelectorAll('.tab-btn');
     const contents = tabGroup.querySelectorAll('.tab-content');
 

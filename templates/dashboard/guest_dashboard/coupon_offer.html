@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guest Dashboard | Booking</title>
+        <title>Guest Dashboard | Cuopn Offer</title>
         <meta name="description"
             content="Manage your account, view messages, and update settings on your Guest Dashboard.">
         <meta name="robots" content="index, follow">
@@ -2849,7 +2849,7 @@
                 <div class="general-nav" role="navigation" aria-label="General Navigation">
                     <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
                     <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
-                        <a class="item my-d-flex my-align-center my-gap-4" href="./index.html" aria-current="page"
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="./index.html" aria-current="page"
                             aria-label="Dashboard Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2862,7 +2862,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item active" href="./booking-order.html" aria-label="Booking/Order Page">
+                        <a class="item " href="./booking-order.html" aria-label="Booking/Order Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2901,7 +2901,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#logout" aria-label="Family Page">
+                        <a class="item" href="./family.html" aria-label="Family Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2924,7 +2924,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#profile" aria-label="Coupon/Offers Page">
+                        <a class="item active" href="./coupon_offer.html" aria-label="Coupon/Offers Page">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -3026,7 +3026,7 @@
         =======||   Main Content  Start Here   ||======
         ===============================================
         -->
-        <main class="my-has-scrollbar booking " id="main-content">
+        <main class="my-has-scrollbar booking" id="main-content">
 
             <!--
             ============================================================
@@ -3135,9 +3135,9 @@
 
 
             <!--
-            ===============================================
-            =======||   Tab  Section  Start Here   ||======
-            ===============================================
+            ===================================================
+            =======||   Main Tab Section  Start Here   ||======
+            ===================================================
             -->
             <section>
                 <div class="my-m-12 my-m-lg-8 tabs">
@@ -3145,16 +3145,13 @@
                     <div class="my-bg-white  my-p-6 my-radius-md">
                         <ul class="tab1-btns my-bg-white" role="tablist">
                             <li>
-                                <button class="tab-btn active" data-tab="booking" role="tab"
-                                    aria-controls="panel-booking"> Booking</button>
+                                <button class="tab-btn active" data-tab="cupon" role="tab"
+                                    aria-controls="panel-booking">
+                                    Cupon</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="history" role="tab"
-                                    aria-controls="panel-history">History</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="reviews" role="tab"
-                                    aria-controls="panel-reviews">Reviews</button>
+                                <button class="tab-btn" data-tab="offer" role="tab"
+                                    aria-controls="panel-history">Offer</button>
                             </li>
                         </ul>
                     </div>
@@ -3164,73 +3161,69 @@
                     <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
                         <!--=============||  Left Area  ||=============-->
                         <div class="my-d-flex my-gap-6 my-align-center">
-                            <!--===== For All Services =====-->
-                            <div class="click-dropdown-parent">
+
+                            <!--===== For Destination  =====-->
+                            <div class="click-dropdown-parent my-mt-2">
                                 <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
                                     role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Services</span>
+                                    <span
+                                        class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">Destination</span>
                                     <span class="my-fs-lg my-text-quaternary"><i
                                             class="ri-arrow-down-s-line"></i></span>
                                 </div>
                                 <!-- Dropdown Here -->
                                 <ul class="click-dropdown" role="listbox" aria-label="Select service">
-                                    <li class="item">Flight</li>
-                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                    <li class="item">Car</li>
-                                    <li class="item">Hotel</li>
+                                    <li class="item">USA</li>
+                                    <li class="item active">Pakistan</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item">Nepal</li>
+                                    <li class="item">Canada</li>
                                 </ul>
                             </div>
 
-                            <!--===== For All Items =====-->
-                            <div class="click-dropdown-parent">
+                            <!--===== For Destination  =====-->
+                            <div class="click-dropdown-parent my-mt-2">
                                 <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
                                     role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Items</span>
+                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">City</span>
                                     <span class="my-fs-lg my-text-quaternary"><i
                                             class="ri-arrow-down-s-line"></i></span>
                                 </div>
                                 <!-- Dropdown Here -->
                                 <ul class="click-dropdown" role="listbox" aria-label="Select Items">
-                                    <li class="item">Items one</li>
-                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                    <li class="item">Items two</li>
-                                    <li class="item">Items 3</li>
-                                    <li class="item">Items 4</li>
-                                    <li class="item">Items 5</li>
-                                    <li class="item">Lorem ipsum</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
+                                    <li class="item">Dhaka</li>
+                                    <li class="item active">Delli</li>
+                                    <li class="item">Newyork</li>
+                                    <li class="item">Los Angle</li>
+                                    <li class="item">Austin</li>
                                 </ul>
                             </div>
 
-                            <!--===== For All Status =====-->
-                            <div class="click-dropdown-parent">
-                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                    role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Status</span>
-                                    <span class="my-fs-lg my-text-quaternary"><i
-                                            class="ri-arrow-down-s-line"></i></span>
-                                </div>
-                                <!-- Dropdown Here -->
-                                <ul class="click-dropdown" role="listbox" aria-label="Select Status">
-                                    <li class="item">Paid</li>
-                                    <li class="item active">Pending</li>
-                                    <li class="item">Cancel</li>
-                                    <li class="item">Done</li>
-                                </ul>
-                            </div>
-
-                            <!--===== For Reset Filter =====-->
-                            <button class=" my-p-5 my-px-7 my-border-secondary my-flex-between my-gap-3 my-radius-md">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE" stroke-width="1.66667"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="my-fw-bold">Rest Filter</span>
-
-                            </button>
                         </div>
 
                         <!--=============||  Input Area  ||=============-->
@@ -3242,7 +3235,8 @@
                                     <path
                                         d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
                                         stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
+                                        stroke-linejoin="round">
+                                    </path>
                                 </svg>
                             </span>
                         </div>
@@ -3251,8 +3245,8 @@
                     <!--======================||  Booking History And Reviews Contents  ||=====================-->
                     <div class="tab-contents common">
 
-                        <!--=============|| For Review Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="booking">
+                        <!--=============|| For Cupon Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="cupon">
                             <div class="table" role="tabpanel" aria-labelledby="tab-booking">
                                 <!-- Table Header Here -->
                                 <ul class="table-head">
@@ -3463,8 +3457,8 @@
 
 
 
-                        <!--=============|| For History Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md history-table my-shadow-1 " id="history"
+                        <!--=============|| For Offer Content  ||=============-->
+                        <div class="tab-content my-bg-white my-radius-md history-table my-shadow-1 " id="offer"
                             role="tabpanel" aria-labelledby="tab-history">
                             <div class="table">
                                 <!-- Table Header Here -->
@@ -3656,210 +3650,57 @@
                                 <button class="next" aria-label="Go to next page">Next <i
                                         class="ri-arrow-right-line"></i></button>
                             </div>
-                        </div>
 
-                        <!--=============|| For Review Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md reviews-table my-shadow-1 " id="reviews"
-                            role="tabpanel" aria-labelledby="tab-reviews">
-                            <div class="table">
-                                <!-- Table Header Here -->
-                                <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Booking ID
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
+
+                            <div class="nested-tab">
+                                <ul class="tab1-btns my-bg-white" role="tablist">
+                                    <li>
+                                        <button class="tab-btn active" data-tab="nested1" role="tab"
+                                            aria-controls="panel-booking">
+                                            Cupon</button>
                                     </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Order Date
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 status-col">Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Feedback
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
+                                    <li>
+                                        <button class="tab-btn" data-tab="nested2" role="tab"
+                                            aria-controls="panel-history">Offer</button>
                                     </li>
                                 </ul>
 
-                                <!--===== Table Body Here =====-->
-                                <div class="table-body">
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>Jan 15, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison and other</li>
-                                        <li class="small-col">
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                feedback</button>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                Feedback</button>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status warring">
-                                                <div class="round"></div> pending
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <i class="ri-star-line"></i>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <div class="tab-contents">
+                                    <div class="tab-content" id="nested1">
+                                        Content 1
+                                    </div>
+                                    <div class="tab-content" id="nested2">
+                                        Content 2
+                                    </div>
                                 </div>
-                            </div>
-
-                            <!--======  For Pagination Here  ======-->
-                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                aria-label="Pagination">
-                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                        class="ri-arrow-left-line"></i>
-                                    Previous</button>
-
-                                <!-- pages -->
-                                <div class="pages my-d-flex my-gap-2">
-                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
-                                    <button class="page" aria-label="Page 2">2</button>
-                                    <button class="page" aria-label="Page 3">3</button>
-                                    <span class="jumper" aria-hidden="true">…</span>
-                                    <button class="page" aria-label="Page 6">6</button>
-                                    <button class="page" aria-label="Page 7">7</button>
-                                    <button class="page" aria-label="Page 8">8</button>
-                                </div>
-
-                                <button class="next" aria-label="Go to next page">Next <i
-                                        class="ri-arrow-right-line"></i></button>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </section>
 
+                <div class="nested-tab">
+                    <ul class="tab1-btns my-bg-white" role="tablist">
+                        <li>
+                            <button class="tab-btn active" data-tab="nested1" role="tab" aria-controls="panel-booking">
+                                Cupon</button>
+                        </li>
+                        <li>
+                            <button class="tab-btn" data-tab="nested2" role="tab"
+                                aria-controls="panel-history">Offer</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-contents">
+                        <div class="tab-content" id="nested1">
+                            Content 1
+                        </div>
+                        <div class="tab-content" id="nested2">
+                            Content 2
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
 
 
@@ -3873,8 +3714,7 @@
 
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/dashboard/dashboard_common.js"></script>
-
-
+        <script src="/static/js/dashboard/guest_dashboard/financial.js"></script>
     </body>
 
 </html>

@@ -373,8 +373,20 @@ tr {
     border: 2px solid var(--my-border-primary);
 }
 
+.my-border-primary-color {
+    border: 1px solid var(--my-primary-color);
+}
+
 .my-border-secondary {
     border: 1px solid var(--my-border-secondary);
+}
+
+.hover-border-secondary-color:hover {
+    border: 1px solid var(--my-secondary-color);
+}
+
+.hover-border-primary:hover {
+    border: 1px solid var(--my-border-primary);
 }
 
 
