@@ -3110,10 +3110,12 @@ input[type="radio"]:checked::after {
     margin: 0;
     border-bottom: 1px solid var(--my-border-secondary);
     max-width: 100%;
+    flex-wrap: wrap;
 }
 
 
-.tab1-btns .tab-btn {
+.tab1-btns .tab-btn,
+.tab1-btns .tab-btn-nested {
     padding: 9px 18px;
     border-radius: 0px;
     cursor: pointer;
@@ -3128,7 +3130,9 @@ input[type="radio"]:checked::after {
 
 /* Hover (lift & shine) */
 .tab1-btns .tab-btn:hover,
-.tab1-btns .tab-btn.active {
+.tab1-btns .tab-btn.active,
+.tab-btn-nested.active,
+.tab1-btns .tab-btn-nested:hover {
     background: linear-gradient(to bottom, #fdfdfd, #d9d9d9);
     border: 1px solid var(--my-border-secondary);
     color: var(--my-text-primary);
@@ -3140,31 +3144,7 @@ input[type="radio"]:checked::after {
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
-    /* box-shadow: var(--shadow-all-sm);
-    padding: 12px;
-    border-radius: var(--radius-lg); */
 }
-
-.tab-btns .tab-btn {
-    padding: 8px 12px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--my-border-secondary);
-    font-weight: var(--fw-600);
-    font-size: var(--fs-sm);
-    color: var(--my-text-quaternary);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-}
-
-.tab-btns .tab-btn.active,
-.tab-btns .tab-btn:hover {
-    color: var(--my-primary-color);
-    border-color: var(--my-primary-color);
-}
-
 
 
 
@@ -3174,14 +3154,16 @@ input[type="radio"]:checked::after {
     margin-top: 64px;
 }
 
-.tab-content {
+.tab-content,
+.tab-content-nested {
     display: none;
     opacity: 0;
     transition: .2s linear;
     min-height: 200px;
 }
 
-.tab-content.active {
+.tab-content.active,
+.tab-content-nested.active {
     display: grid;
     opacity: 1;
 }
@@ -3795,6 +3777,7 @@ input[type="radio"]:checked::after {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 16px;
     padding: 10px;
+    align-items: center;
 }
 
 .table .table-body .row:nth-child(odd) {
@@ -3802,7 +3785,7 @@ input[type="radio"]:checked::after {
 }
 
 .table .table-body .row {
-    padding: 16px;
+    padding: 10px 16px;
     border-bottom: 1px solid var(--my-border-secondary);
 }
 
@@ -5087,6 +5070,10 @@ ________________________________*/
     font-weight: 600;
 }
 
+.my-alert.my-d-none {
+    display: none;
+}
+
 .alert-primary {
     color: var(--my-primary-color);
     background-color: var(--my-white-off);
@@ -5103,7 +5090,7 @@ ________________________________*/
     border: 1px solid var(--my-red);
 }
 
-.alert-warring {
+.alert-warning {
     color: var(--my-warring);
     border: 1px solid var(--my-warring);
 }

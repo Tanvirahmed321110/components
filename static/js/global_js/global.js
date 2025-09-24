@@ -442,64 +442,109 @@ function activeF(selector) {
 
 
 // For Tab 2
-document.querySelectorAll('.tabs').forEach(tabGroup => {
-    const buttons = tabGroup.querySelectorAll('.tab-btn');
-    const contents = tabGroup.querySelectorAll('.tab-content');
+function tabF() {
+    const tabGroups = document.querySelectorAll('.tabs')
+    if (tabGroups) {
+        tabGroups.forEach(tabGroup => {
+            const buttons = tabGroup.querySelectorAll('.tab-btn');
+            const contents = tabGroup.querySelectorAll('.tab-content');
 
-    if (buttons) {
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active from all buttons
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+            if (buttons) {
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
 
-                // Hide all contents
-                contents.forEach(content => content.classList.remove('active'));
+                        // Hide all contents
+                        contents.forEach(content => content.classList.remove('active'));
 
-                // Show the target (only if it exists)
-                const targetId = button.getAttribute('data-tab');
-                if (!targetId) return; // return
+                        // Show the target (only if it exists)
+                        const targetId = button.getAttribute('data-tab');
+                        if (!targetId) return; // return
 
-                const targetContent = tabGroup.querySelector('#' + targetId);
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                } else {
-                    console.warn(`⚠️ No tab content found for: #${targetId}`);
-                }
-            });
+                        const targetContent = tabGroup.querySelector('#' + targetId);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        } else {
+                            console.warn(`⚠️ No tab content found for: #${targetId}`);
+                        }
+                    });
+                });
+            }
         });
     }
-});
+}
+tabF()
+
+
 
 // For Nested Tab
-document.querySelectorAll('.nested-tab').forEach(tabGroup => {
-    const buttons = tabGroup.querySelectorAll('.tab-btn');
-    const contents = tabGroup.querySelectorAll('.tab-content');
+function nestedTabF() {
+    const tabGroups = document.querySelectorAll('.nested-tab')
+    if (tabGroups) {
+        tabGroups.forEach(tabGroup => {
+            const buttons = tabGroup.querySelectorAll('.tab-btn-nested');
+            const contents = tabGroup.querySelectorAll('.tab-content-nested');
 
-    if (buttons) {
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active from all buttons
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+            if (buttons) {
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active from all buttons
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
 
-                // Hide all contents
-                contents.forEach(content => content.classList.remove('active'));
+                        // Hide all contents
+                        contents.forEach(content => content.classList.remove('active'));
 
-                // Show the target (only if it exists)
-                const targetId = button.getAttribute('data-tab');
-                if (!targetId) return; // return
+                        // Show the target (only if it exists)
+                        const targetId = button.getAttribute('data-tab');
+                        if (!targetId) return; // return
 
-                const targetContent = tabGroup.querySelector('#' + targetId);
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                } else {
-                    console.warn(`⚠️ No tab content found for: #${targetId}`);
-                }
+                        const targetContent = tabGroup.querySelector('#' + targetId);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        } else {
+                            console.warn(`⚠️ No tab content found for: #${targetId}`);
+                        }
+                    });
+                });
+            }
+        });
+    }
+}
+
+nestedTabF()
+
+
+
+
+
+// ============  For Copy ===========
+function copyF(copyBtns, copyTexts) {
+    const btns = document.querySelectorAll(copyBtns);
+    const texts = document.querySelectorAll(copyTexts);
+
+    if (btns.length && texts.length) {
+        btns.forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                const text = texts[index].value;
+                navigator.clipboard.writeText(text).then(() => {
+                    const btnText = btn.querySelector(".btn-text");
+                    const oldText = btnText.innerText;
+
+                    btnText.innerText = "Copied";
+                    setTimeout(() => {
+                        btnText.innerText = oldText;
+                    }, 2500);
+                }).catch(err => {
+                    console.error("Failed to copy: ", err);
+                });
             });
         });
     }
-});
+}
+
 
 
 

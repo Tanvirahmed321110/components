@@ -131,3 +131,90 @@
     border: 1px solid var(--my-border-secondary);
     transition: .2s linear;
 }
+
+.copon-offer .popular-copons .item {
+    color: var(--my-white-off);
+    border: 8px solid var(--my-white);
+    box-shadow: var(---shadow-1);
+    transition: border .4s linear;
+}
+
+.copon-offer .popular-copons .item .bottom {
+    border-top: 2px solid var(--my-white-off2)
+}
+
+.copon-offer .popular-copons .item:nth-child(1) {
+    background-color: #FC5A31;
+}
+
+.copon-offer .popular-copons .item:nth-child(2) {
+    background-color: #E62E05;
+}
+
+.copon-offer .popular-copons .item:nth-child(3) {
+    background-color: #079455;
+}
+
+.copon-offer .popular-copons .item:nth-child(4) {
+    background-color: #079455;
+}
+
+.copon-offer .popular-copons .item:nth-child(5) {
+    background-color: #FC5A31;
+}
+
+.copon-offer .popular-copons .item:nth-child(6) {
+    background-color: #da5b3b;
+}
+
+.copon-offer .popular-copons .item:hover {
+    border-color: transparent;
+}
+
+
+/* offers-cart */
+.offers-cart .item,
+.copon-status .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.offers-cart .item::after,
+.copon-status .item::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    width: 30px;
+    height: 15px;
+    background-color: var(--my-primary-color);
+    transform: rotate(38deg);
+    transform: translateY(-20px);
+    transition: .25s;
+}
+
+.offers-cart .item::before,
+.copon-status .item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: -4px;
+    width: 30px;
+    height: 15px;
+    background-color: var(--my-primary-color);
+    transform: rotate(38deg);
+    transform: translateY(20px);
+    transition: .25s;
+}
+
+.offers-cart .item:hover::before,
+.copon-status .item:hover::before {
+    background-color: var(--my-primary-color);
+    transform: rotate(38deg);
+}
+
+.offers-cart .item:hover::after,
+.copon-status .item:hover::after {
+    background-color: var(--my-primary-color);
+    transform: rotate(38deg);
+}

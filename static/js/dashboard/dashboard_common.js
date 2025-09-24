@@ -48,3 +48,8 @@ if (dropdownParents) {
         }
     });
 }
+
+
+
+
+copyF('.popular-copons .item .copy-btn', '.popular-copons .item input[type="hidden"]');

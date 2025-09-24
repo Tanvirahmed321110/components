@@ -96,24 +96,26 @@
                 if (event.target.classList.contains('tab-btn')) {
                     const clickedBtn = event.target;
 
-                    // Find the closest ancestor that is a tab group (.tabs or .tab-contents).
+                    // Find the closest parent container with the class 'tabs' or 'tab-contents'.
                     const tabGroup = clickedBtn.closest('.tabs, .tab-contents');
 
                     if (tabGroup) {
-                        // Find all buttons and contents within the same group.
+                        // Find all buttons and content panels within this specific tab group.
                         const buttons = tabGroup.querySelectorAll('.tab-btn');
                         const contents = tabGroup.querySelectorAll('.tab-content');
 
-                        // Remove 'active' class from all buttons and contents in the group.
+                        // Remove the 'active' class from all buttons and content in this group.
                         buttons.forEach(btn => btn.classList.remove('active'));
                         contents.forEach(content => content.classList.remove('active'));
 
-                        // Add 'active' class to the clicked button.
+                        // Add the 'active' class to the clicked button.
                         clickedBtn.classList.add('active');
 
-                        // Show the corresponding content.
+                        // Find the corresponding content panel using its ID from the button's data-tab attribute.
                         const targetId = clickedBtn.getAttribute('data-tab');
                         const targetContent = tabGroup.querySelector('#' + targetId);
+
+                        // If the content exists, show it.
                         if (targetContent) {
                             targetContent.classList.add('active');
                         }
