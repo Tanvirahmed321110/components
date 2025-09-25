@@ -2900,7 +2900,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#logout" aria-label="Family Page">
+                        <a class="item" href="./family.html" aria-label="Family Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2912,7 +2912,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#overview" aria-label="Travel for work Page">
+                        <a class="item" href="./travel_for_work.html" aria-label="Travel for work Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2923,7 +2923,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item" href="#profile" aria-label="Coupon/Offers Page">
+                        <a class="item" href="./coupon_offer.html" aria-label="Coupon/Offers Page">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2942,7 +2942,7 @@
                     <nav class="my-flex-column my-gap-1 my-mt-2" aria-labelledby="misc-nav-heading">
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-current="page"
+                        <a href="./support.html" class="item my-d-flex my-align-center   my-gap-4" aria-current="page"
                             aria-label="Support page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2963,7 +2963,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-label="Setting Page">
+                        <a href="./setting" class="item my-d-flex my-align-center   my-gap-4" aria-label="Setting Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1236_18471)">
@@ -2988,7 +2988,8 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview" aria-label="Legal Page">
+                        <a href="./legal_info.html" class="item my-d-flex my-align-center   my-gap-4"
+                            aria-label="Legal Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -3000,7 +3001,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="#overview"
+                        <a href="./invite-friend.html" class="item my-d-flex my-align-center   my-gap-4"
                             aria-label="Invites a Firends Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -3013,6 +3014,44 @@
                         </a>
                     </nav>
                 </div>
+
+                <!--====== Sidebar Video Ads ======-->
+                <div class="my-pb-2">
+                    <div class="my-mt-6 my-m-5 my-p-3 my-border  my-radius-md my-bg-white ads-video">
+                        <div class="video-slider-wrap">
+                            <!--====== Video List =====-->
+                            <div class="video-list">
+                                <a href="#" class="ads-item">
+                                    <video src="/static/images/videos/video-ads1.mp4" autoplay muted></video>
+                                </a>
+                                <a href="#" class="ads-item">
+                                    <video src="/static/images/videos/video-ads2.mp4" autoplay muted></video>
+                                </a>
+                            </div>
+
+                            <!--===== Btn Wrap ======-->
+                            <div class="btn-wrap">
+                                <!-- Mute Button -->
+                                <button class="mute-btn item my-text-secondary">
+                                    <i class="ri-volume-mute-line"></i>
+                                </button>
+
+                                <!-- Big Screen -->
+                                <button class="full-screen-btn item my-tooltip my-text-primary">
+                                    <i class="ri-fullscreen-line"></i>
+                                    <div class="show-text">Big Screen</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--===== Prev and Next Button =====-->
+                        <div class="my-d-flex my-gap-4 my-mt-4">
+                            <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
+                            <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </aside>
@@ -4171,43 +4210,27 @@
         =======||   Video Or Image Content  Start Here   ||======
         =========================================================
         -->
-        <div class="my-modal" id="offer-video-modal">
-            <div class="modal-content video-modal my-px-3 my-pt-3">
+        <div class="my-modal" id="ads-modal">
+            <div class="modal-content ads-modal my-px-3 my-pt-3">
 
                 <!-- Modal Head -->
                 <div class="header my-mt-2">
-                    <h3 class="my-text-primary">New Discount Available!</h3>
-                    <p class="my-mt-1 my-fs-sm my-text-quaternary">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.</p>
                     <button class="icon-hover close-btn "><i class="ri-close-fill"></i></button>
                 </div>
 
-                <div class="my-p-8">
-                    <div class="my-video my-radius-md">
-                        <!-- Thum Image -->
-                        <div class="img-wrap">
-                            <img src="/static/images/blogs/blog (2).jpg" class="my-radius-md thum-img" alt="imgage thum"
-                                loading="lazy">
-                        </div>
-
-                        <!-- Play Button -->
-                        <div class="my-play-btn my-flex-center">
-                            <!-- play Icon -->
-                            <span></span>
-                        </div>
-
-                        <!-- YouTube Video (hidden by default) -->
-                        <div class="video-frame my-d-none">
-                            <iframe src="https://www.youtube.com/embed/4PseNalfS5E?si=ORbs4diV8mKWzzNI"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                <div class="my-p-8 my-mt-10">
+                    <!-- Video Container -->
+                    <div class="">
+                        <div class="my-video my-radius-md"></div>
                     </div>
 
                     <!-- Modal Footer -->
                     <div class="my-mt-10 my-d-flex my-justify-end footer">
-                        <a href="#" class="my-btn my-primary-btn my-btn-sm" aria-label="Visit Now">Visit Now</a>
+                        <!--===== Prev and Next Button =====-->
+                        <div class="my-d-flex my-gap-4 my-mt-4">
+                            <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
+                            <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -4219,8 +4242,15 @@
 
 
         <script src="/static/js/global_js/global.js"></script>
-        <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/static/js/dashboard/dashboard_common.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="/static/js/dashboard/guest_dashboard/index.js"></script>
+
+        <script>
+
+
+
+        </script>
 
     </body>
 

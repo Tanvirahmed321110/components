@@ -548,6 +548,50 @@ function copyF(copyBtns, copyTexts) {
 
 
 
+// For Faq Toggle
+function faqToggle() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    // if no faq items, stop
+    if (!faqItems || faqItems.length === 0) return;
+
+    faqItems.forEach(item => {
+        const head = item.querySelector('.head');
+        const icon = item.querySelector('.icon i');
+        const content = item.querySelector('.content');
+
+        // check if required elements exist
+        if (!head || !icon || !content) return;
+
+        head.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            faqItems.forEach(f => {
+                f.classList.remove('active');
+                const fIcon = f.querySelector('.icon i');
+                const fContent = f.querySelector('.content');
+                if (fIcon) fIcon.className = "ri-add-circle-line";
+                if (fContent) fContent.style.maxHeight = null;
+            });
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+                icon.className = "ri-indeterminate-circle-line"; // minus icon
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+}
+
+faqToggle();
+
+
+
+
+
+
 
 // ============  For Login 2 ===========
 const login2Section = document.getElementById('login2')

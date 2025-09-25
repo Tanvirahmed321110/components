@@ -320,8 +320,6 @@ header .click-dropdown-parent .click-dropdown {
 }
 
 header .click-dropdown-parent .click-dropdown.lg {
-    /* left: 50%;
-    transform: translateX(-50%); */
     max-width: 1220px;
     box-shadow: var(--shadow-all-sm);
 }

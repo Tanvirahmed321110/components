@@ -1,6 +1,3 @@
-@import url('./variable.css');
-
-
 /*_________________________________*\
   ||     Tooltip  Start Here     ||
 \*_________________________________*/
@@ -50,19 +47,6 @@
 }
 
 /*___________||  Tooltip Start Here  ||___________ */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -188,18 +172,9 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-md);
     border: 1px solid var(--my-border-color);
     background-color: var(--my-white);
-    padding: 16px;
-}
-
-.my-card.card-md {
-    padding: 20px;
-}
-
-.my-card.card-md {
-    padding: 24px;
 }
 
 
@@ -389,12 +364,10 @@
     width: 100%;
     background-color: var(--my-primary-color);
     transform: scaleX(0);
-    /* Start compressed horizontally */
     transform-origin: center;
     transition: transform .5s ease;
     border-radius: 60px;
     z-index: -1;
-    /* Push it behind the text */
 }
 
 .hover-btn1 .texts {
@@ -402,12 +375,10 @@
     position: relative;
     margin-left: 10px !important;
     z-index: 4;
-    /* Ensure text stays above the ::after */
 }
 
 .hover-btn1:hover::after {
     transform: scaleX(1);
-    /* Expand to full width */
 }
 
 
@@ -1853,7 +1824,6 @@ input[type="radio"]:checked::after {
 }
 
 .click-dropdown {
-    min-width: 100%;
     position: absolute;
     top: calc(100% + 12px);
     background-color: var(--my-white);
@@ -1869,6 +1839,9 @@ input[type="radio"]:checked::after {
     box-shadow: var(--shadow-lg);
 }
 
+.click-dropdown.active {
+    z-index: 20;
+}
 
 
 /*_________________________________*\
@@ -3094,8 +3067,47 @@ input[type="radio"]:checked::after {
 
 
 
+/* faq-items */
+.faq-items .faq-item {
+    max-width: 768px;
+    padding: 20px;
+    border-radius: var(--radius-xl);
+}
 
+.faq-items .faq-item:hover {
+    background-color: var(--my-bg-secondary);
+}
 
+.faq-items .faq-item .head {
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-items .faq-item.active {
+    background-color: var(--my-bg-secondary);
+}
+
+/* content */
+.faq-items .faq-item .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-items .faq-item.active .content {
+    max-height: 300px;
+    opacity: 1;
+}
+
+/* faq icon */
+.faq-items .faq-item .icon i {
+    transition: transform 0.3s ease;
+}
+
+.faq-items .faq-item.active .icon i {
+    transform: rotate(180deg);
+}
 
 
 
@@ -3133,9 +3145,9 @@ input[type="radio"]:checked::after {
 .tab1-btns .tab-btn.active,
 .tab-btn-nested.active,
 .tab1-btns .tab-btn-nested:hover {
-    background: linear-gradient(to bottom, #fdfdfd, #d9d9d9);
+    background-color: var(--my-secondary-color);
     border: 1px solid var(--my-border-secondary);
-    color: var(--my-text-primary);
+    color: var(--my-white);
 }
 
 
@@ -5415,7 +5427,6 @@ _____________________________________*/
     height: 7px;
     background-color: var(--red);
     border-radius: 50%;
-    /* transform: translateY(-50%); */
 }
 
 /* hover */
@@ -5437,17 +5448,14 @@ _____________________________________*/
 \*________________________________*/
 .calendar {
     background: #fff;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
 
 .calendar .head .btn {
     padding: 9px 11px;
     background-color: var(--my-white);
-    /* border: 1px solid var(--my-white-off); */
     border-radius: var(--radius-sm);
     font-size: var(--fs-xl);
     color: var(--my-text-quaternary);
-    /* border-radius: 50%; */
 }
 
 .calendar .today-btn {
@@ -5549,7 +5557,7 @@ _____________________________________*/
 }
 
 /* Footer */
-.calendar-footer {
+.calendar .calendar-footer {
     gap: 10px;
     padding: 16px 0px;
     padding-bottom: 8px;
@@ -5557,7 +5565,7 @@ _____________________________________*/
     display: flex;
 }
 
-.calendar-footer button {
+.calendar .calendar-footer button {
     padding: 6px 12px;
     border: none;
     border-radius: 6px;
