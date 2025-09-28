@@ -452,7 +452,9 @@
 }
 
 .my-btn.my-outline-btn:hover {
-    color: var(--my-text-quaternary);
+    color: var(--my-text-primary);
+    border-color: var(--my-primary-color);
+    color: var(--my-primary-color);
 }
 
 .my-btn.my-outline-btn.active {
@@ -584,7 +586,7 @@
     color: var(--my-text-secondary);
     background-color: transparent;
     font-weight: var(--fw-500);
-    box-shadow: 0px 1px 1px 0px #0A0D120D;
+    /* box-shadow: 0px 1px 1px 0px #0A0D120D; */
 }
 
 .my-input-control input:focus {
@@ -634,6 +636,25 @@ textarea::placeholder {
 
 .my-input-control input:focus+.label {
     top: -16px;
+}
+
+.error-message {
+    display: none;
+    color: var(--my-red);
+    font-size: var(--fs-xs);
+}
+
+input.error {
+    border: 1px solid var(--my-red) !important;
+}
+
+input.error~.error-message {
+    display: block;
+    position: absolute;
+    top: 90%;
+    background-color: transparent;
+    z-index: 2;
+    max-width: 100%;
 }
 
 .my-input-control.error input {
@@ -798,6 +819,139 @@ input::placeholder {
 .search-box .search-dropdown .item:hover {
     background-color: var(--my-white-off);
 }
+
+
+
+
+
+
+
+
+
+/*===========  Upload File  =========*/
+.upload-card {
+    background: var(--my-white);
+    padding: 20px 4px;
+    border-radius: var(--radius-lg);
+    width: 300px;
+    text-align: center;
+    border: 1px solid var(--my-border-secondary);
+    padding-top: 18px;
+}
+
+
+.upload-area {
+    position: relative;
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.rotating-dashed {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    color: var(--my-border-secondary);
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotating-dashed:hover {
+    color: var(--my-white-off);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.rotating-dashed .dashing {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rotating-dashed .dashing:nth-of-type(1) {
+    transform: rotate(0deg);
+}
+
+.rotating-dashed .dashing:nth-of-type(2) {
+    transform: rotate(90deg);
+}
+
+.rotating-dashed .dashing:nth-of-type(3) {
+    transform: rotate(180deg);
+}
+
+.rotating-dashed .dashing:nth-of-type(4) {
+    transform: rotate(270deg);
+}
+
+.rotating-dashed .dashing i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    border-bottom: 3px dashed;
+    animation: slideDash 3s infinite linear;
+}
+
+.rotating-dashed.uploaded .dashing i {
+    animation: unset;
+}
+
+
+/* Animation for sliding dashed line */
+@keyframes slideDash {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+.upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*_____________________________________________*\
   ||     Video Play animation Start Here     ||

@@ -3224,10 +3224,15 @@
                                     <!-- Right -->
                                     <div class="my-d-flex right my-gap-12 my-align-center">
                                         <div class="my-input-control">
+                                            <!-- if you will add class .error in the input, then show error message -->
                                             <input type="text" placeholder="First Name">
+                                            <small class="error-message">error</small>
                                         </div>
                                         <div class="my-input-control">
-                                            <input type="text" placeholder="Last Name">
+                                            <!-- if you will add class .error in the input, then show error message -->
+                                            <!-- <input class="error" type="text" placeholder="Last Name"> -->
+                                            <input class="" type="text" placeholder="Last Name">
+                                            <small class="error-message">error</small>
                                         </div>
                                     </div>
                                 </div>
@@ -3241,7 +3246,9 @@
                                     <!-- Right -->
                                     <div class="my-d-flex right my-gap-12 my-align-center">
                                         <div class="my-input-control full-width">
+                                            <!-- if you will add class .error in the input, then show error message -->
                                             <input type="email" placeholder="Eamil">
+                                            <small class="error-message">error</small>
                                         </div>
                                     </div>
                                 </div>
@@ -3257,9 +3264,9 @@
                                         <div class="common-dropdown-1 phone">
                                             <div class="my-d-flex area my-mt-1">
 
-
                                                 <!-- Dropdown -->
                                                 <div class="dropdown">
+                                                    <!-- Button Here -->
                                                     <button class="dropdown-toggle" type="button"
                                                         aria-haspopup="listbox" aria-expanded="false"
                                                         aria-label="Select country">
@@ -3401,10 +3408,16 @@
                                                     </div>
                                                 </div>
 
+                                                <!-- Input Here -->
                                                 <div class="my-input-control">
-                                                    <input type="tel" placeholder="Enter phone number" id="phone"
-                                                        aria-label="Phone number">
+                                                    <!-- if you will add class .error in the input, then show error message -->
+                                                    <!-- <input type="tel" class="error" placeholder="Enter phone number"
+                                                        id="phone" aria-label="Phone number"> -->
+                                                    <input type="tel" class="" placeholder="Enter phone number"
+                                                        id="phone" aria-label="Phone number">
+                                                    <div class="error-message">Error Message Here</div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -3441,10 +3454,49 @@
                                     </div>
 
                                     <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="my-input-control full-width">
-                                            <input type="email" placeholder="Eamil">
+                                    <div class="my-d-flex right my-gap-12 my-align-start my-justify-between">
+                                        <!-- Uploaded Image here -->
+                                        <div class="uploaded-img">
+                                            <img class="profile-img-lg my-border" id="preview"
+                                                src="/static/images/profile (1).png" alt="Preview">
                                         </div>
+
+
+                                        <!--=======  Upload File  ========-->
+                                        <div class="upload-card my-flex-center my-flex-column">
+                                            <h4 class="my-text-tertiary my-mt-0">Upload Your Image</h4>
+
+                                            <div class="rotating-dashed  my-mt-10">
+                                                <span class="dashing"><i></i></span>
+                                                <span class="dashing"><i></i></span>
+                                                <span class="dashing"><i></i></span>
+                                                <span class="dashing"><i></i></span>
+                                                <label class="upload-area" id="uploadArea">
+
+                                                    <div
+                                                        class="my-radius-md my-d-inline-block my-shadow-1 my-border-secondary my-px-5 my-py-3">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.66602 13.3333L9.99935 10M9.99935 10L13.3327 13.3333M9.99935 10V17.5M16.666 13.9524C17.6839 13.1117 18.3327 11.8399 18.3327 10.4167C18.3327 7.88536 16.2807 5.83333 13.7493 5.83333C13.5673 5.83333 13.3969 5.73833 13.3044 5.58145C12.2177 3.73736 10.2114 2.5 7.91602 2.5C4.46424 2.5 1.66602 5.29822 1.66602 8.75C1.66602 10.4718 2.36222 12.0309 3.48847 13.1613"
+                                                                stroke="#414651" stroke-width="1.66667"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </div>
+
+
+                                                    <p class="my-mt-6 my-text-quaternary">Drag & drop your image
+                                                        here<strong class="my-fw-bold my-text-secondary"> or click to
+                                                            select </strong>
+                                                    </p>
+                                                    <input type="file" id="fileInput" accept="/image*">
+                                                </label>
+                                            </div>
+
+                                            <div class="error-message" id="errorMessage">Invalid file type. Please
+                                                upload an image.</div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -3466,7 +3518,7 @@
 
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/dashboard/dashboard_common.js"></script>
-        <script src="/static/js/dashboard/guest_dashboard/financial.js"></script>
+        <script src="/static/js/dashboard/guest_dashboard/setting.js"></script>
     </body>
 
 </html>
