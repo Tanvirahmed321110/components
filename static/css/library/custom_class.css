@@ -454,7 +454,9 @@ tr {
 }
 
 
-
+.overflow-hidden {
+    overflow: hidden;
+}
 
 .my-shadow-1 {
     box-shadow: var(--shadow-sm);

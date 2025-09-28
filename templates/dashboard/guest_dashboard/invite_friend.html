@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guest Dashboard | Booking</title>
+        <title>Guest Dashboard | Invite Friend</title>
         <meta name="description"
             content="Manage your account, view messages, and update settings on your Guest Dashboard.">
         <meta name="robots" content="index, follow">
@@ -2849,7 +2849,7 @@
                 <div class="general-nav" role="navigation" aria-label="General Navigation">
                     <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
                     <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
-                        <a class="item my-d-flex my-align-center my-gap-4" href="./index.html" aria-current="page"
+                        <a class="item my-d-flex my-align-center   my-gap-4" href="./index.html" aria-current="page"
                             aria-label="Dashboard Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2862,7 +2862,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item active" href="./booking-order.html" aria-label="Booking/Order Page">
+                        <a class="item " href="./booking-order.html" aria-label="Booking/Order Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2932,6 +2932,17 @@
                                     stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             <span>Coupon/Offers</span>
+                        </a>
+
+                        <!-- single nav item -->
+                        <a class="item active" href="#profile" aria-label="Coupon/Offers Page">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.8327 4.83333L9.90306 2.9741C9.63552 2.439 9.50174 2.17144 9.30216 1.97597C9.12567 1.80311 8.91295 1.67164 8.67941 1.59109C8.41532 1.5 8.11619 1.5 7.51793 1.5H4.33268C3.39926 1.5 2.93255 1.5 2.57603 1.68166C2.26243 1.84144 2.00746 2.09641 1.84767 2.41002C1.66602 2.76654 1.66602 3.23325 1.66602 4.16667V4.83333M1.66602 4.83333H14.3327C15.7328 4.83333 16.4329 4.83333 16.9677 5.10582C17.4381 5.3455 17.8205 5.72795 18.0602 6.19836C18.3327 6.73314 18.3327 7.4332 18.3327 8.83333V12.5C18.3327 13.9001 18.3327 14.6002 18.0602 15.135C17.8205 15.6054 17.4381 15.9878 16.9677 16.2275C16.4329 16.5 15.7328 16.5 14.3327 16.5H5.66602C4.26588 16.5 3.56582 16.5 3.03104 16.2275C2.56063 15.9878 2.17818 15.6054 1.9385 15.135C1.66602 14.6002 1.66602 13.9001 1.66602 12.5V4.83333ZM12.916 13.5833L11.666 12.3333M12.4993 10.25C12.4993 11.8608 11.1935 13.1667 9.58268 13.1667C7.97185 13.1667 6.66602 11.8608 6.66602 10.25C6.66602 8.63917 7.97185 7.33333 9.58268 7.33333C11.1935 7.33333 12.4993 8.63917 12.4993 10.25Z"
+                                    stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Invtite Friend</span>
                         </a>
                     </nav>
                 </div>
@@ -3136,7 +3147,7 @@
 
             <!--
             ======================================================
-            =======||    Section  Start Here   ||======
+            =======||   Total Point Section  Start Here   ||======
             ======================================================
             -->
             <section>
@@ -3145,736 +3156,669 @@
                     <div class="my-bg-white  my-p-6 my-radius-md">
                         <ul class="tab1-btns my-bg-white" role="tablist">
                             <li>
-                                <button class="tab-btn active" data-tab="booking" role="tab"
-                                    aria-controls="panel-booking"> Booking</button>
+                                <button class="tab-btn active" data-tab="overview" role="tab"
+                                    aria-controls="panel-booking"> Overview</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="history" role="tab"
-                                    aria-controls="panel-history">History</button>
+                                <button class="tab-btn" data-tab="referral" role="tab"
+                                    aria-controls="panel-history">Your Referral</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="reviews" role="tab"
-                                    aria-controls="panel-reviews">Reviews</button>
+                                <button class="tab-btn" data-tab="financial-dashboard" role="tab"
+                                    aria-controls="panel-reviews">Financial Dashboard</button>
                             </li>
                         </ul>
                     </div>
 
 
-                    <!--======================||  Filter Head  ||=====================-->
-                    <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
-                        <!--=============||  Left Area  ||=============-->
-                        <div class="my-d-flex my-gap-6 my-align-center">
-                            <!--===== For All Services =====-->
-                            <div class="click-dropdown-parent">
-                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                    role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Services</span>
-                                    <span class="my-fs-lg my-text-quaternary"><i
-                                            class="ri-arrow-down-s-line"></i></span>
-                                </div>
-                                <!-- Dropdown Here -->
-                                <ul class="click-dropdown" role="listbox" aria-label="Select service">
-                                    <li class="item">Flight</li>
-                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                    <li class="item">Car</li>
-                                    <li class="item">Hotel</li>
-                                </ul>
-                            </div>
-
-                            <!--===== For All Items =====-->
-                            <div class="click-dropdown-parent">
-                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                    role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Items</span>
-                                    <span class="my-fs-lg my-text-quaternary"><i
-                                            class="ri-arrow-down-s-line"></i></span>
-                                </div>
-                                <!-- Dropdown Here -->
-                                <ul class="click-dropdown" role="listbox" aria-label="Select Items">
-                                    <li class="item">Items one</li>
-                                    <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                    <li class="item">Items two</li>
-                                    <li class="item">Items 3</li>
-                                    <li class="item">Items 4</li>
-                                    <li class="item">Items 5</li>
-                                    <li class="item">Lorem ipsum</li>
-                                </ul>
-                            </div>
-
-                            <!--===== For All Status =====-->
-                            <div class="click-dropdown-parent">
-                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                    role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                        Status</span>
-                                    <span class="my-fs-lg my-text-quaternary"><i
-                                            class="ri-arrow-down-s-line"></i></span>
-                                </div>
-                                <!-- Dropdown Here -->
-                                <ul class="click-dropdown" role="listbox" aria-label="Select Status">
-                                    <li class="item">Paid</li>
-                                    <li class="item active">Pending</li>
-                                    <li class="item">Cancel</li>
-                                    <li class="item">Done</li>
-                                </ul>
-                            </div>
-
-                            <!--===== For Reset Filter =====-->
-                            <button class=" my-p-5 my-px-7 my-border-secondary my-flex-between my-gap-3 my-radius-md">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE" stroke-width="1.66667"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="my-fw-bold">Rest Filter</span>
-
-                            </button>
-                        </div>
-
-                        <!--=============||  Input Area  ||=============-->
-                        <div class="search-input my-input-control ">
-                            <input type="text" placeholder="Search Booking" aria-label="Search">
-                            <span>
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
-                                        stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-
                     <!--======================||  Booking History And Reviews Contents  ||=====================-->
-                    <div class="tab-contents common">
+                    <div class="my-mt-12">
+                        <div class="tab-contents common">
 
-                        <!--=============|| For Review Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="booking">
-                            <div class="table" role="tabpanel" aria-labelledby="tab-booking">
-                                <!-- Table Header Here -->
-                                <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2">Booking ID
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Booking Date
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Travel Date
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Payment Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Action
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                </ul>
 
-                                <!--===== Table Body Here =====-->
-                                <div class="table-body">
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1001</li>
-                                        <li>Flight</li>
-                                        <li>Raddison and other</li>
-                                        <li>Jan 15, 2025</li>
-                                        <li>Jan 19, 2025</li>
-                                        <li>
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                            <!-- <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
-                                             <div class="status success">
-                                                <div class="round"></div> Done
-                                                    </div>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> warring
-                                                    </div>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                </div>  -->
-                                        </li>
+                            <!--=============|| For Overview  ||=============-->
+                            <div class="tab-content " id="overview">
 
-                                        <li>
-                                            <div class="p-status cancel">
-                                                <div class="round"></div> Cancelled
+                                <!--============||  Top Carts  ||===========-->
+                                <div class="top my-grid-3 my-gap-8 my-w-100-p">
+                                    <!-- Card 1: Total Referral Click -->
+                                    <div
+                                        class="item my-w-100-p my-shadow-1 my-bg-white-s overflow-hidden my-radius-xl my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-px-10 my-fs-md my-fw-bold my-text-primary">
+                                            Total Referral Click
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title">2120</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">
+                                                        2.4%</div>
+                                                </div>
                                             </div>
-                                            <!-- <div class="p-status cancel">
-                                                <div class="round"></div> Cancelled
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="total-click"></canvas>
                                             </div>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                            <div class="p-status warring">
-                                                <div class="round"></div> Pay on Property
-                                            </div> -->
-                                        </li>
-                                        <li class="small-col"><button class="view-btn">View</button></li>
-                                    </ul>
+                                        </div>
+                                    </div>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1001</li>
-                                        <li>Flight</li>
-                                        <li>Raddison blue </li>
-                                        <li>April 12, 2025</li>
-                                        <li>April 19, 2025</li>
-                                        <li>
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><button class="view-btn">View</button></li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1001</li>
-                                        <li>Flight</li>
-                                        <li>Raddison blue </li>
-                                        <li>April 12, 2025</li>
-                                        <li>April 19, 2025</li>
-                                        <li>
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                        <li class="small-col"> <button class="view-btn">View</button></li>
-                                    </ul>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1001</li>
-                                        <li>Flight</li>
-                                        <li>Raddison blue </li>
-                                        <li>April 12, 2025</li>
-                                        <li>April 19, 2025</li>
-                                        <li>
-                                            <div class="status success">
-                                                <div class="round"></div> Done
+                                    <!-- Card 2: Placed -->
+                                    <div
+                                        class="item my-shadow-1 my-w-100-p overflow-hidden my-bg-white-s my-radius-xl my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-px-10 my-fw-bold my-fs-md my-text-primary">
+                                            Orders Placed
+                                        </div>
+                                        <div class="body my-p-10 my-border-top-secondary my-bg-white my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title">26</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.5%</div>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="orders-placed"></canvas>
                                             </div>
-                                        </li>
-                                        <li class="small-col"><button class="view-btn">View</button></li>
-                                    </ul>
+                                        </div>
+                                    </div>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1001</li>
-                                        <li>Flight</li>
-                                        <li>Raddison blue and </li>
-                                        <li>May 16, 2025</li>
-                                        <li>May 19, 2025</li>
-                                        <li>
-                                            <div class="status warring">
-                                                <div class="round"></div> Pending
+                                    <!-- Card 3: Pending Order -->
+                                    <div
+                                        class="my-shadow-1 item my-w-100-p my-radius-xl overflow-hidden my-bg-white my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Pending Order
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title">3</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-status warring">
-                                                <div class="round"></div> Pay on Property
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><button class="view-btn">View</button></li>
-                                    </ul>
+                                        </div>
+                                    </div>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id">#BK1002</li>
-                                        <li>Flight</li>
-                                        <li>Raddison blue and </li>
-                                        <li>Feb 15, 2025</li>
-                                        <li>Feb 19, 2025</li>
-                                        <li>
-                                            <div class="status warring">
-                                                <div class="round"></div> Pending
+                                    <!-- Card 3: Approved Order -->
+                                    <div
+                                        class="item my-shadow-1 my-w-100-p overflow-hidden my-radius-xl my-bg-white-s my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Approved Order
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title">13</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div> Paid
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="approved-order"></canvas>
                                             </div>
-                                        </li>
-                                        <li class="small-col"><button class="view-btn">View</button></li>
-                                    </ul>
+                                        </div>
+                                    </div>
 
+                                    <!-- Card 3: Total Reward Earned -->
+                                    <div
+                                        class="item my-shadow-1 my-w-100-p overflow-hidden my-radius-xl my-bg-white-s my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Total Reward Earned
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>2350
+                                                </h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
+                                            </div>
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="total-reward"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Available Balance -->
+                                    <div
+                                        class="item my-w-100-p overflow-hidden my-radius-xl my-bg-white my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Available Balance
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>3029
+                                                </h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--============||  Copy Referral Link  ||===========-->
+                                <div class="my-mt-14 my-p-8 my-bg-white my-radius-md  my-shadow-1 "
+                                    aria-label="Copy your referral URL">
+                                    <h6 class="my-text-primary my-fs-md">Copy Referral Link <span
+                                            class="my-text-blue">*</span>
+                                    </h6>
+                                    <div class="my-border-secondary my-radius-md my-d-flex my-mt-2 copy-link">
+                                        <div
+                                            class="my-text-tertiary my-fw-medium my-p-6 my-fs-sm my-border-right base-url">
+                                            tourgull.com/profile/</div>
+                                        <div class="my-p-6 my-flex-between flex-1 copy-url">
+                                            <div class="account-path my-text-primary my-fs-sm">Tanvir12</div>
+
+                                            <!-- copy button -->
+                                            <button class="my-px-2 copy-btn text-hover-secondary my-tooltip"
+                                                aria-label="Copy referral URL">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_1305_26231)">
+                                                        <path
+                                                            d="M5.33398 5.33325V3.46659C5.33398 2.71985 5.33398 2.34648 5.47931 2.06126C5.60714 1.81038 5.81111 1.60641 6.062 1.47858C6.34721 1.33325 6.72058 1.33325 7.46732 1.33325H12.534C13.2807 1.33325 13.6541 1.33325 13.9393 1.47858C14.1902 1.60641 14.3942 1.81038 14.522 2.06126C14.6673 2.34648 14.6673 2.71985 14.6673 3.46659V8.53325C14.6673 9.27999 14.6673 9.65336 14.522 9.93857C14.3942 10.1895 14.1902 10.3934 13.9393 10.5213C13.6541 10.6666 13.2807 10.6666 12.534 10.6666H10.6673M3.46732 14.6666H8.53398C9.28072 14.6666 9.65409 14.6666 9.93931 14.5213C10.1902 14.3934 10.3942 14.1895 10.522 13.9386C10.6673 13.6534 10.6673 13.28 10.6673 12.5333V7.46659C10.6673 6.71985 10.6673 6.34648 10.522 6.06126C10.3942 5.81038 10.1902 5.60641 9.93931 5.47858C9.65409 5.33325 9.28072 5.33325 8.53398 5.33325H3.46732C2.72058 5.33325 2.34721 5.33325 2.062 5.47858C1.81111 5.60641 1.60714 5.81038 1.47931 6.06126C1.33398 6.34648 1.33398 6.71985 1.33398 7.46659V12.5333C1.33398 13.28 1.33398 13.6534 1.47931 13.9386C1.60714 14.1895 1.81111 14.3934 2.062 14.5213C2.34721 14.6666 2.72058 14.6666 3.46732 14.6666Z"
+                                                            stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1305_26231">
+                                                            <rect width="16" height="16" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                                <!-- show hover text -->
+                                                <div class="show-text">Copy Now</div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!--======  For Pagination Content  ======-->
-                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                aria-label="Pagination">
-                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                        class="ri-arrow-left-line"></i>
-                                    Previous</button>
 
-                                <!-- pages -->
-                                <div class="pages my-d-flex my-gap-3">
-                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
-                                    <button class="page" aria-label="Page 2">2</button>
-                                    <button class="page" aria-label="Page 3">3</button>
-                                    <span class="jumper" aria-hidden="true">…</span>
-                                    <button class="page" aria-label="Page 6">6</button>
-                                    <button class="page" aria-label="Page 7">7</button>
-                                    <button class="page" aria-label="Page 8">8</button>
-                                </div>
-
-                                <button class="next" aria-label="Go to next page">Next <i
-                                        class="ri-arrow-right-line"></i></button>
-                            </div>
-                        </div>
-
-
-
-                        <!--=============|| For History Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md history-table my-shadow-1 " id="history"
-                            role="tabpanel" aria-labelledby="tab-history">
-                            <div class="table">
-                                <!-- Table Header Here -->
-                                <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Booking ID
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Date
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 status-col">Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Amount
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Payment Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                </ul>
-
-                                <!--===== Table Body Here =====-->
-                                <div class="table-body">
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>Jan 15, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison and other</li>
-                                        <li class="small-col">
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
-                                            </div>
+                            <!--=============|| For Referral Content  ||=============-->
+                            <div class=" tab-content my-bg-white my-radius-md my-shadow-1 " id="referral">
+                                <div class="table" role="tabpanel" aria-labelledby="tab-booking">
+                                    <!-- Table Header Here -->
+                                    <ul class="table-head">
+                                        <li class="my-d-flex my-align-center my-gap-2">Name
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
                                         </li>
-                                        <li class="small-col"><span>$</span>102.00</li>
-                                        <li>
-                                            <div class="p-status cancel">
-                                                <div class="round"></div> Cancelled
-                                            </div>
+                                        <li class="my-d-flex my-align-center my-gap-2">Service
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
                                         </li>
+                                        <li class="my-d-flex my-align-center my-gap-2">Date
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </li>
+                                        <li class="my-d-flex my-align-center my-gap-2">Status
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </li>
+                                        <li class="my-d-flex my-align-center my-gap-2">Reward
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </li>
+
                                     </ul>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>99.00</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <!--===== Table Body Here =====-->
+                                    <div class="table-body">
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">CLEARANCE15</li>
+                                            <li>Raddison and other</li>
+                                            <li>Jan 15, 2025</li>
+                                            <li>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                                <div class="status warring">
+                                                    <div class="round"></div> warring
+                                                </div>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div> -->
+                                            </li>
+                                            <li>$<span>00.00</span></li>
+                                        </ul>
 
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status warring">
-                                                <div class="round"></div> pending
-                                            </div>
-                                        </li>
-                                        <li class="small-col"><span>$</span>88</li>
-                                        <li>
-                                            <div class="p-status paid">
-                                                <div class="round"></div>Paid
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">Tanvir</li>
+                                            <li>Raddison blue </li>
+                                            <li>April 12, 2025</li>
+                                            <li>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </li>
+                                            <li>$<span>12.00</span></li>
+                                        </ul>
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">Foysal</li>
+                                            <li>Raddison blue </li>
+                                            <li>April 12, 2025</li>
+                                            <li>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </li>
+                                            <li>$<span>12.00</span></li>
+                                        </ul>
+
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">Hasan</li>
+                                            <li>Raddison blue </li>
+                                            <li>April 19, 2025</li>
+                                            <li>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </li>
+                                            <li>$<span>12.00</span></li>
+                                        </ul>
+
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">Razzak PG</li>
+                                            <li>Raddison blue and </li>
+                                            <li>May 16, 2025</li>
+                                            <li>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </li>
+                                            <li>$<span>00.00</span></li>
+                                        </ul>
+
+                                        <!-- single row -->
+                                        <ul class="row">
+                                            <li class="id">Fahim</li>
+                                            <li>Raddison blue and </li>
+                                            <li>Feb 15, 2025</li>
+                                            <li>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </li>
+                                            <li>$<span>00.00</span></li>
+                                        </ul>
+
+                                    </div>
+                                    <!--======  For Pagination Content  ======-->
+                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                        aria-label="Pagination">
+                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                                class="ri-arrow-left-line"></i>
+                                            Previous</button>
+
+                                        <!-- pages -->
+                                        <div class="pages my-d-flex my-gap-3">
+                                            <button class="page active" aria-current="page"
+                                                aria-label="Page 1">1</button>
+                                            <button class="page" aria-label="Page 2">2</button>
+                                            <button class="page" aria-label="Page 3">3</button>
+                                            <span class="jumper" aria-hidden="true">…</span>
+                                            <button class="page" aria-label="Page 6">6</button>
+                                            <button class="page" aria-label="Page 7">7</button>
+                                            <button class="page" aria-label="Page 8">8</button>
+                                        </div>
+
+                                        <button class="next" aria-label="Go to next page">Next <i
+                                                class="ri-arrow-right-line"></i></button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!--======  For Pagination Here  ======-->
-                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                aria-label="Pagination">
-                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                        class="ri-arrow-left-line"></i>
-                                    Previous</button>
 
-                                <!-- pages -->
-                                <div class="pages my-d-flex my-gap-2">
-                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
-                                    <button class="page" aria-label="Page 2">2</button>
-                                    <button class="page" aria-label="Page 3">3</button>
-                                    <span class="jumper" aria-hidden="true">…</span>
-                                    <button class="page" aria-label="Page 6">6</button>
-                                    <button class="page" aria-label="Page 7">7</button>
-                                    <button class="page" aria-label="Page 8">8</button>
+                            <!--=============|| For Financial Content  ||=============-->
+                            <div class="tab-content active" id="financial-dashboard" role="tabpanel"
+                                aria-labelledby="transaction-history">
+
+                                <!--============||  Top Carts  ||===========-->
+                                <div class="top my-grid-3 my-gap-8 my-w-100-p">
+                                    <!-- Card 1: Total Earning  -->
+                                    <div
+                                        class="item my-shadow-1 my-w-100-p my-bg-white-s overflow-hidden my-radius-xl my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-px-10 my-fs-md my-fw-bold my-text-primary">
+                                            Total Earning
+                                        </div>
+                                        <!-- body -->
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>2120
+                                                </h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">
+                                                        2.4%</div>
+                                                </div>
+                                            </div>
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="total-earning"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Card 2: Pending -->
+                                    <div
+                                        class="item my-w-100-p my-shadow-1 overflow-hidden my-bg-white-s my-radius-xl my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-px-10 my-fw-bold my-fs-md my-text-primary">
+                                            Pending
+                                        </div>
+                                        <div class="body my-p-10 my-border-top-secondary my-bg-white my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>26</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.5%</div>
+                                                </div>
+                                            </div>
+                                            <div class="my-mt-0 chart-container">
+                                                <canvas id="orders-placed"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Withdraw  -->
+                                    <div
+                                        class="my-shadow-1 item my-w-100-p my-radius-xl overflow-hidden my-bg-white my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Withdraw
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>52</h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Available Balance -->
+                                    <div
+                                        class="item my-shadow-1 my-w-100-p overflow-hidden my-radius-xl my-bg-white-s my-border-secondary">
+                                        <div
+                                            class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
+                                            Available Balance
+                                        </div>
+                                        <div class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                            <div class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
+                                                <h3 class="my-fw-bold my-text-primary my-fs-title"><span>$</span>2089
+                                                </h3>
+                                                <div class="my-text-success my-d-flex my-align-center my-gap-2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M14.6673 4.6665L9.42156 9.91226C9.15755 10.1763 9.02555 10.3083 8.87333 10.3577C8.73943 10.4012 8.5952 10.4012 8.46131 10.3577C8.30909 10.3083 8.17708 10.1763 7.91307 9.91226L6.08823 8.08742C5.82422 7.82341 5.69221 7.6914 5.54 7.64194C5.4061 7.59844 5.26187 7.59844 5.12797 7.64194C4.97575 7.6914 4.84375 7.82341 4.57974 8.08742L1.33398 11.3332M14.6673 4.6665H10.0007M14.6673 4.6665V9.33317"
+                                                            stroke="#17B26A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <div class="my-text-success my-fw-bold">1.15%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Withdraw Button  -->
+                                        <div
+                                            class="my-d-flex my-justify-end my-mt-0 my-bg-white my-border-top-secondary my-p-10">
+                                            <button class="my-btn my-btn-sm my-primary-btn">Withdraw</button>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <button class="next" aria-label="Go to next page">Next <i
-                                        class="ri-arrow-right-line"></i></button>
-                            </div>
-                        </div>
 
-                        <!--=============|| For Review Content  ||=============-->
-                        <div class="tab-content my-bg-white my-radius-md reviews-table my-shadow-1 " id="reviews"
-                            role="tabpanel" aria-labelledby="tab-reviews">
-                            <div class="table">
-                                <!-- Table Header Here -->
-                                <ul class="table-head">
-                                    <li class="my-d-flex my-align-center my-gap-2 small-col">Booking ID
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Order Date
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Services Type
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Item Name
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2 status-col">Status
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                    <li class="my-d-flex my-align-center my-gap-2">Feedback
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </li>
-                                </ul>
 
-                                <!--===== Table Body Here =====-->
-                                <div class="table-body">
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>Jan 15, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison and other</li>
-                                        <li class="small-col">
-                                            <div class="status danger">
-                                                <div class="round"></div> Cancelled
+                                <!--============= Filter Head  ============-->
+                                <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
+                                    <!--=============||  Left Area  ||=============-->
+                                    <div class="my-d-flex my-gap-6 my-align-center">
+
+                                        <!--===== For All Status =====-->
+                                        <div>
+                                            <span class="my-text-quaternary my-fw-medium">Filter by Status</span>
+                                            <div class="click-dropdown-parent my-mt-2">
+                                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                    role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                    <span
+                                                        class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                                        Status</span>
+                                                    <span class="my-fs-lg my-text-quaternary"><i
+                                                            class="ri-arrow-down-s-line"></i></span>
+                                                </div>
+                                                <!-- Dropdown Here -->
+                                                <ul class="click-dropdown" role="listbox" aria-label="Select Status">
+                                                    <li class="item">Paid</li>
+                                                    <li class="item active">Pending</li>
+                                                    <li class="item">Cancel</li>
+                                                    <li class="item">Done</li>
+                                                </ul>
                                             </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
+                                        </div>
+                                    </div>
+
+                                    <!--=============||  Input Area  ||=============-->
+                                    <div class="search-input my-input-control ">
+                                        <input type="text" placeholder="Search Booking" aria-label="Search">
+                                        <span>
+                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
+                                                    stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                                <div class="my-bg-white my-shadow-1 my-radius-xl">
+                                    <div class="table">
+                                        <!-- Table Header Here -->
+                                        <ul class="table-head">
+                                            <li class="my-d-flex my-align-center my-gap-2 small-col">Date
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <li class="my-d-flex my-align-center my-gap-2">Description
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <li class="my-d-flex my-align-center my-gap-2">Amount
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <li class="my-d-flex my-align-center my-gap-2">Status
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <li class="my-d-flex my-align-center my-gap-2">Balance
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                        </ul>
+
+                                        <!--===== Table Body Here =====-->
+                                        <div class="table-body">
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li>Jan 15, 2025</li>
+                                                <li>Tanvir Khan</li>
+                                                <li><span>$</span>10.00</li>
+                                                <li>Pending</li>
+                                                <li><span>$</span>102.00</li>
                                             </ul>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Tour</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li class="id small-col">#BK1002</li>
+                                                <li>Jan 19, 2025</li>
+                                                <li>Bkash</li>
+                                                <li>KM113434M0</li>
+                                                <li class="small-col"><span>$</span>63.00</li>
                                             </ul>
-                                        </li>
-                                    </ul>
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="small-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                feedback</button>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                Feedback</button>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status success">
-                                                <div class="round"></div> Done
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li class="id small-col">#BK1003</li>
+                                                <li>Jan 16, 2025</li>
+                                                <li>Nogod</li>
+                                                <li>KM343434M</li>
+                                                <li class="small-col"><span>$</span>42.00</li>
                                             </ul>
-                                        </li>
-                                    </ul>
-
-                                    <!-- single row -->
-                                    <ul class="row">
-                                        <li class="id small-col">#BK1001</li>
-                                        <li>April 12, 2025</li>
-                                        <li>Hotel</li>
-                                        <li>Raddison blue </li>
-                                        <li class="status-col">
-                                            <div class="status warring">
-                                                <div class="round"></div> pending
-                                            </div>
-                                        </li>
-                                        <li class="small-col">
-                                            <ul class="stars my-gap-2 my-d-flex ">
-                                                <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <li><i class="ri-star-fill"></i></li>
-                                                <i class="ri-star-line"></i>
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li class="id small-col">#BK1004</li>
+                                                <li>Jan 17, 2025</li>
+                                                <li>SSL Commereze</li>
+                                                <li>KM553434M</li>
+                                                <li class="small-col"><span>$</span>112.00</li>
                                             </ul>
-                                        </li>
-                                    </ul>
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li class="id small-col">#BK1005</li>
+                                                <li>Feb 17, 2025</li>
+                                                <li>Nogod</li>
+                                                <li>KM553434M</li>
+                                                <li class="small-col"><span>$</span>110.00</li>
+                                            </ul>
+                                            <!-- single row -->
+                                            <ul class="row">
+                                                <li class="id small-col">#BK1006</li>
+                                                <li>Feb 16, 2025</li>
+                                                <li>Bkash</li>
+                                                <li>KM553434M</li>
+                                                <li class="small-col"><span>$</span>110.00</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--======  For Pagination Here  ======-->
+                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                        aria-label="Pagination">
+                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                                class="ri-arrow-left-line"></i>
+                                            Previous</button>
+
+                                        <!-- pages -->
+                                        <div class="pages my-d-flex my-gap-2">
+                                            <button class="page active" aria-current="page"
+                                                aria-label="Page 1">1</button>
+                                            <button class="page" aria-label="Page 2">2</button>
+                                            <button class="page" aria-label="Page 3">3</button>
+                                            <span class="jumper" aria-hidden="true">…</span>
+                                            <button class="page" aria-label="Page 6">6</button>
+                                            <button class="page" aria-label="Page 7">7</button>
+                                            <button class="page" aria-label="Page 8">8</button>
+                                        </div>
+
+                                        <button class="next" aria-label="Go to next page">Next <i
+                                                class="ri-arrow-right-line"></i></button>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <!--======  For Pagination Here  ======-->
-                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                aria-label="Pagination">
-                                <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                        class="ri-arrow-left-line"></i>
-                                    Previous</button>
-
-                                <!-- pages -->
-                                <div class="pages my-d-flex my-gap-2">
-                                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
-                                    <button class="page" aria-label="Page 2">2</button>
-                                    <button class="page" aria-label="Page 3">3</button>
-                                    <span class="jumper" aria-hidden="true">…</span>
-                                    <button class="page" aria-label="Page 6">6</button>
-                                    <button class="page" aria-label="Page 7">7</button>
-                                    <button class="page" aria-label="Page 8">8</button>
-                                </div>
-
-                                <button class="next" aria-label="Go to next page">Next <i
-                                        class="ri-arrow-right-line"></i></button>
                             </div>
                         </div>
                     </div>
@@ -3893,8 +3837,10 @@
 
 
 
+        <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/dashboard/dashboard_common.js"></script>
+        <script src="/static/js/dashboard/guest_dashboard/invite-friend.js"></script>
 
 
     </body>

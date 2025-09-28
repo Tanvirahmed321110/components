@@ -151,3 +151,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize first video
     show(currentIndex);
 });
+
+
+
+
+
+// For Copy Link Or URL
+function copyLinkF() {
+    const copyLink = document.querySelector('.copy-link')
+
+    if (copyLink) {
+        const copyBtn = copyLink.querySelector(".copy-btn");
+        const baseUrl = copyLink.querySelector(".base-url").textContent.trim(); // tourgull.com/profile/
+        const accountPath = copyLink.querySelector(".account-path").textContent.trim(); // Tanvir12
+
+        if (copyBtn) {
+            copyBtn.addEventListener("click", () => {
+                const fullUrl = baseUrl + accountPath;
+
+                navigator.clipboard.writeText(fullUrl).then(() => {
+                    // optional: user feedback
+                    const tooltip = copyBtn.querySelector(".show-text");
+                    tooltip.textContent = "Copied!";
+                    setTimeout(() => {
+                        tooltip.textContent = "Copy Now";
+                    }, 2000);
+                }).catch(err => {
+                    console.error("Copy failed", err);
+                });
+            });
+        }
+    }
+}
+
+// function call here
+copyLinkF()

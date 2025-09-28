@@ -548,7 +548,7 @@ function copyF(copyBtns, copyTexts) {
 
 
 
-// For Faq Toggle
+//======== For Faq Toggle =========
 function faqToggle() {
     const faqItems = document.querySelectorAll('.faq-item');
 

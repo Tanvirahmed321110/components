@@ -86,17 +86,6 @@ aside .top {
     position: relative;
 }
 
-/* aside .top::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(33, 33, 33, 0.1);
-    z-index: 1;
-} */
-
 aside.active .top {
     padding-top: 66px;
 }
@@ -116,6 +105,8 @@ aside.active .bottom .item {
 aside.active .bottom .item span {
     display: none;
 }
+
+
 
 /*
 =========||  Sidebar Top  Start Here  ||===========
