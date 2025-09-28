@@ -7,25 +7,25 @@
 .my-tooltip {
     position: relative;
     cursor: pointer;
+    height: fit-content;
 }
 
 .my-tooltip .show-text {
     position: absolute;
     bottom: -32px;
     right: 2px;
-    z-index: 6;
+    z-index: 20;
     background-color: var(--my-primary-color);
     color: var(--my-white-off);
-    padding: 6px 8px !important;
+    padding: 6px 8px;
     border-radius: 2px;
-    font-size: var(--fs-xs);
-    transform: translateY(-3px);
+    font-size: var(--fs-low);
     transition: .2s;
     opacity: 0;
     max-width: 300px;
     text-wrap: nowrap;
-    display: block;
     visibility: hidden;
+    height: fit-content;
 }
 
 .my-tooltip .show-text::after {
@@ -405,11 +405,9 @@
     font-family: inherit;
     border-radius: var(--radius-md);
     transition: .3s linear;
-    /* position: relative;
-    white-space: nowrap; */
     gap: 8px;
     font-size: var(--fs-md);
-    line-height: var(--line-height-md);
+    line-height: var(--line-height-sm);
     border: 3px solid;
     border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 1.48px 2.96px 0px #0A0D120D;
@@ -418,6 +416,7 @@
     box-sizing: border-box;
     width: fit-content;
 }
+
 
 .my-btn.my-btn-sm i {
     font-size: var(--fs-md);
@@ -438,8 +437,6 @@
     font-weight: 600;
     border: 1.6px solid;
     line-height: var(--line-height-low);
-
-
     border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -476,6 +473,9 @@
     background-color: var(--my-secondary-color);
 }
 
+.my-btn.fs-sm {
+    font-size: var(--my-fs-sm) !important;
+}
 
 /*
 #########  For Secondary Button  #########
@@ -555,7 +555,7 @@
 .my-input-control {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 540px;
     margin: 5px 0;
 }
 
@@ -575,17 +575,21 @@
 
 .my-input-control input {
     padding: 12px 12px;
-    border: 1px solid var(--my-border-primary);
+    border: 1px solid var(--my-border-secondary);
     outline: none;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     transition: .15s linear;
     max-width: 400px;
     width: 100%;
     color: var(--my-text-secondary);
     background-color: transparent;
     font-weight: var(--fw-500);
+    box-shadow: 0px 1px 1px 0px #0A0D120D;
 }
 
+.my-input-control input:focus {
+    /* border-color: var(--my-primary-color); */
+}
 
 
 .my-input-control.full-width input {
@@ -611,7 +615,7 @@ textarea::placeholder {
 
 .my-input-control input:focus,
 .my-input-control textarea:focus {
-    outline: 3px solid var(--my-input);
+    outline: 2px solid var(--input-focus);
 }
 
 .my-input-control .label {
@@ -1432,9 +1436,10 @@ input::placeholder {
   ||        Common Dropdwon 1        ||
 \*______________________________________*/
 .common-dropdown-1 {
-    max-width: 400px;
+    max-width: 520px;
     width: 100%;
     margin: auto;
+    position: relative;
 }
 
 .common-dropdown-1 .my-input-control {
@@ -1444,13 +1449,20 @@ input::placeholder {
 }
 
 .common-dropdown-1 .my-input-control input {
-    padding: 8px;
+    padding: 12px;
+    margin: 0;
+    max-width: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 /* Dropdown */
 .common-dropdown-1 .dropdown {
-    position: relative;
-    min-width: 90px;
+    /* position: relative; */
+    margin-left: 2px;
+    /* min-width: 90px;
+    width: 100%;
+    max-width: 120px; */
 }
 
 .dropdown-toggle {
@@ -1463,12 +1475,13 @@ input::placeholder {
     background: var(--my-white);
     width: 100%;
     border-radius: var(--radius-sm);
+    padding: 0 6px;
 }
 
 .common-dropdown-1 .dropdown-items {
     display: none;
     position: absolute;
-    top: 108%;
+    top: 101%;
     left: 0;
     width: 100%;
     background: var(--my-white);
@@ -1477,14 +1490,24 @@ input::placeholder {
     padding: 0;
     margin: 0;
     z-index: 10;
+    overflow: hidden;
+    padding: 4px 0;
+    border: 1px solid var(--my-border-secondary);
+    border-top: none;
+    max-height: 500px;
+    overflow-y: auto;
 }
+
+
 
 .common-dropdown-1 .dropdown-items .item {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 12px;
+    padding: 8px 12px;
     cursor: pointer;
+    margin-bottom: 2px;
+    /* border-radius: var(--radius-sm); */
 }
 
 .common-dropdown-1 .dropdown-items .item:hover,
@@ -1502,10 +1525,25 @@ input::placeholder {
     object-fit: cover;
 }
 
+.common-dropdown-1 input::placeholder {
+    font-size: var(--fs-sm);
+}
+
 .common-dropdown-1 .area {
     border: 1px solid var(--my-border-secondary);
     border-radius: 4px;
     padding: 0 2px;
+    padding-left: 0;
+}
+
+.common-dropdown-1.phone .area {
+    padding: 0;
+}
+
+
+
+.common-dropdown-1.phone .dropdown {
+    border-right: 1px solid var(--my-border-secondary);
 }
 
 .common-dropdown-1 input {
@@ -1514,10 +1552,21 @@ input::placeholder {
     border-radius: 0;
 }
 
-.common-dropdown-1 input::placeholder {
-    font-size: var(--fs-sm);
+.common-dropdown-1.phone input {
+    border-left: 1px solid var(--my-bg-secondary);
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
+
+
+.common-dropdown-1.phone .dropdown-search {
+    border: 1px solid var(--my-border-secondary);
+    margin: 4px !important;
+    border-radius: 4px;
+    max-width: 99%;
+}
 
 
 /*______________________________________*\
@@ -3171,7 +3220,6 @@ input[type="radio"]:checked::after {
     display: none;
     opacity: 0;
     transition: .2s linear;
-    min-height: 200px;
 }
 
 .tab-content.active,

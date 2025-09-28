@@ -218,3 +218,45 @@
     background-color: var(--my-primary-color);
     transform: rotate(38deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Settig Item */
+.setting-item {
+    border-top: 1px solid var(--my-border-secondary);
+}
+
+.setting-item .left {
+    max-width: 340px;
+    width: 100%;
+}
+
+.setting-item .right {
+    max-width: 512px;
+    width: 100%;
+}
+
+.setting-item input {
+    min-width: 240px;
+    box-shadow: 0px 1px 1px 0px #0A0D120D;
+}
+
+.my-tooltip .show-text.big {
+    position: absolute;
+    max-width: 180px;
+    width: 120px;
+    text-wrap: wrap;
+    font-size: var(--fs-low);
+    font-weight: 500;
+    top: 18px;
+    right: -4px;
+}

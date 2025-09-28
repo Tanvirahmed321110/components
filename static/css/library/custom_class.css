@@ -1346,6 +1346,10 @@ tr {
     width: 200px;
 }
 
+.my-w-125 {
+    width: 250px;
+}
+
 /* Width */
 .my-w-100-p {
     width: 100%;

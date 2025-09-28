@@ -1,129 +1,120 @@
-<!DOCTYPE html>
-<html lang="bn">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nested Tabs Working</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                padding: 20px;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            li {
-                display: inline-block;
-                margin-right: 5px;
-            }
-
-            button.tab-btn {
-                padding: 8px 16px;
-                cursor: pointer;
-                border: 1px solid #ccc;
-                background: #f7f7f7;
-            }
-
-            button.tab-btn.active {
-                background: #3498db;
-                color: #fff;
-                border-color: #3498db;
-            }
-
-            .tab-content {
-                display: none;
-                padding: 10px;
-                border: 1px solid #ddd;
-                margin-top: 5px;
-            }
-
-            .tab-content.active {
-                display: block;
-            }
-
-            /* Nested tab styling */
-            .tab-contents .tab-contents {
-                margin-top: 10px;
-            }
-
-            .tab-contents .tab-btn {
-                padding: 6px 12px;
-                font-size: 0.9rem;
-            }
-        </style>
-    </head>
-
-    <body>
-
-        <h2>Nested Tabs Example</h2>
-
-        <div class="tabs">
-            <ul class="tab-btns" role="tablist">
-                <li><button class="tab-btn active" data-tab="cupon1" role="tab">Cupon</button></li>
-                <li><button class="tab-btn" data-tab="offer1" role="tab">Offer</button></li>
-            </ul>
-
-            <div class="tab-contents">
-                <div class="tab-content active" id="cupon1">
-                    <h4>Cupon Content</h4>
-                    <p>This is the cupon tab content.</p>
-                </div>
-
-                <div class="tab-content" id="offer1">
-                    <h4>Offer Content</h4>
-
-                    <ul class="tab-btns" role="tablist">
-                        <li><button class="tab-btn active" data-tab="nested1">Nested 1</button></li>
-                        <li><button class="tab-btn" data-tab="nested2">Nested 2</button></li>
-                    </ul>
-
-                    <div class="tab-contents">
-                        <div class="tab-content active" id="nested1">Nested 1 Content</div>
-                        <div class="tab-content" id="nested2">Nested 2 Content</div>
-                    </div>
-                </div>
-            </div>
+<div class="common-dropdown-1 phone">
+    <div class="my-d-flex area my-mt-1">
+        <div class="my-input-control">
+            <input type="tel" placeholder="Enter phone number" id="phone" aria-label="Phone number">
         </div>
 
-        <script>
-            document.addEventListener('click', (event) => {
-                // Check if the clicked element is a tab button.
-                if (event.target.classList.contains('tab-btn')) {
-                    const clickedBtn = event.target;
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" aria-haspopup="listbox" aria-expanded="false"
+                aria-label="Select country">
+                <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img" loading="lazy">
+                <div class="my-d-flex my-align-center my-gap-2">
+                    <span>+91</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                </div>
+            </button>
 
-                    // Find the closest parent container with the class 'tabs' or 'tab-contents'.
-                    const tabGroup = clickedBtn.closest('.tabs, .tab-contents');
+            <!-- Dropdown Here -->
+            <ul class="dropdown-items" role="listbox" aria-label="Country options">
+                <li class="item" data-code="+880" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="img" loading="lazy">
+                    <div>Bangladesh</div>
+                </li>
+                <li class="item active" data-code="+1" role="option" aria-selected="true">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="img" loading="lazy">
+                    <div>USA</div>
+                </li>
+                <li class="item" data-code="+44" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/gb.png" alt="img" loading="lazy">
+                    <div>UK</div>
+                </li>
+                <li class="item" data-code="+91" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img" loading="lazy">
+                    <div>India</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-                    if (tabGroup) {
-                        // Find all buttons and content panels within this specific tab group.
-                        const buttons = tabGroup.querySelectorAll('.tab-btn');
-                        const contents = tabGroup.querySelectorAll('.tab-content');
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const phoneInput = document.getElementById("phone");
+        const dropdownItems = document.querySelectorAll(".dropdown-items .item");
+        const dropdownToggle = document.querySelector(".dropdown-toggle span");
 
-                        // Remove the 'active' class from all buttons and content in this group.
-                        buttons.forEach(btn => btn.classList.remove('active'));
-                        contents.forEach(content => content.classList.remove('active'));
+        dropdownItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const code = item.dataset.code;
 
-                        // Add the 'active' class to the clicked button.
-                        clickedBtn.classList.add('active');
+                // Set dropdown button text
+                dropdownToggle.textContent = code;
 
-                        // Find the corresponding content panel using its ID from the button's data-tab attribute.
-                        const targetId = clickedBtn.getAttribute('data-tab');
-                        const targetContent = tabGroup.querySelector('#' + targetId);
-
-                        // If the content exists, show it.
-                        if (targetContent) {
-                            targetContent.classList.add('active');
-                        }
-                    }
-                }
+                // Set phone input value (replace old code if already there)
+                phoneInput.value = code + " ";
+                phoneInput.focus();
             });
-        </script>
+        });
+    });
+</script>
+<div class="common-dropdown-1 phone">
+    <div class="my-d-flex area my-mt-1">
+        <div class="my-input-control">
+            <input type="tel" placeholder="Enter phone number" id="phone" aria-label="Phone number">
+        </div>
 
-    </body>
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" aria-haspopup="listbox" aria-expanded="false"
+                aria-label="Select country">
+                <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img" loading="lazy">
+                <div class="my-d-flex my-align-center my-gap-2">
+                    <span>+91</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                </div>
+            </button>
 
-</html>
+            <!-- Dropdown Here -->
+            <ul class="dropdown-items" role="listbox" aria-label="Country options">
+                <li class="item" data-code="+880" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/bd.png" alt="img" loading="lazy">
+                    <div>Bangladesh</div>
+                </li>
+                <li class="item active" data-code="+1" role="option" aria-selected="true">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/us.png" alt="img" loading="lazy">
+                    <div>USA</div>
+                </li>
+                <li class="item" data-code="+44" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/gb.png" alt="img" loading="lazy">
+                    <div>UK</div>
+                </li>
+                <li class="item" data-code="+91" role="option">
+                    <img class="my-w-10" src="https://flagcdn.com/w20/in.png" alt="img" loading="lazy">
+                    <div>India</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const phoneInput = document.getElementById("phone");
+        const dropdownItems = document.querySelectorAll(".dropdown-items .item");
+        const dropdownToggle = document.querySelector(".dropdown-toggle span");
+
+        dropdownItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const code = item.dataset.code;
+
+                // Set dropdown button text
+                dropdownToggle.textContent = code;
+
+                // Set phone input value (replace old code if already there)
+                phoneInput.value = code + " ";
+                phoneInput.focus();
+            });
+        });
+    });
+</script>

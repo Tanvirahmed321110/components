@@ -652,6 +652,55 @@ togglePasswordF()
 
 
 
+function phoneF() {
+    const phoneDropdowns = document.querySelectorAll('.common-dropdown-1.phone');
+    if (!phoneDropdowns || phoneDropdowns.length === 0) return;
+
+    phoneDropdowns.forEach(dropdown => {
+        const phoneInput = dropdown.querySelector("input[type='tel']");
+        const dropdownToggle = dropdown.querySelector(".dropdown-toggle span");
+        const dropdownItems = dropdown.querySelectorAll(".dropdown-items .item");
+        const searchInput = dropdown.querySelector(".dropdown-search");
+
+        if (!phoneInput || !dropdownToggle || !dropdownItems.length || !searchInput) return;
+
+        // Item click
+        dropdownItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const code = item.dataset.code;
+                if (!code) return;
+
+                dropdownToggle.textContent = code;
+                phoneInput.focus();
+            });
+        });
+
+        // Prevent closing when clicking inside search input
+        if (searchInput) {
+            searchInput.addEventListener("click", (e) => {
+                e.stopPropagation(); // stop outside listener
+            });
+
+            // Search filter
+            searchInput.addEventListener("keyup", () => {
+                const filter = searchInput.value.toLowerCase();
+                dropdownItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(filter) ? "" : "none";
+                });
+            });
+        }
+
+
+    });
+}
+
+phoneF()
+
+
+
+
+
 
 
 

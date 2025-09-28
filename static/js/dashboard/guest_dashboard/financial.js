@@ -3,14 +3,14 @@ function createChart(canvasId, data, color) {
     return new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
             datasets: [{
                 label: canvasId,
                 data: data,
                 borderColor: color,
                 backgroundColor: color + '33', // light fill
                 tension: 0.1,
-                pointRadius: 0, borderWidth: 1,
+                pointRadius: 0, borderWidth: 2,
             }]
         },
         options: {
@@ -23,9 +23,9 @@ function createChart(canvasId, data, color) {
 }
 
 // Charts for each card
-createChart('paidChart', [120, 144, 120, 6, 150, 100,], '#9b5de5'); // Paid
-createChart('dueChart', [500, 550, 200, 610, 420, 500], '#9b5de5');      // Due
-createChart('totalOrderChart', [1500, 1700, 1600, 80, 200, 14], '#9b5de5'); // Total
+createChart('paidChart', [11, 212, 55, 99, 333, 120, 144, 120, 6, 150, 100,], '#0F4638'); // Paid
+createChart('dueChart', [500, 550, 200, 610, 420, 500, 500, 550, 200, 610, 420, 500], '#0F4638');      // Due
+createChart('totalOrderChart', [100, 1700, 1600, 80, 200, 14, 500, 550, 200, 610, 420, 500], '#0F4638'); // Total
 
 
 

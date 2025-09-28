@@ -23,8 +23,8 @@ function createChart(canvasId, data, color) {
 }
 
 // Charts for each card
-createChart('total-click', [100, 200, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // total click
+createChart('total-click', [100, 400, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // total click
 createChart('orders-placed', [100, 200, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638');      // order placed
-createChart('approved-order', [100, 200, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // approved order
-createChart('total-reward', [100, 200, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // total reward
-createChart('total-earning', [100, 200, 100, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // total reward
+createChart('approved-order', [100, 50, 300, 180, 200, 130, 44, 100, 22, 202, 55, 90], '#0F4638'); // approved order
+createChart('total-reward', [100, 200, 100, 180, 200, 130, 44, 100, 322, 202, 55, 90], '#0F4638'); // total reward
+createChart('total-earning', [100, 200, 100, 180, 200, 130, 44, 100, 22, 22, 155, 90], '#0F4638'); // total reward
