@@ -2320,6 +2320,14 @@ tr {
     background-color: var(--my-bg-secondary);
 }
 
+.my-bg-border-secendary {
+    background-color: var(--my-border-secondary);
+}
+
+.my-bg-border-primary {
+    background-color: var(--my-border-primary);
+}
+
 .my-bg-white-off {
     background-color: var(--my-white-off);
 }

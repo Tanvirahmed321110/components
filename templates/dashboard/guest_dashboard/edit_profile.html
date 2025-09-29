@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Guest Dashboard | Setting</title>
+        <title>Guest Dashboard | Profile Info</title>
         <meta name="description"
             content="Manage your account, view messages, and update settings on your Guest Dashboard.">
         <meta name="robots" content="index, follow">
@@ -2913,7 +2913,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item active" href="#overview" aria-label="Travel for work Page">
+                        <a class="item " href="#overview" aria-label="Travel for work Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2964,7 +2964,7 @@
                         </a>
 
                         <!-- single nav item -->
-                        <a class="item my-d-flex my-align-center   my-gap-4" href="./setting.html"
+                        <a class="item my-d-flex my-align-center  active my-gap-4" href="./setting.html"
                             aria-label="Setting Page">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -3141,382 +3141,486 @@
             ===================================================
             -->
             <section>
-                <div class="my-bg-white my-shadow-1 my-p-12 my-radius-xl my-m-12">
+                <div class="my-bg-white my-shadow-1 my-p-10 my-radius-xl my-m-12">
 
-                    <!--=========================||  Top Header  ||===========================-->
-                    <div class="my-flex-between">
-                        <h3 class="my-fs-title my-text-primary">Setting</h3>
+                    <form action="#" class="profile-info my-flex-column my-gap-0">
+                        <div>
+                            <div class="my-mb-2">
+                                <h3 class="my-text-primary">Personal Information</h3>
+                            </div>
 
-                        <!--=========  Search Input  ==========-->
-                        <div class="search-input my-input-control ">
-                            <input type="text" placeholder="Search" aria-label="Search">
-                            <span>
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
-                                        stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
+                            <!--=========  Grid Wrap  =========-->
+                            <div class="item my-grid-3 my-gap-4 my-grid-sm-1">
+                                <!-- For First Name -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="first_name">First Name*</label>
+                                    <input class="" type="text" id="first_name">
+                                    <small class="error-message-new">Error message</small>
+
+                                    <!--  if you will add class in the input .error then error sms show  -->
+                                    <!-- <input class="error" type="text" id="first_name">
+                                    <small class="error-message-new">Error message</small> -->
+                                </div>
+
+                                <!-- For Middle Name -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="middle_name">Middle Name</label>
+                                    <input class="error" type="text" id="middle_name">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+
+                                <!-- For Last Name -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="last_name">Last Name</label>
+                                    <input type="text" id="last_name">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+                            </div>
+
+                            <!--=========  Grid Wrap  =========-->
+                            <div class="item my-grid-3 my-gap-4 my-grid-sm-1">
+                                <!-- For Phone -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="first_name">Phone*</label>
+                                    <input type="number" id="first_name">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+
+                                <!-- For Email -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="email">Email*</label>
+                                    <input type="email" id="email">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+
+                                <!-- For Emergency Phone-->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="emergency_phone">Emergency</label>
+                                    <input type="text" id="emergency_phone">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+                            </div>
+
+                            <!--=========  Grid Wrap  =========-->
+                            <div class="item my-grid-2 my-gap-6 my-grid-sm-1  my-mt-10">
+                                <!-- For Gender -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="gender">Gender*</label>
+                                    <select class="select dropdown" name="gender" id="gender">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                        <option value="">Other</option>
+                                    </select>
+                                </div>
+
+                                <!-- For Email -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="date_of_birth">Date of Birth*</label>
+                                    <input type="date" id="date_of_birth">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+                            </div>
 
 
+                            <!--=========  Grid Wrap  =========-->
+                            <div class="item my-grid-2 my-gap-8 my-grid-sm-1">
+                                <!-- For Father Name -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="father_name">Father Name</label>
+                                    <input type="text" id="father_name">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
 
-                    <!--========================||  Tab Buttons Here  ||=========================-->
-                    <div class="my-mt-10">
-                        <ul class="tab1-btns my-bg-white" role="tablist">
-                            <li>
-                                <button class="tab-btn active" data-tab="general" role="tab"
-                                    aria-controls="panel-booking"> General</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="security-setting" role="tab"
-                                    aria-controls="panel-history">Security Setting</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="password" role="tab"
-                                    aria-controls="panel-reviews">Password</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="verification" role="tab"
-                                    aria-controls="panel-reviews">Verification</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="notifications" role="tab"
-                                    aria-controls="panel-reviews">Notifications</button>
-                            </li>
-                        </ul>
-                    </div>
+                                <!-- For Email -->
+                                <div class="my-input-control new">
+                                    <label class="my-fw-bold" for="mother_name">Mother Name</label>
+                                    <input type="text" id="mother_name">
+                                    <small class="error-message-new">Error message</small>
+                                </div>
+                            </div>
 
 
-
-                    <!--===========================||  Tab Contents Here  ||============================-->
-                    <div class="my-mt-20">
-                        <div class="tab-contents common">
-
-                            <!--=================||  Tab Content For General Info  ||==================-->
-                            <div class="tab-content active " id="general">
-
-                                <!-- Top -->
-                                <div class="my-flex-between my-pb-10">
+                            <!--===========  Grid Wrap  ===========-->
+                            <div class="item my-grid-2 my-gap-8 my-grid-sm-1 my-mt-13">
+                                <!--===== For Present Address ======-->
+                                <div class="my-bg-white my-shadow-all-sm my-radius-md my-px-7 my-py-6">
                                     <div>
-                                        <h3 class="my-text-primary">Personal Info</h3>
-                                        <p class="my-text-tertiary my-mt-1">Update your photo and personal details here.
-                                        </p>
+                                        <h4 class="my-text-primary">Present Address</h4>
+                                        <p class="my-text-quaternary">Short description here</p>
                                     </div>
 
+                                    <div class="my-flex-column my-gap-2 my-mt-4">
+                                        <!-- For Country -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="country">Country*</label>
+                                            <select class="select dropdown" name="country" id="country">
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="street_address">Street Address*</label>
+                                            <input type="text" id="street_address">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="apt_other">Apt/Suite/Others</label>
+                                            <input type="text" id="apt_other">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="thana_city">Thana/City*</label>
+                                            <input type="text" id="thana_city">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="disct_state">District/State*</label>
+                                            <input type="text" id="disct_state">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="zip_code">Zip Code</label>
+                                            <input type="text" id="zip_code">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!--===== For Permanent Address ======-->
+                                <div class="my-bg-white my-shadow-all-sm my-radius-md my-px-10 my-py-8">
                                     <div>
-                                        <div class="my-d-flex  my-gap-4">
-                                            <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
-                                            <button class="my-btn fs-sm my-primary-btn">Save</button>
+                                        <h4 class="my-text-primary">Permanent Address</h4>
+                                        <div class="my-d-flex my-align-center my-gap-4 my-mt-2">
+                                            <input type="checkbox" id="same_as_present">
+                                            <label for="same_as_present">Permanent address same as present
+                                                address</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="my-flex-column my-gap-2 my-mt-4">
+                                        <!-- For Country -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="country">Country*</label>
+                                            <select class="select dropdown" name="country" id="country">
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                                <option value="">Bangladesh</option>
+                                                <option value="">Pakistan</option>
+                                                <option value="">Nepal</option>
+                                                <option value="">Iran</option>
+                                                <option value="">Afghanistan</option>
+                                                <option value="">Turki</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="street_address">Street Address*</label>
+                                            <input type="text" id="street_address">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="apt_other">Apt/Suite/Others</label>
+                                            <input type="text" id="apt_other">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="thana_city">Thana/City*</label>
+                                            <input type="text" id="thana_city">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="disct_state">District/State*</label>
+                                            <input type="text" id="disct_state">
+                                            <small class="error-message-new">Error message</small>
+                                        </div>
+                                        <!-- For Street Address -->
+                                        <div class="my-input-control new">
+                                            <label class="my-fw-bold" for="zip_code">Zip Code</label>
+                                            <input type="text" id="zip_code">
+                                            <small class="error-message-new">Error message</small>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!--======= For Name =======-->
-                                <div class="my-d-flex setting-item  my-py-9">
+                            </div>
 
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Name*</div>
 
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="my-input-control">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <input type="text" placeholder="First Name">
-                                            <small class="error-message">error</small>
-                                        </div>
-                                        <div class="my-input-control">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <!-- <input class="error" type="text" placeholder="Last Name"> -->
-                                            <input class="" type="text" placeholder="Last Name">
-                                            <small class="error-message">error</small>
-                                        </div>
+                            <div class="my-mt-10">
+                                <!--===============================||  For Documents   ||===============================-->
+                                <div class="my-bg-white my-shadow-all-sm my-radius-md my-px-7 my-py-6">
+                                    <div class="my-p-4">
+                                        <h4 class="my-text-primary">Documents</h4>
                                     </div>
-                                </div>
 
-                                <!--======= For Eamil =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
-
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Email*</div>
-
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="my-input-control full-width">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <input type="email" placeholder="Eamil">
-                                            <small class="error-message">error</small>
+                                    <div class="my-grid-2 my-gap-6 my-grid-sm-1 my-mt-6">
+                                        <!--====================||  Profile Photo Here  ||=====================-->
+                                        <div class="my-px-4">
+                                            <div class="preview-img">
+                                                <div class="my-fs-xs my-fw-medium">Profile Photo</div>
+                                                <img class="my-border my-p-1 my-w-30 my-h-28"
+                                                    src="/static/images/profile (1).jpg" alt="preview image"
+                                                    loading="lazy">
+                                            </div>
+                                            <div class="my-mt-6">
+                                                <div
+                                                    class="my-input-control my-fw-medium my-d-flex my-flex-column my-gap-1">
+                                                    <label class="my-text-quaternary" for="">Change profile
+                                                        photo</label>
+                                                    <input class="error" type="file">
+                                                    <small class="error-message-new">Error message</small>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <!--======= For Phone =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
+                                        <div class="my-pl-14 my-pr-3 identity-wrapper">
+                                            <h6 class="my-text-primary">Upload Photo Identy</h6>
 
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Phone*</div>
+                                            <!--====================||  Buttons Here  ||=====================-->
+                                            <ul class="my-d-flex my-gap-8 my-mt-4">
+                                                <li class="my-d-flex my-gap-3 my-align-center">
+                                                    <input type="radio" id="nid" name="identity" checked>
+                                                    <label for="nid">NID Card</label>
+                                                </li>
+                                                <li class="my-d-flex my-gap-3 my-align-center">
+                                                    <input type="radio" id="passport" name="identity">
+                                                    <label for="passport">Passport</label>
+                                                </li>
+                                                <li class="my-d-flex my-gap-3 my-align-center">
+                                                    <input type="radio" id="driving" name="identity">
+                                                    <label for="driving">Driving Licence</label>
+                                                </li>
+                                            </ul>
 
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="common-dropdown-1 phone">
-                                            <div class="my-d-flex area my-mt-1">
 
-                                                <!-- Dropdown -->
-                                                <div class="dropdown">
-                                                    <!-- Button Here -->
-                                                    <button class="dropdown-toggle" type="button"
-                                                        aria-haspopup="listbox" aria-expanded="false"
-                                                        aria-label="Select country">
-                                                        <img class="my-w-10" src="https://flagcdn.com/w20/in.png"
-                                                            alt="img" loading="lazy">
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>+91</span>
-                                                            <i class="ri-arrow-down-s-line"></i>
+                                            <!--===================||  Contents Here For Nid Passport Driving Lc  ||===================-->
+                                            <div class="my-mt-14">
+                                                <!--========= For Nid Card ==========-->
+                                                <div class="identity-block active" id="for-nid">
+                                                    <div class="my-input-control my-flex-column my-gap-3">
+                                                        <label for="nid_number" class="my-fw-medium">NID Number</label>
+                                                        <input type="number" class="my-max-w-100" id="nid_number">
+                                                        <small class="error-message-new">Error message</small>
+                                                    </div>
+
+                                                    <div class="my-mt-8 my-border my-radius-md my-p-6 my-bg-white-s">
+                                                        <!--===== Nid Front =====-->
+                                                        <div class="front my-d-flex my-gap-10 my-align-start">
+                                                            <!-- Left -->
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs my-pt-3">NID Front
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (3).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- right -->
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file">
+                                                                    <small class="error-message-new">Error
+                                                                        message</small>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </button>
 
+                                                        <!--===== Nid Back =====-->
+                                                        <div class="front my-d-flex my-gap-10 my-mt-8 my-align-start">
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs  my-pt-3">NID Back
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (1).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
 
-                                                    <div class="dropdown-items my-has-scrollbar-sm">
-                                                        <div class="my-m-2">
-                                                            <!-- search input -->
-                                                            <input type="text" class="dropdown-search"
-                                                                placeholder="Search country or code..." />
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file">
+                                                                    <small class="error-message-new">Error
+                                                                        message</small>
+                                                                </div>
+                                                            </div>
                                                         </div>
-
-                                                        <!-- Dropdown Here -->
-                                                        <ul class="" role="listbox" aria-label="Country options">
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                        </ul>
                                                     </div>
                                                 </div>
 
-                                                <!-- Input Here -->
-                                                <div class="my-input-control">
-                                                    <!-- if you will add class .error in the input, then show error message -->
-                                                    <!-- <input type="tel" class="error" placeholder="Enter phone number"
-                                                        id="phone" aria-label="Phone number"> -->
-                                                    <input type="tel" class="" placeholder="Enter phone number"
-                                                        id="phone" aria-label="Phone number">
-                                                    <div class="error-message">Error Message Here</div>
-                                                </div>
+                                                <!--======== For Passport =========-->
+                                                <div class="identity-block" id="for-passport">
+                                                    <div class="my-input-control my-flex-column my-gap-2">
+                                                        <label for="passport_number" class="my-fw-medium">Passport
+                                                            Number</label>
+                                                        <input type="number" class="my-max-w-100" id="passport_number">
+                                                    </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                                    <div class="my-mt-8 my-border my-radius-md my-p-6 my-bg-white-s">
+                                                        <!-- Passport Front -->
+                                                        <div class="front my-d-flex my-gap-10 my-align-start">
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs my-pt-3">Passport
+                                                                    Front
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (3).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
 
-                                <!--======= For Photo =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
-
-                                    <!-- Left -->
-                                    <div class="left">
-                                        <div class="my-w-120 left my-fw-bold my-text-secondary my-d-flex my-gap-2">
-                                            Your Photo*
-                                            <div class="my-tooltip">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_1732_12103)">
-                                                        <path
-                                                            d="M6.06065 6.00065C6.21739 5.5551 6.52675 5.17939 6.93395 4.94007C7.34116 4.70076 7.81991 4.61328 8.28544 4.69313C8.75096 4.77297 9.1732 5.015 9.47737 5.37634C9.78154 5.73767 9.94802 6.195 9.94732 6.66732C9.94732 8.00065 7.94732 8.66732 7.94732 8.66732M8.00065 11.334H8.00732M14.6673 8.00065C14.6673 11.6826 11.6826 14.6673 8.00065 14.6673C4.31875 14.6673 1.33398 11.6826 1.33398 8.00065C1.33398 4.31875 4.31875 1.33398 8.00065 1.33398C11.6826 1.33398 14.6673 4.31875 14.6673 8.00065Z"
-                                                            stroke="#A4A7AE" stroke-width="1.33333"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1732_12103">
-                                                            <rect width="16" height="16" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-
-                                                <div class="show-text big">This will be displayed on your profile.</div>
-                                            </div>
-                                        </div>
-
-                                        <p class="my-text-tertiary">This will be displayed on your profile.</p>
-                                    </div>
-
-                                    <!-- Right -->
-                                    <div class="right my-d-flex my-flex-column my-justify-end ">
-                                        <div class="my-d-flex my-gap-12  my-align-start my-justify-between my-w-100-p ">
-                                            <!-- Uploaded Image here -->
-                                            <div class="uploaded-img">
-                                                <img class="profile-img-lg my-border" id="preview"
-                                                    src="/static/images/profile (1).png" alt="Preview">
-                                            </div>
-
-
-                                            <!--=======  Upload File  ========-->
-                                            <div class="upload-card my-flex-center my-flex-column">
-                                                <h5 class="my-text-secondary my-mt-0">Upload Your Image</h5>
-
-                                                <div class="rotating-dashed  my-mt-10">
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <label class="upload-area" id="uploadArea">
-
-                                                        <div
-                                                            class="my-radius-md my-d-inline-block my-shadow-1 my-border-secondary my-px-5 my-py-3">
-                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M6.66602 13.3333L9.99935 10M9.99935 10L13.3327 13.3333M9.99935 10V17.5M16.666 13.9524C17.6839 13.1117 18.3327 11.8399 18.3327 10.4167C18.3327 7.88536 16.2807 5.83333 13.7493 5.83333C13.5673 5.83333 13.3969 5.73833 13.3044 5.58145C12.2177 3.73736 10.2114 2.5 7.91602 2.5C4.46424 2.5 1.66602 5.29822 1.66602 8.75C1.66602 10.4718 2.36222 12.0309 3.48847 13.1613"
-                                                                    stroke="#414651" stroke-width="1.66667"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file">
+                                                                    <small class="error-message-new">Error
+                                                                        message</small>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
+                                                        <!-- Passport Back -->
+                                                        <div class="front my-d-flex my-gap-10 my-mt-8 my-align-start">
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs  my-pt-3">Passport
+                                                                    Back
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (1).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
 
-                                                        <p class="my-mt-6 my-text-quaternary">Drag & drop your image
-                                                            here<strong class="my-fw-bold my-text-secondary"> or
-                                                                click
-                                                                to
-                                                                select </strong>
-                                                        </p>
-                                                        <input type="file" id="fileInput" accept="/image*">
-                                                    </label>
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file">
+                                                                    <small class="error-message-new">Error
+                                                                        message</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div class="error-message" id="errorMessage">Invalid file type.
-                                                    Please
-                                                    upload an image.</div>
+                                                <!--======== For Driving Licence =========-->
+                                                <div class="identity-block" id="for-driving">
+                                                    <div class="my-input-control my-flex-column my-gap-2">
+                                                        <label for="driving_number" class="my-fw-medium">Driving Licence
+                                                            Number</label>
+                                                        <input type="number" class="my-max-w-100" id="driving_number">
+                                                    </div>
+
+                                                    <div class="my-mt-8 my-border my-radius-md my-p-6 my-bg-white-s">
+                                                        <!-- Nid Front -->
+                                                        <div class="front my-d-flex my-gap-10 my-align-start">
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs my-pt-3">Driving Front
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (3).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file"><small
+                                                                        class="error-message-new">Error message</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Nid Back -->
+                                                        <div class="front my-d-flex my-gap-10 my-mt-8 my-align-start">
+                                                            <div class="left">
+                                                                <div class="my-fw-medium my-fs-xs  my-pt-3">Driving Back
+                                                                </div>
+                                                                <div class="preview-img my-mt-3">
+                                                                    <img class="my-border my-p-1 my-w-40 my-h-36"
+                                                                        src="/static/images/profile (1).png"
+                                                                        alt="preview image" loading="lazy">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="right flex-1 my-bg-">
+                                                                <div class="my-input-control">
+                                                                    <label
+                                                                        class="my-fw-medium my-text-quaternary">Change</label>
+                                                                    <input class="my-mt-1" type="file"><small
+                                                                        class="error-message-new">Error message</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <!--======= Edit Profile =======-->
-                                        <div class="my-mt-8 my-d-flex my-justify-end my-align-end my-w-100-p">
-                                            <a href="/templates/dashboard/guest_dashboard/edit_profle.html"
-                                                class="my-btn my-btn-sm my-primary-btn">Edit
-                                                Profile</a>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                    </div>
 
 
-                </div>
+                        <div class="my-d-flex my-justify-end my-mt-12">
+                            <a class=" my-btn my-primary-btn" href="#">Save Information</a>
+                        </div>
+                    </form>
             </section>
         </main>
 
@@ -3531,6 +3635,40 @@
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/dashboard/dashboard_common.js"></script>
         <script src="/static/js/dashboard/guest_dashboard/setting.js"></script>
+
+        <script>
+            function showCheckRadioContent() {
+                const radios = document.querySelectorAll('.identity-wrapper input[name="identity"]');
+                const blocks = document.querySelectorAll('.identity-wrapper .identity-block');
+
+                if (!radios && !blocks) { return }
+
+                function showBlock(radioId) {
+                    blocks.forEach(block => {
+                        block.classList.remove('active');
+                    });
+                    const activeBlock = document.getElementById(`for-${radioId}`);
+                    if (activeBlock) {
+                        activeBlock.classList.add('active');
+                    }
+                }
+
+                // default:
+                const checked = document.querySelector('.identity-wrapper input[name="identity"]:checked');
+                if (checked) showBlock(checked.id);
+
+                // change
+                radios.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        if (radio.checked) {
+                            showBlock(radio.id);
+                        }
+                    });
+                });
+            }
+            showCheckRadioContent()
+
+        </script>
     </body>
 
 </html>

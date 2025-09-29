@@ -514,42 +514,7 @@
 
 
 
-/*_______________________________*\
-  ||     Select and option     ||
-\*_______________________________*/
-.select,
-::picker(select) {
-    width: 200px;
-    overflow: hidden;
-    appearance: base-select;
-    box-shadow: 1px 2px 3px rgb(34, 31, 31, .1);
-    border: 1px solid var(--my-white-off2);
-    font-weight: 500;
-    padding: 10px 4px;
-    border-radius: var(--radius-md);
-}
 
-.select>option {
-    border: 1px solid var(--border-color);
-    background-color: #ededed;
-    margin: 4px;
-    cursor: pointer;
-    padding: 4px;
-    font-weight: 500;
-}
-
-.select option:hover {
-    background-color: var(--my-white-off2) !important;
-}
-
-.select option:checked {
-    background-color: var(--my-white-off2);
-}
-
-.select:hover {
-    background-color: transparent;
-    cursor: pointer;
-}
 
 /*_______________________________*\
   ||     Input  Start Here     ||
@@ -576,7 +541,7 @@
 }
 
 .my-input-control input {
-    padding: 12px 12px;
+    padding: 10px 12px;
     border: 1px solid var(--my-border-secondary);
     outline: none;
     border-radius: var(--radius-sm);
@@ -586,13 +551,40 @@
     color: var(--my-text-secondary);
     background-color: transparent;
     font-weight: var(--fw-500);
-    /* box-shadow: 0px 1px 1px 0px #0A0D120D; */
 }
 
-.my-input-control input:focus {
-    /* border-color: var(--my-primary-color); */
+
+
+.my-input-control.new {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background-color: var(--my-white);
+    box-shadow: var(--shadow-all-sm);
+    border: 1px solid var(--my-border-secondary);
+    max-width: 100%;
 }
 
+.my-input-control.new label {
+    font-weight: var(--fw-600);
+}
+
+.my-input-control.new input {
+    max-width: 100%;
+    background-color: var(--my-white);
+    border-color: var(--my-border-secondary);
+    padding: 10px;
+}
+
+.my-input-control.new input:hover {
+    border-color: var(--my-border-primary);
+}
+
+.my-input-control.new input:focus {
+    border-color: transparent;
+}
 
 .my-input-control.full-width input {
     max-width: 100%;
@@ -616,8 +608,10 @@ textarea::placeholder {
 }
 
 .my-input-control input:focus,
+select:focus.select.dropdown:focus,
 .my-input-control textarea:focus {
-    outline: 2px solid var(--input-focus);
+    border: 1px solid transparent;
+    outline: 3px solid var(--input-focus);
 }
 
 .my-input-control .label {
@@ -657,16 +651,25 @@ input.error~.error-message {
     max-width: 100%;
 }
 
+/* error message new */
+input.error~.error-message-new {
+    display: block;
+    background-color: transparent;
+    max-width: 100%;
+}
+
+
 .my-input-control.error input {
     border: 2px solid var(--my-red);
 }
 
 .my-input-control small,
-.my-input-control .error-message {
+.my-input-control .error-message,
+.error-message-new {
     color: red;
     display: none;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .my-input-control.error small,
@@ -1606,6 +1609,7 @@ input::placeholder {
     padding: 12px;
     margin: 0;
     max-width: 100%;
+    border: 1px solid transparent;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
@@ -1619,7 +1623,7 @@ input::placeholder {
     max-width: 120px; */
 }
 
-.dropdown-toggle {
+.common-dropdown-1 .dropdown-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1630,6 +1634,9 @@ input::placeholder {
     width: 100%;
     border-radius: var(--radius-sm);
     padding: 0 6px;
+    border-left: 1px solid var(--my-border-secondary);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .common-dropdown-1 .dropdown-items {
@@ -1707,12 +1714,15 @@ input::placeholder {
 }
 
 .common-dropdown-1.phone input {
-    border-left: 1px solid var(--my-bg-secondary);
+    border-left: 1px solid transparent !important;
     border-radius: 4px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
+.common-dropdown-1.phone .dropdown-toggle {
+    border-left: 1px solid transparent;
+}
 
 
 .common-dropdown-1.phone .dropdown-search {
@@ -2792,15 +2802,20 @@ input[type="radio"]:checked::after {
 /*****  Base  *****/
 .base {
     position: absolute;
-    top: 4px;
-    right: 4px;
-    padding: 2px 6px;
-    font-size: 14px;
-    background-color: var(--my-primary-color);
+    z-index: 4;
+    top: -4px;
+    right: -5px;
+    padding: 1px 5px;
+    font-size: 11px;
+    background-color: var(--my-success);
     text-transform: lowercase;
     color: var(--my-white);
     transition: .2s linear;
-    border-radius: 3px;
+    border-radius: 50%;
+    font-weight: 600;
+    border: 4px solid rgb(245, 234, 234);
+    border: 4px solid var(--my-border-color);
+    /* border: 4px solid rgb(207, 248, 255); */
 }
 
 .tag {
@@ -3863,7 +3878,7 @@ input[type="radio"]:checked::after {
     transform: translate(-50%, -50%);
     transform-origin: 50% 50%;
     content: '';
-    background-color: var(--my-white-off2);
+    background-color: var(--my-border-secondary);
     border-radius: 50%;
     opacity: 0;
     transition: all .3s;
@@ -4418,6 +4433,7 @@ ___________________________________*/
 
 .search-input {
     position: relative;
+    max-width: 400px;
 }
 
 .search-input svg,
@@ -5112,6 +5128,7 @@ ________________________________*/
 
 
 
+
 /* ____________   Our Rates  ___________ */
 .our-rates-area .card {
     padding: 15px 35px;
@@ -5777,15 +5794,41 @@ _____________________________________*/
 
 
 /* select */
+
+/*_______________________________*\
+  ||     Select and option     ||
+\*_______________________________*/
 .select,
 ::picker(select) {
-    width: fit-content;
     overflow: hidden;
     appearance: base-select;
+    box-shadow: 1px 2px 3px rgb(34, 31, 31, .1);
     border: 1px solid var(--my-white-off2);
     font-weight: 500;
-    min-width: 110px;
-    box-shadow: var(--shadow-2);
+    padding: 10px 4px;
+    border-radius: var(--radius-md);
+}
+
+.select>option {
+    margin: 4px;
+    cursor: pointer;
+    padding: 4px;
+    font-weight: 500;
+    background-color: var(--my-bg-secondary);
+    border: 1px solid var(--my-white-off);
+}
+
+.select option:hover {
+    background-color: var(--my-border-secondary);
+}
+
+.select option:checked {
+    background-color: var(--my-border-secondary);
+}
+
+.select:hover {
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .select {
@@ -5795,9 +5838,68 @@ _____________________________________*/
     border: 1px solid var(--my-border-primary);
     border-radius: 40px;
     box-shadow: var(--shadow-3);
+    position: relative;
+}
+
+.select,
+::picker(select) {
+    width: fit-content;
+    overflow: hidden;
+    appearance: base-select;
+    border: 1px solid var(--my-border-secondary);
+    font-weight: 500;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 
+.select::-webkit-scrollbar {
+    width: 10px;
+    height: 14px;
+    background-color: var(--my-white);
+    border-radius: 12px;
+}
+
+.select-sm::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--my-white-off);
+}
+
+.select:hover::-webkit-scrollbar,
+.select-sm:hover::-webkit-scrollbar {
+    border-radius: 0px;
+    border: 1px solid var(--my-bg-secondary);
+}
+
+.select:hover::-webkit-scrollbar {
+    border: 1px solid var(--my-bg-secondary);
+}
+
+
+
+.select {
+    scrollbar-width: thin;
+    scrollbar-color: var(--my-bg-white-off) var(--my-white-off2);
+}
+
+
+.select.dropdown option {
+    width: 100%;
+    min-width: inherit;
+    box-sizing: border-box;
+    padding: 6px;
+    max-width: 99%;
+}
+
+.select.dropdown {
+    border-radius: 6px;
+    width: 100%;
+}
+
+.select.dropdown::picker(select) {
+    border-color: var(--my-border-secondary);
+}
 
 /*________________________________*\
   ||     Down arrow animation     ||

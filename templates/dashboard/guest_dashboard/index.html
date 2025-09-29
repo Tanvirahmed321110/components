@@ -3093,7 +3093,7 @@
 
 
                     <!--============|| Right Side ||==========-->
-                    <div class="my-d-flex my-align-center my-gap-6">
+                    <div class="my-d-flex my-align-center my-gap-8">
                         <!-- Date -->
                         <div
                             class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
@@ -3116,7 +3116,7 @@
                                 Today Nov, 2025</time>
                         </div>
 
-                        <div class="my-d-flex my-align-center my-gap-2">
+                        <div class="my-d-flex my-align-center my-gap-4">
                             <!--===== Message =====-->
                             <div>
                                 <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3134,6 +3134,8 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
+                                    <!-- when active class add then show it -->
+                                    <div class="base active">2</div>
 
                                     <!-- Tooltip Text -->
                                     <div class="show-text">Message</div>
@@ -3142,7 +3144,8 @@
 
                             <div>
                                 <!--===== Notification ======-->
-                                <button class="icon-hover my-tooltip" aria-label="Open Notification">
+                                <button class="icon-hover notifications-btn my-p-relative my-tooltip"
+                                    aria-label="Open Notification">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3150,6 +3153,9 @@
                                             stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
+
+                                    <!-- when active class add then show it -->
+                                    <div class="base active">1</div>
 
                                     <!-- Tooltip Text -->
                                     <div class="show-text">Notifications</div>
@@ -3160,7 +3166,7 @@
 
                         <!--====== Switch To Host Button ======-->
                         <div>
-                            <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
+                            <button class="my-btn message-btn my-secondary-btn my-btn-sm switch-to-host"
                                 aria-label="Switch to host view">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

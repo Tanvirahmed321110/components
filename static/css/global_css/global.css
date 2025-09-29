@@ -23,7 +23,7 @@
     --my-red: red;
     --my-orange: #FC5A31;
     --my-blue: #9b5de5;
-    --input-focus: #0f463821;
+    --input-focus: #0f463828;
 
     --my-white-off: #f1f1f1;
     --my-white-off2: #e0e0e0;
@@ -135,8 +135,8 @@
         0px 4px 6px -1px #0A0D120A;
     --shadow-lg: 0px 2px 2px -1px #0A0D120A, 0px 4px 6px -2px #0A0D1208, 0px 12px 16px -4px #0a0d1221;
     --shadow-all-sm:
-        0 0 4px rgba(0, 0, 0, 0.05),
-        0 0 5px rgba(0, 0, 0, 0.07);
+        0 0 4px rgba(0, 0, 0, 0.04),
+        0 0 5px rgba(0, 0, 0, 0.05);
 
     /* Medium */
     --shadow-all-md:

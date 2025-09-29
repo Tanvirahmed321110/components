@@ -259,3 +259,30 @@
     top: 18px;
     right: -4px;
 }
+
+
+
+/* Profile info page */
+.profile-info {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--my-bg-secondary);
+    padding: 22px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--my-white-off);
+}
+
+
+
+.identity-wrapper .identity-block {
+    display: none;
+}
+
+.identity-wrapper .identity-block.active {
+    display: block;
+}
+
+.identity-wrapper input,
+.identity-wrapper .my-input-control {
+    max-width: 100%;
+}
