@@ -212,6 +212,7 @@ aside .bottom {
 
 .sidebar .bottom .miscellaneous-nav {
     border-top: 1px solid var(--my-text-tertiary);
+    border-bottom: 1px solid var(--my-text-tertiary);
     padding: 8px 12px 8px 12px;
 }
 

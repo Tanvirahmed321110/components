@@ -132,6 +132,8 @@
     transition: .2s linear;
 }
 
+
+/*===================  Copon Page =================*/
 .copon-offer .popular-copons .item {
     color: var(--my-white-off);
     border: 8px solid var(--my-white);
@@ -164,7 +166,7 @@
 }
 
 .copon-offer .popular-copons .item:nth-child(6) {
-    background-color: #da5b3b;
+    background-color: #E62E05;
 }
 
 .copon-offer .popular-copons .item:hover {
@@ -226,11 +228,7 @@
 
 
 
-
-
-
-
-/* Settig Item */
+/*===================  Setting Page  =================*/
 .setting-item {
     border-top: 1px solid var(--my-border-secondary);
 }
@@ -261,7 +259,7 @@
 }
 
 
-
+/*===================  Edit Profile Page  =================*/
 /* Profile info page */
 .profile-info {
     max-width: 100%;

@@ -2813,9 +2813,8 @@ input[type="radio"]:checked::after {
     transition: .2s linear;
     border-radius: 50%;
     font-weight: 600;
-    border: 4px solid rgb(245, 234, 234);
-    border: 4px solid var(--my-border-color);
-    /* border: 4px solid rgb(207, 248, 255); */
+    border: 3px solid var(--my-border-color);
+    /* animation: pulse 1s linear infinite; */
 }
 
 .tag {
@@ -5933,26 +5932,7 @@ _____________________________________*/
     animation: move 3s ease-out 2s infinite;
 }
 
-@-webkit-keyframes move {
-    25% {
-        opacity: 1;
-    }
 
-    33% {
-        opacity: 1;
-        transform: translateY(30px);
-    }
-
-    67% {
-        opacity: 1;
-        transform: translateY(40px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(55px) scale3d(.5, .5, .5);
-    }
-}
 
 @keyframes move {
     25% {
