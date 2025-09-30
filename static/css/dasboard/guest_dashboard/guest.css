@@ -3,6 +3,14 @@
 =====||   Header  Start Here    ||=====
 =======================================
 */
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    /* height: 100%; */
+    position: relative;
+    overflow: hidden;
+}
+
 header {
     position: fixed;
     left: 0;
@@ -12,6 +20,8 @@ header {
     box-shadow: var(--shadow-3);
     border: 1px solid var(--my-white-off);
     z-index: 3;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 header .header-top {
@@ -61,18 +71,23 @@ aside.sidebar {
     position: fixed;
     left: 0;
     top: 125px;
-    height: calc(100dvh - 118px);
+    height: calc(100dvh - 125px);
     display: flex;
     flex-direction: column;
     z-index: 3;
     box-shadow: var(--shadow-lg);
     transition: .2s linear;
+    position: sticky;
 }
 
 
 /* Active Class */
 aside.sidebar.active {
     width: 90px;
+}
+
+aside.sidebar.active #misc-nav-heading {
+    font-size: 9px;
 }
 
 aside.active .top .content {
@@ -243,6 +258,7 @@ aside .ads-video video {
 
 .ads-video .video-list {
     position: relative;
+    height: 180px;
 }
 
 .ads-video .ads-item {
@@ -346,6 +362,8 @@ main {
     padding-bottom: 0px;
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
+    position: absolute;
+    z-index: 2;
 }
 
 /* Active Class */

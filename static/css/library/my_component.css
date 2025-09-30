@@ -1571,11 +1571,13 @@ input::placeholder {
 }
 
 .my-has-scrollbar:hover::-webkit-scrollbar {
-    border: 1px solid var(--my-bg-secondary);
+    border: 1px solid var(--my-border-secondary);
+    border-left: 2px solid white;
+    border-top: none;
 }
 
 .my-has-scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--my-gray);
+    background-color: var(--my-white-off2);
 }
 
 .my-has-scrollbar::-webkit-scrollbar {
@@ -1583,7 +1585,7 @@ input::placeholder {
 }
 
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
-    background-color: var(--my-bg-white-off2);
+    background-color: var(--my-bg-white);
 }
 
 
