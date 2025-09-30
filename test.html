@@ -1,227 +1,175 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rotating Dashed Upload</title>
+        <title>Language Dropdown</title>
         <style>
-            :root {
-                --my-white: #fff;
-                --my-white-off2: #ccc;
-                --my-border-secondary: #ccc;
-                --radius-lg: 12px;
-                --radius-xl: 20px;
-                --fs-sm: 14px;
-                --my-text-quaternary: #666;
+            body {
+                font-family: Arial, sans-serif;
+                background: #f9f9f9;
+                padding: 40px;
             }
 
-            /* Upload card */
-            .upload-card {
-                background: var(--my-white);
-                padding: 28px 28px 18px 28px;
-                border-radius: var(--radius-xl);
-                width: 400px;
-                text-align: center;
-                border: 1px solid var(--my-border-secondary);
-                margin: 50px auto;
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                width: 280px;
             }
 
-            /* Title */
-            .upload-card h4 {
-                margin-bottom: 20px;
-                font-size: 22px;
-                color: #333;
+            .form-group label {
+                font-size: 14px;
+                color: #555;
             }
 
-            /* Upload area */
-            .upload-area {
-                display: block;
-                /* allows width/height */
-                width: 100%;
-                height: 300px;
-                /* desired height */
+            .language-dropdown {
                 position: relative;
+            }
+
+            .language-dropdown .selected {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                background: #fff;
                 cursor: pointer;
-                overflow: hidden;
-                border-radius: var(--radius-lg);
+                font-size: 14px;
             }
 
-            /* Rotating dashed border container */
-            .rotating-dashed {
-                position: relative;
-                width: 100%;
-                height: 100%;
+            .language-dropdown .selected .left {
+                display: flex;
+                align-items: center;
+                gap: 8px;
             }
 
-            /* Dashed lines animation */
-            .rotating-dashed .dashing {
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-            }
-
-            .rotating-dashed .dashing:nth-of-type(1) {
-                transform: rotate(0deg);
-            }
-
-            .rotating-dashed .dashing:nth-of-type(2) {
-                transform: rotate(90deg);
-            }
-
-            .rotating-dashed .dashing:nth-of-type(3) {
-                transform: rotate(180deg);
-            }
-
-            .rotating-dashed .dashing:nth-of-type(4) {
-                transform: rotate(270deg);
-            }
-
-            .rotating-dashed .dashing i {
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 200%;
-                border-bottom: 2px dashed var(--my-white-off2);
-                animation: slideDash 2s linear infinite;
-            }
-
-            /* Centered icon and text */
-            .rotating-dashed .my-radius-md {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: var(--my-white);
-                padding: 15px;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            .rotating-dashed p {
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                color: var(--my-text-quaternary);
-                margin: 0;
-                font-size: var(--fs-sm);
-            }
-
-            /* File input invisible */
-            .upload-area input[type="file"] {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                cursor: pointer;
-            }
-
-            /* Error message */
-            .error-message {
-                color: red;
-                font-size: 13px;
-                margin-top: 8px;
-                display: none;
-            }
-
-            /* Image preview */
-            #preview {
-                max-width: 80%;
-                max-height: 150px;
-                display: none;
-                margin: 10px auto;
-                border-radius: 8px;
+            .language-dropdown .selected img {
+                width: 20px;
+                height: 14px;
                 object-fit: cover;
-                position: relative;
-                z-index: 2;
             }
 
-            /* Animate dashed line */
-            @keyframes slideDash {
-                from {
-                    transform: translateX(0);
-                }
+            .language-dropdown .dropdown-menu {
+                position: absolute;
+                top: 110%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                display: none;
+                max-height: 200px;
+                overflow-y: auto;
+                z-index: 10;
+            }
 
-                to {
-                    transform: translateX(-50%);
-                }
+            .language-dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .language-dropdown .dropdown-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .language-dropdown .dropdown-list li {
+                padding: 10px 12px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            .language-dropdown .dropdown-list li:hover,
+            .language-dropdown .dropdown-list li.active {
+                background: #f0f0f0;
+            }
+
+            .arrow {
+                font-size: 12px;
+                color: #666;
             }
         </style>
     </head>
 
     <body>
 
-        <div class="upload-card">
-            <h4>Upload Your File</h4>
-            <label class="upload-area" id="uploadArea">
-                <div class="rotating-dashed">
-                    <span class="dashing"><i></i></span>
-                    <span class="dashing"><i></i></span>
-                    <span class="dashing"><i></i></span>
-                    <span class="dashing"><i></i></span>
-
-                    <!-- Center icon -->
-                    <div class="my-radius-md">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M6.666 13.333L9.999 10M9.999 10L13.333 13.333M9.999 10V17.5" stroke="#414651"
-                                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+        <div class="form-group">
+            <label for="language">Language</label>
+            <div class="language-dropdown" id="languageDropdown">
+                <div class="selected">
+                    <div class="left">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English">
+                        <span>English</span>
                     </div>
-
-                    <p>Drag & drop your file here<br>or click to select</p>
-                    <input type="file" id="fileInput" accept="*/*">
+                    <span class="arrow">▼</span>
                 </div>
-                <img id="preview" alt="Preview">
-            </label>
-            <div class="error-message" id="errorMessage">Invalid file type. Please upload an image.</div>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-list">
+                        <li data-value="en"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
+                        <li data-value="bn"><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
+                        <li data-value="hi"><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
+                        <li data-value="fr"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="language-dropdown" id="">
+                <div class="selected">
+                    <div class="left">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English">
+                        <span>GG</span>
+                    </div>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-list">
+                        <li data-value="en"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
+                        <li data-value="bn"><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
+                        <li data-value="hi"><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
+                        <li data-value="fr"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <script>
-            let onlyImages = false; // default: allow any file
+            const dropdown = document.getElementById('languageDropdown');
+            const selected = dropdown.querySelector('.selected');
+            const items = dropdown.querySelectorAll('.dropdown-list li');
 
-            // Call this function to allow only images
-            function setImageUploadMode(value) {
-                onlyImages = value;
-                const input = document.getElementById('fileInput');
-                input.value = '';
-                document.getElementById('preview').style.display = 'none';
-                document.getElementById('errorMessage').style.display = 'none';
-            }
-
-            // Handle file selection
-            const fileInput = document.getElementById('fileInput');
-            const preview = document.getElementById('preview');
-            const errorMessage = document.getElementById('errorMessage');
-
-            fileInput.addEventListener('change', () => {
-                const file = fileInput.files[0];
-                handleFile(file);
+            // Toggle dropdown
+            selected.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
             });
 
-            function handleFile(file) {
-                if (!file) return;
+            // Select language
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    items.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    selected.querySelector('.left').innerHTML = item.innerHTML;
+                    dropdown.classList.remove('active');
+                });
+            });
 
-                if (onlyImages && !file.type.startsWith('image/')) {
-                    errorMessage.style.display = 'block';
-                    preview.style.display = 'none';
-                    fileInput.value = '';
-                    return;
+            // Close on outside click
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
                 }
+            });
+        </script>
 
-                errorMessage.style.display = 'none';
+    </body>
 
-                // Show preview if image
-                if (file.type.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = e => {
-                        preview.src = e.target.result;
-                        preview.style.display = 'block';
-                    };
-                    reader.readAsDataURL(file);
-                } else {
-                    preview.style.display =
+</html>
+```
