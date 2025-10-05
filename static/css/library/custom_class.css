@@ -4247,13 +4247,18 @@ tr {
 .my-justify-start,
 .my-justify-between,
 .my-justify-around,
-.my-flex-start {
+.my-flex-start,
+.my-align-stretch {
     display: flex;
 }
 
 .my-flex-center {
     align-items: center;
     justify-content: center;
+}
+
+.my-align-stretch {
+    align-items: stretch;
 }
 
 .my-flex-between {

@@ -3179,7 +3179,7 @@
             ===================================================
             -->
             <section>
-                <div class="my-bg-white my-shadow-1 my-p-12 my-radius-xl my-m-12">
+                <div class="my-bg-white my-shadow-1 my-p-12 my-radius-xl my-m-12 tabs">
 
                     <!--=========================||  Top Header  ||===========================-->
                     <div class="my-flex-between">
@@ -3206,11 +3206,11 @@
                     <div class="my-mt-10">
                         <ul class="tab1-btns my-bg-white" role="tablist">
                             <li>
-                                <button class="tab-btn active" data-tab="general" role="tab"
-                                    aria-controls="panel-booking"> General</button>
+                                <button class="tab-btn " data-tab="general" role="tab" aria-controls="panel-booking">
+                                    General</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="security-setting" role="tab"
+                                <button class="tab-btn active" data-tab="security-setting" role="tab"
                                     aria-controls="panel-history">Security Setting</button>
                             </li>
                             <li>
@@ -3759,7 +3759,7 @@
 
 
                             <!--=================||  Tab Content For Security Setting  ||==================-->
-                            <div class="tab-content active" id="general">
+                            <div class="tab-content active" id="security-setting">
 
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <!-- Top -->
@@ -3834,8 +3834,48 @@
                                     </div>
 
                                     <!-- Save and Cancel Buttons -->
-                                    <div class="setting-item my-py-9">
-                                        <div class="my-d-flex  my-gap-4 my-justify-end">
+                                    <div class="setting-item my-py-9 my-w-100-p my-d-flex my-justify-end ">
+                                        <div class=" my-align-stretch   my-gap-4">
+                                            <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
+                                            <button class="my-btn fs-sm my-primary-btn" type="submit">Update
+                                                Pasword</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                                <div class="two-fector my-radius-xl my-p-12 my-border">
+                                    <div>
+                                        <div>
+                                            <h4 class="my-text-primary">Two Factor Authintication</h4>
+                                            <p class="my-mt-1 my-text-tertiary">Enable Two factor authentication for
+                                                extra security lair
+                                            </p>
+                                        </div>
+
+                                        <div class="my-mt-10">
+                                            <button class="my-btn my-primary-btn">Setup 2 FA</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=================||  Tab Content For Password  ||==================-->
+                            <div class="tab-content active" id="security-setting">
+
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <!-- Top -->
+                                    <div class="my-flex-between my-pb-10">
+                                        <div>
+                                            <h3 class="my-text-primary">Password</h3>
+                                            <p class="my-text-tertiary my-mt-1">Please enter your current password to
+                                                change your password.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Save and Cancel Buttons -->
+                                    <div class="setting-item my-py-9 my-w-100-p my-d-flex my-justify-end ">
+                                        <div class=" my-align-stretch   my-gap-4">
                                             <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
                                             <button class="my-btn fs-sm my-primary-btn" type="submit">Update
                                                 Pasword</button>
