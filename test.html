@@ -1,175 +1,149 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
+<style>
+    .language-dropdown {
+        position: relative;
+        width: 220px;
+        margin-bottom: 20px;
+        user-select: none;
+    }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Language Dropdown</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background: #f9f9f9;
-                padding: 40px;
-            }
+    .language-dropdown>div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
 
-            .form-group {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                width: 280px;
-            }
+    .language-dropdown .left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-            .form-group label {
-                font-size: 14px;
-                color: #555;
-            }
+    .language-dropdown img {
+        width: 20px;
+        height: 14px;
+    }
 
-            .language-dropdown {
-                position: relative;
-            }
+    .language-dropdown .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        display: none;
+        border-radius: 0 0 4px 4px;
+        z-index: 10;
+    }
 
-            .language-dropdown .selected {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px 12px;
-                border: 1px solid #ccc;
-                border-radius: 6px;
-                background: #fff;
-                cursor: pointer;
-                font-size: 14px;
-            }
+    .language-dropdown.open .dropdown-menu {
+        display: block;
+    }
 
-            .language-dropdown .selected .left {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
+    .language-dropdown .dropdown-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-            .language-dropdown .selected img {
-                width: 20px;
-                height: 14px;
-                object-fit: cover;
-            }
+    .language-dropdown .dropdown-list li {
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
 
-            .language-dropdown .dropdown-menu {
-                position: absolute;
-                top: 110%;
-                left: 0;
-                width: 100%;
-                background: #fff;
-                border: 1px solid #ccc;
-                border-radius: 6px;
-                display: none;
-                max-height: 200px;
-                overflow-y: auto;
-                z-index: 10;
-            }
+    .language-dropdown .dropdown-list li:hover,
+    .language-dropdown .dropdown-list li.active {
+        background: #f0f0f0;
+    }
+</style>
 
-            .language-dropdown.active .dropdown-menu {
-                display: block;
-            }
-
-            .language-dropdown .dropdown-list {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            .language-dropdown .dropdown-list li {
-                padding: 10px 12px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                cursor: pointer;
-                font-size: 14px;
-            }
-
-            .language-dropdown .dropdown-list li:hover,
-            .language-dropdown .dropdown-list li.active {
-                background: #f0f0f0;
-            }
-
-            .arrow {
-                font-size: 12px;
-                color: #666;
-            }
-        </style>
-    </head>
-
-    <body>
-
-        <div class="form-group">
-            <label for="language">Language</label>
-            <div class="language-dropdown" id="languageDropdown">
-                <div class="selected">
-                    <div class="left">
-                        <img src="https://flagcdn.com/w20/us.png" alt="English">
-                        <span>English</span>
-                    </div>
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="dropdown-menu">
-                    <ul class="dropdown-list">
-                        <li data-value="en"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
-                        <li data-value="bn"><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
-                        <li data-value="hi"><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
-                        <li data-value="fr"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
-                    </ul>
-                </div>
-            </div>
+<div class="language-dropdown">
+    <div>
+        <div class="left">
+            <img src="https://flagcdn.com/w20/us.png" alt="English">
+            <span>English</span>
         </div>
+        <span class="arrow">▼</span>
+    </div>
+    <div class="dropdown-menu">
+        <ul class="dropdown-list">
+            <li class="active"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
+            <li><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
+            <li><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
+            <li><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
+        </ul>
+    </div>
+</div>
 
-        <div class="form-group">
-            <div class="language-dropdown" id="">
-                <div class="selected">
-                    <div class="left">
-                        <img src="https://flagcdn.com/w20/us.png" alt="English">
-                        <span>GG</span>
-                    </div>
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="dropdown-menu">
-                    <ul class="dropdown-list">
-                        <li data-value="en"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
-                        <li data-value="bn"><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
-                        <li data-value="hi"><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
-                        <li data-value="fr"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
-                    </ul>
-                </div>
-            </div>
+<div class="language-dropdown">
+    <div>
+        <div class="left">
+            <img src="https://flagcdn.com/w20/fr.png" alt="French">
+            <span>French</span>
         </div>
+        <span class="arrow">▼</span>
+    </div>
+    <div class="dropdown-menu">
+        <ul class="dropdown-list">
+            <li><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
+            <li><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
+            <li><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
+            <li class="active"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
+        </ul>
+    </div>
+</div>
 
-        <script>
-            const dropdown = document.getElementById('languageDropdown');
-            const selected = dropdown.querySelector('.selected');
-            const items = dropdown.querySelectorAll('.dropdown-list li');
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdowns = document.querySelectorAll(".language-dropdown");
 
-            // Toggle dropdown
-            selected.addEventListener('click', () => {
-                dropdown.classList.toggle('active');
+        dropdowns.forEach(dropdown => {
+            const selectedBox = dropdown.querySelector("div:first-child");
+            const selectedText = selectedBox.querySelector(".left span");
+            const selectedImg = selectedBox.querySelector(".left img");
+            const menu = dropdown.querySelector(".dropdown-menu");
+            const items = dropdown.querySelectorAll(".dropdown-list li");
+
+            // Toggle menu
+            selectedBox.addEventListener("click", () => {
+                dropdowns.forEach(d => {
+                    if (d !== dropdown) d.classList.remove("open");
+                });
+                dropdown.classList.toggle("open");
             });
 
-            // Select language
+            // Select option
             items.forEach(item => {
-                item.addEventListener('click', () => {
-                    items.forEach(i => i.classList.remove('active'));
-                    item.classList.add('active');
-                    selected.querySelector('.left').innerHTML = item.innerHTML;
-                    dropdown.classList.remove('active');
+                item.addEventListener("click", () => {
+                    const text = item.textContent.trim();
+                    const img = item.querySelector("img").src;
+
+                    // Update selected
+                    selectedText.textContent = text;
+                    selectedImg.src = img;
+
+                    // Active state
+                    items.forEach(i => i.classList.remove("active"));
+                    item.classList.add("active");
+
+                    dropdown.classList.remove("open");
                 });
             });
+        });
 
-            // Close on outside click
-            document.addEventListener('click', (e) => {
-                if (!dropdown.contains(e.target)) {
-                    dropdown.classList.remove('active');
-                }
-            });
-        </script>
-
-    </body>
-
-</html>
-```
+        // Close dropdown if clicked outside
+        document.addEventListener("click", e => {
+            if (!e.target.closest(".language-dropdown")) {
+                dropdowns.forEach(d => d.classList.remove("open"));
+            }
+        });
+    });
+</script>

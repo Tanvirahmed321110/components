@@ -3235,320 +3235,631 @@
                         <div class="tab-contents common">
 
                             <!--=================||  Tab Content For General Info  ||==================-->
-                            <div class="tab-content active " id="general">
+                            <div class="tab-content" id="general">
 
-                                <!-- Top -->
-                                <div class="my-flex-between my-pb-10">
-                                    <div>
-                                        <h3 class="my-text-primary">Personal Info</h3>
-                                        <p class="my-text-tertiary my-mt-1">Update your photo and personal details here.
-                                        </p>
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <!-- Top -->
+                                    <div class="my-flex-between my-pb-10">
+                                        <div>
+                                            <h3 class="my-text-primary">Personal Info</h3>
+                                            <p class="my-text-tertiary my-mt-1">Update your photo and personal details
+                                                here.
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div>
-                                        <div class="my-d-flex  my-gap-4">
+                                    <!--======= For Name =======-->
+                                    <div class="my-d-flex setting-item  my-py-9">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Name*</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="my-input-control">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <input type="text" placeholder="First Name">
+                                                <small class="error-message">error</small>
+                                            </div>
+                                            <div class="my-input-control">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <!-- <input class="error" type="text" placeholder="Last Name"> -->
+                                                <input class="" type="text" placeholder="Last Name">
+                                                <small class="error-message">error</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--======= For Eamil =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Email*</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="my-input-control full-width">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <input type="email" placeholder="Eamil">
+                                                <small class="error-message">error</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--======= For Phone =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Phone*</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="common-dropdown-1 phone">
+                                                <div class="my-d-flex area my-mt-1">
+
+                                                    <!-- Dropdown -->
+                                                    <div class="dropdown">
+                                                        <!-- Button Here -->
+                                                        <button class="dropdown-toggle" type="button"
+                                                            aria-haspopup="listbox" aria-expanded="false"
+                                                            aria-label="Select country">
+                                                            <img class="my-w-10" src="https://flagcdn.com/w20/in.png"
+                                                                alt="img" loading="lazy">
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>+91</span>
+                                                                <i class="ri-arrow-down-s-line"></i>
+                                                            </div>
+                                                        </button>
+
+
+                                                        <div class="dropdown-items my-has-scrollbar-sm">
+                                                            <div class="my-m-2">
+                                                                <!-- search input -->
+                                                                <input type="text" class="dropdown-search"
+                                                                    placeholder="Search country or code..." />
+                                                            </div>
+
+                                                            <!-- Dropdown Here -->
+                                                            <ul class="" role="listbox" aria-label="Country options">
+                                                                <li class="item" data-code="+880" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/bd.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+88</span>
+                                                                    <div>Bangladesh</div>
+                                                                </li>
+                                                                <li class="item active" data-code="+1" role="option"
+                                                                    aria-selected="true">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/us.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+33</span>
+                                                                    <div>USA</div>
+                                                                </li>
+                                                                <li class="item" data-code="+44" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/gb.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+22</span>
+                                                                    <div>UK</div>
+                                                                </li>
+                                                                <li class="item" data-code="+91" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/in.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+11</span>
+                                                                    <div>India</div>
+                                                                </li>
+                                                                <li class="item" data-code="+880" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/bd.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+88</span>
+                                                                    <div>Bangladesh</div>
+                                                                </li>
+                                                                <li class="item active" data-code="+1" role="option"
+                                                                    aria-selected="true">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/us.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+33</span>
+                                                                    <div>USA</div>
+                                                                </li>
+                                                                <li class="item" data-code="+44" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/gb.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+22</span>
+                                                                    <div>UK</div>
+                                                                </li>
+                                                                <li class="item" data-code="+91" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/in.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+11</span>
+                                                                    <div>India</div>
+                                                                </li>
+                                                                <li class="item" data-code="+880" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/bd.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+88</span>
+                                                                    <div>Bangladesh</div>
+                                                                </li>
+                                                                <li class="item active" data-code="+1" role="option"
+                                                                    aria-selected="true">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/us.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+33</span>
+                                                                    <div>USA</div>
+                                                                </li>
+                                                                <li class="item" data-code="+44" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/gb.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+22</span>
+                                                                    <div>UK</div>
+                                                                </li>
+                                                                <li class="item" data-code="+91" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/in.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+11</span>
+                                                                    <div>India</div>
+                                                                </li>
+                                                                <li class="item" data-code="+880" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/bd.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+88</span>
+                                                                    <div>Bangladesh</div>
+                                                                </li>
+                                                                <li class="item active" data-code="+1" role="option"
+                                                                    aria-selected="true">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/us.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+33</span>
+                                                                    <div>USA</div>
+                                                                </li>
+                                                                <li class="item" data-code="+44" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/gb.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+22</span>
+                                                                    <div>UK</div>
+                                                                </li>
+                                                                <li class="item" data-code="+91" role="option">
+                                                                    <img class="my-w-10"
+                                                                        src="https://flagcdn.com/w20/in.png" alt="img"
+                                                                        loading="lazy">
+                                                                    <span>+11</span>
+                                                                    <div>India</div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Input Here -->
+                                                    <div class="my-input-control">
+                                                        <!-- if you will add class .error in the input, then show error message -->
+                                                        <!-- <input type="tel" class="error" placeholder="Enter phone number"
+                                                                                            id="phone" aria-label="Phone number"> -->
+                                                        <input type="tel" class="" placeholder="Enter phone number"
+                                                            id="phone" aria-label="Phone number">
+                                                        <div class="error-message">Error Message Here</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--======= For Photo =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="left">
+                                            <div class="my-w-120 left my-fw-bold my-text-secondary my-d-flex my-gap-2">
+                                                Your Photo*
+                                                <div class="my-tooltip">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1732_12103)">
+                                                            <path
+                                                                d="M6.06065 6.00065C6.21739 5.5551 6.52675 5.17939 6.93395 4.94007C7.34116 4.70076 7.81991 4.61328 8.28544 4.69313C8.75096 4.77297 9.1732 5.015 9.47737 5.37634C9.78154 5.73767 9.94802 6.195 9.94732 6.66732C9.94732 8.00065 7.94732 8.66732 7.94732 8.66732M8.00065 11.334H8.00732M14.6673 8.00065C14.6673 11.6826 11.6826 14.6673 8.00065 14.6673C4.31875 14.6673 1.33398 11.6826 1.33398 8.00065C1.33398 4.31875 4.31875 1.33398 8.00065 1.33398C11.6826 1.33398 14.6673 4.31875 14.6673 8.00065Z"
+                                                                stroke="#A4A7AE" stroke-width="1.33333"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1732_12103">
+                                                                <rect width="16" height="16" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+
+                                                    <div class="show-text big">This will be displayed on your profile.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-text-tertiary">This will be displayed on your profile.</p>
+                                        </div>
+
+                                        <!-- Right -->
+                                        <div class="right my-d-flex my-flex-column my-justify-end ">
+                                            <div
+                                                class="my-d-flex my-gap-12  my-align-start my-justify-between my-w-100-p ">
+                                                <!-- Uploaded Image here -->
+                                                <div class="uploaded-img">
+                                                    <img class="profile-img-lg my-border" id="preview"
+                                                        src="/static/images/profile (1).png" alt="Preview">
+                                                </div>
+
+
+                                                <!--=======  Upload File  ========-->
+                                                <div class="upload-card my-flex-center my-flex-column">
+                                                    <h5 class="my-text-secondary my-mt-0">Upload Your Image</h5>
+
+                                                    <div class="rotating-dashed  my-mt-10">
+                                                        <span class="dashing"><i></i></span>
+                                                        <span class="dashing"><i></i></span>
+                                                        <span class="dashing"><i></i></span>
+                                                        <span class="dashing"><i></i></span>
+                                                        <label class="upload-area" id="uploadArea">
+
+                                                            <div
+                                                                class="my-radius-md my-d-inline-block my-shadow-1 my-border-secondary my-px-5 my-py-3">
+                                                                <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M6.66602 13.3333L9.99935 10M9.99935 10L13.3327 13.3333M9.99935 10V17.5M16.666 13.9524C17.6839 13.1117 18.3327 11.8399 18.3327 10.4167C18.3327 7.88536 16.2807 5.83333 13.7493 5.83333C13.5673 5.83333 13.3969 5.73833 13.3044 5.58145C12.2177 3.73736 10.2114 2.5 7.91602 2.5C4.46424 2.5 1.66602 5.29822 1.66602 8.75C1.66602 10.4718 2.36222 12.0309 3.48847 13.1613"
+                                                                        stroke="#414651" stroke-width="1.66667"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+
+
+                                                            <p class="my-mt-6 my-text-quaternary">Drag & drop your image
+                                                                here<strong class="my-fw-bold my-text-secondary"> or
+                                                                    click
+                                                                    to
+                                                                    select </strong>
+                                                            </p>
+                                                            <input type="file" id="fileInput" accept="/image*">
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="error-message" id="errorMessage">Invalid file type.
+                                                        Please
+                                                        upload an image.</div>
+                                                </div>
+                                            </div>
+
+                                            <!--======= Edit Profile =======-->
+                                            <div class="my-mt-8 my-d-flex my-justify-end my-align-end my-w-100-p">
+                                                <a href="./edit_profile.html"
+                                                    class="my-btn my-btn-sm my-primary-btn">Edit
+                                                    Profile</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--======= For Language =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Language</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="click-dropdown-parent common-dropdwon-2 my-w-100-p">
+                                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md active"
+                                                    role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/bd.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span
+                                                            class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary text-content">Bangla</span>
+                                                    </div>
+
+                                                    <span class="my-fs-lg my-text-quaternary"><i
+                                                            class="ri-arrow-down-s-line"></i></span>
+                                                </div>
+
+                                                <!-- Dropdown Here -->
+                                                <ul class="click-dropdown my-has-scrollbar-sm my-flex-column my-gap-1"
+                                                    role="listbox" aria-label="Select service">
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/bd.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">English</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/np.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Nepal</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/pk.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Arbi</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!--======= For Currency =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Currency</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="click-dropdown-parent common-dropdwon-2 my-w-100-p">
+                                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md active"
+                                                    role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/us.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text-content my-fw-bold">USD</span>
+                                                    </div>
+
+                                                    <span class=" my-fs-lg my-text-quaternary"><i
+                                                            class="ri-arrow-down-s-line"></i></span>
+                                                </div>
+
+                                                <!-- Dropdown Here -->
+                                                <ul class="click-dropdown my-has-scrollbar-sm my-flex-column my-gap-1"
+                                                    role="listbox" aria-label="Select service">
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/bd.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Taka</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/np.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Rupi</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/pk.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Dinar</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--======= For Timezone =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Timezone</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="click-dropdown-parent common-dropdwon-2 my-w-100-p">
+                                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md active"
+                                                    role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_1864_8276)">
+                                                                <path
+                                                                    d="M9.99935 4.99935V9.99935L13.3327 11.666M18.3327 9.99935C18.3327 14.6017 14.6017 18.3327 9.99935 18.3327C5.39698 18.3327 1.66602 14.6017 1.66602 9.99935C1.66602 5.39698 5.39698 1.66602 9.99935 1.66602C14.6017 1.66602 18.3327 5.39698 18.3327 9.99935Z"
+                                                                    stroke="#A4A7AE" stroke-width="1.66667"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_1864_8276">
+                                                                    <rect width="20" height="20" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                        <div class="text-content my-fw-bold">Pacific Standard Time (PST)
+                                                            <span>UTC−08:00</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <span class=" my-fs-lg my-text-quaternary"><i
+                                                            class="ri-arrow-down-s-line"></i></span>
+                                                </div>
+
+                                                <!-- Dropdown Here -->
+                                                <ul class="click-dropdown my-has-scrollbar-sm my-flex-column my-gap-1"
+                                                    role="listbox" aria-label="Select service">
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/bd.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Taka</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/np.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Rupi</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/pk.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Dinar</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--======= For Country =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
+
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Country</div>
+
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="click-dropdown-parent common-dropdwon-2 my-w-100-p">
+                                                <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md active"
+                                                    role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/us.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text-content my-fw-bold">USD</span>
+                                                    </div>
+
+                                                    <span class=" my-fs-lg my-text-quaternary"><i
+                                                            class="ri-arrow-down-s-line"></i></span>
+                                                </div>
+
+                                                <!-- Dropdown Here -->
+                                                <ul class="click-dropdown my-has-scrollbar-sm my-flex-column my-gap-1"
+                                                    role="listbox" aria-label="Select service">
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/bd.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Taka</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/np.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Rupi</span>
+                                                    </li>
+                                                    <li class="item my-d-flex my-align-center my-gap-4">
+                                                        <img class="my-w-10 my-h-8" src="https://flagcdn.com/w20/pk.png"
+                                                            alt="county img" loading="lazy">
+                                                        <span class="text">Dinar</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Save and Cancel Buttons -->
+                                    <div class="setting-item my-pt-9">
+                                        <div class="my-d-flex  my-gap-4 my-justify-end">
                                             <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
                                             <button class="my-btn fs-sm my-primary-btn">Save</button>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
+                            </div>
 
-                                <!--======= For Name =======-->
-                                <div class="my-d-flex setting-item  my-py-9">
 
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Name*</div>
+                            <!--=================||  Tab Content For Security Setting  ||==================-->
+                            <div class="tab-content active" id="general">
 
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="my-input-control">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <input type="text" placeholder="First Name">
-                                            <small class="error-message">error</small>
-                                        </div>
-                                        <div class="my-input-control">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <!-- <input class="error" type="text" placeholder="Last Name"> -->
-                                            <input class="" type="text" placeholder="Last Name">
-                                            <small class="error-message">error</small>
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <!-- Top -->
+                                    <div class="my-flex-between my-pb-10">
+                                        <div>
+                                            <h3 class="my-text-primary">Password</h3>
+                                            <p class="my-text-tertiary my-mt-1">Please enter your current password to
+                                                change your password.
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!--======= For Eamil =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
+                                    <!--======= For Name =======-->
+                                    <div class="my-d-flex setting-item  my-py-9">
 
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Email*</div>
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Current password <span
+                                                class="my-text-blue">*</span></div>
 
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="my-input-control full-width">
-                                            <!-- if you will add class .error in the input, then show error message -->
-                                            <input type="email" placeholder="Eamil">
-                                            <small class="error-message">error</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--======= For Phone =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
-
-                                    <!-- Left -->
-                                    <div class="my-w-120 left my-fw-bold my-text-secondary">Phone*</div>
-
-                                    <!-- Right -->
-                                    <div class="my-d-flex right my-gap-12 my-align-center">
-                                        <div class="common-dropdown-1 phone">
-                                            <div class="my-d-flex area my-mt-1">
-
-                                                <!-- Dropdown -->
-                                                <div class="dropdown">
-                                                    <!-- Button Here -->
-                                                    <button class="dropdown-toggle" type="button"
-                                                        aria-haspopup="listbox" aria-expanded="false"
-                                                        aria-label="Select country">
-                                                        <img class="my-w-10" src="https://flagcdn.com/w20/in.png"
-                                                            alt="img" loading="lazy">
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>+91</span>
-                                                            <i class="ri-arrow-down-s-line"></i>
-                                                        </div>
-                                                    </button>
-
-
-                                                    <div class="dropdown-items my-has-scrollbar-sm">
-                                                        <div class="my-m-2">
-                                                            <!-- search input -->
-                                                            <input type="text" class="dropdown-search"
-                                                                placeholder="Search country or code..." />
-                                                        </div>
-
-                                                        <!-- Dropdown Here -->
-                                                        <ul class="" role="listbox" aria-label="Country options">
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                            <li class="item" data-code="+880" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/bd.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+88</span>
-                                                                <div>Bangladesh</div>
-                                                            </li>
-                                                            <li class="item active" data-code="+1" role="option"
-                                                                aria-selected="true">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/us.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+33</span>
-                                                                <div>USA</div>
-                                                            </li>
-                                                            <li class="item" data-code="+44" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/gb.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+22</span>
-                                                                <div>UK</div>
-                                                            </li>
-                                                            <li class="item" data-code="+91" role="option">
-                                                                <img class="my-w-10"
-                                                                    src="https://flagcdn.com/w20/in.png" alt="img"
-                                                                    loading="lazy">
-                                                                <span>+11</span>
-                                                                <div>India</div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="my-input-control full-width">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <div class="toggle-password">
+                                                    <input type="password" placeholder="Current password" required="1">
+                                                    <div class="right-icon"><i class="ri-eye-line"></i></div>
                                                 </div>
-
-                                                <!-- Input Here -->
-                                                <div class="my-input-control">
-                                                    <!-- if you will add class .error in the input, then show error message -->
-                                                    <!-- <input type="tel" class="error" placeholder="Enter phone number"
-                                                        id="phone" aria-label="Phone number"> -->
-                                                    <input type="tel" class="" placeholder="Enter phone number"
-                                                        id="phone" aria-label="Phone number">
-                                                    <div class="error-message">Error Message Here</div>
-                                                </div>
-
+                                                <small class="error-message">error</small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!--======= For Photo =======-->
-                                <div class="my-d-flex setting-item  my-py-9 ">
+                                    <!--======= For Eamil =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
 
-                                    <!-- Left -->
-                                    <div class="left">
-                                        <div class="my-w-120 left my-fw-bold my-text-secondary my-d-flex my-gap-2">
-                                            Your Photo*
-                                            <div class="my-tooltip">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_1732_12103)">
-                                                        <path
-                                                            d="M6.06065 6.00065C6.21739 5.5551 6.52675 5.17939 6.93395 4.94007C7.34116 4.70076 7.81991 4.61328 8.28544 4.69313C8.75096 4.77297 9.1732 5.015 9.47737 5.37634C9.78154 5.73767 9.94802 6.195 9.94732 6.66732C9.94732 8.00065 7.94732 8.66732 7.94732 8.66732M8.00065 11.334H8.00732M14.6673 8.00065C14.6673 11.6826 11.6826 14.6673 8.00065 14.6673C4.31875 14.6673 1.33398 11.6826 1.33398 8.00065C1.33398 4.31875 4.31875 1.33398 8.00065 1.33398C11.6826 1.33398 14.6673 4.31875 14.6673 8.00065Z"
-                                                            stroke="#A4A7AE" stroke-width="1.33333"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1732_12103">
-                                                            <rect width="16" height="16" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-
-                                                <div class="show-text big">This will be displayed on your profile.</div>
-                                            </div>
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">New Password
+                                            <span class="my-text-blue">*</span>
                                         </div>
 
-                                        <p class="my-text-tertiary">This will be displayed on your profile.</p>
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="my-input-control full-width">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <div class="toggle-password">
+                                                    <input type="password" placeholder="Current password" required="1">
+                                                    <div class="right-icon"><i class="ri-eye-line"></i></div>
+                                                </div>
+                                                <small class="error-message">error</small>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <!-- Right -->
-                                    <div class="right my-d-flex my-flex-column my-justify-end ">
-                                        <div class="my-d-flex my-gap-12  my-align-start my-justify-between my-w-100-p ">
-                                            <!-- Uploaded Image here -->
-                                            <div class="uploaded-img">
-                                                <img class="profile-img-lg my-border" id="preview"
-                                                    src="/static/images/profile (1).png" alt="Preview">
-                                            </div>
+                                    <!--======= For Phone =======-->
+                                    <div class="my-d-flex setting-item  my-py-9 ">
 
+                                        <!-- Left -->
+                                        <div class="my-w-120 left my-fw-bold my-text-secondary">Confirm Password <span
+                                                class="my-text-blue">*</span></div>
 
-                                            <!--=======  Upload File  ========-->
-                                            <div class="upload-card my-flex-center my-flex-column">
-                                                <h5 class="my-text-secondary my-mt-0">Upload Your Image</h5>
-
-                                                <div class="rotating-dashed  my-mt-10">
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <span class="dashing"><i></i></span>
-                                                    <label class="upload-area" id="uploadArea">
-
-                                                        <div
-                                                            class="my-radius-md my-d-inline-block my-shadow-1 my-border-secondary my-px-5 my-py-3">
-                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M6.66602 13.3333L9.99935 10M9.99935 10L13.3327 13.3333M9.99935 10V17.5M16.666 13.9524C17.6839 13.1117 18.3327 11.8399 18.3327 10.4167C18.3327 7.88536 16.2807 5.83333 13.7493 5.83333C13.5673 5.83333 13.3969 5.73833 13.3044 5.58145C12.2177 3.73736 10.2114 2.5 7.91602 2.5C4.46424 2.5 1.66602 5.29822 1.66602 8.75C1.66602 10.4718 2.36222 12.0309 3.48847 13.1613"
-                                                                    stroke="#414651" stroke-width="1.66667"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-
-
-                                                        <p class="my-mt-6 my-text-quaternary">Drag & drop your image
-                                                            here<strong class="my-fw-bold my-text-secondary"> or
-                                                                click
-                                                                to
-                                                                select </strong>
-                                                        </p>
-                                                        <input type="file" id="fileInput" accept="/image*">
-                                                    </label>
+                                        <!-- Right -->
+                                        <div class="my-d-flex right my-gap-12 my-align-center">
+                                            <div class="my-input-control full-width">
+                                                <!-- if you will add class .error in the input, then show error message -->
+                                                <div class="toggle-password">
+                                                    <input type="password" placeholder="Current password" required="1">
+                                                    <div class="right-icon"><i class="ri-eye-line"></i></div>
                                                 </div>
-
-                                                <div class="error-message" id="errorMessage">Invalid file type.
-                                                    Please
-                                                    upload an image.</div>
+                                                <small class="error-message">error</small>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <!--======= Edit Profile =======-->
-                                        <div class="my-mt-8 my-d-flex my-justify-end my-align-end my-w-100-p">
-                                            <a href="./edit_profile.html" class="my-btn my-btn-sm my-primary-btn">Edit
-                                                Profile</a>
+                                    <!-- Save and Cancel Buttons -->
+                                    <div class="setting-item my-py-9">
+                                        <div class="my-d-flex  my-gap-4 my-justify-end">
+                                            <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
+                                            <button class="my-btn fs-sm my-primary-btn" type="submit">Update
+                                                Pasword</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                                <div class="two-fector my-radius-xl my-p-12 my-border">
+                                    <div>
+                                        <div>
+                                            <h4 class="my-text-primary">Two Factor Authintication</h4>
+                                            <p class="my-mt-1 my-text-tertiary">Enable Two factor authentication for
+                                                extra security lair
+                                            </p>
                                         </div>
 
+                                        <div class="my-mt-10">
+                                            <button class="my-btn my-primary-btn">Setup 2 FA</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -3561,10 +3872,10 @@
 
 
         <!--
-                =========================================================
-                =======||   Video Or Image Content  Start Here   ||======
-                =========================================================
-                -->
+            =========================================================
+            =======||   Video Or Image Content  Start Here   ||======
+            =========================================================
+            -->
         <div class="my-modal" id="ads-modal">
             <div class="modal-content ads-modal my-px-3 my-pt-3">
 

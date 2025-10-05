@@ -415,6 +415,7 @@
     box-shadow: 0px 0px 0px 1.48px #0A0D120D inset;
     box-sizing: border-box;
     width: fit-content;
+    text-wrap: nowrap;
 }
 
 
@@ -438,6 +439,7 @@
     border: 1.6px solid;
     line-height: var(--line-height-low);
     border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+    text-wrap: nowrap;
 }
 
 
@@ -541,14 +543,14 @@
 }
 
 .my-input-control input {
-    padding: 10px 12px;
+    padding: 12px 12px;
     border: 1px solid var(--my-border-secondary);
     outline: none;
     border-radius: var(--radius-sm);
     transition: .15s linear;
     max-width: 400px;
     width: 100%;
-    color: var(--my-text-secondary);
+    color: var(--my-text-primary);
     background-color: transparent;
     font-weight: var(--fw-500);
 }
@@ -727,10 +729,10 @@ input::placeholder {
     z-index: 2;
     padding: 3px;
     font-size: var(--fs-md);
-    background-color: #f3f3f3;
+    background-color: var(--my-border-secondary);
     height: 100%;
-    width: 36px;
-    height: 32px;
+    width: 34px;
+    height: 28px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1694,7 +1696,7 @@ input::placeholder {
 
 .common-dropdown-1 .area {
     border: 1px solid var(--my-border-secondary);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 0 2px;
     padding-left: 0;
 }
@@ -1732,6 +1734,27 @@ input::placeholder {
     margin: 4px !important;
     border-radius: 4px;
     max-width: 99%;
+}
+
+
+
+.click-dropdown-parent.common-dropdwon-2 .click-dropdown {
+    border: 1px solid var(--my-border-secondary);
+    animation: unset;
+    border-radius: var(--radius-lg);
+    max-height: 500px;
+    top: 100%;
+}
+
+.click-dropdown-parent.common-dropdwon-2 .click-dropdown .item {
+    border-radius: none;
+    margin: 2px;
+    width: calc(100% - 4px);
+}
+
+.click-dropdown-parent.common-dropdwon-2 .click-dropdown .item.active {
+    color: var(--my-text-primary);
+    font-weight: 600;
 }
 
 
@@ -5786,7 +5809,7 @@ _____________________________________*/
 }
 
 .calendar .calendar-footer button {
-    padding: 6px 12px;
+    padding: 10px 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;

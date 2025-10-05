@@ -212,6 +212,14 @@ aside .bottom {
     background-color: var(--my-secondary-color);
 }
 
+.switch-to-host {
+    background-color: var(--my-primary-color);
+}
+
+.switch-to-host:hover {
+    background-color: var(--my-secondary-color);
+}
+
 .switch-to-host:hover path {
     animation: shakeLR 1s ease;
 }
@@ -234,11 +242,17 @@ aside .bottom {
 .sidebar .bottom.my-has-scrollbar-sm::-webkit-scrollbar {
     background-color: var(--my-primary-color);
     background-color: var(--my-white);
+    width: 10px;
+    height: 10px;
+    background-color: var(--my-white);
 }
+
 
 .sidebar .bottom.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
     background-color: var(--my-primary-color);
-    border-left: 1px solid var(--my-text-tertiary);
+    background-color: var(--my-gray);
+    border-left: 1px solid var(--my-white);
+    border-top: 1px solid var(--my-white);
 }
 
 
@@ -277,6 +291,10 @@ aside .ads-video video {
     object-fit: cover;
 }
 
+aside .ads-video .btn-wrap {
+    width: 100%;
+}
+
 aside .ads-video .btn-wrap .item {
     position: absolute;
     display: flex;
@@ -284,7 +302,6 @@ aside .ads-video .btn-wrap .item {
     justify-content: center;
     z-index: 2;
     font-size: var(--fs-lg);
-    /* border: 1px solid var(--my-border-secondary); */
     box-shadow: var(--shadow-md);
 }
 
@@ -321,12 +338,61 @@ aside .ads-video .btn-wrap .mute-btn:hover i {
 }
 
 aside .ads-video .btn-wrap .full-screen-btn {
-    bottom: 8px;
+    top: 8px;
     right: 8px;
-    padding: 6px 10px;
-    background-color: rgba(255, 255, 255, 0.55);
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.722);
     border-radius: 4px;
+    position: absolute;
 }
+
+aside .ads-video .btn-wrap .bottom-btns {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 8px;
+    background-color: rgb(47, 54, 61);
+    z-index: 2;
+}
+
+aside .ads-video .btn-wrap .bottom-btns .play-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+}
+
+aside .ads-video .btn-wrap .bottom-btns .next-btn,
+aside .ads-video .btn-wrap .bottom-btns .prev-btn {
+    position: absolute;
+    right: 8px;
+    font-size: var(--fs-lg);
+    bottom: -4px;
+}
+
+aside .ads-video .btn-wrap .bottom-btns .prev-btn {
+    right: unset;
+    left: 8px;
+}
+
+aside .ads-video .btn-wrap .bottom-btns .item {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.722);
+    width: 36px;
+    height: 36px;
+    color: var(--my-text-primary);
+}
+
+/* aside .ads-video .btn-wrap .bottom-btns .item.prev-btn {
+    left: 0;
+}
+
+aside .ads-video .btn-wrap .bottom-btns .item.next-btn {
+    right: 60px;
+} */
+
 
 
 /* ads-modal  */
@@ -341,7 +407,9 @@ aside .ads-video .btn-wrap .full-screen-btn {
     height: 290px;
 }
 
-
+aside .ads-video .video-slider-wrap:hover .btn-wrap {
+    display: block;
+}
 
 
 
@@ -371,6 +439,11 @@ main.active {
     width: calc(100% - 98px);
     margin-left: 98px;
 }
+
+main.my-has-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--my-gray);
+}
+
 
 /*
 ========================||    Total Point Seciton  Start Here   ||==========================
