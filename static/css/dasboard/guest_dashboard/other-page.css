@@ -284,3 +284,56 @@
 .identity-wrapper .my-input-control {
     max-width: 100%;
 }
+
+
+
+/* login-info */
+.login-info .active-now {
+    background-color: var(--my-success-bg);
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    font-weight: var(--fw-500);
+    font-size: var(--fs-xs);
+    border: 1px solid var(--my-border-secondary);
+    box-shadow: 0px 1px 2px 0px #0A0D120D;
+}
+
+.login-info .active-now .active-icon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--my-success);
+}
+
+
+
+/* Upload Box */
+.v-item .upload-box {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: var(--my-primary-color);
+    color: var(--my-white);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+}
+
+/* Hide the default file input */
+.v-item .upload-box input[type="file"] {
+    display: none;
+}
+
+.v-item .upload-box:hover {
+    background-color: var(--my-secondary-color);
+}
+
+.v-item .upload-box label {
+    cursor: pointer;
+}
+
+
+.toggle-btns .toggle-checkbox {
+    margin-top: -38px;
+}

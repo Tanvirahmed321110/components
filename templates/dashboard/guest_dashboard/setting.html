@@ -3210,19 +3210,15 @@
                                     General</button>
                             </li>
                             <li>
-                                <button class="tab-btn active" data-tab="security-setting" role="tab"
+                                <button class="tab-btn " data-tab="security-setting" role="tab"
                                     aria-controls="panel-history">Security Setting</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="password" role="tab"
-                                    aria-controls="panel-reviews">Password</button>
-                            </li>
-                            <li>
-                                <button class="tab-btn" data-tab="verification" role="tab"
+                                <button class="tab-btn " data-tab="verification" role="tab"
                                     aria-controls="panel-reviews">Verification</button>
                             </li>
                             <li>
-                                <button class="tab-btn" data-tab="notifications" role="tab"
+                                <button class="tab-btn active" data-tab="notifications" role="tab"
                                     aria-controls="panel-reviews">Notifications</button>
                             </li>
                         </ul>
@@ -3231,7 +3227,7 @@
 
 
                     <!--===========================||  Tab Contents Here  ||============================-->
-                    <div class="my-mt-20">
+                    <div class="my-mt-12">
                         <div class="tab-contents common">
 
                             <!--=================||  Tab Content For General Info  ||==================-->
@@ -3759,7 +3755,7 @@
 
 
                             <!--=================||  Tab Content For Security Setting  ||==================-->
-                            <div class="tab-content active" id="security-setting">
+                            <div class="tab-content " id="security-setting">
 
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <!-- Top -->
@@ -3844,7 +3840,9 @@
                                 </form>
 
 
-                                <div class="two-fector my-radius-xl my-p-12 my-border">
+                                <!--=================||  two fector  ||================-->
+                                <div
+                                    class="two-fector my-d-flex my-align-start my-justify-between my-radius-xl my-p-12 my-border">
                                     <div>
                                         <div>
                                             <h4 class="my-text-primary">Two Factor Authintication</h4>
@@ -3857,53 +3855,361 @@
                                             <button class="my-btn my-primary-btn">Setup 2 FA</button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!--=================||  Tab Content For Password  ||==================-->
-                            <div class="tab-content active" id="security-setting">
 
-                                <form action="#" method="post" enctype="multipart/form-data">
-                                    <!-- Top -->
-                                    <div class="my-flex-between my-pb-10">
-                                        <div>
-                                            <h3 class="my-text-primary">Password</h3>
-                                            <p class="my-text-tertiary my-mt-1">Please enter your current password to
-                                                change your password.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Save and Cancel Buttons -->
-                                    <div class="setting-item my-py-9 my-w-100-p my-d-flex my-justify-end ">
-                                        <div class=" my-align-stretch   my-gap-4">
-                                            <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
-                                            <button class="my-btn fs-sm my-primary-btn" type="submit">Update
-                                                Pasword</button>
-                                        </div>
-                                    </div>
-                                </form>
-
-
-                                <div class="two-fector my-radius-xl my-p-12 my-border">
-                                    <div>
-                                        <div>
-                                            <h4 class="my-text-primary">Two Factor Authintication</h4>
-                                            <p class="my-mt-1 my-text-tertiary">Enable Two factor authentication for
-                                                extra security lair
-                                            </p>
-                                        </div>
-
-                                        <div class="my-mt-10">
-                                            <button class="my-btn my-primary-btn">Setup 2 FA</button>
-                                        </div>
+                                    <!-- Toggle Checkbox Button  -->
+                                    <div class="toggle-checkbox">
+                                        <input type="checkbox" id="btn">
+                                        <label for="btn">
+                                            <span class="thumb"></span>
+                                        </label>
                                     </div>
                                 </div>
+
+
+
+                                <!--=================||  Login Information  ||================-->
+                                <div class="login-info my-mt-16">
+                                    <div class="my-border-bottom my-pb-10">
+                                        <h5 class="my-text-primary">Where you’re logged in</h5>
+                                        <p class="my-mt-1">We’ll alert you via <span
+                                                class="my-fw-bold">mehedi@dtmotion.com</span> if
+                                            there is any unusual
+                                            activity on your account.</p>
+                                    </div>
+                                    <ul class="">
+
+                                        <!-- single login info now active -->
+                                        <li class="my-d-flex my-gap-12 my-align-start my-p-10 my-border-bottom">
+
+                                            <!-- PC Icon -->
+                                            <div class="my-mt-2">
+                                                <svg width=" 24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15 17V21H9V17M5.2 17H18.8C19.9201 17 20.4802 17 20.908 16.782C21.2843 16.5903 21.5903 16.2843 21.782 15.908C22 15.4802 22 14.9201 22 13.8V6.2C22 5.0799 22 4.51984 21.782 4.09202C21.5903 3.71569 21.2843 3.40973 20.908 3.21799C20.4802 3 19.9201 3 18.8 3H5.2C4.07989 3 3.51984 3 3.09202 3.21799C2.71569 3.40973 2.40973 3.71569 2.21799 4.09202C2 4.51984 2 5.07989 2 6.2V13.8C2 14.9201 2 15.4802 2.21799 15.908C2.40973 16.2843 2.71569 16.5903 3.09202 16.782C3.51984 17 4.0799 17 5.2 17Z"
+                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+
+                                            <!-- Right Side -->
+                                            <div class="right">
+                                                <div class="my-d-flex my-align-center my-gap-4">
+                                                    <div class="my-fw-medium my-text-secondary">2024 MacBook Pro 14-inch
+                                                    </div>
+                                                    <!-- Active Style -->
+                                                    <div class="active-now my-d-flex my-align-center my-gap-3">
+                                                        <span class="active-icon"> </span> Active
+                                                        Now
+                                                    </div>
+                                                </div>
+
+                                                <p class="my-fs-xs my-text-tertiary my-mt-2">Melbourne, Australia
+                                                    <span>• 22 Jan
+                                                        at
+                                                        10:40am</span>
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <!-- single login info past -->
+                                        <li class="my-d-flex my-gap-12 my-align-start my-p-10 my-border-bottom">
+
+                                            <!-- PC Icon -->
+                                            <div class="my-mt-2">
+                                                <svg width=" 24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15 17V21H9V17M5.2 17H18.8C19.9201 17 20.4802 17 20.908 16.782C21.2843 16.5903 21.5903 16.2843 21.782 15.908C22 15.4802 22 14.9201 22 13.8V6.2C22 5.0799 22 4.51984 21.782 4.09202C21.5903 3.71569 21.2843 3.40973 20.908 3.21799C20.4802 3 19.9201 3 18.8 3H5.2C4.07989 3 3.51984 3 3.09202 3.21799C2.71569 3.40973 2.40973 3.71569 2.21799 4.09202C2 4.51984 2 5.07989 2 6.2V13.8C2 14.9201 2 15.4802 2.21799 15.908C2.40973 16.2843 2.71569 16.5903 3.09202 16.782C3.51984 17 4.0799 17 5.2 17Z"
+                                                        stroke="#A4A7AE" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+
+                                            <!-- Right Side -->
+                                            <div class="right">
+                                                <div class="my-d-flex my-align-center my-gap-4">
+                                                    <div class="my-fw-medium my-text-secondary">2024 MacBook Pro 13-inch
+                                                    </div>
+                                                </div>
+                                                <p class="my-fs-xs my-text-tertiary my-mt-2">Melbourne, Aus
+                                                    <span>• 19 Feb
+                                                        at
+                                                        10:40am</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
+
+
+
+
+                            <!--=================||  Tab Content For Verification  ||==================-->
+                            <div class="tab-content " id="verification">
+                                <div class="my-flex-column my-gap-12">
+
+                                    <!--=============||  For Top Head  ||===========-->
+                                    <div class="top my-d-flex my-align-start my-gap-10 my-w-100-p">
+                                        <div class="flex-1">
+                                            <h4 class="my-text-primary">Verification Center</h4>
+                                            <p class="my-text-tertiary my-mt-1">Update your photo and personal details
+                                                here.
+                                            </p>
+                                        </div>
+
+                                        <!-- Save and Cancel Buttons -->
+                                        <div class="my-py-9  my-d-flex my-justify-end ">
+                                            <div class=" my-align-stretch   my-gap-4">
+                                                <button class="my-btn fs-sm  my-outline-btn">Cancel</button>
+                                                <button class="my-btn fs-sm my-primary-btn" type="submit">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--=========  identity Verification  ========-->
+                                    <div class="my-border-secondary my-radius-md my-p-10 v-item">
+                                        <form action="#" method="post" enctype="multipart/form-data">
+                                            <div>
+                                                <h5 class="my-text-primary">Identity Verification</h5>
+                                                <p class="my-mt-1 my-text-tertiary">Verify your Identity with a
+                                                    government Issued ID
+                                                    Passport, NID,
+                                                    Drivers
+                                                    license</p>
+                                            </div>
+
+                                            <div class="my-flex-between my-align-end my-mt-12">
+                                                <!-- Status -->
+                                                <div>
+                                                    <div
+                                                        class=" my-border-secondary my-text-primary my-bg-white-s my-px-6 my-p-3 my-fw-medium my-radius-pill">
+                                                        Verified
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <!-- Preview Image "If you will add my-d-none then hide preview image" -->
+                                                    <div class="">
+                                                        <img class="my-w-46 my-p-1 my-radius-md my-h-38 my-border-secondary"
+                                                            src=" /static/images/profile (2).png" alt="prev image"
+                                                            loading="lazy">
+                                                    </div>
+
+                                                    <!-- Upload Box -->
+                                                    <div class="upload-box my-mt-2">
+                                                        <label for="fileUpload">Upload</label>
+                                                        <input type="file" id="fileUpload">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                    <!--=========  Business Verification  ========-->
+                                    <div class="my-border-secondary my-radius-md my-p-10 v-item">
+                                        <form action="#" method="post" enctype="multipart/form-data">
+                                            <div>
+                                                <h5 class="my-text-primary">Business Verification</h5>
+                                                <p class="my-mt-1 my-text-tertiary">Provide trade license, tax
+                                                    documents, or proof of the company registration</p>
+                                            </div>
+
+                                            <div class="my-flex-between my-align-end my-mt-12">
+                                                <!-- all status here -->
+                                                <div>
+                                                    <!-- <div
+                                                        class=" my-border-secondary my-text-primary my-bg-white-s my-px-6 my-p-3 my-fw-medium my-radius-pill">
+                                                        Verified
+                                                    </div> -->
+                                                    <!--
+                                                    <div
+                                                        class="my-text-red my-border-secondary my-bg-white-s my-px-6 my-p-3 my-fw-medium my-radius-pill">
+                                                            Not
+                                                            Submitted
+                                                    </div> -->
+                                                    <div
+                                                        class=" my-border-warring my-text-warring my-bg-white-s my-px-6 my-p-3 my-fw-medium my-radius-pill">
+                                                        Pending Review
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <!-- Preview Image "If you will remove my-d-none then show preview image" -->
+                                                    <div class="my-d-none">
+                                                        <img class="my-w-46 my-p-1 my-radius-md my-h-38 my-border-secondary
+                                                            src=" /static/images/profile (3).png" alt="prev image"
+                                                            loading="lazy">
+                                                    </div>
+
+                                                    <!-- Upload Box -->
+                                                    <div class="upload-box my-mt-2">
+                                                        <label for="fileUpload">Upload</label>
+                                                        <input type="file" id="fileUpload">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+
+                                    <!--=========  Address Verification  ========-->
+                                    <div class="my-border-secondary my-radius-md my-p-10 v-item">
+                                        <form action="#" method="post" enctype="multipart/form-data">
+                                            <div>
+                                                <h5 class="my-text-primary">Address Verification</h5>
+                                                <p class="my-mt-1 my-text-tertiary">Upload a utility bill, bank
+                                                    statement, or a government latter with your address</p>
+                                            </div>
+
+                                            <div class="my-flex-between my-align-end my-mt-12">
+                                                <!-- Status -->
+                                                <div>
+                                                    <div
+                                                        class="my-text-red my-border-secondary my-bg-white-s my-px-6 my-p-3 my-fw-medium my-radius-pill">
+                                                        Not
+                                                        Submitted
+                                                    </div>
+                                                </div>
+
+                                                <div>
+
+                                                    <!-- Preview Image "If you will remove my-d-none then show preview image" -->
+                                                    <div class="my-d-none">
+                                                        <img class="my-w-46 my-p-1 my-radius-md my-h-38 my-border-secondary"
+                                                            src="/static/images/profile (3).png" alt="prev image"
+                                                            loading="lazy">
+                                                    </div>
+
+                                                    <!-- Upload Box -->
+                                                    <div class="upload-box my-mt-2">
+                                                        <label for="fileUpload">Upload</label>
+                                                        <input type="file" id="fileUpload">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <!--=================||  Tab Content For Notifications  ||==================-->
+                            <div class="tab-content active" id="notifications">
+                                <div class="my-border-bottom my-pb-10">
+                                    <h4 class="my-text-primary">Notification settings</h4>
+                                    <p class="my-text-tertiary my-mt-1">We may still send you important
+                                        notifications about your account outside of your notification settings.
+                                    </p>
+                                </div>
+
+                                <!-- remender -->
+                                <div class="my-d-flex my-justify-between my-border-bottom my-py-10">
+                                    <div class="left my-w-50-p">
+                                        <h5>Reminders</h5>
+                                        <p class="my-max-w-280 my-mt-2">These are notifications to remind you of updates
+                                            you
+                                            might have missed.</p>
+                                    </div>
+
+                                    <!-- right -->
+                                    <div class="my-flex-column toggle-btns my-align-start  my-w-50-p my-gap-6">
+
+                                        <!-- Push -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="push_notification" checked>
+                                                <label for="push_notification">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">Push </div>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="email_nofication">
+                                                <label for="email_nofication">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">Email </div>
+                                        </div>
+
+                                        <!-- SMS -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="sms_nofication">
+                                                <label for="sms_nofication">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">SMS </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- More Activity -->
+                                <div class="my-d-flex my-justify-between  my-py-10">
+                                    <div class="left my-w-50-p">
+                                        <h5>More activity about you</h5>
+                                        <p class="my-max-w-280 my-mt-2">These are notifications for posts on your
+                                            profile, likes
+                                            and other reactions to your posts, and more.</p>
+                                    </div>
+
+                                    <!-- right -->
+                                    <div class="my-flex-column toggle-btns my-align-start  my-w-50-p my-gap-6">
+
+                                        <!-- Push -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="push_notification">
+                                                <label for="push_notification">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">Push </div>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="email_nofication">
+                                                <label for="email_nofication">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">Email </div>
+                                        </div>
+
+                                        <!-- SMS -->
+                                        <div class="my-d-flex my-align-center my-gap-6">
+                                            <div class="toggle-checkbox">
+                                                <input type="checkbox" id="sms_nofication">
+                                                <label for="sms_nofication">
+                                                    <span class="thumb"></span>
+                                                </label>
+                                            </div>
+                                            <div class="my-fw-medium my-text-secondary my-fs-md my-mt-3">SMS </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
             </section>
         </main>
 
@@ -3916,7 +4222,7 @@
             =======||   Video Or Image Content  Start Here   ||======
             =========================================================
             -->
-        <div class="my-modal" id="ads-modal">
+        <div class=" my-modal" id="ads-modal">
             <div class="modal-content ads-modal my-px-3 my-pt-3">
 
                 <!-- Modal Head -->
@@ -3934,8 +4240,10 @@
                     <div class="my-mt-10 my-d-flex my-justify-end footer">
                         <!--===== Prev and Next Button =====-->
                         <div class="my-d-flex my-gap-4 my-mt-4">
-                            <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
-                            <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                            <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev
+                            </button>
+                            <button class="my-btn-sm my-btn my-primary-btn next-btn"> next
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -3946,7 +4254,8 @@
         <div class="modal-overlay" id="modal-overlay"></div>
 
 
-
+        <script>
+        </script>
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/dashboard/dashboard_common.js"></script>
         <script src="/static/js/dashboard/guest_dashboard/setting.js"></script>

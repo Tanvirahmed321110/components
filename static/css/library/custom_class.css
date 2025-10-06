@@ -1375,11 +1375,31 @@ tr {
 }
 
 .my-max-w-100-p {
-    max-width: 100px;
+    max-width: 100%;
 }
 
-.my-max-w-120-p {
-    max-width: 100px;
+.my-max-w-120 {
+    max-width: 120px;
+}
+
+.my-max-w-150 {
+    max-width: 150px;
+}
+
+.my-max-w-200 {
+    max-width: 200px;
+}
+
+.my-max-w-250 {
+    max-width: 250px;
+}
+
+.my-max-w-280 {
+    max-width: 280px;
+}
+
+.my-max-w-300 {
+    max-width: 300px;
 }
 
 .my-w-fit-content {
@@ -2403,6 +2423,10 @@ tr {
 .bg-hover-secondary:hover {
     background-color: var(--my-secondary-color);
     transition: .2s linear;
+}
+
+.my-border-warring {
+    border: 1px solid var(--my-warring-200);
 }
 
 /*______  Word spacing _____*/

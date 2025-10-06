@@ -1,4 +1,4 @@
-// =====  For Sidebar Menu  =====
+// =========  For Sidebar Menu  =========
 function sidebarCloseF() {
     const closeBtn = document.getElementById('close-sidebar-btn')
     if (closeBtn) {
@@ -16,10 +16,48 @@ function sidebarCloseF() {
 
 sidebarCloseF()
 
+// check sidebar active class
+function checkSidebarActive() {
+    const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
+
+    if (!sidebar || !content) return; // safety check
+
+    if (sidebar.classList.contains('active')) {
+        content.style.display = 'none';
+        content.style.pointerEvents = 'none';
+    } else {
+        content.style.display = 'flex';
+        content.style.pointerEvents = 'auto';
+    }
+}
+
+
+const bottom = document.querySelector("aside .bottom");
+const content = document.querySelector("aside .content");
+
+if (bottom && content) {
+    bottom.addEventListener("scroll", () => {
+        // When user scrolls down inside bottom
+        if (bottom.scrollTop > 10) {
+            if (1) {
+                content.style.display = "none";
+                content.style.pointerEvents = "none";
+            }
+        } else {
+            // ✅ Show again when scroll is at top
+            content.style.display = "flex";
+            content.style.pointerEvents = "auto";
+            checkSidebarActive()
+        }
+    });
+}
 
 
 
-// For common dropdwon 2 and Filter head
+
+
+//=========  For common dropdwon 2 and Filter head  ===========
 const dropdownParents = document.querySelectorAll(".filter-header .click-dropdown-parent,.click-dropdown-parent.common-dropdwon-2");
 
 if (dropdownParents) {
@@ -57,7 +95,7 @@ if (dropdownParents) {
 }
 
 
-// For Dropdown2
+//========= For Dropdown2 ==========
 function commonDropdown2(btn, item) {
     const btnImg = btn.closest(".click-dropdown-btn")?.querySelector("img");
     const btnText = btn.closest(".click-dropdown-btn")?.querySelector(".text-content");
@@ -75,53 +113,10 @@ function commonDropdown2(btn, item) {
 
 
 
-// For common dropdown 2 and filter header
-// const dropdownParents = document.querySelectorAll(
-//     ".filter-header .click-dropdown-parent, .click-dropdown-parent.common-dropdwon-2"
-// );
-
-// if (dropdownParents) {
-//     dropdownParents.forEach(parent => {
-//         const btn = parent.querySelector(".click-dropdown-btn");
-//         const btnImg = btn.querySelector("img");
-//         const btnText = btn.querySelector(".text-content");
-//         const items = parent.querySelectorAll(".click-dropdown .item");
-
-//         if (items && btnImg && btnText) {
-//             items.forEach(item => {
-//                 item.addEventListener("click", () => {
-//                     // Remove active from all items
-//                     items.forEach(i => i.classList.remove("active"));
-
-//                     // Add active to clicked
-//                     item.classList.add("active");
-
-//                     // Close dropdown
-//                     parent.querySelector(".click-dropdown")?.classList.remove("active");
-
-//                     // Update button text + image
-//                     const itemImg = item.querySelector("img")?.src;
-//                     const itemText = item.querySelector(".text")?.textContent.trim();
-
-//                     if (itemImg) btnImg.src = itemImg;
-//                     if (itemText) {
-//                         btnText.textContent =
-//                             itemText.length > 16 ? itemText.slice(0, 16) + "…" : itemText;
-//                     }
-//                 });
-//             });
-//         }
-//     });
-// }
 
 
 
-
-copyF('.popular-copons .item .copy-btn', '.popular-copons .item input[type="hidden"]');
-
-
-
-
+// Video ads
 document.addEventListener('DOMContentLoaded', () => {
     const adsContainer = document.querySelector('.ads-video');
     const modal = document.getElementById('ads-modal');
