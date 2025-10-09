@@ -90,6 +90,7 @@ function dropdownToggleF() {
                     if (parent !== dropdownParent) {
                         parent.querySelector('.click-dropdown')?.classList.remove('active');
                         parent.querySelector('.click-dropdown-btn')?.classList.remove('active');
+                        removeLoginHaveNoActive();
                     }
                 });
 
@@ -102,17 +103,38 @@ function dropdownToggleF() {
 
     // Click outside to close
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.click-dropdown-parent')) {
+        if (!e.target.closest('.click-dropdown-parent') || e.target.closest('.login-have-no')) {
             document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
                 parent.querySelector('.click-dropdown')?.classList.remove('active');
                 parent.querySelector('.click-dropdown-btn')?.classList.remove('active');
             });
+            removeLoginHaveNoActive();
         }
     });
 }
 
 dropdownToggleF();
 
+
+// Function to remove active class from .login-have-no button(s)
+function removeLoginHaveNoActive() {
+    const loginHaveNoBtns = document.querySelectorAll('.login-have-no .click-dropdown-btn');
+    if (loginHaveNoBtns.length > 0) {
+        loginHaveNoBtns.forEach(btn => {
+
+            // remove all active class
+            loginHaveNoBtns.forEach(i => i.classList.remove('active'));
+
+            btn.classList.remove('active');
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                btn.classList.toggle('active')
+            })
+
+        });
+    }
+}
+removeLoginHaveNoActive()
 
 
 

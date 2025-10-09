@@ -48,7 +48,11 @@
     --my-border-gray: #A4A7AE;
 
 
-
+    /* Break Point */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1279px;
 
 
 
@@ -318,9 +322,10 @@ header .click-dropdown-parent {
     position: static !important;
 }
 
-header .click-dropdown-parent .click-dropdown {
-    top: 75px;
+header .profile-dropdown.click-dropdown {
+    top: 50px;
 }
+
 
 header .click-dropdown-parent .click-dropdown.lg {
     max-width: 1220px;

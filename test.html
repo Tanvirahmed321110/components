@@ -1,149 +1,62 @@
-<style>
-    .language-dropdown {
-        position: relative;
-        width: 220px;
-        margin-bottom: 20px;
-        user-select: none;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    .language-dropdown>div:first-child {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #fff;
-        border: 1px solid #ccc;
-        padding: 8px 10px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colspan Example</title>
 
-    .language-dropdown .left {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .language-dropdown img {
-        width: 20px;
-        height: 14px;
-    }
-
-    .language-dropdown .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        border: 1px solid #ccc;
-        border-top: none;
-        display: none;
-        border-radius: 0 0 4px 4px;
-        z-index: 10;
-    }
-
-    .language-dropdown.open .dropdown-menu {
-        display: block;
-    }
-
-    .language-dropdown .dropdown-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .language-dropdown .dropdown-list li {
-        padding: 8px 10px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-    }
-
-    .language-dropdown .dropdown-list li:hover,
-    .language-dropdown .dropdown-list li.active {
-        background: #f0f0f0;
-    }
-</style>
-
-<div class="language-dropdown">
-    <div>
-        <div class="left">
-            <img src="https://flagcdn.com/w20/us.png" alt="English">
-            <span>English</span>
-        </div>
-        <span class="arrow">▼</span>
-    </div>
-    <div class="dropdown-menu">
-        <ul class="dropdown-list">
-            <li class="active"><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
-            <li><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
-            <li><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
-            <li><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
-        </ul>
-    </div>
-</div>
-
-<div class="language-dropdown">
-    <div>
-        <div class="left">
-            <img src="https://flagcdn.com/w20/fr.png" alt="French">
-            <span>French</span>
-        </div>
-        <span class="arrow">▼</span>
-    </div>
-    <div class="dropdown-menu">
-        <ul class="dropdown-list">
-            <li><img src="https://flagcdn.com/w20/us.png" alt=""> English</li>
-            <li><img src="https://flagcdn.com/w20/bd.png" alt=""> Bangla</li>
-            <li><img src="https://flagcdn.com/w20/in.png" alt=""> Hindi</li>
-            <li class="active"><img src="https://flagcdn.com/w20/fr.png" alt=""> French</li>
-        </ul>
-    </div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dropdowns = document.querySelectorAll(".language-dropdown");
-
-        dropdowns.forEach(dropdown => {
-            const selectedBox = dropdown.querySelector("div:first-child");
-            const selectedText = selectedBox.querySelector(".left span");
-            const selectedImg = selectedBox.querySelector(".left img");
-            const menu = dropdown.querySelector(".dropdown-menu");
-            const items = dropdown.querySelectorAll(".dropdown-list li");
-
-            // Toggle menu
-            selectedBox.addEventListener("click", () => {
-                dropdowns.forEach(d => {
-                    if (d !== dropdown) d.classList.remove("open");
-                });
-                dropdown.classList.toggle("open");
-            });
-
-            // Select option
-            items.forEach(item => {
-                item.addEventListener("click", () => {
-                    const text = item.textContent.trim();
-                    const img = item.querySelector("img").src;
-
-                    // Update selected
-                    selectedText.textContent = text;
-                    selectedImg.src = img;
-
-                    // Active state
-                    items.forEach(i => i.classList.remove("active"));
-                    item.classList.add("active");
-
-                    dropdown.classList.remove("open");
-                });
-            });
-        });
-
-        // Close dropdown if clicked outside
-        document.addEventListener("click", e => {
-            if (!e.target.closest(".language-dropdown")) {
-                dropdowns.forEach(d => d.classList.remove("open"));
+        <style>
+            /* CSS for table styling (optional, but good practice) */
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                max-width: 600px;
             }
-        });
-    });
-</script>
+
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            /* Highlight every other row */
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th colspan="2">ID / </th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Tanvi</td>
+                    <td>2343243432</td>
+                    <td colspan="2">12 ()</td>
+                    <td>1200</td>
+                </tr>
+                <tr>
+                    <td>Rahim</td>
+                    <td>9876543210</td>
+                    <td colspan="2">34f fsg</td>
+                    <td>1500</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+
+</html>

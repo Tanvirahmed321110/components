@@ -3,26 +3,33 @@
 =====||   Header  Start Here    ||=====
 =======================================
 */
-body {
-    max-width: 1920px;
+
+.dasboard-container {
+    max-width: 100%;
     margin: 0 auto;
-    /* height: 100%; */
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    padding: 0 70px;
+}
+
+.dasboard-container-wrapper {
+    margin-top: 125px;
 }
 
 header {
     position: fixed;
     left: 0;
     right: 0;
-    width: 100%;
     padding-bottom: 0;
     box-shadow: var(--shadow-3);
-    border: 1px solid var(--my-white-off);
     z-index: 3;
-    max-width: 1920px;
-    margin: 0 auto;
+    padding: 0;
 }
+
+header .header-main {
+    border-bottom: 1px solid var(--my-white-off);
+}
+
+
 
 header .header-top {
     border-bottom: 1px solid var(--my-border-gray);
@@ -33,6 +40,10 @@ header .header-top {
 header .header-main {
     margin-top: 6px;
     padding-bottom: 6px;
+}
+
+.main-content-header {
+    padding-right: 0;
 }
 
 .main-content-header .my-secondary-btn {
@@ -65,21 +76,25 @@ header .click-dropdown-parent .click-dropdown {
 }
 
 aside.sidebar {
-    width: 300px;
+    width: 270px;
     background-color: var(--my-primary-color);
     color: var(--my-white);
-    position: fixed;
-    left: 0;
-    top: 125px;
-    height: calc(100dvh - 125px);
     display: flex;
+    /* top: 125px; */
     flex-direction: column;
-    z-index: 3;
+    z-index: 2;
     box-shadow: var(--shadow-lg);
     transition: .2s linear;
-    position: sticky;
+    position: relative;
 }
 
+.aside-wrapper {
+    position: sticky;
+    top: 125px;
+    /* height: calc(100dvh - 125px); */
+    display: flex;
+    flex-direction: column;
+}
 
 /* Active Class */
 aside.sidebar.active {
@@ -422,22 +437,16 @@ aside .ads-video .video-slider-wrap:hover .btn-wrap {
 */
 main {
     background-color: var(--my-white-off);
-    margin-left: 307px;
-    width: calc(100% - 307px);
-    overflow-y: auto;
-    margin-top: 125px;
-    height: calc(100dvh - 125px);
-    padding-bottom: 0px;
+    width: calc(100% - 270px);
+    /* margin-top: 125px; */
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
-    position: absolute;
     z-index: 2;
 }
 
 /* Active Class */
 main.active {
     width: calc(100% - 98px);
-    margin-left: 98px;
 }
 
 main.my-has-scrollbar::-webkit-scrollbar-thumb {
@@ -448,24 +457,18 @@ main.my-has-scrollbar::-webkit-scrollbar-thumb {
 /*
 ========================||    Total Point Seciton  Start Here   ||==========================
 */
-.total-points {
-    width: 160px;
-}
 
 .total-points {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.total-points {
     position: relative;
-    width: 180px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .progress-ring {
     transform: rotate(-90deg);
@@ -475,6 +478,8 @@ main.my-has-scrollbar::-webkit-scrollbar-thumb {
     transition: .2s linear;
     position: relative;
     overflow: hidden;
+    padding: 32px 4px;
+    max-width: 100%;
 }
 
 /*  */
@@ -535,6 +540,10 @@ circle {
     font-family: sans-serif;
 }
 
+.points-text .text {
+    font-size: 10px;
+}
+
 .circle-chart {
     position: relative;
     width: 340px;
@@ -569,24 +578,32 @@ circle {
 
 .booking-upcoming {
     display: grid;
-    grid-template-columns: 300px 1fr 370px;
-    gap: 24px;
+    grid-template-columns: 1fr 1.5fr .5fr;
+    grid-template-columns: 250px 1fr 280px;
+    grid-template-columns: 30% 37% 30%;
+    gap: 16px;
+}
+
+.booking-upcoming-1 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr .5fr;
+    gap: 16px;
 }
 
 /*
 ============||    Booking Status   ||=============
 */
 .booking-status .item {
-    width: 304px;
+    width: 120%;
     background-color: var(--my-white);
-    margin-left: -30px;
+    margin-left: -10%;
     border-color: var(--my-border-secondary);
-    transition: .3s linear;
+    transition: transform .12s linear;
+    box-shadow: var(--shadow-all-sm);
 }
 
 .booking-status .item:hover {
     transform: translateY(-4px);
-    border-color: var(--my-secondary-color);
 }
 
 .booking-status .paymant-status span {
@@ -602,19 +619,19 @@ circle {
 
 
 
+
 /*
 ============||    Upcoming Trips   ||=============
 */
 
 .upcoming-trips .items .item,
 .save-list .items .item {
-    transition: .3s linear;
+    transition: .12s ease-in-out;
 }
 
 .upcoming-trips .items .item:hover,
 .save-list .items .item:hover {
-    transform: translateY(6px);
-    border-color: var(--my-secondary-color);
+    transform: translateY(4px);
 }
 
 
@@ -626,7 +643,7 @@ circle {
 
 
 
-@media (max-width:1400px) {
+/* @media (max-width:1400px) {
     aside.sidebar {
         width: 280px;
     }
@@ -661,4 +678,4 @@ circle {
         height: 220px;
     }
 
-}
+} */

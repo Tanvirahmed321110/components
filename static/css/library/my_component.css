@@ -5802,7 +5802,7 @@ _____________________________________*/
 }
 
 .calendar .date {
-    padding: 10px;
+    padding: 10px 4px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: var(--radius-sm);
@@ -6103,9 +6103,9 @@ _____________________________________*/
 }
 
 /*________________________________*\
-  ||     Responsive For 991px     ||
+  ||     Responsive For 1080px     ||
 \*________________________________*/
-@media (max-width:991px) {
+@media (max-width:var(--breakpoint-lg)) {
     .brigtcamp {
         max-width: 680px;
         margin: 0 auto;
@@ -6172,7 +6172,7 @@ _____________________________________*/
 /*________________________________*\
   ||     Responsive For 769px     ||
 \*________________________________*/
-@media (max-width:768px) {
+@media (max-width:var(--breakpoint-md)) {
     .product-cart-area {
         margin: 0 auto;
     }
@@ -6258,7 +6258,7 @@ _____________________________________*/
 /*________________________________*\
   ||     Responsive For 480px     ||
 \*________________________________*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: var(--breakpoint-xs)) {
     .my-modal .modal-content {
         width: 100%;
         max-width: 90%;

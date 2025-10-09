@@ -4,9 +4,11 @@ function sidebarCloseF() {
     if (closeBtn) {
         const sidebar = document.getElementById('sidebar')
         const main = document.getElementById('main-content')
+        const content = document.querySelector('.content');
 
-        if (sidebar || main) {
+        if (sidebar || main || content) {
             closeBtn.addEventListener('click', function () {
+                content.classList.toggle('active')
                 sidebar.classList.toggle('active')
                 main.classList.toggle('active')
             })
