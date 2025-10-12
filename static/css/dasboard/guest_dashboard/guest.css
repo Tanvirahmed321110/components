@@ -47,7 +47,7 @@ header .header-main {
 }
 
 .main-content-header .my-secondary-btn {
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     padding: 11px 14px;
 }
 
@@ -76,7 +76,7 @@ header .click-dropdown-parent .click-dropdown {
 }
 
 aside.sidebar {
-    width: 262px;
+    width: 20%;
     background-color: var(--my-primary-color);
     color: var(--my-white);
     display: flex;
@@ -86,7 +86,7 @@ aside.sidebar {
     box-shadow: var(--shadow-lg);
     transition: .2s linear;
     position: relative;
-    /* border-right: 8px solid var(--my-white); */
+    border-right: 8px solid var(--my-white);
 }
 
 .aside-wrapper {
@@ -445,11 +445,12 @@ aside .ads-video .video-slider-wrap:hover .btn-wrap {
 */
 main {
     background-color: var(--my-white-off);
-    width: calc(100% - 270px);
+    /* width: calc(100% - 270px); */
     /* margin-top: 125px; */
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
     z-index: 2;
+    flex-grow: 1;
 }
 
 /* Active Class */
@@ -587,24 +588,18 @@ circle {
 .booking-upcoming {
     display: grid;
     grid-template-columns: 1fr 1.5fr .5fr;
-    grid-template-columns: 250px 1fr 280px;
-    grid-template-columns: 30% 37% 30%;
+    grid-template-columns: .7fr 1.2fr .8fr;
     gap: 16px;
 }
 
-.booking-upcoming-1 {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr .5fr;
-    gap: 16px;
-}
 
 /*
 ============||    Booking Status   ||=============
 */
 .booking-status .item {
-    width: 120%;
+    width: 124%;
     background-color: var(--my-white);
-    margin-left: -10%;
+    margin-left: -12%;
     border-color: var(--my-border-secondary);
     transition: transform .12s linear;
 }
@@ -650,34 +645,20 @@ circle {
 
 
 
-/* @media (max-width:1400px) {
+@media (max-width:1400px) {
     aside.sidebar {
         width: 280px;
+        border-right: 0;
     }
 
     main {
-        margin-left: 288px;
-        width: calc(100% - 288px);
-        margin-top: 126px;
-        height: calc(100dvh - 126px);
+        /* width: calc(100% - 310px); */
+        flex-grow: 1;
+
     }
 
     .booking-upcoming {
-        grid-template-columns: 260px 1fr 350px;
-        gap: 20px;
-    }
-
-    .booking-status .item {
-        width: 264px;
-    }
-
-    .points {
-        justify-content: space-between;
-
-    }
-
-    .points .total-points {
-        width: 360px;
+        grid-template-columns: 270px 1fr 300px;
     }
 
     .points .total-points .progress-ring {
@@ -685,4 +666,4 @@ circle {
         height: 220px;
     }
 
-} */
+}
