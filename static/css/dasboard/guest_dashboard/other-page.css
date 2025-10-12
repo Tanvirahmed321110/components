@@ -1,4 +1,14 @@
 /*================  Filter Head  ================*/
+.filter-header .left {
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.filter-header .right,
+.filter-header .search-input {
+    flex-basis: 24%;
+}
+
 .filter-header .click-dropdown {
     border: 1px solid var(--my-border-secondary);
     padding: 4px;

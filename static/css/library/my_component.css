@@ -3223,7 +3223,6 @@ input[type="radio"]:checked::after {
 .table-area table {
     width: 100%;
     min-width: 800px;
-    /* Optional: prevents table from shrinking too much */
     border-collapse: collapse;
 
 }
@@ -3232,7 +3231,7 @@ input[type="radio"]:checked::after {
 
 .table-area table th,
 .table-area table td {
-    /* min-width: 86px; */
+    min-width: 60px;
     text-align: left;
     padding: 14px 20px;
     white-space: nowrap;
@@ -3250,18 +3249,10 @@ input[type="radio"]:checked::after {
     text-transform: uppercase;
 }
 
-.table-area table td {
-    color: var(--my-gray);
-}
 
 
-.table-area table tbody tr {
-    border-bottom: 1px solid var(--my-border-color);
-}
 
-.table-area table tbody tr:nth-child(odd) {
-    background-color: rgba(241, 199, 199, 0.215)
-}
+
 
 
 /*
@@ -4066,17 +4057,36 @@ input[type="radio"]:checked::after {
     font-weight: 700;
 }
 
-
+.table-area table td {
+    color: var(--my-gray);
+}
 
 
 /* ================ table =============== */
-.table .table-head,
-.table .table-body .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    gap: 16px;
-    padding: 10px;
-    align-items: center;
+.common-table-1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.common-table-1 td,
+.common-table-1 th {
+    padding: 14px 10px;
+    padding-right: 8px;
+}
+
+.common-table-1 th {
+    padding: 20px 10px;
+    color: var(--my-text-primary);
+    text-wrap: nowrap;
+}
+
+.common-table-1 tbody tr:nth-child(odd) {
+    background-color: var(--my-bg-secondary);
+}
+
+.common-table-1 tr {
+    border-bottom: 1px solid var(--my-border-secondary);
 }
 
 .table .table-body .row:nth-child(odd) {
@@ -4088,7 +4098,7 @@ input[type="radio"]:checked::after {
     border-bottom: 1px solid var(--my-border-secondary);
 }
 
-.table .table-body .row:hover {
+.common-table-1 tbody tr:hover {
     background-color: var(--my-white-off);
 }
 
@@ -6093,14 +6103,7 @@ _____________________________________*/
 /*________________________________*\
   ||     Responsive For 1400px     ||
 \*________________________________*/
-@media (max-width:1400px) {
-
-    .table .table-head,
-    .table .table-body .row {
-        display: grid;
-        gap: 8px;
-    }
-}
+@media (max-width:1400px) {}
 
 /*________________________________*\
   ||     Responsive For 1080px     ||
