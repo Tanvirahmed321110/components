@@ -82,7 +82,6 @@
     /* select-এর right side */
     transform: translateY(-50%);
     border-radius: 50%;
-    /* ছোট circle চাইলে */
     pointer-events: none;
 }
 
@@ -349,7 +348,7 @@
     max-width: 100%;
     margin: 0 auto;
     background-color: var(--my-bg-secondary);
-    padding: 22px;
+    padding: 16px;
     border-radius: var(--radius-lg);
     border: 1px solid var(--my-white-off);
 }

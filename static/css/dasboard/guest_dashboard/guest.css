@@ -7,7 +7,8 @@
 .dasboard-container {
     max-width: 100%;
     margin: 0 auto;
-    width: calc(100% - 240px);
+    width: calc(100% - 70px);
+    /* max-width: 1440px; */
 }
 
 .dasboard-container-wrapper {
@@ -75,7 +76,7 @@ header .click-dropdown-parent .click-dropdown {
 }
 
 aside.sidebar {
-    width: 270px;
+    width: 262px;
     background-color: var(--my-primary-color);
     color: var(--my-white);
     display: flex;
@@ -85,6 +86,7 @@ aside.sidebar {
     box-shadow: var(--shadow-lg);
     transition: .2s linear;
     position: relative;
+    /* border-right: 8px solid var(--my-white); */
 }
 
 .aside-wrapper {
@@ -273,6 +275,13 @@ aside .bottom {
 
 
 /* ads-video */
+aside .ads-video {
+    padding: 0;
+    background-color: unset;
+    box-shadow: var(--shadow-all-lg);
+    border: none;
+}
+
 aside .ads-video .video-slider-wrap {
     position: relative;
 }
@@ -598,7 +607,6 @@ circle {
     margin-left: -10%;
     border-color: var(--my-border-secondary);
     transition: transform .12s linear;
-    box-shadow: var(--shadow-all-sm);
 }
 
 .booking-status .item:hover {
