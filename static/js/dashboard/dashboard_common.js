@@ -1,12 +1,22 @@
 // =========  For Sidebar Menu  =========
 function sidebarCloseF() {
     const closeBtn = document.getElementById('close-sidebar-btn')
-    if (closeBtn) {
-        const sidebar = document.getElementById('sidebar')
-        const main = document.getElementById('main-content')
-        const content = document.querySelector('.content');
+    const mCloseBtn = document.getElementById('m-sidebar-close-btn')
+    const sidebar = document.getElementById('sidebar')
 
-        if (sidebar || main || content) {
+
+    // For Mobile
+    if (mCloseBtn && sidebar) {
+        mCloseBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('m-active')
+        })
+    }
+
+    if (closeBtn) {
+        const main = sidebar.querySelector('#main-content')
+        const content = sidebar.querySelector('.content');
+
+        if (sidebar & main & content) {
             closeBtn.addEventListener('click', function () {
                 content.classList.toggle('active')
                 sidebar.classList.toggle('active')
@@ -17,6 +27,8 @@ function sidebarCloseF() {
 }
 
 sidebarCloseF()
+
+
 
 // check sidebar active class
 function checkSidebarActive() {

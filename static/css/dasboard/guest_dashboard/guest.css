@@ -7,7 +7,7 @@
 .dasboard-container {
     max-width: 100%;
     margin: 0 auto;
-    width: calc(100% - 70px);
+    /* width: calc(100% - 70px); */
     width: 90.28%;
     min-height: 100%;
 }
@@ -77,6 +77,10 @@ header .click-dropdown-parent .click-dropdown {
     right: 8px;
     background-color: var(--my-secondary-color);
     z-index: 4;
+}
+
+.m-sidebar-close.sidebar-close-btn {
+    padding: 12px;
 }
 
 aside.sidebar {
@@ -661,14 +665,13 @@ circle {
 
 @media (max-width:1400px) {
     aside {
-        flex-basis: 280px;
+        flex-basis: 20%;
         border-right: 0;
     }
 
     main {
         /* width: calc(100% - 310px); */
         /* flex-grow: 1; */
-
     }
 
     .booking-upcoming {
@@ -680,4 +683,231 @@ circle {
         height: 220px;
     }
 
+}
+
+
+
+
+@media (max-width:1080px) {
+    .dasboard-container {
+        width: 100%;
+    }
+
+    .main-content-header {
+        padding-right: 20px;
+    }
+
+    aside.sidebar {
+        flex-basis: 29%;
+        width: 29%;
+        background-color: var(--my-primary-color);
+        color: var(--my-white);
+        display: flex;
+        /* top: 125px; */
+        flex-direction: column;
+        z-index: 2;
+        box-shadow: var(--shadow-lg);
+        transition: .3s linear;
+        position: relative;
+        min-height: 100dvh;
+        /* border-right: 8px solid var(--my-white); */
+    }
+
+
+
+    .total-points {
+        width: 25%;
+    }
+
+    .points .items .item {
+        padding: 12px 4px;
+    }
+}
+
+
+
+
+
+/*
+=========||  Mobile  Start Here  ||===========
+*/
+@media (max-width:769px) {
+    .dasboard-container-wrapper {
+        display: unset;
+    }
+
+
+    /* Sidebar */
+    aside.sidebar {
+        position: fixed;
+        top: 0;
+        width: 294px;
+        z-index: 4;
+        height: 100dvh;
+        transition: .3s linear;
+        left: -100%;
+    }
+
+    aside.sidebar.m-active {
+        left: 0px;
+    }
+
+    main {
+        width: 100%;
+        flex-basis: unset;
+        margin-top: 125px;
+    }
+
+
+    /* Main content header */
+    .main-content-header {
+        padding-right: 0px;
+    }
+
+    .main-content-header .left {
+        display: none;
+    }
+
+    .main-content-header .right {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-content-header .switch-to-host,
+    .main-content-header .icon-hover {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .main-content-header .switch-to-host svg {
+        transform: scale(1.4);
+    }
+
+    .main-content-header .switch-to-host .text {
+        display: none;
+    }
+
+    .main-content-header .time {
+        padding: 12px;
+        border-radius: var(--radius-md);
+    }
+
+    .main-content-header time {
+        font-size: var(--fs-xs);
+    }
+
+
+
+    /*Total Points */
+    .points-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .points-text .text {
+        font-size: var(--fs-sm);
+        font-weight: 600;
+        color: var(--my-text-tertiary);
+    }
+
+    .points-sec .total-points {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .points-sec .total-points {
+        flex-basis: 100%;
+    }
+
+    .points-sec .items {
+        flex-basis: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .points .items .item {
+        padding: 24px 4px;
+    }
+
+
+    /* Total Trips */
+    .total-trips {
+        margin: 12px;
+    }
+
+    .total-trips .circle-chart {
+        margin: 0 auto;
+        margin-top: -50px;
+    }
+
+    .total-trips .complete {
+        width: 100%;
+        margin-top: -12px;
+    }
+
+
+    /* radius */
+    .section-card {
+        margin: 12px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+    }
+
+
+    /* Upcomming Trips */
+    .upcoming-trips {
+        padding: 12px;
+    }
+
+    .upcoming-trips .items .item {
+        align-items: start;
+        padding: 12px;
+    }
+
+
+    .upcoming-trips,
+    .booking-status {
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* Booking Section */
+    .booking-upcoming {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-status {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .booking-status .item {
+        margin-left: 0;
+        width: 100%;
+        transition: transform .12s linear;
+    }
+
+
+
+    /* invite-wishlist */
+    .invite-wishlist {
+        grid-template-columns: 1fr;
+    }
+
+    .invite-wishlist .invite-friend-area {
+        height: fit-content;
+    }
+
+    .currency-converter-box {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .currency-converter-box .compare-btn {
+        transform: rotate(90deg);
+    }
+
+    .invite-wishlist .currency-converter-area {
+        height: fit-content;
+    }
 }

@@ -2807,16 +2807,28 @@
                 =======||   Sidebar Section  Start Here   ||======
                 ==================================================
                 -->
-                <aside aria-label=" Dashboard navigation" class="sidebar " id="sidebar">
+                <aside aria-label=" Dashboard navigation" class="sidebar m-active" id="sidebar">
                     <div class="aside-wrapper" style="position: sticky;top:125px;z-index: 11;">
                         <!--====== Sidebar Close Button ======-->
                         <div>
-                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                                aria-controls="sidebar">
-                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                                <div class="show-text">Toggle Sidebar</div>
-                            </button>
+
+                            <!-- For Mobile -->
+                            <div class="desktop-hide mobile-show">
+                                <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                    id="m-sidebar-close-btn">
+                                    <i class="ri-close-line"></i>
+                                </button>
+                            </div>
+
+                            <!-- For Desktop -->
+                            <div class="mobile-hide">
+                                <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                    id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                    aria-controls="sidebar">
+                                    <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                    <div class="show-text">Toggle Sidebar</div>
+                                </button>
+                            </div>
                         </div>
 
 
@@ -3120,17 +3132,17 @@
                     ============================================================
                     -->
                     <section aria-label="Main content header with date, messages, notifications and host switch">
-                        <div class="main-content-header my-p-6 my-bg-white my-flex-between my-gap-6">
+                        <div class="main-content-header my-p-6 my-bg-white my-flex-between my-gap-6 my-gap-sm-0">
 
                             <!--Do not delete Empty (Div) "Thank You Razzak / Fahim v" -->
                             <div class="left"></div>
 
 
                             <!--============|| Right Side ||==========-->
-                            <div class="my-d-flex my-align-center my-gap-8">
+                            <div class="my-d-flex my-align-center my-gap-8 right my-gap-sm-2">
                                 <!-- Date -->
                                 <div
-                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
+                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-gap-sm-2 my-px-7 my-py-5 my-radius-sm ">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_19862)">
@@ -3151,7 +3163,7 @@
                                         Today Nov, 2025</time>
                                 </div>
 
-                                <div class="my-d-flex my-align-center my-gap-4">
+                                <div class="my-d-flex my-align-center my-gap-4 my-gap-sm-2">
                                     <!--===== Message =====-->
                                     <div>
                                         <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3218,7 +3230,7 @@
                                             </defs>
                                         </svg>
 
-                                        Switch to host
+                                        <span class="text">Switch to host</span>
                                     </button>
                                 </div>
                             </div>
@@ -3234,7 +3246,7 @@
                     -->
                     <section>
                         <div
-                            class="points my-bg-white my-p-8 my-mt-8 my-mx-8  my-radius-md my-d-flex my-gap-8 my-shadow-1 section-card">
+                            class="points points-sec my-bg-white my-p-8 my-mt-8 my-mx-8  my-radius-md my-d-flex my-gap-8 my-shadow-1 section-card">
                             <!--=============||  Total Point  ||=============-->
                             <div class="total-points" role="region" aria-labelledby="total-points-title">
                                 <svg class="progress-ring" width="150" height="150" viewBox="0 0 160 160">
@@ -3355,7 +3367,7 @@
                             </div>
 
                             <div class="my-mt-10">
-                                <div class="chart my-grid-350-remain my-gap-5">
+                                <div class="chart my-grid-350-remain my-grid-sm-1 my-gap-5">
 
                                     <!-- Left -->
                                     <div class="circle-chart my-p-relative"
@@ -3892,7 +3904,7 @@
 
 
                                         <!--====== Items ======-->
-                                        <div class="items my-mt-10 my-grid-3  my-gap-4 my-gap-lg-6">
+                                        <div class="items my-mt-10 my-grid-3 my-grid-sm-1  my-gap-4 my-gap-lg-6">
 
                                             <!-- single item -->
                                             <div class="item my-border-secondary my-radius-xl my-justify-between my-flex-column my-gap-15 my-p-6"
@@ -3981,7 +3993,7 @@
                                     aria-label="Currency Converter">
                                     <h5 class="my-fs-lg my-text-primary my-fw-bold">Currency Converter</h5>
 
-                                    <div class="my-mt-10 my-flex-between my-align-end my-gap-4">
+                                    <div class="my-mt-10 my-flex-between my-align-end my-gap-4 currency-converter-box">
                                         <!--=======  Left  ======-->
                                         <div class="common-dropdown-1">
                                             <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
@@ -4040,7 +4052,7 @@
                                         <div class="my-d-flex my-align-end my-justify-end">
                                             <!-- button -->
                                             <button
-                                                class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm"
+                                                class="my-bg-primary bg-hover-secondary  my-p-3 my-flex-center my-radius-sm compare-btn"
                                                 aria-label="Convert currency">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4057,7 +4069,8 @@
                                             <label for="amount" class="label my-fw-bold my-fs-md">Amount</label>
                                             <div class="my-d-flex area my-mt-1">
                                                 <div class="my-input-control">
-                                                    <input type="number" id="amount" aria-label="Converted amount" />
+                                                    <input type="number" id="amount" placeholder="Enter Amount"
+                                                        aria-label="Converted amount" />
                                                 </div>
 
                                                 <!-- Dropdown -->
