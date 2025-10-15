@@ -2198,11 +2198,11 @@ tr {
     display: inline-block;
 }
 
-.my-uppercase {
+.my-text-uppercase {
     text-transform: uppercase;
 }
 
-.my-lowercase {
+.my-text-lowercase {
     text-transform: lowercase;
 }
 
@@ -4342,13 +4342,24 @@ tr {
     flex-shrink: 0;
 }
 
-.flex-shrink-yes {
+.flex-shrink-0 {
     flex-shrink: 0;
 }
 
-.my-flex-grow-1 {
-    flex: 1;
+.flex-shrink-1 {
+    flex-shrink: 1;
 }
+
+.flex-grow-0 {
+    flex-grow: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+
+
 
 .my-flex-column {
     flex-direction: column;

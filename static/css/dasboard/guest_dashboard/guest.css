@@ -8,12 +8,14 @@
     max-width: 100%;
     margin: 0 auto;
     width: calc(100% - 70px);
-    /* max-width: 1440px; */
+    width: 90.28%;
+    min-height: 100%;
 }
 
 .dasboard-container-wrapper {
     margin-top: 125px;
     width: 100%;
+    min-height: 100%;
 }
 
 
@@ -89,20 +91,22 @@ aside.sidebar {
     box-shadow: var(--shadow-lg);
     transition: .3s linear;
     position: relative;
-    border-right: 8px solid var(--my-white);
+    min-height: 100dvh;
+    /* border-right: 8px solid var(--my-white); */
 }
 
 .aside-wrapper {
-    position: sticky;
-    top: 125px;
+    /* position: sticky; */
+    /* top: 125px; */
     /* height: calc(100dvh - 125px); */
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 /* Active Class */
 aside.sidebar.active {
-    /* flex-basis: 90px; */
+    flex-basis: 90px;
     width: 90px;
 }
 
@@ -250,7 +254,7 @@ aside .bottom {
 */
 
 .sidebar .bottom .miscellaneous-nav .item {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
 }
 
 .sidebar .bottom .miscellaneous-nav {
@@ -284,6 +288,7 @@ aside .ads-video {
     background-color: unset;
     box-shadow: var(--shadow-all-lg);
     border: none;
+    margin-top: 20px;
 }
 
 aside .ads-video .video-slider-wrap {
@@ -596,6 +601,7 @@ circle {
 }
 
 
+
 /*
 ============||    Booking Status   ||=============
 */
@@ -628,8 +634,7 @@ circle {
 /*
 ============||    Upcoming Trips   ||=============
 */
-
-.upcoming-trips .items .item,
+.currency-converter-area .upcoming-trips .items .item,
 .save-list .items .item {
     transition: .12s ease-in-out;
 }
@@ -639,7 +644,13 @@ circle {
     transform: translateY(4px);
 }
 
+.invite-wishlist .invite-friend-area {
+    height: 64%;
+}
 
+.invite-wishlist .currency-converter-area {
+    height: calc(36% - 16px);
+}
 
 .invite-wishlist .copy-btn:hover svg path {
     stroke: var(--my-secondary-color);
@@ -656,7 +667,7 @@ circle {
 
     main {
         /* width: calc(100% - 310px); */
-        flex-grow: 1;
+        /* flex-grow: 1; */
 
     }
 

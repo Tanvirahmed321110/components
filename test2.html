@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .hide-scroll-wrapper {
+                width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+                cursor: grab;
+                max-width: 222px;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            .hide-scroll-wrapper::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hide-scroll-wrapper:active {
+                cursor: grabbing;
+            }
+
+            .hide-scroll-area {
+                display: flex;
+                gap: 16px;
+                width: max-content;
+            }
+
+            .hide-scroll-area .item {
+                flex: 0 0 auto;
+                min-width: 150px;
+                height: 100px;
+                background: #4f93ff;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                user-select: none;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div class="hide-scroll-wrapper">
+                <ul class="hide-scroll-area">
+                    <li class="item">Item 1</li>
+                    <li class="item">Item 2</li>
+                    <li class="item">Item 3</li>
+                    <li class="item">Item 4</li>
+                    <li class="item">Item 5</li>
+                </ul>
+            </div>
+            <div>
+                <h2>New3</h2>
+                <div class="hide-scroll-wrapper">
+                    <ul class="hide-scroll-area">
+                        <li class="item">Item 1</li>
+                        <li class="item">Item 2</li>
+                        <li class="item">Item 3</li>
+                        <li class="item">Item 4</li>
+                        <li class="item">Item 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function makeDragScroll() {
+                // Select all matching elements
+                const scrollers = document.querySelectorAll('.hide-scroll-wrapper');
+                if (!scrollers || scrollers.length === 0) {
+                    return;
+                }
+
+                scrollers.forEach(scroller => {
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+
+                    scroller.addEventListener("mousedown", (e) => {
+                        isDown = true;
+                        startX = e.pageX - scroller.offsetLeft;
+                        scrollLeft = scroller.scrollLeft;
+                        document.body.style.userSelect = "none"; // prevent text selection
+                    });
+
+                    scroller.addEventListener("mouseleave", () => {
+                        isDown = false;
+                        document.body.style.userSelect = "";
+                    });
+
+                    scroller.addEventListener("mouseup", () => {
+                        isDown = false;
+                        document.body.style.userSelect = "";
+                    });
+
+                    scroller.addEventListener("mousemove", (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - scroller.offsetLeft;
+                        const walk = (x - startX) * 1; // scroll speed
+                        scroller.scrollLeft = scrollLeft - walk;
+                    });
+                });
+            }
+
+            // Initialize for all scroll components
+            makeDragScroll();
+
+
+        </script>
+    </body>
+
+</html>

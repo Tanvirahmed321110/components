@@ -2857,7 +2857,7 @@
 
                             <!--====== Sidebar General Nav ======-->
                             <div class="general-nav" role="navigation" aria-label="General Navigation">
-                                <div class="my-mt-4 my-fs-xs" id="general-nav-heading">GENERAL</div>
+                                <div class="my-mt-4 my-fs-xs my-text-uppercase" id="general-nav-heading">GENERAL</div>
                                 <nav class="my-flex-column my-mt-4 my-gap-2" aria-labelledby="general-nav-heading">
                                     <a class="item my-d-flex my-align-center   my-gap-4" href="./index.html"
                                         aria-current="page" aria-label="Dashboard Page">
@@ -2971,8 +2971,8 @@
                             <!--====== Sidebar Miscellaneous Nav ======-->
                             <div class="my-pt-5 miscellaneous-nav" role="navigation"
                                 aria-label="Miscellaneous Navigation">
-                                <p class="my-fs-xs" id="misc-nav-heading">Miscellaneous</p>
-                                <nav class="my-flex-column my-gap-1 my-mt-2" aria-labelledby="misc-nav-heading">
+                                <p class="my-fs-xs my-text-uppercase my-mt-2" id="misc-nav-heading">Miscellaneous</p>
+                                <nav class="my-flex-column my-gap-1 my-mt-4" aria-labelledby="misc-nav-heading">
 
                                     <!-- single nav item -->
                                     <a href="./support.html" class="item my-d-flex my-align-center   my-gap-4"
@@ -3033,6 +3033,25 @@
 
                                         <span>Legal Info</span>
                                     </a>
+
+
+                                    <!-- single nav item -->
+                                    <a href="./legal_info.html" class="item my-d-flex my-align-center   my-gap-4"
+                                        aria-label="Legal Page">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                                            <path d="M9 21H5C4.4477 21 4 20.5523 4 20V4C4 3.4477 4.4477 3 5 3H9"
+                                                stroke="white" stroke-width="1.67" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M16 17L21 12L16 7" stroke="white" stroke-width="1.67"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M21 12H9" stroke="white" stroke-width="1.67" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+
+                                        <span>Logout</span>
+                                    </a>
                                 </nav>
                             </div>
 
@@ -3086,7 +3105,7 @@
                 =======||   Main Content  Start Here   ||======
                 ===============================================
                 -->
-                <main class="my-has-scrollbar booking " id="main-content">
+                <main class="my-has-scrollbar booking my-flex-column" id="main-content">
 
                     <!--
                     ============================================================
@@ -3196,12 +3215,12 @@
 
 
                     <!--
-                            ===========================================
-                            =======||    Section  Start Here   ||======
-                            ===========================================
-                            -->
-                    <section>
-                        <div class="my-m-8  tabs">
+                    ===========================================
+                    =======||    Section  Start Here   ||======
+                    ===========================================
+                    -->
+                    <section class="flex-1 my-flex-column">
+                        <div class="my-m-8  tabs my-flex-column flex-1">
                             <!--======================||  Tab Buttons  ||=====================-->
                             <div class="my-bg-white  my-p-6 my-radius-md">
                                 <ul class="tab1-btns my-bg-white" role="tablist">
@@ -3313,10 +3332,11 @@
                             </div>
 
                             <!--======================||  Booking History And Reviews Contents  ||=====================-->
-                            <div class="tab-contents common">
+                            <div class=" tab-contents common   flex-1 my-bg-white my-radius-xl">
 
                                 <!--=============|| For Review Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md  my-shadow-1 active" id="booking">
+                                <div class="tab-content my-bg-white my-radius-md flex-1 my-shadow-1 active"
+                                    id="booking">
                                     <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
                                         <!-- Table Header Here -->
                                         <thead>
@@ -3586,7 +3606,7 @@
 
 
                                 <!--=============|| For History Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md history-table my-shadow-1 "
+                                <div class="tab-content my-bg-white my-radius-md flex-1 history-table my-shadow-1 "
                                     id="history" role="tabpanel" aria-labelledby="tab-history">
                                     <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
                                         <!-- Table Header Here -->
@@ -3890,7 +3910,7 @@
                                 </div>
 
                                 <!--=============|| For Review Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md reviews-table my-shadow-1 "
+                                <div class="tab-content my-bg-white my-radius-md flex-1 reviews-table my-shadow-1 "
                                     id="reviews" role="tabpanel" aria-labelledby="tab-reviews">
                                     <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
                                         <!-- Table Header Here -->
