@@ -67,7 +67,7 @@
     /* 11px */
     --fs-xs: 0.76rem;
     /* 12px */
-    --fs-sm: 0.850rem;
+    --fs-sm: 0.875rem;
     /* 13.5px */
     --fs-md: 1rem;
     /* 16px */
@@ -105,8 +105,6 @@
     --radius-round: 50%;
 
 
-    /* Border  */
-    --border-secondary: 1px solid var(--my-border-color);
 
 
 
@@ -169,7 +167,7 @@
 
 
 /* responsive font */
-@media (max-width:991px) {
+@media (max-width:769) {
     :root {
         /*______  Font Size  ______ */
         /* --fs-xs: 13px;

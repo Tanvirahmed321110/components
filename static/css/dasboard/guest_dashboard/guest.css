@@ -756,12 +756,23 @@ circle {
         width: 100%;
         flex-basis: unset;
         margin-top: 125px;
+        background-color: var(--my-white);
+        padding: 0;
     }
 
 
+    /* radius */
+    .section-card {
+        border-radius: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
     /* Main content header */
     .main-content-header {
-        padding-right: 0px;
+        padding: 0;
+        padding-bottom: 16px;
     }
 
     .main-content-header .left {
@@ -803,6 +814,7 @@ circle {
     .points-sec {
         display: flex;
         flex-direction: column;
+        padding: 16px;
     }
 
     .points-text .text {
@@ -826,13 +838,16 @@ circle {
     }
 
     .points .items .item {
-        padding: 24px 4px;
+        padding: 16px 4px;
+        border-radius: var(--radius-xl);
+        box-shadow: 0px 1px 2px 0px #0A0D120D;
     }
 
 
     /* Total Trips */
     .total-trips {
-        margin: 12px;
+        margin: 0;
+        padding: 16px;
     }
 
     .total-trips .circle-chart {
@@ -846,34 +861,37 @@ circle {
     }
 
 
-    /* radius */
-    .section-card {
-        margin: 12px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-    }
 
 
     /* Upcomming Trips */
     .upcoming-trips {
-        padding: 12px;
+        padding: 16px;
+        border-top: 1px solid var(--my-border-secondary);
+        border-bottom: 1px solid var(--my-border-secondary);
+        border-radius: unset;
     }
 
     .upcoming-trips .items .item {
         align-items: start;
         padding: 12px;
+        box-shadow: 0px 1px 2px 0px #0A0D120D;
+    }
+
+    .upcoming-trips .items .item .title {
+        font-size: var(--fs-sm);
+    }
+
+    .upcoming-trips .my-btn-sm {
+        padding: 8px;
+        border-radius: var(--radius-md);
     }
 
 
-    .upcoming-trips,
-    .booking-status {
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
-    }
 
     /* Booking Section */
     .booking-upcoming {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .booking-status {
@@ -887,6 +905,10 @@ circle {
         transition: transform .12s linear;
     }
 
+    .booking-status .item .title {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+    }
 
 
     /* invite-wishlist */
@@ -909,5 +931,52 @@ circle {
 
     .invite-wishlist .currency-converter-area {
         height: fit-content;
+    }
+
+    /* save-list */
+    .save-list .items .item {
+        padding: 12px;
+    }
+
+
+    /* right */
+    .chart .right {
+        overflow-x: auto;
+        height: 340px;
+    }
+
+    .chart #barChart {
+        height: 340px !important;
+        width: 740px !important;
+        max-width: unset !important;
+        max-height: unset !important;
+    }
+
+
+
+    /* booking-status-head */
+    .booking-status-head {
+        font-size: var(--fs-md);
+        line-height: 38px;
+    }
+
+    .booking-status .items .item {
+        box-shadow: 0px 1px 2px 0px #0A0D120D;
+    }
+
+
+    .calendar .calendar-body {
+        max-width: 375px;
+    }
+
+    .calendar .calendar-footer {
+        gap: 16px;
+        margin-top: 0;
+        gap: 16px;
+    }
+
+    .calendar .calendar-footer button {
+        line-height: 20px;
+        padding: 12px;
     }
 }
