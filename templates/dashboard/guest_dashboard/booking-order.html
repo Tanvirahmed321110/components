@@ -2812,16 +2812,28 @@
                         =======||   Sidebar Section  Start Here   ||======
                         ==================================================
                         -->
-                <aside aria-label="Dashboard navigation" class="sidebar " id="sidebar">
+                <aside aria-label="Dashboard navigation" class="sidebar m-active " id="sidebar">
                     <div class="aside-wrapper">
                         <!--====== Sidebar Close Button ======-->
                         <div>
-                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                                aria-controls="sidebar">
-                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                                <div class="show-text">Toggle Sidebar</div>
-                            </button>
+
+                            <!-- For Mobile -->
+                            <div class="desktop-hide mobile-show">
+                                <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                    id="m-sidebar-close-btn">
+                                    <i class="ri-close-line"></i>
+                                </button>
+                            </div>
+
+                            <!-- For Desktop -->
+                            <div class="mobile-hide">
+                                <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                    id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                    aria-controls="sidebar">
+                                    <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                    <div class="show-text">Toggle Sidebar</div>
+                                </button>
+                            </div>
                         </div>
 
 

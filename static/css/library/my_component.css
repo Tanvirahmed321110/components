@@ -3417,6 +3417,7 @@ input[type="radio"]:checked::after {
     position: relative;
     border-top-right-radius: var(--radius-md);
     border-top-left-radius: var(--radius-md);
+    text-wrap: nowrap;
 }
 
 /* Hover (lift & shine) */
@@ -4098,6 +4099,8 @@ input[type="radio"]:checked::after {
 .common-table-1 th {
     padding: 14px 10px;
     padding-right: 8px;
+    text-wrap: nowrap;
+    /* min-width: 90px; */
 }
 
 .common-table-1 th {
@@ -6299,7 +6302,8 @@ _____________________________________*/
     }
 
     .common-table-1-wrapper table {
-        min-width: 1000px;
+        min-width: 500px;
+        width: 100%;
     }
 }
 

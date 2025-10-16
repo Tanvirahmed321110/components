@@ -1057,9 +1057,6 @@ circle {
         overflow-x: auto;
     }
 
-    .common-table-1-wrapper table {
-        min-width: 1000px;
-    }
 
     .pagination {
         padding: 0;
