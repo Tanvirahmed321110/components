@@ -234,6 +234,7 @@ header .header-top .become-supplier-btn:hover {
 .become-supplier-btn span {
     position: relative;
     z-index: 2;
+    text-wrap: nowrap;
 }
 
 /* ::before for left-to-right animation */
@@ -555,6 +556,7 @@ header .header-main .item {
     font-size: var(--fs-md);
     transition: .2s linear;
     padding-left: 8px;
+    text-wrap: nowrap;
 }
 
 header .header-main .item:hover,
@@ -705,4 +707,32 @@ footer .footer-bottom .left {
 
 .footer-bottom .footer-social-icons a:hover svg {
     transform: rotate(360deg);
+}
+
+
+
+
+@media(max-width:768px) {
+    header .header-top {
+        border-bottom: 1px solid var(--my-border-secondary) !important;
+        padding-top: 16px;
+        padding: 16px;
+        max-height: 60px;
+    }
+
+    header .header-main {
+        padding: 16px;
+        margin: 0;
+        margin-top: 0 !important;
+        padding-bottom: 16px !important;
+    }
+
+
+    header .header-main .item {
+        font-size: 12px;
+    }
+
+    header .header-main ul {
+        padding: 0;
+    }
 }

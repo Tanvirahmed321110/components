@@ -5,138 +5,256 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-
-            .head {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .container {
-                width: calc(100% - 240px);
-                margin: 0 auto;
-            }
-
-            .container {
-                width: 83.33%;
-                margin: 0 auto;
-            }
-
-            /* .container {
-                width: 100%;
-                padding: 0 120px;
-                margin: 0 auto;
-            } */
-
-            .area {
-                margin-top: 12px;
-                display: grid;
-                grid-template-columns: repeat(4, minmax(200px, 1fr));
-                /* grid-template-columns: repeat(4, 1fr); */
-                gap: 16px;
-            }
-
-            .area .card {
-                border: 1px solid #dbdbdb;
-                padding: 12px;
-                border-radius: 4px;
-            }
-
-            /* @media (max-width:1080px) {
-                .area {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
-
-            @media (max-width:991px) {
-                .area {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            } */
-            .scroll-wrapper {
-                width: 100%;
-                overflow-x: auto;
-                overflow-y: hidden;
-                scrollbar-width: thin;
-                /* Firefox */
-                scrollbar-color: transparent transparent;
-                /* initially hidden */
-                transition: scrollbar-color 0.3s;
-            }
-
-            /* Firefox: show scrollbar on hover */
-            .scroll-wrapper:hover {
-                scrollbar-color: #888 transparent;
-            }
-
-            /* Chrome/Safari: hide scrollbar by default */
-            .scroll-wrapper::-webkit-scrollbar {
-                height: 8px;
-            }
-
-            .scroll-wrapper::-webkit-scrollbar-track {
-                background: transparent;
-            }
-
-            .scroll-wrapper::-webkit-scrollbar-thumb {
-                background: transparent;
-                border-radius: 4px;
-            }
-
-            /* Show scrollbar thumb on hover */
-            .scroll-wrapper:hover::-webkit-scrollbar-thumb {
-                background: #888;
-            }
-
-            .scroll-area {
-                display: flex;
-                gap: 16px;
-                width: max-content;
-            }
-
-            /* optional: style your items */
-            .scroll-area .item {
-                flex: 0 0 auto;
-                /* prevent shrinking */
-                min-width: 150px;
-                /* or whatever width you want */
-                height: 100px;
-                background: #4f93ff;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 6px;
-            }
-        </style>
     </head>
 
     <body>
-        <section>
-            <div class="head">
-                <h1>Test</h3>
+        <div style=" width: 400px;background-color: rebeccapurple; padding: 12px;">
+            <div class="common-table-1-wrapper">
+                <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                    <!-- Table Header Here -->
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span> Booking ID</span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span>Order Date</span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span>Service Type </span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span>Item Name</span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span>Status</span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="my-d-flex my-align-center my-gap-2">
+                                    <span>Feedback</span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <!--===== Table Body Here =====-->
+                    <tbody class="">
+                        <!-- single row -->
+                        <tr>
+                            <td>#BK1001</td>
+                            <td>Jan 15, 2025</td>
+                            <td>Flight</td>
+                            <td>Raddison and other</td>
+                            <td>
+                                <div class="status danger">
+                                    <div class="round"></div> Cancelled
+                                </div>
+                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                            </td>
+                            <td>
+                                <ul class="stars my-gap-2 my-d-flex ">
+                                    <li class="my-text-orange"><i class="ri-star-fill"></i>
+                                    </li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-line"></i> </li>
+                                    <!-- <i class="ri-star-line"></i> -->
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <!-- single row -->
+                        <tr class="row">
+                            <td>#BK1001</td>
+                            <td>April 12, 2025</td>
+                            <td>Tour</td>
+                            <td>Raddison blue </td>
+                            <td>
+                                <div class="status success">
+                                    <div class="round"></div> Done
+                                </div>
+                            </td>
+
+                            <td>
+                                <ul class="stars my-gap-2 my-d-flex ">
+                                    <li class="my-text-orange"><i class="ri-star-fill"></i>
+                                    </li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                        <!-- single row -->
+                        <tr class="row">
+                            <td class="id">#BK1001</td>
+                            <td>May 19, 2025</td>
+                            <td>Flight</td>
+                            <td>Raddison blue and </td>
+                            <td>
+                                <div class="status warring">
+                                    <div class="round"></div> Pending
+                                </div>
+                            </td>
+
+                            <td>
+                                <ul class="stars my-gap-2 my-d-flex ">
+                                    <li class="my-text-orange"><i class="ri-star-fill"></i>
+                                    </li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <!-- single row -->
+                        <tr>
+                            <td>#BK1001</td>
+                            <td>Jan 15, 2025</td>
+                            <td>Flight</td>
+                            <td>Raddison and other</td>
+                            <td>
+                                <div class="status danger">
+                                    <div class="round"></div> Cancelled
+                                </div>
+                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                            </td>
+                            <td>
+                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                    Feedback</button>
+                            </td>
+
+                        </tr>
+
+                        <!-- single row -->
+                        <tr class="row">
+                            <td>#BK1001</td>
+                            <td>April 12, 2025</td>
+                            <td>Tour</td>
+                            <td>Raddison blue </td>
+                            <td>
+                                <div class="status success">
+                                    <div class="round"></div> Done
+                                </div>
+                            </td>
+
+                            <td>
+                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                    Feedback</button>
+                            </td>
+                        </tr>
+
+
+                        <!-- single row -->
+                        <tr class="row">
+                            <td class="id">#BK1001</td>
+                            <td>May 19, 2025</td>
+                            <td>Flight</td>
+                            <td>Raddison blue and </td>
+                            <td>
+                                <div class="status warring">
+                                    <div class="round"></div> Pending
+                                </div>
+                            </td>
+
+                            <td>
+                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                    Feedback</button>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
             </div>
 
-            <div style="margin-top: 20px;">
-                <div class="container">
-                    <div>Container Here</div>
-                    <div class="area">
-                        <div class="card">Card 1</div>
-                        <div class="card">Card 2</div>
-                        <div class="card">Card 3</div>
-                        <div class="card">Card 4</div>
-                        <div class="card">Card 4</div>
-                    </div>
+            <!--======  For Pagination Here  ======-->
+            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation" aria-label="Pagination">
+                <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                        class="ri-arrow-left-line"></i>
+                    Previous</button>
+
+                <!-- pages -->
+                <div class="pages my-d-flex my-gap-2">
+                    <button class="page active" aria-current="page" aria-label="Page 1">1</button>
+                    <button class="page" aria-label="Page 2">2</button>
+                    <button class="page" aria-label="Page 3">3</button>
+                    <span class="jumper" aria-hidden="true">…</span>
+                    <button class="page" aria-label="Page 6">6</button>
+                    <button class="page" aria-label="Page 7">7</button>
+                    <button class="page" aria-label="Page 8">8</button>
                 </div>
+
+                <button class="next" aria-label="Go to next page">Next <i class="ri-arrow-right-line"></i></button>
             </div>
-        </section>
+        </div>
     </body>
 
 </html>

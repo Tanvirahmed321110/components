@@ -1035,8 +1035,8 @@ circle {
     /* filter-header */
     .filter-header {
         margin: 0;
-        padding: 16px 0;
-        padding-top: 32px;
+        padding: 32px 0;
+        padding-bottom: 0px;
     }
 
     .filter-header .search-input,
@@ -1044,7 +1044,29 @@ circle {
         display: none;
     }
 
+    .filter-header .reset-btn-m,
+    .filter-header .search-input-m {
+        display: flex;
+    }
+
     .tab1-btns {
         flex-wrap: nowrap;
+    }
+
+    .common-table-1-wrapper {
+        overflow-x: auto;
+    }
+
+    .common-table-1-wrapper table {
+        min-width: 1000px;
+    }
+
+    .pagination {
+        padding: 0;
+        padding-top: 16px;
+    }
+
+    .pagination .pages.my-d-flex {
+        /* display: none !important; */
     }
 }

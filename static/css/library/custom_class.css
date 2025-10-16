@@ -2182,13 +2182,6 @@ tr {
 
 
 /*______  Display  ______*/
-.desktop-hide {
-    display: none;
-}
-
-.desktop-show {
-    display: block;
-}
 
 .my-d-none {
     display: none;
@@ -5059,6 +5052,8 @@ tr {
     animation: btn_icon_animation2 .44s;
 }
 
+
+
 /*____  Animation _____*/
 @keyframes btn_icon_animation {
 
@@ -5152,6 +5147,14 @@ tr {
     0% {
         transform: translateY(-118px);
     }
+}
+
+.desktop-hide {
+    display: none;
+}
+
+.desktop-show {
+    display: block;
 }
 
 
@@ -8930,15 +8933,6 @@ tr {
 /*________  Responsive for small Device  ________*/
 @media (max-width:768px) {
 
-    .mobile-hide {
-        display: none;
-    }
-
-    .mobile-show {
-        display: block;
-    }
-
-
     /* Padding all sides */
     .my-p-sm-0 {
         padding: 0px;
@@ -11043,6 +11037,16 @@ tr {
         width: 200px;
     }
 
+
+
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .mobile-show {
+        display: block;
+    }
 }
 
 
@@ -11117,4 +11121,6 @@ tr {
     .my-grid-6 {
         grid-template-columns: repeat(3, 1fr);
     }
+
+
 }
