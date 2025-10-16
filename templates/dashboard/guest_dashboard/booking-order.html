@@ -3222,29 +3222,40 @@
                     <section class="flex-1 my-flex-column">
                         <div class="my-m-8  tabs my-flex-column flex-1">
                             <!--======================||  Tab Buttons  ||=====================-->
-                            <div class="my-bg-white  my-p-6 my-radius-md">
-                                <ul class="tab1-btns my-bg-white" role="tablist">
-                                    <li>
-                                        <button class="tab-btn active" data-tab="booking" role="tab"
-                                            aria-controls="panel-booking">
-                                            Booking</button>
-                                    </li>
-                                    <li>
-                                        <button class="tab-btn" data-tab="history" role="tab"
-                                            aria-controls="panel-history">History</button>
-                                    </li>
-                                    <li>
-                                        <button class="tab-btn" data-tab="reviews" role="tab"
-                                            aria-controls="panel-reviews">Reviews</button>
-                                    </li>
-                                </ul>
+                            <div class="my-bg-white  my-p-6 my-p-sm-0 my-radius-md">
+                                <div class="hide-scroll-wrapper tab-wrapper">
+                                    <ul class="tab1-btns hide-scroll-area my-bg-white" role="tablist">
+                                        <li>
+                                            <button class="tab-btn active" data-tab="booking" role="tab"
+                                                aria-controls="panel-booking">
+                                                Booking</button>
+                                        </li>
+                                        <li>
+                                            <button class="tab-btn" data-tab="history" role="tab"
+                                                aria-controls="panel-history">History</button>
+                                        </li>
+                                        <li>
+                                            <button class="tab-btn" data-tab="reviews" role="tab"
+                                                aria-controls="panel-reviews">Reviews</button>
+                                        </li>
+                                        <li>
+                                            <button class="tab-btn" data-tab="reviews" role="tab"
+                                                aria-controls="panel-reviews">Reviews</button>
+                                        </li>
+                                        <li>
+                                            <button class="tab-btn" data-tab="reviews" role="tab"
+                                                aria-controls="panel-reviews">Reviews</button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
 
                             <!--======================||  Filter Head  ||=====================-->
-                            <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
+                            <div
+                                class="my-flex-between   my-my-10 my-bg-white my-p-6 my-radius-md filter-header hide-scroll-wrapper">
                                 <!--=============||  Left Area  ||=============-->
-                                <div class="my-d-flex my-gap-6 my-align-center">
+                                <div class="my-d-flex my-gap-6 my-align-center hide-scroll-area my-gap-sm-6">
                                     <!--===== For All Services =====-->
                                     <div class="click-dropdown-parent">
                                         <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
@@ -3302,9 +3313,9 @@
                                         </ul>
                                     </div>
 
-                                    <!--===== For Reset Filter =====-->
+                                    <!--===== For Reset Filter (Mobile Hide) =====-->
                                     <button
-                                        class=" my-p-5 my-px-7 my-border-secondary my-flex-between my-gap-3 my-radius-md">
+                                        class=" my-p-5 my-px-7 my-border-secondary reset-btn my-flex-between my-gap-3 my-radius-md">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE"
@@ -3315,8 +3326,8 @@
                                     </button>
                                 </div>
 
-                                <!--=============||  Input Area  ||=============-->
-                                <div class="search-input my-input-control ">
+                                <!--=============||  Input Area (Mobile Hide) ||=============-->
+                                <div class="search-input  my-input-control ">
                                     <input type="text" placeholder="Search Booking" aria-label="Search">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
@@ -3331,121 +3342,123 @@
                                 </div>
                             </div>
 
-                            <!--======================||  Booking History And Reviews Contents  ||=====================-->
-                            <div class=" tab-contents common   flex-1 my-bg-white my-radius-xl">
 
-                                <!--=============|| For Review Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md flex-1 my-shadow-1 active"
-                                    id="booking">
-                                    <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
-                                        <!-- Table Header Here -->
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span> Booking ID</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Services Type</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Item Name</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Booking Date</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Travel Date</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Status</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Payment Status</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2 small-col">
-                                                        <span>Action</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </thead>
+                        </div>
 
-                                        <!--===== Table Body Here =====-->
-                                        <tbody class="">
-                                            <!-- single row -->
-                                            <tr>
-                                                <td>#BK1001</td>
-                                                <td>Flight</td>
-                                                <td>Raddison and other</td>
-                                                <td>Jan 15, 2025</td>
-                                                <td>Jan 19, 2025</td>
-                                                <td>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="status danger">
+                        <!--======================||  Booking History And Reviews Contents  ||=====================-->
+                        <div class=" tab-contents common   flex-1 my-bg-white my-radius-xl">
+
+                            <!--=============|| For Review Content  ||=============-->
+                            <div class="tab-content my-bg-white my-radius-md flex-1 my-shadow-1 active" id="booking">
+                                <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                                    <!-- Table Header Here -->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span> Booking ID</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Services Type</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Item Name</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Booking Date</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Travel Date</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Status</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Payment Status</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2 small-col">
+                                                    <span>Action</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <!--===== Table Body Here =====-->
+                                    <tbody class="">
+                                        <!-- single row -->
+                                        <tr>
+                                            <td>#BK1001</td>
+                                            <td>Flight</td>
+                                            <td>Raddison and other</td>
+                                            <td>Jan 15, 2025</td>
+                                            <td>Jan 19, 2025</td>
+                                            <td>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status danger">
                                                                 <div class="round"></div> Cancelled
                                                             </div>
                                                              <div class="status success">
@@ -3457,13 +3470,13 @@
                                                                     <div class="status danger">
                                                                         <div class="round"></div> Cancelled
                                                                 </div>  -->
-                                                </td>
+                                            </td>
 
-                                                <td>
-                                                    <div class="p-status cancel">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="p-status cancel">
+                                            <td>
+                                                <div class="p-status cancel">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="p-status cancel">
                                                                 <div class="round"></div> Cancelled
                                                             </div>
                                                             <div class="p-status paid">
@@ -3472,703 +3485,700 @@
                                                             <div class="p-status warring">
                                                                 <div class="round"></div> Pay on Property
                                                             </div> -->
-                                                </td>
-                                                <td><button class="view-btn">View</button></td>
-                                            </tr>
+                                            </td>
+                                            <td><button class="view-btn">View</button></td>
+                                        </tr>
 
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td>#BK1001</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue </td>
-                                                <td>April 12, 2025</td>
-                                                <td>April 19, 2025</td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div>Paid
-                                                    </div>
-                                                </td>
-                                                <td class="small-col"><button class="view-btn">View</button></td>
-                                            </tr>
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td>#BK1001</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue </td>
+                                            <td>April 12, 2025</td>
+                                            <td>April 19, 2025</td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div>Paid
+                                                </div>
+                                            </td>
+                                            <td class="small-col"><button class="view-btn">View</button></td>
+                                        </tr>
 
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue </td>
-                                                <td>April 12, 2025</td>
-                                                <td>April 19, 2025</td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div>Paid
-                                                    </div>
-                                                </td>
-                                                <td class="small-col"> <button class="view-btn">View</button></td>
-                                            </tr>
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue </td>
+                                            <td>April 12, 2025</td>
+                                            <td>April 19, 2025</td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div>Paid
+                                                </div>
+                                            </td>
+                                            <td class="small-col"> <button class="view-btn">View</button></td>
+                                        </tr>
 
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue </td>
-                                                <td>April 12, 2025</td>
-                                                <td>April 19, 2025</td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div>Paid
-                                                    </div>
-                                                </td>
-                                                <td class="small-col"><button class="view-btn">View</button></td>
-                                            </tr>
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue </td>
+                                            <td>April 12, 2025</td>
+                                            <td>April 19, 2025</td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div>Paid
+                                                </div>
+                                            </td>
+                                            <td class="small-col"><button class="view-btn">View</button></td>
+                                        </tr>
 
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>May 16, 2025</td>
-                                                <td>May 19, 2025</td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="p-status warring">
-                                                        <div class="round"></div> Pay on Property
-                                                    </div>
-                                                </td>
-                                                <td class="small-col"><button class="view-btn">View</button></td>
-                                            </tr>
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>May 16, 2025</td>
+                                            <td>May 19, 2025</td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="p-status warring">
+                                                    <div class="round"></div> Pay on Property
+                                                </div>
+                                            </td>
+                                            <td class="small-col"><button class="view-btn">View</button></td>
+                                        </tr>
 
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1002</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>Feb 15, 2025</td>
-                                                <td>Feb 19, 2025</td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div> Paid
-                                                    </div>
-                                                </td>
-                                                <td class="small-col"><button class="view-btn">View</button></td>
-                                            </tr>
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1002</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>Feb 15, 2025</td>
+                                            <td>Feb 19, 2025</td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div> Paid
+                                                </div>
+                                            </td>
+                                            <td class="small-col"><button class="view-btn">View</button></td>
+                                        </tr>
 
-                                        </tbody>
-                                    </table>
+                                    </tbody>
+                                </table>
 
-                                    <!--======  For Pagination Content  ======-->
-                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                        aria-label="Pagination">
-                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                                class="ri-arrow-left-line"></i>
-                                            Previous</button>
+                                <!--======  For Pagination Content  ======-->
+                                <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                    aria-label="Pagination">
+                                    <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                            class="ri-arrow-left-line"></i>
+                                        Previous</button>
 
-                                        <!-- pages -->
-                                        <div class="pages my-d-flex my-gap-3">
-                                            <button class="page active" aria-current="page"
-                                                aria-label="Page 1">1</button>
-                                            <button class="page" aria-label="Page 2">2</button>
-                                            <button class="page" aria-label="Page 3">3</button>
-                                            <span class="jumper" aria-hidden="true">…</span>
-                                            <button class="page" aria-label="Page 6">6</button>
-                                            <button class="page" aria-label="Page 7">7</button>
-                                            <button class="page" aria-label="Page 8">8</button>
-                                        </div>
-
-                                        <button class="next" aria-label="Go to next page">Next <i
-                                                class="ri-arrow-right-line"></i></button>
+                                    <!-- pages -->
+                                    <div class="pages my-d-flex my-gap-3">
+                                        <button class="page active" aria-current="page" aria-label="Page 1">1</button>
+                                        <button class="page" aria-label="Page 2">2</button>
+                                        <button class="page" aria-label="Page 3">3</button>
+                                        <span class="jumper" aria-hidden="true">…</span>
+                                        <button class="page" aria-label="Page 6">6</button>
+                                        <button class="page" aria-label="Page 7">7</button>
+                                        <button class="page" aria-label="Page 8">8</button>
                                     </div>
-                                </div>
 
-
-
-                                <!--=============|| For History Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md flex-1 history-table my-shadow-1 "
-                                    id="history" role="tabpanel" aria-labelledby="tab-history">
-                                    <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
-                                        <!-- Table Header Here -->
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span> Booking ID</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Date</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Service Type </span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Item Name</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Status</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Amount</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Payment Status</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </thead>
-
-                                        <!--===== Table Body Here =====-->
-                                        <tbody class="">
-                                            <!-- single row -->
-                                            <tr>
-                                                <td>#BK1001</td>
-                                                <td>Jan 15, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison and other</td>
-                                                <td>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="status danger">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                             <div class="status success">
-                                                                <div class="round"></div> Done
-                                                                    </div>
-                                                                    <div class="status warring">
-                                                                        <div class="round"></div> warring
-                                                                    </div>
-                                                                    <div class="status danger">
-                                                                        <div class="round"></div> Cancelled
-                                                                </div>  -->
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status cancel">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="p-status cancel">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                            <div class="p-status paid">
-                                                                <div class="round"></div>Paid
-                                                            </div>
-                                                            <div class="p-status warring">
-                                                                <div class="round"></div> Pay on Property
-                                                            </div> -->
-                                                </td>
-                                            </tr>
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td>#BK1001</td>
-                                                <td>April 12, 2025</td>
-                                                <td>Tour</td>
-                                                <td>Raddison blue </td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div>Paid
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>May 19, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status warring">
-                                                        <div class="round"></div> Pay on Property
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- single row -->
-                                            <tr>
-                                                <td>#BK1001</td>
-                                                <td>Jan 15, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison and other</td>
-                                                <td>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="status danger">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                             <div class="status success">
-                                                                <div class="round"></div> Done
-                                                                    </div>
-                                                                    <div class="status warring">
-                                                                        <div class="round"></div> warring
-                                                                    </div>
-                                                                    <div class="status danger">
-                                                                        <div class="round"></div> Cancelled
-                                                                </div>  -->
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status cancel">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="p-status cancel">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                            <div class="p-status paid">
-                                                                <div class="round"></div>Paid
-                                                            </div>
-                                                            <div class="p-status warring">
-                                                                <div class="round"></div> Pay on Property
-                                                            </div> -->
-                                                </td>
-                                            </tr>
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td>#BK1001</td>
-                                                <td>April 12, 2025</td>
-                                                <td>Tour</td>
-                                                <td>Raddison blue </td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status paid">
-                                                        <div class="round"></div>Paid
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>May 19, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <span>$</span>120.00
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="p-status warring">
-                                                        <div class="round"></div> Pay on Property
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
-
-                                    <!--======  For Pagination Here  ======-->
-                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                        aria-label="Pagination">
-                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                                class="ri-arrow-left-line"></i>
-                                            Previous</button>
-
-                                        <!-- pages -->
-                                        <div class="pages my-d-flex my-gap-2">
-                                            <button class="page active" aria-current="page"
-                                                aria-label="Page 1">1</button>
-                                            <button class="page" aria-label="Page 2">2</button>
-                                            <button class="page" aria-label="Page 3">3</button>
-                                            <span class="jumper" aria-hidden="true">…</span>
-                                            <button class="page" aria-label="Page 6">6</button>
-                                            <button class="page" aria-label="Page 7">7</button>
-                                            <button class="page" aria-label="Page 8">8</button>
-                                        </div>
-
-                                        <button class="next" aria-label="Go to next page">Next <i
-                                                class="ri-arrow-right-line"></i></button>
-                                    </div>
-                                </div>
-
-                                <!--=============|| For Review Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-md flex-1 reviews-table my-shadow-1 "
-                                    id="reviews" role="tabpanel" aria-labelledby="tab-reviews">
-                                    <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
-                                        <!-- Table Header Here -->
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span> Booking ID</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Order Date</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Service Type </span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Item Name</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Status</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        <span>Feedback</span>
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </thead>
-
-                                        <!--===== Table Body Here =====-->
-                                        <tbody class="">
-                                            <!-- single row -->
-                                            <tr>
-                                                <td>#BK1001</td>
-                                                <td>Jan 15, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison and other</td>
-                                                <td>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="status danger">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                             <div class="status success">
-                                                                <div class="round"></div> Done
-                                                                    </div>
-                                                                    <div class="status warring">
-                                                                        <div class="round"></div> warring
-                                                                    </div>
-                                                                    <div class="status danger">
-                                                                        <div class="round"></div> Cancelled
-                                                                </div>  -->
-                                                </td>
-                                                <td>
-                                                    <ul class="stars my-gap-2 my-d-flex ">
-                                                        <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-line"></i> </li>
-                                                        <!-- <i class="ri-star-line"></i> -->
-                                                    </ul>
-                                                </td>
-                                            </tr>
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td>#BK1001</td>
-                                                <td>April 12, 2025</td>
-                                                <td>Tour</td>
-                                                <td>Raddison blue </td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <ul class="stars my-gap-2 my-d-flex ">
-                                                        <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>May 19, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <ul class="stars my-gap-2 my-d-flex ">
-                                                        <li class="my-text-orange"><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                        <li><i class="ri-star-fill"></i></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                            <!-- single row -->
-                                            <tr>
-                                                <td>#BK1001</td>
-                                                <td>Jan 15, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison and other</td>
-                                                <td>
-                                                    <div class="status danger">
-                                                        <div class="round"></div> Cancelled
-                                                    </div>
-                                                    <!-- <div class="status danger">
-                                                                <div class="round"></div> Cancelled
-                                                            </div>
-                                                             <div class="status success">
-                                                                <div class="round"></div> Done
-                                                                    </div>
-                                                                    <div class="status warring">
-                                                                        <div class="round"></div> warring
-                                                                    </div>
-                                                                    <div class="status danger">
-                                                                        <div class="round"></div> Cancelled
-                                                                </div>  -->
-                                                </td>
-                                                <td>
-                                                    <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                        Feedback</button>
-                                                </td>
-
-                                            </tr>
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td>#BK1001</td>
-                                                <td>April 12, 2025</td>
-                                                <td>Tour</td>
-                                                <td>Raddison blue </td>
-                                                <td>
-                                                    <div class="status success">
-                                                        <div class="round"></div> Done
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                        Feedback</button>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- single row -->
-                                            <tr class="row">
-                                                <td class="id">#BK1001</td>
-                                                <td>May 19, 2025</td>
-                                                <td>Flight</td>
-                                                <td>Raddison blue and </td>
-                                                <td>
-                                                    <div class="status warring">
-                                                        <div class="round"></div> Pending
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
-                                                        Feedback</button>
-                                                </td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
-
-                                    <!--======  For Pagination Here  ======-->
-                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                        aria-label="Pagination">
-                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
-                                                class="ri-arrow-left-line"></i>
-                                            Previous</button>
-
-                                        <!-- pages -->
-                                        <div class="pages my-d-flex my-gap-2">
-                                            <button class="page active" aria-current="page"
-                                                aria-label="Page 1">1</button>
-                                            <button class="page" aria-label="Page 2">2</button>
-                                            <button class="page" aria-label="Page 3">3</button>
-                                            <span class="jumper" aria-hidden="true">…</span>
-                                            <button class="page" aria-label="Page 6">6</button>
-                                            <button class="page" aria-label="Page 7">7</button>
-                                            <button class="page" aria-label="Page 8">8</button>
-                                        </div>
-
-                                        <button class="next" aria-label="Go to next page">Next <i
-                                                class="ri-arrow-right-line"></i></button>
-                                    </div>
+                                    <button class="next" aria-label="Go to next page">Next <i
+                                            class="ri-arrow-right-line"></i></button>
                                 </div>
                             </div>
 
-                        </div>
-                    </section>
 
-                </main>
+
+                            <!--=============|| For History Content  ||=============-->
+                            <div class="tab-content my-bg-white my-radius-md flex-1 history-table my-shadow-1 "
+                                id="history" role="tabpanel" aria-labelledby="tab-history">
+                                <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                                    <!-- Table Header Here -->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span> Booking ID</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Date</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Service Type </span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Item Name</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Status</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Amount</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Payment Status</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <!--===== Table Body Here =====-->
+                                    <tbody class="">
+                                        <!-- single row -->
+                                        <tr>
+                                            <td>#BK1001</td>
+                                            <td>Jan 15, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison and other</td>
+                                            <td>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status cancel">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="p-status cancel">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                            <div class="p-status paid">
+                                                                <div class="round"></div>Paid
+                                                            </div>
+                                                            <div class="p-status warring">
+                                                                <div class="round"></div> Pay on Property
+                                                            </div> -->
+                                            </td>
+                                        </tr>
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td>#BK1001</td>
+                                            <td>April 12, 2025</td>
+                                            <td>Tour</td>
+                                            <td>Raddison blue </td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div>Paid
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>May 19, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status warring">
+                                                    <div class="round"></div> Pay on Property
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- single row -->
+                                        <tr>
+                                            <td>#BK1001</td>
+                                            <td>Jan 15, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison and other</td>
+                                            <td>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status cancel">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="p-status cancel">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                            <div class="p-status paid">
+                                                                <div class="round"></div>Paid
+                                                            </div>
+                                                            <div class="p-status warring">
+                                                                <div class="round"></div> Pay on Property
+                                                            </div> -->
+                                            </td>
+                                        </tr>
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td>#BK1001</td>
+                                            <td>April 12, 2025</td>
+                                            <td>Tour</td>
+                                            <td>Raddison blue </td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status paid">
+                                                    <div class="round"></div>Paid
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>May 19, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span>$</span>120.00
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="p-status warring">
+                                                    <div class="round"></div> Pay on Property
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                                <!--======  For Pagination Here  ======-->
+                                <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                    aria-label="Pagination">
+                                    <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                            class="ri-arrow-left-line"></i>
+                                        Previous</button>
+
+                                    <!-- pages -->
+                                    <div class="pages my-d-flex my-gap-2">
+                                        <button class="page active" aria-current="page" aria-label="Page 1">1</button>
+                                        <button class="page" aria-label="Page 2">2</button>
+                                        <button class="page" aria-label="Page 3">3</button>
+                                        <span class="jumper" aria-hidden="true">…</span>
+                                        <button class="page" aria-label="Page 6">6</button>
+                                        <button class="page" aria-label="Page 7">7</button>
+                                        <button class="page" aria-label="Page 8">8</button>
+                                    </div>
+
+                                    <button class="next" aria-label="Go to next page">Next <i
+                                            class="ri-arrow-right-line"></i></button>
+                                </div>
+                            </div>
+
+                            <!--=============|| For Review Content  ||=============-->
+                            <div class="tab-content my-bg-white my-radius-md flex-1 reviews-table my-shadow-1 "
+                                id="reviews" role="tabpanel" aria-labelledby="tab-reviews">
+                                <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                                    <!-- Table Header Here -->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span> Booking ID</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Order Date</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Service Type </span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Item Name</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Status</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <span>Feedback</span>
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                            stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <!--===== Table Body Here =====-->
+                                    <tbody class="">
+                                        <!-- single row -->
+                                        <tr>
+                                            <td>#BK1001</td>
+                                            <td>Jan 15, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison and other</td>
+                                            <td>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                                            </td>
+                                            <td>
+                                                <ul class="stars my-gap-2 my-d-flex ">
+                                                    <li class="my-text-orange"><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-line"></i> </li>
+                                                    <!-- <i class="ri-star-line"></i> -->
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td>#BK1001</td>
+                                            <td>April 12, 2025</td>
+                                            <td>Tour</td>
+                                            <td>Raddison blue </td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <ul class="stars my-gap-2 my-d-flex ">
+                                                    <li class="my-text-orange"><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>May 19, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <ul class="stars my-gap-2 my-d-flex ">
+                                                    <li class="my-text-orange"><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                    <li><i class="ri-star-fill"></i></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <!-- single row -->
+                                        <tr>
+                                            <td>#BK1001</td>
+                                            <td>Jan 15, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison and other</td>
+                                            <td>
+                                                <div class="status danger">
+                                                    <div class="round"></div> Cancelled
+                                                </div>
+                                                <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                             <div class="status success">
+                                                                <div class="round"></div> Done
+                                                                    </div>
+                                                                    <div class="status warring">
+                                                                        <div class="round"></div> warring
+                                                                    </div>
+                                                                    <div class="status danger">
+                                                                        <div class="round"></div> Cancelled
+                                                                </div>  -->
+                                            </td>
+                                            <td>
+                                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                                    Feedback</button>
+                                            </td>
+
+                                        </tr>
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td>#BK1001</td>
+                                            <td>April 12, 2025</td>
+                                            <td>Tour</td>
+                                            <td>Raddison blue </td>
+                                            <td>
+                                                <div class="status success">
+                                                    <div class="round"></div> Done
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                                    Feedback</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- single row -->
+                                        <tr class="row">
+                                            <td class="id">#BK1001</td>
+                                            <td>May 19, 2025</td>
+                                            <td>Flight</td>
+                                            <td>Raddison blue and </td>
+                                            <td>
+                                                <div class="status warring">
+                                                    <div class="round"></div> Pending
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <button class="feedback-btn my-btn my-outline-btn my-btn-sm">Give
+                                                    Feedback</button>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                                <!--======  For Pagination Here  ======-->
+                                <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                    aria-label="Pagination">
+                                    <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                            class="ri-arrow-left-line"></i>
+                                        Previous</button>
+
+                                    <!-- pages -->
+                                    <div class="pages my-d-flex my-gap-2">
+                                        <button class="page active" aria-current="page" aria-label="Page 1">1</button>
+                                        <button class="page" aria-label="Page 2">2</button>
+                                        <button class="page" aria-label="Page 3">3</button>
+                                        <span class="jumper" aria-hidden="true">…</span>
+                                        <button class="page" aria-label="Page 6">6</button>
+                                        <button class="page" aria-label="Page 7">7</button>
+                                        <button class="page" aria-label="Page 8">8</button>
+                                    </div>
+
+                                    <button class="next" aria-label="Go to next page">Next <i
+                                            class="ri-arrow-right-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
             </div>
+            </section>
+
+            </main>
+        </div>
         </div>
 
 

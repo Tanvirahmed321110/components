@@ -73,6 +73,51 @@ function openModalF(modalId, btnSelector) {
 
 
 
+function makeDragScroll() {
+    // Select all matching elements
+    const scrollers = document.querySelectorAll('.hide-scroll-wrapper');
+    if (!scrollers || scrollers.length === 0) {
+        return;
+    }
+
+    scrollers.forEach(scroller => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        scroller.addEventListener("mousedown", (e) => {
+            isDown = true;
+            startX = e.pageX - scroller.offsetLeft;
+            scrollLeft = scroller.scrollLeft;
+            document.body.style.userSelect = "none"; // prevent text selection
+        });
+
+        scroller.addEventListener("mouseleave", () => {
+            isDown = false;
+            document.body.style.userSelect = "";
+        });
+
+        scroller.addEventListener("mouseup", () => {
+            isDown = false;
+            document.body.style.userSelect = "";
+        });
+
+        scroller.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - scroller.offsetLeft;
+            const walk = (x - startX) * 1; // scroll speed
+            scroller.scrollLeft = scrollLeft - walk;
+        });
+    });
+}
+
+// Initialize for all scroll components
+makeDragScroll();
+
+
+
+
 // Dropdown Toggle
 function dropdownToggleF() {
     const btns = document.querySelectorAll('.click-dropdown-btn');
