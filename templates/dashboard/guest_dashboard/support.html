@@ -2647,8 +2647,8 @@
 
 
                     <!--==================||   Header Main Start Here   ||==================-->
-                    <div class="my-mt-8  header-main">
-                        <nav aria-label="Main site navigation">
+                    <div class="my-mt-8  header-main hide-scroll-wrapper">
+                        <nav aria-label="Main site navigation" class="hide-scroll-area">
                             <ul class="my-d-flex my-align-center my-gap-14 my-pt-5 my-pb-5 ">
 
                                 <!--=====  Single Nav  =====-->
@@ -2811,12 +2811,24 @@
                 <aside aria-label="Dashboard navigation" class="sidebar " id="sidebar">
                     <!--====== Sidebar Close Button ======-->
                     <div>
-                        <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                            id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                            aria-controls="sidebar">
-                            <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                            <div class="show-text">Toggle Sidebar</div>
-                        </button>
+
+                        <!-- For Mobile -->
+                        <div class="desktop-hide mobile-show">
+                            <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                id="m-sidebar-close-btn">
+                                <i class="ri-close-line"></i>
+                            </button>
+                        </div>
+
+                        <!-- For Desktop -->
+                        <div class="mobile-hide">
+                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                aria-controls="sidebar">
+                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                <div class="show-text">Toggle Sidebar</div>
+                            </button>
+                        </div>
                     </div>
 
 
@@ -3212,19 +3224,20 @@
                     ===================================================
                     -->
                     <section>
-                        <div class="my-m-8 tabs">
+                        <div class="my-m-8 tabs s-tabs">
 
 
                             <!--======================||  Head  ||=====================-->
-                            <div class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md  my-shadow-1 ">
-                                <h3 class="my-text-primary">Support Center</h3>
+                            <div
+                                class="my-flex-between my-my-10 my-my-sm-0 s-head-wrap my-bg-white my-p-6 my-pl-sm-0 my-radius-md  my-shadow-1 ">
+                                <h3 class="my-text-primary s-head">Support Center</h3>
                             </div>
 
 
 
                             <!--======================|| For Top Cart  ||======================-->
                             <div>
-                                <div class="my-gap-12 my-grid-3 my-grid-md-2 my-grid-sm-1">
+                                <div class="my-gap-12 my-grid-3 my-grid-md-2 my-grid-sm-1 supports-carts">
 
                                     <!--===== Single Item =====-->
                                     <div class="item my-bg-white my-shadow-1 my-radius-lg">
@@ -3344,7 +3357,8 @@
 
 
                             <!--======================|| Faq Items  ||======================-->
-                            <div class="my-shadow-1 my-mt-10 my-bg-white my-p-10 my-px-12 my-radius-md">
+                            <div
+                                class="my-shadow-1 my-mt-10 my-mt-sm-12 my-bg-white my-p-10 my-px-12 my-px-sm-0 my-radius-md">
                                 <div>
                                     <h2 class="my-fs-xl my-text-primary">Frequently asked questions</h2>
                                     <p class="my-my-2 my-fs-md">Everything you need to know about the product and
@@ -3439,16 +3453,16 @@
                                     <!--======= Single Faq =======-->
                                     <div class="faq-item  ">
                                         <div class="head my-d-flex my-align-center my-gap-6 my-align-center">
-                                            <button class="my-text-quaternary my-fs-xl icon"><i
+                                            <button class="my-text-quaternary my-fs-lg icon"><i
                                                     class="ri-add-circle-line"></i></button>
-                                            <h5 class="my-text-primary my-fs-md my-fw-medium">What is your cancellation
-                                                policy?</h5>
+                                            <h5 class="my-text-primary my-fs-lg my-fw-medium">How Much Price?
+                                            </h5>
                                         </div>
 
                                         <!-- right -->
                                         <div class="content my-pl-15 my-mt-2">
                                             <p class="my-fs-sm my-text-tertiary my-fs-md">
-                                                Yes, you can try us for free for 30 days. If you want, we’ll provide you
+                                                No, you can try us for free for 30 days. If you want, we’ll provide you
                                                 with a
                                                 free, personalized 30-minute onboarding
                                                 call to get you up and running as soon as possible.

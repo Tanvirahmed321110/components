@@ -2647,8 +2647,8 @@
 
 
                     <!--==================||   Header Main Start Here   ||==================-->
-                    <div class="my-mt-8  header-main">
-                        <nav aria-label="Main site navigation">
+                    <div class="my-mt-8  header-main hide-scroll-wrapper">
+                        <nav aria-label="Main site navigation" class="hide-scroll-area">
                             <ul class="my-d-flex my-align-center my-gap-14 my-pt-5 my-pb-5 ">
 
                                 <!--=====  Single Nav  =====-->
@@ -2811,12 +2811,24 @@
                 <aside aria-label=" Dashboard navigation" class="sidebar " id="sidebar">
                     <!--====== Sidebar Close Button ======-->
                     <div>
-                        <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                            id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                            aria-controls="sidebar">
-                            <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                            <div class="show-text">Toggle Sidebar</div>
-                        </button>
+
+                        <!-- For Mobile -->
+                        <div class="desktop-hide mobile-show">
+                            <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                id="m-sidebar-close-btn">
+                                <i class="ri-close-line"></i>
+                            </button>
+                        </div>
+
+                        <!-- For Desktop -->
+                        <div class="mobile-hide">
+                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                aria-controls="sidebar">
+                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                <div class="show-text">Toggle Sidebar</div>
+                            </button>
+                        </div>
                     </div>
 
 
@@ -3113,10 +3125,10 @@
 
 
                             <!--============|| Right Side ||==========-->
-                            <div class="my-d-flex my-align-center my-gap-6">
+                            <div class="my-d-flex my-align-center my-gap-8 right my-gap-sm-3">
                                 <!-- Date -->
                                 <div
-                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
+                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-gap-sm-2 my-px-7 my-py-5 my-radius-sm ">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_19862)">
@@ -3134,10 +3146,10 @@
 
                                     <time class="my-fw-bold my-fs-sm my-text-secondary"
                                         datetime="2025-11-21T14:02">14:02 AM
-                                        Today Nov, 2025</ti>
+                                        Today Nov, 2025</time>
                                 </div>
 
-                                <div class="my-d-flex my-align-center my-gap-2">
+                                <div class="my-d-flex my-align-center my-gap-4 my-gap-sm-2">
                                     <!--===== Message =====-->
                                     <div>
                                         <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3155,6 +3167,8 @@
                                                     </clipPath>
                                                 </defs>
                                             </svg>
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">2</div>
 
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Message</div>
@@ -3163,7 +3177,8 @@
 
                                     <div>
                                         <!--===== Notification ======-->
-                                        <button class="icon-hover my-tooltip" aria-label="Open Notification">
+                                        <button class="icon-hover notifications-btn my-p-relative my-tooltip"
+                                            aria-label="Open Notification">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -3172,35 +3187,39 @@
                                                     stroke-linejoin="round" />
                                             </svg>
 
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">1</div>
+
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Notifications</div>
+                                        </button>
+                                    </div>
+                                    <!--====== Switch To Host Button ======-->
+                                    <div>
+                                        <button class="my-btn message-btn my-secondary-btn my-btn-sm switch-to-host"
+                                            aria-label="Switch to host view">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1199_19948)">
+                                                    <path
+                                                        d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
+                                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1199_19948">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                            <span class="text">Switch to host</span>
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <!--====== Switch To Host Button ======-->
-                                <div>
-                                    <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
-                                        aria-label="Switch to host view">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1199_19948)">
-                                                <path
-                                                    d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
-                                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1199_19948">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
 
-                                        Switch to host
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -3215,8 +3234,8 @@
                     <section>
                         <div class="my-m-8  tabs">
                             <!--======================||  Tab Buttons  ||=====================-->
-                            <div class="my-bg-white  my-p-6 my-radius-md">
-                                <ul class="tab1-btns my-bg-white" role="tablist">
+                            <div class="my-bg-white  my-p-6 my-p-sm-0  my-radius-md">
+                                <ul class=" tab1-btns my-bg-white hide-scroll-wrapper" role="tablist">
                                     <li>
                                         <button class="tab-btn active" data-tab="overview" role="tab"
                                             aria-controls="panel-booking">
@@ -3244,7 +3263,8 @@
                                     <div class="tab-content active" id="overview">
 
                                         <!--============||  Top Carts  ||===========-->
-                                        <div class="top my-grid-3 my-gap-6 my-w-100-p">
+                                        <div
+                                            class="top my-grid-3 my-grid-sm-1 my-gap-6 overview my-gap-sm-12 my-w-100-p">
                                             <!-- Card 1: Total Referral Click -->
                                             <div
                                                 class="item my-w-100-p my-shadow-1 my-bg-white-s overflow-hidden my-radius-xl my-border-secondary">
@@ -3416,9 +3436,9 @@
 
 
                                         <!--============||  Copy Referral Link  ||===========-->
-                                        <div class="my-mt-8 my-p-8 my-bg-white my-radius-md  my-shadow-1 "
+                                        <div class="my-mt-8 my-p-8 my-p-sm-0 my-pt-sm-8 my-bg-white my-radius-md  my-shadow-1 "
                                             aria-label="Copy your referral URL">
-                                            <h6 class="my-text-primary my-fs-md">Copy Referral Link <span
+                                            <h6 class="my-text-primary my-fs-md g-head">Copy Referral Link <span
                                                     class="my-text-blue">*</span>
                                             </h6>
                                             <div class="my-border-secondary my-radius-md my-d-flex my-mt-2 copy-link">
@@ -3456,10 +3476,10 @@
 
 
                                         <!--============||  Genrate Link  ||===========-->
-                                        <div class="my-mt-8 my-p-8 my-bg-white my-radius-md  my-shadow-1 "
+                                        <div class="my-mt-8 my-p-8 my-p-sm-0 my-pt-sm-8 my-bg-white my-radius-md  my-shadow-1 "
                                             aria-label="L">
-                                            <h6 class="my-text-primary my-fs-md">Generated Link <span
-                                                    class="my-text-blue">*</span>
+                                            <h6 class="my-text-primary my-fs-md g-head">
+                                                Generated Link <span class="my-text-blue">*</span>
                                             </h6>
                                             <div
                                                 class="generat-link  my-p-4 my-radius-md my-align-center my-d-flex my-mt-1 ">
@@ -3478,83 +3498,89 @@
 
 
                                     <!--=============|| For Referral Content  ||=============-->
-                                    <div class=" tab-content my-bg-white my-radius-md my-shadow-1 " id="referral">
-                                        <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
-                                            <!-- Table Header Here -->
-                                            <thead>
-                                                <tr class="table-head">
-                                                    <td>
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>Name</span>
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                    stroke="#A4A7AE" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>Service</span>
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                    stroke="#A4A7AE" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>Date</span>
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                    stroke="#A4A7AE" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
+                                    <div class="tab-content my-bg-white my-radius-md my-shadow-1 " id="referral">
+                                        <div class="common-table-1-wrapper">
+                                            <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                                                <!-- Table Header Here -->
+                                                <thead>
+                                                    <tr class="table-head">
+                                                        <td>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>Name</span>
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>Service</span>
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>Date</span>
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </td>
 
-                                                    <td>
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>Status</span>
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                    stroke="#A4A7AE" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
+                                                        <td>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>Status</span>
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </td>
 
-                                                    <td>
-                                                        <div class="my-d-flex my-align-center my-gap-2">
-                                                            <span>Reward</span>
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                    stroke="#A4A7AE" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </thead>
+                                                        <td>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                <span>Reward</span>
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
 
-                                            <!--===== Table Body Here =====-->
-                                            <tbody class="table-body">
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">CLEARANCE15</td>
-                                                    <td>Raddison and other</td>
-                                                    <td>Jan 15, 2025</td>
-                                                    <td>
-                                                        <div class="status danger">
-                                                            <div class="round"></div> Cancelled
-                                                        </div>
-                                                        <!-- <div class="status success">
+                                                <!--===== Table Body Here =====-->
+                                                <tbody class="table-body">
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">CLEARANCE15</td>
+                                                        <td>Raddison and other</td>
+                                                        <td>Jan 15, 2025</td>
+                                                        <td>
+                                                            <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                            <!-- <div class="status success">
                                                                     <div class="round"></div> Done
                                                                 </div>
                                                                 <div class="status warring">
@@ -3563,76 +3589,77 @@
                                                                 <div class="status danger">
                                                                     <div class="round"></div> Cancelled
                                                                 </div> -->
-                                                    </td>
-                                                    <td>$<span>00.00</span></td>
-                                                </tr>
+                                                        </td>
+                                                        <td>$<span>00.00</span></td>
+                                                    </tr>
 
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">Tanvir</td>
-                                                    <td>Raddison blue </td>
-                                                    <td>April 12, 2025</td>
-                                                    <td>
-                                                        <div class="status success">
-                                                            <div class="round"></div> Done
-                                                        </div>
-                                                    </td>
-                                                    <td>$<span>12.00</span></td>
-                                                </tr>
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">Foysal</td>
-                                                    <td>Raddison blue </td>
-                                                    <td>April 12, 2025</td>
-                                                    <td>
-                                                        <div class="status success">
-                                                            <div class="round"></div> Done
-                                                        </div>
-                                                    </td>
-                                                    <td>$<span>12.00</span></td>
-                                                </tr>
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">Tanvir</td>
+                                                        <td>Raddison blue </td>
+                                                        <td>April 12, 2025</td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>$<span>12.00</span></td>
+                                                    </tr>
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">Foysal</td>
+                                                        <td>Raddison blue </td>
+                                                        <td>April 12, 2025</td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>$<span>12.00</span></td>
+                                                    </tr>
 
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">Hasan</td>
-                                                    <td>Raddison blue </td>
-                                                    <td>April 19, 2025</td>
-                                                    <td>
-                                                        <div class="status success">
-                                                            <div class="round"></div> Done
-                                                        </div>
-                                                    </td>
-                                                    <td>$<span>12.00</span></td>
-                                                </tr>
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">Hasan</td>
+                                                        <td>Raddison blue </td>
+                                                        <td>April 19, 2025</td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>$<span>12.00</span></td>
+                                                    </tr>
 
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">Razzak PG</td>
-                                                    <td>Raddison blue and </td>
-                                                    <td>May 16, 2025</td>
-                                                    <td>
-                                                        <div class="status warring">
-                                                            <div class="round"></div> Pending
-                                                        </div>
-                                                    </td>
-                                                    <td>$<span>00.00</span></td>
-                                                </tr>
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">Razzak PG</td>
+                                                        <td>Raddison blue and </td>
+                                                        <td>May 16, 2025</td>
+                                                        <td>
+                                                            <div class="status warring">
+                                                                <div class="round"></div> Pending
+                                                            </div>
+                                                        </td>
+                                                        <td>$<span>00.00</span></td>
+                                                    </tr>
 
-                                                <!-- single row -->
-                                                <tr class="row">
-                                                    <td class="id">Fahim</te>
-                                                    <td>Raddison blue and </td>
-                                                    <td>Feb 15, 2025</td>
-                                                    <td>
-                                                        <div class="status warring">
-                                                            <div class="round"></div> Pending
-                                                        </div>
-                                                    </td>
-                                                    <td>$<span>00.00</span></td>
-                                                </tr>
+                                                    <!-- single row -->
+                                                    <tr class="row">
+                                                        <td class="id">Fahim</te>
+                                                        <td>Raddison blue and </td>
+                                                        <td>Feb 15, 2025</td>
+                                                        <td>
+                                                            <div class="status warring">
+                                                                <div class="round"></div> Pending
+                                                            </div>
+                                                        </td>
+                                                        <td>$<span>00.00</span></td>
+                                                    </tr>
 
-                                            </tbody>
-                                        </table>
+                                                </tbody>
+                                            </table>
+                                        </div>
 
                                         <!--======  For Pagination Content  ======-->
                                         <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
@@ -3660,11 +3687,10 @@
 
 
                                     <!--=============|| For Financial Content  ||=============-->
-                                    <div class="tab-content " id="financial-dashboard" role="tabpanel"
+                                    <div class="tab-content" id="financial-dashboard" role="tabpanel"
                                         aria-labelledby="transaction-history">
-
-                                        <!--============||  Top Carts  ||===========-->
-                                        <div class="top my-grid-3 my-gap-8 my-w-100-p">
+                                        <div
+                                            class="top my-grid-3 my-gap-8 financial-dashboard my-grid-sm-1 my-gap-sm-12 my-w-100-p">
                                             <!-- Card 1: Total Earning  -->
                                             <div
                                                 class="item my-shadow-1 my-w-100-p my-bg-white-s overflow-hidden my-radius-xl my-border-secondary">
@@ -3757,13 +3783,13 @@
 
                                             <!-- Card 3: Available Balance -->
                                             <div
-                                                class="item my-shadow-1 my-w-100-p overflow-hidden my-radius-xl my-bg-white-s my-border-secondary">
+                                                class="item my-flex-column my-shadow-1 my-w-100-p overflow-hidden my-radius-xl my-bg-white-s my-border-secondary">
                                                 <div
                                                     class="head my-pt-10 my-pb-8 my-bg-white-s my-fs-md my-px-10 my-fw-bold my-text-primary">
                                                     Available Balance
                                                 </div>
                                                 <div
-                                                    class="body my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
+                                                    class="body flex-1 my-p-10 my-bg-white my-border-top-secondary my-radius-xl">
                                                     <div
                                                         class="my-d-flex my-align-center my-flex-between my-gap-6 my-h-22">
                                                         <h3 class="my-fw-bold my-text-primary my-fs-title">
@@ -3789,11 +3815,9 @@
                                             </div>
                                         </div>
 
-
-
                                         <!--============= Filter Head  ============-->
                                         <div
-                                            class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
+                                            class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md filter-header invite-friend">
                                             <!--=============||  Left Area  ||=============-->
                                             <div class="my-d-flex my-gap-6 my-align-center">
 
@@ -3820,6 +3844,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+
                                             </div>
 
                                             <!--=============||  Input Area  ||=============-->
@@ -3838,277 +3863,241 @@
                                         </div>
 
 
-                                        <div class="my-bg-white my-shadow-1 my-radius-xl">
-                                            <div class="table-wrapper">
-                                                <table class="common-table-1">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <div
-                                                                    class="my-d-flex my-align-center my-gap-2 small-col">
-                                                                    Date
-                                                                    <svg width="12" height="12" viewBox="0 0 12 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                            stroke="#A4A7AE" stroke-width="1.5"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-                                                                </div>
-                                                            </th>
-                                                            <th>
-                                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                                    Description
-                                                                    <svg width="12" height="12" viewBox="0 0 12 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                            stroke="#A4A7AE" stroke-width="1.5"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-                                                                </div>
-                                                            </th>
-                                                            <th>
-                                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                                    Amount
-                                                                    <svg width="12" height="12" viewBox="0 0 12 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                            stroke="#A4A7AE" stroke-width="1.5"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-                                                                </div>
-                                                            </th>
-                                                            <th>
-                                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                                    Status
-                                                                    <svg width="12" height="12" viewBox="0 0 12 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                            stroke="#A4A7AE" stroke-width="1.5"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-                                                                </div>
-                                                            </th>
-                                                            <th>
-                                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                                    Balance
-                                                                    <svg width="12" height="12" viewBox="0 0 12 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                            stroke="#A4A7AE" stroke-width="1.5"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-                                                                </div>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div>Jan 15, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Tanvir Khan</div>
-                                                            </td>
-                                                            <td>
-                                                                <div><span>$</span>10.00</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status danger">
-                                                                    <div class="round"></div> Cancelled
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div><span>$</span>102.00</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="id small-col">#BK1002</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Jan 19, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Bkash</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status warring">
-                                                                    <div class="round"></div> Pending
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="small-col"><span>$</span>63.00</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="id small-col">#BK1003</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Jan 16, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Nogod</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status success">
-                                                                    <div class="round"></div> Done
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="small-col"><span>$</span>42.00</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="id small-col">#BK1003</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Jan 16, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Nogod</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status success">
-                                                                    <div class="round"></div> Done
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="small-col"><span>$</span>42.00</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="id small-col">#BK1003</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Jan 16, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Nogod</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status success">
-                                                                    <div class="round"></div> Done
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="small-col"><span>$</span>42.00</div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="id small-col">#BK1003</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Jan 16, 2025</div>
-                                                            </td>
-                                                            <td>
-                                                                <div>Nogod</div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="status success">
-                                                                    <div class="round"></div> Done
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="small-col"><span>$</span>42.00</div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                        <!-- Table Here -->
+                                        <div class="common-table-1-wrapper">
+                                            <table class="common-table-1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                Date
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </th>
 
+                                                        <th>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                Description
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                Amount
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                Status
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="my-d-flex my-align-center my-gap-2">
+                                                                Balance
+                                                                <svg width="12" height="12" viewBox="0 0 12 12"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                        stroke="#A4A7AE" stroke-width="1.5"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div>jan 22 2025</div>
+                                                        </td>
 
-                                            <!--======  For Pagination Here  ======-->
-                                            <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
-                                                aria-label="Pagination">
-                                                <button class="prev disabled" disabled
-                                                    aria-label="Go to previous page"><i class="ri-arrow-left-line"></i>
-                                                    Previous</button>
+                                                        <td>
+                                                            <div>Tanvir Khan</div>
+                                                        </td>
+                                                        <td>
+                                                            <div><span>$</span>10.00</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                            <!-- <div class="status danger">
+                                                                <div class="round"></div> Cancelled
+                                                            </div>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                            <div class="status warring">
+                                                                <div class="round"></div> Pending
+                                                            </div> -->
+                                                        </td>
+                                                        <td>
+                                                            <div><span>$</span>102.00</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="id small-col">#BK1003</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Jan 16, 2025</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Nogod</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="small-col"><span>$</span>42.00</div>
+                                                        </td>
+                                                    </tr>
 
-                                                <!-- pages -->
-                                                <div class="pages my-d-flex my-gap-2">
-                                                    <button class="page active" aria-current="page"
-                                                        aria-label="Page 1">1</button>
-                                                    <button class="page" aria-label="Page 2">2</button>
-                                                    <button class="page" aria-label="Page 3">3</button>
-                                                    <span class="jumper" aria-hidden="true">…</span>
-                                                    <button class="page" aria-label="Page 6">6</button>
-                                                    <button class="page" aria-label="Page 7">7</button>
-                                                    <button class="page" aria-label="Page 8">8</button>
-                                                </div>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="id small-col">#BK1003</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Jan 16, 2025</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Nogod</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="small-col"><span>$</span>42.00</div>
+                                                        </td>
+                                                    </tr>
 
-                                                <button class="next" aria-label="Go to next page">Next <i
-                                                        class="ri-arrow-right-line"></i></button>
-                                            </div>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="id small-col">#BK1003</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Jan 16, 2025</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Nogod</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="small-col"><span>$</span>42.00</div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="id small-col">#BK1003</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Jan 16, 2025</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Nogod</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="status success">
+                                                                <div class="round"></div> Done
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="small-col"><span>$</span>42.00</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
-
                         </div>
+
                     </section>
 
                 </main>
             </div>
-        </div>
 
 
 
 
-        <!--
+            <!--
                 =========================================================
                 =======||   Video Or Image Content  Start Here   ||======
                 =========================================================
                 -->
-        <div class="my-modal" id="ads-modal">
-            <div class="modal-content ads-modal my-px-3 my-pt-3">
+            <div class="my-modal" id="ads-modal">
+                <div class="modal-content ads-modal my-px-3 my-pt-3">
 
-                <!-- Modal Head -->
-                <div class="header my-mt-2">
-                    <button class="icon-hover close-btn "><i class="ri-close-fill"></i></button>
-                </div>
-
-                <div class="my-p-8 my-mt-10">
-                    <!-- Video Container -->
-                    <div class="">
-                        <div class="my-video my-radius-md"></div>
+                    <!-- Modal Head -->
+                    <div class="header my-mt-2">
+                        <button class="icon-hover close-btn "><i class="ri-close-fill"></i></button>
                     </div>
 
-                    <!-- Modal Footer -->
-                    <div class="my-mt-10 my-d-flex my-justify-end footer">
-                        <!--===== Prev and Next Button =====-->
-                        <div class="my-d-flex my-gap-4 my-mt-4">
-                            <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
-                            <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                    <div class="my-p-8 my-mt-10">
+                        <!-- Video Container -->
+                        <div class="">
+                            <div class="my-video my-radius-md"></div>
+                        </div>
+
+                        <!-- Modal Footer -->
+                        <div class="my-mt-10 my-d-flex my-justify-end footer">
+                            <!--===== Prev and Next Button =====-->
+                            <div class="my-d-flex my-gap-4 my-mt-4">
+                                <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
+                                <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Modal Overlay -->
-        <div class="modal-overlay" id="modal-overlay"></div>
-
+            <!-- Modal Overlay -->
+            <div class="modal-overlay" id="modal-overlay"></div>
 
 
 
-        <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="/static/js/global_js/global.js"></script>
-        <script src="/static/js/dashboard/dashboard_common.js"></script>
-        <script src="/static/js/dashboard/guest_dashboard/invite-friend.js"></script>
+
+            <script src=" https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="/static/js/global_js/global.js"></script>
+            <script src="/static/js/dashboard/dashboard_common.js"></script>
+            <script src="/static/js/dashboard/guest_dashboard/invite-friend.js"></script>
 
 
     </body>

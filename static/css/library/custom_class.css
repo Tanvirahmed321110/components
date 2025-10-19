@@ -4769,6 +4769,7 @@ tr {
 .my-grid-6,
 .my-grid-1-3 {
     display: grid;
+    grid-auto-rows: 1fr;
 }
 
 .my-grid-1 {

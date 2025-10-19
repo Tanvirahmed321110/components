@@ -1899,10 +1899,7 @@ input::placeholder {
         padding: 12px;
     }
 
-    /* button */
-    .my-btn {
-        padding: 13px 15px;
-    }
+
 
     .my-btn.my-btn-pill {
         padding: 10px 20px;
@@ -6299,10 +6296,12 @@ _____________________________________*/
 
     .common-table-1-wrapper {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
     }
 
     .common-table-1-wrapper table {
-        min-width: 500px;
+        min-width: 600px;
         width: 100%;
     }
 }
