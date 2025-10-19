@@ -394,6 +394,67 @@
 
     .chart-container .wrap {
         overflow-x: auto;
+    }
 
+
+    /* Coupon and Offer Page */
+    .copon-offer .popular-copons .item {
+        color: var(--my-white-off);
+        border: 0px solid var(--my-white);
+        box-shadow: var(---shadow-1);
+        transition: border .4s linear;
+    }
+
+    .copon-status .item {
+        border: 1px solid var(--my-border-secondary);
+        box-shadow: 0px 1px 2px 0px #0A0D120D;
+    }
+
+    .copon-status .item .top .my-border-secondary {
+        box-shadow: 0px 1px 2px 0px #0A0D121A;
+
+        box-shadow: 0px 3px 3px 0px #0A0D121A;
+
+        box-shadow: 1px 8px 5px 0px #0A0D121A;
+
+        box-shadow: 0px -2px 2px 0px #0A0D121A inset;
+
+    }
+
+    .copon-status .item .my-fs-title {
+        font-size: 30px;
+    }
+
+    .copon-status .item .my-text-quaternary {
+        color: var(--my-text-tertiary);
+        font-weight: 500;
+    }
+
+    .offers-cart .item {
+        border: 1px solid var(--my-border-secondary);
+        box-shadow: 0px 1px 2px 0px #0A0D120D;
+    }
+
+    .offers-cart .item .bottom {
+        border-top: 1px solid var(--my-border-secondary);
+    }
+
+    .nested-tab .hide-scroll-wrapper {
+        width: 480px;
+    }
+
+    .nested-tab .tab1-btns {
+        border: none;
+    }
+
+    .nested-tab .hide-scroll-area {
+        width: 100%;
+    }
+}
+
+
+@media (max-width:480px) {
+    .nested-tab .hide-scroll-wrapper {
+        width: 340px;
     }
 }

@@ -3399,7 +3399,7 @@ input[type="radio"]:checked::after {
     list-style: none;
     padding: 0px;
     margin: 0;
-    /* border-bottom: 1px solid var(--my-border-secondary); */
+    border-bottom: 1px solid var(--my-border-secondary);
     max-width: 100%;
     flex-wrap: wrap;
 }
