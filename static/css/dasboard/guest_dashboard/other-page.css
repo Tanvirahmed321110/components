@@ -510,6 +510,48 @@
     .overview .item .head {
         font-size: var(--fs-sm);
     }
+
+
+    /* setting page */
+    .setting-item .my-input-control input {
+        min-width: unset;
+        max-width: unset;
+    }
+
+    .upload-card {
+        padding: 12px 4px;
+        width: 100%;
+        border-color: var(--my-primary-color);
+    }
+
+    .notification-setting .left {
+        width: unset;
+        flex: 1;
+    }
+
+    .notification-setting .toggle-btns {
+        width: fit-content;
+    }
+
+
+    /*===================  Edit Profile Page  =================*/
+    .profile-info {
+        padding: 0px;
+        background-color: var(--my-white);
+        border: none;
+    }
+
+    .profile-info .my-input-control.new {
+        padding: 12px;
+        box-shadow: unset;
+    }
+
+    .filter-header .search-input.show-mobile {
+        display: flex;
+        flex: 1;
+    }
+
+
 }
 
 

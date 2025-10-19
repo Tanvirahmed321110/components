@@ -2647,7 +2647,7 @@
 
 
                     <!--==================||   Header Main Start Here   ||==================-->
-                    <div class="my-mt-8  header-main">
+                    <div class="my-mt-8  header-main hide-scroll-wrapper">
                         <nav aria-label="Main site navigation">
                             <ul class="my-d-flex my-align-center my-gap-14 my-pt-5 my-pb-5 ">
 
@@ -3111,10 +3111,10 @@
 
 
                             <!--============|| Right Side ||==========-->
-                            <div class="my-d-flex my-align-center my-gap-6">
+                            <div class="my-d-flex my-align-center my-gap-8 right my-gap-sm-3">
                                 <!-- Date -->
                                 <div
-                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
+                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-gap-sm-2 my-px-7 my-py-5 my-radius-sm ">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_19862)">
@@ -3132,10 +3132,10 @@
 
                                     <time class="my-fw-bold my-fs-sm my-text-secondary"
                                         datetime="2025-11-21T14:02">14:02 AM
-                                        Today Nov, 2025</ti>
+                                        Today Nov, 2025</time>
                                 </div>
 
-                                <div class="my-d-flex my-align-center my-gap-2">
+                                <div class="my-d-flex my-align-center my-gap-4 my-gap-sm-2">
                                     <!--===== Message =====-->
                                     <div>
                                         <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3153,6 +3153,8 @@
                                                     </clipPath>
                                                 </defs>
                                             </svg>
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">2</div>
 
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Message</div>
@@ -3161,7 +3163,8 @@
 
                                     <div>
                                         <!--===== Notification ======-->
-                                        <button class="icon-hover my-tooltip" aria-label="Open Notification">
+                                        <button class="icon-hover notifications-btn my-p-relative my-tooltip"
+                                            aria-label="Open Notification">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -3170,35 +3173,39 @@
                                                     stroke-linejoin="round" />
                                             </svg>
 
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">1</div>
+
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Notifications</div>
+                                        </button>
+                                    </div>
+                                    <!--====== Switch To Host Button ======-->
+                                    <div>
+                                        <button class="my-btn message-btn my-secondary-btn my-btn-sm switch-to-host"
+                                            aria-label="Switch to host view">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1199_19948)">
+                                                    <path
+                                                        d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
+                                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1199_19948">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                            <span class="text">Switch to host</span>
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <!--====== Switch To Host Button ======-->
-                                <div>
-                                    <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
-                                        aria-label="Switch to host view">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1199_19948)">
-                                                <path
-                                                    d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
-                                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1199_19948">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
 
-                                        Switch to host
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -3213,8 +3220,8 @@
                     <section>
                         <div class="my-m-8 tabs">
                             <!--======================||  Tab Buttons  ||=====================-->
-                            <div class="my-bg-white my-shadow-1  my-p-6 my-radius-md">
-                                <ul class="tab1-btns my-bg-white" role="tablist">
+                            <div class="my-bg-white my-shadow-1 my-p-sm-0  my-p-6 my-radius-md">
+                                <ul class="tab1-btns my-bg-white hide-scroll-wrapper" role="tablist">
                                     <li>
                                         <button class="tab-btn active" data-tab="in-planing" role="tab"
                                             aria-controls="panel-booking">In Planing</button>
@@ -3258,7 +3265,7 @@
                                 </div>
 
                                 <!--=============||  Input Area  ||=============-->
-                                <div class="search-input my-input-control right">
+                                <div class="search-input show-mobile my-input-control right">
                                     <input type="text" placeholder="Search Booking" aria-label="Search">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
@@ -3279,7 +3286,7 @@
                                 <!--=============|| For In-Planing Content  ||=============-->
                                 <div class="tab-content my-bg-white my-radius-md reviews-table active my-shadow-1"
                                     id="in-planing" role="tabpanel" aria-labelledby="tab-planing">
-                                    <div>
+                                    <div class="common-table-1-wrapper">
                                         <!-- Table Header -->
                                         <table class="common-table-1">
                                             <thead>
@@ -3492,7 +3499,7 @@
                                 <!--=============|| For Ongoing-Planing Content  ||=============-->
                                 <div class="tab-content my-bg-white my-radius-md reviews-table  my-shadow-1"
                                     id="ongoing-plan" role="tabpanel" aria-labelledby="tab-planing">
-                                    <div class="">
+                                    <div class="common-table-1-wrapper">
                                         <table class="common-table-1">
                                             <thead>
                                                 <tr>
@@ -3703,188 +3710,190 @@
                                 <!--=============|| For History Content  ||=============-->
                                 <div class="tab-content my-bg-white my-radius-md reviews-table  my-shadow-1"
                                     id="history" role="tabpanel" aria-labelledby="tab-planing">
-                                    <table class="common-table-1">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div
-                                                        class="my-d-flex my-align-center my-gap-2 small-col my-text-primary">
-                                                        Order ID
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        Tour Name
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        Created Date
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
+                                    <div class="common-table-1-wrapper">
+                                        <table class="common-table-1">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div
+                                                            class="my-d-flex my-align-center my-gap-2 small-col my-text-primary">
+                                                            Order ID
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            Tour Name
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            Created Date
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
 
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        Last Edit
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            Last Edit
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
 
-                                                <th>
-                                                    <div class="my-d-flex my-align-center my-gap-2">
-                                                        Action
-                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
-                                                                stroke="#A4A7AE" stroke-width="1.5"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </thead>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            Action
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
 
-                                        <!-- Table Body -->
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="my-text-primary">#B23233</div>
-                                                </td>
-                                                <td>
-                                                    <div>CTG TOur</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div class="my-d-flex my-gap-6">
-                                                        <button class="my-btn my-btn-sm my-primary-btn">View
-                                                            Plan</button>
-                                                        <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                            Plan</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <!-- Table Body -->
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23233</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>CTG TOur</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <div class="my-text-primary">#B23233</div>
-                                                </td>
-                                                <td>
-                                                    <div>Tour Panchagorh</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div class="my-d-flex my-gap-6">
-                                                        <button class="my-btn my-btn-sm my-primary-btn">View
-                                                            Plan</button>
-                                                        <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                            Plan</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23233</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Tour Panchagorh</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <div class="my-text-primary">#B23222</div>
-                                                </td>
-                                                <td>
-                                                    <div>Pakistan Tour</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div class="my-d-flex my-gap-6">
-                                                        <button class="my-btn my-btn-sm my-primary-btn">View
-                                                            Plan</button>
-                                                        <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                            Plan</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23222</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Pakistan Tour</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <div class="my-text-primary">#B23233</div>
-                                                </td>
-                                                <td>
-                                                    <div>Panchagorh River Cruise</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div class="my-d-flex my-gap-6">
-                                                        <button class="my-btn my-btn-sm my-primary-btn">View
-                                                            Plan</button>
-                                                        <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                            Plan</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23233</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Panchagorh River Cruise</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <div class="my-text-primary">#B23211</div>
-                                                </td>
-                                                <td>
-                                                    <div>Sundarbans River Cruise</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 19, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div>Jan 16, 2025</div>
-                                                </td>
-                                                <td>
-                                                    <div class="my-d-flex my-gap-6">
-                                                        <button class="my-btn my-btn-sm my-primary-btn">View
-                                                            Plan</button>
-                                                        <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                            Plan</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23211</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Sundarbans River Cruise</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 19, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
                                     <!--======  For Pagination Here  ======-->
                                     <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
@@ -3921,10 +3930,11 @@
                     ================================================
                     -->
                     <section aria-labelledby="tour-plan-heading">
-                        <div class="new-tour-plan my-bg-white my-shadow-1 my-m-8  my-p-6 my-radius-md">
+                        <div
+                            class="new-tour-plan my-bg-white my-shadow-1 my-m-8 my-p-sm-0 my-pt-sm-8  my-p-6 my-radius-md">
 
                             <!-- Head -->
-                            <div class="head my-flex-between my-pb-10 my-border-bottom my-m-5">
+                            <div class="head my-flex-between my-pb-10 my-border-bottom my-m-5 my-m-sm-0">
                                 <div>
                                     <h4 class="my-text-primary" id="tour-plan-heading">Start creating new tour plan</h4>
                                     <p class="my-text-tertiary my-mt-1">Add a strong one liner supporting the heading

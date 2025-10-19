@@ -44,9 +44,9 @@ body {
 /* html::-webkit-scrollbar-thumb:hover {
     background-color: var(--my-primary-color);
     /* hover color */
-}
 
-*/ h1,
+
+h1,
 h2,
 h3,
 h4,
@@ -481,6 +481,11 @@ tr {
 
 .my-shadow-all-lg {
     box-shadow: var(--shadow-all-lg);
+}
+
+.shadow-1 {
+    box-shadow: 0px 1px 2px 0px #0A0D120D;
+
 }
 
 
@@ -2173,6 +2178,10 @@ tr {
 .disabled:hover {
     background-color: transparent;
     color: var(--my-gray);
+}
+
+.required-star {
+    color: var(--my-blue2);
 }
 
 
@@ -8933,6 +8942,34 @@ tr {
 
 /*________  Responsive for small Device  ________*/
 @media (max-width:768px) {
+    .my-fs-sm-xs {
+        font-size: var(--fs-xs);
+    }
+
+    .my-fs-sm-sm {
+        font-size: var(--fs-sm);
+    }
+
+    .my-fs-sm-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-sm-lg {
+        font-size: var(--fs-lg);
+    }
+
+    .my-fs-sm-xl {
+        font-size: var(--fs-xl);
+    }
+
+    .my-fw-sm-medium {
+        font-weight: 600;
+    }
+
+    .my-fw-sm-bold {
+        font-weight: 600;
+    }
+
 
     /* Padding all sides */
     .my-p-sm-0 {
@@ -9879,6 +9916,10 @@ tr {
 
 
     /* Margin all sides */
+    .my-m-sm-0 {
+        margin: 0;
+    }
+
     .my-m-sm-1 {
         margin: 2px;
     }

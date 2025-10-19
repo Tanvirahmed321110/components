@@ -2811,12 +2811,24 @@
                 <aside aria-label="Dashboard navigation" class="sidebar " id="sidebar">
                     <!--====== Sidebar Close Button ======-->
                     <div>
-                        <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                            id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                            aria-controls="sidebar">
-                            <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                            <div class="show-text">Toggle Sidebar</div>
-                        </button>
+
+                        <!-- For Mobile -->
+                        <div class="desktop-hide mobile-show">
+                            <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                id="m-sidebar-close-btn">
+                                <i class="ri-close-line"></i>
+                            </button>
+                        </div>
+
+                        <!-- For Desktop -->
+                        <div class="mobile-hide">
+                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                aria-controls="sidebar">
+                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                <div class="show-text">Toggle Sidebar</div>
+                            </button>
+                        </div>
                     </div>
 
 
@@ -3099,10 +3111,10 @@
                 <main class="my-has-scrollbar booking" id="main-content">
 
                     <!--
-                            ============================================================
-                            =======||   Main Content Head Section  Start Here   ||======
-                            ============================================================
-                            -->
+                    ============================================================
+                    =======||   Main Content Head Section  Start Here   ||======
+                    ============================================================
+                    -->
                     <section>
                         <div class="main-content-header my-p-6 my-bg-white my-flex-between my-gap-6">
 
@@ -3111,10 +3123,10 @@
 
 
                             <!--============|| Right Side ||==========-->
-                            <div class="my-d-flex my-align-center my-gap-6">
+                            <div class="my-d-flex my-align-center my-gap-8 right my-gap-sm-3">
                                 <!-- Date -->
                                 <div
-                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
+                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-gap-sm-2 my-px-7 my-py-5 my-radius-sm ">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_19862)">
@@ -3132,10 +3144,10 @@
 
                                     <time class="my-fw-bold my-fs-sm my-text-secondary"
                                         datetime="2025-11-21T14:02">14:02 AM
-                                        Today Nov, 2025</ti>
+                                        Today Nov, 2025</time>
                                 </div>
 
-                                <div class="my-d-flex my-align-center my-gap-2">
+                                <div class="my-d-flex my-align-center my-gap-4 my-gap-sm-2">
                                     <!--===== Message =====-->
                                     <div>
                                         <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3153,6 +3165,8 @@
                                                     </clipPath>
                                                 </defs>
                                             </svg>
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">2</div>
 
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Message</div>
@@ -3161,7 +3175,8 @@
 
                                     <div>
                                         <!--===== Notification ======-->
-                                        <button class="icon-hover my-tooltip" aria-label="Open Notification">
+                                        <button class="icon-hover notifications-btn my-p-relative my-tooltip"
+                                            aria-label="Open Notification">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -3170,35 +3185,39 @@
                                                     stroke-linejoin="round" />
                                             </svg>
 
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">1</div>
+
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Notifications</div>
+                                        </button>
+                                    </div>
+                                    <!--====== Switch To Host Button ======-->
+                                    <div>
+                                        <button class="my-btn message-btn my-secondary-btn my-btn-sm switch-to-host"
+                                            aria-label="Switch to host view">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1199_19948)">
+                                                    <path
+                                                        d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
+                                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1199_19948">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                            <span class="text">Switch to host</span>
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <!--====== Switch To Host Button ======-->
-                                <div>
-                                    <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
-                                        aria-label="Switch to host view">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1199_19948)">
-                                                <path
-                                                    d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
-                                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1199_19948">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
 
-                                        Switch to host
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -3211,7 +3230,7 @@
                     ===================================================
                     -->
                     <section>
-                        <div class="my-bg-white my-shadow-1 my-p-8 my-radius-xl my-m-8">
+                        <div class="my-bg-white my-shadow-1 my-p-8 my-p-sm-0 my-radius-xl my-m-8">
 
                             <form action="#" class="profile-info my-flex-column my-gap-0">
                                 <div>
@@ -3223,7 +3242,8 @@
                                     <div class="item my-grid-3 my-gap-4 my-grid-sm-1">
                                         <!-- For First Name -->
                                         <div class="my-input-control new">
-                                            <label class="my-fw-bold" for="first_name">First Name*</label>
+                                            <label class="my-fw-bold" for="first_name">First Name<span
+                                                    class="required-star">*</span></label>
                                             <input class="" type="text" id="first_name" required>
                                             <small class="error-message-new">Error message</small>
 
@@ -3251,7 +3271,8 @@
                                     <div class="item my-grid-3 my-gap-4 my-grid-sm-1">
                                         <!-- For Phone -->
                                         <div class="my-input-control new">
-                                            <label class="my-fw-bold" for="first_name">Phone*</label>
+                                            <label class="my-fw-bold" for="first_name">Phone<span
+                                                    class="required-star">*</span></label>
                                             <input type="number" id="first_name" required>
                                             <small class="error-message-new">Error message</small>
                                         </div>
@@ -3275,7 +3296,8 @@
                                     <div class="item my-grid-2 my-gap-6 my-grid-sm-1  my-mt-10">
                                         <!-- For Gender -->
                                         <div class="my-input-control new">
-                                            <label class="my-fw-bold" for="gender">Gender*</label>
+                                            <label class="my-fw-bold" for="gender">Gender<span
+                                                    class="required-star">*</span></label>
                                             <select class="select dropdown" name="gender" id="gender" required>
                                                 <option value="">Male</option>
                                                 <option value="">Female</option>
@@ -3322,7 +3344,8 @@
                                             <div class="my-flex-column my-gap-2 my-mt-4">
                                                 <!-- For Country -->
                                                 <div class="my-input-control new">
-                                                    <label class="my-fw-bold" for="country">Country*</label>
+                                                    <label class="my-fw-bold" for="country">Country<span
+                                                            class="required-star">*</span></label>
                                                     <select class="select dropdown" name="country" id="country"
                                                         required>
                                                         <option value="">Bangladesh</option>
@@ -3349,7 +3372,7 @@
                                                 <!-- For Street Address -->
                                                 <div class="my-input-control new">
                                                     <label class="my-fw-bold" for="street_address">Street
-                                                        Address*</label>
+                                                        Address<span class="required-star">*</span></label>
                                                     <input type="text" id="street_address" required>
                                                     <small class="error-message-new">Error message</small>
                                                 </div>
@@ -3357,19 +3380,21 @@
                                                 <!-- For Street Address -->
                                                 <div class="my-input-control new">
                                                     <label class="my-fw-bold" for="apt_other">Apt/Suite/Others</label>
-                                                    <input type="text" id="apt_other" required>
+                                                    <input type="text" id="apt_other">
                                                     <small class="error-message-new">Error message</small>
                                                 </div>
 
                                                 <!-- For Street Address -->
                                                 <div class="my-input-control new">
-                                                    <label class="my-fw-bold" for="thana_city">Thana/City*</label>
+                                                    <label class="my-fw-bold" for="thana_city">Thana/City<span
+                                                            class="required-star">*</span></label>
                                                     <input type="text" id="thana_city" required>
                                                     <small class="error-message-new">Error message</small>
                                                 </div>
                                                 <!-- For Street Address -->
                                                 <div class="my-input-control new">
-                                                    <label class="my-fw-bold" for="disct_state">District/State*</label>
+                                                    <label class="my-fw-bold" for="disct_state">District/State<span
+                                                            class="required-star">*</span></label>
                                                     <input type="text" id="disct_state" required>
                                                     <small class="error-message-new">Error message</small>
                                                 </div>
@@ -3385,7 +3410,8 @@
 
 
                                         <!--===== For Permanent Address ======-->
-                                        <div class="my-bg-white my-shadow-all-sm my-radius-md my-px-10 my-py-8">
+                                        <div
+                                            class="my-bg-white my-shadow-all-sm my-radius-md my-px-10 my-px-sm-6 my-py-8">
                                             <div>
                                                 <h4 class="my-text-primary">Permanent Address</h4>
                                                 <div class="my-d-flex my-align-center my-gap-4 my-mt-2">
@@ -3464,13 +3490,13 @@
                                     <div class="my-mt-10">
                                         <!--===============================||  For Documents   ||===============================-->
                                         <div class="my-bg-white my-shadow-all-sm my-radius-md my-px-7 my-py-6">
-                                            <div class="my-p-4">
+                                            <div class="my-p-4 my-p-sm-0">
                                                 <h4 class="my-text-primary">Documents</h4>
                                             </div>
 
                                             <div class="my-grid-2 my-gap-6 my-grid-sm-1 my-mt-6">
                                                 <!--====================||  Profile Photo Here  ||=====================-->
-                                                <div class="my-px-4">
+                                                <div class="my-px-4 my-px-sm-0">
                                                     <div class="preview-img">
                                                         <div class="my-fs-xs my-fw-medium">Profile Photo</div>
                                                         <img class="my-border my-p-1 my-w-30 my-h-28"
@@ -3488,11 +3514,11 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="my-pl-14 my-pr-3 identity-wrapper">
+                                                <div class="my-pl-14 my-pr-3 my-pl-sm-0 identity-wrapper">
                                                     <h6 class="my-text-primary">Upload Photo Identy</h6>
 
                                                     <!--====================||  Buttons Here  ||=====================-->
-                                                    <ul class="my-d-flex my-gap-8 my-mt-4">
+                                                    <ul class="my-d-flex my-gap-8 my-flex-sm-column my-mt-4">
                                                         <li class="my-d-flex my-gap-3 my-align-center">
                                                             <input type="radio" id="nid" name="identity" checked>
                                                             <label for="nid">NID Card</label>
