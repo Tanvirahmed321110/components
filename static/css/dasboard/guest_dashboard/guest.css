@@ -977,10 +977,11 @@ circle {
     }
 
 
-    .calendar .calendar-body {
-        max-width: 400px;
-        margin: 0 auto;
+
+    .calendar .date {
+        padding: 16px 4px;
     }
+
 
     .calendar .calendar-footer {
         gap: 16px;
@@ -989,6 +990,9 @@ circle {
         padding-bottom: 16px;
     }
 
+    .dates-grid {
+        gap: 12px;
+    }
 
     .calendar .calendar-footer button {
         line-height: 20px;
@@ -1058,6 +1062,7 @@ circle {
     }
 
 
+
     .pagination {
         padding: 0;
         padding-top: 16px;
@@ -1066,4 +1071,17 @@ circle {
     .pagination .pages.my-d-flex {
         /* display: none !important; */
     }
+}
+
+
+@media (max-width:480px) {
+
+    .calendar .date {
+        padding: 12px 4px;
+    }
+
+    .dates-grid {
+        gap: 0px !important;
+    }
+
 }

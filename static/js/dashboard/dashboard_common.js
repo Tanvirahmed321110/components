@@ -13,10 +13,14 @@ function sidebarCloseF() {
     }
 
     if (closeBtn) {
-        const main = sidebar.querySelector('#main-content')
+        const main = document.getElementById('main-content')
         const content = sidebar.querySelector('.content');
 
-        if (sidebar & main & content) {
+        if (!main || !content) {
+            return
+        }
+
+        if (sidebar || main || content) {
             closeBtn.addEventListener('click', function () {
                 content.classList.toggle('active')
                 sidebar.classList.toggle('active')
