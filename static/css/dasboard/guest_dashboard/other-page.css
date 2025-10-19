@@ -547,11 +547,31 @@
     }
 
     .filter-header .search-input.show-mobile {
-        display: flex;
+        display: flex !important;
         flex: 1;
     }
 
 
+    .travel-work.filter-header {
+        padding-top: 0px;
+    }
+
+    .travel-work.filter-header .left-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-header .search-input {
+        max-width: 100%;
+    }
+
+    .filter-header .search-input input {
+        max-width: 100% !important;
+    }
+
+    .filter-header-p-none {
+        padding-top: 0;
+    }
 }
 
 

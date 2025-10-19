@@ -2811,13 +2811,26 @@
                 <aside aria-label="Dashboard navigation" class="sidebar " id="sidebar">
                     <!--====== Sidebar Close Button ======-->
                     <div>
-                        <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
-                            id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
-                            aria-controls="sidebar">
-                            <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
-                            <div class="show-text">Toggle Sidebar</div>
-                        </button>
+
+                        <!-- For Mobile -->
+                        <div class="desktop-hide mobile-show">
+                            <button class="sidebar-close-btn m-sidebar-close my-btn my-primary-btn my-btn-sm"
+                                id="m-sidebar-close-btn">
+                                <i class="ri-close-line"></i>
+                            </button>
+                        </div>
+
+                        <!-- For Desktop -->
+                        <div class="mobile-hide">
+                            <button class="sidebar-close-btn my-btn my-primary-btn my-btn-sm my-tooltip"
+                                id="close-sidebar-btn" aria-label="Toggle Sidebar" aria-expanded="true"
+                                aria-controls="sidebar">
+                                <span class="my-fs-xl"><i class="ri-menu-5-line my-fs-xl"></i></span>
+                                <div class="show-text">Toggle Sidebar</div>
+                            </button>
+                        </div>
                     </div>
+
 
 
 
@@ -3099,10 +3112,10 @@
                 <main class="my-has-scrollbar booking" id="main-content">
 
                     <!--
-                            ============================================================
-                            =======||   Main Content Head Section  Start Here   ||======
-                            ============================================================
-                            -->
+                    ============================================================
+                    =======||   Main Content Head Section  Start Here   ||======
+                    ============================================================
+                    -->
                     <section>
                         <div class="main-content-header my-p-6 my-bg-white my-flex-between my-gap-6">
 
@@ -3111,10 +3124,10 @@
 
 
                             <!--============|| Right Side ||==========-->
-                            <div class="my-d-flex my-align-center my-gap-6">
+                            <div class="my-d-flex my-align-center my-gap-8 right my-gap-sm-3">
                                 <!-- Date -->
                                 <div
-                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-px-7 my-py-5 my-radius-sm ">
+                                    class="time my-border-primary my-d-flex my-align-center my-gap-5 my-gap-sm-2 my-px-7 my-py-5 my-radius-sm ">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1199_19862)">
@@ -3132,10 +3145,10 @@
 
                                     <time class="my-fw-bold my-fs-sm my-text-secondary"
                                         datetime="2025-11-21T14:02">14:02 AM
-                                        Today Nov, 2025</ti>
+                                        Today Nov, 2025</time>
                                 </div>
 
-                                <div class="my-d-flex my-align-center my-gap-2">
+                                <div class="my-d-flex my-align-center my-gap-4 my-gap-sm-2">
                                     <!--===== Message =====-->
                                     <div>
                                         <button class="icon-hover my-tooltip" aria-label="Open Messages">
@@ -3153,6 +3166,8 @@
                                                     </clipPath>
                                                 </defs>
                                             </svg>
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">2</div>
 
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Message</div>
@@ -3161,7 +3176,8 @@
 
                                     <div>
                                         <!--===== Notification ======-->
-                                        <button class="icon-hover my-tooltip" aria-label="Open Notification">
+                                        <button class="icon-hover notifications-btn my-p-relative my-tooltip"
+                                            aria-label="Open Notification">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -3170,35 +3186,39 @@
                                                     stroke-linejoin="round" />
                                             </svg>
 
+                                            <!-- when active class add then show it -->
+                                            <div class="base active">1</div>
+
                                             <!-- Tooltip Text -->
                                             <div class="show-text">Notifications</div>
+                                        </button>
+                                    </div>
+                                    <!--====== Switch To Host Button ======-->
+                                    <div>
+                                        <button class="my-btn message-btn my-secondary-btn my-btn-sm switch-to-host"
+                                            aria-label="Switch to host view">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1199_19948)">
+                                                    <path
+                                                        d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
+                                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1199_19948">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                            <span class="text">Switch to host</span>
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <!--====== Switch To Host Button ======-->
-                                <div>
-                                    <button class="my-btn my-secondary-btn my-btn-sm switch-to-host"
-                                        aria-label="Switch to host view">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1199_19948)">
-                                                <path
-                                                    d="M9.16602 1.66675L11.666 4.16675M11.666 4.16675L9.16602 6.66675M11.666 4.16675H5.66602C4.26588 4.16675 3.56582 4.16675 3.03104 4.43923C2.56063 4.67892 2.17818 5.06137 1.9385 5.53177C1.66602 6.06655 1.66602 6.76662 1.66602 8.16675V12.9167C1.66602 13.3038 1.66602 13.4973 1.6874 13.6597C1.8351 14.7816 2.71787 15.6643 3.8397 15.812C4.00216 15.8334 4.19567 15.8334 4.58268 15.8334M8.33268 15.8334H14.3327C15.7328 15.8334 16.4329 15.8334 16.9677 15.5609C17.4381 15.3212 17.8205 14.9388 18.0602 14.4684C18.3327 13.9336 18.3327 13.2335 18.3327 11.8334V7.08341C18.3327 6.6964 18.3327 6.50289 18.3113 6.34043C18.1636 5.2186 17.2808 4.33583 16.159 4.18814C15.9965 4.16675 15.803 4.16675 15.416 4.16675M8.33268 15.8334L10.8327 18.3334M8.33268 15.8334L10.8327 13.3334"
-                                                    stroke="white" stroke-width="1.66667" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1199_19948">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
 
-                                        Switch to host
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -3216,7 +3236,7 @@
 
                             <!--======================||  Filter Head  ||=====================-->
                             <div
-                                class="my-flex-between my-my-10 my-bg-white my-p-6 my-radius-md  my-shadow-1 filter-header">
+                                class="my-flex-between my-my-10 my-gap-8 my-p-sm-0 my-bg-white my-p-6 my-radius-md  my-shadow-1 filter-header filter-header-p-none">
                                 <!--=============||  Left Area  ||=============-->
                                 <div class="my-d-flex my-gap-6 my-align-center">
                                     <!--===== For All Services =====-->
@@ -3240,7 +3260,7 @@
                                 </div>
 
                                 <!--=============||  Input Area  ||=============-->
-                                <div class="search-input my-input-control ">
+                                <div class="search-input show-mobile my-input-control">
                                     <input type="text" placeholder="Search Booking" aria-label="Search">
                                     <span>
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
@@ -3260,7 +3280,7 @@
                             <!--=============|| For Table Content  ||=============-->
                             <div class="tab-content my-bg-white my-radius-md reviews-table active my-shadow-1"
                                 id="in-planing" role="tabpanel" aria-labelledby="tab-planing">
-                                <div class="">
+                                <div class="common-table-1-wrapper my-mt-sm-5">
                                     <table class="common-table-1">
                                         <!-- Table Header -->
                                         <thead>
@@ -3479,10 +3499,11 @@
                     ================================================
                     -->
                     <section aria-labelledby="tour-plan-heading">
-                        <div class="new-tour-plan my-bg-white my-shadow-1 my-m-8 my-mt-1 my-m-lg-8 my-p-6 my-radius-md">
+                        <div
+                            class="new-tour-plan my-bg-white my-shadow-1 my-m-8 my-mt-1 my-m-lg-8 my-p-sm-0 my-p-6 my-pt-sm-10 my-radius-md">
 
                             <!-- Head -->
-                            <div class="head my-flex-between my-pb-10 my-border-bottom my-m-5">
+                            <div class="head my-flex-between my-pb-10 my-border-bottom my-m-5 my-m-sm-0">
                                 <div>
                                     <h4 class="my-text-primary" id="tour-plan-heading">Start adding new tour mate</h4>
                                     <p class="my-text-tertiary my-mt-1">Add a tour mate to travel with you</p>
