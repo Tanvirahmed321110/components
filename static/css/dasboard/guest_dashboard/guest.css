@@ -732,6 +732,32 @@ circle {
 =========||  Mobile  Start Here  ||===========
 */
 @media (max-width:769px) {
+    header .header-main {
+        border-bottom: 0px solid var(--my-white-off);
+    }
+
+    .common-dropdown-1 {
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    #donutChart {
+        max-height: 324px;
+    }
+
+    .circle-chart .complete {
+        position: absolute;
+        bottom: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chart .right {
+        margin-top: -30px;
+    }
+
     .dasboard-container-wrapper {
         display: unset;
     }
@@ -797,6 +823,7 @@ circle {
 
     .main-content-header {
         padding: 16px;
+        padding-top: 0;
     }
 
     .main-content-header .switch-to-host .text {

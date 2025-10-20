@@ -915,6 +915,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--radius-md);
 }
 
 .rotating-dashed:hover {
@@ -3435,7 +3436,6 @@ input[type="radio"]:checked::after {
 }
 
 .hide-scroll-wrapper.tab-wrapper {
-    border-bottom: 1px solid var(--my-border-secondary);
     box-shadow: var(--shadow-sm);
 }
 
@@ -4104,6 +4104,7 @@ input[type="radio"]:checked::after {
     padding: 20px 10px;
     color: var(--my-text-primary);
     text-wrap: nowrap;
+    font-weight: 600;
 }
 
 .common-table-1 tbody tr:nth-child(odd) {

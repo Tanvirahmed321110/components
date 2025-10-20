@@ -8963,11 +8963,11 @@ tr {
     }
 
     .my-fw-sm-medium {
-        font-weight: 600;
+        font-weight: var(--fw-500);
     }
 
     .my-fw-sm-bold {
-        font-weight: 600;
+        font-weight: var(--fw-600);
     }
 
 
@@ -10225,6 +10225,10 @@ tr {
 
 
     /* Margin Top */
+    .my-mt-sm-0 {
+        margin: 0;
+    }
+
     .my-mt-sm-1 {
         margin-top: 2px;
     }

@@ -467,6 +467,12 @@
     .supports-carts .item {
         border: 1px solid var(--my-border-secondary);
         box-shadow: 0px 1px 2px 0px #0A0D120D;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .supports-carts .item .top {
+        flex: 1;
     }
 
     .s-head-wrap {

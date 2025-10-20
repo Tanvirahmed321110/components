@@ -85,11 +85,12 @@ new Chart(document.getElementById('barChart'), {
                 labels: {
                     // Legend font size responsive
                     font: {
-                        size: window.innerWidth < 768 ? 8 : 14
+                        size: window.innerWidth < 768 ? 7 : 14
                     }
                 }
             }
         },
+
         scales: {
             x: {
                 stacked: true,
@@ -97,7 +98,7 @@ new Chart(document.getElementById('barChart'), {
                 categoryPercentage: 0.8,
                 ticks: {
                     font: {
-                        size: window.innerWidth < 768 ? 8 : 14 // 👈 responsive font size for labels
+                        size: window.innerWidth < 768 ? 7 : 14 // 👈 responsive font size for labels
                     }
                 }
             },
@@ -105,7 +106,7 @@ new Chart(document.getElementById('barChart'), {
                 stacked: true,
                 ticks: {
                     font: {
-                        size: window.innerWidth < 768 ? 8 : 14
+                        size: window.innerWidth < 768 ? 7 : 14
                     }
                 }
             }
