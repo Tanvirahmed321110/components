@@ -119,3 +119,40 @@ document.querySelectorAll('.filters button').forEach(btn => {
         chart.update();
     });
 });
+
+
+
+
+
+
+
+// Filter Head
+
+function FilterHead() {
+    const allTabBtns = document.querySelectorAll('.financial-tabs .tab-btn');
+
+    // Select both headers
+    const otherHead = document.getElementById('for-other-tab-head');
+    const couponWalletHead = document.getElementById('for-coupon-wallet-head');
+
+    if (!allTabBtns.length || !otherHead || !couponWalletHead) {
+        return;
+    }
+
+
+    allTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.classList.contains('for-coupon-wallet-btn')) {
+                // ✅ Show coupon/wallet head
+                otherHead.style.display = 'none';
+                couponWalletHead.style.display = 'block';
+            } else {
+                // ✅ Show other tab head
+                couponWalletHead.style.display = 'none';
+                otherHead.style.display = 'block';
+            }
+        });
+    });
+}
+
+FilterHead();

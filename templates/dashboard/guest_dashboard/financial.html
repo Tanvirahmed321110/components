@@ -3221,8 +3221,8 @@
                     <section>
                         <div class="my-m-8  tabs">
                             <!--======================||  Tab Buttons  ||=====================-->
-                            <div class="my-bg-white hide-scroll-wrapper my-p-6 my-p-sm-0 my-radius-md">
-                                <ul class="tab1-btns my-bg-white hide-scroll-areaole=" tablist">
+                            <div class="my-bg-white  my-p-6 my-p-sm-0 my-radius-md">
+                                <ul class="tab1-btns financial-tabs my-bg-white hide-scroll-wrapper" role=" tablist">
                                     <li>
                                         <button class="tab-btn active" data-tab="overview" role="tab"
                                             aria-controls="panel-booking">
@@ -3233,13 +3233,12 @@
                                             aria-controls="panel-history">Transaction History</button>
                                     </li>
                                     <li>
-                                        <button class="tab-btn" data-tab="cupon-reviews" role="tab"
-                                            aria-controls="panel-reviews">Cupon
-                                            Reviews</button>
+                                        <button class="tab-btn for-coupon-wallet-btn" data-tab="cupon-reviews"
+                                            role="tab" aria-controls="panel-reviews">Cupon/Rewards</button>
                                     </li>
                                     <li>
-                                        <button class="tab-btn" data-tab="wallet" role="tab"
-                                            aria-controls="panel-reviews">Cupon
+                                        <button class="tab-btn for-coupon-wallet-btn" data-tab="wallet" role="tab"
+                                            aria-controls="panel-reviews">
                                             Wallet</button>
                                     </li>
                                 </ul>
@@ -3247,152 +3246,189 @@
 
 
                             <!--======================||  Filter Head  ||=====================-->
-                            <div
-                                class="my-flex-between  my-flex-sm-column my-align-start my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
-                                <!--=============||  Left Area  ||=============-->
-                                <div class="my-d-flex my-gap-6 my-align-start flex-wrap  my-gap-sm-4">
+                            <div id="for-other-tab-head">
+                                <div
+                                    class="my-flex-between  my-flex-sm-column my-align-sm-start my-my-10 my-bg-white my-p-6 my-radius-md filter-header">
+                                    <!--=============||  Left Area  ||=============-->
+                                    <div class="my-d-flex my-gap-6 my-align-start flex-wrap  my-gap-sm-4">
 
-                                    <!--===== For Time Duration =====-->
-                                    <div class="click-dropdown-parent">
-                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                            role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">Time
-                                                Duration</span>
-                                            <span class="my-fs-lg my-text-quaternary"><i
-                                                    class="ri-arrow-down-s-line"></i></span>
+                                        <!--===== For Time Duration =====-->
+                                        <div class="click-dropdown-parent">
+                                            <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span
+                                                    class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">Time
+                                                    Duration</span>
+                                                <span class="my-fs-lg my-text-quaternary"><i
+                                                        class="ri-arrow-down-s-line"></i></span>
+                                            </div>
+                                            <!-- Dropdown Here -->
+                                            <ul class="click-dropdown" role="listbox" aria-label="Select service">
+                                                <li class="item">3 Month</li>
+                                                <li class="item">6 Month</li>
+                                                <li class="item active">9 Month</li>
+                                                <li class="item">1 Year</li>
+                                                <li class="item">All Time</li>
+                                            </ul>
                                         </div>
-                                        <!-- Dropdown Here -->
-                                        <ul class="click-dropdown" role="listbox" aria-label="Select service">
-                                            <li class="item">3 Month</li>
-                                            <li class="item">6 Month</li>
-                                            <li class="item active">9 Month</li>
-                                            <li class="item">1 Year</li>
-                                            <li class="item">All Time</li>
-                                        </ul>
+
+                                        <!--===== For All Services =====-->
+                                        <div class="click-dropdown-parent">
+                                            <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span
+                                                    class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                                    Services</span>
+                                                <span class="my-fs-lg my-text-quaternary"><i
+                                                        class="ri-arrow-down-s-line"></i></span>
+                                            </div>
+                                            <!-- Dropdown Here -->
+                                            <ul class="click-dropdown" role="listbox" aria-label="Select service">
+                                                <li class="item">Flight</li>
+                                                <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                                <li class="item">Car</li>
+                                                <li class="item">Hotel</li>
+                                            </ul>
+                                        </div>
+
+                                        <!--===== For All Items =====-->
+                                        <div class="click-dropdown-parent">
+                                            <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span
+                                                    class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                                    Items</span>
+                                                <span class="my-fs-lg my-text-quaternary"><i
+                                                        class="ri-arrow-down-s-line"></i></span>
+                                            </div>
+                                            <!-- Dropdown Here -->
+                                            <ul class="click-dropdown" role="listbox" aria-label="Select Items">
+                                                <li class="item">Items one</li>
+                                                <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                                <li class="item">Items two</li>
+                                                <li class="item">Items 3</li>
+                                                <li class="item">Items 4</li>
+                                                <li class="item">Items 5</li>
+                                                <li class="item">Lorem ipsum</li>
+                                            </ul>
+                                        </div>
+
+                                        <!--===== For All Status =====-->
+                                        <div class="click-dropdown-parent">
+                                            <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span
+                                                    class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
+                                                    Status</span>
+                                                <span class="my-fs-lg my-text-quaternary"><i
+                                                        class="ri-arrow-down-s-line"></i></span>
+                                            </div>
+                                            <!-- Dropdown Here -->
+                                            <ul class="click-dropdown" role="listbox" aria-label="Select Status">
+                                                <li class="item">Paid</li>
+                                                <li class="item active">Pending</li>
+                                                <li class="item">Cancel</li>
+                                                <li class="item">Done</li>
+                                            </ul>
+                                        </div>
+
+                                        <!--===== For Reset Filter =====-->
+                                        <button
+                                            class=" my-p-5 my-px-7 my-border-secondary my-flex-between reset-btn my-gap-3 my-radius-md">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE"
+                                                    stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="my-fw-bold">Rest Filter</span>
+
+                                        </button>
                                     </div>
 
-                                    <!--===== For All Services =====-->
-                                    <div class="click-dropdown-parent">
-                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                            role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                                Services</span>
-                                            <span class="my-fs-lg my-text-quaternary"><i
-                                                    class="ri-arrow-down-s-line"></i></span>
-                                        </div>
-                                        <!-- Dropdown Here -->
-                                        <ul class="click-dropdown" role="listbox" aria-label="Select service">
-                                            <li class="item">Flight</li>
-                                            <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                            <li class="item">Car</li>
-                                            <li class="item">Hotel</li>
-                                        </ul>
+                                    <!--=============||  Input Area  ||=============-->
+                                    <div class="search-input my-input-control right">
+                                        <input type="text" placeholder="Search Booking" aria-label="Search">
+                                        <span>
+                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
+                                                    stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </span>
                                     </div>
 
-                                    <!--===== For All Items =====-->
-                                    <div class="click-dropdown-parent">
-                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                            role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                                Items</span>
-                                            <span class="my-fs-lg my-text-quaternary"><i
-                                                    class="ri-arrow-down-s-line"></i></span>
+
+                                    <!--=============||  Desktop Hide (Mobile Show) ||=============-->
+                                    <div class="desktop-hide mobile-show my-w-100-p">
+                                        <div class="my-d-flex   my-gap-4 my-py-8 my-flex-between  my-w-100-p">
+
+                                            <!--=============||  Input Area (For Mobile) ||=============-->
+                                            <div class="search-input-m flex-1 search-input my-input-control ">
+                                                <input type="text" placeholder="Search Booking" aria-label="Search">
+                                                <span>
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
+                                                            stroke="#A4A7AE" stroke-width="1.66667"
+                                                            stroke-linecap="round" stroke-linejoin="round">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+
+                                            <!-- For Reset buutton Mobile -->
+                                            <div>
+                                                <button
+                                                    class=" my-p-5 my-p-sm-6 my-px-7 my-border-secondary reset-btn-m my-flex-between my-gap-3 my-radius-md">
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE"
+                                                            stroke-width="1.66667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span class="my-fw-bold">Rest Filter</span>
+
+                                                </button>
+                                            </div>
                                         </div>
-                                        <!-- Dropdown Here -->
-                                        <ul class="click-dropdown" role="listbox" aria-label="Select Items">
-                                            <li class="item">Items one</li>
-                                            <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
-                                            <li class="item">Items two</li>
-                                            <li class="item">Items 3</li>
-                                            <li class="item">Items 4</li>
-                                            <li class="item">Items 5</li>
-                                            <li class="item">Lorem ipsum</li>
-                                        </ul>
                                     </div>
-
-                                    <!--===== For All Status =====-->
-                                    <div class="click-dropdown-parent">
-                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                            role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="my-fs-sm my-fw-bold my-text-quaternary  my-text-secondary">All
-                                                Status</span>
-                                            <span class="my-fs-lg my-text-quaternary"><i
-                                                    class="ri-arrow-down-s-line"></i></span>
-                                        </div>
-                                        <!-- Dropdown Here -->
-                                        <ul class="click-dropdown" role="listbox" aria-label="Select Status">
-                                            <li class="item">Paid</li>
-                                            <li class="item active">Pending</li>
-                                            <li class="item">Cancel</li>
-                                            <li class="item">Done</li>
-                                        </ul>
-                                    </div>
-
-                                    <!--===== For Reset Filter =====-->
-                                    <button
-                                        class=" my-p-5 my-px-7 my-border-secondary my-flex-between reset-btn my-gap-3 my-radius-md">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE"
-                                                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        <span class="my-fw-bold">Rest Filter</span>
-
-                                    </button>
                                 </div>
 
-                                <!--=============||  Input Area  ||=============-->
-                                <div class="search-input my-input-control right">
-                                    <input type="text" placeholder="Search Booking" aria-label="Search">
-                                    <span>
-                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
-                                                stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </div>
+                            </div>
 
 
-                                <!--=============||  Desktop Hide (Mobile Show) ||=============-->
-                                <div class="desktop-hide mobile-show my-w-100-p">
-                                    <div class="my-d-flex   my-gap-4 my-py-8 my-flex-between  my-w-100-p">
+                            <!--======================||  Filter Head For Coupon and Wallet Tab ||=====================-->
+                            <div class="my-d-none" id="for-coupon-wallet-head">
+                                <div
+                                    class="my-flex-between  my-my-10 my-gap-4 my-bg-white my-p-6 my-radius-md filter-header">
+                                    <!--=============||  Input Area  ||=============-->
+                                    <div class="search-input show-mobile my-input-control right">
+                                        <input type="text" placeholder="Search Booking" aria-label="Search">
+                                        <span>
+                                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
+                                                    stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
 
-                                        <!--=============||  Input Area (For Mobile) ||=============-->
-                                        <div class="search-input-m flex-1 search-input my-input-control ">
-                                            <input type="text" placeholder="Search Booking" aria-label="Search">
-                                            <span>
-                                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M17.5 18.2227L14.5834 15.306M16.6667 10.306C16.6667 14.218 13.4954 17.3893 9.58333 17.3893C5.67132 17.3893 2.5 14.218 2.5 10.306C2.5 6.39397 5.67132 3.22266 9.58333 3.22266C13.4954 3.22266 16.6667 6.39397 16.6667 10.306Z"
-                                                        stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
-                                                        stroke-linejoin="round">
-                                                    </path>
-                                                </svg>
-                                            </span>
-                                        </div>
-
-                                        <!-- For Reset buutton Mobile -->
-                                        <div>
-                                            <button
-                                                class=" my-p-5 my-p-sm-6 my-px-7 my-border-secondary reset-btn-m my-flex-between my-gap-3 my-radius-md">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#A4A7AE"
-                                                        stroke-width="1.66667" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                                <span class="my-fw-bold">Rest Filter</span>
-
-                                            </button>
-                                        </div>
+                                    <!--=============||  Payment Button  ||=============-->
+                                    <div>
+                                        <button class="my-btn my-primary-btn payment-methods-btn">+ Payment
+                                            Methods</button>
                                     </div>
                                 </div>
                             </div>
+
 
                             <!--======================||  Booking History And Reviews Contents  ||=====================-->
                             <div class="tab-contents my-pb-8 common">
@@ -3668,6 +3704,148 @@
 
 
                                 <!--=============|| For Cupon Review Content  ||=============-->
+                                <div class="tab-content my-bg-white my-radius-md  my-shadow-1 " id="transaction-history"
+                                    role="tabpanel" aria-labelledby="transaction-history">
+                                    <div class="common-table-1-wrapper">
+                                        <table class="common-table-1" role="tabpanel" aria-labelledby="tab-booking">
+                                            <!-- Table Header Here -->
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <span> Coupon ID</span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <span>Transaction Date
+                                                            </span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <span>Transaction Media
+                                                            </span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <span>Transaction ID
+                                                            </span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <span>Amount</span>
+                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5"
+                                                                    stroke="#A4A7AE" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <!--===== Table Body Here =====-->
+                                            <tbody class="">
+                                                <!-- single row -->
+                                                <tr>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
+                                                    <td>Jan 19, 2025</td>
+                                                    <td>Bkash</td>
+                                                    <td>K332OPS</td>
+                                                    <td><span>$</span>66.00</td>
+                                                </tr>
+                                                <!-- single row -->
+                                                <tr>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
+                                                    <td>Feb 15, 2025</td>
+                                                    <td>Rocket</td>
+                                                    <td>K332OPS</td>
+                                                    <td><span>$</span>100.00</td>
+                                                </tr>
+                                                <!-- single row -->
+                                                <tr>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
+                                                    <td>Jan 15, 2025</td>
+                                                    <td>Bank</td>
+                                                    <td>K332OPS</td>
+                                                    <td><span>$</span>66.00</td>
+                                                </tr>
+                                                <!-- single row -->
+                                                <tr>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
+                                                    <td>Jan 15, 2025</td>
+                                                    <td>Bkash</td>
+                                                    <td>K332OPS</td>
+                                                    <td><span>$</span>129.00</td>
+                                                </tr>
+                                                <!-- single row -->
+                                                <tr>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
+                                                    <td>Jan 15, 2025</td>
+                                                    <td>Nogod</td>
+                                                    <td>K332OPS</td>
+                                                    <td><span>$</span>66.00</td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--======  For Pagination Here  ======-->
+                                    <div class="pagination my-p-8 my-mt-4 my-flex-between" role="navigation"
+                                        aria-label="Pagination">
+                                        <button class="prev disabled" disabled aria-label="Go to previous page"><i
+                                                class="ri-arrow-left-line"></i>
+                                            Previous</button>
+
+                                        <!-- pages -->
+                                        <div class="pages my-d-flex my-gap-2">
+                                            <button class="page active" aria-current="page"
+                                                aria-label="Page 1">1</button>
+                                            <button class="page" aria-label="Page 2">2</button>
+                                            <button class="page" aria-label="Page 3">3</button>
+                                            <span class="jumper" aria-hidden="true">…</span>
+                                            <button class="page" aria-label="Page 6">6</button>
+                                            <button class="page" aria-label="Page 7">7</button>
+                                            <button class="page" aria-label="Page 8">8</button>
+                                        </div>
+
+                                        <button class="next" aria-label="Go to next page">Next <i
+                                                class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                </div>
+
+
+
+                                <!--=============|| For Cupon Review Content  ||=============-->
                                 <div class="tab-content my-bg-white my-radius-md  my-shadow-1 " id="cupon-reviews"
                                     role="tabpanel" aria-labelledby="transaction-history">
                                     <div class="common-table-1-wrapper">
@@ -3740,7 +3918,7 @@
                                             <tbody class="">
                                                 <!-- single row -->
                                                 <tr>
-                                                    <td class="my-text-primary">#BK1001</td>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
                                                     <td>Jan 19, 2025</td>
                                                     <td>Bkash</td>
                                                     <td>K332OPS</td>
@@ -3748,7 +3926,7 @@
                                                 </tr>
                                                 <!-- single row -->
                                                 <tr>
-                                                    <td class="my-text-primary">#BK1001</td>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
                                                     <td>Feb 15, 2025</td>
                                                     <td>Rocket</td>
                                                     <td>K332OPS</td>
@@ -3756,7 +3934,7 @@
                                                 </tr>
                                                 <!-- single row -->
                                                 <tr>
-                                                    <td class="my-text-primary">#BK1001</td>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
                                                     <td>Jan 15, 2025</td>
                                                     <td>Bank</td>
                                                     <td>K332OPS</td>
@@ -3764,7 +3942,7 @@
                                                 </tr>
                                                 <!-- single row -->
                                                 <tr>
-                                                    <td class="my-text-primary">#BK1001</td>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
                                                     <td>Jan 15, 2025</td>
                                                     <td>Bkash</td>
                                                     <td>K332OPS</td>
@@ -3772,7 +3950,7 @@
                                                 </tr>
                                                 <!-- single row -->
                                                 <tr>
-                                                    <td class="my-text-primary">#BK1001</td>
+                                                    <td class="my-text-primary my-cursor-pointer">#BK1001</td>
                                                     <td>Jan 15, 2025</td>
                                                     <td>Nogod</td>
                                                     <td>K332OPS</td>

@@ -725,6 +725,85 @@ circle {
 }
 
 
+@media (max-width:1280px) {
+
+    .total-trips-text {
+        position: absolute;
+        top: 51%;
+        left: 32%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .dasboard-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .top .content .my-fs-xl {
+        font-size: 16px;
+    }
+
+    .points .my-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-content-header {
+        padding-right: 16px;
+    }
+
+    .booking-upcoming {
+        grid-template-columns: 30% 30% 36%;
+    }
+
+    .upcoming-trips .item {
+        /* flex-direction: column; */
+    }
+
+    .total-points {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upcoming-trips .item {
+        padding: 12px;
+    }
+
+    /* .upcoming-trips .item .flex-shring-no {
+        width: 100%;
+    }
+
+    .upcoming-trips .item .flex-shring-no img {
+        width: 100%;
+    }
+
+    .chart .right {
+        flex: 1;
+    } */
+
+    .chart .right #barChart {
+        height: 100% !important;
+        max-height: 100% !important;
+    }
+
+
+
+    .invite-wishlist {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (max-width:991px) {}
+
+
 
 
 
@@ -741,9 +820,33 @@ circle {
         width: 100%;
     }
 
+    .circle-chart {
+        position: relative;
+        /* width: 340px; */
+        /* height: 340px; */
+        width: 300px;
+        height: 316px;
+    }
 
     #donutChart {
-        max-height: 324px;
+        max-height: unset;
+        max-width: unset;
+        max-height: 320px;
+        display: block;
+        box-sizing: border-box;
+        height: unset !important;
+        width: unset !important;
+        max-width: 270px !important;
+    }
+
+    #barChart {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+        box-sizing: border-box;
+        height: 171px;
+        width: 341px;
+        width: 100%;
     }
 
     .circle-chart .complete {
@@ -891,7 +994,7 @@ circle {
     }
 
     .total-trips .complete {
-        width: 100%;
+        /* width: 100%; */
         margin-top: -12px;
     }
 
@@ -981,17 +1084,25 @@ circle {
     /* right */
     .chart .right {
         overflow-x: auto;
-        height: 340px;
+        height: 210px;
     }
 
     .chart #barChart {
-        height: 340px !important;
-        width: 740px !important;
+        /* height: 340px !important; */
+        /* width: 740px !important; */
         max-width: unset !important;
         max-height: unset !important;
+        width: 100%;
     }
 
+    .total-trips-text h5 {
+        font-size: var(--fs-sm);
+    }
 
+    .total-trips-text h4 {
+        color: var(--my-text-primary);
+        font-size: var(--fs-xl);
+    }
 
     /* booking-status-head */
     .booking-status-head {

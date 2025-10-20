@@ -136,6 +136,23 @@
 
 
 /*===================  Tour Plan Page =================*/
+.plan-create-btn {
+    background-color: var(--my-border-secondary);
+    /* color: var(--my-border-primary); */
+    border: 1px solid var(--my-primary-color);
+    box-shadow: var(--shadow-all-sm);
+}
+
+.plan-create-btn .icon {
+    border-color: var(--my-white);
+    border-width: 2px;
+    box-shadow: var(--shadow-1);
+}
+
+.plan-create-btn p {
+    /* color: var(--my-white); */
+}
+
 .new-tour-plan .plan-create-btn:hover {
     border: 1px solid var(--my-border-secondary);
     transition: .2s linear;
@@ -366,6 +383,16 @@
 
 
 @media (max-width:768px) {
+
+    .filter-header .payment-methods-btn {
+        padding: 9px 8px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #for-coupon-wallet-head .search-input {
+        max-width: 300px;
+    }
 
     /* Financial Page */
     .financial .top .item {
