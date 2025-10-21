@@ -221,10 +221,9 @@ tr {
 /*____________  Reused Class  ____________*/
 .my-container,
 .my-container-sm {
-    padding: 0px 16px;
+    padding: 0px 0px;
     margin: 0px auto;
-    width: 100%;
-    max-width: 1278px;
+    width: 83.33%;
 }
 
 .my-container-sm {

@@ -460,31 +460,38 @@ faqToggle();
 
 
 
+//========  For Radio Tabs  ========
+function setupRadioToggle(containerId, radioSelector, contentSelector) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
+    const radios = container.querySelectorAll(radioSelector);
+    const contents = container.querySelectorAll(contentSelector);
 
-// ============  For Login 2 ===========
-const login2Section = document.getElementById('login2')
+    if (!radios.length || !contents.length || radios.length !== contents.length) return;
 
-if (login2Section) {
-    const info_login_btn = login2Section.querySelector('.login-btn')
-    const info_register_btn = login2Section.querySelector('.register-btn')
-    const login_form = login2Section.querySelector('.login')
-    const register_form = login2Section.querySelector('.register')
+    radios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            if (!radio.checked) return;
 
-    info_login_btn.addEventListener('click', function () {
-        info_login_btn.parentElement.classList.remove('active')
-        info_register_btn.parentElement.classList.add('active')
-        register_form.classList.remove('active')
-        login_form.classList.add('active')
-    })
+            // Remove 'active' from all contents
+            contents.forEach(c => c.classList.remove('active'));
 
-    info_register_btn.addEventListener('click', function () {
-        info_register_btn.parentElement.classList.remove('active')
-        info_login_btn.parentElement.classList.add('active')
-        register_form.classList.add('active')
-        login_form.classList.remove('active')
-    })
+            // Add 'active' to corresponding content
+            contents[index].classList.add('active');
+        });
+
+        // Initialize the default checked radio
+        if (radio.checked) {
+            contents[index].classList.add('active');
+        }
+    });
 }
+
+
+
+
+
 
 
 
@@ -497,7 +504,11 @@ function togglePasswordF() {
         parents.forEach(item => {
             const input = item.querySelector('input');
             const toggleBtn = item.querySelector('.right-icon');
-            const icon = toggleBtn.querySelector('i');
+            const icon = toggleBtn ? toggleBtn.querySelector('i') : null;
+
+            if (!input || !toggleBtn || !icon) {
+                return
+            }
 
             toggleBtn.addEventListener('click', function () {
                 if (input.type === 'password') {
@@ -540,6 +551,9 @@ function phoneF() {
                 if (!code) return;
 
                 dropdownToggle.textContent = code;
+                // ✅ Clear input when user switches country code
+                phoneInput.value = "";
+
                 phoneInput.focus();
             });
         });

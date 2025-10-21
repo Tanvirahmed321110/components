@@ -8,7 +8,7 @@
     max-width: 100%;
     margin: 0 auto;
     /* width: calc(100% - 70px); */
-    width: 90.28%;
+    width: 83.33%;
     min-height: 100%;
 }
 
@@ -638,7 +638,7 @@ circle {
 /*
 ============||    Upcoming Trips   ||=============
 */
-.currency-converter-area .upcoming-trips .items .item,
+.upcoming-trips .items .item,
 .save-list .items .item {
     transition: .12s ease-in-out;
 }
