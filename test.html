@@ -2,94 +2,239 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stacked Bar Chart</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome Page</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-        <!-- Chart.js CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                height: 100vh;
+                background: radial-gradient(circle at top left, #1a1a2e, #0f2027);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                color: #fff;
+            }
+
+            /* Floating background orbs */
+            .orb {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(80px);
+                opacity: 0.6;
+                animation: float 12s infinite ease-in-out alternate;
+            }
+
+            .orb1 {
+                width: 300px;
+                height: 300px;
+                background: #007bff;
+                top: 10%;
+                left: 10%;
+            }
+
+            .orb2 {
+                width: 400px;
+                height: 400px;
+                background: #00ff99;
+                bottom: 10%;
+                right: 10%;
+                animation-delay: 2s;
+            }
+
+            @keyframes float {
+                from {
+                    transform: translateY(0);
+                }
+
+                to {
+                    transform: translateY(-40px);
+                }
+            }
+
+            /* 3D glass card */
+            .welcome-card {
+                position: relative;
+                z-index: 2;
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+                border-radius: 25px;
+                padding: 60px;
+                width: 850px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transform-style: preserve-3d;
+                animation: cardEnter 1.2s ease forwards;
+                transform: translateY(40px) scale(0.95);
+                opacity: 0;
+            }
+
+            @keyframes cardEnter {
+                to {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .welcome-left {
+                max-width: 55%;
+            }
+
+            .welcome-left h1 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                background: linear-gradient(90deg, #00e5ff, #00ff99);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .welcome-left p {
+                font-size: 1.05rem;
+                color: #ccc;
+                line-height: 1.8;
+            }
+
+            .welcome-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                transform: translateZ(40px);
+            }
+
+            .btn {
+                padding: 14px 28px;
+                font-size: 1rem;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                font-weight: 600;
+                color: #fff;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+            }
+
+            .browse-btn {
+                background: linear-gradient(135deg, #007bff, #00c6ff);
+                box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+            }
+
+            .browse-btn:hover {
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 12px 35px rgba(0, 123, 255, 0.8);
+            }
+
+            .dashboard-btn {
+                background: linear-gradient(135deg, #00ff99, #00e5ff);
+                box-shadow: 0 8px 25px rgba(0, 255, 153, 0.4);
+            }
+
+            .dashboard-btn:hover {
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 12px 35px rgba(0, 255, 153, 0.7);
+            }
+
+            /* Soft glow ring */
+            .glow-ring {
+                position: absolute;
+                top: -120px;
+                left: -120px;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0, 255, 153, 0.4), transparent 70%);
+                filter: blur(30px);
+                animation: spin 22s linear infinite;
+                z-index: 1;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* Responsive layout */
+            @media (max-width: 768px) {
+                .welcome-card {
+                    flex-direction: column;
+                    padding: 40px 30px;
+                    width: 90%;
+                    text-align: center;
+                }
+
+                .welcome-left {
+                    max-width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                .welcome-right {
+                    align-items: center;
+                }
+
+                .btn {
+                    width: 80%;
+                    text-align: center;
+                }
+
+                .glow-ring {
+                    display: none;
+                }
+            }
+        </style>
     </head>
 
     <body>
 
-        <!-- Your chart canvas -->
-        <div style="width: 100%; max-width: 800px; margin: 40px auto;">
-            <canvas id="barChart"></canvas>
+        <!-- Glowing Orbs -->
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+
+        <!-- Card Glow -->
+        <div class="glow-ring"></div>
+
+        <!-- Welcome Card -->
+        <div class="welcome-card">
+            <div class="welcome-left">
+                <h1>Welcome Back, Tanvir!</h1>
+                <p>
+                    You’ve successfully logged in 🎉
+                    Continue exploring your favorite sections or head over to your dashboard
+                    to see your latest updates, stats, and insights.
+                </p>
+            </div>
+
+            <div class="welcome-right">
+                <button class="btn browse-btn">🌐 Continue Browsing</button>
+                <button class="btn dashboard-btn">📊 Go to Dashboard</button>
+            </div>
         </div>
 
-        <!-- Paste your chart code here -->
         <script>
-            // Stacked bar chart
-            new Chart(document.getElementById('barChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    datasets: [
-                        {
-                            label: 'Done',
-                            data: [11, 15, 27, 12, 16, 17, 19, 27, 28, 24, 17, 15],
-                            backgroundColor: '#1B4332',
-                            maxBarThickness: window.innerWidth < 768 ? 12 : undefined
-                        },
-                        {
-                            label: 'Staying',
-                            data: [25, 12, 13, 10, 29, 27, 13, 30, 11, 16, 21, 10],
-                            backgroundColor: '#2A6F5F',
-                            maxBarThickness: window.innerWidth < 768 ? 12 : undefined
-                        },
-                        {
-                            label: 'Food',
-                            data: [14, 18, 22, 30, 29, 16, 29, 26, 26, 15, 30, 16],
-                            backgroundColor: '#B0BEC5',
-                            maxBarThickness: window.innerWidth < 768 ? 12 : undefined
-                        },
-                        {
-                            label: 'Tour',
-                            data: [28, 26, 14, 10, 16, 19, 11, 17, 17, 17, 12, 19],
-                            backgroundColor: '#DCE1E3',
-                            maxBarThickness: window.innerWidth < 768 ? 12 : undefined
-                        },
-                        {
-                            label: 'Others',
-                            data: [19, 26, 10, 27, 10, 25, 24, 14, 11, 25, 20, 18],
-                            backgroundColor: '#E6E0F0',
-                            maxBarThickness: window.innerWidth < 768 ? 12 : undefined
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                            labels: {
-                                font: { size: window.innerWidth < 768 ? 8 : 14 },
-                                usePointStyle: true,  // 👈 make the legend markers circular
-                                pointStyle: 'circle',
-                                boxWidth: 10,
-                                boxHeight: 10
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
-                            barPercentage: 0.2,
-                            categoryPercentage: 0.8,
-                            ticks: {
-                                font: { size: window.innerWidth < 768 ? 8 : 14 }
-                            }
-                        },
-                        y: {
-                            stacked: true,
-                            ticks: {
-                                font: { size: window.innerWidth < 768 ? 8 : 14 }
-                            }
-                        }
-                    }
-                }
+            document.querySelector('.browse-btn').addEventListener('click', () => {
+                window.location.href = '/browse.html';
             });
 
+            document.querySelector('.dashboard-btn').addEventListener('click', () => {
+                window.location.href = '/dashboard.html';
+            });
         </script>
 
     </body>

@@ -117,7 +117,7 @@
 
 .financial #expensesChart {
     width: 100% !important;
-    height: 300px !important;
+    height: fit-content;
 }
 
 .body .chart-container canvas {
@@ -143,8 +143,8 @@
 
 /*===================  Tour Plan Page =================*/
 .plan-create-btn {
-    background-color: var(--my-border-secondary);
-    /* color: var(--my-border-primary); */
+    background-color: var(--my-primary-color);
+    color: var(--my-border-primary);
     border: 1px solid var(--my-primary-color);
     box-shadow: var(--shadow-all-sm);
 }
@@ -156,11 +156,12 @@
 }
 
 .plan-create-btn p {
-    /* color: var(--my-white); */
+    color: var(--my-white);
+    font-weight: 400;
 }
 
 .new-tour-plan .plan-create-btn:hover {
-    border: 1px solid var(--my-border-secondary);
+    background-color: var(--my-secondary-color);
     transition: .2s linear;
 }
 

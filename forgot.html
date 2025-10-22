@@ -2756,13 +2756,13 @@
         <main>
             <section class="login2" id="login2">
                 <div class="my-container my-flex-center">
-                    <div class="login2-container" id="forgot-password-wrapper">
+                    <article class="login2-container" id="forgot-password-wrapper">
 
 
                         <!--======================||  For Forgot Password  ||=======================-->
                         <div class="form-box register active">
                             <form action="#" method="post">
-                                <h3 class="my-text-primary my-fs-title">Forgot Password</h3>
+                                <h1 class="my-text-primary my-fs-title">Forgot Password</h1>
                                 <div class="my-mt-10">
 
                                     <div class="">
@@ -2771,7 +2771,7 @@
                                             <div>
                                                 <!--===================||  Radio Buttons  ||==================-->
                                                 <div class="my-pb-2 radio-btns">
-                                                    <div class="my-d-flex my-gap-8">
+                                                    <div class="my-flex-center my-gap-8 flex-wrap">
                                                         <!-- For Phone Button -->
                                                         <div class=" my-d-flex my-align-center my-gap-3">
                                                             <input class="radio-btn" type="radio" checked=""
@@ -2825,6 +2825,9 @@
                                                                             <!-- search input -->
                                                                             <input type="text" class="dropdown-search"
                                                                                 placeholder="Search country or code...">
+                                                                            <div class="error-message"
+                                                                                aria-live="assertive">
+                                                                                Error Message Here</div>
                                                                         </div>
 
                                                                         <!-- Dropdown Here -->
@@ -2970,7 +2973,8 @@
                                                                     <input type="tel" class=""
                                                                         placeholder="Enter phone number" id="phone"
                                                                         aria-label="Phone number">
-                                                                    <div class="error-message">Error Message Here</div>
+                                                                    <div class="error-message" aria-live="assertive">
+                                                                        Error Message Here</div>
                                                                 </div>
 
                                                             </div>
@@ -2983,7 +2987,10 @@
                                                         class="my-flex-column radio-content my-gap-5">
                                                         <!-- for email -->
                                                         <div class="toggle-password my-input-control">
-                                                            <input type="email" placeholder="Email" required="1">
+                                                            <input type="email" placeholder="Email" required="1"
+                                                                aria-required="true">
+                                                            <div class="error-message" aria-live="assertive">
+                                                                Error Message Here</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2996,8 +3003,8 @@
                                             <div class="otp-wrapper my-mt-16">
 
                                                 <div class="my-flex-center my-gap-2">
-                                                    <h5>Your OTP Expires In </h5>
-                                                    <div class="my-flex-center my-fw-bold my-gap-2">
+                                                    <div class="my-fs-md my-fw-bold">Your OTP Expires In </div>
+                                                    <div class="my-flex-center my-fs-md my-fw-bold my-gap-2">
                                                         <div class="time my-text-orange my-fw-bolder">180</div>Seconds
                                                     </div>
                                                 </div>
@@ -3037,8 +3044,8 @@
 
                                             <!--========  Submit Button =======-->
                                             <div class="my-mt-8">
-                                                <button class="my-btn">Send OTP</button>
-                                                <!-- <button class="my-btn">Re Send</button>
+                                                <button class="my-btn my-primary-btn">Send OTP</button>
+                                                <!-- <button class="my-btn my-primary-btn">Re Send</button>
                                         <button class="my-btn">Verify</button> -->
                                             </div>
 
@@ -3050,21 +3057,23 @@
                                         <div class="my-flex-column my-gap-4">
                                             <div class="my-input-control toggle-password">
                                                 <input type="password" class="" placeholder="New Password" id="phone"
-                                                    aria-label="Phone number">
+                                                    aria-label="New Password">
                                                 <div class="right-icon"><i class="ri-eye-line"></i></div>
-                                                <div class="error-message">Error Message Here</div>
+                                                <div class="error-message" aria-live="assertive">Error Message Here
+                                                </div>
                                             </div>
 
 
                                             <!-- “Add the .error class to the my-input-control element to display the error message.” -->
                                             <div class="my-input-control error toggle-password">
                                                 <input type="password" class="" placeholder="Confirm Password"
-                                                    id="phone" aria-label="Phone number">
+                                                    id="phone" aria-label="Confirm Password">
                                                 <div class="right-icon"><i class="ri-eye-line"></i></div>
-                                                <div class="error-message">Error Message Here</div>
+                                                <div class="error-message" aria-live="assertive">Error Message Here
+                                                </div>
                                             </div>
 
-                                            <button class="my-btn my-primary-btn">Save Password</button>
+                                            <button class="my-btn my-primary-btn" type="submit">Save Password</button>
                                         </div>
                                     </div>
 
@@ -3075,15 +3084,15 @@
 
 
                         <!--========================||  Left Side Content  ||====================-->
-                        <div class="form-toggle-box ">
+                        <aside class="form-toggle-box ">
 
                             <div class="toggle-wrap toggle-login active">
-                                <h1 class="my-text-white my-fs-xxl"> Welcome Back!</h1>
+                                <h2 class="my-text-white my-fs-xxl my-text-center"> Welcome Back!</h2>
                                 <p>Loss Your Password?</p>
                             </div>
 
-                        </div>
-                    </div>
+                        </aside>
+                    </article>
                 </div>
             </section>
         </main>

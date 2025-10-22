@@ -6901,7 +6901,7 @@ tr {
 
     .my-container,
     .my-container-sm {
-        max-width: 680px;
+        /* max-width: 680px; */
     }
 
     .my-flex-md-column {

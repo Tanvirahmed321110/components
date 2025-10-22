@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Login</title>
         <link rel="stylesheet" href="./static/css/global_css/global.css">
         <link rel="stylesheet" href="./static/css/library/custom_class.css">
         <link rel="stylesheet" href="./static/css/library/my_component.css">
@@ -2762,13 +2762,13 @@
                         <!--====================||  For Login  ||========================-->
                         <div class="form-box login" id="radio-wrapper">
                             <form action="#">
-                                <h2 class="my-text-primary my-fs-title">Login</h2>
+                                <h1 class="my-text-primary my-fs-title">Login</h1>
                                 <div class="my-mt-4">
 
 
                                     <!--=========|| Login Buttons Phone and Email  ||=========-->
                                     <div class="my-pb-2 my-pt-10 ">
-                                        <div class="my-d-flex my-gap-8 radio-btns">
+                                        <div class="my-flex-center my-gap-8 radio-btns flex-wrap">
                                             <!-- For Phone Button -->
                                             <div class=" my-d-flex my-align-center my-gap-3">
                                                 <input class="radio-btn" type="radio" checked name="u-login"
@@ -2949,7 +2949,7 @@
                                                                                                             id="phone" aria-label="Phone number"> -->
                                                         <input type="tel" class="" placeholder="Enter phone number"
                                                             id="phone" aria-label="Phone number">
-                                                        <div class="error-message">Error Message Here</div>
+                                                        <small class="error-message">Error Message Here</small>
                                                     </div>
 
                                                 </div>
@@ -2958,6 +2958,7 @@
                                             <!-- for password -->
                                             <div class="toggle-password my-input-control">
                                                 <input type="password" placeholder="Password" required="1">
+                                                <small class="error-message">Error Message Here s</small>
                                                 <div class="right-icon"><i class="ri-eye-line"></i></div>
                                             </div>
                                         </div>
@@ -2967,12 +2968,14 @@
                                         <div id="for-u-login-email" class="my-flex-column radio-content my-gap-5">
                                             <!-- for email -->
                                             <div class="toggle-password my-input-control">
-                                                <input type="email" placeholder="Email" required="1">
+                                                <input class="error" type="email" placeholder="Email" required="1">
+                                                <small class="error-message">Error Message</small>
                                             </div>
 
                                             <!-- for password -->
                                             <div class="toggle-password my-input-control">
                                                 <input type="password" placeholder="Password" required="1">
+                                                <small class="error-message">Error Message</small>
                                                 <div class="right-icon"><i class="ri-eye-line"></i></div>
                                             </div>
                                         </div>
@@ -2987,13 +2990,14 @@
 
 
                                     <div class="my-mt-4 my-text-right">
-                                        <button class="my-text-underline forgot-password forget-pass">Forget
-                                            Password?</button>
+                                        <a href="./forgot.html"
+                                            class="my-text-underline forgot-password forget-pass">Forget
+                                            Password?</a>
                                     </div>
 
                                     <!-- Login Button -->
                                     <div class="my-mt-5">
-                                        <button class="my-btn">Login</button>
+                                        <button class="my-btn my-primary-btn">Login</button>
                                     </div>
 
                                     <!-- or login in social -->
@@ -3002,7 +3006,7 @@
 
                                         <div class="my-flex-center social-login my-mt-4 my-gap-3">
                                             <button class="item"><i class="ri-google-fill"></i></button>
-                                            <button class="item"><i clas<i class="ri-facebook-circle-fill"></i></button>
+                                            <button class="item"><i class="ri-facebook-circle-fill"></i></button>
                                             <button class="item"><i class="ri-apple-fill"></i></button>
                                             <button class="item"><i class="ri-windows-fill"></i>
                                             </button>
@@ -3018,7 +3022,7 @@
                         <!--======================||  For Register  ||=======================-->
                         <div class="form-box register active">
                             <form action="#">
-                                <h2 class="my-text-primary my-fs-title">Register</h2>
+                                <h1 class="my-text-primary my-fs-title">Register</h1>
                                 <div class="my-mt-10">
                                     <div class="my-flex-column my-gap-3">
                                         <!-- for Phone -->
@@ -3187,17 +3191,17 @@
                                         <div class="my-input-control my-align-center my-gap-2">
                                             <input type="email" placeholder="email">
                                             <!-- error message -->
-                                            <small>Error Message</small>
+                                            <small class="error-message">Error Message</small>
                                         </div>
 
                                         <!-- for password -->
                                         <div class="my-input-control toggle-password my-align-center my-gap-2">
                                             <input type="password" placeholder="password">
+                                            <small class="error-message">Error Message</small>
                                             <div class="right-icon">
                                                 <i class="ri-eye-line"></i>
                                             </div>
 
-                                            <small class="error-message">Error Message</small>
                                         </div>
 
                                         <!-- when error show then add class error  -->
@@ -3211,7 +3215,7 @@
 
                                     <!-- Register Button -->
                                     <div class="my-mt-5">
-                                        <button class="my-btn">Register</button>
+                                        <button class="my-btn my-primary-btn" type="submit">Register</button>
                                     </div>
 
                                     <!-- or login in social -->
@@ -3220,13 +3224,12 @@
                                         </div>
                                         <div class="my-flex-center social-login my-mt-4 my-gap-3">
                                             <button class="item"><i class="ri-google-fill"></i></button>
-                                            <button class="item"><i clas<i class="ri-facebook-circle-fill"></i></button>
+                                            <button class="item"><i class="ri-facebook-circle-fill"></i></button>
                                             <button class="item"><i class="ri-apple-fill"></i></button>
                                             <button class="item"><i class="ri-windows-fill"></i>
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
                             </form>
                         </div>
@@ -3240,16 +3243,16 @@
 
                             <!-- Login -->
                             <div class="toggle-wrap toggle-login active">
-                                <h1 class="my-text-white my-fs-xxl"> Welcome Back!</h1>
+                                <h2 class="my-text-white my-text-center my-fs-xxl"> Welcome Back!</h2>
                                 <p>already have an account?</p>
-                                <button class="toggle-btn my-btn login-btn">Login</button>
+                                <button class="toggle-btn my-primary-btn my-btn login-btn">Login</button>
                             </div>
 
                             <!-- Register -->
                             <div class="toggle-wrap toggle-register ">
-                                <h1 class="my-text-white my-fs-xxl"> Welcome Back!</h1>
+                                <h2 class="my-text-white my-fs-xxl my-text-center"> Welcome Back!</h2>
                                 <p>Don't have an account?</p>
-                                <button class="toggle-btn my-btn register-btn">Register</button>
+                                <button class="toggle-btn my-primary-btn my-btn register-btn">Register</button>
                             </div>
 
                         </div>

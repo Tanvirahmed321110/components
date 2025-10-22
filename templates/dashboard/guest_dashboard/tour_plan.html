@@ -3217,8 +3217,8 @@
                     =======||   Main Tab Section  Start Here   ||======
                     ===================================================
                     -->
-                    <section>
-                        <div class="my-m-8 tabs">
+                    <section class="flex-1  my-flex-column">
+                        <div class="my-m-8 tabs my-flex-column flex-1">
                             <!--======================||  Tab Buttons  ||=====================-->
                             <div class="my-bg-white my-shadow-1 my-p-sm-0  my-p-6 my-radius-lg">
                                 <ul class="tab1-btns my-bg-white hide-scroll-wrapper" role="tablist">
@@ -3281,14 +3281,14 @@
 
 
                             <!--======================||  Booking History And Reviews Contents  ||=====================-->
-                            <div class="tab-contents common">
+                            <div class="tab-contents flex-1 my-flex-column common">
 
                                 <!--=============|| For In-Planing Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-xl reviews-table active my-shadow-1"
-                                    id="in-planing" role="tabpanel" aria-labelledby="tab-planing">
+                                <div class=" tab-content my-bg-white flex-1 my-radius-xl reviews-table active
+                                my-shadow-1" id="in-planing" role="tabpanel" aria-labelledby="tab-planing">
                                     <div class="common-table-1-wrapper">
                                         <!-- Table Header -->
-                                        <table class="common-table-1">
+                                        <table class="common-table-1 wallet">
                                             <thead>
                                                 <tr>
                                                     <th>
@@ -3375,28 +3375,6 @@
                                                     </td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td>
-                                                        <div class="my-text-primary">#B23233</div>
-                                                    </td>
-                                                    <td>
-                                                        <div>Sundarbans River Cruise</div>
-                                                    </td>
-                                                    <td>
-                                                        <div>Jan 16, 2025</div>
-                                                    </td>
-                                                    <td>
-                                                        <div>Jan 16, 2025</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="my-d-flex my-gap-6">
-                                                            <button class="my-btn my-btn-sm my-primary-btn">View
-                                                                Plan</button>
-                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
-                                                                Plan</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
 
                                                 <tr>
                                                     <td>
@@ -3421,6 +3399,50 @@
                                                     </td>
                                                 </tr>
 
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23233</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Panchagorh River Cruise</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="my-text-primary">#B23233</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Panchagorh River Cruise</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>Jan 16, 2025</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="my-d-flex my-gap-6">
+                                                            <button class="my-btn my-btn-sm my-primary-btn">View
+                                                                Plan</button>
+                                                            <button class="my-btn my-btn-sm my-secondary-btn">Edit
+                                                                Plan</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                                 <tr>
                                                     <td>
                                                         <div class="my-text-primary">#B23233</div>
@@ -3497,7 +3519,7 @@
 
 
                                 <!--=============|| For Ongoing-Planing Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-xl reviews-table  my-shadow-1"
+                                <div class="tab-content my-bg-white flex-1 my-radius-xl reviews-table  my-shadow-1"
                                     id="ongoing-plan" role="tabpanel" aria-labelledby="tab-planing">
                                     <div class="common-table-1-wrapper">
                                         <table class="common-table-1">
@@ -3708,7 +3730,7 @@
                                 </div>
 
                                 <!--=============|| For History Content  ||=============-->
-                                <div class="tab-content my-bg-white my-radius-xl reviews-table  my-shadow-1"
+                                <div class="tab-content flex-1 my-bg-white my-radius-xl reviews-table  my-shadow-1"
                                     id="history" role="tabpanel" aria-labelledby="tab-planing">
                                     <div class="common-table-1-wrapper">
                                         <table class="common-table-1">
@@ -3959,7 +3981,8 @@
                                         <i class="ri-edit-line"></i>
                                     </span>
                                     <span>
-                                        <p class="my-text-secondary my-fw-bold my-text-left">Create a new Plan</p>
+                                        <p class="my-text-secondary my-fw-bold my-fs-md my-text-left">Create a new Plan
+                                        </p>
                                         <p class="my-fs-xs">Dive into the editor and start creating</p>
                                     </span>
                                 </button>

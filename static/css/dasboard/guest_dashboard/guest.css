@@ -463,6 +463,9 @@ main {
     transition: .3s linear;
     z-index: 2;
     flex-basis: calc(100% - 20%);
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
 }
 
 /* Active Class */
@@ -669,10 +672,7 @@ circle {
         border-right: 0;
     }
 
-    main {
-        /* width: calc(100% - 310px); */
-        /* flex-grow: 1; */
-    }
+
 
     .booking-upcoming {
         grid-template-columns: 270px 1fr 300px;
