@@ -74,6 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // For mobile sidebar
+    function mobileSidebarF() {
+        const btn = document.getElementById('mobile-menu-btn')
+        const sidebar = document.querySelector('.sidebar');
+
+        if (btn && sidebar) {
+            btn.addEventListener('click', function () {
+                sidebar.classList.add('m-active')
+                console.log('click')
+            })
+        }
+    }
+    mobileSidebarF()
 
 
 

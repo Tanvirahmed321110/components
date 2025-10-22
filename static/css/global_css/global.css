@@ -578,6 +578,10 @@ header .header-main .item.active svg path {
 }
 
 
+.header-main ul li:first-child a {
+    padding-left: 0;
+}
+
 
 
 
@@ -734,5 +738,53 @@ footer .footer-bottom .left {
 
     header .header-main ul {
         padding: 0;
+    }
+
+    header .header-top {
+        border-bottom: 1px solid var(--my-border-gray);
+        padding-top: 16px !important;
+        position: relative;
+    }
+
+    .header-top .logo {
+        display: none;
+    }
+
+    .header-top .become-supplier-btn {
+        display: none !important;
+    }
+
+    .header-top .meddile {
+        gap: 12px;
+    }
+
+    .header-top .click-dropdown-parent.usd {
+        display: none;
+    }
+
+    .header-top .click-dropdown-btn {
+        padding: 0px;
+    }
+
+    .header-top .other-btns .wrap {
+        gap: 8px;
+    }
+
+    .header-top .other-btns .text {
+        display: none;
+    }
+
+    .header-top .login-have-no.active {
+        display: none;
+    }
+
+    .header-top .login-have-no.mobile.active {
+        display: flex;
+    }
+
+
+
+    header .header-top .right .other-btns .item {
+        padding: 4px;
     }
 }

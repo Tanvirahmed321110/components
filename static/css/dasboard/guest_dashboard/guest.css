@@ -815,6 +815,11 @@ circle {
         border-bottom: 0px solid var(--my-white-off);
     }
 
+
+    .m-sidebar-close.sidebar-close-btn {
+        padding: 12px !important;
+    }
+
     .common-dropdown-1 {
         max-width: 100%;
         width: 100%;
