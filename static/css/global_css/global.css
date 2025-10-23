@@ -323,12 +323,16 @@ header .click-dropdown-parent {
 
 header .profile-dropdown.click-dropdown {
     top: 50px;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 
 header .click-dropdown-parent .click-dropdown.lg {
     max-width: 1220px;
     box-shadow: var(--shadow-all-sm);
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 header .header-top .right .other-btns .item:hover,
@@ -393,8 +397,8 @@ header .profile-dropdown {
 }
 
 .wrapper.my-has-scrollbar-sm {
-    max-height: 450px;
-    overflow-y: auto;
+    /* max-height: 450px;
+    overflow-y: auto; */
 }
 
 /* Chrome, Safari, Edge */
@@ -767,7 +771,7 @@ footer .footer-bottom .left {
     }
 
     .header-top .other-btns .wrap {
-        gap: 8px;
+        gap: 10px;
     }
 
     .header-top .other-btns .text {
@@ -778,13 +782,13 @@ footer .footer-bottom .left {
         display: none;
     }
 
-    .header-top .login-have-no.mobile.active {
+    .header-top .login-have-no.mobile {
         display: flex;
     }
 
 
 
     header .header-top .right .other-btns .item {
-        padding: 4px;
+        padding: 0 2px;
     }
 }

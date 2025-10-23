@@ -115,7 +115,7 @@ aside.sidebar.active {
 }
 
 aside.sidebar.active #misc-nav-heading {
-    font-size: 9px;
+    font-size: 8px;
 }
 
 aside.active .top .content {
@@ -429,7 +429,13 @@ aside .ads-video .btn-wrap .bottom-btns .item.next-btn {
     right: 60px;
 } */
 
+aside.active .ads-video .btn-wrap {
+    display: block;
+}
 
+aside.active .video-slider-wrap:hover .btn-wrap {
+    display: none;
+}
 
 /* ads-modal  */
 .ads-modal .my-video {
@@ -447,9 +453,30 @@ aside .ads-video .video-slider-wrap:hover .btn-wrap {
     display: block;
 }
 
+aside.active .ads-video .video-slider-wrap .btn-wrap {
+    display: none;
+}
 
+aside .ads-video .video-slider-wrap .video-play {
+    display: none;
+}
 
+aside.active .ads-video .video-slider-wrap .video-play {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.722);
+    width: 36px;
+    height: 36px;
+    color: var(--my-text-primary);
+}
 
+aside.active .ads-video .video-slider-wrap:hover .video-play {
+    display: block;
+}
 
 /*
 ============================================

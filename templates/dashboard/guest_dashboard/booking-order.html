@@ -31,13 +31,29 @@
                         <!--======||  Header Top Left  ||======-->
                         <div class="left">
                             <!-- Logo Here -->
-                            <a href="index.html" aria-label="Go to Homepage">
+                            <a class="logo" href="index.html" aria-label="Go to Homepage">
                                 <img src="/static/images/Logo.svg" alt="Logo Here" loading="lazy">
                             </a>
+
+                            <!--====== Mobile Menu Button =======-->
+                            <div class="desktop-hide mobile-show">
+                                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.75 0.75H14.0833" stroke="#FC5A31" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M0.75 5.75H14.0833" stroke="#FC5A31" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M0.75 10.75H10.75" stroke="#FC5A31" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
                         </div>
 
                         <!--======||  Header Top Right  ||======-->
-                        <div class="right my-d-flex my-align-center">
+                        <div class="right my-d-flex my-align-center my-gap-sm-6">
 
                             <!-- Supplier Button -->
                             <div class="my-mr-4">
@@ -52,8 +68,9 @@
                                 <!--=====  For Gbobal Dropdown  =====-->
                                 <div class="click-dropdown-parent ">
                                     <!--#NOTE: When click (.click-dropdown-btn) Then will add active class for the click-dropdown-btn button -->
-                                    <div class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex">
-                                        <button class="my-fw-bold my-align-center my-d-flex my-gap-4"
+                                    <div
+                                        class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center  my-gap-sm-3 my-d-flex">
+                                        <button class="my-fw-bold my-align-center my-d-flex my-gap-4 my-gap-sm-2"
                                             aria-haspopup="listbox" aria-expanded="false" aria-label="Select Language">
 
                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -81,7 +98,7 @@
                                                     Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2" role="listbox"
+                                                    <ul class="my-grid-4 my-grid-sm-2 my-gap-2" role="listbox"
                                                         aria-labelledby="languageDropdownBtn">
 
                                                         <!-- single language -->
@@ -338,7 +355,7 @@
                                                     More Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2">
+                                                    <ul class="my-grid-4 my-grid-sm-2 my-gap-2">
 
                                                         <!-- single language -->
                                                         <li class="my-d-flex my-align-center  my-gap-6 item">
@@ -794,30 +811,17 @@
                                 </div>
 
                                 <!--=====  For USD Dropdown  =====-->
-                                <div class="click-dropdown-parent ">
+                                <div class="click-dropdown-parent usd">
                                     <button
                                         class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex"
                                         aria-haspopup="listbox" aria-expanded="false" aria-label="Select Currency">
                                         <div class="my-fw-bold">
                                             USD
                                         </div>
-
-                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_678_2451)">
-                                                <path
-                                                    d="M10.5 22C16.0228 22 20.5 17.5228 20.5 12C20.5 6.47715 16.0228 2 10.5 2C4.97715 2 0.5 6.47715 0.5 12C0.5 17.5228 4.97715 22 10.5 22Z"
-                                                    fill="#F0F0F0" />
-                                                <path
-                                                    d="M20.4154 10.6957H11.8044H11.8044V2.08465C11.3774 2.02906 10.9421 2 10.5 2C10.0579 2 9.62262 2.02906 9.19566 2.08465V10.6956V10.6956H0.584648C0.529063 11.1226 0.5 11.5579 0.5 12C0.5 12.4421 0.529063 12.8774 0.584648 13.3043H9.19559H9.19563V21.9154C9.62262 21.9709 10.0579 22 10.5 22C10.9421 22 11.3774 21.971 11.8043 21.9154V13.3044V13.3044H20.4154C20.4709 12.8774 20.5 12.4421 20.5 12C20.5 11.5579 20.4709 11.1226 20.4154 10.6957Z"
-                                                    fill="#D80027" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_678_2451">
-                                                    <rect width="20" height="20" fill="white"
-                                                        transform="translate(0.5 2)" />
-                                                </clipPath>
-                                            </defs>
+                                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </button>
 
@@ -1601,7 +1605,7 @@
 
                                     <!--#NOTE: When click (.click-dropdown-btn) Then will add active class for the click-dropdown-btn button -->
                                     <button
-                                        class="click-dropdown-btn my-px-7 my-py-5 my-gap-5 my-align-center my-d-flex"
+                                        class="click-dropdown-btn my-px-7 my-py-5 my-gap-5  my-gap-sm-3 my-align-center my-d-flex"
                                         aria-haspopup="listbox" aria-expanded="false" aria-label="Select Country">
 
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -1634,12 +1638,13 @@
                                         </svg>
 
 
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
-                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M1 1.5L6 6.5L11 1.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </button>
+
 
                                     <!--#NOTE:  When Click (.click-dropdown-btn) Then Show It (will add .active class for click dropdown) -->
                                     <div class="click-dropdown lg my-pb-8  my-px-15">
@@ -1650,7 +1655,7 @@
                                                     Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2" role="listbox"
+                                                    <ul class="my-grid-4 my-grid-sm-2 my-gap-2" role="listbox"
                                                         aria-labelledby="currencyDropdownBtn">
 
                                                         <!-- single language -->
@@ -1905,7 +1910,7 @@
                                                     More Country/Language
                                                 </h3>
                                                 <div class="my-pl-4">
-                                                    <ul class="my-grid-4 my-gap-2">
+                                                    <ul class="my-grid-4 my-grid-sm-2 my-gap-2">
 
                                                         <!-- single language -->
                                                         <li class="my-d-flex my-align-center  my-gap-6 item">
@@ -2362,7 +2367,7 @@
 
                             <!--=====  Wishlist Cart and Profile  =====-->
                             <div class="other-btns">
-                                <ul class="my-d-flex my-align-center  my-ml-1">
+                                <ul class="my-d-flex my-align-center wrap my-ml-1">
                                     <!-- For Wishlist -->
                                     <li>
                                         <a class="my-flex-column item my-gap-3 my-align-center" href="#"
@@ -2375,7 +2380,7 @@
                                                     stroke-linejoin="round" />
                                             </svg>
 
-                                            <span class="my-fw-bold">Wishlist</span>
+                                            <span class="my-fw-bold text">Wishlist</span>
                                         </a>
                                     </li>
 
@@ -2399,14 +2404,14 @@
                                             </svg>
 
 
-                                            <span class="my-fw-bold">Cart</span>
+                                            <span class="my-fw-bold text">Cart</span>
                                         </a>
                                     </li>
 
                                     <!--======||  For Profile  ||======-->
                                     <li class="click-dropdown-parent">
-                                        <!--=====  when Do Not Login  {when active class add then show "login-have-no active"} =====-->
-                                        <div class=" login-have-no">
+                                        <!--=====  when Do Not Login  {if active class add then show".login-have-no .active"} =====-->
+                                        <div class="login-have-no  mobile">
                                             <button
                                                 class="my-flex-column  click-dropdown-btn my-gap-2 item my-align-center"
                                                 aria-haspopup="false">
@@ -2417,11 +2422,11 @@
                                                         stroke="#A4A7AE" stroke-width="1.66667" stroke-linecap="round"
                                                         stroke-linejoin="round" />
                                                 </svg>
-                                                <span class="my-fw-bold">Profile</span>
+                                                <span class="my-fw-bold my-text-primary text">Profile</span>
                                             </button>
                                         </div>
 
-                                        <!--=====  when Already Login {when active class add then show "login-have-no active"} =====-->
+                                        <!--=====  when Already Login {if active class add then show ".login-have-no .active"} =====-->
                                         <div class="login-have-no active">
                                             <button
                                                 class="my-fs-sm login-user my-d-flex my-align-center my-fw-bold my-gap-4 my-pr-5 click-dropdown-btn">
@@ -2647,7 +2652,7 @@
 
 
                     <!--==================||   Header Main Start Here   ||==================-->
-                    <div class="my-mt-8  header-main ">
+                    <div class="my-mt-8  header-main">
                         <nav aria-label="Main site navigation" class="hide-scroll-wrapper">
                             <ul class="my-d-flex my-align-center my-gap-14 my-pt-5 my-pb-5 ">
 
@@ -2812,7 +2817,7 @@
                 =======||   Sidebar Section  Start Here   ||======
                 ==================================================
                 -->
-                <aside aria-label="Dashboard navigation" class="sidebar m-active " id="sidebar">
+                <aside aria-label="Dashboard navigation" class="sidebar" id="sidebar">
                     <div class="aside-wrapper">
                         <!--====== Sidebar Close Button ======-->
                         <div>
@@ -3078,37 +3083,54 @@
                                                     muted></video>
                                             </a>
                                             <a href="#" class="ads-item">
-                                                <video src="/static/images/videos/video-ads2.mp4" autoplay
+                                                <video src="/static/images/videos/video-ads1.mp4" autoplay
                                                     muted></video>
                                             </a>
                                         </div>
 
                                         <!--===== Btn Wrap ======-->
-                                        <div class="btn-wrap">
+                                        <div class="btn-wrap my-d-none">
                                             <!-- Mute Button -->
                                             <button class="mute-btn item my-text-secondary">
                                                 <i class="ri-volume-mute-line"></i>
                                             </button>
 
+
+                                            <!--========  Bottom Btns  =======-->
                                             <!-- Big Screen -->
-                                            <button class="full-screen-btn item my-tooltip my-text-primary">
+                                            <button class="full-screen-btn  my-tooltip my-text-primary">
                                                 <i class="ri-fullscreen-line"></i>
                                                 <div class="show-text">Big Screen</div>
                                             </button>
-                                        </div>
-                                    </div>
 
-                                    <!--===== Prev and Next Button =====-->
-                                    <div class="my-d-flex my-gap-4 my-mt-4">
-                                        <button class="my-btn-sm my-btn my-primary-btn prev-btn"> prev </button>
-                                        <button class="my-btn-sm my-btn my-primary-btn next-btn"> next </button>
+                                            <div class="bottom-btns">
+                                                <!--===== Prev and Next Button =====-->
+                                                <button class="item prev-btn my-flex-center"><i
+                                                        class="ri-skip-left-line"></i>
+                                                </button>
+
+                                                <!-- Play Pos Button -->
+                                                <button class="item play-btn">
+                                                    <i class="ri-play-fill"></i>
+                                                </button>
+
+                                                <button class="item next-btn"><i
+                                                        class="ri-skip-right-line"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Play Pos Button When sidebar collapse-->
+                                        <button class=" play-btn video-play">
+                                            <i class="ri-play-fill"></i>
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>
 
+
                         </div>
                     </div>
-
                 </aside>
 
 
