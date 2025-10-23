@@ -402,6 +402,12 @@
     flex: 1;
 }
 
+@media (max-width:1284px) {
+    .filter-header .search-input.show-mobile {
+        display: flex !important;
+        flex: 1;
+    }
+}
 
 
 @media (max-width:768px) {

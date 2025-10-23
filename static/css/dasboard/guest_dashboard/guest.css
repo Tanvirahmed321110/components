@@ -690,7 +690,17 @@ circle {
     stroke: var(--my-secondary-color);
 }
 
+.total-trips-text {
+    position: absolute;
+    top: 51%;
+    left: 36%;
+    text-align: center;
+}
 
+.total-trips-text h4 {
+    color: var(--my-text-primary);
+    font-size: var(--fs-xl);
+}
 
 
 @media (max-width:1400px) {
@@ -755,11 +765,9 @@ circle {
 @media (max-width:1280px) {
 
     .total-trips-text {
-        position: absolute;
         top: 51%;
-        left: 32%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        left: 36%;
+        transform: translate(-50%, -36%);
     }
 
     .dasboard-container {
@@ -780,7 +788,25 @@ circle {
     }
 
     .booking-upcoming {
-        grid-template-columns: 30% 30% 36%;
+        /* grid-template-columns: 30% 30% 36%; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .booking-status .item {
+        width: 116%;
+        margin-left: -8%;
+    }
+
+    /* each item takes 48% width so 2 can fit in one row */
+    .booking-upcoming>* {
+        flex: 1;
+    }
+
+    /* force item 2 to appear last (in second row) */
+    .booking-upcoming> :nth-child(2) {
+        order: 3;
     }
 
     .upcoming-trips .item {
@@ -802,17 +828,6 @@ circle {
         padding: 12px;
     }
 
-    /* .upcoming-trips .item .flex-shring-no {
-        width: 100%;
-    }
-
-    .upcoming-trips .item .flex-shring-no img {
-        width: 100%;
-    }
-
-    .chart .right {
-        flex: 1;
-    } */
 
     .chart .right #barChart {
         height: 100% !important;
@@ -825,11 +840,99 @@ circle {
         grid-template-columns: 1fr;
     }
 
+    .filter-header .search-input {
+        display: none;
+    }
+
+    .common-table-1-wrapper {
+        overflow-x: auto;
+    }
+
+    .filter-header .mobile-show {
+        display: block;
+    }
+
+    .filter-header .search-input,
+    .filter-header .reset-btn {
+        display: none;
+    }
+
+    .filter-header .reset-btn-m,
+    .filter-header .search-input-m {
+        display: flex;
+    }
+
+
+    .sidebar .bottom nav .item {
+        font-size: var(--fs-sm);
+    }
+
+    .common-table-1-wrapper table {
+        min-width: 600px;
+        width: 100%;
+    }
 
 }
 
-@media (max-width:991px) {}
+@media (max-width:1084px) {
+    .chart.my-grid-350-remain {
+        grid-template-columns: 1fr;
+    }
 
+    .circle-chart {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .circle-chart {
+        position: relative;
+        width: 350px;
+        height: 340px;
+        margin-top: -45px;
+    }
+
+    #dountChart {
+        max-width: 340px;
+        max-height: 340px;
+        display: block;
+        box-sizing: border-box;
+        height: 340px;
+        width: 339px;
+    }
+
+    #barChart {
+        width: 100% !important;
+    }
+
+
+    .t-for-work-table {
+        max-width: 555px;
+    }
+}
+
+
+@media (max-width:991px) {
+    header .header-top .right .other-btns .item {
+        padding: 10px 8px;
+    }
+
+    header .header-top .become-supplier-btn {
+        display: none;
+    }
+
+    .total-points {
+        width: 160px;
+    }
+
+    .booking-status {
+        margin: 0;
+    }
+
+    .booking-status .item {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
 
 
 
@@ -1063,6 +1166,7 @@ circle {
     .booking-upcoming {
         grid-template-columns: 1fr;
         gap: 0;
+        display: grid;
     }
 
     .booking-status {
