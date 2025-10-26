@@ -4,239 +4,146 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Welcome Page</title>
+        <title>Responsive VW Website</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+            :root {
+                --container-width: 83.33%;
+                --section-gap: clamp(20px, 5vw, 80px);
             }
 
             body {
-                font-family: 'Poppins', sans-serif;
-                height: 100vh;
-                background: radial-gradient(circle at top left, #1a1a2e, #0f2027);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                color: #fff;
+                font-family: Arial, sans-serif;
+                font-size: clamp(14px, 1vw, 20px);
+                margin: 0;
+                color: #222;
             }
 
-            /* Floating background orbs */
-            .orb {
-                position: absolute;
-                border-radius: 50%;
-                filter: blur(80px);
-                opacity: 0.6;
-                animation: float 12s infinite ease-in-out alternate;
+            .container {
+                width: var(--container-width);
+                margin: 0 auto;
             }
 
-            .orb1 {
-                width: 300px;
-                height: 300px;
-                background: #007bff;
-                top: 10%;
-                left: 10%;
+            header {
+                background: gainsboro;
+                padding: clamp(10px, 2vw, 30px);
             }
 
-            .orb2 {
-                width: 400px;
-                height: 400px;
-                background: #00ff99;
-                bottom: 10%;
-                right: 10%;
-                animation-delay: 2s;
-            }
-
-            @keyframes float {
-                from {
-                    transform: translateY(0);
-                }
-
-                to {
-                    transform: translateY(-40px);
-                }
-            }
-
-            /* 3D glass card */
-            .welcome-card {
-                position: relative;
-                z-index: 2;
-                background: rgba(255, 255, 255, 0.08);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(255, 255, 255, 0.15);
-                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-                border-radius: 25px;
-                padding: 60px;
-                width: 850px;
+            header .wrapper {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                transform-style: preserve-3d;
-                animation: cardEnter 1.2s ease forwards;
-                transform: translateY(40px) scale(0.95);
-                opacity: 0;
+                gap: clamp(20px, 4vw, 80px);
             }
 
-            @keyframes cardEnter {
-                to {
-                    transform: translateY(0) scale(1);
-                    opacity: 1;
-                }
+            .logo img {
+                width: clamp(80px, 10vw, 160px);
+                height: auto;
             }
 
-            .welcome-left {
-                max-width: 55%;
-            }
-
-            .welcome-left h1 {
-                font-size: 2.8rem;
-                font-weight: 700;
-                margin-bottom: 15px;
-                background: linear-gradient(90deg, #00e5ff, #00ff99);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .welcome-left p {
-                font-size: 1.05rem;
-                color: #ccc;
-                line-height: 1.8;
-            }
-
-            .welcome-right {
+            nav ul {
                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-                transform: translateZ(40px);
+                gap: clamp(12px, 2vw, 40px);
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
 
-            .btn {
-                padding: 14px 28px;
-                font-size: 1rem;
-                border: none;
-                border-radius: 12px;
-                cursor: pointer;
-                font-weight: 600;
-                color: #fff;
-                letter-spacing: 0.5px;
-                transition: all 0.3s ease;
+            nav ul li a {
+                text-decoration: none;
+                color: #000;
+                font-size: clamp(14px, 1.2vw, 20px);
             }
 
-            .browse-btn {
-                background: linear-gradient(135deg, #007bff, #00c6ff);
-                box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+            section {
+                padding: var(--section-gap) 0;
             }
 
-            .browse-btn:hover {
-                transform: translateY(-4px) scale(1.05);
-                box-shadow: 0 12px 35px rgba(0, 123, 255, 0.8);
+            .hero {
+                text-align: center;
             }
 
-            .dashboard-btn {
-                background: linear-gradient(135deg, #00ff99, #00e5ff);
-                box-shadow: 0 8px 25px rgba(0, 255, 153, 0.4);
+            .hero h1 {
+                font-size: clamp(24px, 4vw, 64px);
             }
 
-            .dashboard-btn:hover {
-                transform: translateY(-4px) scale(1.05);
-                box-shadow: 0 12px 35px rgba(0, 255, 153, 0.7);
+            .hero p {
+                font-size: clamp(14px, 1.2vw, 22px);
             }
 
-            /* Soft glow ring */
-            .glow-ring {
-                position: absolute;
-                top: -120px;
-                left: -120px;
-                width: 300px;
-                height: 300px;
-                border-radius: 50%;
-                background: radial-gradient(circle, rgba(0, 255, 153, 0.4), transparent 70%);
-                filter: blur(30px);
-                animation: spin 22s linear infinite;
-                z-index: 1;
+            footer {
+                text-align: center;
+                padding: clamp(10px, 2vw, 40px);
+                background: #eee;
+                font-size: clamp(12px, 1vw, 18px);
             }
 
-            @keyframes spin {
-                from {
-                    transform: rotate(0deg);
-                }
-
-                to {
-                    transform: rotate(360deg);
-                }
+            .container.carts-area {
+                margin-right: 0;
+                width: calc(100% - 8.34%);
             }
 
-            /* Responsive layout */
-            @media (max-width: 768px) {
-                .welcome-card {
-                    flex-direction: column;
-                    padding: 40px 30px;
-                    width: 90%;
-                    text-align: center;
-                }
+            .carts {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr .5fr;
+                gap: 12px;
+                background-color: rgb(217, 212, 212);
+                padding: 22px;
+            }
 
-                .welcome-left {
-                    max-width: 100%;
-                    margin-bottom: 30px;
-                }
-
-                .welcome-right {
-                    align-items: center;
-                }
-
-                .btn {
-                    width: 80%;
-                    text-align: center;
-                }
-
-                .glow-ring {
-                    display: none;
-                }
+            .cart {
+                background-color: orange;
+                padding: 24px;
             }
         </style>
     </head>
 
     <body>
-
-        <!-- Glowing Orbs -->
-        <div class="orb orb1"></div>
-        <div class="orb orb2"></div>
-
-        <!-- Card Glow -->
-        <div class="glow-ring"></div>
-
-        <!-- Welcome Card -->
-        <div class="welcome-card">
-            <div class="welcome-left">
-                <h1>Welcome Back, Tanvir!</h1>
-                <p>
-                    You’ve successfully logged in 🎉
-                    Continue exploring your favorite sections or head over to your dashboard
-                    to see your latest updates, stats, and insights.
-                </p>
+        <header>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="logo">
+                        <img src="https://www.triprex-app.egenslab.com/assets/logo/logo-1735801496-1742967474.svg"
+                            alt="Logo">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
+        </header>
 
-            <div class="welcome-right">
-                <button class="btn browse-btn">🌐 Continue Browsing</button>
-                <button class="btn dashboard-btn">📊 Go to Dashboard</button>
+        <section>
+            <div class="container">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus tenetur eius pariatur numquam
+                maxime, id ipsum consequuntur possimus, nihil, ea ipsa blanditiis veniam! Impedit sunt, repudiandae
+                dignissimos nam vitae architecto.
             </div>
-        </div>
+        </section>
 
-        <script>
-            document.querySelector('.browse-btn').addEventListener('click', () => {
-                window.location.href = '/browse.html';
-            });
+        <section class="hero container">
+            <h1>Welcome to My Responsive VW Website</h1>
+            <p>This layout automatically scales with your screen width — no media queries needed!</p>
+        </section>
 
-            document.querySelector('.dashboard-btn').addEventListener('click', () => {
-                window.location.href = '/dashboard.html';
-            });
-        </script>
+        <section>
+            <div class="container carts-area">
+                <div class="carts">
+                    <div class="cart"> 1 </div>
+                    <div class="cart">2 </div>
+                    <div class="cart"> 3</div>
+                    <div class="cart"> 4</div>
+                </div>
+            </div>
+        </section>
 
+        <footer>
+            &copy; 2025 My Website
+        </footer>
     </body>
 
 </html>

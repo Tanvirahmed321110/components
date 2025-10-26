@@ -97,12 +97,13 @@ aside.sidebar {
     position: relative;
     min-height: 100dvh;
     /* border-right: 8px solid var(--my-white); */
+    /* position: sticky; */
 }
 
 .aside-wrapper {
     /* position: sticky; */
-    /* top: 125px; */
-    /* height: calc(100dvh - 125px); */
+    top: 125px;
+    height: calc(100dvh - 125px);
     display: flex;
     flex-direction: column;
     height: 100%;

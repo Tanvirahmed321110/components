@@ -387,68 +387,6 @@ tr {
 
 
 
-.section-margin {
-    margin-top: 96px;
-}
-
-/*******   All  Title   ******/
-.banner-title {
-    font-size: var(--fs-xxxl);
-    font-weight: var(--fw-600);
-    line-height: var(--line-height-xxxl);
-    letter-spacing: -3%;
-}
-
-.section-title {
-    font-size: var(--fs-xxl);
-    font-weight: var(--fw-600);
-    line-height: var(--line-height-xxl);
-    letter-spacing: -2%;
-    color: var(--my-text-primary);
-}
-
-.section-sub-title {
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-400);
-    line-height: var(--line-height-xl);
-    color: var(--my-text-tertiary);
-}
-
-.cart-title {
-    font-size: var(--fs-lg);
-    font-weight: var(--fw-600);
-    line-height: var(--line-height-lg);
-    color: var(--my-text-primary);
-}
-
-.cart-sub-title {
-    font-size: var(--fs-md);
-    font-weight: var(--fw-600);
-    line-height: var(--line-height-md);
-    color: var(--my-text-primary);
-}
-
-.title-sm {
-    font-size: var(--fs-sm);
-    line-height: var(--line-height-sm);
-    color: var(--my-text-primary);
-    font-weight: var(--fw-600);
-}
-
-.description {
-    font-size: var(--fs-md);
-    line-height: var(--line-height-md);
-    color: var(--my-text-tertiary);
-    font-weight: var(--fw-400);
-}
-
-.description-sm {
-    font-size: var(--fs-sm);
-    line-height: var(--line-height-sm);
-    color: var(--my-text-tertiary);
-    font-weight: var(--fw-400);
-}
-
 
 .overflow-hidden {
     overflow: hidden;
@@ -4508,6 +4446,14 @@ tr {
 .my-gap-25 {
     gap: 3.125rem;
 }
+
+
+
+.my-gap-30 {
+    gap: 3.75rem;
+    /* 60px */
+}
+
 
 /* 50px */
 
