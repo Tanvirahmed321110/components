@@ -494,7 +494,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    // For Button Ripple
+    // function rippleF() {
+    //     const buttons = document.querySelectorAll('.my-btn');
 
+    //     if (buttons) {
+    //         buttons.forEach(btn => {
+    //             btn.addEventListener('click', function (e) {
+    //                 const rect = e.currentTarget.getBoundingClientRect();
+    //                 const x = e.clientX - rect.left;
+    //                 const y = e.clientY - rect.top;
+
+    //                 const ripple = document.createElement('span');
+    //                 ripple.classList.add('ripple');
+
+    //                 // 🔹 ripple size fixed to 60px (small bubble)
+    //                 const size = 60;
+    //                 ripple.style.width = ripple.style.height = `${size}px`;
+    //                 ripple.style.left = `${x - size / 2}px`;
+    //                 ripple.style.top = `${y - size / 2}px`;
+
+    //                 this.appendChild(ripple);
+
+    //                 ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+
+    //                 if (this.getAttribute('href') === '#') e.preventDefault();
+    //             });
+    //         });
+    //     }
+    // }
+    // rippleF()
 
 
 

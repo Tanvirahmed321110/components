@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Small Ripple Button</title>
+        <style>
+            body {
+                min-height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #f3f4f6;
+                font-family: "Roboto", sans-serif;
+            }
+
+            .my-btn {
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+                padding: 14px 28px;
+                background: #fc5a31;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 10px;
+                font-size: 18px;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                transition: transform 0.1s ease;
+            }
+
+            .my-btn:active {
+                transform: scale(0.98);
+            }
+
+            .my-btn .ripple {
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0);
+                pointer-events: none;
+                background: rgba(255, 255, 255, 0.6);
+                animation: ripple 0.4s ease-out;
+            }
+
+            @keyframes ripple {
+                to {
+                    transform: scale(1.5);
+                    /* 🔹 smaller expansion */
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <a href="#" class="my-btn">CLICK ME</a>
+
+        <script>
+            const buttons = document.querySelectorAll('.my-btn');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+
+                    // 🔹 ripple size fixed to 60px (small bubble)
+                    const size = 60;
+                    ripple.style.width = ripple.style.height = `${size}px`;
+                    ripple.style.left = `${x - size / 2}px`;
+                    ripple.style.top = `${y - size / 2}px`;
+
+                    this.appendChild(ripple);
+
+                    ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+
+                    if (this.getAttribute('href') === '#') e.preventDefault();
+                });
+            });
+        </script>
+    </body>
+
+</html>

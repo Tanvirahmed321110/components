@@ -2,148 +2,151 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Responsive VW Website</title>
-        <style>
-            :root {
-                --container-width: 83.33%;
-                --section-gap: clamp(20px, 5vw, 80px);
-            }
-
-            body {
-                font-family: Arial, sans-serif;
-                font-size: clamp(14px, 1vw, 20px);
-                margin: 0;
-                color: #222;
-            }
-
-            .container {
-                width: var(--container-width);
-                margin: 0 auto;
-            }
-
-            header {
-                background: gainsboro;
-                padding: clamp(10px, 2vw, 30px);
-            }
-
-            header .wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: clamp(20px, 4vw, 80px);
-            }
-
-            .logo img {
-                width: clamp(80px, 10vw, 160px);
-                height: auto;
-            }
-
-            nav ul {
-                display: flex;
-                gap: clamp(12px, 2vw, 40px);
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            nav ul li a {
-                text-decoration: none;
-                color: #000;
-                font-size: clamp(14px, 1.2vw, 20px);
-            }
-
-            section {
-                padding: var(--section-gap) 0;
-            }
-
-            .hero {
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: clamp(24px, 4vw, 64px);
-            }
-
-            .hero p {
-                font-size: clamp(14px, 1.2vw, 22px);
-            }
-
-            footer {
-                text-align: center;
-                padding: clamp(10px, 2vw, 40px);
-                background: #eee;
-                font-size: clamp(12px, 1vw, 18px);
-            }
-
-            .container.carts-area {
-                margin-right: 0;
-                width: calc(100% - 8.34%);
-            }
-
-            .carts {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr .5fr;
-                gap: 12px;
-                background-color: rgb(217, 212, 212);
-                padding: 22px;
-            }
-
-            .cart {
-                background-color: orange;
-                padding: 24px;
-            }
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
     </head>
 
     <body>
-        <header>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="logo">
-                        <img src="https://www.triprex-app.egenslab.com/assets/logo/logo-1735801496-1742967474.svg"
-                            alt="Logo">
+
+        <!--
+        ===============================================
+        =======||   Hero Section2  Start Here   ||======
+        ===============================================
+        -->
+        <section>
+            <div class="g-hero-2">
+                <div class="my-container">
+                    <div class="g-hero-2-area">
+
+                        <!--==================||   Slider Top Start Here   ||==================-->
+                        <div class="slider-top">
+                            <div class="swiper mySwiper top">
+                                <div class="swiper-wrapper">
+
+                                    <!-- single slider item -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./static/images/top-slider-1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- single slider item -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./static/images/top-slider-1.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <!-- single slider item -->
+                                    <div class="swiper-slide">Slide 2</div>
+
+                                    <!-- single slider item -->
+                                    <div class="swiper-slide">Slide 3</div>
+                                </div>
+
+                                <!--=====  Navigation buttons  ====-->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+
+                        <!--==================||   Slider Bottom Start Here   ||==================-->
+                        <div class="slider-bottom">
+                            <div class="swiper mySwiper bottom">
+                                <div class="swiper-wrapper">
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (3).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (2).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">China</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (1).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">Mariachi</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (3).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (1).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (3).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (1).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- single item -->
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="./static/images/bottom-slider (2).png" alt="">
+                                            </a>
+                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--=====  Pagination  =====-->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
                     </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <section>
-            <div class="container">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus tenetur eius pariatur numquam
-                maxime, id ipsum consequuntur possimus, nihil, ea ipsa blanditiis veniam! Impedit sunt, repudiandae
-                dignissimos nam vitae architecto.
-            </div>
-        </section>
-
-        <section class="hero container">
-            <h1>Welcome to My Responsive VW Website</h1>
-            <p>This layout automatically scales with your screen width — no media queries needed!</p>
-        </section>
-
-        <section>
-            <div class="container carts-area">
-                <div class="carts">
-                    <div class="cart"> 1 </div>
-                    <div class="cart">2 </div>
-                    <div class="cart"> 3</div>
-                    <div class="cart"> 4</div>
                 </div>
             </div>
         </section>
 
-        <footer>
-            &copy; 2025 My Website
-        </footer>
     </body>
 
 </html>

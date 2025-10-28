@@ -449,20 +449,23 @@
     justify-content: center;
     font-weight: var(--fw-600);
     font-family: inherit;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     transition: .3s linear;
     gap: 8px;
     font-size: var(--fs-md);
     line-height: var(--line-height-sm);
     border: 3px solid;
-    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0px 1.48px 2.96px 0px #0A0D120D;
-    box-shadow: 0px -2.96px 0px 0px #0A0D120D inset;
-    box-shadow: 0px 0px 0px 1.48px #0A0D120D inset;
     box-sizing: border-box;
     width: fit-content;
     text-wrap: nowrap;
 }
+
+.my-btn:active {
+    transform: scale(.97);
+}
+
+
+
 
 
 .my-btn.my-btn-sm i {
@@ -521,7 +524,7 @@
 }
 
 .my-primary-btn:hover {
-    background-color: var(--my-secondary-color);
+    /* background-color: var(--my-secondary-color); */
 }
 
 .my-btn.fs-sm {
@@ -538,7 +541,7 @@
 }
 
 .my-secondary-btn:hover {
-    background-color: var(--my-primary-color);
+    /* background-color: var(--my-primary-color); */
 }
 
 
@@ -568,11 +571,18 @@
 /*_______________________________*\
   ||     Input  Start Here     ||
 \*_______________________________*/
+input {
+    font-family: inherit !important;
+}
+
+button {
+    font-family: inherit !important
+}
+
 .my-input-control {
     position: relative;
     width: 100%;
     max-width: 540px;
-    margin: 5px 0;
 }
 
 .my-input-control.full-width {

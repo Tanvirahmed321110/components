@@ -2817,20 +2817,22 @@
                         <div class="inner">
                             <!--==================||   For Background Image   ||==================-->
                             <div class="g-hero-banner-img">
-                                <img src="./static/images/g-banner-img.png" alt="Banner Image">
+                                <!-- For Banner Image -->
+                                <!-- <img src="./static/images/lake-6830149_1280.jpg" alt="Banner Image"> -->
+
+                                <!-- for video -->
+                                <div class="banner-video">
+                                    <video autoplay loop muted playsinline
+                                        src="./static/images/videos/banner-video2.mp4"></video>
+                                </div>
 
                                 <div>
                                     <div class="bottom-search">
                                         <!--=========||   For Background Image   ||========-->
                                         <div class="tab-container">
                                             <!-- Left Arrow -->
-                                            <button class="scroll-btn left show-left"><svg width="10" height="10"
-                                                    viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M8.75 4.84973H1.25M1.25 4.84973L5 1.09973M1.25 4.84973L5 8.59973"
-                                                        stroke="#717680" stroke-width="1.07143" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
+                                            <button class="scroll-btn left show-left">
+                                                <i class="ri-arrow-left-line"></i>
                                             </button>
 
                                             <div class="tab-wrapper">
@@ -2954,13 +2956,7 @@
                                             </div>
                                             <!-- Right Arrow -->
                                             <button class="scroll-btn right">
-                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M1.25 4.84973H8.75M8.75 4.84973L5 1.09973M8.75 4.84973L5 8.59973"
-                                                        stroke="#717680" stroke-width="1.07143" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
+                                                <i class="ri-arrow-right-line"></i>
                                             </button>
                                         </div>
 
@@ -2971,28 +2967,29 @@
                                              -->
                                             <form action="#"
                                                 class="my-d-flex active my-gap-5 search-group my-align-center my-justify-between">
-                                                <div class="my-input-control big">
+                                                <div class="my-input-control big flex-1">
                                                     <label for="Destination">Destination</label>
-                                                    <input type="text" value="Cox's Bazar">
-                                                </div>
-                                                <div class="my-d-flex my-gap-5 small my-align-center">
-                                                    <div class="my-input-control">
-                                                        <label for="">Check in</label>
-                                                        <input type="date">
-                                                    </div>
-                                                    <div class="my-input-control">
-                                                        <label for="">Stay</label>
-                                                        <input type="date">
-                                                    </div>
+                                                    <input type="text"
+                                                        value="City, airport, region, landmark or property">
                                                 </div>
                                                 <div class="my-input-control">
-                                                    <label for="">Check out</label>
+                                                    <label for="">Check in</label>
                                                     <input type="date">
                                                 </div>
                                                 <div class="my-input-control">
-                                                    <label for="">Room & Guests</label>
-                                                    <input type="text">
+                                                    <label for="">Stay</label>
+                                                    <input type="date">
                                                 </div>
+                                                <div class="my-input-control ">
+                                                    <label for="3">Check out</label>
+                                                    <input type="date">
+                                                </div>
+                                                <button class="my-btn my-secondary-btn ">
+                                                    <span class="content">
+                                                        Search
+                                                    </span>
+                                                </button>
+
                                             </form>
 
                                             <!--========||   For Activites   ||========-->
@@ -3016,9 +3013,8 @@
                                                     <label for="">Check out</label>
                                                     <input type="date">
                                                 </div>
-                                                <div class="my-input-control">
-                                                    <label for="">Room & Guests</label>
-                                                    <input type="text">
+                                                <div>
+                                                    <button>Search</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -3028,7 +3024,7 @@
                         </div>
 
                         <!--=====  Search Button  =====-->
-                        <div class="search-btn">
+                        <!-- <div class="search-btn">
                             <button class="my-btn my-gap-2 my-primary-btn"><svg width="17" height="18"
                                     viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -3037,7 +3033,7 @@
                                         stroke-linejoin="round" />
                                 </svg>
                                 Search</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -3047,137 +3043,213 @@
 
         <!--
         ===============================================
-        =======||   Hero Section2  Start Here   ||======
+        =======||   Hero Section1  Start Here   ||======
         ===============================================
         -->
         <section>
-            <div class="g-hero-2">
-                <div class="my-container">
-                    <div class="g-hero-2-area">
+            <div class="my-container">
+                <div class="offer-sec">
 
-                        <!--==================||   Slider Top Start Here   ||==================-->
-                        <div class="slider-top">
-                            <div class="swiper mySwiper top">
-                                <div class="swiper-wrapper">
 
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <img src="./static/images/top-slider-1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <img src="./static/images/top-slider-1.png" alt="">
-                                        </a>
-                                    </div>
-
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">Slide 2</div>
-
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">Slide 3</div>
-                                </div>
-
-                                <!--=====  Navigation buttons  ====-->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                    <div class="left-btns">
+                        <div class="my-px-12">
+                            <!-- all Offer btns -->
+                            <div class="item active">
+                                <span>ALL OFFER </span>
+                                <span class="icon">
+                                    <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    </sp>
                             </div>
                         </div>
 
 
-                        <!--==================||   Slider Bottom Start Here   ||==================-->
-                        <div class="slider-bottom">
-                            <div class="swiper mySwiper bottom">
-                                <div class="swiper-wrapper">
+                        <ul class="bottom-btns">
+                            <li class="item ">
+                                <span>Tours </span> <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </li>
+                            <li class="item ">
+                                <span>Flight </span> <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </li>
+                            <li class="item ">
+                                <span>Cars </span> <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </li>
+                            <li class="item ">
+                                <span>Activites </span> <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </li>
+                            <li class="item ">
+                                <span>Food </span> <svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 13.75L6.20536 7.25L0.75 0.75" stroke="#FC5A31" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
 
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
+
+                    <div class="right my-grid-2 my-gap-10">
+                        <!--================||  Left Offer ||================-->
+                        <div class="left-offer my-flex-column my-gap-12">
+                            <div class="top ">
+
+                                <!-- Offer Cart -->
+                                <div class="offer-cart">
+                                    <div class="img-wrapper">
+                                        <img src="./static/images/offer (1).jpg" alt="offer image" loading="lazy">
+                                        <!-- Content -->
+                                        <div class="content">
+                                            <div class="tag">-15%</div>
+                                            <div class="bottom-area">
+                                                <div class="bottom ">
+                                                    <div class="title">Mountain</div>
+                                                    <div class="my-d-flex my-align-center my-gap-3 my-mt-3">
+                                                        <div class="rating my-d-flex my-align-center my-fs-xs">
+                                                            <span class="star">
+                                                                <i class="ri-star-fill"></i>
+                                                                4.5
+                                                            </span>
+                                                            <span class="my-text-border">- 50k+
+                                                                Booked</span>
+                                                        </div>
+                                                        <button
+                                                            class="my-bg-secondary my-radius-pill my-px-5 my-py-2 my-fs-low my-text-white my-d-flex my-gap-2 my-align-center">
+                                                            <span class="my-fs-sm"><i
+                                                                    class="ri-calendar-2-line"></i></span>
+                                                            Book
+                                                            Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (2).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">China</h5>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
 
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">Mariachi</h5>
-                                        </div>
-                                    </div>
 
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
-                                        </div>
-                                    </div>
+                            <!--============ Left Offer Bottom ============-->
+                            <div class="my-grid-2 my-gap-12 bottom">
 
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (2).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
+                                <!-- single cart -->
+                                <div class="offer-cart sm">
+                                    <div class="img-wrapper">
+                                        <img src="./static/images/offer (3).jpg" alt="offer image" loading="lazy">
+                                        <!-- Content -->
+                                        <div class="content">
+                                            <div class="tag">-15%</div>
+                                            <div class="bottom-area">
+                                                <div class="bottom ">
+                                                    <div class="title">Mountain</div>
+                                                    <div class="my-d-flex my-align-center my-gap-3 my-mt-3">
+                                                        <div class="rating my-d-flex my-align-center my-fs-low">
+                                                            <span class="star">
+                                                                <i class="ri-star-fill"></i>
+                                                                4.5
+                                                            </span>
+                                                            <span class="my-text-border">- 50k+
+                                                                Booked</span>
+                                                        </div>
+                                                        <button
+                                                            class="my-bg-secondary my-radius-pill my-px-5 my-py-2 my-fs-low my-text-white my-d-flex my-gap-2 my-align-center">
+                                                            <span class="my-fs-sm"><i
+                                                                    class="ri-calendar-2-line"></i></span>
+                                                            Book
+                                                            Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!--=====  Pagination  =====-->
-                                <div class="swiper-pagination"></div>
+                                <!-- single cart -->
+                                <div class="offer-cart sm">
+                                    <div class="img-wrapper">
+                                        <img src="./static/images/offer (2).jpg" alt="offer image" loading="lazy">
+                                        <!-- Content -->
+                                        <div class="content">
+                                            <div class="tag">-15%</div>
+                                            <div class="bottom-area">
+                                                <div class="bottom ">
+                                                    <div class="title">River, Nepal</div>
+                                                    <div class="my-d-flex my-align-center my-gap-3 my-mt-3">
+                                                        <div class="rating my-d-flex my-align-center my-fs-low">
+                                                            <span class="star">
+                                                                <i class="ri-star-fill"></i>
+                                                                4.5
+                                                            </span>
+                                                            <span class="my-text-border">- 50k+
+                                                                Booked</span>
+                                                        </div>
+                                                        <button
+                                                            class="my-bg-secondary my-radius-pill my-px-5 my-py-2 my-fs-low my-text-white my-d-flex my-gap-2 my-align-center">
+                                                            <span class="my-fs-sm"><i
+                                                                    class="ri-calendar-2-line"></i></span>
+                                                            Book
+                                                            Now</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        <!--================||  Right Offer  ||================-->
+                        <div class="right-offer">
+                            <!-- Offer Cart -->
+                            <div class="offer-cart full">
+                                <div class="img-wrapper">
+                                    <img src="./static/images/offer (1).png" alt="offer image" loading="lazy">
+                                    <!-- Content -->
+                                    <div class="content">
+                                        <div class="tag">-15%</div>
+                                        <div class="bottom-area">
+                                            <div class="bottom ">
+                                                <div class="title">Chicago, USA City</div>
+                                                <div class="my-d-flex my-align-center my-gap-3 my-mt-3">
+                                                    <div class="rating my-d-flex my-align-center my-fs-xs">
+                                                        <span class="star">
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </span>
+                                                        <span class="my-text-border">- 50k+
+                                                            Booked</span>
+                                                    </div>
+                                                    <button
+                                                        class="my-bg-secondary my-radius-pill my-px-5 my-py-2 my-fs-low my-text-white my-d-flex my-gap-2 my-align-center">
+                                                        <span class="my-fs-sm"><i class="ri-calendar-2-line"></i></span>
+                                                        Book
+                                                        Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

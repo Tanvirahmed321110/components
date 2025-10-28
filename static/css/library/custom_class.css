@@ -117,14 +117,8 @@ button {
 }
 
 
-/* When active button */
-button:active {
-    transform: translateY(-2px);
-}
 
-a.my-btn:active {
-    transform: translateY(-2px);
-}
+
 
 
 p {
@@ -224,10 +218,6 @@ tr {
     padding: 0px 0px;
     margin: 0px auto;
     width: 83.33%;
-}
-
-.my-container-sm {
-    max-width: 1000px;
 }
 
 
@@ -2253,6 +2243,10 @@ tr {
 
 .my-text-white-off {
     color: var(--my-white-off);
+}
+
+.my-text-border {
+    color: var(--my-border-primary);
 }
 
 .my-text-secondary {

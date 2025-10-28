@@ -10,6 +10,7 @@
     --my-secondary-color: #FC5A31;
 
     --my-white: #FFFFFF;
+    --white-20: #FFFFFF33;
     --my-bg-dark: #000;
     --my-bg-primary: #FFF;
     --my-bg-secondary: #FAFAFA;
@@ -31,7 +32,6 @@
     --my-white-off: #f1f1f1;
     --my-white-off2: #e0e0e0;
     --my-border-off: #f1f1f1;
-    --my-border-color: #E9D7FE;
     --my-border-color: #D5D7DA;
 
     --my-text-primary: #181D27;
@@ -43,11 +43,18 @@
     --my-text-rating: #FFBE0B;
     --my-text-warring: #FDB022;
     --my-text-white-off2: #ededed;
+    --input-text: #414651CC;
+
+
+
+    /* text color new */
+    --text-quaternary: #6A6A6A;
 
     /* For Border color */
     --my-border-primary: #D5D7DA;
     --my-border-secondary: #E9EAEB;
     --my-border-gray: #A4A7AE;
+    --my-border-off: #E9E9E9;
 
 
     /* Break Point */
@@ -122,27 +129,26 @@
     /* ________ Gradient ________ */
     --gradient-login: linear-gradient(to right, #173e57c9, #919fa7d6);
 
+    --n-shadow-1: -5px 5px 10px rgba(0, 0, 0, 0.1);
 
-    --shadow-sm:
-        0px 1px 2px 0px #afafaf0a;
+
+    --shadow-sm: 0px 1px 2px 0px #afafaf0a;
 
     /* Medium shadow */
-    --shadow-md:
-        0px 1px 3px 0px #0A0D120A,
+    --shadow-md: 0px 1px 3px 0px #0A0D120A,
         0px 4px 6px -1px #0A0D120A;
-    --shadow-lg: 0px 2px 2px -1px #0A0D120A, 0px 4px 6px -2px #0A0D1208, 0px 12px 16px -4px #0a0d1221;
-    --shadow-all-sm:
-        0 0 4px rgba(0, 0, 0, 0.04),
+    --shadow-lg: 0px 2px 2px -1px #0A0D120A,
+        0px 4px 6px -2px #0A0D1208,
+        0px 12px 16px -4px #0a0d1221;
+    --shadow-all-sm: 0 0 4px rgba(0, 0, 0, 0.04),
         0 0 5px rgba(0, 0, 0, 0.05);
 
     /* Medium */
-    --shadow-all-md:
-        0 0 6px rgba(0, 0, 0, 0.08),
+    --shadow-all-md: 0 0 6px rgba(0, 0, 0, 0.08),
         0 0 12px rgba(0, 0, 0, 0.12);
 
     /* Large */
-    --shadow-all-lg:
-        0 0 6px rgba(0, 0, 0, 0.08),
+    --shadow-all-lg: 0 0 6px rgba(0, 0, 0, 0.08),
         0 0 12px rgba(0, 0, 0, 0.12),
         0 0 20px rgba(0, 0, 0, 0.216);
 
@@ -282,7 +288,7 @@
 */
 header {
     background-color: var(--my-white);
-    padding: 0px 0px 16px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 
@@ -304,6 +310,7 @@ header .header-top .search-input {
 
 header .header-top .search-input input {
     border-radius: var(--radius-lg);
+    border-color: var(--my-border-secondary);
 }
 
 header .header-top .click-dropdown-btn {
@@ -725,7 +732,6 @@ footer .footer-top .footer-nav-item::after {
 
 
 footer .footer-top .footer-nav-item:hover::after {
-
     transform: scale(1);
 }
 
