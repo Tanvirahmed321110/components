@@ -218,13 +218,26 @@
 }
 
 
+
+
+/*
+==============================================
+=====||   Banner Section Start Here    ||=====
+==============================================
+*/
 .offer-sec {
     display: grid;
     grid-template-columns: .5fr 2fr;
     gap: 24px;
-
 }
 
+.offer-sec .tab-contents {
+    margin-top: 0;
+}
+
+/*
+======  Left Buttons  ======
+*/
 .offer-sec .left-btns {
     height: 100%;
     border: 1px solid var(--my-border-off);
@@ -233,6 +246,18 @@
     padding-top: 29px;
     overflow: hidden;
 }
+
+.offer-sec .bottom-btns {
+    overflow-y: scroll;
+}
+
+.offer-sec .bottom-btns {
+    max-height: 310px;
+    overflow-y: auto;
+}
+
+
+
 
 .offer-sec .bottom-btns .item {
     border-bottom: 1px solid var(--my-border-off);
@@ -246,10 +271,58 @@
     font-weight: var(--fw-600);
     color: var(--text-quaternary);
     cursor: pointer;
-    padding-left: 40px;
-    padding-top: 16px;
-    padding-bottom: 12px;
+    padding-left: 12px;
+    height: 44px;
+    min-height: 44px;
+    width: 100%;
+    font-size: var(--fs-md);
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    transition: .2s linear;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    margin-bottom: 4px;
+    user-select: none;
+    /* width: 190px; */
 }
+
+
+/*
+======  Left Button After  ======
+*/
+.offer-sec .left-btns .item::before,
+.offer-sec .left-btns .item.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--my-secondary-color);
+    transition: left 0.36s ease;
+    z-index: 0;
+}
+
+.offer-sec .left-btns .item.active::before {
+    background-color: var(--my-primary-color);
+}
+
+.offer-sec .left-btns .item:hover::before {
+    left: 0;
+}
+
+.offer-sec .left-btns .item:hover {
+    color: var(--my-white);
+    border-radius: var(--radius-pill);
+}
+
+.offer-sec .left-btns .item>* {
+    position: relative;
+    z-index: 1;
+}
+
 
 .offer-sec .left-btns .item.active {
     background-color: var(--my-secondary-color);
@@ -265,7 +338,15 @@
 
 }
 
-.offer-sec .left-btns .item.active .icon {
+.offer-sec .left-btns .item.active:hover::after {
+    background-color: var(--my-primary-color);
+}
+
+
+/*
+======  Left Button Icon  ======
+*/
+.offer-sec .left-btns .item .icon {
     background-color: var(--my-white);
     width: 48px;
     height: 44px;
@@ -274,6 +355,36 @@
     align-items: center;
     justify-content: center;
     margin-right: -2px;
+    box-shadow: var(--shadow-all-sm);
+    border: 1px solid var(--my-bg-secondary);
+    transition-delay: .3s linear;
+}
+
+.offer-sec .left-btns .item .icon:hover {
+    border-color: var(--my-border-primary);
+    box-shadow: var(--shadow-all-lg);
+}
+
+.offer-sec .left-btns .item .icon:hover svg {
+    animation: moveRight 0.2s ease 0s 2;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    70% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.offer-sec .left-btns .item.active .icon {
     box-shadow: var(--shadow-all-md);
 }
 
@@ -287,9 +398,9 @@
 
 
 
-
-
-
+/*
+===============  Offer Section Right  =================
+*/
 .offer-sec .right {
     height: 100%;
 }
@@ -307,6 +418,9 @@
 }
 
 
+/*
+======  Cart Content  ======
+*/
 .offer-sec .offer-cart .content {
     top: 0px;
     left: 0px;
@@ -336,7 +450,10 @@
     padding: 8px 10px;
 }
 
-/* Bottom Data */
+
+/*
+======  Cart Bottom  ======
+*/
 .offer-sec .offer-cart .bottom {
     border-radius: var(--radius-pill);
     padding: 11px 24px;
@@ -380,47 +497,7 @@
     font-size: 8px;
 }
 
-.my-secondary-btn {
-    position: relative;
-    overflow: hidden;
-}
 
-.my-btn {
-    transition: background 0.3s;
-}
-
-
-
-
-.my-btn::after {
-    content: '';
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    position: absolute;
-    height: 0%;
-    transition: .45s ease;
-    z-index: 1;
-}
-
-.my-btn.my-primary-btn::after {
-    background-color: var(--my-secondary-color);
-}
-
-.my-btn.my-secondary-btn::after {
-    background-color: var(--my-primary-color);
-}
-
-.my-btn .content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-}
-
-.my-secondary-btn:hover::after {
-    height: 100%;
-    top: 0px;
-}
 
 
 .offer-sec .offer-cart .bottom .title {

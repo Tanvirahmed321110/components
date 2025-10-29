@@ -458,12 +458,54 @@
     box-sizing: border-box;
     width: fit-content;
     text-wrap: nowrap;
+    transition: background 0.3s;
 }
 
+button {
+    transition: .2s linear;
+}
+
+button:active,
 .my-btn:active {
     transform: scale(.97);
 }
 
+.my-secondary-btn,
+.my-primary-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.my-btn::after {
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    height: 0%;
+    transition: .45s ease;
+    z-index: 1;
+}
+
+.my-btn.my-primary-btn::after {
+    background-color: var(--my-secondary-color);
+}
+
+.my-btn.my-secondary-btn::after {
+    background-color: var(--my-primary-color);
+}
+
+.my-btn .content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.my-secondary-btn:hover::after {
+    height: 100%;
+    top: 0px;
+}
 
 
 
@@ -1641,15 +1683,20 @@ input::placeholder {
     background-color: var(--my-white-off2);
 }
 
-.my-has-scrollbar::-webkit-scrollbar {
-    /* border-left: 1px solid var(--my-white-off2) !important; */
-}
+
 
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
     background-color: var(--my-bg-white);
 }
 
+.my-has-scrollbar-sm::-webkit-scrollbar-thumb {
+    background-color: var(--my-border-color);
+}
 
+.my-has-scrollbar-sm::-webkit-scrollbar-track {
+    background: transparent;
+    /* or your custom track color */
+}
 
 
 /*______________________________________*\
