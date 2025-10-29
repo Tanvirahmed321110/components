@@ -414,7 +414,7 @@
 }
 
 .offer-sec .offer-cart.full {
-    height: 362px;
+    height: 365px;
 }
 
 
@@ -479,6 +479,7 @@
     background-color: var(--my-secondary-color);
     margin-left: 15px;
     margin-top: 19px;
+    width: fit-content;
 }
 
 .offer-sec .offer-cart.sm {
@@ -527,15 +528,7 @@
     padding: 2px 6px;
 }
 
-.offer-sec .left-offer {
-    border-radius: 22px;
 
-}
-
-.offer-sec .right-offer {
-    background-color: rgb(161, 156, 156);
-    border-radius: 22px;
-}
 
 
 /*
@@ -645,11 +638,6 @@
 }
 
 
-
-
-
-
-
 /*
 =====================================================
 =====||   Recently View Section Start Here    ||=====
@@ -666,8 +654,9 @@
 
 .recently-view .slider-controls,
 .trip-plan-area .slider-controls {
-    position: unset;
-    margin-top: 42px;
+    /* position: unset; */
+    right: 0;
+    top: -74px;
 }
 
 

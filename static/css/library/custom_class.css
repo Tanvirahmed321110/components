@@ -2266,6 +2266,12 @@ tr {
     color: var(--my-text-yellow);
 }
 
+.my-text-primary-80 {
+    color: var(--primary-80);
+}
+
+
+
 /*______  Bg Color ______ */
 .my-bg-none {
     background-color: transparent;
