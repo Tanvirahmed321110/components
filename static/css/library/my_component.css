@@ -559,7 +559,7 @@ button {
 .my-input-control {
     position: relative;
     width: 100%;
-    max-width: 540px;
+    /* max-width: 540px; */
 }
 
 .my-input-control.full-width {
@@ -2310,16 +2310,16 @@ input[type="radio"]:checked::after {
 /*
         <div class="my-p-relative"><div class="base-round">0</div></div>
 */
-.base-round {
+.base {
     position: absolute;
-    right: 0px;
+    right: -2px;
     top: -4px;
     width: 19px;
     height: 17px;
     border-radius: 50%;
     font-size: var(--fs-xs);
     color: var(--my-white);
-    background-color: var(--my-primary-hover-color);
+    background-color: var(--my-secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2599,7 +2599,6 @@ input[type="radio"]:checked::after {
 */
 .my-slider-wrapper {
     position: relative;
-    overflow: hidden;
     position: unset;
 }
 
@@ -2611,6 +2610,7 @@ input[type="radio"]:checked::after {
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow: hidden;
+    padding-left: 4px;
 }
 
 .my-slider .slider-item {
@@ -2625,9 +2625,6 @@ input[type="radio"]:checked::after {
     border-radius: var(--radius-md);
 }
 
-.my-slider .slider-item img {
-    height: 100%;
-}
 
 .my-slider::-webkit-scrollbar {
     display: none;
@@ -3926,6 +3923,15 @@ ___________________________________*/
 .search-input {
     position: relative;
     max-width: 400px;
+}
+
+.search-input input {
+    border-radius: var(--radius-xl);
+}
+
+.search-input input::placeholder {
+    color: var(--my-border-gray);
+    font-weight: 400;
 }
 
 .search-input svg,

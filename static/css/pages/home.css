@@ -660,12 +660,14 @@
 }
 
 .recently-view-area .my-slider,
-.recommendation-area .my-slider {
+.recommendation-area .my-slider,
+.best-deal-area .my-slider {
     padding-bottom: 16px;
 }
 
 .recently-view-area .section-btn-wrapper,
-.recommendation-area .section-btn-wrapper {
+.recommendation-area .section-btn-wrapper,
+.best-deal-area .section-btn-wrapper {
     margin-top: 24px;
 }
 
@@ -697,13 +699,6 @@
 =====||   Best Deal  Section Start Here    ||=====
 ==================================================
 */
-.best-deal .slider-controls {
-    position: unset;
-    margin-top: 32px;
-    padding-bottom: 22px;
-}
-
-
 
 
 
@@ -729,25 +724,16 @@
     padding: 60px 0;
 }
 
+.hot-destination .head .left {
+    max-width: 490px;
+    width: 100%;
+}
+
 .hot-destination .search {
     position: relative;
     width: min(100%, 400px);
 }
 
-.hot-destination .search input {
-    transition: all 0.3s ease;
-    padding: 12px 18px;
-}
-
-.hot-destination .search span {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: var(--my-text-placeholder);
-    transition: color 0.3s ease;
-}
 
 .hot-destination .grid-item .item {
     padding: 12px;
