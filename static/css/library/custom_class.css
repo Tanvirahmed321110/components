@@ -215,10 +215,16 @@ tr {
 
 /*____________  Reused Class  ____________*/
 .my-container,
-.my-container-sm {
+.my-container-sm,
+.my-container-cart {
     padding: 0px 0px;
     margin: 0px auto;
     width: 83.33%;
+}
+
+.my-container-cart {
+    margin-right: 0;
+    width: 91.66%;
 }
 
 
@@ -2256,6 +2262,10 @@ tr {
 
 .my-text-color {
     color: var(--my-text-color);
+}
+
+.my-secondary-color {
+    color: var(--my-secondary-color);
 }
 
 .my-text-gold {

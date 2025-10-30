@@ -655,11 +655,19 @@
 .recently-view .slider-controls,
 .trip-plan-area .slider-controls {
     /* position: unset; */
-    right: 0;
+    right: 9%;
     top: -74px;
 }
 
+.recently-view-area .my-slider,
+.recommendation-area .my-slider {
+    padding-bottom: 16px;
+}
 
+.recently-view-area .section-btn-wrapper,
+.recommendation-area .section-btn-wrapper {
+    margin-top: 24px;
+}
 
 
 
@@ -705,22 +713,6 @@
 =====||   Tending Deal Section Start Here    ||=====
 ====================================================
 */
-.tending {
-    padding-bottom: 100px;
-}
-
-.tending .slider-controls {
-    transform: translateY(-50%);
-    bottom: unset;
-    top: 50%;
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-}
-
-.tending .slider-controls .next {
-    right: 0;
-}
 
 
 

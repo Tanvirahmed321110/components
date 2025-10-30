@@ -2598,20 +2598,19 @@ input[type="radio"]:checked::after {
 ========== tabs =========
 */
 .my-slider-wrapper {
-    /* position: relative;
-    overflow: hidden; */
-    overflow: auto;
-    position: unset !important;
+    position: relative;
+    overflow: hidden;
+    position: unset;
 }
 
 .my-slider {
     display: flex;
     scroll-behavior: smooth;
-    /* overflow-x: auto; */
+    overflow-x: auto;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    position: unset !important;
+    overflow: hidden;
 }
 
 .my-slider .slider-item {
@@ -2660,8 +2659,8 @@ input[type="radio"]:checked::after {
 /* Prev/Next buttons */
 .slider-controls {
     position: absolute;
-    top: -44px;
-    right: 0px;
+    top: -74px;
+    right: 9%;
     display: flex;
     gap: 12px;
 }
