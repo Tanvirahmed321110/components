@@ -409,9 +409,9 @@
     border-bottom-right-radius: 16px;
 }
 
-.tour-cart .cart-btn {
+.cart-btn {
     background-color: var(--my-secondary-color);
-    padding: 9px 16px;
+    padding: 8px 16px;
     border-radius: var(--radius-md);
     font-size: var(--fs-md);
     line-height: var(--fs-xxl);

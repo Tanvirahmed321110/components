@@ -3,6 +3,10 @@
 =====||   Hero 1 Start Here    ||=====
 ======================================
 */
+.tab-contents {
+    margin-top: 32px;
+}
+
 .g-hero {
     margin-top: 32px;
 }
@@ -765,6 +769,10 @@
     overflow: hidden;
 }
 
+.map-view .head .left {
+    max-width: 770px;
+}
+
 .map-view .map-wrapper::after {
     content: '';
     position: absolute;
@@ -793,11 +801,17 @@
     bottom: 20px;
     left: 20px;
     background-color: var(--my-white);
-    padding: 8px 12px;
+    padding: 4px 12px;
     border: none;
     z-index: 2;
     font-size: var(--fs-sm);
     line-height: 20px;
+    border-radius: var(--radius-md);
+}
+
+.map-view .shop-map svg {
+    fill: var(--my-secondary-color);
+    stroke: var(--my-secondary-color);
 }
 
 .map-tabs li.tab-btn {
@@ -815,19 +829,6 @@
     width: 66px;
     height: 66px;
     border-radius: 50%;
-}
-
-.map-view .tab-btns {
-    padding: 12px;
-    /* background-color: var(--my-bg-secondary); */
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--my-border-secondary);
-}
-
-.map-view .my-slider-wrapper .slider-controls,
-.testimonial .slider-controls {
-    position: unset;
-    margin-top: 32px;
 }
 
 
