@@ -272,12 +272,12 @@
 
 .hotel-cart .cart-img img {
     border-radius: var(--radius-xl);
-    height: 253px;
+    height: 223px;
     width: 100%;
 }
 
 .hotel-cart .cart-content {
-    padding: 8px 12px 12px 12px;
+    padding: 6px 12px 12px 12px;
 }
 
 .hotel-cart .cart-content .sub-title {
@@ -300,7 +300,7 @@
 }
 
 .hotel-cart .hotel-type {
-    margin: 24px 0;
+    margin: 20px 0;
 }
 
 .hotel-cart .star-avg {
@@ -368,6 +368,20 @@
 
 
 
+/*  */
+.activities-cart .cart-img img {
+    height: 223px;
+}
+
+.activities-cart .seat {
+    margin-top: 20px;
+}
+
+.activities-cart .price-and-btn {
+    margin-top: 20px;
+}
+
+
 /*==============||  Tour Cart Start Here  ||===============*/
 .tour-cart {
     height: 455px;
@@ -412,7 +426,7 @@
 .cart-btn {
     background-color: var(--my-secondary-color);
     padding: 8px 16px;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-md) !important;
     font-size: var(--fs-md);
     line-height: var(--fs-xxl);
     color: var(--my-white);

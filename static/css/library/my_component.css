@@ -523,7 +523,7 @@ button:active,
 .my-secondary-btn {
     background-color: var(--my-secondary-color);
     color: var(--my-white);
-    padding: 12px 20px;
+    /* padding: 12px 20px; */
 }
 
 
