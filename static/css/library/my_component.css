@@ -5563,6 +5563,49 @@ _____________________________________*/
     animation: move 3s ease-out 2s infinite;
 }
 
+@keyframes sway {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes swayScale {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    25% {
+        transform: translateX(-5px) scale(1.03);
+    }
+
+    50% {
+        transform: translateX(8px) scale(.98);
+    }
+
+    75% {
+        transform: translateY(-3px) scale(1.02);
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
 
 
 @keyframes move {

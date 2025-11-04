@@ -12,6 +12,7 @@
 
     --my-white: #FFFFFF;
     --white-20: #FFFFFF33;
+    --white-50: #FFFFFF80;
     --primary-80: #0F4638CC;
     --my-bg-dark: #000;
     --my-bg-primary: #FFF;
@@ -363,7 +364,8 @@
 .hotel-cart:hover {
     box-shadow: var(--n-shadow-2);
     border: 1px solid var(--my-white-off);
-    transform: rotate(-2deg) translateY(4px) scale(.98);
+    /* transform: rotate(-2deg) translateY(4px) scale(.98); */
+    animation: sway 0.4s ease-in-out;
 }
 
 
@@ -1113,7 +1115,7 @@ footer {
 =================||    Footer Top    ||===================
 */
 footer .footer-top .left {
-    max-width: 320px;
+    max-width: 440px;
 }
 
 footer .footer-top .item li {

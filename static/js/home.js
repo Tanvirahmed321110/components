@@ -63,6 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//===========  Blogs Slider  ===========
+const blogSwiper = new Swiper(".blog-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+    },
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+    }
+});
+
 
 //===========  Hero2  Slider Top  ===========
 const slider_top = new Swiper(".slider-top .top", {
