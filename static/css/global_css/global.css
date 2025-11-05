@@ -273,7 +273,7 @@
 
 .hotel-cart .cart-img img {
     border-radius: var(--radius-xl);
-    height: 223px;
+    height: 254px;
     width: 100%;
 }
 
@@ -372,7 +372,7 @@
 
 /*  */
 .activities-cart .cart-img img {
-    height: 223px;
+    height: 254px;
 }
 
 .activities-cart .seat {
@@ -386,7 +386,8 @@
 
 /*==============||  Tour Cart Start Here  ||===============*/
 .tour-cart {
-    height: 455px;
+    /* height: 455px; */
+    height: 490px;
     border-radius: var(--radius-xxl);
     /* overflow: hidden; */
     position: relative;
@@ -890,7 +891,7 @@ header .header-top .meddile .click-dropdown-btn::after {
 }
 
 header .header-top .click-dropdown-btn.active::after {
-    top: 36px;
+    top: 30px;
     opacity: 1;
     display: block;
 }
@@ -1227,6 +1228,19 @@ footer .footer-bottom .left {
 }
 
 @media(max-width:1439px) {
+    .tour-cart {
+        height: 455px;
+    }
+
+    .activities-cart .cart-img img {
+        height: 224px;
+    }
+
+
+    .hotel-cart .cart-img img {
+        height: 224px;
+    }
+
     .tour-cart .hover-content {
         padding: 34px 20px 20px 20px;
     }
