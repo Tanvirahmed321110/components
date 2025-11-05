@@ -634,7 +634,15 @@
 
 
 .section-margin {
-    margin-top: 96px;
+    margin-top: 10px;
+}
+
+.section-main {
+    padding: 60px 0;
+}
+
+.section-main.other-bg {
+    padding: 80px 0;
 }
 
 /*
@@ -1076,13 +1084,13 @@ header .header-main .item.active {
 
 header .header-main .item:hover svg path {
     transition: .2s linear;
-    fill: var(--my-secondary-color);
+    /* fill: var(--my-secondary-color); */
 }
 
 header .header-main .click-dropdown-btn:hover svg path,
 header .header-main .item:hover svg path,
 header .header-main .item.active svg path {
-    fill: var(--my-secondary-color);
+    /* fill: var(--my-secondary-color); */
     transition: .2s linear;
 }
 
@@ -1106,7 +1114,7 @@ footer {
     margin-top: auto;
     background-color: var(--my-primary-color);
     font-size: var(--fs-lg);
-    padding: 64px 0 48px 0;
+    padding: 120px 0;
     color: var(--my-white);
 }
 
