@@ -4,215 +4,383 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog Slider</title>
+        <title>Testimonial Section</title>
 
         <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+        <!-- Remix Icon (for stars) -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
         <style>
+            /* Basic Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
             body {
                 font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 20px;
-                background: #f5f5f5;
+                background-color: #f7f7f7;
+                color: #333;
             }
 
-            .blogs-slider .head {
+            /* Section Styling */
+            .testimonial {
+                padding: 60px 20px;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .section-title {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .section-sub-title {
+                font-size: 16px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .tab-btns {
                 display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+                justify-content: center;
+                margin-top: 30px;
+                flex-wrap: wrap;
+                gap: 10px;
+                list-style: none;
             }
 
-            .slider-controls button {
-                background: none;
+            .tab-btn {
+                padding: 8px 20px;
                 border: none;
+                background: #eee;
                 cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s;
             }
 
+            .tab-btn.active {
+                background: #4285f4;
+                color: #fff;
+            }
+
+            .tab-content {
+                display: none;
+                margin-top: 40px;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            /* Swiper Slide */
             .swiper {
-                padding: 20px 0;
+                position: relative;
+                padding-bottom: 40px;
             }
 
             .swiper-slide {
                 background: #fff;
-                border-radius: 16px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
+                padding: 20px;
+                border-radius: 10px;
+                height: auto;
+            }
+
+            .star i {
+                color: #fbc02d;
+            }
+
+            .slider-controls {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 20px;
             }
 
-            .swiper-slide img {
-                width: 100%;
-                height: 180px;
-                object-fit: cover;
+            .slider-controls button {
+                background: #4285f4;
+                color: #fff;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                cursor: pointer;
             }
 
-            .swiper-slide .slide-content {
-                padding: 15px;
-            }
-
-            .slide-content .category {
-                font-weight: bold;
-                margin-bottom: 5px;
-                font-size: 14px;
-                color: #555;
-            }
-
-            .slide-content .title {
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 8px;
-                color: #222;
-            }
-
-            .slide-content .desc {
-                font-size: 14px;
-                color: #777;
-                margin-bottom: 12px;
-            }
-
-            .slide-content .author {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .slide-content .author img {
-                width: 32px;
-                height: 32px;
+            .profile-img-lg {
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
-                object-fit: cover;
             }
 
-            .slide-content .author .name {
+            .my-text-primary {
+                color: #333;
+            }
+
+            .my-fs-md {
                 font-size: 14px;
-                font-weight: bold;
-                color: #222;
             }
 
-            .slide-content .author time {
-                font-size: 12px;
-                color: #999;
+            .my-fs-lg {
+                font-size: 20px;
+            }
+
+            .my-mt-8 {
+                margin-top: 8px;
+            }
+
+            .my-mt-16 {
+                margin-top: 16px;
+            }
+
+            .my-d-flex {
+                display: flex;
+            }
+
+            .my-align-center {
+                align-items: center;
+            }
+
+            .my-gap-2 {
+                gap: 2px;
+            }
+
+            .my-gap-6 {
+                gap: 6px;
+            }
+
+            .my-flex-center {
+                justify-content: center;
             }
         </style>
     </head>
 
     <body>
 
-        <div class="our-blog-area blogs-slider">
-            <!-- Slider Header -->
-            <div class="head">
-                <div class="left">
-                    <div class="top-title">Our Blog</div>
-                    <h2 class="section-title">Latest blog posts</h2>
-                    <p class="section-sub-title">Tool and strategies modern teams need to help their companies grow.</p>
-                </div>
-                <div class="right">
-                    <div class="slider-controls">
-                        <button class="prev" aria-label="Previous slide">&#8592;</button>
-                        <button class="next" aria-label="Next slide">&#8594;</button>
+        <!-- Testimonial Section Start -->
+        <section>
+            <div class="testimonial">
+                <h2 class="section-title">Wall of love</h2>
+                <p class="section-sub-title">Hear first-hand from our incredible community of customers.</p>
+
+                <!-- Tab Buttons -->
+                <ul class="tab-btns" role="tablist">
+                    <li><button class="tab-btn active" data-tab="1" aria-selected="true" role="tab">Google</button></li>
+                    <li><button class="tab-btn" data-tab="2" aria-selected="false" role="tab">Facebook</button></li>
+                    <li><button class="tab-btn" data-tab="3" aria-selected="false" role="tab">Trip Advisor</button></li>
+                    <li><button class="tab-btn" data-tab="4" aria-selected="false" role="tab">Trust Pilot</button></li>
+                </ul>
+
+                <!-- Tab Contents -->
+                <div class="tab-contents">
+
+                    <!-- Google Review -->
+                    <div class="tab-content active" data-tab="1" role="tabpanel">
+                        <div class="swiper testimonial-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <ul class="my-d-flex my-gap-1 star my-align-center">
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                        </ul>
+                                        <p class="my-mt-8 my-fs-md my-text-primary">
+                                            We’ve been using Tourgull to kick start every new project and can’t imagine
+                                            working without it.
+                                        </p>
+                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                            <div>
+                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
+                                                    alt="Google Image" loading="lazy">
+                                            </div>
+                                            <div>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
+                                                </div>
+                                                <div class="my-fs-md">@siennahewitt</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <ul class="my-d-flex my-gap-1 star my-align-center">
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                        </ul>
+                                        <p class="my-mt-8 my-fs-md my-text-primary">
+                                            We’ve been using Tourgull to kick start every new project and can’t imagine
+                                            working without it.
+                                        </p>
+                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                            <div>
+                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
+                                                    alt="Google Image" loading="lazy">
+                                            </div>
+                                            <div>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
+                                                </div>
+                                                <div class="my-fs-md">@siennahewitt</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <ul class="my-d-flex my-gap-1 star my-align-center">
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                        </ul>
+                                        <p class="my-mt-8 my-fs-md my-text-primary">
+                                            We’ve been using Tourgull to kick start every new project and can’t imagine
+                                            working without it.
+                                        </p>
+                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                            <div>
+                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
+                                                    alt="Google Image" loading="lazy">
+                                            </div>
+                                            <div>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
+                                                </div>
+                                                <div class="my-fs-md">@siennahewitt</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <ul class="my-d-flex my-gap-1 star my-align-center">
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                        </ul>
+                                        <p class="my-mt-8 my-fs-md my-text-primary">
+                                            We’ve been using Tourgull to kick start every new project and can’t imagine
+                                            working without it.
+                                        </p>
+                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                            <div>
+                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
+                                                    alt="Google Image" loading="lazy">
+                                            </div>
+                                            <div>
+                                                <div class="my-d-flex my-align-center my-gap-2">
+                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
+                                                </div>
+                                                <div class="my-fs-md">@siennahewitt</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more slides as needed -->
+                            </div>
+                            <div class="slider-controls">
+                                <button class="prev" aria-label="Previous slide">Prev</button>
+                                <button class="next" aria-label="Next slide">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Review -->
+                    <div class="tab-content" data-tab="2" role="tabpanel">
+                        <div class="swiper testimonial-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <ul class="my-d-flex my-gap-1 star my-align-center">
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                            <li><i class="ri-star-fill"></i></li>
+                                        </ul>
+                                        <p class="my-mt-8 my-fs-md my-text-primary">
+                                            Amazing service and support from Tourgull!
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Add more slides as needed -->
+                            </div>
+                            <div class="slider-controls">
+                                <button class="prev" aria-label="Previous slide">Prev</button>
+                                <button class="next" aria-label="Next slide">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trip Advisor Review -->
+                    <div class="tab-content" data-tab="3" role="tabpanel">
+                        <p>Trip Advisor reviews here...</p>
+                    </div>
+
+                    <!-- Trust Pilot Review -->
+                    <div class="tab-content" data-tab="4" role="tabpanel">
+                        <p>Trust Pilot reviews here...</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Slider -->
-            <div class="swiper blog-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/id/1015/400/250" alt="Blog 1">
-                        <div class="slide-content">
-                            <div class="category">Design</div>
-                            <div class="title">UX review presentations</div>
-                            <div class="desc">How do you create compelling presentations that wow your colleagues and
-                                impress your managers?</div>
-                            <div class="author">
-                                <img src="https://picsum.photos/id/1011/50/50" alt="author">
-                                <div>
-                                    <div class="name">Olivia Rhye</div>
-                                    <time>20 Jan 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/id/1016/400/250" alt="Blog 2">
-                        <div class="slide-content">
-                            <div class="category">Design</div>
-                            <div class="title">UX review presentations</div>
-                            <div class="desc">How do you create compelling presentations that wow your colleagues and
-                                impress your managers?</div>
-                            <div class="author">
-                                <img src="https://picsum.photos/id/1012/50/50" alt="author">
-                                <div>
-                                    <div class="name">Olivia Rhye</div>
-                                    <time>20 Jan 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/id/1018/400/250" alt="Blog 3">
-                        <div class="slide-content">
-                            <div class="category">Design</div>
-                            <div class="title">UX review presentations</div>
-                            <div class="desc">How do you create compelling presentations that wow your colleagues and
-                                impress your managers?</div>
-                            <div class="author">
-                                <img src="https://picsum.photos/id/1013/50/50" alt="author">
-                                <div>
-                                    <div class="name">Olivia Rhye</div>
-                                    <time>20 Jan 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/id/1019/400/250" alt="Blog 4">
-                        <div class="slide-content">
-                            <div class="category">Wifi</div>
-                            <div class="title">Software Engineering</div>
-                            <div class="desc">How do you create compelling presentations that wow your colleagues and
-                                impress your managers?</div>
-                            <div class="author">
-                                <img src="https://picsum.photos/id/1014/50/50" alt="author">
-                                <div>
-                                    <div class="name">Olivia Rhye</div>
-                                    <time>20 Jan 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        </section>
+        <!-- Testimonial Section End -->
 
         <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
         <script>
-            const blogSwiper = new Swiper(".blog-swiper", {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                loop: true,
-                navigation: {
-                    nextEl: ".next",
-                    prevEl: ".prev",
-                },
-                breakpoints: {
-                    0: { slidesPerView: 1 },
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                }
+            // Tabs Functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tab = btn.dataset.tab;
+
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.dataset.tab === tab) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Swiper Slider Initialization
+            document.querySelectorAll('.testimonial-swiper').forEach(swiperEl => {
+                new Swiper(swiperEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    navigation: {
+                        nextEl: swiperEl.querySelector('.next'),
+                        prevEl: swiperEl.querySelector('.prev'),
+                    },
+                    breakpoints: {
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    }
+                });
             });
         </script>
+
     </body>
 
 </html>

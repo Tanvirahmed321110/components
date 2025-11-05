@@ -1037,8 +1037,8 @@
     background-color: var(--my-bg-secondary);
 }
 
-.testimonial .my-slider {
-    padding-bottom: 20px;
+.testimonial .testimonial-swiper {
+    padding-bottom: 40px;
     padding-top: 12px;
 }
 
@@ -1048,7 +1048,7 @@
 
 
 
-.testimonial .my-slider-wrapper {
+.testimonial .testimonial-swiper {
     position: relative;
 }
 
@@ -1058,12 +1058,22 @@
 
 
 .testimonial .slider-controls {
-    position: unset;
+    position: absolute;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 12px;
+}
+
+.testimonial .slider-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    position: unset;
 }
 
 .testimonial .item {
@@ -1378,6 +1388,10 @@
     overflow: hidden;
 }
 
+.subcribe-sec .section-title,
+.subcribe-sec .section-sub-title {
+    color: var(--my-white);
+}
 
 .subcribe-form .subcribe-btn {
     background-color: var(--my-bg-yellow);
@@ -1508,6 +1522,8 @@
 =====||   Responsive 1280 Start Here    ||=====
 ===============================================
 */
+
+
 @media (max-width:1280px) {
 
     .my-container,

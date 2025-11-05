@@ -79,6 +79,22 @@ const blogSwiper = new Swiper(".blog-swiper", {
     }
 });
 
+document.querySelectorAll(".testimonial-swiper").forEach(swiperEl => {
+    new Swiper(swiperEl, {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: swiperEl.querySelector(".swiper-button-next"),
+            prevEl: swiperEl.querySelector(".swiper-button-prev"),
+        },
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+        },
+    });
+});
 
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 3,

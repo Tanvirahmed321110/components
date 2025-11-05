@@ -2832,6 +2832,10 @@ input[type="radio"]:checked::after {
     opacity: 1;
 }
 
+.other-wrapper .tab-content.active {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     .card {
         min-width: 100%;
