@@ -427,7 +427,7 @@
 }
 
 .cart-btn {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
     padding: 8px 16px;
     border-radius: var(--radius-md) !important;
     font-size: var(--fs-md);
@@ -635,7 +635,7 @@
 
 
 .section-margin {
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .section-main {
@@ -753,7 +753,7 @@ header .header-top .search-input {
 
 header .header-top .search-input input {
     border-radius: var(--radius-lg);
-    border-color: var(--my-border-secondary);
+    border-color: var(--my-border-color);
 }
 
 header .header-top .click-dropdown-btn {

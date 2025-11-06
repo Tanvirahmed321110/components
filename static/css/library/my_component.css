@@ -2771,9 +2771,11 @@ input[type="radio"]:checked::after {
     font-weight: var(--fw-600);
 }
 
+
+
 .tab-btns-w .tab-btn.active,
 .tab-btns-w .tab-btn:hover {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
     color: var(--my-white);
 }
 
@@ -2797,11 +2799,27 @@ input[type="radio"]:checked::after {
 .tab1-btns .tab-btn.active,
 .tab-btn-nested.active,
 .tab1-btns .tab-btn-nested:hover {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
     border: 1px solid var(--my-border-secondary);
     color: var(--my-white);
 }
 
+.tab-btns-2.tab-btns-w .tab-btn {
+    border-color: var(--my-border-secondary);
+}
+
+.tab-btns-2.tab-btns-w .tab-btn.active,
+.tab-btns-2.tab-btns-w .tab-btn:hover {
+    background-color: transparent;
+    color: var(--my-primary-color);
+    border-color: var(--my-secondary-color);
+}
+
+
+/* .tab1-btns .tab-btn.active:hover,
+.tab-btns-w .tab-btn.actie:hover {
+    background-color: var(--my-secondary-color);
+} */
 
 .tab-btns {
     display: flex;
@@ -3931,6 +3949,7 @@ ___________________________________*/
 
 .search-input input {
     border-radius: var(--radius-xl);
+    border-color: var(--my-secondary-color);
 }
 
 .search-input input::placeholder {
@@ -3945,6 +3964,7 @@ ___________________________________*/
     top: 50%;
     right: 6px;
     transform: translateY(-50%);
+    color: var(--my-secondary-color)
 }
 
 /* search dropdown */

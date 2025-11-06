@@ -198,6 +198,9 @@
     margin-bottom: 6px;
 }
 
+.search-group .s-btn {
+    padding: 14px 52px;
+}
 
 
 
@@ -301,7 +304,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
     transition: left 0.36s ease;
     z-index: 0;
 }
@@ -326,7 +329,7 @@
 
 
 .offer-sec .left-btns .item.active {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
     font-size: var(--fs-md);
     width: 100%;
     border-radius: var(--radius-pill);
@@ -340,7 +343,7 @@
 }
 
 .offer-sec .left-btns .item.active:hover::after {
-    background-color: var(--my-primary-color);
+    background-color: var(--my-secondary-color);
 }
 
 
@@ -843,6 +846,10 @@
     max-width: 658px;
 }
 
+.trip-plan-area .head .img-area img {
+    margin-top: -60px;
+}
+
 .trip-plan-area .right {
     position: relative;
 }
@@ -862,8 +869,8 @@
 .trip-plan-area .right .create-trip-btn {
     position: absolute;
     right: 0%;
-    top: 50%;
-    transform: translate(-0%, -50%);
+    top: 40%;
+    transform: translate(-0%, -40%);
     z-index: 4;
     display: flex;
     align-items: center;
@@ -926,15 +933,27 @@
     overflow: hidden;
 }
 
-.plan-items-wrapper .item::after {
+.plan-items-wrapper .left .item::after,
+.plan-items-wrapper .right .item::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.025));
+}
+
+.plan-items-wrapper .right .item::after {
+    bottom: 0;
+    top: unset;
+    height: 50%;
+    background: linear-gradient(to top,
+            rgba(14, 14, 14, 0.85),
+            rgba(14, 14, 14, 0.4) 25%,
+            rgba(14, 14, 14, 0.3) 70%,
+            rgba(14, 14, 14, 0.01)100%);
 }
 
 .plan-items-wrapper .item img {
@@ -1002,6 +1021,7 @@
 
 .plan-items-wrapper .item .title {
     line-height: var(--line-height-md);
+    color: var(--my-white);
 }
 
 .plan-items-wrapper .item .content .tag:hover {
