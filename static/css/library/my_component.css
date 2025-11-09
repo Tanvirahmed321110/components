@@ -1598,14 +1598,14 @@ input::placeholder {
 }
 
 .my-has-scrollbar-sm::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-color: var(--my-white-off);
 }
 
 .my-has-scrollbar:hover::-webkit-scrollbar,
 .my-has-scrollbar-sm:hover::-webkit-scrollbar {
-    border-radius: 0px;
+    border-radius: 12px;
 }
 
 .my-has-scrollbar:hover::-webkit-scrollbar {
@@ -1616,21 +1616,28 @@ input::placeholder {
 
 .my-has-scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--my-white-off2);
+    border-radius: 12px;
 }
 
 
 
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
     background-color: var(--my-bg-white);
+    border-radius: 16px;
+}
+
+.my-has-scrollbar-sm::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-80);
+    cursor: pointer;
 }
 
 .my-has-scrollbar-sm::-webkit-scrollbar-thumb {
-    background-color: var(--my-border-color);
+    background-color: var(--my-border-primary);
+    border-radius: 16px;
 }
 
 .my-has-scrollbar-sm::-webkit-scrollbar-track {
     background: transparent;
-    /* or your custom track color */
 }
 
 
@@ -2684,10 +2691,18 @@ input[type="radio"]:checked::after {
 .slider-controls button:hover {
     border-color: var(--my-secondary-color);
     box-shadow: var(--n-shadow-all-1);
+    transition: .2s ease;
 }
 
 .slider-controls button:hover svg {
-    stroke: var(--my-secondary-color)
+    stroke: var(--my-secondary-color);
+    transition: .2s ease;
+
+}
+
+.slider-controls button:hover svg path {
+    stroke: var(--my-secondary-color);
+    transition: .2s ease;
 }
 
 
@@ -2777,6 +2792,11 @@ input[type="radio"]:checked::after {
 .tab-btns-w .tab-btn:hover {
     background-color: var(--my-primary-color);
     color: var(--my-white);
+}
+
+.tab-btns-w .tab-btn.active svg,
+.tab-btns-w .tab-btn:hover svg {
+    stroke: var(--my-white);
 }
 
 .tab1-btns .tab-btn,

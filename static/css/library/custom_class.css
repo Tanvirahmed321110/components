@@ -220,6 +220,7 @@ tr {
     padding: 0px 0px;
     margin: 0px auto;
     width: 83.33%;
+    /* max-width: 1300px; */
 }
 
 .my-container-cart {

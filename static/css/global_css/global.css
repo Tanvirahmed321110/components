@@ -1247,6 +1247,38 @@ footer .footer-bottom .left {
 }
 
 
+@media (max-width:1280px) {
+
+    /*______  Font Size  ______ */
+    :root {
+        --fs-low: 0.625rem;
+        /* 10px */
+        --fs-xs: 0.75rem;
+        /* 12px */
+        --fs-sm: 0.8125rem;
+        /* 13px */
+        --fs-md: 0.9375rem;
+        /* 15px */
+        --fs-base: 1rem;
+        /* 16px */
+        --fs-lg: 1.125rem;
+        /* 18px */
+        --fs-xl: 1.25rem;
+        /* 20px */
+        --fs-xxl: 1.75rem;
+        /* 28px */
+        --fs-3xl: 2.25rem;
+        /* 36px */
+    }
+
+
+    .hotel-cart .cart-content {
+        padding: 6px 0;
+    }
+
+
+}
+
 
 
 @media(max-width:768px) {
