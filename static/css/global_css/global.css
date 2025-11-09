@@ -1278,13 +1278,28 @@ footer .footer-bottom .left {
         max-width: 360px;
     }
 
-
 }
 
 
 @media(max-width:1080px) {
     footer .footer-top .left {
         max-width: 280px;
+    }
+
+    header .header-top .left img {
+        max-width: 120px;
+    }
+
+    header .header-top {
+        gap: 12px;
+    }
+
+    header .header-top .right {
+        gap: 12px !important;
+    }
+
+    header .other-btns ul {
+        gap: 12px;
     }
 
 }

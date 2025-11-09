@@ -1574,7 +1574,7 @@
 
     .slider-controls {
         /* position: unset; */
-        right: 0%;
+        right: 16px;
         top: -68px;
     }
 

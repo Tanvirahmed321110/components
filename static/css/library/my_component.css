@@ -5811,6 +5811,14 @@ _____________________________________*/
 
 }
 
+@media (max-width:1080px) {
+    .my-slider.for-3.for-md-2 .slider-item {
+        min-width: calc(100% - 40%);
+        width: 100%;
+
+    }
+}
+
 @media (max-width:991px) {
     .login2-container {
         width: 100%;
