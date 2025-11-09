@@ -88,7 +88,7 @@
     --fs-xxl: 1.5rem;
     /* 24px */
     --fs-3xl: 2rem;
-    /* 36px */
+    /* 32px */
     --fs-4xl: 2.25rem;
     /* 36px */
     --fs-5xl: 2.5rem;
@@ -1259,16 +1259,14 @@ footer .footer-bottom .left {
         /* 13px */
         --fs-md: 0.9375rem;
         /* 15px */
-        --fs-base: 1rem;
+        --fs-lg: 1rem;
         /* 16px */
-        --fs-lg: 1.125rem;
+        --fs-xl: 1.125rem;
         /* 18px */
-        --fs-xl: 1.25rem;
-        /* 20px */
-        --fs-xxl: 1.75rem;
+        --fs-xxl: 1.5rem;
         /* 28px */
-        --fs-3xl: 2.25rem;
-        /* 36px */
+        --fs-3xl: 1.75rem;
+        /* 28px */
     }
 
 
@@ -1276,10 +1274,20 @@ footer .footer-bottom .left {
         padding: 6px 0;
     }
 
+    footer .footer-top .left {
+        max-width: 360px;
+    }
+
 
 }
 
 
+@media(max-width:1080px) {
+    footer .footer-top .left {
+        max-width: 280px;
+    }
+
+}
 
 @media(max-width:768px) {
     header .header-top {

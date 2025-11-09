@@ -4,383 +4,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Testimonial Section</title>
-
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-        <!-- Remix Icon (for stars) -->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+        <title>Document</title>
 
         <style>
-            /* Basic Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+            .wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                /* two equal columns (50% each) */
+                gap: 20px;
             }
 
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f7f7f7;
-                color: #333;
+            .left {
+                background: #ddd;
+                padding: 10px;
             }
 
-            /* Section Styling */
-            .testimonial {
-                padding: 60px 20px;
-                max-width: 1200px;
-                margin: auto;
+            .right {
+                display: contents;
+                /* makes children behave as if they’re direct grid items */
             }
 
-            .section-title {
-                font-size: 32px;
-                font-weight: bold;
-                text-align: center;
+            .right .item {
+                background: #bbb;
+                padding: 10px;
             }
 
-            .section-sub-title {
-                font-size: 16px;
-                text-align: center;
-                margin-top: 10px;
-            }
-
-            .tab-btns {
-                display: flex;
-                justify-content: center;
-                margin-top: 30px;
-                flex-wrap: wrap;
-                gap: 10px;
-                list-style: none;
-            }
-
-            .tab-btn {
-                padding: 8px 20px;
-                border: none;
-                background: #eee;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: all 0.3s;
-            }
-
-            .tab-btn.active {
-                background: #4285f4;
-                color: #fff;
-            }
-
-            .tab-content {
-                display: none;
-                margin-top: 40px;
-            }
-
-            .tab-content.active {
-                display: block;
-            }
-
-            /* Swiper Slide */
-            .swiper {
-                position: relative;
-                padding-bottom: 40px;
-            }
-
-            .swiper-slide {
-                background: #fff;
-                padding: 20px;
-                border-radius: 10px;
-                height: auto;
-            }
-
-            .star i {
-                color: #fbc02d;
-            }
-
-            .slider-controls {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-            }
-
-            .slider-controls button {
-                background: #4285f4;
-                color: #fff;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .profile-img-lg {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-            }
-
-            .my-text-primary {
-                color: #333;
-            }
-
-            .my-fs-md {
-                font-size: 14px;
-            }
-
-            .my-fs-lg {
-                font-size: 20px;
-            }
-
-            .my-mt-8 {
-                margin-top: 8px;
-            }
-
-            .my-mt-16 {
-                margin-top: 16px;
-            }
-
-            .my-d-flex {
-                display: flex;
-            }
-
-            .my-align-center {
-                align-items: center;
-            }
-
-            .my-gap-2 {
-                gap: 2px;
-            }
-
-            .my-gap-6 {
-                gap: 6px;
-            }
-
-            .my-flex-center {
-                justify-content: center;
+            /* 2nd and onward items appear below and form 2-column grid */
+            .right .item:nth-child(n+2) {
+                grid-column: span 1;
             }
         </style>
     </head>
 
     <body>
+        <div class="wrap">
 
-        <!-- Testimonial Section Start -->
-        <section>
-            <div class="testimonial">
-                <h2 class="section-title">Wall of love</h2>
-                <p class="section-sub-title">Hear first-hand from our incredible community of customers.</p>
+            <div class="left">Left item</div>
 
-                <!-- Tab Buttons -->
-                <ul class="tab-btns" role="tablist">
-                    <li><button class="tab-btn active" data-tab="1" aria-selected="true" role="tab">Google</button></li>
-                    <li><button class="tab-btn" data-tab="2" aria-selected="false" role="tab">Facebook</button></li>
-                    <li><button class="tab-btn" data-tab="3" aria-selected="false" role="tab">Trip Advisor</button></li>
-                    <li><button class="tab-btn" data-tab="4" aria-selected="false" role="tab">Trust Pilot</button></li>
-                </ul>
-
-                <!-- Tab Contents -->
-                <div class="tab-contents">
-
-                    <!-- Google Review -->
-                    <div class="tab-content active" data-tab="1" role="tabpanel">
-                        <div class="swiper testimonial-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <ul class="my-d-flex my-gap-1 star my-align-center">
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                        </ul>
-                                        <p class="my-mt-8 my-fs-md my-text-primary">
-                                            We’ve been using Tourgull to kick start every new project and can’t imagine
-                                            working without it.
-                                        </p>
-                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
-                                            <div>
-                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
-                                                    alt="Google Image" loading="lazy">
-                                            </div>
-                                            <div>
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
-                                                </div>
-                                                <div class="my-fs-md">@siennahewitt</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <ul class="my-d-flex my-gap-1 star my-align-center">
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                        </ul>
-                                        <p class="my-mt-8 my-fs-md my-text-primary">
-                                            We’ve been using Tourgull to kick start every new project and can’t imagine
-                                            working without it.
-                                        </p>
-                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
-                                            <div>
-                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
-                                                    alt="Google Image" loading="lazy">
-                                            </div>
-                                            <div>
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
-                                                </div>
-                                                <div class="my-fs-md">@siennahewitt</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <ul class="my-d-flex my-gap-1 star my-align-center">
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                        </ul>
-                                        <p class="my-mt-8 my-fs-md my-text-primary">
-                                            We’ve been using Tourgull to kick start every new project and can’t imagine
-                                            working without it.
-                                        </p>
-                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
-                                            <div>
-                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
-                                                    alt="Google Image" loading="lazy">
-                                            </div>
-                                            <div>
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
-                                                </div>
-                                                <div class="my-fs-md">@siennahewitt</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <ul class="my-d-flex my-gap-1 star my-align-center">
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                        </ul>
-                                        <p class="my-mt-8 my-fs-md my-text-primary">
-                                            We’ve been using Tourgull to kick start every new project and can’t imagine
-                                            working without it.
-                                        </p>
-                                        <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
-                                            <div>
-                                                <img class="profile-img-lg" src="https://i.pravatar.cc/50?img=3"
-                                                    alt="Google Image" loading="lazy">
-                                            </div>
-                                            <div>
-                                                <div class="my-d-flex my-align-center my-gap-2">
-                                                    <h5 class="my-text-primary my-fs-md">Sienna Hewitt</h5>
-                                                </div>
-                                                <div class="my-fs-md">@siennahewitt</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Add more slides as needed -->
-                            </div>
-                            <div class="slider-controls">
-                                <button class="prev" aria-label="Previous slide">Prev</button>
-                                <button class="next" aria-label="Next slide">Next</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Facebook Review -->
-                    <div class="tab-content" data-tab="2" role="tabpanel">
-                        <div class="swiper testimonial-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <ul class="my-d-flex my-gap-1 star my-align-center">
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li>
-                                        </ul>
-                                        <p class="my-mt-8 my-fs-md my-text-primary">
-                                            Amazing service and support from Tourgull!
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- Add more slides as needed -->
-                            </div>
-                            <div class="slider-controls">
-                                <button class="prev" aria-label="Previous slide">Prev</button>
-                                <button class="next" aria-label="Next slide">Next</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Trip Advisor Review -->
-                    <div class="tab-content" data-tab="3" role="tabpanel">
-                        <p>Trip Advisor reviews here...</p>
-                    </div>
-
-                    <!-- Trust Pilot Review -->
-                    <div class="tab-content" data-tab="4" role="tabpanel">
-                        <p>Trust Pilot reviews here...</p>
-                    </div>
-                </div>
+            <div class="right">
+                <div class="item">item1</div>
+                <div class="item">item2</div>
+                <div class="item">item3</div>
+                <div class="item">item4</div>
             </div>
-        </section>
-        <!-- Testimonial Section End -->
 
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-        <script>
-            // Tabs Functionality
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const tab = btn.dataset.tab;
-
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.dataset.tab === tab) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
-
-            // Swiper Slider Initialization
-            document.querySelectorAll('.testimonial-swiper').forEach(swiperEl => {
-                new Swiper(swiperEl, {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    loop: true,
-                    navigation: {
-                        nextEl: swiperEl.querySelector('.next'),
-                        prevEl: swiperEl.querySelector('.prev'),
-                    },
-                    breakpoints: {
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 }
-                    }
-                });
-            });
-        </script>
-
+        </div>
     </body>
 
 </html>

@@ -1568,6 +1568,10 @@
         width: 100%;
     }
 
+    .my-container-cart {
+        padding-right: 0px;
+    }
+
     .slider-controls {
         /* position: unset; */
         right: 0%;
@@ -1597,6 +1601,42 @@
 
     .g-hero-area .tab-wrapper {
         max-width: 90%;
+    }
+
+    .tour-cart .visiable-content {
+        padding: 16px;
+    }
+
+    .hotel-cart {
+        padding: 9px;
+    }
+
+    .recently-view .slider-controls,
+    .trip-plan-area .slider-controls {
+        right: 16px;
+    }
+
+    .trip-plan-area .head .left {
+        max-width: 50%;
+    }
+
+
+    .plan-items-wrapper {
+        grid-template-columns: calc(60% - 8px) calc(40% - 8px);
+        grid-template-columns: 100%;
+        gap: 16px;
+    }
+
+    .plan-items-wrapper .right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+
+
+    .plan-items-wrapper .right .item:nth-child(n+2) {
+        grid-column: span 1;
     }
 }
 
@@ -1676,6 +1716,18 @@
     .testimonial .for-md-2 .slider-item {
         min-width: calc(50% - 12px);
         width: 100%;
+    }
+
+    .offer-sec .bottom-btns {
+        max-height: 310px;
+        overflow-y: auto;
+        padding: 12px;
+    }
+
+    .offer-sec .bottom-btns .item,
+    .offer-sec .bottom-btns .item.active {
+        font-size: var(--fs-md);
+        text-transform: capitalize;
     }
 }
 

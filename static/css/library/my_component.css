@@ -5738,19 +5738,20 @@ _____________________________________*/
 
 
 /*________________________________*\
-  ||     Responsive For 1400px     ||
+  ||     Responsive For 1280px     ||
 \*________________________________*/
-@media (max-width:1400px) {}
+@media (max-width:1280px) {
+    .my-slider {
+        gap: 16px;
+    }
+}
 
 /*________________________________*\
   ||     Responsive For 1080px     ||
 \*________________________________*/
-@media (max-width:1080px) {
-    .brigtcamp {
-        max-width: 680px;
-        margin: 0 auto;
-        margin-top: 6px;
-    }
+@media (max-width:1280px) {
+
+
 
     .search .search-dropdown {
         width: 100%;
@@ -5788,17 +5789,17 @@ _____________________________________*/
     }
 
     .my-slider.for-md-1 .slider-item {
-        min-width: calc(100% - 70px);
+        min-width: calc(100% - 10%);
         width: 100%;
     }
 
     .my-slider.for-md-2 .slider-item {
-        min-width: calc(50% - 70px);
+        min-width: calc(50% - 10%);
         width: 100%;
     }
 
     .my-slider.for-md-3 .slider-item {
-        min-width: calc(33% - 70px);
+        min-width: calc(33% - 10%);
         width: 100%;
     }
 
