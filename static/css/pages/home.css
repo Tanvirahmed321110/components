@@ -838,6 +838,10 @@
 =====||   Trip Plan Section Start Here    ||=====
 =================================================
 */
+.trip-plan-area {
+    margin-top: -60px;
+}
+
 .trip-plan-area .section-sub-title {
     max-width: 838px;
 }
@@ -1323,24 +1327,16 @@
 
 /*===== Bg Image =====*/
 .our-achivements .bg-img {
-    background-image: url('../../images/achivement-main.png');
+    background-image: url('../../images/achi.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 450px;
+    height: 488px;
     width: 100%;
-    margin-top: -100px;
+    margin-top: -250px;
     position: relative;
 }
 
-.our-achivements .bg-img .img {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    top: -60px;
-    width: fit-content;
-    width: 100%;
-}
 
 @keyframes swayScale {
     0% {
