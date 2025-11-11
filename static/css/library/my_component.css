@@ -2669,7 +2669,13 @@ input[type="radio"]:checked::after {
     gap: 12px;
 }
 
-.slider-controls button {
+.right-slider-arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.slider-controls button,
+.right-slider-arrows button {
     background: var(--my-white);
     color: #fff;
     border: none;
@@ -2688,19 +2694,22 @@ input[type="radio"]:checked::after {
     width: 22px;
 }
 
-.slider-controls button:hover {
+.slider-controls button:hover,
+.right-slider-arrows button:hover {
     border-color: var(--my-secondary-color);
     box-shadow: var(--n-shadow-all-1);
     transition: .2s ease;
 }
 
-.slider-controls button:hover svg {
+.slider-controls button:hover svg,
+.right-slider-arrows button:hover svg {
     stroke: var(--my-secondary-color);
     transition: .2s ease;
 
 }
 
-.slider-controls button:hover svg path {
+.slider-controls button:hover svg path,
+.right-slider-arrows button:hover svg path {
     stroke: var(--my-secondary-color);
     transition: .2s ease;
 }

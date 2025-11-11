@@ -647,9 +647,12 @@
 =====||   Recently View Section Start Here    ||=====
 =====================================================
 */
-.recently-view .tab-content .my-slider .slider-item {
-    min-height: 170px;
-    height: 100%;
+.recently-view .swiper-slide {
+    padding-bottom: 16px;
+}
+
+.recently-view.section-main {
+    padding-bottom: 44px;
 }
 
 .recently-view .slider-controls,

@@ -79,23 +79,33 @@ const blogSwiper = new Swiper(".blog-swiper", {
     }
 });
 
-document.querySelectorAll(".testimonial-swiper").forEach(swiperEl => {
-    new Swiper(swiperEl, {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        loop: true,
-        navigation: {
-            nextEl: swiperEl.querySelector(".swiper-button-next"),
-            prevEl: swiperEl.querySelector(".swiper-button-prev"),
+
+
+const otherCommonSlider = new Swiper(".other-common-slider", {
+    slidesPerView: 3.5,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+        nextEl: ".recently-view .next",
+        prevEl: ".recently-view .prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5, // Mobile
+            spaceBetween: 12,
         },
-        breakpoints: {
-            0: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+        768: {
+            slidesPerView: 2.5, // Tablet
+            spaceBetween: 16,
         },
-    });
+        1024: {
+            slidesPerView: 3.5, // Desktop
+            spaceBetween: 24,
+        },
+    },
 });
 
+//===========  Testimonial Slider  ===========
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
