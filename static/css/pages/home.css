@@ -641,6 +641,15 @@
     border-radius: 8px;
 }
 
+.swiper.other-common-slider {
+    padding-bottom: 80px;
+}
+
+.swiper.other-common-slider .section-btn-wrapper {
+    margin-top: 0px;
+}
+
+
 
 /*
 =====================================================
@@ -684,13 +693,16 @@
 =====||   Recommendation  Section Start Here    ||=====
 =======================================================
 */
+.recommendation.section-main {
+    padding-bottom: 40px;
+}
+
 .recommendation-area .item:hover {
     background-color: var(--my-white-off);
 }
 
 .recommendation .tab-contents {
     margin-top: 20px;
-    /* padding-bottom: 24px; */
 }
 
 

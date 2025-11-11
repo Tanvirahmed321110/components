@@ -80,8 +80,8 @@ const blogSwiper = new Swiper(".blog-swiper", {
 });
 
 
-
-const otherCommonSlider = new Swiper(".other-common-slider", {
+//===========  Recent View Slider  ===========
+const recentView = new Swiper(".other-common-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
     loop: true,
@@ -98,12 +98,38 @@ const otherCommonSlider = new Swiper(".other-common-slider", {
             slidesPerView: 2.5, // Tablet
             spaceBetween: 16,
         },
-        1024: {
+        1280: {
             slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
         },
     },
 });
+
+//===========  Recommendation Slider  ===========
+const recommendationSlider = new Swiper(".other-common-slider", {
+    slidesPerView: 3.5,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+        nextEl: ".recommendation .next",
+        prevEl: ".recommendation .prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5, // Mobile
+            spaceBetween: 12,
+        },
+        768: {
+            slidesPerView: 2.5, // Tablet
+            spaceBetween: 16,
+        },
+        1280: {
+            slidesPerView: 3.5, // Desktop
+            spaceBetween: 24,
+        },
+    },
+});
+
 
 //===========  Testimonial Slider  ===========
 const testimonialSwiper = new Swiper(".testimonial-swiper", {

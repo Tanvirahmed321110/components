@@ -610,7 +610,7 @@
     background-color: var(--my-primary-color);
     color: var(--my-white);
     position: relative;
-    box-shadow: var(--n-shadow-all-3);
+    box-shadow: var(--shadow-lg);
 }
 
 
