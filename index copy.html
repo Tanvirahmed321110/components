@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Products — Tabs + Swiper</title>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <style>
+            :root {
+                --container-width: 1200px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background: #fafafa;
+                color: #111;
+            }
+
+            section {
+                padding: 40px 16px;
+            }
+
+            .my-container-cart {
+                max-width: var(--container-width);
+                margin: 0 auto;
+            }
+
+            /* Header and navigation arrows (top-right) */
+            .cart-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .cart-header h1 {
+                margin: 0;
+                font-size: 26px;
+            }
+
+            .swiper-nav {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .arrow-btn {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                user-select: none;
+                background: #000;
+                color: #fff;
+                font-weight: 700;
+            }
+
+            .arrow-btn:active {
+                transform: translateY(1px);
+            }
+
+            /* Tabs */
+            .tab-btns-w {
+                display: flex;
+                gap: 12px;
+                margin-top: 14px;
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                padding: 8px 14px;
+                border-radius: 8px;
+                background: #eee;
+                cursor: pointer;
+            }
+
+            .tab-btn.active {
+                background: #000;
+                color: #fff;
+            }
+
+            /* Tab-contents */
+            .tab-contents {
+                margin-top: 12px;
+            }
+
+            .tab-content {
+                display: none;
+            }
+
+            /* hide by default */
+            .tab-content.active {
+                display: block;
+            }
+
+            /* show active */
+
+            /* Swiper/Cards styling (bigger, r=0 as requested) */
+            .swiper {
+                padding: 36px 0;
+            }
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            .cart {
+                background: #fff;
+                border-radius: 0;
+                padding: 48px 36px;
+                width: 100%;
+                min-height: 220px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .cart .title {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+            .cart .subtitle {
+                font-size: 14px;
+                color: #666;
+                font-weight: 500;
+            }
+
+            /* Responsive tweaks */
+            @media (max-width:1023px) {
+                .cart {
+                    padding: 40px 28px;
+                    min-height: 180px;
+                }
+            }
+
+            @media (max-width:767px) {
+                .cart {
+                    padding: 28px 18px;
+                    min-height: 140px;
+                }
+
+                .arrow-btn {
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <div class="my-container-cart">
+                <!-- Header (title + arrows) -->
+                <div class="cart-header">
+                    <h1>Products</h1>
+
+                    <!-- arrows (we'll attach JS handlers to these so they control the active swiper) -->
+                    <div class="swiper-nav" aria-hidden="false">
+                        <div id="arrow-prev" class="arrow-btn" title="Previous">&lt;</div>
+                        <div id="arrow-next" class="arrow-btn" title="Next">&gt;</div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div>
+                    <ul class="tab-btns-w" id="tabs">
+                        <li class="tab-btn active" data-index="0">All Product</li>
+                        <li class="tab-btn" data-index="1">New Product</li>
+                        <li class="tab-btn" data-index="2">5 Star</li>
+                        <li class="tab-btn" data-index="3">Best Sell</li>
+                    </ul>
+                </div>
+
+                <!-- Tab contents: each tab has its own Swiper (separate instance) -->
+                <div class="tab-contents">
+                    <!-- Tab 0: All Product -->
+                    <div class="tab-content active" data-index="0">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Product A1</div>
+                                        <div class="subtitle">All product item 1</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Product A2</div>
+                                        <div class="subtitle">All product item 2</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Product A3</div>
+                                        <div class="subtitle">All product item 3</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Product A4</div>
+                                        <div class="subtitle">All product item 4</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Product A5</div>
+                                        <div class="subtitle">All product item 5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 1: New Product -->
+                    <div class="tab-content" data-index="1">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">New B1</div>
+                                        <div class="subtitle">New product 1</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">New B2</div>
+                                        <div class="subtitle">New product 2</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">New B3</div>
+                                        <div class="subtitle">New product 3</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">New B4</div>
+                                        <div class="subtitle">New product 4</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: 5 Star -->
+                    <div class="tab-content" data-index="2">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Star C1</div>
+                                        <div class="subtitle">5 star item 1</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Star C2</div>
+                                        <div class="subtitle">5 star item 2</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Star C3</div>
+                                        <div class="subtitle">5 star item 3</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Best Sell -->
+                    <div class="tab-content" data-index="3">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Best D1</div>
+                                        <div class="subtitle">Best sell 1</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Best D2</div>
+                                        <div class="subtitle">Best sell 2</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Best D3</div>
+                                        <div class="subtitle">Best sell 3</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Best D4</div>
+                                        <div class="subtitle">Best sell 4</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cart">
+                                        <div class="title">Best D5</div>
+                                        <div class="subtitle">Best sell 5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            // Initialize swipers for every .mySwiper found
+            const swiperEls = document.querySelectorAll('.mySwiper');
+            const swipers = []; // will hold Swiper instances in same order as swiperEls
+            swiperEls.forEach((el, i) => {
+                const s = new Swiper(el, {
+                    slidesPerView: 3.5,
+                    spaceBetween: 24,
+                    loop: true,
+                    // don't set global navigation here; we'll control with arrow buttons manually
+                    breakpoints: {
+                        320: { slidesPerView: 1.5, spaceBetween: 12 },
+                        768: { slidesPerView: 2.5, spaceBetween: 16 },
+                        1024: { slidesPerView: 3.5, spaceBetween: 24 },
+                    },
+                });
+                swipers.push(s);
+            });
+
+            // Track active tab index
+            let activeIndex = 0;
+
+            // Tab click handling
+            const tabBtns = document.querySelectorAll('.tab-btns-w .tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function setActiveTab(index) {
+                // bounds check
+                index = Math.max(0, Math.min(index, tabContents.length - 1));
+                activeIndex = index;
+
+                // update tab button active class
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                const activeBtn = document.querySelector('.tab-btn[data-index="' + index + '"]');
+                if (activeBtn) activeBtn.classList.add('active');
+
+                // show corresponding tab-content
+                tabContents.forEach(tc => tc.classList.remove('active'));
+                const activeContent = document.querySelector('.tab-content[data-index="' + index + '"]');
+                if (activeContent) activeContent.classList.add('active');
+
+                // ensure corresponding swiper is updated (resize/recalculate)
+                if (swipers[index]) {
+                    // small timeout to let display:block take effect then update
+                    setTimeout(() => {
+                        swipers[index].update();
+                    }, 60);
+                }
+
+                // optionally, you can reset the other swipers to first slide
+                // swipers.forEach((s, si) => { if (si !== index) s.slideToLoop(0); });
+            }
+
+            // attach click listeners to tabs
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const idx = Number(btn.getAttribute('data-index'));
+                    setActiveTab(idx);
+                });
+            });
+
+            // Arrow buttons control active swiper instance
+            const arrowPrev = document.getElementById('arrow-prev');
+            const arrowNext = document.getElementById('arrow-next');
+
+            arrowPrev.addEventListener('click', () => {
+                const s = swipers[activeIndex];
+                if (s) s.slidePrev();
+            });
+            arrowNext.addEventListener('click', () => {
+                const s = swipers[activeIndex];
+                if (s) s.slideNext();
+            });
+
+            // Keyboard support (optional): left/right arrows to navigate active swiper
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') arrowPrev.click();
+                if (e.key === 'ArrowRight') arrowNext.click();
+            });
+
+            // Make sure the first tab's swiper is updated on load (in case of hidden->visible)
+            window.addEventListener('load', () => {
+                if (swipers[0]) setTimeout(() => swipers[0].update(), 50);
+            });
+
+            // On resize, update the active swiper so slidesPerView recalculates
+            window.addEventListener('resize', () => {
+                if (swipers[activeIndex]) swipers[activeIndex].update();
+            });
+        </script>
+    </body>
+
+</html>

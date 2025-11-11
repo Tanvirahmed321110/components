@@ -1725,6 +1725,14 @@
         font-size: var(--fs-md);
         text-transform: capitalize;
     }
+
+    .trip-plan-area .right .create-trip-btn {
+        font-size: var(--fs-lg);
+    }
+
+    .plan-items-wrapper {
+        margin-top: 80px;
+    }
 }
 
 

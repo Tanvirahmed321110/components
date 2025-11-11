@@ -1302,6 +1302,22 @@ footer .footer-bottom .left {
         gap: 12px;
     }
 
+
+
+    footer {
+        padding: 80px 0;
+    }
+
+    footer .footer-bottom-wrapper {
+        align-items: start;
+    }
+
+
+    footer .footer-bottom-right-area {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
 }
 
 @media(max-width:768px) {
