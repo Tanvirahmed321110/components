@@ -414,13 +414,24 @@
     border-radius: var(--radius-3xl);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    height: 215px;
+    height: 230px;
 }
 
 .offer-sec .offer-cart.full {
-    height: 365px;
+    height: 385px;
 }
 
+.offer-sec .offer-cart .img-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.offer-sec .offer-cart .img-wrapper img {
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+
+}
 
 /*
 ======  Cart Content  ======
@@ -488,7 +499,7 @@
 
 .offer-sec .offer-cart.sm {
     border-radius: var(--radius-xxl);
-    height: 123px;
+    height: 128px;
 }
 
 
@@ -1670,13 +1681,13 @@
 =====||   Responsive 1024 Start Here    ||=====
 ===============================================
 */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
 
     /*
     ================||   Achivements Section Start Here  ||================
     */
     .our-achivements .items {
-        padding: 64px 0px;
+        padding: 0px 0px;
     }
 
     /*
@@ -1757,6 +1768,38 @@
     .plan-items-wrapper {
         margin-top: 80px;
     }
+
+    .all-offer-text {
+        font-size: var(--fs-sm);
+    }
+
+    .trip-plan .plan-items-wrapper {
+        margin-top: -34px;
+    }
+
+    .g-hero-area .bottom-search {
+        width: 94%;
+        left: 3%;
+    }
+
+    .search-group .s-btn {
+        padding: 14px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-group .s-btn .content {
+        padding-right: 20px;
+    }
+
+    .search-group .big.my-input-control {
+        min-width: 140px;
+    }
+
+    .search-group .my-input-control input {
+        font-size: var(--fs-sm) !important;
+    }
 }
 
 
@@ -1783,4 +1826,43 @@
         width: 100%;
     }
 
+
+
+    /* Worldwide Hot Dest */
+    .hot-destination .search-input {
+        flex: 1;
+    }
+
+    .hot-destination .head .left {
+        max-width: 182px;
+        width: 100%;
+    }
+
+    .hot-dest-cart {
+        height: 192px;
+    }
+
+    .hot-dest-cart .content {
+        padding-left: 12px;
+        padding-bottom: 12px;
+    }
+
+    .hot-dest-cart .title {
+        font-size: 14px;
+        line-height: 100%;
+    }
+
+    .hot-dest-cart .sub-title {
+        font-size: 12px;
+    }
+
+    .search-input svg,
+    .search-input i,
+    .search-input span {
+        right: 2px;
+    }
+
+    .search-input input {
+        padding: 12px 8px;
+    }
 }

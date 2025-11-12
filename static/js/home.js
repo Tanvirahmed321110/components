@@ -116,11 +116,11 @@ const recommendationSlider = new Swiper(".other-common-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.5, // Mobile
+            slidesPerView: 1.4, // Mobile
             spaceBetween: 12,
         },
-        768: {
-            slidesPerView: 2.5, // Tablet
+        991: {
+            slidesPerView: 1.3, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -171,7 +171,11 @@ const mapview = new Swiper(".other-common-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.2, // Mobile
+            spaceBetween: 12,
+        },
+        991: {
+            slidesPerView: 2.4, // Tablet
             spaceBetween: 16,
         },
         1280: {
