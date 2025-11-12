@@ -656,13 +656,19 @@
 =====||   Recently View Section Start Here    ||=====
 =====================================================
 */
+
 .recently-view .swiper-slide {
-    padding-bottom: 16px;
+    padding-bottom: 20px;
+}
+
+.recently-view .swiper.other-common-slider {
+    padding-bottom: 40px;
 }
 
 .recently-view.section-main {
-    padding-bottom: 44px;
+    padding-bottom: 0;
 }
+
 
 .recently-view .slider-controls,
 .trip-plan-area .slider-controls {
@@ -671,7 +677,7 @@
     top: -74px;
 }
 
-.recently-view-area .my-slider,
+/* .recently-view-area .my-slider,
 .recommendation-area .my-slider,
 .best-deal-area .my-slider,
 .map-view .my-slider {
@@ -683,7 +689,7 @@
 .best-deal-area .section-btn-wrapper,
 .map-view .section-btn-wrapper {
     margin-top: 24px;
-}
+} */
 
 
 
@@ -716,7 +722,9 @@
 =====||   Best Deal  Section Start Here    ||=====
 ==================================================
 */
-
+.best-deal.section-main {
+    padding-bottom: 40px;
+}
 
 
 
@@ -853,7 +861,11 @@
 =====||   Trip Plan Section Start Here    ||=====
 =================================================
 */
-.trip-plan-area {
+.trip-plan {
+    margin-top: -84px;
+}
+
+.trip-plan .plan-items-wrapper {
     margin-top: -60px;
 }
 
@@ -861,9 +873,6 @@
     max-width: 838px;
 }
 
-.trip-plan-area .head {
-    margin-bottom: -60px;
-}
 
 .trip-plan-area .head .left {
     max-width: 658px;

@@ -131,6 +131,57 @@ const recommendationSlider = new Swiper(".other-common-slider", {
 });
 
 
+//===========  Best Deal Slider  ===========
+const bestDeal = new Swiper(".other-common-slider", {
+    slidesPerView: 3.5,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+        nextEl: ".best-deal .next",
+        prevEl: ".best-deal .prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5, // Mobile
+            spaceBetween: 12,
+        },
+        768: {
+            slidesPerView: 2.5, // Tablet
+            spaceBetween: 16,
+        },
+        1280: {
+            slidesPerView: 3.5, // Desktop
+            spaceBetween: 24,
+        },
+    },
+});
+
+//===========  Best Deal Slider  ===========
+const mapview = new Swiper(".other-common-slider", {
+    slidesPerView: 3.5,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+        nextEl: ".map-view .next",
+        prevEl: ".map-view .prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5, // Mobile
+            spaceBetween: 12,
+        },
+        768: {
+            slidesPerView: 2.5, // Tablet
+            spaceBetween: 16,
+        },
+        1280: {
+            slidesPerView: 3.5, // Desktop
+            spaceBetween: 24,
+        },
+    },
+});
+
+
 //===========  Testimonial Slider  ===========
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 3,
