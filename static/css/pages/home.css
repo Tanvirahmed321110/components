@@ -1669,6 +1669,17 @@
     .plan-items-wrapper .right .item:nth-child(n+2) {
         grid-column: span 1;
     }
+
+
+    /* section title and sub title */
+    .section-title {
+        font-size: var(--fs-3xl);
+        line-height: var(--line-height-xl);
+    }
+
+    .section-sub-title {
+        font-size: var(--fs-xl);
+    }
 }
 
 
@@ -1682,6 +1693,13 @@
 ===============================================
 */
 @media (max-width: 1080px) {
+    .g-hero {
+        margin-top: 16px;
+    }
+
+    .section-main {
+        padding: 40px 0;
+    }
 
     /*
     ================||   Achivements Section Start Here  ||================
@@ -1721,11 +1739,6 @@
         display: none;
     }
 
-
-    /*===== Bg Image =====*/
-    .our-achivements .bg-img {
-        display: none;
-    }
 
     .our-achivements .mobile-bg {
         margin-top: -100px;
@@ -1778,8 +1791,8 @@
     }
 
     .g-hero-area .bottom-search {
-        width: 94%;
-        left: 3%;
+        width: 96%;
+        left: 2%;
     }
 
     .search-group .s-btn {
@@ -1791,19 +1804,71 @@
 
     .search-group .s-btn .content {
         padding-right: 20px;
+        padding-top: 4px;
+    }
+
+    .search-group .big.my-input-control.big {
+        min-width: 160px;
     }
 
     .search-group .big.my-input-control {
-        min-width: 140px;
+        min-width: 130px;
     }
 
     .search-group .my-input-control input {
         font-size: var(--fs-sm) !important;
     }
+
+    .bottom-search .form-wrap {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .offer-sec .left-btns .item .icon {
+        width: 44px;
+        height: 44px;
+        gap: 8px;
+    }
+
+    .offer-sec .left-btns .item .icon svg {
+        width: 12px;
+        height: 12px;
+    }
+
+
 }
 
 
+@media (max-width: 991px) {
 
+    .offer-sec {
+        display: grid;
+        grid-template-columns: .7fr 2fr;
+        gap: 16px;
+    }
+
+    .offer-sec .left-offer .bottom,
+    .offer-sec .left-offer {
+        gap: 16px;
+    }
+
+    .offer-sec .offer-cart.sm {
+        border-radius: var(--radius-xxl);
+        height: 136px;
+    }
+
+    header .header-top {
+        gap: 8px;
+    }
+
+    .form-wrap .search-group {
+        gap: 6px;
+    }
+
+    .search-group .my-input-control {
+        min-width: 120px;
+    }
+}
 
 
 /*
@@ -1811,22 +1876,7 @@
 =====||   Responsive 769px Start Here    ||=====
 ================================================
 */
-@media (max-width: 769px) {
-
-    /*
-    ================||   Testimonial Section Start Here  ||================
-    */
-    .testimonial .for-sm-1 .slider-item {
-        min-width: calc(100% - 0px);
-        width: 100%;
-    }
-
-    .testimonial .for-sm-2 .slider-item {
-        min-width: calc(50% - 0px);
-        width: 100%;
-    }
-
-
+@media (max-width: 768px) {
 
     /* Worldwide Hot Dest */
     .hot-destination .search-input {

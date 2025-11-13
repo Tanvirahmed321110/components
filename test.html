@@ -2,172 +2,181 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Branch Card UI</title>
 
         <style>
-            body {
-                background-color: rebeccapurple;
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
 
-            .pentagon-box {
-                width: 200px;
-                aspect-ratio: 1;
-                background: white;
-                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            body {
+                font-family: "Roboto", sans-serif;
+                background: #f2f5f9;
+                padding: 40px;
+                color: #333;
+            }
+
+            /* ===== Card Wrapper ===== */
+            .single-branch {
+                background: #fff;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+                max-width: 700px;
+                margin: 0 auto;
+                transition: all 0.35s ease;
+            }
+
+            .single-branch:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+            }
+
+            /* ===== Header ===== */
+            .branch-header {
+                background: linear-gradient(135deg, #007bff, #0056d2);
+                color: #fff;
+                padding: 22px 28px;
+            }
+
+            .branch-header h3 {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            .branch-border {
+                width: 60px;
+                height: 3px;
+                background: #fff;
                 border-radius: 10px;
+                margin-top: 6px;
+            }
+
+            /* ===== Map Area ===== */
+            .map-container {
+                width: 100%;
+                height: 260px;
+                overflow: hidden;
+                border-bottom: 1px solid #eee;
+            }
+
+            .map-container iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            /* ===== Info Section ===== */
+            .branch-info {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                padding: 25px 28px;
+            }
+
+            .info-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .info-item i {
+                color: #007bff;
+                font-size: 1.2rem;
+                margin-top: 2px;
+                min-width: 22px;
+            }
+
+            .info-item strong {
+                color: #222;
+                width: 90px;
+                flex-shrink: 0;
+            }
+
+            .info-item p {
+                color: #555;
+                line-height: 1.5;
+            }
+
+            /* ===== Icons ===== */
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+            /* ===== Responsive ===== */
+            @media (max-width: 600px) {
+                .single-branch {
+                    margin: 20px;
+                }
+
+                .branch-header h3 {
+                    font-size: 1.3rem;
+                }
+
+                .info-item strong {
+                    width: 80px;
+                }
             }
         </style>
     </head>
 
     <body>
 
-        <!--
-        ===============================================
-        =======||   Hero Section2  Start Here   ||======
-        ===============================================
-        -->
-        <section>
-            <div class="logo">
-                <div class="pentagon-box"></div>
-
+        <!-- Single Branch Card -->
+        <div class="single-branch">
+            <div class="branch-header">
+                <h3 t-esc="item.name">Warehouse</h3>
+                <div class="branch-border"></div>
             </div>
 
+            <div class="map-container">
+                <t t-raw="item.map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=House%20NWJ-2%2FA%2C%20Bir%20Uttom%20Sultan%20Mahmud%2C%20Road%20%28Old%2050%29%2C%20Gulshan%202%2C%20Dhaka%201212%2C%20Bangladesh&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+                        title="House NWJ-2/A, Bir Uttom Sultan Mahmud, Road (Old 50), Gulshan 2, Dhaka 1212, Bangladesh"
+                        aria-label="House NWJ-2/A, Bir Uttom Sultan Mahmud, Road (Old 50), Gulshan 2, Dhaka 1212, Bangladesh">
+                    </iframe>
+                </t>
+            </div>
 
+            <div class="branch-info">
+                <div class="info-item" t-if="item.address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p t-esc="item.address">
+                            29 DIT Plot, Razzak Villa, Balur Mat, Chasara, Narayanganj-1400, Bangladesh
+                        </p>
+                    </div>
+                </div>
 
-            <div class="g-hero-2">
-                <div class="my-container">
-                    <div class="g-hero-2-area">
+                <div class="info-item" t-if="item.phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Call:</strong>
+                        <p t-esc="item.phone">0140554556</p>
+                    </div>
+                </div>
 
-                        <!--==================||   Slider Top Start Here   ||==================-->
-                        <div class="slider-top">
-                            <div class="swiper mySwiper top">
-                                <div class="swiper-wrapper">
+                <div class="info-item" t-if="item.email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <p t-esc="item.email">example@email.com</p>
+                    </div>
+                </div>
 
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <img src="./static/images/top-slider-1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <img src="./static/images/top-slider-1.png" alt="">
-                                        </a>
-                                    </div>
-
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">Slide 2</div>
-
-                                    <!-- single slider item -->
-                                    <div class="swiper-slide">Slide 3</div>
-                                </div>
-
-                                <!--=====  Navigation buttons  ====-->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-
-
-                        <!--==================||   Slider Bottom Start Here   ||==================-->
-                        <div class="slider-bottom">
-                            <div class="swiper mySwiper bottom">
-                                <div class="swiper-wrapper">
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (2).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">China</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">Mariachi</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (3).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North Korea</h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (1).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North </h5>
-                                        </div>
-                                    </div>
-
-                                    <!-- single item -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="./static/images/bottom-slider (2).png" alt="">
-                                            </a>
-                                            <h5 class="my-text-primary my-text-center my-mt-4">North America</h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--=====  Pagination  =====-->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-
+                <div class="info-item" t-if="item.off_day">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    <div>
+                        <strong>Off Day:</strong>
+                        <p t-esc="item.off_day">Friday</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
     </body>
 
