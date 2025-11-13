@@ -2779,7 +2779,6 @@ input[type="radio"]:checked::after {
     gap: 12px;
     list-style: none;
     padding: 0px;
-    max-width: calc(100% - 108px);
     flex-wrap: wrap;
 }
 

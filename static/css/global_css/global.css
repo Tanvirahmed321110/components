@@ -968,6 +968,28 @@ header .profile-dropdown .head {
 }
 
 
+.swiper.other-common-slider {
+    padding-bottom: 68px;
+    position: relative;
+}
+
+.swiper.other-common-slider .section-btn-wrapper {
+    margin-top: -12px;
+}
+
+.swiper.other-common-slider .right-slider-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    justify-content: space-between;
+}
+
+.swiper.other-common-slider .right-slider-arrows button {
+    box-shadow: var(--n-shadow-2);
+}
 
 
 

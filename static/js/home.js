@@ -81,13 +81,13 @@ const blogSwiper = new Swiper(".blog-swiper", {
 
 
 //===========  Recent View Slider  ===========
-const recentView = new Swiper(".other-common-slider", {
+const recentView = new Swiper(".recently-view-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
     loop: true,
     navigation: {
-        nextEl: ".recently-view .next",
-        prevEl: ".recently-view .prev",
+        nextEl: ".recently-view-slider .next",
+        prevEl: ".recently-view-slider .prev",
     },
     breakpoints: {
         320: {
@@ -106,13 +106,13 @@ const recentView = new Swiper(".other-common-slider", {
 });
 
 //===========  Recommendation Slider  ===========
-const recommendationSlider = new Swiper(".other-common-slider", {
+const recommendationSlider = new Swiper(".recommendation-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
     loop: true,
     navigation: {
-        nextEl: ".recommendation .next",
-        prevEl: ".recommendation .prev",
+        nextEl: ".recommendation-slider .next",
+        prevEl: ".recommendation-slider .prev",
     },
     breakpoints: {
         320: {
@@ -132,13 +132,13 @@ const recommendationSlider = new Swiper(".other-common-slider", {
 
 
 //===========  Best Deal Slider  ===========
-const bestDeal = new Swiper(".other-common-slider", {
+const bestDeal = new Swiper(".best-deal-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
     loop: true,
     navigation: {
-        nextEl: ".best-deal .next",
-        prevEl: ".best-deal .prev",
+        nextEl: ".best-deal-slider .next",
+        prevEl: ".best-deal-slider .prev",
     },
     breakpoints: {
         320: {
@@ -157,13 +157,13 @@ const bestDeal = new Swiper(".other-common-slider", {
 });
 
 //===========  Best Deal Slider  ===========
-const mapview = new Swiper(".other-common-slider", {
+const mapview = new Swiper(".map-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
     loop: true,
     navigation: {
-        nextEl: ".map-view .next",
-        prevEl: ".map-view .prev",
+        nextEl: ".map-slider .next",
+        prevEl: ".map-slider .prev",
     },
     breakpoints: {
         320: {
