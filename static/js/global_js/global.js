@@ -671,3 +671,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 })
+
+
+
+
+
+
+
+
+
+function mobileSidebar() {
+    const menuBtn = document.getElementById("m-header-menu-btn");
+    const sidebar = document.getElementById("m-header-sidebar");
+    const closeBtn = document.getElementById("m-header-sidebar-close");
+    const body = document.querySelector('body');
+
+    // validation
+    if (!menuBtn || !sidebar || !closeBtn) {
+        console.log(" Element missing!");
+        return;
+    }
+
+    // ====== Close Function ======
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+        body.classList.remove('active'); // overlay off
+        document.body.style.overflow = "";
+    }
+
+    // ====== Open Sidebar ======
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sidebar.classList.add("active");
+        body.classList.add('active'); // overlay on
+        document.body.style.overflow = "hidden";
+    });
+
+    // ====== Close Button ======
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeSidebar();
+    });
+
+    // ====== Outside Click Close ======
+    document.addEventListener("click", (event) => {
+        const clickedInsideSidebar = sidebar.contains(event.target);
+        const clickedMenuBtn = menuBtn.contains(event.target);
+
+        if (!clickedInsideSidebar && !clickedMenuBtn && sidebar.classList.contains("active")) {
+            closeSidebar();
+        }
+    });
+}
+
+mobileSidebar();
