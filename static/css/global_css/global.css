@@ -1434,15 +1434,219 @@ footer .footer-bottom .left {
 
 
 
+
+    /*
+    =====================  Mobile Sidebar Here  =====================
+    */
     .m-sidebar {
         display: block;
         position: fixed;
         left: 0;
         top: 0;
         z-index: 4;
-        height: 100dvh;
         width: 290px;
-        padding: 18px 14px 18px 14px;
+        height: 100dvh;
+        min-height: 100dvh;
+        padding: 16px 14px 16px 14px;
         background-color: var(--my-white);
+        box-shadow: var(--shadow-all-lg);
+        overflow-y: auto;
     }
+
+
+    .m-sidebar .link {
+        font-size: 14px;
+        color: #0F4638;
+        font-weight: 600;
+    }
+
+    .m-sidebar .m-search {
+        border: 1px solid transparent;
+        border-radius: var(--radius-pill);
+        background:
+            linear-gradient(#fff, #fff) padding-box,
+            linear-gradient(90deg, rgba(252, 90, 49, 0.3), rgba(15, 70, 56, 0.3)) border-box;
+        background-clip: padding-box, border-box;
+        border-radius: var(--radius-pill);
+        max-width: 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        padding: 0px 4px;
+    }
+
+
+
+    .m-sidebar .m-search i {
+        font-size: 12px;
+        color: #858A93;
+        display: block;
+        padding: 4px 4px;
+    }
+
+    .m-sidebar .m-search input {
+        border: none;
+        font-size: 10px;
+        line-height: 100%;
+        width: 100%;
+        padding: 2px 4px;
+    }
+
+    .m-sidebar .m-search input::placeholder {
+        font-size: 10px !important;
+    }
+
+    .m-sidebar .m-search input:focus {
+        outline: none;
+    }
+
+
+    /* Book signin */
+    .m-sidebar .book-signin {
+        padding: 14px 10px;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .m-sidebar .book-signin::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 6px;
+        background: linear-gradient(85.93deg, #FC5A31 -52.39%, #FFFFFF 49.56%, #0F4638 117.56%);
+        opacity: .44;
+        z-index: 1;
+    }
+
+    .m-sidebar .book-signin .content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .m-sidebar .book-signin .title {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--my-primary-color);
+    }
+
+    .m-sidebar .book-signin .btn {
+        font-size: 8px;
+        padding: 4px;
+        border-radius: 4px;
+        border: .5px solid var(--my-secondary-color);
+        border: 0.25px solid #FC5A31;
+        width: 100%;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .m-sidebar .book-signin .left {
+        background-color: var(--my-white);
+        color: var(--my-primary-color);
+    }
+
+    .m-sidebar .book-signin .right {
+        background-color: var(--my-secondary-color);
+        color: var(--my-white);
+    }
+
+    .m-sidebar .book-signin .right:hover {
+        background-color: var(--my-primary-color);
+    }
+
+
+    /* Menus */
+    .m-sidebar .menus {
+        margin-top: 14px;
+    }
+
+    .m-sidebar .menus .setting-menu {
+        padding: 14px 0;
+        border-bottom: 1px solid #FC593140;
+    }
+
+    .m-sidebar .menus .title {
+        font-size: 12px;
+        font-weight: 500;
+        color: #00000080;
+    }
+
+    /* m-nav-item */
+    .m-sidebar a.m-nav-item,
+    .m-sidebar .m-nav-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        width: 100%;
+    }
+
+    .m-sidebar .m-nav-item.setting {
+        justify-content: space-between;
+    }
+
+    .m-sidebar .m-nav-item img {
+        width: 20px;
+    }
+
+    .m-sidebar .m-nav-item .content,
+    .m-sidebar a.m-nav-item .content {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--my-text-secondary);
+    }
+
+
+    .m-sidebar .app-text {
+        font-weight: 600;
+        color: var(--my-text-secondary);
+        font-size: 14px;
+    }
+
+    .m-sidebar .m-nav-item.setting .hover-dropdown {
+        display: none;
+    }
+
+    .m-sidebar .m-nav-item.setting:hover .hover-dropdown {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 16px;
+        border: 1px solid var(--my-bg-white-off);
+        width: 100%;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+
+    .m-sidebar .menus .travel-options {
+        padding-top: 12px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #FC593140;
+    }
+
+    .m-sidebar .menus .travel-options .m-nav-item .content,
+    .m-sidebar .menus .more .m-nav-item .content {
+        font-weight: 600;
+    }
+
+
+
+    /* more */
+    .m-sidebar .menus .more {
+        padding-top: 20px;
+    }
+
+    .m-sidebar .app-icon img {
+        width: 36px;
+    }
+
+    .m-sidebar .app-icon {
+        padding: 2px;
+        border: 1px solid var(--my-secondary-color);
+        border-radius: 4px;
+    }
+
 }
