@@ -1432,4 +1432,17 @@ footer .footer-bottom .left {
         padding: 0 2px;
     }
 
+
+
+    .m-sidebar {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 4;
+        height: 100dvh;
+        width: 290px;
+        padding: 18px 14px 18px 14px;
+        background-color: var(--my-white);
+    }
 }
