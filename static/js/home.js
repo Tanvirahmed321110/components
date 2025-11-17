@@ -256,14 +256,14 @@ var swiper = new Swiper(".brandSwiper", {
     loop: true,
     autoplay: {
         delay: 0, // no gap between transitions
-        disableOnInteraction: false,
+        disableOnInteraction: true,
     },
     speed: 5000, // higher = slower, smoother
     freeMode: true, // enables smooth continuous movement
-    freeModeMomentum: false, // keeps constant speed
-    allowTouchMove: false, // optional: prevent dragging
+    freeModeMomentum: true, // keeps constant speed
+    allowTouchMove: true, // optional: prevent dragging
     breakpoints: {
-        320: { slidesPerView: 2, spaceBetween: 10 },
+        320: { slidesPerView: 3, spaceBetween: 10 },
         576: { slidesPerView: 3, spaceBetween: 15 },
         768: { slidesPerView: 4, spaceBetween: 20 },
         1024: { slidesPerView: 5, spaceBetween: 30 }
@@ -272,7 +272,7 @@ var swiper = new Swiper(".brandSwiper", {
 
 
 
-//===========  Offer Slider For Mobile Here  ===========
+//===========  Offer Slider For Mobile  Here  ===========
 var smallBannerSlider = new Swiper('.small-banners', {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -281,7 +281,7 @@ var smallBannerSlider = new Swiper('.small-banners', {
         delay: 1500, // slow auto slide
         disableOnInteraction: false
     },
-    speed: 800, // smooth slow animation
+    speed: 1500, // smooth slow animation
 });
 
 
