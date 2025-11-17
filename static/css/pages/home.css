@@ -1971,6 +1971,66 @@
     }
 
 
+    /*===============  Our Achivements  ===================*/
+    .our-achivements .head .section-title,
+    .our-achivements .section-sub-title {
+        text-align: left;
+    }
+
+    .our-achivements .achivement-body .item .title-sm {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+    }
+
+    .our-achivements .items .item {
+        padding: 14px 0;
+        gap: 8px;
+    }
+
+    .our-achivements .items .item .icon {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--radius-round);
+    }
+
+    .our-achivements .item .section-title {
+        font-weight: var(--fw-600);
+        color: var(--my-primary-color);
+        font-size: var(--fs-3xl);
+    }
+
+    .our-achivements .bg-img {
+        background-image: unset;
+        height: unset;
+        margin: 0;
+    }
+
+    .our-achivements {
+
+        background-color: var(--my-white-off);
+    }
+
+    .our-achivements .achivement-body {
+        background-image: url('../../images/achivment-mobile.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .our-achivements .my-container {
+        padding: 0;
+    }
+
+    .our-achivements .my-container .head,
+    .our-achivements .my-container .items {
+        padding: 0 16px;
+    }
+
+
+
     .get-touch .get-touch-area {
         box-shadow: unset !important;
         background-color: #FAFAFA;
