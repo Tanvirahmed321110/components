@@ -1971,6 +1971,46 @@
     }
 
 
+    .our-blog-mobile .blog-items .item {
+        padding: 0;
+        background-color: #F5F5F5;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .our-blog-mobile .blog-items .item .img-wrap img {
+        height: 130px;
+    }
+
+    .our-blog-mobile .blog-items .item .content {
+        padding: 8px;
+    }
+
+    .our-blog-mobile .blog-items .item .blog-name {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    .our-blog-mobile .blog-items .author img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .our-blog-mobile .blog-items .item .name {
+        font-size: var(--fs-xs);
+        color: var(--my-text-primary);
+        line-height: 16px;
+    }
+
+    .our-blog-mobile .blog-items .item .post-date {
+        font-size: 10px;
+        color: #535862;
+    }
+
+
     /*===============  Our Achivements  ===================*/
     .our-achivements .head .section-title,
     .our-achivements .section-sub-title {
