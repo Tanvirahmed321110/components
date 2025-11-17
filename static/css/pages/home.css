@@ -1870,6 +1870,24 @@
 ================================================
 */
 @media (max-width: 768px) {
+    .section-title {
+        font-size: var(--fs-xxl);
+        font-weight: var(--fw-600);
+        line-height: var(--line-height-xl);
+        letter-spacing: 0%;
+        color: var(--my-text-primary);
+    }
+
+    .section-sub-title {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-400);
+        line-height: 20px;
+        color: var(--my-text-tertiary);
+    }
+
+    .section-main {
+        padding: 32px 0;
+    }
 
     /* Worldwide Hot Dest */
     .hot-destination .search-input {
@@ -1913,6 +1931,7 @@
 
 
 
+
     /*===============  Offer Section For MObile  ===================*/
     .offer-section-mobile {
         background-color: var(--my-bg-secondary);
@@ -1950,4 +1969,80 @@
         right: 8px;
         width: 16px;
     }
+
+
+    .get-touch .get-touch-area {
+        box-shadow: unset !important;
+        background-color: #FAFAFA;
+        padding: 32px 0;
+        padding-bottom: 40px;
+    }
+
+    .get-touch .wrap {
+        max-width: 280px;
+    }
+
+    .get-touch .section-title {
+        font-size: var(--fs-xl);
+    }
+
+    .get-touch p {
+        font-size: var(--fs-lg);
+        line-height: 28px;
+    }
+
+    .get-touch .get-touch-area .my-btn {
+        padding: 12px 18px;
+        border-radius: var(--radius-pill);
+        background-color: var(--my-primary-color);
+    }
+
+    .get-touch .get-touch-area .my-btn::after {
+        background-color: var(--my-secondary-color);
+    }
+
+    .subcribe-sec .right-side .img-wrapper {
+        height: unset;
+        top: 9px;
+        left: 0;
+    }
+
+    .subcribe-area .left-side .desc {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-400);
+    }
+
+    .subcribe-sec .right-side .img-wrapper img {
+        height: 450px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .right-side {
+        margin-top: 32px;
+    }
+
+    .subcribe-sec .subcribe-area {
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .left-side {
+        padding: 0px;
+        padding-top: 16px;
+        height: auto;
+    }
+
+    .subcribe-sec .left-side .section-title {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        max-width: 280px;
+    }
+
+    .subcribe-sec .left-side .section-sub-title {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        max-width: 240px;
+    }
+
 }

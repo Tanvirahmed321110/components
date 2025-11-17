@@ -1344,16 +1344,45 @@ footer .footer-bottom .left {
 }
 
 @media(max-width:768px) {
+
+    :root {
+        /*______  Font Size  ______ */
+        --fs-low: 0.625rem;
+        /* 10px */
+        --fs-xs: 0.75rem;
+        /* 12px */
+        --fs-sm: 0.875rem;
+        /* 14px */
+        --fs-md: 1rem;
+        /* 16px */
+        --fs-lg: 1.125rem;
+        /* 18px */
+        --fs-xl: 1.25rem;
+        /* 20px */
+        --fs-xxl: 1.5rem;
+        /* 24px */
+        --fs-3xl: 2rem;
+        /* 32px */
+        --fs-4xl: 2.25rem;
+        /* 36px */
+        --fs-5xl: 2.5rem;
+        /* 40px */
+    }
+
+    .section-main {
+        padding: 32px 0;
+    }
+
     .section-title {
-        font-size: 16px !important;
+        font-size: var(--fs-xxl);
         font-weight: var(--fw-600);
-        line-height: var(--line-height-sm) !important;
+        line-height: var(--line-height-xl);
         letter-spacing: 0%;
         color: var(--my-text-primary);
     }
 
     .section-sub-title {
-        font-size: 14px;
+        font-size: var(--fs-sm);
         font-weight: var(--fw-400);
         line-height: 20px;
         color: var(--my-text-tertiary);
@@ -1764,4 +1793,62 @@ footer .footer-bottom .left {
         flex-direction: column;
     }
 
+
+
+
+
+
+    /*
+    ============  Footer Start Here  ===========
+    */
+    footer {
+        padding: 32px 0;
+    }
+
+    footer .footer-top .nav-item-title {
+        position: relative;
+        width: fit-content;
+        color: #717680;
+        font-size: var(--fs-sm);
+    }
+
+    footer .footer-top .nav-item-title::after {
+        background-color: #717680;
+    }
+
+    footer .footer-top .desc {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    footer .footer-bottom {
+        margin-top: 32px;
+    }
+
+    footer .footer-bottom-wrapper {
+        display: grid;
+        padding: 0 16px;
+    }
+
+    footer .footer-bottom-wrapper> :first-child {
+        order: 2;
+    }
+
+    footer .footer-bottom-wrapper> :last-child {
+        order: 1;
+    }
+
+
+
+    footer .footer-bottom-right {
+        align-items: flex-start;
+    }
+
+    footer .footer-social-icons {
+        margin-top: 0;
+    }
+
+    footer .footer-top .left {
+        max-width: 100%;
+    }
 }
