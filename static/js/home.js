@@ -272,6 +272,21 @@ var swiper = new Swiper(".brandSwiper", {
 
 
 
+//===========  Offer Slider For Mobile Here  ===========
+var smallBannerSlider = new Swiper('.small-banners', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 1500, // slow auto slide
+        disableOnInteraction: false
+    },
+    speed: 800, // smooth slow animation
+});
+
+
+
+
 //===========  Trip Plan Slider  Here  ===========
 var swiper = new Swiper(".trip-plan-slider", {
     slidesPerView: 3.5,

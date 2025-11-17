@@ -1908,4 +1908,46 @@
     .search-input input {
         padding: 12px 8px;
     }
+
+
+
+
+
+    /*===============  Offer Section For MObile  ===================*/
+    .offer-section-mobile {
+        background-color: var(--my-bg-secondary);
+        padding-bottom: 16px;
+        height: 220px;
+    }
+
+    .offer-section-mobile .big-banner {
+        display: block;
+    }
+
+    .offer-section-mobile .big-banner img {
+        height: 166px;
+        border-radius: 12px;
+    }
+
+    .offer-section-mobile .small-banners {
+        margin-top: -36px;
+        padding: 0 8px;
+    }
+
+    .offer-section-mobile .small-banners img {
+        border-radius: 8px;
+        border: 1px solid var(--my-white);
+        object-fit: cover;
+        height: 74px;
+    }
+
+    /*===============  Hot Destination  ===================*/
+    .hot-destination .search-input input {
+        border-radius: var(--radius-pill);
+    }
+
+    .hot-destination .search-input svg {
+        right: 8px;
+        width: 16px;
+    }
 }

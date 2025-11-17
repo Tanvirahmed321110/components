@@ -1345,9 +1345,9 @@ footer .footer-bottom .left {
 
 @media(max-width:768px) {
     .section-title {
-        font-size: 16px;
+        font-size: 16px !important;
         font-weight: var(--fw-600);
-        line-height: 100%;
+        line-height: var(--line-height-sm) !important;
         letter-spacing: 0%;
         color: var(--my-text-primary);
     }
