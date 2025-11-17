@@ -1113,6 +1113,9 @@
 }
 
 
+.testimonial .hide-scroll-wrapper {
+    justify-content: center;
+}
 
 .testimonial .testimonial-swiper {
     position: relative;
@@ -1745,6 +1748,7 @@
         min-width: unset;
     }
 
+
     .testimonial .for-md-1 .slider-item {
         min-width: calc(100% - 0px);
         width: 100%;
@@ -1971,6 +1975,42 @@
     }
 
 
+    /*===============  Testimonial  ===================*/
+    .testimonial {
+        background-color: #f5f5f5;
+    }
+
+    .testimonial .hide-scroll-wrapper {
+        justify-content: unset;
+    }
+
+
+    .mobile-review .see-all .my-btn.my-outline-btn {
+        width: 100%;
+        color: var(--my-primary-color);
+        border-color: #D5D7DA;
+    }
+
+    .testimonial .slider-controls {
+        display: none;
+    }
+
+    .testimonial .tab-btn {
+        border-color: var(--my-border-primary) !important;
+    }
+
+    .testimonial .tab-btn.active {
+        border-color: var(--my-primary-color) !important;
+    }
+
+    .testimonial .item {
+        padding: 16px;
+        background-color: var(--my-white);
+        border: none;
+    }
+
+
+    /*===============  Blogs  ===================*/
     .our-blog-mobile .blog-items .item {
         padding: 0;
         background-color: #F5F5F5;

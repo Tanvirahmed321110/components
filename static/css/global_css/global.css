@@ -1369,6 +1369,30 @@ footer .footer-bottom .left {
         /* 40px */
     }
 
+    .m-out-line-btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: var(--radius-pill);
+        color: var(--my-primary-color);
+        font-size: var(--fs-md);
+        line-height: 24px;
+        border: 1px solid #D5D7DA;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .section-main.other-bg {
+        padding: 32px 0;
+    }
+
+    .hide-scroll-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .text {
+        text-wrap: nowrap;
+    }
+
     .section-main {
         padding: 32px 0;
     }

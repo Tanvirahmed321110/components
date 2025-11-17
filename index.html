@@ -14556,11 +14556,12 @@
 
                                 <!--=======||   Tab Buttons  Start Here  ||=======-->
                                 <div class="my-flex-center">
-                                    <ul class="tab-btns my-d-flex tab-btns-w tab-btns-2  my-mt-16" role="tablist">
+                                    <ul class="tab-btns hide-scroll-wrapper my-d-flex tab-btns-w tab-btns-2  my-mt-16"
+                                        role="tablist">
                                         <!--#Note: [will active class add when use click tab button (.tab-btn.active) ] -->
                                         <li>
                                             <button class="tab-btn active" data-tab="1" aria-selected="true" role="tab">
-                                                Google
+                                                <span class="text">Google</span>
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -14583,7 +14584,7 @@
 
                                         <li>
                                             <button class="tab-btn " data-tab="2" aria-selected="false" role="tab">
-                                                Facebook
+                                                <span class="tex">Facebook</span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <rect width="24" height="24" fill="#FAFAFA" />
@@ -14607,7 +14608,7 @@
 
                                         <li>
                                             <button class="tab-btn" data-tab="3" aria-selected="false" role="tab">
-                                                Trip Advisor
+                                                <span class="text">Trip Advisor</span>
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.222656" width="24" height="24" fill="#FAFAFA" />
@@ -14632,14 +14633,12 @@
                                                         fill="white" />
                                                 </svg>
 
-
-
                                             </button>
                                         </li>
 
                                         <li>
                                             <button class="tab-btn" data-tab="4" aria-selected="false" role="tab">
-                                                Trust Pilot
+                                                <span class="text">Trust Pilot</span>
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.222656" width="24" height="24" fill="#FAFAFA" />
@@ -14652,8 +14651,6 @@
 
                                             </button>
                                         </li>
-
-
                                     </ul>
                                 </div>
                             </div>
@@ -14665,7 +14662,128 @@
                                 <!--#Note: [will active class add then show tab content (.tab-content.active)] -->
                                 <!--===========||   Google Review   ||===========-->
                                 <div class="tab-content active" data-tab="1" role="tabpanel">
-                                    <div class="swiper testimonial-swiper">
+
+
+                                    <!--====================|| For Mobile Review ||===================-->
+                                    <div class="mobile-review desktop-hide mobile-show">
+                                        <div class="items my-flex-column my-gap-8">
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (3).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Tanvir Ahmed </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it. Thnaks a Lot.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (1).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (2).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Laboni Akter </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- See all For Mobile -->
+                                        <div class="my-mt-16 see-all">
+                                            <a class="m-out-line-btn" href="#">See
+                                                More</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!--====================|| For Desktop Review ||===================-->
+                                    <div class="swiper testimonial-swiper mobile-hide">
                                         <div class="swiper-wrapper">
 
 
@@ -14858,7 +14976,126 @@
 
                                 <!--===========||   Facebook Review   ||===========-->
                                 <div class="tab-content" data-tab="2" role="tabpanel">
-                                    <div class="swiper testimonial-swiper">
+                                    <!--====================|| For Mobile Review ||===================-->
+                                    <div class="mobile-review desktop-hide mobile-show">
+                                        <div class="items my-flex-column my-gap-8">
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (2).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Foysal </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it. Thnaks a Lot.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (1).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Sienna Hewitt </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- single item -->
+                                            <div class="item">
+                                                <ul class="my-d-flex my-gap-1 star my-align-center ">
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                    <li class="my-fs-lg"><i class="ri-star-fill"></i></li>
+                                                </ul>
+
+                                                <!-- Desc -->
+                                                <p class="my-mt-8 my-fs-md my-text-primary">
+                                                    We’ve been using Tourgull to kick start every new project and
+                                                    can’t
+                                                    imagine working without it.
+                                                </p>
+
+                                                <!-- Author -->
+                                                <div class="my-mt-16 my-d-flex my-align-center my-gap-6">
+                                                    <div>
+                                                        <img class="profile-img-lg"
+                                                            src="./static/images/profile (2).png" alt="Google Image"
+                                                            loading="lazy">
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="my-d-flex my-align-center my-gap-2">
+                                                            <h5 class="my-text-primary my-fs-md">Laboni Akter </h5>
+                                                            <img class="my-w-8" src="./static/images/Verified tick.png"
+                                                                alt="Verified Icon" loading="lazy">
+                                                        </div>
+                                                        <div class="my-fs-md">@siennahewitt</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- See all For Mobile -->
+                                        <div class="my-mt-16 see-all">
+                                            <a class="m-out-line-btn" href="#">See
+                                                More</a>
+                                        </div>
+                                    </div>
+
+
+                                    <!--====================|| For Desktop Review ||===================-->
+                                    <div class="swiper testimonial-swiper mobile-hide">
                                         <div class="swiper-wrapper">
 
                                             <!--=====  single review ====-->
