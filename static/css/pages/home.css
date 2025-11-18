@@ -1899,7 +1899,7 @@
     }
 
     .hot-destination .head .left {
-        max-width: 182px;
+        max-width: 196px;
         width: 100%;
     }
 
@@ -1973,6 +1973,12 @@
         right: 8px;
         width: 16px;
     }
+
+    .map-view .section-title {
+        max-width: 270px;
+    }
+
+
 
     .m-trip-plan {
         background-color: #f5f5f5;
@@ -2129,6 +2135,8 @@
     .our-achivements .items .item {
         padding: 14px 0;
         gap: 8px;
+        aspect-ratio: 16 /16;
+        justify-content: center;
     }
 
     .our-achivements .items .item .icon {

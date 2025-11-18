@@ -12177,7 +12177,7 @@
 
                                     <div class="">
                                         <!--=====  Search Input  =====-->
-                                        <div class="search-input my-input-control">
+                                        <div class="search-input my-input-control mobile-hide">
                                             <input type="text" placeholder="Search in Map" aria-label="Search">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -12197,7 +12197,48 @@
 
                             <!--==================||  Body Start Here  ||==================-->
                             <div class="body">
-                                <div class="map my-mt-16 my-tab-section">
+
+                                <!--===============================|| For Mobile ||==============================-->
+                                <div class="desktop-hide mobile-show my-tab-section">
+                                    <div class="my-container">
+
+                                        <!-- Map Here -->
+                                        <div class="map-wrapper my-mt-8">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d742397.5368759931!2d87.0896651!3d24.9781784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1694695650000"
+                                                allowfullscreen="" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade">
+                                            </iframe>
+
+                                            <!-- Location icon here -->
+                                            <!-- <span class="my-secondary-color"><i class="ri-map-pin-fill"></i></span> -->
+
+                                            <!-- Mav view Button -->
+                                            <button class="my-btn shop-map my-gap-4">
+                                                Show map
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#FC5A31"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+
+                                        <!-- Tab button Here -->
+                                        <div class="hide-scroll-wrapper">
+                                            <ul class="tab-btns m-tab-btns">
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!--===============================|| For Desktop ||==============================-->
+                                <div class="map my-mt-16 my-tab-section mobile-hide">
                                     <div class="my-container">
                                         <div class="map-wrapper">
                                             <iframe
@@ -14238,7 +14279,6 @@
                                                 </div>
                                             </div>
 
-
                                         </div>
                                     </div>
 
@@ -14563,11 +14603,13 @@
 
                         <!--==============|| M Trip Plan Items ||============-->
                         <div class="items my-mt-12 my-grid-2 my-gap-10">
-                            <div class="item">
+
+                            <!--===== singel item =====-->
+                            <article class="item">
 
                                 <!-- for image -->
                                 <div class="img-wrap">
-                                    <img src="./static/images/hot-dest (4).jpg" alt="">
+                                    <img src="./static/images/hot-dest (4).jpg" alt="trip plan item" loading="lazy">
                                 </div>
 
                                 <!-- For Content -->
@@ -14575,12 +14617,69 @@
                                     <h3 class="title">Explore USA</h3>
                                     <p class="desc my-mt-3">Browse 50+ ready trips</p>
                                     <div class="my-mt-6">
-                                        <a class="my-btn my-primary-btn " href="#">
+                                        <a href="#" class="my-btn my-primary-btn">
                                             <span class="content">Start Plan</span>
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
+                            <!--===== singel item =====-->
+                            <article class="item">
+
+                                <!-- for image -->
+                                <div class="img-wrap">
+                                    <img src="./static/images/hot-dest (6).jpg" alt="trip plan item" loading="lazy">
+                                </div>
+
+                                <!-- For Content -->
+                                <div class="content">
+                                    <h3 class="title">Explore Nepal</h3>
+                                    <p class="desc my-mt-3">Browse 50+ ready trips</p>
+                                    <div class="my-mt-6">
+                                        <a href="#" class="my-btn my-primary-btn">
+                                            <span class="content">Start Plan</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <!--===== singel item =====-->
+                            <article class="item">
+
+                                <!-- for image -->
+                                <div class="img-wrap">
+                                    <img src="./static/images/hot-dest (2).jpg" alt="trip plan item" loading="lazy">
+                                </div>
+
+                                <!-- For Content -->
+                                <div class="content">
+                                    <h3 class="title">Explore Indonesia</h3>
+                                    <p class="desc my-mt-3">Browse 50+ ready trips</p>
+                                    <div class="my-mt-6">
+                                        <a href="#" class="my-btn my-primary-btn">
+                                            <span class="content">Start Plan</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!--===== singel item =====-->
+                            <article class="item">
+                                <!-- for image -->
+                                <div class="img-wrap">
+                                    <img src="./static/images/hot-dest (1).jpg" alt="trip plan item" loading="lazy">
+                                </div>
+
+                                <!-- For Content -->
+                                <div class="content">
+                                    <h3 class="title">Explore Europe</h3>
+                                    <p class="desc my-mt-3">Browse 50+ ready trips</p>
+                                    <div class="my-mt-6">
+                                        <a href="#" class="my-btn my-primary-btn">
+                                            <span class="content">Start Plan</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
