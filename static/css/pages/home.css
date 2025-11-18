@@ -1874,6 +1874,10 @@
 ================================================
 */
 @media (max-width: 768px) {
+    .tab-contents {
+        margin-top: 16px;
+    }
+
     .section-title {
         font-size: var(--fs-xxl);
         font-weight: var(--fw-600);
@@ -1940,7 +1944,7 @@
     .offer-section-mobile {
         background-color: var(--my-bg-secondary);
         padding-bottom: 16px;
-        height: 220px;
+        /* height: 220px; */
     }
 
     .offer-section-mobile .big-banner {
@@ -1948,7 +1952,7 @@
     }
 
     .offer-section-mobile .big-banner img {
-        height: 166px;
+        /* height: 166px; */
         border-radius: 12px;
     }
 
@@ -1961,7 +1965,7 @@
         border-radius: 8px;
         border: 1px solid var(--my-white);
         object-fit: cover;
-        height: 74px;
+        /* height: 74px; */
     }
 
     /*===============  Hot Destination  ===================*/
