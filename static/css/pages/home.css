@@ -1974,6 +1974,69 @@
         width: 16px;
     }
 
+    .m-trip-plan {
+        background-color: #f5f5f5;
+    }
+
+    .m-trip-plan .head .section-title {
+        max-width: 280px;
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn {
+        background-color: var(--my-primary-color);
+        padding: 12px 16px;
+        font-size: var(--fs-md);
+        font-weight: 600;
+        border-radius: var(--radius-pill);
+        color: var(--my-white);
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn .content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 24px;
+    }
+
+    .m-trip-plan .items .item {
+        border-radius: 12px;
+        background-color: var(--my-white);
+        overflow: hidden;
+    }
+
+    .m-trip-plan .items .item img {
+        width: 100%;
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+    }
+
+
+    .m-trip-plan .items .item .content {
+        padding: 8px;
+    }
+
+    .m-trip-plan .items .item .title {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+        line-height: 100%;
+    }
+
+
+    /* Item button */
+    .m-trip-plan .items .item .my-btn {
+        background-color: var(--my-primary-color);
+        font-size: var(--fs-sm);
+        line-height: var(--fs-sm);
+        border-radius: var(--radius-pill);
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-weight: 600;
+    }
+
+    .m-trip-plan .items .item .my-btn .content {
+        padding: 0;
+    }
 
     /*===============  Testimonial  ===================*/
     .testimonial {
@@ -2019,7 +2082,8 @@
     }
 
     .our-blog-mobile .blog-items .item .img-wrap img {
-        height: 130px;
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
     }
 
     .our-blog-mobile .blog-items .item .content {
@@ -2111,6 +2175,8 @@
 
 
 
+
+    /*===============  Get Touch  ===================*/
     .get-touch .get-touch-area {
         box-shadow: unset !important;
         background-color: #FAFAFA;
