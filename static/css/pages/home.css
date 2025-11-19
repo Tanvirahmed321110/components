@@ -707,6 +707,10 @@
     padding-bottom: 40px;
 }
 
+.m-recommendation .m-tour-cart {
+    background-color: var(--my-white);
+}
+
 .recommendation-area .item:hover {
     background-color: var(--my-white-off);
 }
@@ -751,6 +755,11 @@
 */
 .hot-destination {
     padding: 60px 0;
+}
+
+.hot-destination .section-title {
+    font-size: var(--fs-md);
+    line-height: var(--line-height-sm);
 }
 
 .hot-destination .head .left {
@@ -1969,6 +1978,11 @@
         aspect-ratio: 16/11;
     }
 
+    .m-best-deal .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-sm);
+    }
+
 
 
 
@@ -1982,12 +1996,23 @@
         width: 16px;
     }
 
+
+    /*===============  Recommendation  ===================*/
+    .m-recommendation {
+        background-color: #f5f5f5;
+    }
+
+    .m-recommendation .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-md);
+    }
+
     .map-view .section-title {
         max-width: 270px;
     }
 
 
-
+    /*===============  Trip Plan  ===================*/
     .m-trip-plan {
         background-color: #f5f5f5;
     }
