@@ -1372,6 +1372,20 @@ footer .footer-bottom .left {
         --section-bg: #f5f5f5;
     }
 
+    .search-input svg,
+    .search-input i,
+    .search-input span {
+        right: 2px;
+    }
+
+    .search-input input {
+        padding: 10px 8px;
+    }
+
+    .search-input input::placeholder {
+        font-size: var(--fs-low);
+    }
+
     .tab-contents {
         margin-top: 16px;
     }
@@ -1517,6 +1531,27 @@ footer .footer-bottom .left {
         padding-bottom: 16px !important;
     }
 
+
+    header .m-search-menu {
+        position: relative;
+        overflow: hidden;
+    }
+
+    header .m-search-menu .left-icon svg {
+        position: absolute;
+        left: -35px;
+        top: -66px;
+        z-index: 1;
+    }
+
+    header .search-menu-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    header .search-menu-wrapper .search {
+        background-color: var(--my-white);
+    }
 
     header .header-main .item {
         font-size: 12px;
