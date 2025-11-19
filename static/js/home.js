@@ -311,6 +311,12 @@ var swiper = new Swiper(".trip-plan-slider", {
 
 
 
+
+
+
+
+
+
 //===========  Customer Tab Section  ===========
 document.querySelectorAll(".my-tab-section").forEach(section => {
     const tabBtns = section.querySelectorAll(".tab-btn");

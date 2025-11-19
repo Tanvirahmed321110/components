@@ -725,3 +725,35 @@ function mobileSidebar() {
 }
 
 mobileSidebar();
+
+
+
+
+
+// for mobile sidebar dropdown
+function mSidebarDropdwonF() {
+    const btns = document.querySelectorAll('.m-nav-item.setting .btn');
+
+    // if no .btn found → stop function
+    if (btns.length === 0) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation(); // stop bubbling
+
+            const parent = this.closest('.m-nav-item.setting');
+            if (parent.length === 0) return
+
+            //  close all other dropdowns
+            document.querySelectorAll('.m-nav-item.setting').forEach(item => {
+                if (item !== parent) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked one
+            parent.classList.toggle('active');
+        });
+    });
+}
+mSidebarDropdwonF()
