@@ -757,10 +757,6 @@
     padding: 60px 0;
 }
 
-.hot-destination .section-title {
-    font-size: var(--fs-md);
-    line-height: var(--line-height-sm);
-}
 
 .hot-destination .head .left {
     max-width: 490px;
@@ -1934,6 +1930,11 @@
         font-size: 12px;
     }
 
+    .hot-destination .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-sm);
+    }
+
 
     .hot-destination .search-input input::placeholder {
         font-size: var(--fs-xs) !important;
@@ -1972,6 +1973,15 @@
         /* height: 74px; */
     }
 
+    .map-view .shop-map {
+        bottom: 8px;
+        left: 8px;
+        color: var(--my-primary-color);
+    }
+
+    .map-view .shop-map svg path {
+        stroke: var(--my-primary-color);
+    }
 
     .m-best-deal .img-wrap img,
     .m-map-area .img-wrap img {
@@ -2150,7 +2160,7 @@
 
     .our-blog-mobile .blog-items .item .post-date {
         font-size: 10px;
-        color: #535862;
+        color: var(--my-text-tertiary);
     }
 
 

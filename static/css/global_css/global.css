@@ -1370,6 +1370,10 @@ footer .footer-bottom .left {
 
         --my-text-primary: #1A1A1A;
         --section-bg: #f5f5f5;
+        --m-gray: #858A93;
+        --m-gray-dark: #717680;
+        --m-border-primary: #D0D0D0;
+        --m-border-secondary: #D5D7DA;
     }
 
     .search-input svg,
@@ -1392,9 +1396,9 @@ footer .footer-bottom .left {
 
     .m-tab-btns .tab-btn {
         background-color: transparent;
-        border: 1px solid #D0D0D0;
+        border: 1px solid var(--m-border-primary);
         padding: 6px 10px;
-        color: #858A93;
+        color: var(--m-gray);
         border-radius: var(--radius-pill);
         font-size: var(--fs-sm);
         font-weight: 500;
@@ -1469,7 +1473,7 @@ footer .footer-bottom .left {
 
     .m-car-cart .content .sub-text {
         font-size: var(--fs-low);
-        color: #858A93;
+        color: var(--m-gray);
     }
 
     .m-car-cart .content .name {
@@ -1497,7 +1501,7 @@ footer .footer-bottom .left {
     }
 
     .m-car-cart .content .total-review {
-        color: #858A93;
+        color: var(--m-gray);
     }
 
     .m-car-cart .rating {
@@ -1521,7 +1525,7 @@ footer .footer-bottom .left {
     }
 
     .m-tour-cart .content .top-text {
-        color: #858A93;
+        color: var(--m-gray);
         font-weight: 400;
         font-size: 10px;
     }
@@ -1540,7 +1544,7 @@ footer .footer-bottom .left {
     }
 
     .m-tour-cart .content .total-review {
-        color: #858A93;
+        color: var(--m-gray);
     }
 
     .m-tour-cart .rating {
@@ -1735,7 +1739,7 @@ footer .footer-bottom .left {
 
     .m-sidebar .m-search i {
         font-size: 12px;
-        color: #858A93;
+        color: var(--m-gray);
         display: block;
         padding: 4px 4px;
     }
@@ -1822,6 +1826,8 @@ footer .footer-bottom .left {
         border-bottom: 1px solid #FC593140;
     }
 
+
+
     .m-sidebar .menus .title {
         font-size: 12px;
         font-weight: 500;
@@ -1873,8 +1879,63 @@ footer .footer-bottom .left {
         width: 100%;
         border-radius: 4px;
         background-color: white;
+        overflow-x: auto;
+        width: 100%;
+        z-index: 2;
+        padding: 12px;
+        box-shadow: var(--shadow-all-sm);
+        border-radius: var(--radius-md);
     }
 
+    .m-sidebar .m-nav-item.setting .hover-dropdown .wrap {
+        max-width: 1200px;
+    }
+
+    .m-sidebar .hover-dropdown .item {
+        padding: 8px;
+        border-radius: var(--radius-sm);
+        min-width: 150px;
+    }
+
+    .m-sidebar .hover-dropdown .item.active {
+
+        border: 1px solid var(--my-white-off);
+    }
+
+
+    /* rotate animation */
+    .m-nav-item.setting .btn svg {
+        transition: transform 0.3s ease;
+    }
+
+    /* when active */
+    .m-nav-item.setting.active .btn svg {
+        transform: rotate(180deg);
+    }
+
+    /* dropdown animation */
+    .m-nav-item.setting .hover-dropdown {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    .m-nav-item.setting.active .hover-dropdown {
+        max-height: 300px;
+        /* adjust as needed */
+        opacity: 1;
+    }
+
+
+
+
+
+    .m-sidebar .hover-dropdown .text {
+        color: var(--my-text-primary);
+        font-size: var(--fs-xs);
+        font-weight: var(--fw-600);
+    }
 
     .m-sidebar .menus .travel-options {
         padding-top: 12px;
@@ -1968,11 +2029,11 @@ footer .footer-bottom .left {
 
     .search-menu-wrapper .search {
         font-size: 16px;
-        color: #858A93;
+        color: var(--m-gray);
     }
 
     .search-menu-wrapper .search input::placeholder {
-        color: #858A93;
+        color: var(--m-gray);
     }
 
     .search-menu-wrapper .search input:focus {
