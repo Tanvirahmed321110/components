@@ -271,6 +271,7 @@
 
 .hotel-cart .cart-img {
     width: 100%;
+    cursor: pointer;
 }
 
 .hotel-cart .cart-img img {
@@ -391,7 +392,7 @@
     height: 490px;
     border-radius: var(--radius-xxl);
     position: relative;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .tour-cart .cart-img {
@@ -979,10 +980,10 @@ header .profile-dropdown .head {
 
 .swiper.other-common-slider .right-slider-arrows {
     position: absolute;
-    top: 50%;
+    top: 44%;
     left: 50%;
     z-index: 5;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -44%);
     width: 98%;
     justify-content: space-between;
 }

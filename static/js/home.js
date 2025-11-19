@@ -84,7 +84,9 @@ const blogSwiper = new Swiper(".blog-swiper", {
 const recentView = new Swiper(".recently-view-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".recently-view-slider .next",
         prevEl: ".recently-view-slider .prev",
@@ -109,7 +111,9 @@ const recentView = new Swiper(".recently-view-slider", {
 const recommendationSlider = new Swiper(".recommendation-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".recommendation-slider .next",
         prevEl: ".recommendation-slider .prev",
@@ -135,7 +139,9 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
 const bestDeal = new Swiper(".best-deal-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".best-deal-slider .next",
         prevEl: ".best-deal-slider .prev",
@@ -156,11 +162,13 @@ const bestDeal = new Swiper(".best-deal-slider", {
     },
 });
 
-//===========  Best Deal Slider  ===========
+//===========  Map Slider  ===========
 const mapview = new Swiper(".map-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".map-slider .next",
         prevEl: ".map-slider .prev",
@@ -190,7 +198,9 @@ const mapview = new Swiper(".map-slider", {
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".next",
         prevEl: ".prev",
@@ -207,7 +217,9 @@ const testimonialSwiper = new Swiper(".testimonial-swiper", {
 const slider_top = new Swiper(".slider-top .top", {
     speed: 1000,
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".slider-top .swiper-button-next",
         prevEl: ".slider-top .swiper-button-prev",
@@ -227,7 +239,9 @@ const slider_top = new Swiper(".slider-top .top", {
 //==========  Hero2 Slider Bottom  ==========
 const slider_bottom = new Swiper(".slider-bottom .bottom", {
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     speed: 1000,
     pagination: {
         el: ".slider-bottom .swiper-pagination",
@@ -253,7 +267,9 @@ const slider_bottom = new Swiper(".slider-bottom .bottom", {
 var swiper = new Swiper(".brandSwiper", {
     slidesPerView: 5,
     spaceBetween: 30,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     autoplay: {
         delay: 0, // no gap between transitions
         disableOnInteraction: true,
@@ -307,9 +323,6 @@ var swiper = new Swiper(".trip-plan-slider", {
         }
     }
 });
-
-
-
 
 
 
