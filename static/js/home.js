@@ -415,3 +415,98 @@ document.querySelectorAll(".my-tab-section").forEach(section => {
         });
     });
 });
+
+
+
+//==========  For open mobile bottom slider  ===========
+function mBottomSidebar() {
+    const sidebarOpenBtn = document.getElementById('m-all-menu-btn');
+    const sidebar = document.getElementById('m-bottom-sidebar');
+    const closeBtn = document.getElementById('m-bottom-close');
+    const body = document.body;
+
+    if (!sidebarOpenBtn || !sidebar) {
+        console.warn("Button or Sidebar not found!");
+        return;
+    }
+
+    // Open function
+    function openSidebar() {
+        sidebar.classList.add("active");
+        body.classList.add("active");
+    }
+
+    // Close function
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+        body.classList.remove("active");
+    }
+
+    // Button click → open
+    sidebarOpenBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openSidebar();
+        body.style.overflow = "hidden";
+    });
+
+    // Close button click
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeSidebar();
+            body.style.overflow = "unset";
+        });
+    }
+
+    // Prevent clicks inside the sidebar from closing it
+    sidebar.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    // Click outside → close sidebar
+    document.addEventListener("click", () => {
+        if (sidebar.classList.contains("active")) {
+            closeSidebar();
+        }
+    });
+}
+
+mBottomSidebar();
+
+
+// Mobile bottom sidebar
+function initGridListToggle() {
+    // Get elements
+    const gridView = document.querySelector('.m-bottom-sidebar .wrapper .grid-view')
+    const listView = document.querySelector('.m-bottom-sidebar .wrapper .list-view')
+    const gridBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .grid-btn')
+    const listBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .list-btn')
+
+    // Guard clause: stop if any element is missing
+    if (!gridView || !listView || !gridBtn || !listBtn) return;
+    // Function to show grid view
+    const showGridView = () => {
+        gridView.style.display = 'block';
+        listView.style.display = 'none';
+        gridBtn.classList.add('active');
+        listBtn.classList.remove('active');
+    };
+
+    // Function to show list view
+    const showListView = () => {
+        gridView.style.display = 'none';
+        listView.style.display = 'block';
+        listBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+    };
+
+    // Initialize default view
+    showGridView();
+
+    // Add event listeners
+    gridBtn.addEventListener('click', showGridView);
+    listBtn.addEventListener('click', showListView);
+}
+
+// Usage
+initGridListToggle();
