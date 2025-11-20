@@ -757,3 +757,48 @@ function mSidebarDropdwonF() {
     });
 }
 mSidebarDropdwonF()
+
+
+
+
+
+// Mobile bottom sidebar
+function initGridListToggle() {
+    console.log(2)
+    // Get elements
+    const gridView = document.querySelector('.m-bottom-sidebar .wrapper .grid-view')
+    const listView = document.querySelector('.m-bottom-sidebar .wrapper .list-view')
+    const gridBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .grid-btn')
+    const listBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .list-btn')
+    console.log(gridView, listView, gridBtn, listBtn)
+
+    console.log(2)
+    // Guard clause: stop if any element is missing
+    if (!gridView || !listView || !gridBtn || !listBtn) return;
+    // Function to show grid view
+    const showGridView = () => {
+        gridView.style.display = 'block';
+        listView.style.display = 'none';
+        gridBtn.classList.add('active');
+        listBtn.classList.remove('active');
+    };
+
+    // Function to show list view
+    const showListView = () => {
+        gridView.style.display = 'none';
+        listView.style.display = 'block';
+        listBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+    };
+
+    // Initialize default view
+    showGridView();
+
+    // Add event listeners
+    gridBtn.addEventListener('click', showGridView);
+    listBtn.addEventListener('click', showListView);
+    console.log('done')
+}
+
+// Usage
+initGridListToggle();

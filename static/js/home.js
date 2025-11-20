@@ -97,7 +97,7 @@ const recentView = new Swiper(".recently-view-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -123,8 +123,8 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
             slidesPerView: 1.4, // Mobile
             spaceBetween: 12,
         },
-        991: {
-            slidesPerView: 1.3, // Tablet
+        768: {
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -152,7 +152,7 @@ const bestDeal = new Swiper(".best-deal-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
