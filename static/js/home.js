@@ -474,7 +474,7 @@ function mBottomSidebar() {
 mBottomSidebar();
 
 
-// Mobile bottom sidebar
+//=========  Mobile bottom sidebar  =========
 function initGridListToggle() {
     // Get elements
     const gridView = document.querySelector('.m-bottom-sidebar .wrapper .grid-view')
