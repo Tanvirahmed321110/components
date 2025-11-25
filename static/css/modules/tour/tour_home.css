@@ -239,6 +239,11 @@ header .module-header-main .m-item .module-h-dropdwon .d-item:hover {
 /*
 ======  Search  Button  ======
 */
+.form-wrap {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .g-hero-area .search-b {
     padding: 0 54px;
 }
@@ -248,8 +253,11 @@ header .module-header-main .m-item .module-h-dropdwon .d-item:hover {
 }
 
 .search-group.active {
-    display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding-left: 90px;
+    padding-right: 32px;
 
 }
 
@@ -258,48 +266,70 @@ header .module-header-main .m-item .module-h-dropdwon .d-item:hover {
     width: 100%;
     position: relative;
     background-color: var(--my-white);
-    border: 1px solid var(--my-border-gray);
-    border-radius: var(--radius-lg);
-    padding: 8px;
+    border: none;
+    border-radius: none;
 }
+
+.search-group .my-input-control.date,
+.search-group .my-input-control.where-to {
+    position: relative;
+    border-right: 1px solid #D5D7DA;
+    padding: 0;
+}
+
+
 
 .search-group input:focus {
     outline: unset;
 }
 
 .search-group label {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--my-text-secondary);
 }
 
-.search-group .my-input-control {
-    max-width: 200px;
-}
+
 
 .search-group .big.my-input-control {
     max-width: 100%;
 }
 
-.search-group .my-input-control input {
+.search-group .my-input-control input,
+search-group .my-input-control input::placeholder {
     border: none;
     padding: 0px 0px;
     border-radius: 0;
-    color: var(--input-text);
-    font-weight: var(--fw-600);
-    font-size: var(--fs-md) !important;
+    color: #717680;
+    font-weight: 400 !important;
+    font-size: var(--fs-sm);
+    line-height: 20px;
+    margin-top: 8px;
 }
 
 .search-group .my-input-control label {
-    color: var(--my-text-placeholder);
+    color: var(--my-text-secondary);
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 4px;
     margin-bottom: 6px;
 }
 
 .search-group .s-btn {
-    padding: 14px 52px;
+    height: 52px !important;
+    width: 100%;
+    border-radius: var(--radius-xxl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
+.search-group .s-btn .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /*

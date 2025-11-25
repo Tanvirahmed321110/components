@@ -5601,32 +5601,45 @@
                                             </div>
 
 
-                                            <div class="my-mt-12 my-m-10 form-wrap">
+                                            <div class="my-mt-10 my-m-10 form-wrap">
                                                 <!--
                                                  When active class add then show this form
-                                             -->
+                                                -->
                                                 <form action="#"
                                                     class="my-d-flex active my-gap-5 search-group my-align-center my-justify-between">
-                                                    <div class="my-input-control big flex-1">
-                                                        <label for="Destination">Destination</label>
-                                                        <input type="text"
-                                                            value="City, airport, region, landmark or property">
+                                                    <div class="my-input-control where-to">
+                                                        <label for="Destination">Where to?*</label>
+                                                        <input type="text" placeholder="where are you going" value="">
                                                     </div>
+
+                                                    <div class="my-input-control date">
+                                                        <label for="">Date <svg width="20" height="20"
+                                                                viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
+                                                                    stroke-width="1.66667" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </label>
+                                                        <input type="text" placeholder="Choose date">
+                                                    </div>
+
                                                     <div class="my-input-control">
-                                                        <label for="">Check in</label>
-                                                        <input type="date">
+                                                        <label for="">Type Tour<svg width="20" height="20"
+                                                                viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
+                                                                    stroke-width="1.66667" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </label>
+                                                        <input type="text" placeholder="Choose Type ">
                                                     </div>
-                                                    <div class="my-input-control">
-                                                        <label for="">Stay</label>
-                                                        <input type="date">
-                                                    </div>
-                                                    <div class="my-input-control ">
-                                                        <label for="3">Check out</label>
-                                                        <input type="date">
-                                                    </div>
+
                                                     <button class="my-btn my-primary-btn s-btn ">
-                                                        <span class="content">
-                                                            <svg width="25" height="25" viewBox="0 0 27 27" fill="none"
+                                                        <span class="content my-d-flex my-align-center my-gap-4">
+
+                                                            <svg width="20" height="20" viewBox="0 0 27 27" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M20.1953 20.1945L25.7509 25.75" stroke="white"
                                                                     stroke-width="1.5" stroke-linecap="round"
@@ -5637,6 +5650,8 @@
                                                                     stroke-linecap="round" stroke-linejoin="round">
                                                                 </path>
                                                             </svg>
+
+                                                            Search
 
                                                         </span>
                                                     </button>
