@@ -3,9 +3,6 @@
 =====||   Hero 1 Start Here    ||=====
 ======================================
 */
-.tab-contents {
-    margin-top: 32px;
-}
 
 .g-hero {
     margin-top: 32px;
@@ -221,6 +218,25 @@
     object-fit: cover;
 }
 
+.g-hero-img-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+
+.g-hero-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #00000040;
+    z-index: 1;
+    border-radius: 32px;
+}
+
+.g-hero .bottom-search {
+    z-index: 2;
+}
 
 
 
