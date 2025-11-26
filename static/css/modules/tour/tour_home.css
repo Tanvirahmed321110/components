@@ -366,7 +366,7 @@ search-group .my-input-control input::placeholder {
 .offer-wrapper .left-offers,
 .offer-wrapper .right-offers {
     height: 480px;
-    box-shadow: var(--n-shadow-all-3);
+    box-shadow: var(--n-shadow-all-1);
     width: 100%;
     border-radius: var(--radius-xl);
     background-color: black;
@@ -389,6 +389,7 @@ search-group .my-input-control input::placeholder {
     position: relative;
     background-color: var(--my-bg-dark);
     height: 480px;
+    display: block;
     border-radius: var(--radius-xl);
     overflow: hidden;
 }
@@ -556,4 +557,22 @@ search-group .my-input-control input::placeholder {
 .offer-wrapper .slider-nav button:hover {
     background-color: var(--my-white);
     border-color: var(--my-border-gray);
+}
+
+
+
+
+
+
+.recent-view.section-main {
+    padding-bottom: 0;
+}
+
+.swiper.other-common-slider {
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.best-deal.section-main {
+    padding-bottom: 40px;
 }
