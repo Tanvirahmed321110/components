@@ -352,43 +352,61 @@ search-group .my-input-control input::placeholder {
 
 
 /*
-============================||  Offer Section Start Here  ||=============================
+=============================================
+=====||   Offer Section Start Here    ||=====
+============================================
 */
-.offer-wrapper {
+.offer-section .offer-wrapper {
     display: grid;
     grid-template-columns: 36.67% 36.67% 23.2%;
     gap: 24px;
+    height: 480px;
 }
 
 .offer-wrapper .left-offers,
-.offer-wrapper .right-offers,
-.offer-wrapper .middle-offers {
+.offer-wrapper .right-offers {
     height: 480px;
     box-shadow: var(--n-shadow-all-3);
     width: 100%;
     border-radius: var(--radius-xl);
     background-color: black;
+    position: relative;
 }
 
+.offer-wrapper .middle-offers .top,
+.offer-wrapper .middle-offers .bottom {
+    box-shadow: var(--n-shadow-all-2);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    height: 228px;
+    float: 1;
+    position: relative;
+}
 
-/* offfer-item */
-.offer-wrapper .offfer-item {
+/* offer-item */
+.offer-wrapper .offer-item {
     border-radius: var(--radius-xl);
     position: relative;
-    background-color: orange;
+    background-color: var(--my-bg-dark);
     height: 480px;
     border-radius: var(--radius-xl);
     overflow: hidden;
 }
 
-.offer-wrapper .offfer-item .offer-img img {
+.offer-wrapper .offer-item .offer-img {
+    height: 100%;
+    width: 100%;
+}
+
+.offer-wrapper .offer-item .offer-img img {
     width: 100%;
     height: 100%;
     position: absolute;
     inset: 0;
 }
 
-.offer-wrapper .offfer-item .bottom-content {
+/* left bottom content */
+.offer-wrapper .offer-item .bottom-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -396,31 +414,30 @@ search-group .my-input-control input::placeholder {
     padding-top: 42px;
     background: #12121280;
     background: linear-gradient(to top, #1212128d 0%, #12121272 40%, #12121200 100%);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.offer-wrapper .offfer-item .bottom-content .rating .left {
+.offer-wrapper .offer-item .bottom-content .rating .left {
     color: var(--my-rating);
 }
 
-.offer-wrapper .offfer-item .bottom-content .rating {
+.offer-wrapper .offer-item .bottom-content .rating {
     color: #939AA9;
     line-height: var(--line-height-sm);
 }
 
 /* price */
-.offer-wrapper .offfer-item .bottom-content .price .new-price {
+.offer-wrapper .offer-item .bottom-content .price .new-price {
     color: var(--my-white);
     font-size: var(--fs-md);
     line-height: var(--line-height-md);
     font-weight: 600;
 }
 
-.offer-wrapper .offfer-item .bottom-content .price .old-price {
+.offer-wrapper .offer-item .bottom-content .price .old-price {
     color: var(--my-red);
     font-size: var(--fs-low);
     line-height: var(--line-height-xs);
@@ -428,24 +445,75 @@ search-group .my-input-control input::placeholder {
 }
 
 
-.slider-nav {
-    position: absolute;
-    top: -15px;
-    right: 0;
-    display: flex;
-    gap: 6px;
-    z-index: 10;
+/* Middle OFFER */
+.offer-wrapper .middle-offers .offer-item img {
+    height: unset;
 }
 
-.slider-nav button {
-    width: 32px;
-    height: 32px;
-    background: #111;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+.offer-wrapper .middle-offers .offer-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-wrapper .middle-offers .offer-item .offer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    z-index: 31;
+}
+
+
+/* Midlle and right */
+.offer-wrapper .middle-offers .offer-item .offer-ribbon,
+.offer-wrapper .right-offers .offer-item .offer-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: var(--my-secondary-color);
+    line-height: var(--line-height-lg);
+    font-size: var(--fs-low);
+    color: var(--my-white);
+    padding: 2px 8px;
+}
+
+/* book button */
+.offer-wrapper .middle-offers .offer-item .book,
+.offer-wrapper .right-offers .offer-item .book {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 12;
+    font-size: var(--fs-sm);
+}
+
+/* right slider for offer */
+.offer-wrapper .right-offers .offer-item .book {
+    font-size: var(--fs-low);
+    padding: 4px 12px;
+    border-radius: 5px;
+    right: 12px;
+    bottom: 12px;
+}
+
+.offer-wrapper .right-offers .slider-nav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+}
+
+.right-offers .slider-controls button,
+.right-offers .right-slider-arrows button {
+    height: 28px;
+    width: 28px;
     border-radius: 6px;
+}
+
+.offer-wrapper .right-offers img {
+    object-fit: contain;
 }
 
 .Left-offers {
@@ -453,25 +521,39 @@ search-group .my-input-control input::placeholder {
     /* must */
 }
 
-.slider-nav {
+
+.offer-wrapper .slider-nav {
     position: absolute;
     top: 22px;
     right: 26px;
     z-index: 9999;
     display: flex;
     gap: 12px;
+    z-index: 3;
 }
 
-.slider-nav button {
-    /* width: 32px;
-    height: 32px;
-    border-radius: 6px; */
+/* top overlay */
+.offer-wrapper .offer-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #12121293, #12121266, #12121200);
+    z-index: 2;
+}
+
+
+.offer-wrapper .slider-nav button {
     color: #000;
     cursor: pointer;
     border: 1px solid var(--my-border-gray);
+    background-color: transparent;
 }
 
-.slider-nav button:hover {
+
+.offer-wrapper .slider-nav button:hover {
     background-color: var(--my-white);
     border-color: var(--my-border-gray);
 }

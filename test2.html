@@ -4,51 +4,128 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Offer Layout</title>
 
         <style>
-            .wrap {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background: #111;
+                padding: 30px;
+                color: #fff;
+            }
+
+            /* MAIN WRAPPER */
+            .wrapper {
+                width: 1200px;
+                height: 600px;
+                /* total height fixed */
+                background: #1c1c1c;
+                margin: auto;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                /* two equal columns (50% each) */
-                gap: 20px;
+                grid-template-columns: 440px 440px 272px;
+                /* 3 parts width */
+                gap: 24px;
+                padding: 20px;
+                border-radius: 10px;
             }
 
-            .left {
-                background: #ddd;
-                padding: 10px;
+            /* ======== LEFT ======== */
+            .left,
+            .right,
+            .middle .top,
+            .middle .bottom {
+                background: #222;
+                border-radius: 10px;
+                overflow: hidden;
             }
 
-            .right {
-                display: contents;
-                /* makes children behave as if they’re direct grid items */
+            /* ======== MIDDLE 50% / 50% ======== */
+            .middle {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                gap: 24px;
             }
 
-            .right .item {
-                background: #bbb;
-                padding: 10px;
+            .middle>div {
+                flex: 1;
+                /* make equal height */
+                min-height: 0;
+                /* prevents stretching */
+                overflow: hidden;
+                /* hide extra content */
             }
 
-            /* 2nd and onward items appear below and form 2-column grid */
-            .right .item:nth-child(n+2) {
-                grid-column: span 1;
+            /* DEMO CARD CONTENT (you will replace later) */
+            .card {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to top, #000000, #00000060);
+                padding: 20px;
             }
         </style>
     </head>
 
     <body>
-        <div class="wrap">
 
-            <div class="left">Left item</div>
+        <div class="wrapper">
 
+            <!-- Left -->
+            <div class="left">
+                <div class="card">
+                    <h2>Left Card Content</h2>
+                    <p>Large text here Large text here Large text here Large text here...</p>
+                </div>
+            </div>
+
+            <!-- Middle (50% / 50%) -->
+            <div class="middle">
+                <div class="top">
+                    <div class="card">
+                        <h2>Middle Top 50%</h2>
+                        <p>This is top area. This will never stretch more than 50% height.</p>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <div class="card">
+                        <h2>Middle Bottom 50%</h2>
+                        <p>Even if content goes large it will be hidden...</p>
+                        <p>Extra long text extra long text extra long text extra long text extra long text extra long
+                            text extra long text extra long text extra long text extra long text extra long text...</p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, laudantium? Corrupti saepe ipsam
+                        eos voluptates quibusdam asperiores in nulla magnam, repellat, ex sapiente ipsum! Repellendus,
+                        nostrum. Eum nihil iure minima.lorem
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat harum ratione doloribus natus
+                        reiciendis, ea dolore voluptatem totam? Saepe autem non pariatur cupiditate iure fugiat,
+                        reprehenderit tempora veritatis voluptatem illo mollitia sint, beatae ipsam accusamus
+                        repudiandae eum aperiam debitis necessitatibus veniam aliquid quaerat rem perspiciatis libero
+                        ab! Tempore doloremque sit unde? Adipisci rerum voluptas tempora eaque et. Officia libero quae
+                        quis dolore, nostrum quisquam neque. Totam, labore! Assumenda delectus quam labore quaerat
+                        perspiciatis. Necessitatibus labore illo ipsa reprehenderit! Ullam sapiente magni incidunt
+                        molestiae blanditiis rerum at autem non magnam. Voluptates provident recusandae dolore, ex
+                        tempora eos nisi repudiandae! Doloribus ut error recusandae, sint similique eum eos praesentium
+                        obcaecati aliquid tempora non aut blanditiis dolorem et deserunt quisquam accusantium quos
+                        nostrum!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right -->
             <div class="right">
-                <div class="item">item1</div>
-                <div class="item">item2</div>
-                <div class="item">item3</div>
-                <div class="item">item4</div>
+                <div class="card">
+                    <h2>Right Card Area</h2>
+                </div>
             </div>
 
         </div>
+
     </body>
 
 </html>
