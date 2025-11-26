@@ -7781,7 +7781,7 @@
                                     <!--#Note: [will active class add then show tab content (.tab-content.active)] -->
                                     <!--==================||   Event Content   ||==================-->
                                     <div class="tab-content " data-tab="1" role="tabpanel">
-                                        <div class="swiper other-common-slider best-deal-slider">
+                                        <div class="swiper other-common-slider trending-tour-slider">
                                             <div class="swiper-wrapper">
 
                                                 <div class="swiper-slide">
@@ -8110,7 +8110,7 @@
 
                                     <!--==================||   Tour Content   ||==================-->
                                     <div class="tab-content active" data-tab="2" role="tabpanel">
-                                        <div class="swiper other-common-slider best-deal-slider">
+                                        <div class="swiper other-common-slider trending-tour-slider">
                                             <div class="swiper-wrapper">
 
                                                 <div class="swiper-slide">
@@ -8738,7 +8738,7 @@
 
 
 
-            //===========  Best Deal Slider  ===========
+            //===========  Trending Tours Slider  ===========
             const bestDeal = new Swiper(".best-deal-slider", {
                 slidesPerView: 3.5,
                 spaceBetween: 24,
@@ -8748,6 +8748,34 @@
                 navigation: {
                     nextEl: ".best-deal-slider .next",
                     prevEl: ".best-deal-slider .prev",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5, // Mobile
+                        spaceBetween: 12,
+                    },
+                    768: {
+                        slidesPerView: 2.2, // Tablet
+                        spaceBetween: 16,
+                    },
+                    1280: {
+                        slidesPerView: 3.5, // Desktop
+                        spaceBetween: 24,
+                    },
+                },
+            });
+
+
+            //===========  Trending Tours Slider  ===========
+            const trendingSlider = new Swiper(".trending-tour-slider", {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+                loop: false, // ❗ Stop infinite sliding
+                watchOverflow: true,
+                speed: 800,
+                navigation: {
+                    nextEl: ".trending-tour-slider .next",
+                    prevEl: ".trending-tour-slider .prev",
                 },
                 breakpoints: {
                     320: {
