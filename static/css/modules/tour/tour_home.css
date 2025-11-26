@@ -347,3 +347,131 @@ search-group .my-input-control input::placeholder {
     border-radius: var(--radius-3xl);
     object-fit: cover;
 }
+
+
+
+
+/*
+============================||  Offer Section Start Here  ||=============================
+*/
+.offer-wrapper {
+    display: grid;
+    grid-template-columns: 36.67% 36.67% 23.2%;
+    gap: 24px;
+}
+
+.offer-wrapper .left-offers,
+.offer-wrapper .right-offers,
+.offer-wrapper .middle-offers {
+    height: 480px;
+    box-shadow: var(--n-shadow-all-3);
+    width: 100%;
+    border-radius: var(--radius-xl);
+    background-color: black;
+}
+
+
+/* offfer-item */
+.offer-wrapper .offfer-item {
+    border-radius: var(--radius-xl);
+    position: relative;
+    background-color: orange;
+    height: 480px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.offer-wrapper .offfer-item .offer-img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.offer-wrapper .offfer-item .bottom-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 22px;
+    padding-top: 42px;
+    background: #12121280;
+    background: linear-gradient(to top, #1212128d 0%, #12121272 40%, #12121200 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.offer-wrapper .offfer-item .bottom-content .rating .left {
+    color: var(--my-rating);
+}
+
+.offer-wrapper .offfer-item .bottom-content .rating {
+    color: #939AA9;
+    line-height: var(--line-height-sm);
+}
+
+/* price */
+.offer-wrapper .offfer-item .bottom-content .price .new-price {
+    color: var(--my-white);
+    font-size: var(--fs-md);
+    line-height: var(--line-height-md);
+    font-weight: 600;
+}
+
+.offer-wrapper .offfer-item .bottom-content .price .old-price {
+    color: var(--my-red);
+    font-size: var(--fs-low);
+    line-height: var(--line-height-xs);
+    text-decoration: line-through;
+}
+
+
+.slider-nav {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+.slider-nav button {
+    width: 32px;
+    height: 32px;
+    background: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.Left-offers {
+    position: relative;
+    /* must */
+}
+
+.slider-nav {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    z-index: 9999;
+    display: flex;
+    gap: 12px;
+}
+
+.slider-nav button {
+    /* width: 32px;
+    height: 32px;
+    border-radius: 6px; */
+    color: #000;
+    cursor: pointer;
+    border: 1px solid var(--my-border-gray);
+}
+
+.slider-nav button:hover {
+    background-color: var(--my-white);
+    border-color: var(--my-border-gray);
+}

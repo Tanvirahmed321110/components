@@ -382,7 +382,7 @@
 .my-btn-sm {
     cursor: pointer;
     user-select: none;
-    padding: 9px 16px;
+    padding: 11px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
