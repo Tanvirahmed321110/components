@@ -382,7 +382,7 @@
 .my-btn-sm {
     cursor: pointer;
     user-select: none;
-    padding: 9px 16px;
+    padding: 11px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,6 +397,7 @@
     width: fit-content;
     text-wrap: nowrap;
     transition: background 0.3s;
+    text-align: center;
 }
 
 button {
@@ -2819,7 +2820,9 @@ input[type="radio"]:checked::after {
     position: relative;
     border-top-right-radius: var(--radius-md);
     border-top-left-radius: var(--radius-md);
-    text-wrap: nowrap;
+    text-wrap: nowrap !important;
+    word-break: keep-all;
+    word-wrap: normal;
 }
 
 /* Hover (lift & shine) */
@@ -2841,6 +2844,7 @@ input[type="radio"]:checked::after {
     background-color: transparent;
     color: var(--my-primary-color);
     border-color: var(--my-secondary-color);
+
 }
 
 

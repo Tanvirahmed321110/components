@@ -84,7 +84,9 @@ const blogSwiper = new Swiper(".blog-swiper", {
 const recentView = new Swiper(".recently-view-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".recently-view-slider .next",
         prevEl: ".recently-view-slider .prev",
@@ -95,7 +97,7 @@ const recentView = new Swiper(".recently-view-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -109,7 +111,9 @@ const recentView = new Swiper(".recently-view-slider", {
 const recommendationSlider = new Swiper(".recommendation-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".recommendation-slider .next",
         prevEl: ".recommendation-slider .prev",
@@ -119,8 +123,8 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
             slidesPerView: 1.4, // Mobile
             spaceBetween: 12,
         },
-        991: {
-            slidesPerView: 1.3, // Tablet
+        768: {
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -135,7 +139,9 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
 const bestDeal = new Swiper(".best-deal-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".best-deal-slider .next",
         prevEl: ".best-deal-slider .prev",
@@ -146,7 +152,7 @@ const bestDeal = new Swiper(".best-deal-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -156,11 +162,13 @@ const bestDeal = new Swiper(".best-deal-slider", {
     },
 });
 
-//===========  Best Deal Slider  ===========
+//===========  Map Slider  ===========
 const mapview = new Swiper(".map-slider", {
     slidesPerView: 3.5,
     spaceBetween: 24,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".map-slider .next",
         prevEl: ".map-slider .prev",
@@ -190,7 +198,9 @@ const mapview = new Swiper(".map-slider", {
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".next",
         prevEl: ".prev",
@@ -207,7 +217,9 @@ const testimonialSwiper = new Swiper(".testimonial-swiper", {
 const slider_top = new Swiper(".slider-top .top", {
     speed: 1000,
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     navigation: {
         nextEl: ".slider-top .swiper-button-next",
         prevEl: ".slider-top .swiper-button-prev",
@@ -227,7 +239,9 @@ const slider_top = new Swiper(".slider-top .top", {
 //==========  Hero2 Slider Bottom  ==========
 const slider_bottom = new Swiper(".slider-bottom .bottom", {
     spaceBetween: 20,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     speed: 1000,
     pagination: {
         el: ".slider-bottom .swiper-pagination",
@@ -253,22 +267,39 @@ const slider_bottom = new Swiper(".slider-bottom .bottom", {
 var swiper = new Swiper(".brandSwiper", {
     slidesPerView: 5,
     spaceBetween: 30,
-    loop: true,
+    loop: false, // ❗ Stop infinite sliding
+    watchOverflow: true,
+    speed: 800,
     autoplay: {
         delay: 0, // no gap between transitions
-        disableOnInteraction: false,
+        disableOnInteraction: true,
     },
     speed: 5000, // higher = slower, smoother
     freeMode: true, // enables smooth continuous movement
-    freeModeMomentum: false, // keeps constant speed
-    allowTouchMove: false, // optional: prevent dragging
+    freeModeMomentum: true, // keeps constant speed
+    allowTouchMove: true, // optional: prevent dragging
     breakpoints: {
-        320: { slidesPerView: 2, spaceBetween: 10 },
+        320: { slidesPerView: 3, spaceBetween: 10 },
         576: { slidesPerView: 3, spaceBetween: 15 },
         768: { slidesPerView: 4, spaceBetween: 20 },
         1024: { slidesPerView: 5, spaceBetween: 30 }
     }
 });
+
+
+
+//===========  Offer Slider For Mobile  Here  ===========
+var smallBannerSlider = new Swiper('.small-banners', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 1500, // slow auto slide
+        disableOnInteraction: false
+    },
+    speed: 1500, // smooth slow animation
+});
+
 
 
 
@@ -292,6 +323,9 @@ var swiper = new Swiper(".trip-plan-slider", {
         }
     }
 });
+
+
+
 
 
 
@@ -381,3 +415,98 @@ document.querySelectorAll(".my-tab-section").forEach(section => {
         });
     });
 });
+
+
+
+//==========  For open mobile bottom slider  ===========
+function mBottomSidebar() {
+    const sidebarOpenBtn = document.getElementById('m-all-menu-btn');
+    const sidebar = document.getElementById('m-bottom-sidebar');
+    const closeBtn = document.getElementById('m-bottom-close');
+    const body = document.body;
+
+    if (!sidebarOpenBtn || !sidebar) {
+        console.warn("Button or Sidebar not found!");
+        return;
+    }
+
+    // Open function
+    function openSidebar() {
+        sidebar.classList.add("active");
+        body.classList.add("active");
+    }
+
+    // Close function
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+        body.classList.remove("active");
+    }
+
+    // Button click → open
+    sidebarOpenBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openSidebar();
+        body.style.overflow = "hidden";
+    });
+
+    // Close button click
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeSidebar();
+            body.style.overflow = "unset";
+        });
+    }
+
+    // Prevent clicks inside the sidebar from closing it
+    sidebar.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    // Click outside → close sidebar
+    document.addEventListener("click", () => {
+        if (sidebar.classList.contains("active")) {
+            closeSidebar();
+        }
+    });
+}
+
+mBottomSidebar();
+
+
+//=========  Mobile bottom sidebar  =========
+function initGridListToggle() {
+    // Get elements
+    const gridView = document.querySelector('.m-bottom-sidebar .wrapper .grid-view')
+    const listView = document.querySelector('.m-bottom-sidebar .wrapper .list-view')
+    const gridBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .grid-btn')
+    const listBtn = document.querySelector('.m-bottom-sidebar .btn-wrap .list-btn')
+
+    // Guard clause: stop if any element is missing
+    if (!gridView || !listView || !gridBtn || !listBtn) return;
+    // Function to show grid view
+    const showGridView = () => {
+        gridView.style.display = 'block';
+        listView.style.display = 'none';
+        gridBtn.classList.add('active');
+        listBtn.classList.remove('active');
+    };
+
+    // Function to show list view
+    const showListView = () => {
+        gridView.style.display = 'none';
+        listView.style.display = 'block';
+        listBtn.classList.add('active');
+        gridBtn.classList.remove('active');
+    };
+
+    // Initialize default view
+    showGridView();
+
+    // Add event listeners
+    gridBtn.addEventListener('click', showGridView);
+    listBtn.addEventListener('click', showListView);
+}
+
+// Usage
+initGridListToggle();

@@ -3,9 +3,6 @@
 =====||   Hero 1 Start Here    ||=====
 ======================================
 */
-.tab-contents {
-    margin-top: 32px;
-}
 
 .g-hero {
     margin-top: 32px;
@@ -221,6 +218,25 @@
     object-fit: cover;
 }
 
+.g-hero-img-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+
+.g-hero-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #00000040;
+    z-index: 1;
+    border-radius: 32px;
+}
+
+.g-hero .bottom-search {
+    z-index: 2;
+}
 
 
 
@@ -707,6 +723,10 @@
     padding-bottom: 40px;
 }
 
+.m-recommendation .m-tour-cart {
+    background-color: var(--my-white);
+}
+
 .recommendation-area .item:hover {
     background-color: var(--my-white-off);
 }
@@ -752,6 +772,7 @@
 .hot-destination {
     padding: 60px 0;
 }
+
 
 .hot-destination .head .left {
     max-width: 490px;
@@ -1113,6 +1134,9 @@
 }
 
 
+.testimonial .hide-scroll-wrapper {
+    justify-content: center;
+}
 
 .testimonial .testimonial-swiper {
     position: relative;
@@ -1745,6 +1769,7 @@
         min-width: unset;
     }
 
+
     .testimonial .for-md-1 .slider-item {
         min-width: calc(100% - 0px);
         width: 100%;
@@ -1871,13 +1896,162 @@
 */
 @media (max-width: 768px) {
 
+    /*
+    =====================  Mobile Bottom Sidebar =====================
+    */
+    .m-bottom-sidebar {
+        position: fixed;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        height: 80dvh;
+        min-height: 80dvh;
+        padding: 12px;
+        background-color: #f5f5f5;
+        box-shadow: var(--shadow-all-lg);
+        overflow-y: auto;
+        transition: .3s linear;
+        border-radius: 16px 16px 0 0px;
+        z-index: 22;
+    }
+
+    .m-bottom-sidebar.active {
+        bottom: 0;
+    }
+
+    .m-bottom-sidebar .m-bottom-close {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-round);
+        font-size: var(--fs-xl);
+        background-color: var(--my-red);
+        z-index: 5612;
+        color: var(my-white);
+    }
+
+    .m-bottom-sidebar .m-bottom-close i {
+        color: var(--my-white);
+        font-size: var(--fs-xxl);
+        margin-top: 4px;
+    }
+
+    .m-bottom-sidebar .module {
+        background-color: var(--my-white);
+        border-radius: 12px;
+        padding: 12px;
+        padding-top: 8px;
+    }
+
+    .m-bottom-sidebar .module-name {
+        color: var(--my-text-primary);
+        font-size: var(--fs-md);
+        font-weight: 600;
+    }
+
+    .m-bottom-sidebar .head .btn-wrap {
+        padding: 2px;
+        background-color: #e2e1e19c;
+        border-radius: var(--radius-pill);
+    }
+
+    .m-bottom-sidebar .head .btn-wrap .btn {
+        width: 30px;
+        height: 30px;
+        border-radius: var(--radius-round);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .m-bottom-sidebar .head .btn-wrap .btn i {
+        color: var(--primary-80);
+        font-weight: 500;
+    }
+
+    .m-bottom-sidebar .head .btn-wrap .btn.active,
+    .m-bottom-sidebar .head .btn-wrap .btn:hover {
+        background-color: var(--my-white);
+    }
+
+    .m-bottom-sidebar .content {
+        display: none;
+    }
+
+    .m-bottom-sidebar .content.active {
+        display: block;
+    }
+
+
+    /* grid view item */
+    .m-bottom-sidebar .grid-view .item {
+        border: 3px solid #f5f5f5;
+        padding: 4px;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 13/14;
+    }
+
+    .m-bottom-sidebar .list-view .item {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: flex;
+        flex-grow: 1;
+        gap: 16px;
+    }
+
+    .m-bottom-sidebar .list-view .item .name {
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    .m-bottom-sidebar .content .item .name {
+        color: var(--my-primary-color);
+        font-weight: 500;
+    }
+
+    .m-bottom-sidebar .content .title {
+        color: var(--my-text-placeholder);
+        font-weight: 500;
+        font-size: var(--fs-sm);
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .tab-contents {
+        margin-top: 16px;
+    }
+
+    .section-title {
+        font-size: var(--fs-xxl);
+        font-weight: var(--fw-600);
+        line-height: var(--line-height-xl);
+        letter-spacing: 0%;
+        color: var(--my-text-primary);
+    }
+
+    .section-sub-title {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-400);
+        line-height: 20px;
+        color: var(--my-text-tertiary);
+    }
+
+    .section-main {
+        padding: 32px 0;
+    }
+
     /* Worldwide Hot Dest */
     .hot-destination .search-input {
         flex: 1;
     }
 
     .hot-destination .head .left {
-        max-width: 182px;
+        max-width: 196px;
         width: 100%;
     }
 
@@ -1899,13 +2073,382 @@
         font-size: 12px;
     }
 
-    .search-input svg,
-    .search-input i,
-    .search-input span {
-        right: 2px;
+    .hot-destination .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-sm);
     }
 
-    .search-input input {
-        padding: 12px 8px;
+
+    .hot-destination .search-input input::placeholder {
+        font-size: var(--fs-xs) !important;
     }
+
+
+
+
+
+
+    /*===============  Offer Section For MObile  ===================*/
+    .offer-section-mobile {
+        background-color: var(--my-bg-secondary);
+        padding-bottom: 16px;
+        /* height: 220px; */
+    }
+
+    .offer-section-mobile .big-banner {
+        display: block;
+    }
+
+    .offer-section-mobile .big-banner img {
+        /* height: 166px; */
+        border-radius: 12px;
+    }
+
+    .offer-section-mobile .small-banners {
+        margin-top: -36px;
+        padding: 0 8px;
+    }
+
+    .offer-section-mobile .small-banners img {
+        border-radius: 8px;
+        border: 1px solid var(--my-white);
+        object-fit: cover;
+        /* height: 74px; */
+    }
+
+    .map-view .shop-map {
+        bottom: 8px;
+        left: 8px;
+        color: var(--my-primary-color);
+    }
+
+    .map-view .shop-map svg path {
+        stroke: var(--my-primary-color);
+    }
+
+    .m-best-deal .img-wrap img,
+    .m-map-area .img-wrap img {
+        aspect-ratio: 16/11;
+    }
+
+    .m-best-deal .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-sm);
+    }
+
+
+
+
+    /*===============  Hot Destination  ===================*/
+    .hot-destination .search-input input {
+        border-radius: var(--radius-pill);
+    }
+
+    .hot-destination .search-input svg {
+        right: 8px;
+        width: 16px;
+    }
+
+
+    /*===============  Recommendation  ===================*/
+    .m-recommendation {
+        background-color: #f5f5f5;
+    }
+
+    .m-recommendation .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-md);
+    }
+
+    .map-view .section-title {
+        max-width: 270px;
+    }
+
+
+    /*===============  Trip Plan  ===================*/
+    .m-trip-plan {
+        background-color: #f5f5f5;
+    }
+
+    .m-trip-plan .head .section-title {
+        max-width: 280px;
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn {
+        background-color: var(--my-primary-color);
+        padding: 12px 16px;
+        font-size: var(--fs-md);
+        font-weight: 600;
+        border-radius: var(--radius-pill);
+        color: var(--my-white);
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn .content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 24px;
+    }
+
+    .m-trip-plan .items .item {
+        border-radius: 12px;
+        background-color: var(--my-white);
+        overflow: hidden;
+    }
+
+    .m-trip-plan .items .item img {
+        width: 100%;
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+    }
+
+
+    .m-trip-plan .items .item .content {
+        padding: 8px;
+    }
+
+    .m-trip-plan .items .item .title {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+        line-height: 100%;
+    }
+
+
+    /* Item button */
+    .m-trip-plan .items .item .my-btn {
+        background-color: var(--my-primary-color);
+        font-size: var(--fs-sm);
+        line-height: var(--fs-sm);
+        border-radius: var(--radius-pill);
+        width: 100%;
+        text-align: center;
+        padding: 8px 12px;
+        font-weight: 600;
+    }
+
+    .m-trip-plan .items .item .my-btn .content {
+        padding: 0;
+    }
+
+    /*===============  Testimonial  ===================*/
+    .testimonial {
+        background-color: #f5f5f5;
+    }
+
+    .testimonial .hide-scroll-wrapper {
+        justify-content: unset;
+    }
+
+
+    .mobile-review .see-all .my-btn.my-outline-btn {
+        width: 100%;
+        color: var(--my-primary-color);
+        border-color: #D5D7DA;
+    }
+
+    .testimonial .slider-controls {
+        display: none;
+    }
+
+    .testimonial .tab-btn {
+        border-color: var(--my-border-primary) !important;
+    }
+
+    .testimonial .tab-btn.active {
+        border-color: var(--my-primary-color) !important;
+    }
+
+    .testimonial .item {
+        padding: 16px;
+        background-color: var(--my-white);
+        border: none;
+    }
+
+
+    /*===============  Blogs  ===================*/
+    .our-blog-mobile .blog-items .item {
+        padding: 0;
+        background-color: #F5F5F5;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .our-blog-mobile .blog-items .item .img-wrap img {
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+    }
+
+    .our-blog-mobile .blog-items .item .content {
+        padding: 8px;
+    }
+
+    .our-blog-mobile .blog-items .item .blog-name {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    .our-blog-mobile .blog-items .author img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .our-blog-mobile .blog-items .item .name {
+        font-size: var(--fs-xs);
+        color: var(--my-text-primary);
+        line-height: 16px;
+    }
+
+    .our-blog-mobile .blog-items .item .post-date {
+        font-size: 10px;
+        color: var(--my-text-tertiary);
+    }
+
+
+    /*===============  Our Achivements  ===================*/
+    .our-achivements .head .section-title,
+    .our-achivements .section-sub-title {
+        text-align: left;
+    }
+
+    .our-achivements .achivement-body .item .title-sm {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+    }
+
+    .our-achivements .items .item {
+        padding: 14px 0;
+        gap: 8px;
+        aspect-ratio: 16 /16;
+        justify-content: center;
+    }
+
+    .our-achivements .items .item .icon {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--radius-round);
+    }
+
+    .our-achivements .item .section-title {
+        font-weight: var(--fw-600);
+        color: var(--my-primary-color);
+        font-size: var(--fs-3xl);
+    }
+
+    .our-achivements .bg-img {
+        background-image: unset;
+        height: unset;
+        margin: 0;
+    }
+
+    .our-achivements {
+
+        background-color: var(--my-white-off);
+    }
+
+    .our-achivements .achivement-body {
+        background-image: url('../../images/achivment-mobile.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .our-achivements .my-container {
+        padding: 0;
+    }
+
+    .our-achivements .my-container .head,
+    .our-achivements .my-container .items {
+        padding: 0 16px;
+    }
+
+
+
+
+    /*===============  Get Touch  ===================*/
+    .get-touch .get-touch-area {
+        box-shadow: unset !important;
+        background-color: #FAFAFA;
+        padding: 32px 0;
+        padding-bottom: 40px;
+    }
+
+    .get-touch .wrap {
+        max-width: 280px;
+    }
+
+    .get-touch .section-title {
+        font-size: var(--fs-xl);
+    }
+
+    .get-touch p {
+        font-size: var(--fs-lg);
+        line-height: 28px;
+    }
+
+    .get-touch .get-touch-area .my-btn {
+        padding: 12px 18px;
+        border-radius: var(--radius-pill);
+        background-color: var(--my-primary-color);
+    }
+
+    .get-touch .get-touch-area .my-btn::after {
+        background-color: var(--my-secondary-color);
+    }
+
+
+    /*===============  Subcirbe Section  ===================*/
+    .subcribe-form {
+        align-items: flex-start;
+    }
+
+    .subcribe-sec .right-side .img-wrapper {
+        height: unset;
+        top: 9px;
+        left: 0;
+    }
+
+    .subcribe-area .left-side .desc {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-400);
+    }
+
+    .subcribe-sec .right-side .img-wrapper img {
+        height: 450px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .right-side {
+        margin-top: 32px;
+    }
+
+    .subcribe-sec .subcribe-area {
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .left-side {
+        padding: 0px;
+        padding-top: 16px;
+        height: auto;
+    }
+
+    .subcribe-sec .left-side .section-title {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        max-width: 280px;
+    }
+
+    .subcribe-sec .left-side .section-sub-title {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        max-width: 240px;
+    }
+
 }
