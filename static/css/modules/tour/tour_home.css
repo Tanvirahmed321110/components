@@ -842,3 +842,14 @@ search-group .my-input-control input::placeholder {
     align-items: start;
     padding-top: 12px;
 }
+
+.popular-body {
+    position: relative;
+}
+
+.popular-tour .right-slider-arrows {
+    position: absolute;
+    top: -70px;
+    z-index: 4;
+    right: 0;
+}
