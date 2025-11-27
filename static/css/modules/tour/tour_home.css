@@ -851,5 +851,121 @@ search-group .my-input-control input::placeholder {
     position: absolute;
     top: -70px;
     z-index: 4;
-    right: 0;
+    right: 9%;
+}
+
+
+
+
+
+
+
+/* Tour category */
+.tour-category-body {
+    display: flex;
+    gap: 24px;
+}
+
+.tour-category-body .left-item,
+.tour-category-body .right-items {
+    width: 50%;
+}
+
+
+.tour-category-body .category-item {
+    position: relative;
+    border-radius: var(--radius-xxl);
+    transition: .3s ease;
+}
+
+.tour-category-body .category-item:hover {
+    transform: translateY(-8px);
+}
+
+.tour-category-body .left-item {
+    position: relative;
+    height: 680px;
+}
+
+.tour-category-body .category-item .img-wrap {
+    height: 100%;
+}
+
+.tour-category-body .category-item .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-xxl);
+}
+
+.tour-category-body .category-item .item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px 24px;
+    box-shadow: -8px 21px 50px 0px #0000001A;
+    background-color: var(--my-white);
+    border-radius: var(--radius-xxl);
+    width: 100%;
+}
+
+.tour-category-body .category-item .category-name {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--my-secondary-color);
+    line-height: var(--line-height-xxl);
+}
+
+.tour-category-body .category-item .desc {
+    font-size: var(--fs-sm);
+    line-height: var(--line-height-md);
+    color: var(--primary-80);
+    width: 338px;
+    font-weight: 600;
+}
+
+.tour-category-body .category-item .item-content .my-btn {
+    flex: 1;
+}
+
+
+/* right items */
+.tour-category-body .right-items .top .category-item {
+    height: 328px;
+}
+
+.tour-category-body .right-items .item-content {
+    padding: 4px 28px 16px 24px;
+}
+
+.tour-category-body .right-items .category-item .category-name {
+    font-size: var(--fs-xl);
+}
+
+.tour-category-body .right-items .category-item .desc {
+    font-size: var(--fs-xs);
+    line-height: 19px;
+}
+
+
+/* bottom */
+.tour-category-body .right-items .bottom-items .category-item {
+    height: 328px;
+}
+
+.tour-category-body .right-items .bottom-items .item-content .category-name {
+    font-size: var(--fs-md);
+}
+
+.tour-category-body .right-items .bottom-items .item-content {
+    padding: 0px 20px 12px 20px;
+}
+
+.tour-category-body .right-items .bottom-items .item-content .desc {
+    font-size: 8px;
+    width: 138px;
+}
+
+.tour-category-body .right-items .bottom-items .item-content .my-btn {
+    font-size: var(--fs-xs);
+    padding: 6px;
 }

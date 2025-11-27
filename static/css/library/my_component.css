@@ -397,6 +397,7 @@
     width: fit-content;
     text-wrap: nowrap;
     transition: background 0.3s;
+    text-align: center;
 }
 
 button {
