@@ -489,12 +489,12 @@
     border-bottom-right-radius: 14px;
     padding: 34px 20px 24px 28px;
     /* box-shadow: var(--n-shadow-all-2); */
-    transition: .2s ease;
+    transition: .1s ease;
     border: 4px solid transparent;
     border: 1px solid var(--my-white-off);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
-    bottom: -50px;
+    bottom: -20px;
     opacity: 0;
 }
 
@@ -973,12 +973,12 @@ header .profile-dropdown .head {
 
 
 .swiper.other-common-slider {
-    padding-bottom: 68px;
+    padding-bottom: 80px;
     position: relative;
 }
 
 .swiper.other-common-slider .section-btn-wrapper {
-    margin-top: -12px;
+    margin-top: 0px;
 }
 
 .swiper.other-common-slider .right-slider-arrows {

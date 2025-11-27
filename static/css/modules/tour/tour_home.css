@@ -635,7 +635,7 @@ search-group .my-input-control input::placeholder {
     height: 100%;
 }
 
-.top-trending-dest-body .dest-item .ribbon.offer {
+.top-trending-dest-body .dest-item .ribbon {
     position: absolute;
     top: 0;
     right: 0;
@@ -647,11 +647,18 @@ search-group .my-input-control input::placeholder {
     font-weight: 600;
     animation: offerMove 2.6s ease-in-out infinite alternate;
     border-radius: 0 0 0px 6px;
+    z-index: 12;
+}
+
+.top-trending-dest-body .dest-item .ribbon.best-seller {
+    animation: unset;
+    text-align: center;
+    font-size: var(--fs-low);
 }
 
 @keyframes offerMove {
     0% {
-        transform: translateY(-28px);
+        transform: translateY(-30px);
     }
 
     70% {
@@ -667,37 +674,49 @@ search-group .my-input-control input::placeholder {
 
 
 /* bottom content */
-.top-trending-dest-body .dest-item .bottom-content {
+.top-trending-dest-body .dest-item .bottom-content,
+.top-trending-dest-body .dest-item .top-content {
     position: absolute;
     width: 100%;
     bottom: 0;
     padding: 12px 16px;
     padding-top: 24px;
-    background: linear-gradient(to top, #00000090, #0000004e, #00000007);
+    background: linear-gradient(to top, #0000009c, #0000006a, #00000000);
     transition: .3s ease;
     z-index: 5;
 }
 
-.top-trending-dest-body .dest-item .bottom-content .name {
+.top-trending-dest-body .dest-item .top-content {
+    top: 0;
+    bottom: unset;
+    background: linear-gradient(to bottom, #0000009c, #0000006a, #00000000);
+}
+
+.top-trending-dest-body .dest-item .bottom-content .name,
+.top-trending-dest-body .dest-item .top-content .name {
     color: var(--my-white);
     font-size: var(--fs-3xl);
 }
 
-.top-trending-dest-body .dest-item .bottom-content .total-tour {
+.top-trending-dest-body .dest-item .bottom-content .total-tour,
+.top-trending-dest-body .dest-item .top-content .total-tour {
     margin-top: 8px;
     color: var(--my-white);
 }
+
 
 .top-trending-dest-body .dest-item .bottom-content::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, #000000a4, #00000067, #00000000);
+    background: linear-gradient(to top, #000000a4, #00000057, #00000000);
     opacity: 0;
     transition: .2s ease;
     pointer-events: none;
 }
 
+
+/* when hover */
 .top-trending-dest-body .dest-item:hover .bottom-content::after {
     opacity: 1;
     z-index: -1;
@@ -705,4 +724,55 @@ search-group .my-input-control input::placeholder {
 
 .top-trending-dest-body .dest-item:hover .bottom-content {
     z-index: 4;
+}
+
+
+/* Middle Items */
+.top-trending-dest-body .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-trending-dest-body .middle .middle-top,
+.top-trending-dest-body .middle .middle-bottom {
+    width: 100%;
+    height: 234px;
+}
+
+
+
+/* right */
+.top-trending-dest-body .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-trending-dest-body .right .right-top .dest-item,
+.top-trending-dest-body .right .right-bottom .dest-item {
+    /* background-color: red; */
+}
+
+.top-trending-dest-body .right .right-top {
+    height: 270px;
+}
+
+.top-trending-dest-body .right .right-bottom {
+    height: 177px;
+}
+
+.top-trending-dest-body .right .right-top .bottom-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}
+
+.top-trending-dest-body .right .right-top .bottom-content .my-btn {
+    font-size: var(--fs-sm);
+}
+
+.top-trending-dest .section-btn-wrapper {
+    margin-top: 28px;
 }
