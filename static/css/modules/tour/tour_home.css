@@ -776,3 +776,69 @@ search-group .my-input-control input::placeholder {
 .top-trending-dest .section-btn-wrapper {
     margin-top: 28px;
 }
+
+
+
+
+
+
+
+.popular-tour .head {
+    max-width: 800px;
+}
+
+.popular-tour .head .section-sub-title {
+    color: var(--my-text-primary);
+}
+
+/* popular-tour-cart */
+.popular-tour-cart {
+    background-color: var(--my-white);
+    padding: 8px;
+    border-radius: var(--radius-xxl);
+    box-shadow: 0px 4px 16px 0px #0000001F;
+}
+
+.popular-tour-cart .img-wrap img {
+    border-radius: var(--radius-xxl);
+}
+
+.popular-tour-cart .item-content {
+    padding: 0px 48px 30px 12px;
+}
+
+.popular-tour-cart .item-content .name {
+    color: var(--my-text-primary);
+    font-size: var(--fs-xxl);
+}
+
+.popular-tour-cart .item-content .total-tour {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--my-text-primary);
+}
+
+.popular-tour-cart .item-content .activities {
+    font-size: var(--fs-xs);
+
+}
+
+.popular-tour-cart .item-content .right {
+    display: flex;
+    flex: 1;
+}
+
+.popular-tour-cart .item-content .right .my-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.popular-tour-slider .swiper-slide {
+    height: auto;
+    /* Let Grid handle the height */
+}
+
+.popular-tour-slider .swiper-wrapper {
+    align-items: start;
+    padding-top: 12px;
+}
