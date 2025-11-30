@@ -563,7 +563,11 @@ search-group .my-input-control input::placeholder {
 
 
 
-
+/*
+======================================
+=====||   Recent View Start Here    ||=====
+======================================
+*/
 .recent-view.section-main {
     padding-bottom: 0;
 }
@@ -584,7 +588,11 @@ search-group .my-input-control input::placeholder {
 
 
 
-
+/*
+======================================
+=====||   Top Trending Start Here    ||=====
+======================================
+*/
 .top-trending-destinations .left {
     max-width: 800px;
 }
@@ -782,7 +790,11 @@ search-group .my-input-control input::placeholder {
 
 
 
-
+/*
+======================================
+=====||   Popular Tour Start Here    ||=====
+======================================
+*/
 .popular-tour .head {
     max-width: 800px;
 }
@@ -976,8 +988,13 @@ search-group .my-input-control input::placeholder {
     border: 2px solid #f5f5f5;
 }
 
+.popular-tour-cart img {
+    transition: .26s ease;
+}
 
-
+.popular-tour-cart:hover img {
+    transform: scale(1.032);
+}
 
 
 
@@ -1246,6 +1263,13 @@ search-group .my-input-control input::placeholder {
 
 
 
+
+
+/*
+===========================================
+=====||   Fa1 Section Start Here    ||=====
+===========================================
+*/
 .faq-wrapper.section-main {
     padding-bottom: 36px;
 }
