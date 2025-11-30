@@ -1,0 +1,29 @@
+.filter-hero .g-hero-area .bottom-search {
+    height: unset;
+    padding: 40px 32px;
+}
+
+.g-hero-area .bottom-search {
+    height: unset;
+}
+
+.g-hero-banner-img img {
+    height: 280px;
+}
+
+.g-hero-area {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+}
+
+.search-group.active {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
