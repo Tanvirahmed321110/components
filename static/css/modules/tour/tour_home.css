@@ -1016,8 +1016,6 @@ search-group .my-input-control input::placeholder {
 
 
 
-
-
 .trip-plan-area .right .img-wrapper {
     position: relative;
     width: 100%;
@@ -1027,38 +1025,6 @@ search-group .my-input-control input::placeholder {
     width: 100%;
 }
 
-
-/* Create trip btn */
-.trip-plan-area .right .create-trip-btn {
-    position: absolute;
-    right: 0%;
-    top: 49%;
-    transform: translate(-0%, -49%);
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    padding: 16px 40px;
-    border-radius: var(--radius-pill);
-    background-color: var(--my-secondary-color);
-    z-index: 2;
-    text-wrap: nowrap;
-    font-size: var(--fs-xxl);
-    color: var(--my-white);
-    font-weight: var(--fw-600);
-    transition: .3s linear;
-}
-
-.trip-plan-area .right .create-trip-btn:hover {
-    background-color: var(--my-primary-color);
-}
-
-.trip-plan-area .right .create-trip-btn .first-icon {
-    position: absolute;
-    top: -48px;
-    left: -40px;
-}
 
 .trip-plan-area .img-btn {
     position: relative;
@@ -1079,11 +1045,17 @@ search-group .my-input-control input::placeholder {
 
 
 .plan-items-wrapper {
-    display: grid;
-    grid-template-columns: calc(30% - 12px) calc(70% - 12px);
+    display: flex;
     gap: 24px;
 }
 
+.plan-items-wrapper .left {
+    width: 38%;
+}
+
+.plan-items-wrapper .tripSlider {
+    float: 1;
+}
 
 
 /*
@@ -1226,4 +1198,71 @@ search-group .my-input-control input::placeholder {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+.trip-plan .item .bottom {
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-items-wrapper .item .bottom {
+    line-height: var(--line-height-md);
+    color: var(--my-white);
+}
+
+.plan-items-wrapper .right .item {
+    position: relative;
+}
+
+.plan-items-wrapper .right .item::after {
+    bottom: 0;
+    top: unset;
+    height: 50%;
+    background: linear-gradient(to top,
+            rgba(14, 14, 14, 0.882),
+            rgba(14, 14, 14, 0.4) 20%,
+            rgba(14, 14, 14, 0.3) 60%,
+            rgba(14, 14, 14, 0.01)100%);
+}
+
+
+.plan-items-wrapper .right .tag {
+    display: none;
+}
+
+
+
+.swiper.other-common-slider .right-slider-arrows,
+.swiper .right-slider-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+
+
+
+.faq-wrapper .head {
+    max-width: 504px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-wrapper .head .section-title {
+    line-height: var(--line-height-sm);
+}
+
+.faq-wrapper .faq-head-desc {
+    font-size: var(--fs-lg);
+    color: #535862;
+}
+
+.faq-wrapper .faq-area {
+    max-width: 800px;
+    margin: 0 auto;
 }
