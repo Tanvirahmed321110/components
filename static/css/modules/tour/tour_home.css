@@ -658,6 +658,21 @@ search-group .my-input-control input::placeholder {
     z-index: 12;
 }
 
+.ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 8px;
+    font-size: var(--fs-sm);
+    color: var(--my-white);
+    background-color: var(--my-secondary-color);
+    z-index: 3;
+    font-weight: 600;
+    animation: offerMove 2.6s ease-in-out infinite alternate;
+    border-radius: 0 0 0px 6px;
+    z-index: 12;
+}
+
 .top-trending-dest-body .dest-item .ribbon.best-seller {
     animation: unset;
     text-align: center;
@@ -866,6 +881,13 @@ search-group .my-input-control input::placeholder {
     right: 9%;
 }
 
+.popular-tour .ribbon {
+    animation: unset;
+    left: 16px;
+    right: unset;
+    top: 16px;
+    font-size: var(--fs-xs);
+}
 
 
 
