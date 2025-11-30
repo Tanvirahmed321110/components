@@ -1246,6 +1246,9 @@ search-group .my-input-control input::placeholder {
 
 
 
+.faq-wrapper.section-main {
+    padding-bottom: 36px;
+}
 
 .faq-wrapper .head {
     max-width: 504px;
@@ -1265,4 +1268,129 @@ search-group .my-input-control input::placeholder {
 .faq-wrapper .faq-area {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.faq-area .faq-item .head {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.faq-wrapper .head {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px;
+}
+
+.faq-wrapper .head h5 {
+    font-size: var(--fs-xxl);
+    font-weight: 600;
+}
+
+
+.faq-wrapper .faq-items .faq-item {
+    max-width: 768px;
+    padding: 12px;
+    border-radius: var(--radius-xl);
+}
+
+.faq-wrapper .faq-items .faq-item:hover,
+.faq-area .faq-item.active {
+    background-color: #FC5A3126;
+}
+
+
+
+
+
+
+
+
+/*
+================================================
+=====||   Subcribe Section Start Here    ||=====
+================================================
+*/
+.subcribe-sec .subcribe-area {
+    background-color: var(--my-primary-color);
+    border-radius: var(--radius-3xl);
+    overflow: hidden;
+}
+
+.subcribe-sec .section-title,
+.subcribe-sec .section-sub-title {
+    color: var(--my-white);
+}
+
+.subcribe-form .subcribe-btn {
+    background-color: var(--my-bg-yellow);
+    align-items: stretch;
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    width: fit-content;
+}
+
+.subcribe-form .subcribe-btn:hover {
+    background-color: var(--my-text-rating);
+}
+
+/*
+================||   Subcribe Left Side  ||================
+*/
+.subcribe-sec .left-side {
+    padding: 155px 60px;
+}
+
+.subcribe-sec .left-side form input {
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    max-width: 345px;
+}
+
+.subcribe-sec .left-side form input:focus {
+    box-shadow: none;
+}
+
+
+/*
+================||   Subcribe Right Side  ||================
+*/
+.subcribe-sec .right-side {
+    position: relative;
+}
+
+/*==========  Notificaion  ===========*/
+.subcribe-sec .right-side .notificaion {
+    max-width: 320px;
+    width: 320px;
+    position: relative;
+    z-index: 3;
+    margin-top: 116px;
+    margin-bottom: 40px;
+}
+
+.notificaion li:nth-child(3),
+.notificaion li:nth-child(4) {
+    opacity: .7;
+}
+
+.subcribe-sec .right-side .img-wrapper {
+    height: 510px;
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    right: 0;
+    z-index: 2;
+}
+
+.subcribe-sec .right-side .img-wrapper img {
+    height: 615px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.subcribe-sec .my-secondary-btn:hover {
+    background-color: var(--my-warring);
 }
