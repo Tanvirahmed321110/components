@@ -180,7 +180,13 @@
 }
 
 .tab-contents {
-    margin-top: 32px;
+    margin-top: 16px;
+}
+
+.swiper.other-common-slider {
+    padding-bottom: 60px;
+    position: relative;
+    padding-top: 16px;
 }
 
 .hero-slider .carousel .carousel-inner .carousel-item img {
@@ -232,6 +238,7 @@
     top: 0;
     left: 0;
     height: 100%;
+    aspect-ratio: 16/11;
 }
 
 .hot-dest-cart .content {
@@ -277,12 +284,13 @@
 .hotel-cart .cart-img {
     width: 100%;
     cursor: pointer;
+    aspect-ratio: 16/11;
 }
 
 .hotel-cart .cart-img img {
     border-radius: var(--radius-xl);
-    height: 254px;
     width: 100%;
+    aspect-ratio: 16/11;
 }
 
 .hotel-cart .cart-content {

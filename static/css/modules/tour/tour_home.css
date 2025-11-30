@@ -572,10 +572,6 @@ search-group .my-input-control input::placeholder {
     padding-bottom: 0;
 }
 
-.swiper.other-common-slider {
-    padding-bottom: 60px;
-    position: relative;
-}
 
 .best-deal.section-main {
     padding-bottom: 40px;
@@ -826,8 +822,15 @@ search-group .my-input-control input::placeholder {
     box-shadow: 0px 4px 16px 0px #0000001F;
 }
 
+.popular-tour-cart .img-wrap {
+    width: 100%;
+}
+
 .popular-tour-cart .img-wrap img {
     border-radius: var(--radius-xxl);
+    width: 100%;
+    /* max-height: 234px; */
+    aspect-ratio: 16/11;
 }
 
 .popular-tour-cart .item-content {
