@@ -5550,16 +5550,796 @@
             -->
             <section>
                 <div class="filter-sec">
-                    <!--=============================||  Filter Head  ||===========================-->
-                    <div class="filter-head my-flex-between">
-                        <!--=============|| Left Side ||==============-->
-                        <div class="left"></div>
-                        <!--=============|| Right Side ||==============-->
-                        <div class="right"></div>
-                    </div>
+                    <div class="my-container">
+                        <div class="filter-sec-wrap my-p-relative">
+                            <!--=============================||  Filter Head  ||===========================-->
+                            <div class="filter-head filter-header my-flex-between">
+                                <!--=============|| Left Side ||==============-->
+                                <div class="left my-d-flex my-align-center my-gap-18">
+                                    <button class="filter-btn">
+                                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.93182 2.35H20.75M8.93182 2.35C8.93182 2.77435 8.74026 3.18131 8.39929 3.48137C8.05831 3.78143 7.59585 3.95 7.11364 3.95C6.63142 3.95 6.16896 3.78143 5.82799 3.48137C5.48701 3.18131 5.29545 2.77435 5.29545 2.35M8.93182 2.35C8.93182 1.92565 8.74026 1.51869 8.39929 1.21863C8.05831 0.918571 7.59585 0.75 7.11364 0.75C6.63142 0.75 6.16896 0.918571 5.82799 1.21863C5.48701 1.51869 5.29545 1.92565 5.29545 2.35M5.29545 2.35H0.75M8.93182 15.15H20.75M8.93182 15.15C8.93182 15.5743 8.74026 15.9813 8.39929 16.2814C8.05831 16.5814 7.59585 16.75 7.11364 16.75C6.63142 16.75 6.16896 16.5814 5.82799 16.2814C5.48701 15.9813 5.29545 15.5743 5.29545 15.15M8.93182 15.15C8.93182 14.7257 8.74026 14.3187 8.39929 14.0186C8.05831 13.7186 7.59585 13.55 7.11364 13.55C6.63142 13.55 6.16896 13.7186 5.82799 14.0186C5.48701 14.3187 5.29545 14.7257 5.29545 15.15M5.29545 15.15H0.75M16.2045 8.75H20.75M16.2045 8.75C16.2045 9.17435 16.013 9.58131 15.672 9.88137C15.331 10.1814 14.8686 10.35 14.3864 10.35C13.9042 10.35 13.4417 10.1814 13.1007 9.88137C12.7597 9.58131 12.5682 9.17435 12.5682 8.75M16.2045 8.75C16.2045 8.32565 16.013 7.91869 15.672 7.61863C15.331 7.31857 14.8686 7.15 14.3864 7.15C13.9042 7.15 13.4417 7.31857 13.1007 7.61863C12.7597 7.91869 12.5682 8.32565 12.5682 8.75M12.5682 8.75H0.75"
+                                                stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text">Filter</span>
+                                    </button>
 
-                    <!--=============================||  Filter Body  ||===========================-->
-                    <div class="filter-body"></div>
+                                    <!-- Found Result Text -->
+                                    <p class="found-result my-fs-md my-fw-bold">20 Tours found</p>
+                                </div>
+
+
+                                <!--=============|| Right Side ||==============-->
+                                <div class="right">
+                                    <div class="click-dropdown-parent">
+                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                            role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class=" my-text-quaternary  text my-text-secondary">Short
+                                                By</span>
+                                            <span class="my-fs-lg my-text-quaternary"><i
+                                                    class="ri-arrow-down-s-line"></i></span>
+                                        </div>
+                                        <!-- Dropdown Here -->
+                                        <ul class="click-dropdown" role="listbox" aria-label="Select Items">
+                                            <li class="item">Items one</li>
+                                            <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                            <li class="item">Items two</li>
+                                            <li class="item">Items 3</li>
+                                            <li class="item">Items 4</li>
+                                            <li class="item">Items 5</li>
+                                            <li class="item">Lorem ipsum</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="sidebar-and-items">
+                                <!-- sidebar -->
+                                <div class="filter-sidebar">
+                                    <ul>
+                                        <li>Price</li>
+                                    </ul>
+                                </div>
+
+                                <!--=============================||  Filter Body  ||===========================-->
+                                <div class="filter-body-wrap flex-1">
+                                    <div class="filter-body-items my-gap-12 my-grid-3">
+
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--================= Single Cart ====================-->
+                                        <div class="hotel-cart tour-filter-cart">
+                                            <!--========  Cart Image =======-->
+                                            <a href="#" class="cart-img">
+                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
+                                                    loading="lazy">
+                                            </a>
+
+                                            <!-- Cart Base || Ribbon -->
+                                            <div>
+                                                <!-- Offer -->
+                                                <div class="cart-tag-left">
+                                                    <span>20</span>%oFF
+                                                </div>
+                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
+                                            </div>
+
+                                            <!--========  Cart Content ========-->
+                                            <div class="cart-content">
+                                                <div>
+                                                    <div class="my-secondary-color sub-title">Petra
+                                                    </div>
+                                                    <a href="#" class="title">The Hari London</a>
+                                                </div>
+
+                                                <!--===== rating =====-->
+                                                <div class="rating">
+                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
+                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
+                                                            <i class="ri-star-fill"></i>
+                                                            <div class="avg">5.00</div>
+                                                        </div>
+                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
+                                                            <div class="total-rating">(960)</div> -
+                                                            <div><span>60</span>k+ </div>
+                                                            <div>Booked</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--===== price and booked =====-->
+                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
+                                                    <!-- For Price -->
+                                                    <div class="price">
+                                                        <div class="new-price"><span>US$</span>75.00</div>
+                                                        <del class="old-price"><span>US$</span>80.00</del>
+                                                    </div>
+
+                                                    <!-- Add To Cart -->
+                                                    <div class="flex-1 my-d-flex">
+                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
+                                                            <span class="content">Book Now</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <!--===============|| Pagination ||===============-->
+                                        <div class="pagination round-pagination  my-mt-22 my-flex-between"
+                                            role="navigation" aria-label="Pagination">
+                                            <button class="prev disabled" disabled=""
+                                                aria-label="Go to previous page"><svg width="20" height="20"
+                                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 15L7.5 10L12.5 5" stroke="#A4A7AE"
+                                                        stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+
+                                            <!-- pages -->
+                                            <div class="pages my-d-flex my-gap-3">
+                                                <button class="page active" aria-current="page"
+                                                    aria-label="Page 1">1</button>
+                                                <button class="page" aria-label="Page 2">2</button>
+                                                <button class="page" aria-label="Page 3">3</button>
+                                                <span class="jumper" aria-hidden="true">…</span>
+                                                <button class="page" aria-label="Page 6">6</button>
+                                                <button class="page" aria-label="Page 7">7</button>
+                                                <button class="page" aria-label="Page 8">8</button>
+                                            </div>
+
+                                            <button class="next" aria-label="Go to next page">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="#A4A7AE"
+                                                        stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+
+                                        <!-- Page Result -->
+                                        <div class="my-mt-8 page-result">
+                                            Showing 1 – 10 of 15 tours found
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

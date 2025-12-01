@@ -294,7 +294,7 @@
 }
 
 .hotel-cart .cart-content {
-    padding: 6px 12px 12px 12px;
+    padding: 8px 12px 12px 12px;
 }
 
 .hotel-cart .cart-content .sub-title {
@@ -1105,6 +1105,68 @@ header .profile-dropdown .head {
         transform: scale(.9);
         opacity: 1;
     }
+}
+
+.round-pagination {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.round-pagination .page {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--my-text-primary);
+}
+
+.round-pagination .page,
+.round-pagination .jumper,
+.round-pagination .next,
+.round-pagination .prev {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--my-white-off);
+    background-color: var(--my-bg-secondary);
+    gap: 4px;
+    font-weight: var(--fw-600);
+    padding: 0;
+}
+
+.round-pagination .page:not(.disabled):hover,
+.round-pagination .page.active,
+.round-pagination .next:not(.disabled):hover,
+.round-pagination .prev:not(.disabled):hover {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    border: none;
+}
+
+.round-pagination .next:not(.disabled):hover svg path,
+.round-pagination .prev:not(.disabled):hover svg path {
+    stroke: var(--my-white);
+}
+
+.round-pagination .next,
+.round-pagination .prev {
+    border-color: var(--my-border-color);
+}
+
+.round-pagination .next svg path,
+.round-pagination .prev svg path {
+    color: #A4A7AE;
+}
+
+.page-result {
+    font-size: var(--fs-md);
+    line-height: var(--line-height-md);
 }
 
 /*
