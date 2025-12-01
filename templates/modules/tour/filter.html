@@ -4,8 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <title>Tour Filter</title>
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
         <link rel="stylesheet" href="/static/css/global_css/global.css">
@@ -5549,14 +5548,14 @@
             ================================================
             -->
             <section>
-                <div class="filter-sec active">
+                <div class="filter-sec " id="filter-section">
                     <div class="my-container">
                         <div class="filter-sec-wrap my-p-relative">
                             <!--=============================||  Filter Head  ||===========================-->
                             <div class="filter-head filter-header my-flex-between">
                                 <!--=============|| Left Side ||==============-->
                                 <div class="left my-d-flex my-align-center my-gap-18">
-                                    <button class="filter-btn">
+                                    <button class="filter-btn" id="sidebar-filter-btn">
                                         <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -5598,13 +5597,13 @@
 
                             <div class="sidebar-and-items">
                                 <!-- sidebar -->
-                                <div class="filter-sidebar">
+                                <div class="filter-sidebar" id="filter-sidebar">
 
                                     <!--==============||  Filter Item Price ||==============-->
-                                    <div class="filter-item">
+                                    <div class="filter-item active">
 
                                         <!-- collapse and Open Btn -->
-                                        <div class="btn my-flex-between">
+                                        <div class="filter-item-btn my-flex-between">
                                             <div class="text my-fs-xl my-fw-bold">Price Range</div>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5632,10 +5631,10 @@
                                     </div>
 
                                     <!--==============||  Filter Item Tour Type  ||==============-->
-                                    <div class="filter-item">
+                                    <div class="filter-item active">
 
                                         <!-- collapse and Open Btn -->
-                                        <div class="btn my-flex-between">
+                                        <div class="filter-item-btn my-flex-between">
                                             <div class="text my-fs-xl my-fw-bold">Tour Types</div>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5664,15 +5663,14 @@
                                                     <label for="#">Private tour</label>
                                                 </li>
                                             </ul>
-
                                             <button class="show-more-btn">Show more</button>
                                         </div>
                                     </div>
                                     <!--==============||  Filter Item Activates  ||==============-->
-                                    <div class="filter-item">
+                                    <div class="filter-item active">
 
                                         <!-- collapse and Open Btn -->
-                                        <div class="btn my-flex-between">
+                                        <div class="filter-item-btn my-flex-between">
                                             <div class="text my-fs-xl my-fw-bold">Activates</div>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5706,10 +5704,10 @@
                                         </div>
                                     </div>
                                     <!--==============||  Filter Item Durations  ||==============-->
-                                    <div class="filter-item">
+                                    <div class="filter-item active">
 
                                         <!-- collapse and Open Btn -->
-                                        <div class="btn my-flex-between">
+                                        <div class="filter-item-btn my-flex-between">
                                             <div class="text my-fs-xl my-fw-bold">Durations</div>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5719,7 +5717,7 @@
                                         </div>
 
                                         <!--========== item content here =========-->
-                                        <div class="item-content">
+                                        <div class="item-content ">
                                             <ul class="items-wrap my-flex-column my-gap-8">
                                                 <li class="item">
                                                     <input type="checkbox" name="" id="">
@@ -5737,6 +5735,10 @@
                                                     <input type="checkbox" name="" id="">
                                                     <label for="#">18 - 21 hours</label>
                                                 </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">19 - 22 hours</label>
+                                                </li>
                                             </ul>
 
                                             <button class="show-more-btn">Show more</button>
@@ -5744,10 +5746,10 @@
                                     </div>
 
                                     <!--==============||  Filter Item Durations  ||==============-->
-                                    <div class="filter-item">
+                                    <div class="filter-item active">
 
                                         <!-- collapse and Open Btn -->
-                                        <div class="btn my-flex-between">
+                                        <div class="filter-item-btn my-flex-between">
                                             <div class="text my-fs-xl my-fw-bold">Time of Day</div>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5766,6 +5768,22 @@
                                                 <li class="item">
                                                     <input type="checkbox" name="" id="">
                                                     <label for="#">Evening, 5 PM - 12 AM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Afternoon, 12 PM - 5 PM</label>
                                                 </li>
                                                 <li class="item">
                                                     <input type="checkbox" name="" id="">
@@ -6584,239 +6602,8 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
-        <script>
+        <script src="/static/js/modules/tour/filter.js"></script>
 
-            // =============|| Offer Left Slider ||=============
-            new Swiper(".leftSwiper", {
-                slidesPerView: 1,
-                loop: true,
-                speed: 1000,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false
-                },
-                navigation: {
-                    nextEl: ".Left-offers .next",
-                    prevEl: ".Left-offers .prev"
-                }
-            });
-
-            // =============|| Offer Middle Top Slider ||=============
-            new Swiper(".slider-middle-top", {
-                slidesPerView: 1,
-                loop: true,
-                speed: 1000,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                navigation: {
-                    nextEl: ".middle-offers .top .next",
-                    prevEl: ".middle-offers .top .prev"
-                }
-            });
-
-
-            // =============|| Offer Middle Bottom Slider ||=============
-            new Swiper(".slider-middle-bottom", {
-                slidesPerView: 1,
-                loop: true,
-                speed: 1000,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                },
-                navigation: {
-                    nextEl: ".middle-offers .bottom .next",
-                    prevEl: ".middle-offers .bottom .prev"
-                }
-            });
-
-            // =============|| Offer Right Slider ||=============
-            new Swiper(".right-slider", {
-                slidesPerView: 1,
-                loop: true,
-                speed: 1000,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 6000,
-                    disableOnInteraction: false
-                },
-                navigation: {
-                    nextEl: ".right-offers  .next",
-                    prevEl: ".right-offers  .prev"
-                }
-            });
-
-
-            //===========  Recent View Slider  ===========
-            const recentView = new Swiper(".recently-view-slider", {
-                slidesPerView: 3.5,
-                spaceBetween: 24,
-                loop: false, // ❗ Stop infinite sliding
-                watchOverflow: true,
-                speed: 800,
-                navigation: {
-                    nextEl: ".recently-view-slider .next",
-                    prevEl: ".recently-view-slider .prev",
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.5, // Mobile
-                        spaceBetween: 12,
-                    },
-                    768: {
-                        slidesPerView: 2.2, // Tablet
-                        spaceBetween: 16,
-                    },
-                    1280: {
-                        slidesPerView: 3.5, // Desktop
-                        spaceBetween: 24,
-                    },
-                },
-            });
-
-
-
-            //===========  Trending Tours Slider  ===========
-            const bestDeal = new Swiper(".best-deal-slider", {
-                slidesPerView: 3.5,
-                spaceBetween: 24,
-                loop: false, // ❗ Stop infinite sliding
-                watchOverflow: true,
-                speed: 800,
-                navigation: {
-                    nextEl: ".best-deal-slider .next",
-                    prevEl: ".best-deal-slider .prev",
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.5, // Mobile
-                        spaceBetween: 12,
-                    },
-                    768: {
-                        slidesPerView: 2.2, // Tablet
-                        spaceBetween: 16,
-                    },
-                    1280: {
-                        slidesPerView: 3.5, // Desktop
-                        spaceBetween: 24,
-                    },
-                },
-            });
-
-
-            //===========  Trending Tours Slider  ===========
-            const trendingSlider = new Swiper(".trending-tour-slider", {
-                slidesPerView: 3.5,
-                spaceBetween: 24,
-                loop: false, // ❗ Stop infinite sliding
-                watchOverflow: true,
-                speed: 800,
-                navigation: {
-                    nextEl: ".trending-tour-slider .next",
-                    prevEl: ".trending-tour-slider .prev",
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.5, // Mobile
-                        spaceBetween: 12,
-                    },
-                    768: {
-                        slidesPerView: 2.2, // Tablet
-                        spaceBetween: 16,
-                    },
-                    1280: {
-                        slidesPerView: 3.5, // Desktop
-                        spaceBetween: 24,
-                    },
-                },
-            });
-
-
-
-            // Popular Tour Slider
-            const popularTourSlider = new Swiper('.popular-tour-slider', {
-                slidesPerView: 3.5,  // 3.5 slides visible on desktop
-                spaceBetween: 24,     // gap between slides
-                grid: {
-                    rows: 2,          // 2 rows
-                    fill: 'row'       // fill slides by row
-                },
-                loop: true,
-                navigation: {
-                    nextEl: '.popular-tour .next',
-                    prevEl: '.popular-tour .prev',
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1,
-                        grid: { rows: 1 }
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        grid: { rows: 2 }
-                    },
-                    1024: {
-                        slidesPerView: 3.5,
-                        grid: { rows: 2 }
-                    }
-                }
-            });
-
-            const categorySlider = new Swiper(".TourCategorySlider", {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                loop: true,
-
-                breakpoints: {
-                    320: { slidesPerView: 1 },
-                    576: { slidesPerView: 1.5 },
-                    768: { slidesPerView: 2 },
-                    992: { slidesPerView: 2 },
-                },
-
-                navigation: {
-                    nextEl: ".TourCategorySlider .next",
-                    prevEl: ".TourCategorySlider .prev",
-                }
-            });
-
-
-            const tripSlider = new Swiper('.tripSlider', {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                loop: true,
-                spreed: 2000,
-
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
-
-                pagination: {
-                    el: '.tripSlider .swiper-pagination',
-                    clickable: true,
-                },
-
-                navigation: {
-                    nextEl: '.tripSlider .next',
-                    prevEl: '.tripSlider .prev',
-                },
-
-                breakpoints: {
-                    992: { slidesPerView: 3 },
-                    768: { slidesPerView: 2 },
-                    480: { slidesPerView: 1 }
-                }
-            });
-
-
-
-        </script>
     </body>
 
 </html>

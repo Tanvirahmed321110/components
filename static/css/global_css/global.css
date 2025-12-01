@@ -311,6 +311,12 @@
     line-height: var(--line-height-lg);
     color: var(--my-text-primary);
     font-weight: var(--fw-600);
+    transition: .2s ease;
+}
+
+.hotel-cart .cart-content .title:hover {
+    color: var(--my-secondary-color);
+    cursor: pointer;
 }
 
 .hotel-cart .rating {
