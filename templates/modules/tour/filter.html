@@ -5511,7 +5511,7 @@
                                                         <input type="text" placeholder="Choose Type ">
                                                     </div>
 
-                                                    <button class="my-btn my-primary-btn s-btn ">
+                                                    <button class="my-btn my-secondary-btn s-btn ">
                                                         <span class="content my-d-flex my-align-center my-gap-4">
 
                                                             <svg width="20" height="20" viewBox="0 0 27 27" fill="none"
@@ -5549,7 +5549,7 @@
             ================================================
             -->
             <section>
-                <div class="filter-sec">
+                <div class="filter-sec active">
                     <div class="my-container">
                         <div class="filter-sec-wrap my-p-relative">
                             <!--=============================||  Filter Head  ||===========================-->
@@ -5585,12 +5585,11 @@
                                         <!-- Dropdown Here -->
                                         <ul class="click-dropdown" role="listbox" aria-label="Select Items">
                                             <li class="item">Items one</li>
-                                            <li class="item active">Tour Lorem ipsum dolor sit amet.</li>
+                                            <li class="item active">Price</li>
                                             <li class="item">Items two</li>
                                             <li class="item">Items 3</li>
                                             <li class="item">Items 4</li>
                                             <li class="item">Items 5</li>
-                                            <li class="item">Lorem ipsum</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -5600,186 +5599,189 @@
                             <div class="sidebar-and-items">
                                 <!-- sidebar -->
                                 <div class="filter-sidebar">
-                                    <ul>
-                                        <li>Price</li>
-                                    </ul>
+
+                                    <!--==============||  Filter Item Price ||==============-->
+                                    <div class="filter-item">
+
+                                        <!-- collapse and Open Btn -->
+                                        <div class="btn my-flex-between">
+                                            <div class="text my-fs-xl my-fw-bold">Price Range</div>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                        <!--========== item content here =========-->
+                                        <div class="item-content">
+                                            <div class="price-range my-mt-8"></div>
+                                            <div class="my-flex-between my-gap-8 p-inputs my-mt-16">
+                                                <!-- min price -->
+                                                <div class="p-input">
+                                                    <label for="min-price">Min. Price</label>
+                                                    <input type="text" name="min-price" id="min-price" placeholder="$0">
+                                                </div>
+                                                <!-- max price -->
+                                                <div>
+                                                    <label for="max-price">Max. Price</label>
+                                                    <input type="text" name="" id="max-price" placeholder="$500">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--==============||  Filter Item Tour Type  ||==============-->
+                                    <div class="filter-item">
+
+                                        <!-- collapse and Open Btn -->
+                                        <div class="btn my-flex-between">
+                                            <div class="text my-fs-xl my-fw-bold">Tour Types</div>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                        <!--========== item content here =========-->
+                                        <div class="item-content">
+                                            <ul class="items-wrap my-flex-column my-gap-8">
+                                                <li class="item">
+                                                    <input checked type="checkbox" name="" id="">
+                                                    <label for="#">Daily tour</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Group tour</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Package tour</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Private tour</label>
+                                                </li>
+                                            </ul>
+
+                                            <button class="show-more-btn">Show more</button>
+                                        </div>
+                                    </div>
+                                    <!--==============||  Filter Item Activates  ||==============-->
+                                    <div class="filter-item">
+
+                                        <!-- collapse and Open Btn -->
+                                        <div class="btn my-flex-between">
+                                            <div class="text my-fs-xl my-fw-bold">Activates</div>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                        <!--========== item content here =========-->
+                                        <div class="item-content">
+                                            <ul class="items-wrap my-flex-column my-gap-8">
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">City tours</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Cultural & thematic tours</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Family friendly tours</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Holiday & seasonal tours</label>
+                                                </li>
+                                            </ul>
+
+                                            <button class="show-more-btn">Show more</button>
+                                        </div>
+                                    </div>
+                                    <!--==============||  Filter Item Durations  ||==============-->
+                                    <div class="filter-item">
+
+                                        <!-- collapse and Open Btn -->
+                                        <div class="btn my-flex-between">
+                                            <div class="text my-fs-xl my-fw-bold">Durations</div>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                        <!--========== item content here =========-->
+                                        <div class="item-content">
+                                            <ul class="items-wrap my-flex-column my-gap-8">
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">0 - 3 hours</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">1 - 3 days</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">12 - 15 days</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">18 - 21 hours</label>
+                                                </li>
+                                            </ul>
+
+                                            <button class="show-more-btn">Show more</button>
+                                        </div>
+                                    </div>
+
+                                    <!--==============||  Filter Item Durations  ||==============-->
+                                    <div class="filter-item">
+
+                                        <!-- collapse and Open Btn -->
+                                        <div class="btn my-flex-between">
+                                            <div class="text my-fs-xl my-fw-bold">Time of Day</div>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+
+                                        <!--========== item content here =========-->
+                                        <div class="item-content">
+                                            <ul class="items-wrap my-flex-column my-gap-8">
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Morning, 8 AM - 12 PM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Evening, 5 PM - 12 AM</label>
+                                                </li>
+                                                <li class="item">
+                                                    <input type="checkbox" name="" id="">
+                                                    <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                                </li>
+                                            </ul>
+
+                                            <button class="show-more-btn">Show more</button>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!--=============================||  Filter Body  ||===========================-->
+                                <!--===================================||  Filter Body  ||==================================-->
                                 <div class="filter-body-wrap flex-1">
-                                    <div class="filter-body-items my-gap-12 my-grid-3">
+                                    <div class="filter-body-items my-gap-12 my-grid-4">
 
-                                        <!--================= Single Cart ====================-->
-                                        <div class="hotel-cart tour-filter-cart">
-                                            <!--========  Cart Image =======-->
-                                            <a href="#" class="cart-img">
-                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
-                                                    loading="lazy">
-                                            </a>
-
-                                            <!-- Cart Base || Ribbon -->
-                                            <div>
-                                                <!-- Offer -->
-                                                <div class="cart-tag-left">
-                                                    <span>20</span>%oFF
-                                                </div>
-                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
-                                            </div>
-
-                                            <!--========  Cart Content ========-->
-                                            <div class="cart-content">
-                                                <div>
-                                                    <div class="my-secondary-color sub-title">Petra
-                                                    </div>
-                                                    <a href="#" class="title">The Hari London</a>
-                                                </div>
-
-                                                <!--===== rating =====-->
-                                                <div class="rating">
-                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
-                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
-                                                            <i class="ri-star-fill"></i>
-                                                            <div class="avg">5.00</div>
-                                                        </div>
-                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
-                                                            <div class="total-rating">(960)</div> -
-                                                            <div><span>60</span>k+ </div>
-                                                            <div>Booked</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--===== price and booked =====-->
-                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
-                                                    <!-- For Price -->
-                                                    <div class="price">
-                                                        <div class="new-price"><span>US$</span>75.00</div>
-                                                        <del class="old-price"><span>US$</span>80.00</del>
-                                                    </div>
-
-                                                    <!-- Add To Cart -->
-                                                    <div class="flex-1 my-d-flex">
-                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
-                                                            <span class="content">Book Now</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--================= Single Cart ====================-->
-                                        <div class="hotel-cart tour-filter-cart">
-                                            <!--========  Cart Image =======-->
-                                            <a href="#" class="cart-img">
-                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
-                                                    loading="lazy">
-                                            </a>
-
-                                            <!-- Cart Base || Ribbon -->
-                                            <div>
-                                                <!-- Offer -->
-                                                <div class="cart-tag-left">
-                                                    <span>20</span>%oFF
-                                                </div>
-                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
-                                            </div>
-
-                                            <!--========  Cart Content ========-->
-                                            <div class="cart-content">
-                                                <div>
-                                                    <div class="my-secondary-color sub-title">Petra
-                                                    </div>
-                                                    <a href="#" class="title">The Hari London</a>
-                                                </div>
-
-                                                <!--===== rating =====-->
-                                                <div class="rating">
-                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
-                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
-                                                            <i class="ri-star-fill"></i>
-                                                            <div class="avg">5.00</div>
-                                                        </div>
-                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
-                                                            <div class="total-rating">(960)</div> -
-                                                            <div><span>60</span>k+ </div>
-                                                            <div>Booked</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--===== price and booked =====-->
-                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
-                                                    <!-- For Price -->
-                                                    <div class="price">
-                                                        <div class="new-price"><span>US$</span>75.00</div>
-                                                        <del class="old-price"><span>US$</span>80.00</del>
-                                                    </div>
-
-                                                    <!-- Add To Cart -->
-                                                    <div class="flex-1 my-d-flex">
-                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
-                                                            <span class="content">Book Now</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--================= Single Cart ====================-->
-                                        <div class="hotel-cart tour-filter-cart">
-                                            <!--========  Cart Image =======-->
-                                            <a href="#" class="cart-img">
-                                                <img src="/static/images/filter-cart-1.jpg" alt="hotel-cart6-3"
-                                                    loading="lazy">
-                                            </a>
-
-                                            <!-- Cart Base || Ribbon -->
-                                            <div>
-                                                <!-- Offer -->
-                                                <div class="cart-tag-left">
-                                                    <span>20</span>%oFF
-                                                </div>
-                                                <div class="cart-tag-wishlist"><i class="ri-heart-3-line"></i></div>
-                                            </div>
-
-                                            <!--========  Cart Content ========-->
-                                            <div class="cart-content">
-                                                <div>
-                                                    <div class="my-secondary-color sub-title">Petra
-                                                    </div>
-                                                    <a href="#" class="title">The Hari London</a>
-                                                </div>
-
-                                                <!--===== rating =====-->
-                                                <div class="rating">
-                                                    <div class="my-d-flex my-fs-md my-aligin-center my-gap-2">
-                                                        <div class="star-avg my-d-flex my-align-center my-gap-2">
-                                                            <i class="ri-star-fill"></i>
-                                                            <div class="avg">5.00</div>
-                                                        </div>
-                                                        <div class="rating-text my-d-flex my-align-center my-gap-2">
-                                                            <div class="total-rating">(960)</div> -
-                                                            <div><span>60</span>k+ </div>
-                                                            <div>Booked</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--===== price and booked =====-->
-                                                <div class="my-flex-between price-and-btn my-gap-8 my-mt-12">
-                                                    <!-- For Price -->
-                                                    <div class="price">
-                                                        <div class="new-price"><span>US$</span>75.00</div>
-                                                        <del class="old-price"><span>US$</span>80.00</del>
-                                                    </div>
-
-                                                    <!-- Add To Cart -->
-                                                    <div class="flex-1 my-d-flex">
-                                                        <button class="cart-btn my-btn my-secondary-btn flex-1">
-                                                            <span class="content">Book Now</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <!--================= Single Cart ====================-->
                                         <div class="hotel-cart tour-filter-cart">
                                             <!--========  Cart Image =======-->

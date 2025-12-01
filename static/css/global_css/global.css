@@ -179,6 +179,7 @@
 
 }
 
+
 .tab-contents {
     margin-top: 16px;
 }
@@ -577,6 +578,7 @@
     justify-content: center;
     z-index: 4;
     box-shadow: var(--shadow-all-lg);
+    cursor: pointer;
 }
 
 .cart-tag-wishlist i {
