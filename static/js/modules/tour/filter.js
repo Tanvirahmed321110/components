@@ -52,3 +52,46 @@ function filterButtonF() {
 }
 
 filterButtonF()
+
+
+
+// price range elements
+function priceRange() {
+    const slider = document.getElementById("price-slider");
+    const minInput = document.getElementById("min-price");
+    const maxInput = document.getElementById("max-price");
+
+    // ---- VALIDATION: If any element missing → stop script ----
+    if (!slider || !minInput || !maxInput) {
+        console.warn("Price range elements not found. Skipping price slider setup.");
+        return; // STOP the rest of the script
+    }
+    // -----------------------------------------------------------
+
+    // Create slider
+    noUiSlider.create(slider, {
+        start: [50, 400], // default values
+        connect: true,
+        range: {
+            min: 0,
+            max: 500
+        }
+    });
+
+    // Update Input Fields Live
+    slider.noUiSlider.on("update", function (values) {
+        minInput.value = "$" + Math.round(values[0]);
+        maxInput.value = "$" + Math.round(values[1]);
+    });
+
+    // When user changes min input
+    minInput.addEventListener("change", function () {
+        slider.noUiSlider.set([this.value.replace("$", ""), null]);
+    });
+
+    // When user changes max input
+    maxInput.addEventListener("change", function () {
+        slider.noUiSlider.set([null, this.value.replace("$", "")]);
+    });
+}
+priceRange()

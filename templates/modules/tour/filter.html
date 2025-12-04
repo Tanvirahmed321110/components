@@ -7,9 +7,11 @@
         <title>Tour Filter</title>
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
         <link rel="stylesheet" href="/static/css/global_css/global.css">
         <link rel="stylesheet" href="/static/css/modules/tour/tour-common.css">
         <link rel="stylesheet" href="/static/css/modules/tour/filter.css">
+
     </head>
 
     <body>
@@ -5614,21 +5616,26 @@
 
                                         <!--========== item content here =========-->
                                         <div class="item-content">
-                                            <div class="price-range my-mt-8"></div>
+
+                                            <!-- SLIDER BOX -->
+                                            <div class="price-range my-mt-8" id="price-slider"></div>
+
                                             <div class="my-flex-between my-gap-8 p-inputs my-mt-16">
                                                 <!-- min price -->
                                                 <div class="p-input">
                                                     <label for="min-price">Min. Price</label>
-                                                    <input type="text" name="min-price" id="min-price" placeholder="$0">
+                                                    <input type="text" id="min-price" placeholder="$0">
                                                 </div>
+
                                                 <!-- max price -->
-                                                <div>
+                                                <div class="p-input">
                                                     <label for="max-price">Max. Price</label>
-                                                    <input type="text" name="" id="max-price" placeholder="$500">
+                                                    <input type="text" id="max-price" placeholder="$500">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
 
                                     <!--==============||  Filter Item Tour Type  ||==============-->
                                     <div class="filter-item active">
@@ -6600,9 +6607,12 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/modules/tour/filter.js"></script>
+        <script>
+        </script>
+
 
     </body>
 

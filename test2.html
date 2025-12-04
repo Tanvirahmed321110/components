@@ -2,357 +2,106 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Smooth Accordion Sidebar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Price Range Slider</title>
+
+        <!-- noUiSlider CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
         <style>
-            :root {
-                --bg: #f5f6f8;
-                --card: #fff;
-                --muted: #6b7280;
-                --accent: #0b76ef;
-            }
-
             body {
-                margin: 0;
-                font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-                background: var(--bg);
-                padding: 28px;
-                color: #111827;
+                font-family: Arial, sans-serif;
+                padding: 30px;
             }
 
-            .container {
-                max-width: 980px;
-                margin: 0 auto;
-                display: flex;
-                gap: 24px;
-            }
-
-            /* SIDEBAR */
-            .filter-sidebar {
-                width: 320px;
-                background: var(--card);
+            .filter-box {
+                width: 340px;
+                background: #fff;
+                padding: 20px;
                 border-radius: 10px;
-                box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
-                padding: 12px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
-            .filter-sidebar .item {
-                border-bottom: 1px solid #eef2f6;
-                padding: 10px 8px;
-            }
-
-            .filter-sidebar .btn {
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 20px;
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
-                gap: 12px;
-                cursor: pointer;
-                padding: 6px 4px;
-                user-select: none;
+                align-items: center;
             }
 
-            .filter-sidebar .btn .title {
-                font-weight: 600;
-                font-size: 15px;
+            /* orange slider style */
+            #price-slider .noUi-connect {
+                background: #ff4d2e !important;
             }
 
-            /* arrow svg */
-            .filter-sidebar .btn svg {
-                width: 18px;
-                height: 18px;
-                transition: transform .32s cubic-bezier(.2, .9, .2, 1);
-                transform-origin: center;
-                display: block;
+            /* round white handles */
+            #price-slider .noUi-handle {
+                height: 20px !important;
+                width: 20px !important;
+                background: #fff !important;
+                border-radius: 50%;
+                border: 2px solid #ddd !important;
+                top: -8px !important;
+                /* center adjust */
+                cursor: grab;
             }
 
-            /* rotate when active */
-            .item.active .btn svg {
-                transform: rotate(90deg);
+            /* Hide handle bars */
+            #price-slider .noUi-handle:before,
+            #price-slider .noUi-handle:after {
+                display: none;
             }
 
-            /* CONTENT: use max-height transition for smooth open/close */
-            .content {
-                overflow: hidden;
-                max-height: 0;
-                /* collapsed */
-                transition: max-height .36s cubic-bezier(.2, .9, .2, 1), padding .2s ease;
-                padding: 0 4px;
-                /* when collapsed keep no vertical padding */
-            }
-
-            /* when shown we will set max-height inline from JS and add padding */
-            .content.opening {
-                padding: 8px 4px 10px 4px;
-            }
-
-            .content ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            .content ul li {
-                padding: 8px 6px;
-                border-radius: 6px;
-                margin-bottom: 6px;
-                cursor: pointer;
+            .price-values {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
                 font-size: 14px;
-            }
-
-            .content ul li:hover {
-                background: #f3f7ff;
-            }
-
-            .show-more-btn {
-                display: inline-block;
-                margin-top: 6px;
-                font-size: 13px;
-                color: var(--accent);
-                cursor: pointer;
-                background: transparent;
-                border: none;
-                padding: 6px 0;
-            }
-
-            /* layout demo for main area (cards) */
-            .main {
-                flex: 1;
-            }
-
-            .note {
-                margin-bottom: 12px;
-                color: var(--muted);
-                font-size: 13px;
-            }
-
-            /* small responsive */
-            @media (max-width:720px) {
-                .container {
-                    padding: 0 10px;
-                    flex-direction: column
-                }
-
-                .filter-sidebar {
-                    width: 100%
-                }
             }
         </style>
     </head>
 
     <body>
 
-        <div class="container">
-            <div class="filter-sidebar">
-
-                <!-- item 1 (default open) -->
-                <div class="item" data-auto-open="true">
-                    <div class="btn">
-                        <div class="title">Activities</div>
-                        <!-- chevron -->
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <path d="M8 5L15 12L8 19" stroke="#374151" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-
-                    <div class="content">
-                        <ul>
-                            <li>Hiking</li>
-                            <li>Swimming</li>
-                            <li>Safari</li>
-                            <li>Adventure Ride</li>
-                            <li>Kayaking</li>
-                            <li>Sky Diving</li>
-                            <li>Camping</li>
-                            <li>Paragliding</li>
-                        </ul>
-                        <button class="show-more-btn" type="button">Show more</button>
-                    </div>
-                </div>
-
-                <!-- item 2 -->
-                <div class="item">
-                    <div class="btn">
-                        <div class="title">Type</div>
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <path d="M8 5L15 12L8 19" stroke="#374151" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-
-                    <div class="content">
-                        <ul>
-                            <li>Solo</li>
-                            <li>Family</li>
-                            <li>Couple</li>
-                            <li>Group</li>
-                            <li>Luxury</li>
-                            <li>Budget</li>
-                        </ul>
-                        <button class="show-more-btn" type="button">Show more</button>
-                    </div>
-                </div>
-
-                <!-- item 3 -->
-                <div class="item">
-                    <div class="btn">
-                        <div class="title">Brand</div>
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <path d="M8 5L15 12L8 19" stroke="#374151" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-
-                    <div class="content">
-                        <ul>
-                            <li>Brand A</li>
-                            <li>Brand B</li>
-                            <li>Brand C</li>
-                            <li>Brand D</li>
-                            <li>Brand E</li>
-                        </ul>
-                        <button class="show-more-btn" type="button">Show more</button>
-                    </div>
-                </div>
-
+        <div class="filter-box">
+            <div class="title">
+                Price Range
+                <span>▼</span>
             </div>
 
-            <div class="main">
-                <p class="note">Demo page — use the left sidebar to test smooth open/close + show more.</p>
-                <!-- any other page content -->
+            <!-- Slider -->
+            <div id="price-slider"></div>
+
+            <!-- Price Display -->
+            <div class="price-values">
+                <span id="min-price">$0</span>
+                <span id="max-price">$100</span>
             </div>
         </div>
 
         <script>
-            /*
-             Smooth accordion:
-             - use max-height transition
-             - on open: set maxHeight = scrollHeight + 'px' and add padding class
-             - on close: set maxHeight = 0 and remove padding class
-             - initial items with data-auto-open="true" will be open on load
-             - Show more: hides items beyond 5 initially; clicking 'Show more' reveals them and re-calculates maxHeight
-            */
+            const slider = document.getElementById('price-slider');
 
-            (function () {
-                const items = document.querySelectorAll(".filter-sidebar .item");
-
-                function openContent(content) {
-                    // make visible and animate to its scrollHeight
-                    content.classList.add('opening');
-                    // remove explicit inline maxHeight first so scrollHeight recalculated fresh
-                    content.style.maxHeight = '0px';
-                    // next frame set to scrollHeight to animate
-                    requestAnimationFrame(() => {
-                        const h = content.scrollHeight;
-                        content.style.maxHeight = h + 'px';
-                    });
+            noUiSlider.create(slider, {
+                start: [20, 80],
+                connect: true,
+                range: {
+                    min: 0,
+                    max: 100
                 }
+            });
 
-                function closeContent(content) {
-                    // animate to 0
-                    content.style.maxHeight = content.scrollHeight + 'px'; // ensure from current height
-                    requestAnimationFrame(() => {
-                        content.style.maxHeight = '0px';
-                    });
-                    // remove padding class after transition ends (to avoid sudden jump)
-                    content.addEventListener('transitionend', function te() {
-                        content.classList.remove('opening');
-                        content.removeEventListener('transitionend', te);
-                    });
-                }
+            const minPrice = document.getElementById("min-price");
+            const maxPrice = document.getElementById("max-price");
 
-                // initialize items
-                items.forEach(item => {
-                    const btn = item.querySelector('.btn');
-                    const content = item.querySelector('.content');
-                    const ul = content.querySelector('ul');
-                    const showMoreBtn = content.querySelector('.show-more-btn');
-
-                    // 1) Setup show-more (hide extras > 5)
-                    const li = ul ? Array.from(ul.children) : [];
-                    if (li.length > 5) {
-                        // hide after 5
-                        li.forEach((el, idx) => {
-                            if (idx > 4) el.style.display = 'none';
-                        });
-                        // ensure show more visible
-                        showMoreBtn.style.display = 'inline-block';
-                        showMoreBtn.addEventListener('click', function () {
-                            // reveal hidden items
-                            li.forEach((el, idx) => {
-                                if (idx > 4) el.style.display = ''; // default
-                            });
-                            // hide button
-                            this.style.display = 'none';
-                            // recalc maxHeight if content is open
-                            if (item.classList.contains('active')) {
-                                // small timeout to let layout update then set maxHeight to new scrollHeight
-                                requestAnimationFrame(() => {
-                                    content.style.maxHeight = content.scrollHeight + 'px';
-                                });
-                            }
-                        });
-                    } else {
-                        showMoreBtn.style.display = 'none';
-                    }
-
-                    // 2) Click handler
-                    btn.addEventListener('click', function () {
-                        const isActive = item.classList.contains('active');
-
-                        // If you want only one open at a time, uncomment this block:
-                        // items.forEach(i=>{
-                        //     if(i !== item && i.classList.contains('active')){
-                        //         i.classList.remove('active');
-                        //         closeContent(i.querySelector('.content'));
-                        //     }
-                        // });
-
-                        if (isActive) {
-                            item.classList.remove('active');
-                            closeContent(content);
-                        } else {
-                            item.classList.add('active');
-                            openContent(content);
-                        }
-                    });
-                });
-
-                // On load: open any item that has data-auto-open="true"
-                window.addEventListener('load', () => {
-                    items.forEach(item => {
-                        const content = item.querySelector('.content');
-                        if (item.hasAttribute('data-auto-open')) {
-                            item.classList.add('active');
-                            // ensure hidden extras still hidden before measuring
-                            requestAnimationFrame(() => {
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                                content.classList.add('opening');
-                            });
-                        } else {
-                            // ensure collapsed state reset
-                            content.style.maxHeight = '0px';
-                            content.classList.remove('opening');
-                        }
-                    });
-                });
-
-                // handle window resize: recalc maxHeights for opened contents
-                let resizeTimeout;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimeout);
-                    resizeTimeout = setTimeout(() => {
-                        items.forEach(item => {
-                            if (item.classList.contains('active')) {
-                                const content = item.querySelector('.content');
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                            }
-                        });
-                    }, 120);
-                });
-
-            })();
+            slider.noUiSlider.on('update', function (values) {
+                minPrice.textContent = "$" + Math.round(values[0]);
+                maxPrice.textContent = "$" + Math.round(values[1]);
+            });
         </script>
 
     </body>

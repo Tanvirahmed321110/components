@@ -3,13 +3,15 @@ body {
     background-color: #f5f5f5;
 }
 
-
-
 /*
 ========================================
 =====||   Filter Hero Section    ||=====
 ========================================
 */
+.filter-sec-wrap {
+    padding-bottom: 60px;
+}
+
 .filter-hero .g-hero-area .bottom-search {
     height: unset;
     padding: 40px 32px;
@@ -129,6 +131,7 @@ body {
 .filter-sidebar .filter-item {
     padding: 32px 0;
     border-bottom: 1px solid var(--my-border-color);
+    overflow-x: hidden;
 }
 
 .filter-item .item-content {
@@ -189,6 +192,43 @@ body {
 .filter-sidebar .items-wrap .item:hover input {
     border-color: var(--my-secondary-color);
 }
+
+
+/*===== Price Slider Styles =====*/
+#price-slider .noUi-connect {
+    background: var(--my-secondary-color) !important;
+    height: 8px !important;
+    border-radius: 14px !important;
+    /* orange bar */
+}
+
+#price-slider .noUi-handle {
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 50%;
+    background: #fff !important;
+    border: 1px solid var(--m-border-secondary) !important;
+    top: -8px !important;
+    cursor: grab;
+    z-index: 9 !important;
+}
+
+/* Remove extra vertical bars on handle */
+#price-slider .noUi-handle:before,
+#price-slider .noUi-handle:after {
+    display: none;
+}
+
+.noUi-target {
+    background: var(--my-border-color);
+    border-radius: 14px;
+    border: 1px solid var(--m-border-secondary);
+    box-shadow: unset;
+    height: 8px;
+    max-width: 100%;
+    overflow: visible !important;
+}
+
 
 .filter-sidebar input[type="checkbox"] {
     width: 17px;
