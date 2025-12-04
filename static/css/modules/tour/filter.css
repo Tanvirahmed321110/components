@@ -169,6 +169,14 @@ body {
     stroke: var(--my-secondary-color);
 }
 
+.filter-sidebar .filter-item .filter-item-btn .text {
+    transition: .26s ease;
+}
+
+.filter-sidebar .filter-item .filter-item-btn:hover .text {
+    color: var(--my-secondary-color);
+}
+
 /* item wrap */
 .filter-sidebar .items-wrap {
     margin-top: 20px;
