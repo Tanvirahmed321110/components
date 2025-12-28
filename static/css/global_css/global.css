@@ -179,6 +179,10 @@
 
 }
 
+.tab-content article {
+    display: flex;
+}
+
 
 .tab-contents {
     margin-top: 16px;

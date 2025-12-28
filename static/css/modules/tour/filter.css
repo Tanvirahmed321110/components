@@ -346,6 +346,48 @@ body {
 
 @media (max-width:768px) {
 
+    header,
+    body {
+        background-color: var(--my-white);
+    }
+
+    .filter-sec.active .filter-body-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-sidebar {
+        width: calc(100% - 32px);
+        background-color: var(--my-white);
+        border-radius: 20px;
+        /* border: 1px solid var(--my-border-color); */
+        padding: 0px 16px;
+        box-shadow: var(--n-shadow-2);
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 16px;
+        right: 16px;
+        z-index: 12;
+        padding-top: 16px;
+        height: calc(100% - 120px);
+        overflow-y: auto;
+    }
+
+    .filter-sidebar .filter-close-btn {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        z-index: 13;
+        display: block;
+        background-color: red;
+        padding: 4px 7px;
+        border-radius: 4px;
+    }
+
+    .filter-sec {
+        background-color: var(--section-bg);
+    }
+
     .filter-sec .filter-head {
         padding: 30px 0;
         padding-bottom: 12px;

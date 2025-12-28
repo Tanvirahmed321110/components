@@ -30,7 +30,9 @@ filterSidebarToggleF()
 function filterButtonF() {
     const sidebarBtn = document.getElementById("sidebar-filter-btn");
     const sidebar = document.getElementById("filter-sidebar");
+    const filterCloseBtn = sidebar.querySelector('.filter-close-btn')
     const filterSection = document.getElementById("filter-section");
+
     console.log(sidebar, sidebarBtn, filterSection)
     if (!sidebarBtn || !sidebar || !filterSection) {
         return
@@ -40,6 +42,10 @@ function filterButtonF() {
         sidebar.classList.toggle("active");
         filterSection.classList.toggle("active");
     });
+
+    filterCloseBtn.addEventListener('click', function () {
+        sidebar.classList.remove('active')
+    })
 
     // outside click then remove sidebar
     // document.addEventListener("click", (e) => {
