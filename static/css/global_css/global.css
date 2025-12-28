@@ -1115,29 +1115,29 @@ header .profile-dropdown .head {
     }
 }
 
-.round-pagination {
+.soft-pagination {
     width: fit-content;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.round-pagination .page {
+.soft-pagination .page {
     width: 40px;
     height: 40px;
-    border-radius: var(--radius-round);
+    border-radius: 4px;
     font-size: var(--fs-md);
     font-weight: 600;
     color: var(--my-text-primary);
 }
 
-.round-pagination .page,
-.round-pagination .jumper,
-.round-pagination .next,
-.round-pagination .prev {
+.soft-pagination .page,
+.soft-pagination .jumper,
+.soft-pagination .next,
+.soft-pagination .prev {
     width: 40px;
     height: 40px;
-    border-radius: var(--radius-round);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1148,27 +1148,27 @@ header .profile-dropdown .head {
     padding: 0;
 }
 
-.round-pagination .page:not(.disabled):hover,
-.round-pagination .page.active,
-.round-pagination .next:not(.disabled):hover,
-.round-pagination .prev:not(.disabled):hover {
+.soft-pagination .page:not(.disabled):hover,
+.soft-pagination .page.active,
+.soft-pagination .next:not(.disabled):hover,
+.soft-pagination .prev:not(.disabled):hover {
     background-color: var(--my-secondary-color);
     color: var(--my-white);
     border: none;
 }
 
-.round-pagination .next:not(.disabled):hover svg path,
-.round-pagination .prev:not(.disabled):hover svg path {
+.soft-pagination .next:not(.disabled):hover svg path,
+.soft-pagination .prev:not(.disabled):hover svg path {
     stroke: var(--my-white);
 }
 
-.round-pagination .next,
-.round-pagination .prev {
+.soft-pagination .next,
+.soft-pagination .prev {
     border-color: var(--my-border-color);
 }
 
-.round-pagination .next svg path,
-.round-pagination .prev svg path {
+.soft-pagination .next svg path,
+.soft-pagination .prev svg path {
     color: #A4A7AE;
 }
 
@@ -2162,6 +2162,15 @@ footer .footer-bottom .left {
         font-size: 14px;
         flex-direction: column;
         background-color: var(--my-white);
+    }
+
+
+    .soft-pagination .page,
+    .soft-pagination .jumper,
+    .soft-pagination .next,
+    .soft-pagination .prev {
+        width: 34px;
+        height: 34px;
     }
 
 

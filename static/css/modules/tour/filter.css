@@ -341,3 +341,98 @@ body {
 .hotel-cart.tour-filter-cart .cart-btn {
     background-color: var(--my-secondary-color);
 }
+
+
+
+@media (max-width:768px) {
+
+    .filter-sec .filter-head {
+        padding: 30px 0;
+        padding-bottom: 12px;
+    }
+
+    .hotel-cart.tour-filter-cart {
+        padding: 0px;
+        box-shadow: unset;
+        border-radius: 4px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-img img {
+        height: unset;
+        border-radius: 4px;
+        /* aspect-ratio: 16 / 12; */
+    }
+
+    .hotel-cart.tour-filter-cart .cart-tag-left {
+        left: 5px;
+        top: 5px;
+        border-radius: 8px 0 8px 0;
+        font-size: 8px;
+        padding: 4px 6px;
+        line-height: 12px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-tag-wishlist {
+        right: 5px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-tag-wishlist i {
+        font-size: var(--fs-sm);
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content {
+        padding: 8px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content .sub-title {
+        font-size: var(--fs-sm);
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content .title {
+        margin-top: -2px;
+        font-size: var(--fs-md);
+        line-height: var(--line-height-lg);
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content .rating {
+        margin-top: 0px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content .rating .star-avg,
+    .hotel-cart.tour-filter-cart .cart-content .rating .rating-text {
+        font-size: 10px;
+    }
+
+    .hotel-cart.tour-filter-cart .star-avg i {
+        margin-top: 0px;
+    }
+
+    .hotel-cart.tour-filter-cart .new-price {
+        font-size: var(--fs-sm);
+    }
+
+    .hotel-cart.tour-filter-cart .old-price {
+        color: var(--my-orange);
+        font-size: var(--fs-low);
+        margin-top: 0px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-btn {
+        font-size: 8px;
+        padding: 5px 8px;
+        border-radius: 4px !important;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-btn .content {
+        line-height: 12px;
+    }
+
+    .hotel-cart.tour-filter-cart .price-and-btn {
+        margin-top: 2px;
+        align-items: end;
+    }
+}

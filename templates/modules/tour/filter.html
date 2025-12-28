@@ -5553,47 +5553,53 @@
                 <div class="filter-sec " id="filter-section">
                     <div class="my-container">
                         <div class="filter-sec-wrap my-p-relative">
-                            <!--=============================||  Filter Head  ||===========================-->
-                            <div class="filter-head filter-header my-flex-between">
-                                <!--=============|| Left Side ||==============-->
-                                <div class="left my-d-flex my-align-center my-gap-18">
-                                    <button class="filter-btn" id="sidebar-filter-btn">
-                                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.93182 2.35H20.75M8.93182 2.35C8.93182 2.77435 8.74026 3.18131 8.39929 3.48137C8.05831 3.78143 7.59585 3.95 7.11364 3.95C6.63142 3.95 6.16896 3.78143 5.82799 3.48137C5.48701 3.18131 5.29545 2.77435 5.29545 2.35M8.93182 2.35C8.93182 1.92565 8.74026 1.51869 8.39929 1.21863C8.05831 0.918571 7.59585 0.75 7.11364 0.75C6.63142 0.75 6.16896 0.918571 5.82799 1.21863C5.48701 1.51869 5.29545 1.92565 5.29545 2.35M5.29545 2.35H0.75M8.93182 15.15H20.75M8.93182 15.15C8.93182 15.5743 8.74026 15.9813 8.39929 16.2814C8.05831 16.5814 7.59585 16.75 7.11364 16.75C6.63142 16.75 6.16896 16.5814 5.82799 16.2814C5.48701 15.9813 5.29545 15.5743 5.29545 15.15M8.93182 15.15C8.93182 14.7257 8.74026 14.3187 8.39929 14.0186C8.05831 13.7186 7.59585 13.55 7.11364 13.55C6.63142 13.55 6.16896 13.7186 5.82799 14.0186C5.48701 14.3187 5.29545 14.7257 5.29545 15.15M5.29545 15.15H0.75M16.2045 8.75H20.75M16.2045 8.75C16.2045 9.17435 16.013 9.58131 15.672 9.88137C15.331 10.1814 14.8686 10.35 14.3864 10.35C13.9042 10.35 13.4417 10.1814 13.1007 9.88137C12.7597 9.58131 12.5682 9.17435 12.5682 8.75M16.2045 8.75C16.2045 8.32565 16.013 7.91869 15.672 7.61863C15.331 7.31857 14.8686 7.15 14.3864 7.15C13.9042 7.15 13.4417 7.31857 13.1007 7.61863C12.7597 7.91869 12.5682 8.32565 12.5682 8.75M12.5682 8.75H0.75"
-                                                stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                        <span class="text">Filter</span>
-                                    </button>
+                            <div class="my-flex-column m">
+                                <!--=============================||  Filter Head  ||===========================-->
+                                <div class="filter-head filter-header my-flex-between">
+                                    <!--=============|| Left Side ||==============-->
+                                    <div class="left my-d-flex my-align-center  my-gap-18">
+                                        <button class="filter-btn" id="sidebar-filter-btn">
+                                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.93182 2.35H20.75M8.93182 2.35C8.93182 2.77435 8.74026 3.18131 8.39929 3.48137C8.05831 3.78143 7.59585 3.95 7.11364 3.95C6.63142 3.95 6.16896 3.78143 5.82799 3.48137C5.48701 3.18131 5.29545 2.77435 5.29545 2.35M8.93182 2.35C8.93182 1.92565 8.74026 1.51869 8.39929 1.21863C8.05831 0.918571 7.59585 0.75 7.11364 0.75C6.63142 0.75 6.16896 0.918571 5.82799 1.21863C5.48701 1.51869 5.29545 1.92565 5.29545 2.35M5.29545 2.35H0.75M8.93182 15.15H20.75M8.93182 15.15C8.93182 15.5743 8.74026 15.9813 8.39929 16.2814C8.05831 16.5814 7.59585 16.75 7.11364 16.75C6.63142 16.75 6.16896 16.5814 5.82799 16.2814C5.48701 15.9813 5.29545 15.5743 5.29545 15.15M8.93182 15.15C8.93182 14.7257 8.74026 14.3187 8.39929 14.0186C8.05831 13.7186 7.59585 13.55 7.11364 13.55C6.63142 13.55 6.16896 13.7186 5.82799 14.0186C5.48701 14.3187 5.29545 14.7257 5.29545 15.15M5.29545 15.15H0.75M16.2045 8.75H20.75M16.2045 8.75C16.2045 9.17435 16.013 9.58131 15.672 9.88137C15.331 10.1814 14.8686 10.35 14.3864 10.35C13.9042 10.35 13.4417 10.1814 13.1007 9.88137C12.7597 9.58131 12.5682 9.17435 12.5682 8.75M16.2045 8.75C16.2045 8.32565 16.013 7.91869 15.672 7.61863C15.331 7.31857 14.8686 7.15 14.3864 7.15C13.9042 7.15 13.4417 7.31857 13.1007 7.61863C12.7597 7.91869 12.5682 8.32565 12.5682 8.75M12.5682 8.75H0.75"
+                                                    stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="text">Filter</span>
+                                        </button>
 
-                                    <!-- Found Result Text -->
-                                    <p class="found-result my-fs-md my-fw-bold">20 Tours found</p>
-                                </div>
-
-
-                                <!--=============|| Right Side ||==============-->
-                                <div class="right">
-                                    <div class="click-dropdown-parent">
-                                        <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
-                                            role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class=" my-text-quaternary  text my-text-secondary">Short
-                                                By</span>
-                                            <span class="my-fs-lg my-text-quaternary"><i
-                                                    class="ri-arrow-down-s-line"></i></span>
-                                        </div>
-                                        <!-- Dropdown Here -->
-                                        <ul class="click-dropdown" role="listbox" aria-label="Select Items">
-                                            <li class="item">Items one</li>
-                                            <li class="item active">Price</li>
-                                            <li class="item">Items two</li>
-                                            <li class="item">Items 3</li>
-                                            <li class="item">Items 4</li>
-                                            <li class="item">Items 5</li>
-                                        </ul>
+                                        <!-- Found Result Text For Desktop -->
+                                        <p class="found-result mobile-hide  my-fs-md my-fw-bold">20 Tours found</p>
                                     </div>
+
+
+                                    <!--=============|| Right Side ||==============-->
+                                    <div class="right">
+                                        <div class="click-dropdown-parent">
+                                            <div class="click-dropdown-btn my-p-3 my-px-7 my-border-secondary my-flex-between my-gap-2 my-radius-md"
+                                                role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span class=" my-text-quaternary  text my-text-secondary">Short
+                                                    By</span>
+                                                <span class="my-fs-lg my-text-quaternary"><i
+                                                        class="ri-arrow-down-s-line"></i></span>
+                                            </div>
+                                            <!-- Dropdown Here -->
+                                            <ul class="click-dropdown" role="listbox" aria-label="Select Items">
+                                                <li class="item">Items one</li>
+                                                <li class="item active">Price</li>
+                                                <li class="item">Items two</li>
+                                                <li class="item">Items 3</li>
+                                                <li class="item">Items 4</li>
+                                                <li class="item">Items 5</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
                                 </div>
+                                <!-- Found Result Text For Mobile -->
+                                <p class="found-result mobile-show  my-fs-md my-fw-bold my-pb-8">20 Tours found</p>
                             </div>
 
 
@@ -5654,12 +5660,12 @@
                                         <div class="item-content">
                                             <ul class="items-wrap my-flex-column my-gap-8">
                                                 <li class="item">
-                                                    <input checked type="checkbox" name="" id="">
-                                                    <label for="#">Daily tour</label>
+                                                    <input checked type="checkbox" name="test" id="test">
+                                                    <label for="test">Daily tour</label>
                                                 </li>
                                                 <li class="item">
-                                                    <input type="checkbox" name="" id="">
-                                                    <label for="#">Group tour</label>
+                                                    <input type="checkbox" name="" id="test2">
+                                                    <label for="test2">Group tour</label>
                                                 </li>
                                                 <li class="item">
                                                     <input type="checkbox" name="" id="">
@@ -5673,6 +5679,8 @@
                                             <button class="show-more-btn">Show more</button>
                                         </div>
                                     </div>
+
+
                                     <!--==============||  Filter Item Activates  ||==============-->
                                     <div class="filter-item active">
 
@@ -5710,6 +5718,8 @@
                                             <button class="show-more-btn">Show more</button>
                                         </div>
                                     </div>
+
+
                                     <!--==============||  Filter Item Durations  ||==============-->
                                     <div class="filter-item active">
 
@@ -5800,12 +5810,20 @@
 
                                             <button class="show-more-btn">Show more</button>
                                         </div>
+
+                                        <!--========== Reset Button  Here =========-->
+                                        <div class="my-mt-16  my-w-100-p">
+                                            <button class="my-btn my-secondary-btn my-w-100-p">
+                                                <span class="content">Reset Filters</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!--===================================||  Filter Body  ||==================================-->
                                 <div class="filter-body-wrap flex-1">
-                                    <div class="filter-body-items my-gap-12 my-grid-4">
+                                    <div
+                                        class="filter-body-items my-gap-12 my-grid-4 my-grid-sm-2 my-grid-md-3 my-gap-md-8">
 
                                         <!--================= Single Cart ====================-->
                                         <div class="hotel-cart tour-filter-cart">
@@ -6206,6 +6224,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <!--================= Single Cart ====================-->
                                         <div class="hotel-cart tour-filter-cart">
                                             <!--========  Cart Image =======-->
@@ -6263,6 +6282,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <!--================= Single Cart ====================-->
                                         <div class="hotel-cart tour-filter-cart">
                                             <!--========  Cart Image =======-->
@@ -6324,7 +6344,7 @@
 
                                     <div>
                                         <!--===============|| Pagination ||===============-->
-                                        <div class="pagination round-pagination  my-mt-22 my-flex-between"
+                                        <div class="pagination soft-pagination  my-mt-22 my-flex-between"
                                             role="navigation" aria-label="Pagination">
                                             <button class="prev disabled" disabled=""
                                                 aria-label="Go to previous page"><svg width="20" height="20"
