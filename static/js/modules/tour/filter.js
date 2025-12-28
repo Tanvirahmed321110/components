@@ -27,37 +27,82 @@ filterSidebarToggleF()
 
 
 // filter button toggle
+// function filterButtonF() {
+//     const sidebarBtn = document.getElementById("sidebar-filter-btn");
+//     const sidebar = document.getElementById("filter-sidebar");
+//     const filterCloseBtn = sidebar.querySelector('.filter-close-btn')
+//     const filterSection = document.getElementById("filter-section");
+
+//     console.log(sidebar, sidebarBtn, filterSection)
+//     if (!sidebarBtn || !sidebar || !filterSection) {
+//         return
+//     }
+
+//     sidebarBtn.addEventListener("click", () => {
+//         sidebar.classList.toggle("active");
+//         filterSection.classList.toggle("active");
+//     });
+
+//     filterCloseBtn.addEventListener('click', function () {
+//         sidebar.classList.remove('active')
+//     })
+
+//     // outside click then remove sidebar
+//     document.addEventListener("click", (e) => {
+//         if (!sidebar.contains(e.target) && !sidebarBtn.contains(e.target)) {
+//             sidebar.classList.remove("active");
+//             filterSection.classList.remove("active");
+//         }
+//     });
+
+// }
+
+// filterButtonF()
+
+// filter button toggle
 function filterButtonF() {
     const sidebarBtn = document.getElementById("sidebar-filter-btn");
     const sidebar = document.getElementById("filter-sidebar");
-    const filterCloseBtn = sidebar.querySelector('.filter-close-btn')
+    const filterCloseBtn = sidebar.querySelector('.filter-close-btn');
     const filterSection = document.getElementById("filter-section");
+    const overlay = document.getElementById("filter-overlay");
 
-    console.log(sidebar, sidebarBtn, filterSection)
-    if (!sidebarBtn || !sidebar || !filterSection) {
-        return
-    }
+    if (!sidebarBtn || !sidebar || !filterSection || !overlay || !filterCloseBtn) return;
 
     sidebarBtn.addEventListener("click", () => {
         sidebar.classList.toggle("active");
-        filterSection.classList.toggle("active");
+        filterSection.classList.add("active");
+        overlay.classList.add("active");
     });
 
-    filterCloseBtn.addEventListener('click', function () {
-        sidebar.classList.remove('active')
-    })
+    // when click filter close btn for mobile
+    filterCloseBtn.addEventListener("click", closeFilter);
+    overlay.addEventListener("click", closeFilter);
 
-    // outside click then remove sidebar
-    // document.addEventListener("click", (e) => {
-    //     if (!sidebar.contains(e.target) && !sidebarBtn.contains(e.target)) {
-    //         sidebar.classList.remove("active");
-    //         filterSection.classList.remove("active");
-    //     }
-    // });
+    //  outside click only for <=768px
+    document.addEventListener("click", (e) => {
+        if (window.innerWidth > 768) return;
 
+        const clickedInsideSidebar = sidebar.contains(e.target);
+        const clickedOnBtn = sidebarBtn.contains(e.target);
+
+        if (!clickedInsideSidebar && !clickedOnBtn) {
+            closeFilter();
+        }
+    });
+
+
+    // close filter
+    function closeFilter() {
+        sidebar.classList.remove("active");
+        filterSection.classList.remove("active");
+        overlay.classList.remove("active");
+    }
 }
 
-filterButtonF()
+filterButtonF();
+
+
 
 
 

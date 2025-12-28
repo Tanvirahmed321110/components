@@ -8,6 +8,16 @@ body {
 =====||   Filter Hero Section    ||=====
 ========================================
 */
+.filter-body-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-wrapper {
+    justify-content: end;
+}
+
 .filter-sec-wrap {
     padding-bottom: 60px;
 }
@@ -126,6 +136,8 @@ body {
 
 .filter-sidebar.active {
     display: block;
+    position: relative;
+    z-index: 13;
 }
 
 .filter-sidebar .filter-item {
@@ -344,6 +356,20 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+.filter-overlay {
+    display: none;
+}
+
+
 @media (max-width:768px) {
 
     header,
@@ -351,25 +377,91 @@ body {
         background-color: var(--my-white);
     }
 
+    .filter-hero .my-container {
+        padding: 0;
+    }
+
+
+
+    .search-group.active {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .filter-hero .g-hero-area .bottom-search {
+        height: unset;
+        padding: 16px;
+        border-radius: var(--radius-xl);
+        height: fit-content;
+    }
+
+
+    /* Mobile search */
+    .g-hero-area .bottom-search-mobile {
+        height: unset;
+        width: calc(100% - 32px);
+        left: 16px;
+        top: 180px;
+    }
+
+    .g-hero-area {
+        height: 580px;
+    }
+
+    .filter-hero .g-hero-area .bottom-search .my-input-control {
+        border: 1px solid var(--my-white-off2);
+        padding: 12px;
+        border-radius: var(--radius-lg);
+    }
+
+    .g-hero-img-wrap::after {
+        border-radius: 0px;
+    }
+
+    .g-hero-banner-img img {
+        border-radius: 0;
+    }
+
+
+    /* filter overlay */
+    .filter-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease;
+        z-index: 11;
+    }
+
+    .filter-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .filter-sec.active .filter-body-items {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .filter-sidebar {
+    .filter-sidebar.active {
         width: calc(100% - 32px);
         background-color: var(--my-white);
         border-radius: 20px;
         /* border: 1px solid var(--my-border-color); */
         padding: 0px 16px;
         box-shadow: var(--n-shadow-2);
-        display: none;
+        /* display: none; */
         position: fixed;
         top: 80px;
         left: 16px;
         right: 16px;
-        z-index: 12;
+        z-index: 13;
         padding-top: 16px;
-        height: calc(100% - 120px);
+        height: calc(100% - 96px);
         overflow-y: auto;
     }
 
