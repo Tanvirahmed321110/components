@@ -497,14 +497,7 @@ body {
         /* aspect-ratio: 16 / 12; */
     }
 
-    .hotel-cart.tour-filter-cart .cart-tag-left {
-        left: 5px;
-        top: 5px;
-        border-radius: 8px 0 8px 0;
-        font-size: 8px;
-        padding: 4px 6px;
-        line-height: 12px;
-    }
+
 
     .hotel-cart.tour-filter-cart .cart-tag-wishlist {
         right: 5px;
