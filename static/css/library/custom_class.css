@@ -2270,8 +2270,8 @@ tr {
     color: var(--my-secondary-color);
 }
 
-.my-text-gold {
-    color: var(--my-text-rating);
+.my-text-rating {
+    color: var(--my-rating);
 }
 
 .my-text-yellow {
