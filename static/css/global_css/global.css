@@ -382,6 +382,14 @@
 
 
 /*==============||  Hotel Cart Start Here  ||===============*/
+.other-common-slider .swiper-wrapper {
+    /* align-items: stretch !important; */
+}
+
+.other-common-slider .swiper-slide {
+    /* display: flex; */
+}
+
 .event-cart {
     padding: 8px;
     border-radius: var(--radius-xxl);
@@ -390,22 +398,37 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--n-shadow-2);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 480px;
+    max-height: 490px;
 }
 
 .event-cart .cart-img {
     width: 100%;
     cursor: pointer;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
 }
 
 .event-cart .cart-img img {
     border-radius: var(--radius-xl);
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
 }
 
 .event-cart .cart-content {
     padding: 8px 12px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.event-cart .cart-content .price-and-btn {
+    flex: 1;
 }
 
 .event-cart .cart-content .sub-title {
@@ -635,7 +658,7 @@
     border: 1px solid var(--my-white-off);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
-    bottom: -40px;
+    bottom: -4px;
     opacity: 0;
 }
 
@@ -1050,7 +1073,7 @@ header .profile-dropdown .head {
 }
 
 .swiper.other-common-slider .section-btn-wrapper {
-    margin-top: -9px;
+    margin-top: 6px;
 }
 
 .swiper.other-common-slider .right-slider-arrows,
