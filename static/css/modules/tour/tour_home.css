@@ -617,6 +617,10 @@
     height: 328px;
 }
 
+.tour-category-body .right-items .top .category-item img {
+    object-position: top;
+}
+
 .tour-category-body .right-items .item-content {
     padding: 4px 28px 16px 24px;
 }
