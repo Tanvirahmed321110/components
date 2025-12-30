@@ -1094,3 +1094,311 @@
 .subcribe-sec .my-secondary-btn:hover {
     background-color: var(--my-warring);
 }
+
+
+
+
+
+
+
+/*
+===============================================
+=====||   Responsive 1024 Start Here    ||=====
+===============================================
+*/
+@media (max-width: 1080px) {
+    .g-hero {
+        margin-top: 16px;
+    }
+
+    .section-main {
+        padding: 40px 0;
+    }
+
+    /*
+    ================||   Achivements Section Start Here  ||================
+    */
+    .our-achivements .items {
+        padding: 0px 0px;
+    }
+
+    /*
+    ================||   Subcribe Section Start Here  ||================
+    */
+    .subcribe-sec .left-side {
+        padding: 96px 16px 16px 0px;
+        height: 500px;
+    }
+
+    .subcribe-sec .right-side {
+        margin-top: -50px;
+    }
+
+    .subcribe-sec .right-side .img-wrapper {
+        height: unset;
+        top: -64px;
+        left: 0;
+    }
+
+    .subcribe-sec .subcribe-area {
+        height: 1000px;
+    }
+
+    .subcribe-sec .right-side .img-wrapper img {
+        height: unset;
+        width: 100%;
+    }
+
+    .subcribe-sec .right-side .notificaion {
+        display: none;
+    }
+
+
+    .our-achivements .mobile-bg {
+        margin-top: -100px;
+    }
+
+
+
+
+    /*========== trip plan section ========*/
+    .trip-plan-area .head .left {
+        max-width: 50%;
+    }
+
+    .plan-items-wrapper {
+        grid-template-columns: calc(60% - 8px) calc(40% - 8px);
+        grid-template-columns: 100%;
+        gap: 16px;
+    }
+
+    .plan-items-wrapper .right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .plan-items-wrapper .right .item:nth-child(n+2) {
+        grid-column: span 1;
+    }
+
+    /* section title and sub title */
+    .section-title {
+        font-size: var(--fs-3xl);
+        line-height: var(--line-height-xl);
+    }
+
+    .section-sub-title {
+        font-size: var(--fs-xl);
+    }
+
+
+    .trip-plan-area .right .create-trip-btn {
+        font-size: var(--fs-lg);
+    }
+
+    .plan-items-wrapper {
+        margin-top: 80px;
+    }
+
+    .all-offer-text {
+        font-size: var(--fs-sm);
+    }
+
+    .trip-plan .plan-items-wrapper {
+        margin-top: -34px;
+    }
+}
+
+
+
+/*
+================================================
+=====||   Responsive 769px Start Here    ||=====
+================================================
+*/
+@media (max-width: 768px) {
+    .faq-wrapper .section-title {
+        font-size: var(--fs-xl);
+    }
+
+    .faq-wrapper .faq-head-desc {
+        font-size: var(--fs-sm);
+        margin-top: 12px;
+    }
+
+    .faq-items {
+        gap: 0;
+    }
+
+    .faq-wrapper .faq-items .faq-item {
+        max-width: 768px;
+        padding: 12px 16px;
+        border-radius: var(--radius-xl);
+    }
+
+    .faq-wrapper .faq-items .faq-item.active {
+        padding: 12px 16px;
+    }
+
+    .faq-wrapper .faq-item .head h5 {
+        font-size: var(--fs-sm);
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+    }
+
+    .faq-area .faq-item.active .head h5 {
+        font-weight: 600;
+        font-size: var(--fs-md);
+    }
+
+    .faq-area .faq-item .head {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        padding: 4px;
+        padding-left: 0;
+    }
+
+    .faq-area .faq-item .head .icon {
+        font-size: var(--fs-xxl);
+    }
+
+    .faq-area .faq-item.active .head .icon i {
+        color: var(--my-red);
+    }
+
+    .faq-items .faq-item .content {
+        padding-left: 0;
+    }
+
+    .faq-items .faq-item .content p {
+        font-size: var(--fs-xs);
+    }
+
+    /*===============  Subcirbe Section  ===================*/
+    .subcribe-form {
+        align-items: flex-start;
+    }
+
+    .subcribe-sec .right-side .img-wrapper {
+        height: unset;
+        top: 9px;
+        left: 0;
+    }
+
+    .subcribe-area .left-side .desc {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-400);
+    }
+
+    .subcribe-sec .right-side .img-wrapper img {
+        height: 450px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .right-side {
+        margin-top: 32px;
+    }
+
+    .subcribe-sec .subcribe-area {
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .subcribe-sec .left-side {
+        padding: 0px;
+        padding-top: 16px;
+        height: auto;
+    }
+
+    .subcribe-sec .left-side .section-title {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        max-width: 280px;
+    }
+
+    .subcribe-sec .left-side .section-sub-title {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        max-width: 240px;
+    }
+
+
+
+    /*===============  Trip Plan  ===================*/
+    .m-trip-plan {
+        background-color: #f5f5f5;
+    }
+
+    .m-trip-plan .head .section-title {
+        max-width: 280px;
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn {
+        background-color: var(--my-primary-color);
+        padding: 6px 14px;
+        font-size: var(--fs-xs);
+        font-weight: 600;
+        border-radius: var(--radius-pill);
+        color: var(--my-white);
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn .content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 24px;
+    }
+
+    .m-trip-plan .items .item {
+        border-radius: 12px;
+        background-color: var(--my-white);
+        overflow: hidden;
+    }
+
+    .m-trip-plan .items .item img {
+        width: 100%;
+        aspect-ratio: 16 / 12;
+        object-fit: cover;
+    }
+
+
+    .m-trip-plan .items .item .content {
+        padding: 8px;
+    }
+
+    .m-trip-plan .items .item .title {
+        font-size: var(--fs-sm);
+        color: var(--my-text-primary);
+        line-height: 100%;
+    }
+
+
+    /* Item button */
+    .m-trip-plan .items .item .my-btn {
+        background-color: var(--my-primary-color);
+        font-size: var(--fs-sm);
+        line-height: var(--fs-sm);
+        border-radius: var(--radius-pill);
+        width: 100%;
+        text-align: center;
+        padding: 8px 12px;
+        font-weight: 600;
+    }
+
+    .m-trip-plan .items .item .my-btn .content {
+        padding: 0;
+    }
+
+
+    .m-trip-plan .section-title {
+        font-size: var(--fs-xxl);
+    }
+
+    .m-trip-plan .section-sub-title {
+        font-size: var(--fs-sm);
+    }
+}
