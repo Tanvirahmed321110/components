@@ -1242,6 +1242,19 @@
 
 
 
+    .package.tour-cart .cart-title {
+        font-weight: var(--fw-600);
+        font-size: var(--fs-sm);
+        color: var(--my-white);
+        line-height: var(--line-height-xs);
+    }
+
+    .m-offers.offer-wrapper {
+        display: block;
+    }
+
+
+
     .faq-wrapper .section-title {
         font-size: var(--fs-xl);
     }
@@ -1550,4 +1563,7 @@
         top: 144%;
     }
 
+    .popular-tour-cart .offer-ribbon.ribbon {
+        display: none;
+    }
 }

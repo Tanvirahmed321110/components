@@ -1553,6 +1553,22 @@ footer .footer-bottom .left {
         --m-border-secondary: #D5D7DA;
     }
 
+    .my-container-cart {
+        margin-right: 0;
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .swiper.other-common-slider {
+        padding-bottom: 80px;
+        position: relative;
+        padding-left: 0px;
+    }
+
+    .cart-title {
+        font-size: var(--fs-sm);
+    }
+
 
     .cart-tag-left.offer-ribbon {
         left: 5px;
