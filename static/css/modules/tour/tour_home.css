@@ -1462,4 +1462,11 @@
     .top-category-cart .img-wrap img {
         border-radius: var(--radius-xl);
     }
+
+
+    /* Popular Tour */
+    .m-popular-tour .popular-tour-cart .item-content {
+        padding: 12px 12px;
+        padding-top: 0;
+    }
 }
