@@ -1218,6 +1218,30 @@
 ================================================
 */
 @media (max-width: 768px) {
+
+    .section-title {
+        font-size: var(--fs-md);
+        line-height: var(--fs-xl);
+    }
+
+    .search-input input {
+        padding: 10px 12px;
+        border-radius: 28px;
+    }
+
+    .search-input svg,
+    .search-input i,
+    .search-input span {
+        position: absolute;
+        top: 40%;
+        right: 4px;
+        transform: translateY(-50%);
+        color: var(--my-secondary-color);
+        width: 20px;
+    }
+
+
+
     .faq-wrapper .section-title {
         font-size: var(--fs-xl);
     }
@@ -1331,6 +1355,7 @@
     /*===============  Trip Plan  ===================*/
     .m-trip-plan {
         background-color: #f5f5f5;
+        padding-top: 0;
     }
 
     .m-trip-plan .head .section-title {
@@ -1417,15 +1442,6 @@
         flex: 1;
     }
 
-    .search-input svg,
-    .search-input i,
-    .search-input span {
-        position: absolute;
-        top: 42%;
-        right: 4px;
-        transform: translateY(-50%);
-        color: var(--my-secondary-color);
-    }
 
     .popular-tour-cart.top-category-cart .item-content .left {
         flex: 1;
@@ -1456,7 +1472,7 @@
     }
 
     .top-category-cart {
-        padding: 4px;
+        padding: 8px;
     }
 
     .top-category-cart .img-wrap img {
@@ -1465,8 +1481,73 @@
 
 
     /* Popular Tour */
-    .m-popular-tour .popular-tour-cart .item-content {
-        padding: 12px 12px;
-        padding-top: 0;
+    .m-popular-tour .popular-tour-cart {
+        padding: 4px;
+        border-radius: var(--radius-lg);
     }
+
+    .m-popular-tour .popular-tour-cart img {
+        border-radius: var(--radius-md);
+    }
+
+    .m-popular-tour .popular-tour-cart .item-content {
+        padding: 12px 0px;
+        padding-left: 4px;
+        padding-top: 0;
+        margin-top: 4px;
+    }
+
+    .m-popular-tour .popular-tour-cart .item-content .name {
+        font-size: var(--fs-sm);
+    }
+
+    .m-popular-tour .popular-tour-cart .cart-btn {
+        font-size: var(--fs-low);
+        padding: 4px 10px;
+    }
+
+    .m-popular-tour .popular-tour-cart .item-content .total-tour {
+        font-size: var(--fs-xs);
+    }
+
+    .popular-tour-cart .item-content .activities {
+        font-size: var(--fs-low);
+    }
+
+    .m-popular-tour .section-title {
+        font-size: var(--fs-md);
+    }
+
+    .m-popular-tour .head-desc {
+        font-size: var(--fs-xs);
+    }
+
+
+    /* hot dest */
+    .hot-destination .head .left {
+        max-width: 170px;
+    }
+
+    .hot-destination .hot-dest-cart .content {
+        padding-left: 12px;
+        padding-bottom: 12px;
+    }
+
+    .hot-dest-cart .title {
+        font-size: var(--fs-sm);
+        line-height: 100%;
+    }
+
+    .hot-dest-cart .sub-title {
+        font-size: var(--fs-xs);
+    }
+
+    .hot-dest-cart {
+        height: 180px;
+    }
+
+    .search-input input svg {
+        top: 144%;
+    }
+
 }
