@@ -1401,4 +1401,65 @@
     .m-trip-plan .section-sub-title {
         font-size: var(--fs-sm);
     }
+
+
+
+    /* Top Tour Categories */
+    .tour-category {
+        background-color: var(--section-bg);
+    }
+
+    .m-tour-category .head .left {
+        width: 194px;
+    }
+
+    .m-tour-category .head .search-input {
+        flex: 1;
+    }
+
+    .search-input svg,
+    .search-input i,
+    .search-input span {
+        position: absolute;
+        top: 42%;
+        right: 4px;
+        transform: translateY(-50%);
+        color: var(--my-secondary-color);
+    }
+
+    .popular-tour-cart.top-category-cart .item-content .left {
+        flex: 1;
+    }
+
+    .popular-tour-cart.top-category-cart .item-content {
+        padding: 0px 12px;
+        padding-bottom: 12px;
+    }
+
+    .popular-tour-cart.top-category-cart .item-content .right {
+        display: flex;
+        flex: 0;
+    }
+
+    .top-category-cart .item-content .right .cart-btn {
+        padding: 4px 12px;
+        font-size: var(--fs-xs);
+    }
+
+    .top-category-cart .item-content .name {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-xs);
+    }
+
+    .top-category-cart .item-content .desc {
+        font-size: var(--fs-xs);
+    }
+
+    .top-category-cart {
+        padding: 4px;
+    }
+
+    .top-category-cart .img-wrap img {
+        border-radius: var(--radius-xl);
+    }
 }
