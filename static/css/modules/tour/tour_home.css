@@ -1249,12 +1249,83 @@
         line-height: var(--line-height-xs);
     }
 
+
+    /*==========  offer section  ==========*/
+    .offer-section {
+        height: 380px;
+        position: relative;
+        background-color: var(--section-bg);
+    }
+
+
+    /* .m-offers.offer-wrapper .swiper {
+        height: 100%;
+    } */
+
     .m-offers.offer-wrapper {
         display: block;
     }
 
 
+    .m-offers.offer-wrapper .offer-item {
+        border-radius: var(--radius-xxl);
+        height: 340px;
+        margin-top: 22px;
+    }
 
+    .m-offer-wraper.Left-offers {
+        padding: 0px 7%;
+
+    }
+
+    .m-offers.offer-wrapper .offer-item .rating {
+        font-size: var(--fs-low);
+        gap: 2px;
+    }
+
+    .m-offers.offer-wrapper .offer-item .rating-text {
+        font-size: var(--fs-low);
+    }
+
+    .m-offers.offer-wrapper .offer-item .bottom-content {
+        padding: 12px;
+        background: linear-gradient(to top, #1212128d 10%, #12121272 55%, #12121200 100%);
+    }
+
+    .m-offers.offer-wrapper .offer-item .my-btn {
+        font-size: var(--fs-xs);
+        padding: 10px 10px;
+    }
+
+    .offer-wrapper .offer-item .bottom-content .price .new-price {
+        color: var(--my-white);
+        font-size: var(--fs-sm);
+    }
+
+
+    .offer-wrapper .banner-img {
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 50px;
+        border-radius: var(--radius-xxl);
+        height: 280px;
+    }
+
+    .offer-wrapper .banner-img img {
+        height: 100%;
+        border-radius: var(--radius-xxl);
+    }
+
+
+
+
+
+
+
+    /*===========  Faq Section  ===========*/
     .faq-wrapper .section-title {
         font-size: var(--fs-xl);
     }
