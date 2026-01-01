@@ -1250,6 +1250,27 @@
     }
 
 
+    /* header */
+
+    header .module-header-main .m-item {
+        position: static;
+    }
+
+    .module-header-main {
+        position: relative;
+    }
+
+    header .module-header-main .m-item:hover .module-h-dropdwon {
+        top: 47px;
+        opacity: 1;
+        visibility: visible;
+        z-index: 4;
+        padding: 20px 24px;
+        width: fit-content;
+        left: 24px;
+    }
+
+
     /*==========  offer section  ==========*/
     .offer-section {
         height: 380px;
@@ -1336,7 +1357,7 @@
     }
 
     .faq-items {
-        gap: 0;
+        gap: 4px;
     }
 
     .faq-wrapper .faq-items .faq-item {

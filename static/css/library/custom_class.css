@@ -2282,6 +2282,9 @@ tr {
     color: var(--primary-80);
 }
 
+.text-nowrap {
+    white-space: nowrap;
+}
 
 
 /*______  Bg Color ______ */
