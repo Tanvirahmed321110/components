@@ -207,16 +207,41 @@
     position: relative;
 }
 
+.hot-destination .my-grid-sm-2 {
+    perspective: 1000px;
+}
 
 .hot-dest-cart {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
     height: 250px;
-    transition: .2s ease;
     transition: 0.3s ease;
     transform-style: preserve-3d;
-    perspective: 1000px;
+    transform-origin: bottom;
+}
+
+
+.hot-dest-cart:nth-child(even) {
+    transform: rotateY(-6deg);
+    box-shadow: var(--n-shadow-all-2);
+}
+
+/* When hovered and it's an odd card (left side in grid) */
+.hot-dest-cart:nth-child(odd) {
+    transform: rotateY(6deg);
+    box-shadow: var(--n-shadow-all-2);
+}
+
+.hot-dest-cart:nth-child(even):hover {
+    transform: rotateY(6deg);
+    box-shadow: var(--n-shadow-all-2);
+}
+
+/* When hovered and it's an odd card (left side in grid) */
+.hot-dest-cart:nth-child(odd):hover {
+    transform: rotateY(-6deg);
+    box-shadow: var(--n-shadow-all-2);
 }
 
 .hot-dest-cart .img-wrapper {
@@ -267,10 +292,11 @@
     font-size: var(--fs-sm);
 }
 
-.hot-dest-cart:hover {
-    transform: rotateY(10deg) rotateX(10deg);
-    box-shadow: var(--shadow-all-lg);
-}
+
+
+
+
+
 
 
 
@@ -579,8 +605,8 @@
 .package.tour-cart .visiable-content {
     /* position: absolute; */
     position: relative;
-    margin-top: -172px;
-    padding: 8px 22px 6px 16px;
+    margin-top: -176px;
+    padding: 8px 22px 10px 16px;
     z-index: 2;
     bottom: 0;
     left: 0;
@@ -611,6 +637,7 @@
     color: var(--my-white);
     line-height: var(--line-height-xl);
 }
+
 
 .tour-cart .sub-title {
     font-size: var(--fs-md);

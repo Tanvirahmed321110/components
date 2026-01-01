@@ -1260,16 +1260,30 @@
         position: relative;
     }
 
+
+
     header .module-header-main .m-item:hover .module-h-dropdwon {
-        top: 47px;
-        opacity: 1;
-        visibility: visible;
-        z-index: 4;
-        padding: 20px 24px;
+        padding: 12px 20px;
         width: fit-content;
-        left: 24px;
+        top: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 300px;
+        max-width: 300px;
+        border-radius: var(--radius-xl);
+        z-index: 7;
     }
 
+    header .module-header-main .m-item .content {
+        font-size: var(--fs-sm);
+        padding: 6px 8px;
+        cursor: pointer;
+    }
+
+    header .module-header-main .m-item .module-h-dropdwon .d-item {
+        padding: 6px 0px;
+        font-size: var(--fs-xs);
+    }
 
     /*==========  offer section  ==========*/
     .offer-section {
