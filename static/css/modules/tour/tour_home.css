@@ -3,6 +3,17 @@
 =====||   Offer Section Start Here    ||=====
 ============================================
 */
+
+.swiper.leftSwiper {
+    border-radius: var(--radius-xxl);
+    box-shadow: var(--n-shadow-2);
+}
+
+
+.swiper.right-slider {
+    border-radius: var(--radius-xl);
+}
+
 .offer-section .offer-wrapper {
     display: grid;
     grid-template-columns: 36.67% 36.67% 23.2%;
@@ -32,24 +43,26 @@
 
 /* offer-item */
 .offer-wrapper .offer-item {
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-xxl);
     position: relative;
     background-color: var(--my-bg-dark);
     height: 480px;
     display: block;
     border-radius: var(--radius-xl);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .offer-wrapper .offer-item .offer-img {
     height: 100%;
     width: 100%;
+    border-radius: var(--radius-xxl);
 }
 
 .offer-wrapper .offer-item .offer-img img {
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: var(--radius-xxl);
     inset: 0;
 }
 
@@ -118,7 +131,7 @@
 .offer-wrapper .right-offers .offer-item .offer-ribbon {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1px;
     z-index: 3;
     background-color: var(--my-secondary-color);
     line-height: var(--line-height-lg);
@@ -476,7 +489,6 @@
 .popular-tour-cart .img-wrap img {
     border-radius: var(--radius-xxl);
     width: 100%;
-    /* max-height: 234px; */
     aspect-ratio: 16/11;
 }
 
@@ -586,11 +598,14 @@
     bottom: 0;
     left: 0;
     padding: 30px 24px;
-    box-shadow: -8px 21px 50px 0px #0000001A;
     background-color: var(--my-white);
-    border-radius: var(--radius-xxl);
+    border-radius: var(--radius-xl);
     width: 100%;
+    /* border: 5px solid var(--my-border-secondary); */
+    box-shadow: var(--n-shadow-2);
 }
+
+
 
 .tour-category-body .category-item .category-name {
     font-size: var(--fs-3xl);
@@ -622,7 +637,7 @@
 }
 
 .tour-category-body .right-items .item-content {
-    padding: 4px 28px 16px 24px;
+    padding: 12px 28px 24px 24px;
 }
 
 .tour-category-body .right-items .category-item .category-name {
@@ -658,10 +673,12 @@
     padding: 6px;
 }
 
+
+
 .tour-category-body .right-items .bottom-items .category-item .item-content {
     box-shadow: unset;
     border-radius: var(--radius-xxl);
-    border: 2px solid #f5f5f5;
+    border: 5px solid var(--my-border-secondary);
 }
 
 .popular-tour-cart img {
@@ -894,8 +911,36 @@
 }
 
 .trip-plan .item .bottom {
-    flex-direction: column;
     align-items: center;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.trip-plan .left .item .bottom {
+    align-items: center;
+    gap: 8px;
+    flex-direction: row;
+}
+
+.trip-plan.section-main {
+    padding-bottom: 36px;
+}
+
+.trip-plan .swiper {
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.trip-plan .swiper-pagination {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    z-index: 4;
+}
+
+
+.trip-plan .item .bottom .my-btn {
+    font-size: var(--fs-sm);
 }
 
 .plan-items-wrapper .item .bottom {

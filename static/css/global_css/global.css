@@ -603,9 +603,9 @@
 ==========||  Tour Cart Visiable  ||===========
 */
 .package.tour-cart .visiable-content {
-    /* position: absolute; */
     position: relative;
-    margin-top: -176px;
+    position: absolute;
+    /* margin-top: -176px; */
     padding: 8px 22px 10px 16px;
     z-index: 2;
     bottom: 0;
@@ -1456,7 +1456,7 @@ footer .footer-bottom .left {
 
 @media(max-width:1439px) {
     .tour-cart {
-        height: 455px;
+        /* height: 455px; */
     }
 
     .activities-cart .cart-img img {

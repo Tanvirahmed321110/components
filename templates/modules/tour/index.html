@@ -5800,9 +5800,8 @@
                                     </div>
 
                                     <div
-                                        class="swiper leftSwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                        <div class="swiper-wrapper" id="swiper-wrapper-f8071d7953956b14" aria-live="off"
-                                            style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(-386px, 0px, 0px);">
+                                        class="swiper m-leftSwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                        <div class="swiper-wrapper">
 
                                             <!-- Single Offer Item -->
                                             <div class="swiper-slide swiper-slide-next swiper-slide-prev"
@@ -10723,10 +10722,9 @@
                                             <a href="#" class="my-btn my-primary-btn">
                                                 <div class="content">
                                                     <span>
-
                                                         <i class="ri-file-list-3-line"></i>
                                                     </span>
-                                                    <span>Customize With Us</span>
+                                                    <span>Tour Planner</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -10757,9 +10755,11 @@
                                                     <p class="my-text-white my-fs-md my-mt-3 my-fw-normal">Browse 50+
                                                         ready trips</p>
                                                 </div>
-                                                <div class="bottom my-flex-center">
-                                                    <button class="my-btn my-primary-btn"><span class="content">Start
-                                                            Planing</span></button>
+                                                <div class="bottom my-flex-between">
+                                                    <button class="my-btn my-secondary-btn"><span class="content">Browse
+                                                            50+ Ready Trips</span></button>
+                                                    <button class="my-btn my-secondary-btn"><span
+                                                            class="content">Customize With Us</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -10783,7 +10783,8 @@
                                                             <h3 class="my-fs-xxl my-text-white title">Explore US</h3>
                                                             <p class="my-text-white my-fs-low my-mt-3">Browse 50+ ready
                                                                 trips</p>
-                                                            <button class="my-btn my-primary-btn my-mt-4"><span>Start
+                                                            <button class="my-btn my-primary-btn my-mt-4"><span
+                                                                    class="content">Start
                                                                     Planing</span></button>
                                                         </div>
                                                     </div>
@@ -10799,7 +10800,8 @@
                                                         <div class="bottom my-align-center">
                                                             <h3 class="my-fs-xxl my-text-white title">Explore US</h3>
                                                             <p class="my-text-white my-mt-3">Browse 50+ ready trips</p>
-                                                            <button class="my-btn my-primary-btn my-mt-4"><span>Start
+                                                            <button class="my-btn my-primary-btn my-mt-4"><span
+                                                                    class="content">Start
                                                                     Planing</span></button>
                                                         </div>
                                                     </div>
@@ -10814,7 +10816,8 @@
                                                         <div class="bottom my-align-center">
                                                             <h3 class="my-fs-xxl my-text-white title">Explore UK</h3>
                                                             <p class="my-text-white my-mt-3">Browse 50+ ready trips</p>
-                                                            <button class="my-btn my-primary-btn my-mt-4"><span>Start
+                                                            <button class="my-btn my-primary-btn my-mt-4"><span
+                                                                    class="content">Start
                                                                     Planing</span></button>
                                                         </div>
                                                     </div>
@@ -10830,7 +10833,8 @@
                                                             <h3 class="my-fs-xxl my-text-white title">Explore Europe
                                                             </h3>
                                                             <p class="my-text-white my-mt-3">Browse 50+ ready trips</p>
-                                                            <button class="my-btn my-primary-btn my-mt-4"><span>Start
+                                                            <button class="my-btn my-primary-btn my-mt-4"><span
+                                                                    class="content">Start
                                                                     Planing</span></button>
                                                         </div>
                                                     </div>
@@ -11646,6 +11650,22 @@
 
             // =============|| Offer Left Slider ||=============
             new Swiper(".leftSwiper", {
+                slidesPerView: 1,
+                loop: true,
+                speed: 1000,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 400000,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    nextEl: ".Left-offers .next",
+                    prevEl: ".Left-offers .prev"
+                }
+            });
+
+            // =============|| Offer For Mobile Slider ||=============
+            new Swiper(".m-leftSwiper", {
                 slidesPerView: 1,
                 loop: true,
                 speed: 1000,
