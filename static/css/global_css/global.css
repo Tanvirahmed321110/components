@@ -1580,7 +1580,7 @@ footer .footer-bottom .left {
 
 
     .event-cart .cart-content {
-        padding: 6px 0;
+        padding: 8px;
     }
 
     footer .footer-top .left {
@@ -1648,6 +1648,19 @@ footer .footer-bottom .left {
     footer .footer-bottom-right-area {
         flex-direction: column;
         margin-top: 0;
+    }
+
+
+    .module-header-main-wrap {
+        gap: 4px;
+    }
+
+    header .module-header-main .m-item .content {
+        color: var(--my-text-secondary);
+        font-weight: var(--fw-600);
+        font-size: var(--fs-sm) !important;
+        line-height: var(--line-height-md);
+        padding: 6px 4px;
     }
 
 
@@ -1961,6 +1974,7 @@ footer .footer-bottom .left {
 
     header .header-main ul {
         padding: 0;
+        width: 120%;
     }
 
     header .header-top {

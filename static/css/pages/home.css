@@ -462,23 +462,28 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 16px;
+}
+
+.offer-sec .offer-cart.sm .content {
+    padding: 8px;
 }
 
 .offer-sec .offer-cart .content .bottom-area {
     display: flex;
     align-items: flex-end;
     justify-content: end;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    width: 100%;
 }
 
-.offer-sec .offer-cart.sm .content .bottom-area {
-    padding-bottom: 8px;
-    padding-right: 8px;
-}
+
+
 
 .offer-sec .offer-cart.sm .bottom {
     padding: 8px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: sb;
 }
 
 
@@ -487,11 +492,16 @@
 */
 .offer-sec .offer-cart .bottom {
     border-radius: var(--radius-pill);
-    padding: 11px 24px;
+    padding: 11px 12px;
     background-color: var(--white-20);
     width: fit-content;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-xxl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .offer-sec .offer-cart .rating .star {
@@ -508,8 +518,6 @@
     font-size: var(--fs-md);
     color: var(--my-white);
     background-color: var(--my-secondary-color);
-    margin-left: 15px;
-    margin-top: 19px;
     width: fit-content;
 }
 
@@ -521,12 +529,10 @@
 
 .offer-sec .offer-cart.sm .tag {
     font-size: var(--fs-low);
-    margin-left: 10px;
-    margin-top: 8px;
 }
 
 .offer-sec .offer-cart.sm .rating span {
-    font-size: 4px;
+    font-size: var(--fs-low);
 }
 
 
@@ -536,11 +542,11 @@
     font-size: var(--fs-lg);
     color: var(--fw-600);
     color: var(--my-white);
-    text-align: center;
+    margin-bottom: 8px;
 }
 
 .offer-sec .offer-cart.sm .title {
-    font-size: var(--fs-low);
+    font-size: var(--fs-xs);
 }
 
 .offer-sec .offer-cart.sm i {
@@ -549,16 +555,28 @@
 
 
 .offer-sec .offer-cart button {
-    font-size: 8px;
+    font-size: var(--fs-xs);
     line-height: var(--line-height-sm);
+    border-radius: var(--radius-xl);
+    background-color: var(--my-secondary-color);
+    padding: 12px 20px;
+    box-shadow: var(--n-shadow-1);
+}
+
+.offer-sec .offer-cart button:hover {
+    background-color: var(--my-primary-color);
 }
 
 .offer-sec .offer-cart.sm button {
-    font-size: 6px;
+    font-size: var(--fs-low);
     line-height: var(--line-height-sm);
-    padding: 0px 6px;
+    border-radius: var(--radius-md);
+    padding: 4px 12px;
 }
 
+.offer-sec .rating span {
+    font-size: var(--fs-low);
+}
 
 
 

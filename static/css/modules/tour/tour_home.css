@@ -1158,6 +1158,63 @@
     .popular-tour-cart .item-content {
         padding: 0px 12px 30px 12px;
     }
+
+    .offer-section .offer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1fr, 3);
+        gap: 16px;
+    }
+
+    .offer-wrapper .middle-offers .offer-item .book,
+    .offer-wrapper .right-offers .offer-item .book {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 12;
+        font-size: var(--fs-xs);
+    }
+
+    .offer-wrapper .offer-item .bottom-content .my-btn {
+        padding: 8px 12px;
+        font-size: var(--fs-sm);
+    }
+
+    .offer-wrapper .offer-item .bottom-content {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .offer-wrapper .slider-nav {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 12;
+        z-index: 3;
+    }
+
+    .top-trending-dest-body {
+        width: calc(100% - 48px);
+        display: grid;
+        grid-template-columns: 25.43% 34.81% 39.76%;
+        gap: 20px;
+    }
+
+    .search-group.active {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+    .faq-wrapper .head h5 {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+    }
+
+
 }
 
 @media (max-width: 1080px) {
@@ -1260,7 +1317,24 @@
     }
 
     .trip-plan .plan-items-wrapper {
-        margin-top: -34px;
+        margin-top: -6px;
+    }
+
+    .tour-category-body .category-item .item-content .my-btn {
+        flex: 1 1 0;
+    }
+
+    .tour-category-body .category-item .desc {
+        font-size: var(--fs-sm);
+        line-height: var(--line-height-md);
+        color: var(--primary-80);
+        width: fit-content;
+        font-weight: 600;
+    }
+
+    .tour-category-body .right-items .bottom-items .item-content .desc {
+        font-size: 8px;
+        width: fit-content;
     }
 }
 
@@ -1326,6 +1400,7 @@
         max-width: 300px;
         border-radius: var(--radius-xl);
         z-index: 7;
+        overflow-x: hidden;
     }
 
     header .module-header-main .m-item .content {
