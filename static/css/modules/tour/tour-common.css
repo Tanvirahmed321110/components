@@ -1,5 +1,6 @@
 header .module-header-main .m-item {
     position: relative;
+    white-space: nowrap;
 }
 
 header .module-header-main .m-item .content {
