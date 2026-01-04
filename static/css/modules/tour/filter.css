@@ -358,6 +358,11 @@ body {
     font-size: var(--fs-lg);
     line-height: var(--line-height-lg);
     font-weight: var(--fw-600);
+    transition: .2s ease;
+}
+
+.hotel-cart.tour-filter-cart .title:hover {
+    color: var(--my-secondary-color);
 }
 
 .hotel-cart.tour-filter-cart img {
@@ -365,11 +370,11 @@ body {
     transition: .2s ease;
 }
 
-.hotel-cart.tour-filter-cart:hover~.hotel-cart.tour-filter-cart,
+/* .hotel-cart.tour-filter-cart:hover~.hotel-cart.tour-filter-cart,
 .hotel-cart.tour-filter-cart:has(~ .hotel-cart.tour-filter-cart:hover) {
     opacity: 0.8;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-}
+} */
 
 .hotel-cart.tour-filter-cart:hover img {
     transform: scale(1.02);
@@ -404,7 +409,7 @@ body {
 
 .hotel-cart.tour-filter-cart .price .old-price {
     font-size: var(--fs-xs);
-    color: var(--my-red);
+    color: var(--my-orange);
 }
 
 .hotel-cart.tour-filter-cart .rating .rating-text {
@@ -548,6 +553,11 @@ body {
         /* aspect-ratio: 16 / 12; */
     }
 
+    .hotel-cart.tour-filter-cart .cart-tag-left {
+        left: 5px;
+        top: 5px;
+        line-height: var(--line-height-sm);
+    }
 
 
     .hotel-cart.tour-filter-cart .cart-tag-wishlist {
@@ -589,20 +599,25 @@ body {
         margin-top: 0px;
     }
 
-    .hotel-cart.tour-filter-cart .new-price {
+    .hotel-cart.tour-filter-cart .price .new-price {
         font-size: var(--fs-sm);
+        line-height: var(--line-height-xs);
     }
 
-    .hotel-cart.tour-filter-cart .old-price {
+    .hotel-cart.tour-filter-cart .price .old-price {
         color: var(--my-orange);
         font-size: var(--fs-low);
         margin-top: 0px;
     }
 
     .hotel-cart.tour-filter-cart .cart-btn {
-        font-size: 8px;
-        padding: 5px 8px;
+        font-size: var(--fs-low);
+        padding: 6px 8px;
         border-radius: 4px !important;
+    }
+
+    .hotel-cart.tour-filter-cart .price-and-btn {
+        gap: 16px;
     }
 
     .hotel-cart.tour-filter-cart .cart-btn .content {
