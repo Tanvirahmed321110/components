@@ -71,8 +71,8 @@ function filterButtonF() {
 
     sidebarBtn.addEventListener("click", () => {
         sidebar.classList.toggle("active");
-        filterSection.classList.add("active");
-        overlay.classList.add("active");
+        filterSection.classList.toggle("active");
+        overlay.classList.toggle("active");
     });
 
     // when click filter close btn for mobile

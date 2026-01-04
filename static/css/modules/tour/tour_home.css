@@ -1038,6 +1038,7 @@
     max-width: 768px;
     padding: 12px;
     border-radius: var(--radius-xl);
+    transition: .2s ease;
 }
 
 .faq-wrapper .faq-items .faq-item:hover,
