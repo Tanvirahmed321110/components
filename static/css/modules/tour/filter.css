@@ -426,6 +426,50 @@ body {
 }
 
 
+
+/* For Tab */
+@media (max-width:1080px) {
+    .filter-sec.active .filter-body-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-and-items {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .hotel-cart.tour-filter-cart .cart-content {
+        padding: 8px;
+    }
+
+    .cart-btn {
+        background-color: var(--my-primary-color);
+        padding: 8px 12px;
+        border-radius: var(--radius-sm) !important;
+        font-size: var(--fs-sm);
+        line-height: var(--fs-xxl);
+        color: var(--my-white);
+        font-weight: var(--fw-600);
+    }
+}
+
+/* For Tab */
+@media (max-width:991px) {
+    .filter-sec.active .filter-body-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-and-items {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+    }
+}
+
+
+
+
 @media (max-width:768px) {
 
     header,

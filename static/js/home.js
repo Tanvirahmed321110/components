@@ -379,6 +379,7 @@ function mBottomSidebar() {
     document.addEventListener("click", () => {
         if (sidebar.classList.contains("active")) {
             closeSidebar();
+            body.classList.remove("active");
         }
     });
 }

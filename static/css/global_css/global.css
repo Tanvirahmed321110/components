@@ -1592,7 +1592,11 @@ footer .footer-bottom .left {
 
 @media(max-width:1080px) {
     footer .footer-top .left {
-        max-width: 280px;
+        max-width: 220px;
+    }
+
+    footer .footer-top .desc {
+        font-size: var(--fs-md);
     }
 
     header .header-top .left img {
@@ -1605,6 +1609,10 @@ footer .footer-bottom .left {
 
     header .header-top .right {
         gap: 12px !important;
+    }
+
+    header .header-top .right .my-grid-4 {
+        gap: 20px;
     }
 
     header .other-btns ul {
