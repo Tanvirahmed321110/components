@@ -1919,6 +1919,132 @@ footer .footer-bottom .left {
         font-size: 8px;
     }
 
+    .tour-cart.package .hover-content {
+        padding: 10px 6px;
+        padding-bottom: 4px;
+    }
+
+    .cart-tag-left {
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        font-size: 8px;
+        padding: 3px 6px;
+    }
+
+    .cart-tag-wishlist {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--my-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+        box-shadow: var(--shadow-all-lg);
+        cursor: pointer;
+    }
+
+    .tour-cart {
+        height: 212px;
+        border-radius: var(--radius-xxl);
+        position: relative;
+        cursor: pointer;
+        box-shadow: var(--n-shadow-2);
+    }
+
+    .package.tour-cart .visiable-content {
+        padding: 10px 8px;
+        padding-bottom: 0;
+        background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.1));
+        z-index: 2;
+    }
+
+    .package.tour-cart .pentagon-box {
+        display: none;
+    }
+
+    .tour-cart.package .cart-title {
+        font-size: var(--fs-low);
+        line-height: unset;
+    }
+
+    .cart-tag-wishlist i {
+        color: var(--my-secondary-color);
+        font-size: var(--fs-sm);
+        display: block;
+    }
+
+    .tour-cart.package .rating {
+        font-size: 8px;
+    }
+
+    .tour-cart.package .rating .star i {
+        font-size: 8px;
+    }
+
+    .tour-cart.package .price .new-price {
+        font-size: var(--fs-sm);
+        line-height: var(--line-height-xs);
+    }
+
+    .tour-cart.package .days {
+        font-size: 8px;
+        color: var(--my-rating)
+    }
+
+
+    .tour-cart.package .price-rating {
+        align-items: flex-start;
+        margin-top: 0px;
+    }
+
+    .tour-cart.package .start-from {
+        font-size: 8px;
+    }
+
+    .tour-cart.package .old-wrap {
+        margin-top: -8px;
+    }
+
+    .tour-cart.package .price .old-price,
+    .tour-cart.package .per-person {
+        font-size: 6px;
+    }
+
+    /* hover conent */
+    .tour-cart.package .hover-content .price-btn {
+        display: none;
+    }
+
+    .cart-category {
+        font-size: 6px;
+        line-height: var(--line-height-low);
+        color: var(--my-white);
+        font-weight: var(--fw-500);
+        border-radius: var(--radius-xs);
+        padding: 1px 3px;
+        display: inline-block;
+    }
+
+    .tour-cart.package .hover-content .cart-title {
+        font-size: var(--fs-low);
+        margin-top: 4px;
+    }
+
+    .tour-cart.package .hover-content .dest {
+        font-size: 8px;
+        margin-top: 2px;
+    }
+
+    .tour-cart.package .hover-content .rating div,
+    .tour-cart.package .hover-content .rating span {
+        font-size: 8px;
+    }
+
     header .mobile-header {
         border-bottom: 1px solid var(--my-white-off);
     }

@@ -1370,14 +1370,6 @@
 
 
 
-    .package.tour-cart .cart-title {
-        font-weight: var(--fw-600);
-        font-size: var(--fs-sm);
-        color: var(--my-white);
-        line-height: var(--line-height-xs);
-    }
-
-
     /* header */
 
     header .module-header-main .m-item {
@@ -1435,6 +1427,7 @@
         border-radius: var(--radius-xxl);
         height: 340px;
         margin-top: 22px;
+        overflow: hidden;
     }
 
     .m-offer-wraper.Left-offers {
