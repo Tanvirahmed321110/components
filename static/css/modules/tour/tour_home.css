@@ -1809,4 +1809,81 @@
     .popular-tour-cart .offer-ribbon.ribbon {
         display: none;
     }
+
+
+    /* m-search-menu-wrapper */
+    .m-search-menu-wrapper .top-grid {
+        display: grid;
+        grid-template-columns: 1fr 24px 1fr;
+    }
+
+    .m-search-menu-wrapper .bottom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .m-search-menu-wrapper .swap-btn-wrap {
+        position: relative;
+    }
+
+    .m-search-menu-wrapper .swap-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #00000080;
+        background-color: var(--my-white);
+        position: absolute;
+        left: -3px;
+        top: 3px;
+        z-index: 2;
+    }
+
+    .m-search-menu-wrapper .search-fields .input-item {
+        position: relative;
+    }
+
+    .m-search-menu-wrapper .search-fields .input-item input {
+        border: .5px solid #00000080;
+        background-color: var(--my-white);
+        border-radius: 4px;
+    }
+
+    .m-search-menu-wrapper .search-fields .text-icon {
+        position: absolute;
+        font-size: 8px;
+        left: 12px;
+        top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--my-text-primary);
+    }
+
+    .m-search-menu-wrapper .search-fields .search {
+        padding: 10px 12px;
+        font-size: var(--fs-sm);
+        font-weight: 400;
+    }
+
+    .m-search-menu-wrapper .checkbox-input {
+        font-size: var(--fs-xs);
+        color: var(--my-text-primary);
+    }
+
+    .m-search-menu-wrapper .checkbox-input input {
+        border: 1px solid #00000080;
+        border-radius: 2px;
+    }
+
+    .m-search-menu-wrapper input[type="checkbox"],
+    .m-search-menu-wrapper input[type="radio"] {
+        width: 12px;
+        height: 12px;
+        border-color: var(--my-secondary-color);
+    }
+
+    .m-search-menu-wrapper input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
 }

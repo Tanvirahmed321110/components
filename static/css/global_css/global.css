@@ -1699,6 +1699,16 @@ footer .footer-bottom .left {
         --m-border-secondary: #D5D7DA;
     }
 
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
+
     .my-container-cart {
         margin-right: 0;
         width: 100%;
@@ -1859,6 +1869,103 @@ footer .footer-bottom .left {
     }
 
     /*
+    ==========  Event Cart  ==========
+    */
+
+    .event-cart {
+        padding: 6px;
+        border-radius: var(--radius-lg);
+        background-color: var(--my-white);
+        transition: .2s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--n-shadow-2);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 212px;
+        max-height: 212px;
+    }
+
+    .event-cart .cart-img {
+        width: 100%;
+        cursor: pointer;
+        aspect-ratio: 16/9;
+    }
+
+    .event-cart .cart-img img {
+        border-radius: var(--radius-md);
+        width: 100%;
+        aspect-ratio: 16/9;
+        max-height: 94px;
+    }
+
+    .event-cart .cart-content {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .event-cart .cart-content .price-and-btn {
+        flex: 1;
+    }
+
+    .event-cart .cart-content .sub-title {
+        font-size: 8px;
+        line-height: 10px;
+        margin-top: 4px;
+    }
+
+    .event-cart .cart-content .title {
+        margin-top: 4px;
+        font-size: var(--fs-low);
+        line-height: var(--line-height-low);
+    }
+
+    .event-cart .star-avg .my-text-rating {
+        color: var(--my-rating);
+        font-weight: var(--fw-600);
+        font-size: 6px;
+    }
+
+    .event-cart .pick-up-location {
+        font-size: 6px;
+        line-height: 12px;
+    }
+
+    .event-cart .star-avg i {
+        font-size: var(--fs-low);
+    }
+
+    .event-cart .total-seats div {
+        font-size: 6px;
+    }
+
+    .event-cart .new-price {
+        font-size: var(--fs-low);
+        font-weight: var(--fw-600);
+        color: var(--my-text-primary);
+        line-height: var(--line-height-low);
+        margin-top: 0;
+    }
+
+    .event-cart .old-price {
+        font-size: 6px;
+    }
+
+    .event-cart .per-person {
+        font-size: 6px;
+    }
+
+    .event-cart .btns-wrap {
+        margin-top: -4px;
+    }
+
+    /*
     ==========  Mobile Tour Cart  ==========
     */
     .m-tour-cart {
@@ -1930,6 +2037,12 @@ footer .footer-bottom .left {
         top: 6px;
         font-size: 8px;
         padding: 3px 6px;
+        border-radius: 6px 0 6px 0;
+    }
+
+    .event-cart .cart-tag-left {
+        left: 10px;
+        top: 10px;
     }
 
     .cart-tag-wishlist {
