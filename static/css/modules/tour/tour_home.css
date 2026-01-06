@@ -235,7 +235,9 @@
     padding-bottom: 40px;
 }
 
-
+.best-deal-area .best-deal-slider {
+    width: 100%;
+}
 
 
 
@@ -1342,6 +1344,10 @@
 ================================================
 */
 @media (max-width: 768px) {
+    .section-main {
+        padding: 16px 0;
+    }
+
 
     .section-title {
         font-size: var(--fs-md);
@@ -1885,5 +1891,19 @@
 
     .m-search-menu-wrapper input[type="checkbox"]:checked::after {
         font-size: 10px;
+    }
+
+
+
+    .best-deal.section-main {
+        padding-bottom: 0px;
+    }
+
+    .tab-contents {
+        margin-top: 0px;
+    }
+
+    .best-deal-area .best-deal-slider {
+        width: 100%;
     }
 }

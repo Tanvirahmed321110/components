@@ -1699,6 +1699,17 @@ footer .footer-bottom .left {
         --m-border-secondary: #D5D7DA;
     }
 
+    .m-see-more {
+        font-size: var(--fs-xs);
+        color: var(--my-secondary-color);
+        text-decoration: underline;
+    }
+
+    .swiper.other-common-slider .right-slider-arrows,
+    .swiper .right-slider-arrows {
+        display: none;
+    }
+
     input[type="checkbox"],
     input[type="radio"] {
         width: 14px;
@@ -1716,7 +1727,7 @@ footer .footer-bottom .left {
     }
 
     .swiper.other-common-slider {
-        padding-bottom: 80px;
+        padding-bottom: 16px;
         position: relative;
         padding-left: 0px;
     }
@@ -1753,6 +1764,22 @@ footer .footer-bottom .left {
         margin-top: 16px;
     }
 
+    .tab-btns-w .tab-btn {
+        padding: 6px 8px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--my-border-gray);
+        color: var(--my-primary-color);
+        font-size: var(--fs-xs);
+    }
+
+    .section-btn-wrapper {
+        display: none;
+    }
+
+    .tab-btns-w .tab-btn.active {
+        background-color: var(--my-secondary-color)
+    }
+
     .m-tab-btns .tab-btn {
         background-color: transparent;
         border: 1px solid var(--m-border-primary);
@@ -1761,6 +1788,12 @@ footer .footer-bottom .left {
         border-radius: var(--radius-pill);
         font-size: var(--fs-sm);
         font-weight: 500;
+    }
+
+    .tab-btns-w .tab-btn svg,
+    .tab-btns-w .tab-btn svg {
+        width: 14px;
+        height: 14px;
     }
 
     .m-tab-btns .tab-btn.active,
@@ -1800,7 +1833,7 @@ footer .footer-bottom .left {
     }
 
     .section-main {
-        padding: 32px 0;
+        padding: 16px 0;
     }
 
     .section-title {
@@ -1874,40 +1907,28 @@ footer .footer-bottom .left {
 
     .event-cart {
         padding: 6px;
-        border-radius: var(--radius-lg);
-        background-color: var(--my-white);
-        transition: .2s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: var(--n-shadow-2);
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: space-between;
-        height: 100%;
+        border-radius: var(--radius-xl);
         min-height: 212px;
         max-height: 212px;
     }
 
     .event-cart .cart-img {
-        width: 100%;
-        cursor: pointer;
         aspect-ratio: 16/9;
     }
 
     .event-cart .cart-img img {
         border-radius: var(--radius-md);
-        width: 100%;
-        aspect-ratio: 16/9;
         max-height: 94px;
     }
 
     .event-cart .cart-content {
         padding: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
+    }
+
+    .cart-btn {
+        font-size: 8px;
+        padding: 0px 12px;
+        border-radius: 4px !important;
     }
 
     .event-cart .cart-content .price-and-btn {
@@ -1922,13 +1943,12 @@ footer .footer-bottom .left {
 
     .event-cart .cart-content .title {
         margin-top: 4px;
-        font-size: var(--fs-low);
+        font-size: 9px;
         line-height: var(--line-height-low);
     }
 
     .event-cart .star-avg .my-text-rating {
         color: var(--my-rating);
-        font-weight: var(--fw-600);
         font-size: 6px;
     }
 
@@ -1947,8 +1967,6 @@ footer .footer-bottom .left {
 
     .event-cart .new-price {
         font-size: var(--fs-low);
-        font-weight: var(--fw-600);
-        color: var(--my-text-primary);
         line-height: var(--line-height-low);
         margin-top: 0;
     }
@@ -1962,7 +1980,7 @@ footer .footer-bottom .left {
     }
 
     .event-cart .btns-wrap {
-        margin-top: -4px;
+        margin-top: 0;
     }
 
     /*
@@ -2061,9 +2079,9 @@ footer .footer-bottom .left {
         cursor: pointer;
     }
 
-    .tour-cart {
+    .tour-cart.package {
         height: 212px;
-        border-radius: var(--radius-xxl);
+        border-radius: var(--radius-xl);
         position: relative;
         cursor: pointer;
         box-shadow: var(--n-shadow-2);
@@ -2083,6 +2101,10 @@ footer .footer-bottom .left {
     .tour-cart.package .cart-title {
         font-size: var(--fs-low);
         line-height: unset;
+    }
+
+    .tour-cart.package .cart-img img {
+        border-radius: var(--radius-xl);
     }
 
     .cart-tag-wishlist i {

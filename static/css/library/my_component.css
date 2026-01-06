@@ -2799,7 +2799,7 @@ input[type="radio"]:checked::after {
 
 .tab-btns-w .tab-btn.active,
 .tab-btns-w .tab-btn:hover {
-    background-color: var(--my-primary-color);
+    background-color: var(--my-secondary-color);
     color: var(--my-white);
 }
 
@@ -2830,7 +2830,7 @@ input[type="radio"]:checked::after {
 .tab1-btns .tab-btn.active,
 .tab-btn-nested.active,
 .tab1-btns .tab-btn-nested:hover {
-    background-color: var(--my-primary-color);
+    background-color: var(--my-secondary-color);
     border: 1px solid var(--my-border-secondary);
     color: var(--my-white);
 }
