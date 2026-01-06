@@ -1379,6 +1379,7 @@
 
     .module-header-main {
         position: relative;
+        background-color: var(--my-bg-secondary);
     }
 
 
@@ -1405,6 +1406,33 @@
         padding: 6px 0px;
         font-size: var(--fs-xs);
     }
+
+
+    .search-menu-wrapper {
+        padding: 0px 0;
+    }
+
+    header .m-search-menu .left-icon svg {
+        position: absolute;
+        left: -30px;
+        top: 12px;
+        z-index: 1;
+        transform: rotate(-12deg);
+    }
+
+    header .m-search-menu .right-icon svg {
+        position: absolute;
+        right: -30px;
+        top: 12px;
+        z-index: 1;
+        transform: rotate(12deg);
+    }
+
+
+
+
+
+
 
     /*==========  offer section  ==========*/
     .offer-section {
@@ -1519,7 +1547,7 @@
 
     .faq-wrapper .faq-items .faq-item {
         max-width: 768px;
-        padding: 12px 16px;
+        padding: 0px 16px;
         border-radius: var(--radius-xl);
     }
 
@@ -1623,7 +1651,33 @@
         padding-top: 0;
     }
 
-    .m-trip-plan .plan-create-btn {}
+    .m-trip-plan .plan-create-btn {
+        height: 114px;
+        position: relative;
+        display: flex;
+        z-index: 2;
+    }
+
+
+    .m-trip-plan .plan-create-btn img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        max-width: 80%;
+    }
+
+    .m-trip-plan .plan-create-btn .btns {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 2;
+
+    }
 
     .m-trip-plan .head .section-title {
         max-width: 280px;
