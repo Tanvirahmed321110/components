@@ -5344,6 +5344,156 @@ _____________________________________*/
     background-color: transparent;
 }
 
+
+/* For Website Calendar */
+.calendar-wrap.active {
+    display: block;
+}
+
+.calendar-wrap {
+    display: none;
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--my-white);
+    max-width: 660px;
+    width: fit-content;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-all-sm);
+    padding: 20px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.12),
+        0 4px 120px rgba(0, 0, 0, 0.08),
+        0 0 0 221px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-wrap table {
+    border-collapse: collapse;
+}
+
+.calendar-wrap table tbody {
+    border: 1px solid var(--my-border-secondary);
+}
+
+
+
+.calendar-wrap .month-name {
+    font-size: var(--fs-md);
+    color: var(--my-primary-color);
+}
+
+.calendar-wrap .apply-btn-wrap .my-btn {
+    font-size: var(--fs-sm);
+    background-color: var(--my-primary-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+
+
+.calendar-wrap tr {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+}
+
+.calendar-wrap th {
+    padding: 8px;
+    min-width: unset;
+    width: fit-content;
+    font-size: 12px;
+    color: var(--my-text-secondary);
+    font-weight: 600;
+}
+
+
+
+.calendar-wrap td {
+    font-size: var(--fs-xs);
+    height: 36px;
+    display: inline-flex;
+    min-width: unset;
+    width: fit-content;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(-m-gray);
+    border-top: 1px solid var(--my-border-secondary);
+    border-right: 1px solid var(--my-border-secondary);
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.calendar-wrap .btn {
+    padding: 8px 12px;
+    font-size: var(--fs-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--my-border-primary);
+    background-color: var(--my-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-wrap .btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.calendar-wrap .btn svg path {
+    stroke: var(--my-gray);
+}
+
+.calendar-wrap .btn:hover {
+    border-color: red;
+}
+
+.calendar-wrap .btn:hover svg path {
+    stroke: red;
+}
+
+.calendar-wrap td:nth-child(7n) {
+    border-right: 1px solid var(--my-border-secondary);
+}
+
+
+
+.calendar-wrap tr:first-child td {
+    border-top: 1px solid var(--my-border-secondary);
+}
+
+
+.calendar-wrap .empty {
+    border-left: none;
+    cursor: unset;
+}
+
+.calendar-wrap .active,
+.calendar-wrap td:hover {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white)
+}
+
+.calendar-wrap .selected {
+    background-color: #F7594033;
+}
+
+
+.calendar-wrap td:nth-child(7n) {
+    border-right: none;
+}
+
+.calendar-wrap tr:first-child td {
+    border-top: none;
+}
+
+
+
+
 /*________________________________*\
   ||     Calender Start Here     ||
 \*________________________________*/
@@ -5993,6 +6143,80 @@ _____________________________________*/
         min-width: 600px;
         width: 100%;
     }
+
+
+
+
+
+    /* For Website Calendar */
+    .calendar-wrap.active {
+        display: block;
+    }
+
+    .calendar-wrap {
+        padding: 16px;
+        box-shadow:
+            0 10px 40px rgba(0, 0, 0, 0.12),
+            0 4px 120px rgba(0, 0, 0, 0.08),
+            0 0 0 221px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+
+
+
+    .calendar-wrap .month-name {
+        font-size: var(--fs-low);
+    }
+
+    .calendar-wrap .apply-btn-wrap .my-btn {
+        font-size: var(--fs-low);
+        padding: 4px 16px;
+        border-radius: 6px;
+    }
+
+
+    .calendar-wrap th {
+        padding: 4px;
+        font-size: 8px;
+    }
+
+
+
+    .calendar-wrap td {
+        font-size: 8px;
+        height: 22px;
+        width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(-m-gray);
+    }
+
+    .calendar-wrap .btn {
+        padding: 5px 8px;
+        font-size: var(--fs-sm);
+        border-radius: var(--radius-sm);
+    }
+
+    .calendar-wrap .btn svg path {
+        stroke: var(--my-gray);
+    }
+
+    .calendar-wrap .btn:hover {
+        border-color: red;
+    }
+
+    .calendar-wrap .btn:hover svg path {
+        stroke: red;
+    }
+
+    .calendar-wrap .btn svg {
+        width: 12px;
+        height: 12px;
+    }
+
 }
 
 
