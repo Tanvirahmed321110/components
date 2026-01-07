@@ -493,7 +493,7 @@
 }
 
 .popular-tour-cart .item-content {
-    padding: 0px 48px 30px 12px;
+    padding: 0px 12px 30px 12px;
 }
 
 .popular-tour-cart .item-content .name {
@@ -514,7 +514,7 @@
 
 .popular-tour-cart .item-content .right {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
 }
 
 .popular-tour-cart .item-content .right .my-btn {
@@ -759,8 +759,9 @@
     gap: 24px;
 }
 
-.plan-items-wrapper .left {
-    width: 38%;
+.plan-items-wrapper .left-side,
+.plan-items-wrapper .right-side {
+    width: 50%;
 }
 
 .plan-items-wrapper .tripSlider {
@@ -772,7 +773,6 @@
 =====  Trip plan single item =====
 */
 .plan-items-wrapper .item {
-    height: 304px;
     position: relative;
     border-radius: var(--radius-xxl);
     overflow: hidden;
@@ -835,6 +835,7 @@
     display: inline-block;
     max-width: 55px;
 }
+
 
 .plan-items-wrapper .item .content .best-seller {
     text-align: center;

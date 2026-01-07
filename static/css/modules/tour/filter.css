@@ -387,7 +387,7 @@ body {
 }
 
 .hotel-cart.tour-filter-cart .cart-btn {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-primary-color);
 }
 
 
@@ -482,6 +482,9 @@ body {
     }
 
 
+    .g-hero.filter-hero {
+        margin-top: 0;
+    }
 
     .search-group.active {
         display: grid;
