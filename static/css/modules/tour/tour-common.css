@@ -447,6 +447,48 @@ search-group .my-input-control input::placeholder {
     margin-top: 0;
 }
 
+
+
+
+/* Top Destnation Page Start */
+.top-destnation-sec .section-head {
+    max-width: 844px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top-destnation-sec .tab-btn {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--my-border-primary);
+    color: var(--my-secondary-color);
+}
+
+.sub-continental .section-head {
+    text-align: left;
+    max-width: 480px;
+    margin: unset;
+}
+
+.sub-continental .section-head .section-title {
+    text-align: left;
+}
+
+.sub-continental .section-head .section-sub-title {
+    font-size: var(--fs-sm);
+    line-height: var(--line-height-sm);
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1080px) {
     .filter-sec .event-cart .cart-content .title {
         margin-top: 0px;
