@@ -755,7 +755,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.09));
+    background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.01));
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     /* backdrop-filter: blur(50px); */
@@ -763,6 +763,16 @@
 
 .package.tour-cart .star {
     color: var(--my-rating)
+}
+
+.package.tour-cart .visiable-content .rating div,
+.package.tour-cart .visiable-content .rating span {
+    font-size: var(--fs-sm);
+}
+
+.package.tour-cart .visiable-content .old-price,
+.package.tour-cart .visiable-content .per-person {
+    font-size: var(--fs-low);
 }
 
 .cart-btn {
@@ -1600,20 +1610,63 @@ footer .footer-bottom .left {
 
 @media(max-width:1439px) {
     .tour-cart {
-        /* height: 455px; */
+        height: 440px;
     }
 
-    .activities-cart .cart-img img {
-        height: 224px;
+    .event-cart {
+        padding: 8px;
+        height: 100%;
+        min-height: 300px;
+        max-height: 450px;
     }
-
 
     .event-cart .cart-img img {
-        height: 224px;
+        height: 190px;
+    }
+
+    .event-cart .total-seats div {
+        font-size: var(--fs-xs);
+    }
+
+    .event-cart .cart-content .title {
+        margin-top: 8px;
+        font-size: var(--fs-xl);
+    }
+
+    .event-cart .new-price {
+        font-size: var(--fs-lg);
+        margin-top: 0;
+    }
+
+    .event-cart .star-avg div {
+        font-size: var(--fs-sm);
+    }
+
+    .event-cart .cart-content {
+        padding: 4px 0;
+        margin-top: 8px;
+    }
+
+    .filter-sec .event-cart .cart-content .title {
+        font-size: var(--fs-md);
     }
 
     .tour-cart .hover-content {
         padding: 34px 20px 20px 20px;
+    }
+
+    .package.tour-cart .visiable-content .rating div,
+    .package.tour-cart .visiable-content .rating span {
+        font-size: var(--fs-sm);
+    }
+
+    .package.tour-cart .visiable-content .old-price,
+    .package.tour-cart .visiable-content .per-person {
+        font-size: var(--fs-low);
+    }
+
+    .cart-category {
+        padding: 0px 4px;
     }
 }
 

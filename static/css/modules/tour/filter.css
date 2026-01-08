@@ -336,6 +336,7 @@ body {
 
 .hotel-cart.tour-filter-cart .cart-btn {
     background-color: var(--my-primary-color);
+    padding: 8px 16px;
 }
 
 
@@ -373,7 +374,15 @@ body {
     display: none;
 }
 
-
+@media (max-width:1439px) {
+    .search-group.active {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
 
 /* For Tab */
 @media (max-width:1080px) {

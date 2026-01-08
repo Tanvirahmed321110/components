@@ -439,9 +439,7 @@ search-group .my-input-control input::placeholder {
     font-size: var(--fs-sm);
 }
 
-.filter-sec .event-cart .cart-content {
-    padding: 14px 8px 14px 8px;
-}
+
 
 .filter-sec .tab-contents {
     margin-top: 0;
@@ -485,7 +483,12 @@ search-group .my-input-control input::placeholder {
 
 
 
+@media(max-width:1439px) {
+    .filter-sec .event-cart .cart-content .title {
+        font-size: var(--fs-md);
+    }
 
+}
 
 
 
