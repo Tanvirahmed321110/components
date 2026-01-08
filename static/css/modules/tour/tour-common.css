@@ -367,7 +367,7 @@ search-group .my-input-control input::placeholder {
 }
 
 .filter-header .click-dropdown-btn {
-    padding: 5px 16px;
+    padding: 5px 18px;
     border-radius: var(--radius-pill);
     font-size: var(--fs-lg);
     font-weight: 400 !important;
@@ -406,10 +406,101 @@ search-group .my-input-control input::placeholder {
 
 
 
+.filter-sec .tour-cart.package .cart-title {
+    font-size: var(--fs-lg);
+    line-height: var(--line-height-md);
+}
+
+.filter-sec .tour-cart .price .new-price {
+    font-size: 20px;
+}
+
+.package.tour-cart .visiable-content {
+    padding: 20px 12px 10px 12px;
+}
+
+/* Event Cart */
+.filter-sec .event-cart {
+    min-height: 300px;
+    max-height: 490px;
+}
+
+.filter-sec .pick-up-location {
+    color: var(--my-rating);
+    font-weight: 600;
+}
+
+.filter-sec .event-cart .cart-content .title {
+    margin-top: 0px;
+    font-size: var(--fs-lg);
+}
+
+.filter-sec .event-cart .cart-content .sub-title {
+    font-size: var(--fs-sm);
+}
+
+.filter-sec .event-cart .cart-content {
+    padding: 14px 8px 14px 8px;
+}
+
+.filter-sec .tab-contents {
+    margin-top: 0;
+}
+
+@media (max-width: 1080px) {
+    .filter-sec .event-cart .cart-content .title {
+        margin-top: 0px;
+        font-size: var(--fs-md);
+        line-height: var(--line-height-sm);
+    }
+
+    .filter-sec .pick-up-location {
+        font-size: var(--fs-xs);
+    }
+
+    .filter-sec .event-cart .cart-content {
+        padding: 4px;
+    }
+
+    .filter-sec .total-seats div {
+        font-size: var(--fs-xs);
+    }
+
+    .filter-sec .event-cart .new-price {
+        font-size: var(--fs-xl);
+    }
+
+    .package.tour-cart .hover-content .cart-title {
+        font-size: var(--fs-lg);
+    }
+
+    .filter-sec .tour-cart .price .new-price {
+        font-size: var(--fs-lg);
+        line-height: var(--line-height-sm);
+    }
+
+    .tour-cart .price .old-price {
+        font-size: var(--fs-low);
+    }
+
+    .my-fs-xs {
+        font-size: var(--fs-low);
+    }
+
+    .tour-cart.package .hover-content {
+        padding: 10px;
+        padding-bottom: 16px
+    }
+
+    .tour-cart.package .rating div {
+        font-size: 10px;
+    }
 
 
+}
 
 
+/* MObile Responsive Start Here */
 @media (max-width: 768px) {
 
     header .module-header-main .m-item {
@@ -570,5 +661,75 @@ search-group .my-input-control input::placeholder {
 
     .m-search-menu-wrapper input[type="checkbox"]:checked::after {
         font-size: 10px;
+    }
+
+
+    /* tourcart package */
+    .tour-cart.package .hover-content .cart-title {
+        font-size: var(--fs-low);
+        margin-top: 4px;
+        line-height: var(--line-height-low);
+    }
+
+    .filter-sec .tour-cart.package .cart-title {
+        font-size: var(--fs-low);
+        line-height: var(--line-height-low);
+    }
+
+    .filter-sec .tour-cart .price .new-price {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .package.tour-cart .visiable-content {
+        padding: 6px 6px;
+        padding-top: 20px;
+    }
+
+    .filter-sec .filter-head .filter-btn {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        gap: 8px;
+        font-size: var(--fs-sm);
+    }
+
+    .filter-sec .filter-head .filter-btn svg {
+        width: 16px;
+        height: 16px
+    }
+
+
+    /* event card */
+    .filter-sec .event-cart {
+        min-height: 220px;
+        max-height: 490px;
+    }
+
+    .event-cart .btns-wrap {
+        margin-top: 8px;
+    }
+
+    .filter-sec .event-cart .cart-content {
+        padding: 4px;
+    }
+
+    .filter-sec .event-cart .cart-content .title {
+        margin-top: 0px;
+        font-size: 10px;
+    }
+
+    .filter-sec .event-cart .cart-content .sub-title {
+        font-size: 8px;
+    }
+
+    .filter-sec .event-cart .cart-btn {
+        font-size: 8px;
+        padding: 0px 12px;
+    }
+
+    .trending-wrap {
+        margin-top: 60px;
+        padding-top: 20px;
     }
 }

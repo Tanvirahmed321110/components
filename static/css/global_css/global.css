@@ -193,9 +193,17 @@
 
 }
 
+.w-dropdown-wrap-parent .w-dropdown-btn {
+    padding: 6px 16px;
+    border: 1px solid var(--my-border-color);
+    border-radius: 28px;
+    font-size: var(--fs-lg);
+    cursor: pointer;
+}
+
 .w-dropdown-wrap {
     position: absolute;
-    top: 100%;
+    top: 104%;
     right: 0;
     z-index: 6;
     border-radius: var(--radius-sm);
@@ -208,6 +216,16 @@
         -29px 20px 64px 0px rgba(0, 0, 0, 0.05),
         -51px 30px 76px 0px rgba(0, 0, 0, 0.02),
         -80px 40px 83px 0px rgba(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.w-dropdown-wrap.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .w-dropdown-wrap .w-droopdown {
@@ -219,8 +237,8 @@
 
 .w-dropdown-wrap .item {
     color: var(--my-secondary-color);
-    font-size: var(--fs-md);
-    padding: 24px 30px;
+    font-size: var(--fs-sm);
+    padding: 20px 24px;
     cursor: pointer;
     white-space: nowrap;
     font-weight: 600;
@@ -1707,6 +1725,23 @@ footer .footer-bottom .left {
         padding: 6px 4px;
     }
 
+    .cart-category {
+        font-size: 8px;
+        line-height: var(--line-height-sm);
+        padding: 0 4px;
+    }
+
+    .package.tour-cart .hover-content .cart-title {
+        color: var(--my-primary-color);
+        font-size: var(--fs-xl);
+        line-height: var(--line-height-sm);
+    }
+
+    .tour-cart.package {
+        height: 100%;
+        min-height: 380px;
+    }
+
 }
 
 
@@ -1744,6 +1779,29 @@ footer .footer-bottom .left {
         --m-gray-dark: #717680;
         --m-border-primary: #D0D0D0;
         --m-border-secondary: #D5D7DA;
+    }
+
+    .w-dropdown-wrap-parent .w-dropdown-btn {
+        padding: 4px 16px;
+        border: 1px solid var(--my-border-color);
+        border-radius: 28px;
+        font-size: var(--fs-xs);
+        cursor: pointer;
+    }
+
+    .w-dropdown-wrap {
+        padding: 10px;
+    }
+
+
+
+    .w-dropdown-wrap .item {
+        color: var(--my-secondary-color);
+        font-size: var(--fs-low);
+        padding: 12px 16px;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 600;
     }
 
     .m-gray {
