@@ -1355,64 +1355,6 @@
 
     /* header */
 
-    header .module-header-main .m-item {
-        position: static;
-    }
-
-    .module-header-main {
-        position: relative;
-        background-color: var(--my-bg-secondary);
-    }
-
-
-    header .module-header-main .m-item:hover .module-h-dropdwon {
-        padding: 12px 20px;
-        width: fit-content;
-        top: 48px;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 300px;
-        max-width: 300px;
-        border-radius: var(--radius-xl);
-        z-index: 7;
-        overflow-x: hidden;
-    }
-
-    header .module-header-main .m-item .content {
-        font-size: var(--fs-sm);
-        padding: 6px 8px;
-        cursor: pointer;
-    }
-
-    header .module-header-main .m-item .module-h-dropdwon .d-item {
-        padding: 6px 0px;
-        font-size: var(--fs-xs);
-    }
-
-
-    .search-menu-wrapper {
-        padding: 0px 0;
-    }
-
-    header .m-search-menu .left-icon svg {
-        position: absolute;
-        left: -60px;
-        top: 40px;
-        z-index: 1;
-        transform: rotate(4deg);
-    }
-
-    header .m-search-menu .right-icon {
-        overflow: hidden;
-    }
-
-    header .m-search-menu .right-icon svg {
-        position: absolute;
-        right: 12px;
-        top: 40px;
-        z-index: 1;
-        transform: rotate(6deg);
-    }
 
 
 
