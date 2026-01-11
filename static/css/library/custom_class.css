@@ -2198,6 +2198,7 @@ tr {
     color: var(--my-border-gray);
 }
 
+
 .my-text-quaternary {
     color: var(--my-text-quaternary);
 }
@@ -2211,7 +2212,7 @@ tr {
 }
 
 .my-text-gray2 {
-    color: var(--my-gray2);
+    color: #939AA9;
 }
 
 .my-text-red {
