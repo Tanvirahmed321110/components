@@ -106,25 +106,6 @@ header .module-header-main .m-item .module-h-dropdwon .d-item:hover {
     z-index: 2;
 }
 
-.g-hero .video-play-btn {
-    background-color: #FFFFFF66;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    z-index: 3;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    animation: pulse 2s infinite ease-out;
-    transition: .4s linear;
-}
-
-.g-hero .video-play-btn:hover {
-    background-color: var(--my-primary-color);
-    opacity: .8;
-}
-
 
 /*
 ========||   Bottom Search   ||========

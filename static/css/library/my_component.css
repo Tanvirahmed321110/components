@@ -998,6 +998,30 @@ input::placeholder {
 /*_____________________________________________*\
   ||     Video Play animation Start Here     ||
 \*_____________________________________________*/
+
+.video-play-btn {
+    background-color: #FFFFFF66;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    animation: pulse 2s infinite ease-out;
+    transition: .3s linear;
+}
+
+button.video-play-btn:active {
+    transform: translate(-50%, -55%) scale(.9);
+}
+
+.video-play-btn:hover {
+    background-color: var(--my-primary-color);
+    opacity: .8;
+}
+
 .my-video {
     width: 100%;
     height: 370px;
@@ -1022,7 +1046,7 @@ input::placeholder {
     border-radius: var(--radius-md);
 }
 
-.my-play-btn {
+/* .my-play-btn {
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -1052,7 +1076,7 @@ input::placeholder {
     display: block;
     width: 54px;
     height: 54px;
-    background: var(--my-secondary-color);
+    background: var(--my-primary-color);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -1067,7 +1091,7 @@ input::placeholder {
     display: block;
     width: 54px;
     height: 54px;
-    background: var(--my-secondary-color);
+    background: var(--my-primary-color);
     border-radius: 50%;
     transition: all 200ms;
 }
@@ -1097,6 +1121,10 @@ input::placeholder {
     border-radius: 12px !important;
 }
 
+.my-play-btn svg {
+    color: var(--my-after);
+}
+
 .my-play-btn span {
     display: block;
     position: relative;
@@ -1114,7 +1142,7 @@ input::placeholder {
 .my-play-btn:hover span {
     border-left: 13px solid var(--my-white-off2);
     transform: scale(.9);
-}
+} */
 
 @keyframes pulse-border {
     0% {

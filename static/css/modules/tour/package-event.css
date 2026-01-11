@@ -1,5 +1,5 @@
-.my-text- {
-    color: var(--my-rating);
+.section-main {
+    padding-bottom: 0;
 }
 
 .tour-type {
@@ -21,4 +21,176 @@
     padding: 5px 16px;
     line-height: var(--line-height-lg);
     border-radius: var(--radius-md);
+}
+
+.product-hero-wrap .compare-and-other .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--my-primary-color);
+    background-color: var(--my-primary-color);
+    transition: .2s ease;
+}
+
+.product-hero-wrap .compare-and-other .compare {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    padding: 8px 16px;
+    font-size: var(--fs-md);
+    line-height: var(--line-height-md);
+}
+
+.product-hero-wrap .compare-and-other .btn.outline {
+    background-color: transparent;
+}
+
+.product-hero-wrap .compare-and-other .btn:hover {
+    background-color: var(--my-secondary-color);
+    border-color: transparent;
+}
+
+.product-hero-wrap .compare-and-other .btn.outline:hover {
+    border-color: var(--my-border-primary);
+    background-color: transparent;
+}
+
+
+/* bottom-side */
+.product-hero-wrap .bottom-side {
+    display: grid;
+    grid-template-columns: calc(64% - 10px) calc(36% - 10px);
+    gap: 20px;
+}
+
+.product-hero-wrap .bottom-side .banner-item {
+    height: 224px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-xxl);
+    transition: .4s ease;
+    background-color: red;
+}
+
+.product-hero-wrap .bottom-side .banner-item .view-all {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 16px;
+    font-size: var(--fs-xs);
+    color: var(--my-white);
+    z-index: 4;
+    backdrop-filter: blur(14px);
+    font-weight: var(--fw-600);
+    background-color: #FFFFFF40;
+}
+
+.product-hero-wrap .bottom-side .banner-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+    background-color: rgba(163, 31, 163, 0.193);
+    transform: translateY(300px);
+}
+
+.product-hero-wrap .bottom-side .banner-item:hover::after {
+    height: 100%;
+    transform: translateY(-300px);
+}
+
+.product-hero-wrap .bottom-side .banner-img {
+    border-radius: var(--radius-xxl);
+    height: 100%;
+}
+
+/* review */
+.product-hero-wrap .bottom-side .review {
+    padding: 16px;
+    background-color: #DBF7FF;
+}
+
+.product-hero-wrap .bottom-side .review .desc {
+    line-height: var(--line-height-md);
+    font-size: var(--fs-lg);
+    color: var(--my-text-primary);
+}
+
+.product-hero-wrap .bottom-side .review .profile-img-xl {
+    border: 3px solid var(--my-white);
+    padding: 1px;
+    width: 60px;
+    height: 60px;
+}
+
+.rating i {
+    color: var(--my-rating);
+}
+
+
+
+
+
+
+
+
+
+/* tour-info */
+.product-hero-wrap .tour-info .item {
+    background-color: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package-information-wrap */
+.package-information .section-title {
+    font-size: var(--fs-3xl);
+}
+
+.package-information-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.66667%;
+    background-color: gainsboro;
+    height: 222px;
+    align-items: stretch;
+    /* 32px equivalent in % */
+}
+
+.information-left {
+    width: 70.58333%;
+    background-color: rgb(148, 119, 119);
+    /* 847px equivalent */
+}
+
+
+
+/* Price Card */
+.price-card {
+    width: 26.75%;
+    background-color: whitesmoke;
+    flex: 1;
+    display: flex;
+}
+
+.price-card-wrap {
+    background-color: orange;
+    display: flex;
+    flex: 1;
+
 }

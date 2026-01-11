@@ -1012,6 +1012,7 @@
 header {
     background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid var(--my-border-secondary);
 }
 
 
