@@ -359,3 +359,74 @@
 .packageSummerySlider .item:hover .name {
     transform: translateY(-12px);
 }
+
+
+
+
+
+
+
+/*
+=====================================================
+=====||   Day By Day Itinerary Start Here     ||=====
+=====================================================
+*/
+.card {
+    background-color: #F3F7FA;
+    border-radius: var(--radius-sm);
+    border: 0.25px solid;
+    border-image-source: linear-gradient(86.4deg, rgba(0, 0, 0, 0.2) 0%, rgba(102, 102, 102, 0.2) 99.43%);
+    border: 1px solid #66666635;
+    width: fit-content;
+}
+
+.card .title {
+    font-size: var(--fs-lg);
+    color: var(--my-text-primary);
+    font-weight: var(--fw-600);
+    line-height: 100%;
+}
+
+.card .card-img {
+    width: 212px;
+}
+
+.card-text {
+    color: #000000B2;
+}
+
+.card .type {
+    font-size: var(--fs-md);
+}
+
+.card .type .key {
+    color: var(--my-text-primary);
+}
+
+.card .type .value {
+    color: var(--my-secondary-color);
+}
+
+
+.expand-all-btn {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-500);
+    color: var(--my-text-primary);
+    text-decoration: underline;
+}
+
+.expand-all-btn:hover {
+    color: var(--my-secondary-color);
+}
+
+.itinerary-body {
+    padding: 50px 24px;
+    box-shadow: var(--n-shadow-2);
+
+    border: 1px solid var(--white-20);
+}
+
+/* itenary-car */
+.itenary-car .content {
+    padding: 21px 18px 20px 14px;
+}
