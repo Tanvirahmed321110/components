@@ -1,6 +1,7 @@
-function inchToFeet(inch) {
-    const feet = parseFloat(inch / 12)
-    return feet;
-}
 
-console.log(inchToFeet(23))
+let nam = 'Tanvir ahmed'
+let update = nam[nam.length - 1]
+
+update = 'D'
+console.log(update)
+console.log(nam)

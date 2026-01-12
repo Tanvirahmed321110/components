@@ -2,6 +2,11 @@
     padding-bottom: 0;
 }
 
+.p-sub-container {
+    width: 70.58333%;
+    border: 1px solid rgba(231, 231, 231, 0.6);
+}
+
 .tour-type {
     border-radius: var(--radius-xxl);
     padding: 11px 12px;
@@ -166,31 +171,126 @@
     display: flex;
     align-items: flex-start;
     gap: 2.66667%;
-    background-color: gainsboro;
-    height: 222px;
     align-items: stretch;
     /* 32px equivalent in % */
 }
 
 .information-left {
     width: 70.58333%;
-    background-color: rgb(148, 119, 119);
     /* 847px equivalent */
+}
+
+/* highlights-items */
+.package-information .highlights-items .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--my-secondary-color);
+    background-color: #FFE0D9;
+}
+
+.package-information .highlights-items .icon img {
+    width: 16px;
 }
 
 
 
 /* Price Card */
-.price-card {
+.package-information .price-card {
     width: 26.75%;
-    background-color: whitesmoke;
     flex: 1;
     display: flex;
 }
 
-.price-card-wrap {
-    background-color: orange;
+.package-information .price-card-wrap {
+    background-color: var(--my-white);
+    padding: 26px 20px;
     display: flex;
-    flex: 1;
+    width: 100%;
+    height: fit-content;
+    border: 1px solid var(--my-border-secondary);
+    border-radius: var(--radius-xxl);
+    /* box-shadow: var(--n-shadow-2); */
+}
 
+.package-information .price-card .top-btn {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+.package-information .price-card .price-text {
+    font-size: var(--fs-xxl);
+    color: var(--my-text-primary)
+}
+
+.package-information .price-card .person {
+    color: #A4A7AE;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-400);
+}
+
+.package-information .price-card .date-guest button {
+    padding: 6px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-500);
+    border: 1px solid var(--my-border-secondary);
+}
+
+.package-information .price-card .check-and-make .my-btn {
+    line-height: var(--line-height-md);
+    padding: 12px;
+    border-radius: var(--radius-xl);
+}
+
+.package-information .price-card .check-and-make .make.my-btn {
+    color: var(--my-secondary-color);
+}
+
+
+
+
+
+
+
+
+/* packageSummerySlider */
+.packageSummerySlider .item {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+.packageSummerySlider .item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 111px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0.6) 100%);
+    background-color: gainsboro;
+    z-index: 12;
+}
+
+.packageSummerySlider .item img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
+.packageSummerySlider .item .item-content {
+    z-index: 2;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 100%;
+}
+
+.packageSummerySlider .item .item-content .name {
+    color: var(--my-white);
+    font-size: var(--fs-xl);
 }

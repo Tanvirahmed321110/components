@@ -447,6 +447,9 @@ button:active,
     position: relative;
     z-index: 2;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .my-secondary-btn:hover::after,
@@ -491,6 +494,7 @@ button:active,
     background-color: var(--my-white);
     color: var(--my-text-quaternary);
     background-color: transparent;
+    transition: .2s ease;
 }
 
 .my-btn.my-outline-btn:hover {

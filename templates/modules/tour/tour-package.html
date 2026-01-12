@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tour Package</title>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
@@ -5825,19 +5826,435 @@
                 <div class="package-information">
                     <div class="my-container">
                         <div class="package-information-wrap">
-                            <!--===========================|| Information Left Side  ||=============================  -->
-                            <div class="information-left">
-                                <h2 class="section-title">Highlights of the Tour
-                                </h2>
+                            <!--===============================|| Information Left Side  ||=================================  -->
+                            <div class="information-left my-flex-column my-gap-25">
 
-                                <div class="highlights-items my-mt-10">
+                                <!--===============|| Highlights ||================-->
+                                <div>
+                                    <h2 class="section-title">Highlights of the Tour
+                                    </h2>
 
+                                    <!--=============== Information Left Side  ================-->
+                                    <div class="highlights-items my-mt-10">
+                                        <ul class="my-flex-column my-gap-10">
+
+                                            <!-- single item -->
+                                            <li class="my-d-flex my-gap-4 my-align-start">
+
+                                                <!-- icon -->
+                                                <div class="icon my-flex-center ">
+                                                    <!-- svg or image -->
+                                                    <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
+                                                </div>
+
+                                                <!-- information  -->
+                                                <div class="info flex-1 my-fs-xl">Explore the <strong
+                                                        class="my-text-primary">Grand
+                                                        Palace</strong> and <strong class="my-text-primary">Wat Phra
+                                                        Kaew</strong> in
+                                                    Bangkok,
+                                                    marvel at Thailand’s rich cultural heritage. </div>
+                                            </li>
+
+                                            <!-- single item -->
+                                            <li class="my-d-flex my-gap-4 my-align-start">
+
+                                                <!-- icon -->
+                                                <div class="icon my-flex-center ">
+
+                                                    <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
+
+                                                </div>
+
+                                                <!-- information  -->
+                                                <div class="info flex-1 my-fs-xl">Relax on the stunning
+                                                    <strong class="my-text-primary">beaches</strong> of
+                                                    Phuket and Phi Phi Islands, perfect for <strong
+                                                        class="my-text-primary">swimming</strong> , swimming, and
+                                                    snorkelling.
+                                                </div>
+                                            </li>
+
+                                            <!-- single item -->
+                                            <li class="my-d-flex my-gap-4 my-align-start">
+
+                                                <!-- icon -->
+                                                <div class="icon my-flex-center ">
+
+                                                    <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
+
+
+                                                </div>
+
+                                                <!-- information  -->
+                                                <div class="info flex-1 my-fs-xl">Relax on the stunning
+                                                    <strong class="my-text-primary">beaches</strong> of
+                                                    Phuket and Phi Phi Islands, perfect for <strong
+                                                        class="my-text-primary">swimming</strong> , swimming, and
+                                                    snorkelling.
+                                                </div>
+                                            </li>
+                                            <!-- single item -->
+                                            <li class="my-d-flex my-gap-4 my-align-start">
+
+                                                <!-- icon -->
+                                                <div class="icon my-flex-center ">
+
+                                                    <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
+
+
+                                                </div>
+
+                                                <!-- information  -->
+                                                <div class="info flex-1 my-fs-xl">Experience on the stunning
+                                                    <strong class="my-text-primary"> speedboat tour</strong> of stunning
+                                                    Phuket and Phi Phi Islands, perfect for <strong
+                                                        class="my-text-primary">swimming</strong> , swimming, and
+                                                    snorkelling.
+                                                </div>
+                                            </li>
+
+                                            <!-- single item -->
+                                            <li class="my-d-flex my-gap-4 my-align-start">
+
+                                                <!-- icon -->
+                                                <div class="icon my-flex-center ">
+
+                                                    <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
+
+
+                                                </div>
+
+                                                <!-- information  -->
+                                                <div class="info flex-1 my-fs-xl">Experience on the stunning
+                                                    <strong class="my-text-primary"> speedboat tour</strong> of stunning
+                                                    Phuket and Phi Phi Islands, perfect for , swimming, and
+                                                    snorkelling.
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!--===========================|| Right Side  ||=============================  -->
+                            <!--===============================|| Right Side  ||================================  -->
                             <div class="price-card">
-                                <div class="price-card-wrap">
+                                <div class="price-card-wrap my-flex-column">
+
+                                    <!-- Top Buttons Here -->
+                                    <div class="my-flex-center flex-1 my-grid-3 my-gap-6">
+                                        <!-- standard button -->
+                                        <button class="my-btn my-secondary-btn top-btn">
+                                            <span class="content">Standard</span>
+                                        </button>
+                                        <!-- Premium button -->
+                                        <button class="my-btn my-primary-btn top-btn">
+                                            <span class="content">Premium</span>
+                                        </button>
+                                        <!-- Luxury button -->
+                                        <button class="my-btn my-primary-btn top-btn">
+                                            <span class="content">Luxury</span>
+                                        </button>
+                                    </div>
+
+
+                                    <!-- Price  -->
+                                    <div class="price my-mt-2">
+                                        <div class="my-text-quaternary my-fs-md"> From</div>
+                                        <div class="my-d-flex my-mt-2 my-align-end">
+                                            <h4 class="price-text my-d-flex">US$ <span>999.00</span> <span>/</span></h4>
+                                            <sup class="person">per person</sup>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Date and Guest Button Here -->
+                                    <div class="date-guest my-d-flex my-gap-8 my-my-16">
+
+                                        <!-- Date Button -->
+                                        <button class="my-flex-center my-gap-2">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 2V6M8 2V6" stroke="#717680" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z"
+                                                    stroke="#717680" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M3 10H21" stroke="#717680" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Date
+                                        </button>
+
+                                        <!-- Guest Button -->
+                                        <button class="my-flex-center my-gap-2">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.5 11C15.5 9.067 13.933 7.5 12 7.5C10.067 7.5 8.5 9.067 8.5 11C8.5 12.933 10.067 14.5 12 14.5C13.933 14.5 15.5 12.933 15.5 11Z"
+                                                    stroke="#717680" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M15.481 11.3499C15.803 11.4475 16.1445 11.5 16.4983 11.5C18.4313 11.5 19.9983 9.933 19.9983 8C19.9983 6.067 18.4313 4.5 16.4983 4.5C14.6834 4.5 13.1911 5.8814 13.0156 7.65013"
+                                                    stroke="#717680" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.9827 7.65013C10.8072 5.8814 9.31492 4.5 7.5 4.5C5.567 4.5 4 6.067 4 8C4 9.933 5.567 11.5 7.5 11.5C7.85381 11.5 8.19535 11.4475 8.51727 11.3499"
+                                                    stroke="#717680" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M22 16.5C22 13.7386 19.5376 11.5 16.5 11.5" stroke="#717680"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M17.5 19.5C17.5 16.7386 15.0376 14.5 12 14.5C8.96243 14.5 6.5 16.7386 6.5 19.5"
+                                                    stroke="#717680" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M7.5 11.5C4.46243 11.5 2 13.7386 2 16.5" stroke="#717680"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Guest
+
+                                        </button>
+                                    </div>
+
+
+                                    <!-- Check and Make Button -->
+                                    <div class="check-and-make">
+
+                                        <!-- Check Button Here -->
+                                        <button class="my-btn check my-secondary-btn my-w-100-p">
+                                            <span class="content my-gap-4">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 2V6M8 2V6" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M13 4H11C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14V12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4Z"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M3 10H21" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                Check availability
+                                            </span>
+                                        </button>
+
+                                        <!-- Make Button Here -->
+                                        <button class="my-btn make my-w-100-p my-outline-btn my-mt-8">
+                                            <span class="content my-gap-4">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.5 14.5H15.5M8.5 9.5H12" stroke="#FC5A31"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z"
+                                                        stroke="#FC5A31" stroke-width="1.5" stroke-linejoin="round" />
+                                                </svg>
+
+                                                Check Make
+                                                enquiry
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--
+            ==========================================================
+            =======||   Package Summery Section Start Here    ||======
+            ==========================================================
+            -->
+            <section class="my-my-25 ">
+                <div class="my-container ">
+
+                    <div class="p-sub-container">
+
+                        <!--===============|| Package Summary ||================-->
+                        <div class="package-summery">
+                            <div>
+                                <h2 class="section-title">Package Summary</h2>
+                                <p class="desc my-mt-10 my-fs-lg my-text-primary my-fw-noraml">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+
+                            <div class="my-mt-25">
+
+                                <!-- head -->
+                                <div class="head">
+                                    <h3 class="my-text-primary my-fs-xxl">You'll See ...</h3>
+                                    <div class="my-flex-between">
+
+                                        <!-- title -->
+                                        <h3 class="my-text-primary my-fs-xxl">Bangkok + Phuket + Phi Phi Islands most
+                                            Beautiful Places</h3>
+
+                                        <div class="right-slider-arrows">
+                                            <button class="prev" tabindex="0" aria-label="Previous slide"
+                                                aria-controls="swiper-wrapper-4605be610f47ac4b3" aria-disabled="true">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE"
+                                                        stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M9.16791 15.0018C9.16791 15.0018 4.16798 11.3193 4.16797 10.0017C4.16796 8.68408 9.16799 5.00171 9.16799 5.00171"
+                                                        stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </svg>
+
+                                            </button>
+
+                                            <button class="next" tabindex="0" aria-label="Next slide"
+                                                aria-controls="swiper-wrapper-4605be610f47ac4b3" aria-disabled="false">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.418 10H4.16797" stroke="#A4A7AE" stroke-width="1.25"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
+                                                        stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--============ Slider Here ========= -->
+                                <div
+                                    class="swiper my-mt-20 packageSummerySlider swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                    <div class="swiper-wrapper" id="swiper-wrapper-3ca108804c685ed5d"
+                                        aria-live="polite">
+
+
+                                        <div class="swiper-slide swiper-slide-active" <!-- single item -->
+                                            <a href="#" class="item">
+                                                <div class="img-wrap">
+                                                    <!-- image -->
+                                                    <img src="/static/images/tour-category-bottom-right.jpg"
+                                                        alt="tour category" loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <!-- name -->
+                                                    <h4 class="name">Chiang Mia</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
+                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
+                                            <!-- single item -->
+                                            <div class="category-item">
+                                                <div class="img-wrap">
+                                                    <img src="/static/images/tour-category-bottom-left.jpg"
+                                                        alt="tour category" loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <h3 class="category-name">Couple Tour</h3>
+                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
+                                                        <p class="desc">Choose your destination travels -
+                                                            Service Provider
+                                                            Of
+                                                            International Tour
+                                                            Packages, Domestic Tour &amp; Family Tour Package In
+                                                            Tourgull.</p>
+                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
+                                                            <div class="content">Book Now</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
+                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
+                                            <!-- single item -->
+                                            <div class="category-item">
+                                                <div class="img-wrap">
+                                                    <img src="/static/images/tour-category-bottom-left.jpg"
+                                                        alt="tour category" loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <h3 class="category-name">Couple Tour</h3>
+                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
+                                                        <p class="desc">Choose your destination travels -
+                                                            Service Provider
+                                                            Of
+                                                            International Tour
+                                                            Packages, Domestic Tour &amp; Family Tour Package In
+                                                            Tourgull.</p>
+                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
+                                                            <div class="content">Book Now</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
+                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
+                                            <!-- single item -->
+                                            <div class="category-item">
+                                                <div class="img-wrap">
+                                                    <img src="/static/images/tour-category-bottom-left.jpg"
+                                                        alt="tour category" loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <h3 class="category-name">Couple Tour</h3>
+                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
+                                                        <p class="desc">Choose your destination travels -
+                                                            Service Provider
+                                                            Of
+                                                            International Tour
+                                                            Packages, Domestic Tour &amp; Family Tour Package In
+                                                            Tourgull.</p>
+                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
+                                                            <div class="content">Book Now</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide" role="group" aria-label="3 / 3"
+                                            data-swiper-slide-index="2" style="width: 335px; margin-right: 20px;">
+                                            <!-- single item -->
+                                            <div class="category-item">
+                                                <div class="img-wrap">
+                                                    <img src="/static/images/tour-category-right-top.jpg"
+                                                        alt="tour category" loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <h3 class="category-name">Couple Tour</h3>
+                                                    <div class="my-mt-0 my-d-flex my-align-end my-gap-10">
+                                                        <p class="desc">Choose your destination travels -
+                                                            Service Provider
+                                                            Of
+                                                            International Tour
+                                                            Packages, Domestic Tour &amp; Family Tour Package In
+                                                            Tourgull.</p>
+                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
+                                                            <div class="content">Book Now</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -6170,10 +6587,7 @@
                                 <img class="my-w-fit-content mobile-hide" src="/static/images/payment-img.svg"
                                     alt="payment methods image" loading="lazy">
 
-                                <!-- For Mobile Show -->
-                                <!-- <img class="my-w-fit-content my-d-md-block my-d-none"
-                                    src="./static/images/payment-img-mobile.svg" alt="payment methods image"
-                                    loading="lazy"> -->
+
 
                                 <!--======||  Footer Social Icons  ||======-->
                                 <ul class="footer-social-icons my-d-flex my-gap-6 my-pl-12 my-mt-md-12 my-p-md-0">
@@ -6281,9 +6695,30 @@
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
-        <script src="/static/js/modules/tour/filter.js"></script>
+
+        <script>
+
+            //===========  Top Category  Slider  ===========
+            const categorySlider = new Swiper(".packageSummerySlider", {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                loop: true,
+
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    576: { slidesPerView: 1.5 },
+                    768: { slidesPerView: 1 },
+                    992: { slidesPerView: 4 },
+                },
+
+                navigation: {
+                    nextEl: ".package-summery .next",
+                    prevEl: ".package-summery .prev",
+                }
+            });
+        </script>
 
     </body>
 
