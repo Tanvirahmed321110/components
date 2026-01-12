@@ -7,6 +7,10 @@
     border: 1px solid rgba(231, 231, 231, 0.6);
 }
 
+.p-sub-container .section-title {
+    font-size: var(--fs-3xl);
+}
+
 .tour-type {
     border-radius: var(--radius-xxl);
     padding: 11px 12px;
@@ -28,6 +32,12 @@
     border-radius: var(--radius-md);
 }
 
+
+/*
+=============================================
+=====||   Product Hero Start Here     ||=====
+=============================================
+*/
 .product-hero-wrap .compare-and-other .btn {
     width: 40px;
     height: 40px;
@@ -60,11 +70,23 @@
 }
 
 
-/* bottom-side */
+/**************
+ bottom-side
+ *************/
 .product-hero-wrap .bottom-side {
-    display: grid;
-    grid-template-columns: calc(64% - 10px) calc(36% - 10px);
+    display: flex;
     gap: 20px;
+    width: 100%;
+}
+
+/* Left side - 64% */
+.product-hero-wrap .bottom-side .left {
+    width: 64%;
+}
+
+/* Right side - 36% */
+.product-hero-wrap .bottom-side .right {
+    width: 36%;
 }
 
 .product-hero-wrap .bottom-side .banner-item {
@@ -117,6 +139,12 @@
 .product-hero-wrap .bottom-side .review {
     padding: 16px;
     background-color: #DBF7FF;
+    height: 224px;
+    width: 100%;
+}
+
+.product-hero-wrap .bottom-side .review .right {
+    flex: 1;
 }
 
 .product-hero-wrap .bottom-side .review .desc {
@@ -161,8 +189,11 @@
 
 
 
-
-/* package-information-wrap */
+/*
+====================================================
+=====||   Product Information Start Here     ||=====
+====================================================
+*/
 .package-information .section-title {
     font-size: var(--fs-3xl);
 }
@@ -213,11 +244,31 @@
     /* box-shadow: var(--n-shadow-2); */
 }
 
-.package-information .price-card .top-btn {
+.package-information .price-card .top-btn,
+.day-by-day .top-btn {
     font-size: var(--fs-md);
     font-weight: 600;
     width: 100%;
     border-radius: var(--radius-sm);
+}
+
+.package-information .price-card .top-btn::after,
+.day-by-day .top-btn::after {
+    content: unset;
+}
+
+.day-by-day .top-btn {
+    width: unset;
+}
+
+.day-by-day .top-btn:hover,
+.package-information .price-card .top-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+.day-by-day .my-secondary-btn.top-btn:hover,
+.package-information .price-card .my-secondary-btn.top-btn:hover {
+    background-color: var(--my-primary-color);
 }
 
 .package-information .price-card .price-text {
@@ -256,7 +307,12 @@
 
 
 
-/* packageSummerySlider */
+
+/*
+================================================
+=====||   Package Summary Start Here     ||=====
+================================================
+*/
 .packageSummerySlider .item {
     position: relative;
     height: 200px;
@@ -265,15 +321,17 @@
     border-radius: var(--radius-xl);
 }
 
-.packageSummerySlider .item::before {
+
+
+.packageSummerySlider .item::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 111px;
-    background: linear-gradient(to top, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0.6) 100%);
-    background-color: gainsboro;
-    z-index: 12;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
 }
 
 .packageSummerySlider .item img {
@@ -290,7 +348,14 @@
     width: 100%;
 }
 
+
+
 .packageSummerySlider .item .item-content .name {
     color: var(--my-white);
     font-size: var(--fs-xl);
+    transition: .3s ease;
+}
+
+.packageSummerySlider .item:hover .name {
+    transform: translateY(-12px);
 }

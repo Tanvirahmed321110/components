@@ -5240,25 +5240,26 @@
                             <!--============|| Top left Side Here  ||============-->
                             <div class="left ">
                                 <!-- Name Here -->
-                                <h1 class="section-title">Bangkok + Phuket + Phi Phi Islandss</h1>
+                                <h1 class="section-title" itemprop="name">Bangkok + Phuket + Phi Phi Islandss</h1>
                                 <!-- Short Desc -->
-                                <p class="my-mt-6 my-fs-xl my-text-primary">Explore the Best of Thailand’s City and
+                                <p class="my-mt-6 my-fs-xl my-text-primary" itemprop="description">Explore the Best of
+                                    Thailand’s City and
                                     Tropical Paradise
                                 </p>
 
 
                                 <!-- category here -->
                                 <div class="category-wrap my-d-flex my-gap-4 my-mt-8  my-mt-4 my-gap-sm-1">
-                                    <div class="cart-category rail-tour">
+                                    <div class="cart-category rail-tour" itemprop="touristType">
                                         Rail Tour
                                     </div>
-                                    <div class="cart-category wildlife">
+                                    <div class="cart-category wildlife" itemprop="touristType">
                                         Wildlife
                                     </div>
-                                    <div class="cart-category honeymoon">
+                                    <div class="cart-category honeymoon" itemprop="touristType">
                                         Honeymoon
                                     </div>
-                                    <div class="cart-category study-tour">
+                                    <div class="cart-category study-tour" itemprop="touristType">
                                         Study Tour
                                     </div>
                                 </div>
@@ -5267,7 +5268,8 @@
                                 <div class="locaiton-rating my-mt-12 my-d-flex my-align-center my-gap-10">
 
                                     <!-- location -->
-                                    <div class="locaiton my-d-flex my-gap-2 my-align-center">
+                                    <div class="locaiton my-d-flex my-gap-2 my-align-center" itemprop="location"
+                                        itemscope itemtype="https://schema.org/Place">
                                         <!-- icon -->
                                         <span>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -5319,7 +5321,9 @@
 
 
                                     <!-- rating -->
-                                    <div class="rating  my-d-flex my-gap-2 my-align-center  my-fs-md">
+                                    <div class="rating  my-d-flex my-gap-2 my-align-center  my-fs-md"
+                                        itemprop="aggregateRating" itemscope
+                                        itemtype="https://schema.org/AggregateRating">
                                         <div class="my-d-flex my-align-center my-gap-2 my-line-height-md">
                                             <div class="star my-align-center">
                                                 <span class="my-fs-lg  my-d-block my-text-rating"><i
@@ -5518,7 +5522,7 @@
                                 </div>
                             </div>
 
-                            <!--============|| Top left Side Here  ||============-->
+                            <!--============|| Top right Side Here  ||============-->
                             <div class="right my-flex-column">
                                 <a href="#" class="banner-item">
                                     <img class="my-radius-xxl banner-img" src="/static/images/Tour banner.jpg"
@@ -5537,36 +5541,136 @@
                                     </button>
                                 </a>
 
-                                <div class="reviews my-mt-10  my-d-flex flex-1">
-                                    <div class="review my-radius-xxl my-flex-column my-flex-between flex-1 my-w-100-p">
 
-                                        <!-- review description -->
-                                        <p class="desc">The beaches at Manuel Antonio National Park were amazing. The
-                                            guided walking tour to explore the wildlife was great.</p>
+                                <!--========== Review Slider =========-->
+                                <div class="reviews  my-mt-12">
+                                    <div class=" reviewSlider swiper  ">
+                                        <div class="swiper-wrapper">
 
-                                        <div class="my-d-flex my-align-center my-gap-6  my-w-100-p ">
-                                            <div class="profile">
-                                                <img class="profile-img-xl" src="/static/images/profile (1).jpg"
-                                                    alt="profile image" loading="lazy">
-                                            </div>
-                                            <div class="right">
-                                                <div class="my-d-flex my-gap-1 my-align-center">
-                                                    <span class="name my-fw-bold my-text-primary my-fs-md">Faria,
-                                                    </span>
-                                                    <p>Ralph, travelled in March</p>
-                                                </div>
+                                            <div class="swiper-slide">
+                                                <!-- single review -->
+                                                <div
+                                                    class="review my-radius-xxl my-flex-column my-flex-between flex-1 my-w-100-p">
+                                                    <!-- review description -->
+                                                    <p class="desc">The beaches at Manuel Antonio National Park were
+                                                        amazing.
+                                                        The
+                                                        guided walking tour to explore the wildlife was great.</p>
 
-                                                <div class="my-d-flex my-align-center my-gap-4">
-                                                    <div class="my-mt-3 rating my-d-flex my-align-center">
-                                                        <i class="ri-star-fill"></i>
-                                                        <i class="ri-star-fill"></i>
-                                                        <i class="ri-star-fill"></i>
-                                                        <i class="ri-star-fill"></i>
-                                                        <i class="ri-star-fill"></i>
+                                                    <div class="my-d-flex my-align-center my-gap-6  my-w-100-p ">
+                                                        <div class="profile">
+                                                            <img class="profile-img-xl"
+                                                                src="/static/images/profile (2).png" alt="profile image"
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="my-d-flex my-gap-1 my-align-center">
+                                                                <span
+                                                                    class="name my-fw-bold my-text-primary my-fs-md">Faria,
+                                                                </span>
+                                                                <p>Ralph, travelled in March</p>
+                                                            </div>
+
+                                                            <div class="my-d-flex my-align-center my-gap-4">
+                                                                <div class="my-mt-3 rating my-d-flex my-align-center">
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                </div>
+
+                                                                <div class="my-fw-bold my-mt-3 my-text-primary">4.0
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <div class="my-fw-bold my-mt-3 my-text-primary">4.0</div>
                                                 </div>
+
+                                            </div>
+
+                                            <div class="swiper-slide ">
+                                                <!-- single review -->
+                                                <div
+                                                    class="review my-radius-xxl my-flex-column my-flex-between flex-1 my-w-100-p">
+                                                    <!-- review description -->
+                                                    <p class="desc">The beaches at Manuel Antonio National Park were
+                                                        amazing.
+                                                        The
+                                                        guided walking tour to explore the wildlife was great.</p>
+
+                                                    <div class="my-d-flex my-align-center my-gap-6  my-w-100-p ">
+                                                        <div class="profile">
+                                                            <img class="profile-img-xl"
+                                                                src="/static/images/profile (3).png" alt="profile image"
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="my-d-flex my-gap-1 my-align-center">
+                                                                <span
+                                                                    class="name my-fw-bold my-text-primary my-fs-md">Faria,
+                                                                </span>
+                                                                <p>Ralph, travelled in March</p>
+                                                            </div>
+
+                                                            <div class="my-d-flex my-align-center my-gap-4">
+                                                                <div class="my-mt-3 rating my-d-flex my-align-center">
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                </div>
+
+                                                                <div class="my-fw-bold my-mt-3 my-text-primary">4.0
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="swiper-slide ">
+                                                <!-- single review -->
+                                                <div
+                                                    class="review my-radius-xxl my-flex-column my-flex-between flex-1 my-w-100-p">
+                                                    <!-- review description -->
+                                                    <p class="desc">The beaches at Manuel Antonio National Park were
+                                                        amazing.
+                                                        The
+                                                        guided walking tour to explore the wildlife was great.</p>
+
+                                                    <div class="my-d-flex my-align-center my-gap-6  my-w-100-p ">
+                                                        <div class="profile">
+                                                            <img class="profile-img-xl"
+                                                                src="/static/images/profile (1).jpg" alt="profile image"
+                                                                loading="lazy">
+                                                        </div>
+                                                        <div class="right">
+                                                            <div class="my-d-flex my-gap-1 my-align-center">
+                                                                <span
+                                                                    class="name my-fw-bold my-text-primary my-fs-md">Faria,
+                                                                </span>
+                                                                <p>Ralph, travelled in March</p>
+                                                            </div>
+
+                                                            <div class="my-d-flex my-align-center my-gap-4">
+                                                                <div class="my-mt-3 rating my-d-flex my-align-center">
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                    <i class="ri-star-fill"></i>
+                                                                </div>
+
+                                                                <div class="my-fw-bold my-mt-3 my-text-primary">4.0
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -5574,12 +5678,14 @@
                             </div>
                         </div>
 
+
+
+
                         <!--=========================||  Tour Info  ||=========================-->
                         <div class="tour-info my-grid-3 my-mt-16 my-gap-8 my-grid-md-2">
 
                             <!--======= single item ======-->
                             <div class="item my-gap-2 my-d-flex my-align-center my-radius-md my-p-10 ">
-
                                 <!-- key -->
                                 <div class="key my-gap-4 my-text-primary my-d-flex my-align-center"><svg width="24"
                                         height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5605,7 +5711,6 @@
 
                             <!--======= single item ======-->
                             <div class="item my-gap-2 my-d-flex my-align-center my-radius-md my-p-10 ">
-
                                 <!-- key -->
                                 <div class="key my-gap-4 my-text-primary my-d-flex my-align-center"><svg width="24"
                                         height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5622,7 +5727,7 @@
                                     </svg>
 
                                     <!-- key name -->
-                                    <span class="my-fw-bold my-fs-lg">Departure City - </span>
+                                    <span class="my-fw-bold my-fs-lg">End City - </span>
                                 </div>
 
                                 <!-- value -->
@@ -5633,19 +5738,18 @@
                             <div class="item my-gap-2 my-d-flex my-align-center my-radius-md my-p-10 ">
 
                                 <!-- key -->
-                                <div class="key my-gap-4 my-text-primary my-d-flex my-align-center"><svg width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="key my-gap-4 my-text-primary my-d-flex my-align-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            d="M14.5 9C14.5 10.3807 13.3807 11.5 12 11.5C10.6193 11.5 9.5 10.3807 9.5 9C9.5 7.61929 10.6193 6.5 12 6.5C13.3807 6.5 14.5 7.61929 14.5 9Z"
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                             stroke="#141B34" stroke-width="1.5" />
                                         <path
-                                            d="M18.2222 17C19.6167 18.9885 20.2838 20.0475 19.8865 20.8999C19.8466 20.9854 19.7999 21.0679 19.7469 21.1467C19.1724 22 17.6875 22 14.7178 22H9.28223C6.31251 22 4.82765 22 4.25311 21.1467C4.20005 21.0679 4.15339 20.9854 4.11355 20.8999C3.71619 20.0475 4.38326 18.9885 5.77778 17"
+                                            d="M7 8.37931H11.5M11.5 8.37931H14.5M11.5 8.37931V7M17 8.37931H14.5M14.5 8.37931C13.9725 10.2656 12.8679 12.0487 11.6071 13.6158M11.6071 13.6158C10.5631 14.9134 9.41205 16.0628 8.39286 17M11.6071 13.6158C10.9643 12.8621 10.0643 11.6426 9.80714 11.0909M11.6071 13.6158L13.5357 15.6207"
                                             stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
                                             stroke-linejoin="round" />
-                                        <path
-                                            d="M13.2574 17.4936C12.9201 17.8184 12.4693 18 12.0002 18C11.531 18 11.0802 17.8184 10.7429 17.4936C7.6543 14.5008 3.51519 11.1575 5.53371 6.30373C6.6251 3.67932 9.24494 2 12.0002 2C14.7554 2 17.3752 3.67933 18.4666 6.30373C20.4826 11.1514 16.3536 14.5111 13.2574 17.4936Z"
-                                            stroke="#141B34" stroke-width="1.5" />
                                     </svg>
+
 
                                     <!-- key name -->
                                     <span class="my-fw-bold my-fs-lg">Departure City - </span>
@@ -5666,18 +5770,35 @@
                                         <path
                                             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                             stroke="#141B34" stroke-width="1.5" />
-                                        <path
-                                            d="M7 8.37931H11.5M11.5 8.37931H14.5M11.5 8.37931V7M17 8.37931H14.5M14.5 8.37931C13.9725 10.2656 12.8679 12.0487 11.6071 13.6158M11.6071 13.6158C10.5631 14.9134 9.41205 16.0628 8.39286 17M11.6071 13.6158C10.9643 12.8621 10.0643 11.6426 9.80714 11.0909M11.6071 13.6158L13.5357 15.6207"
-                                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                        <path d="M9.5 9.5L12.9999 12.9996M16 8L11 13" stroke="#141B34"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
 
+
                                     <!-- key name -->
-                                    <span class="my-fw-bold my-fs-lg">Departure City - </span>
+                                    <span class="my-fw-bold my-fs-lg">Duration- </span>
                                 </div>
 
                                 <!-- value -->
-                                <div class="value my-fs-lg my-text-quaternary"> English, Spanish</div>
+                                <div class="value my-fs-lg my-text-quaternary"> 2 Days</div>
+
+                                <!-- tooltip here -->
+                                <div class="my-tooltip my-flex-center">
+                                    <!-- icon -->
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.9987 14.6663C11.6806 14.6663 14.6654 11.6816 14.6654 7.99967C14.6654 4.31778 11.6806 1.33301 7.9987 1.33301C4.3168 1.33301 1.33203 4.31778 1.33203 7.99967C1.33203 11.6816 4.3168 14.6663 7.9987 14.6663Z"
+                                            stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M8 5.33301V8.33301" stroke="#717680" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M8 10.6592V10.6692" stroke="#717680" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <div class="show-text">hi razzak hi razzak (Tooltip Info Here)</div>
+                                </div>
+
                             </div>
 
                             <!--======= single item ======-->
@@ -5822,7 +5943,7 @@
             =======||   Package Information Section Start Here    ||======
             ==========================================================
             -->
-            <section class="section-main">
+            <section class="section-main" aria-labelledby="package-info-heading">
                 <div class="package-information">
                     <div class="my-container">
                         <div class="package-information-wrap">
@@ -5830,16 +5951,19 @@
                             <div class="information-left my-flex-column my-gap-25">
 
                                 <!--===============|| Highlights ||================-->
-                                <div>
-                                    <h2 class="section-title">Highlights of the Tour
+                                <div itemscope itemtype="https://schema.org/ItemList">
+                                    <h2 class="section-title" itemscope id="package-info-heading">
+                                        Highlights of the Tour
                                     </h2>
 
                                     <!--=============== Information Left Side  ================-->
-                                    <div class="highlights-items my-mt-10">
-                                        <ul class="my-flex-column my-gap-10">
+                                    <div class=" highlights-items my-mt-10">
+                                        <ul class="my-flex-column my-gap-10" role="list"
+                                            aria-label="List of tour highlights">
 
                                             <!-- single item -->
-                                            <li class="my-d-flex my-gap-4 my-align-start">
+                                            <li class="my-d-flex my-gap-4 my-align-start" itemprop="itemListElement"
+                                                itemscope itemtype="https://schema.org/ListItem">
 
                                                 <!-- icon -->
                                                 <div class="icon my-flex-center ">
@@ -5848,12 +5972,13 @@
                                                 </div>
 
                                                 <!-- information  -->
-                                                <div class="info flex-1 my-fs-xl">Explore the <strong
-                                                        class="my-text-primary">Grand
+                                                <div class="info flex-1 my-fs-xl" itemprop="description">Explore the
+                                                    <strong class="my-text-primary">Grand
                                                         Palace</strong> and <strong class="my-text-primary">Wat Phra
                                                         Kaew</strong> in
                                                     Bangkok,
-                                                    marvel at Thailand’s rich cultural heritage. </div>
+                                                    marvel at Thailand’s rich cultural heritage.
+                                                </div>
                                             </li>
 
                                             <!-- single item -->
@@ -5882,8 +6007,6 @@
                                                 <div class="icon my-flex-center ">
 
                                                     <img src="/static/images/icon-hig.png" alt="icon" loading="lazy">
-
-
                                                 </div>
 
                                                 <!-- information  -->
@@ -5894,6 +6017,7 @@
                                                     snorkelling.
                                                 </div>
                                             </li>
+
                                             <!-- single item -->
                                             <li class="my-d-flex my-gap-4 my-align-start">
 
@@ -5940,31 +6064,32 @@
                             </div>
 
                             <!--===============================|| Right Side  ||================================  -->
-                            <div class="price-card">
+                            <div class="price-card" itemscope itemtype="https://schema.org/TouristTrip"
+                                aria-label="Tour package pricing and booking">
                                 <div class="price-card-wrap my-flex-column">
 
-                                    <!-- Top Buttons Here -->
-                                    <div class="my-flex-center flex-1 my-grid-3 my-gap-6">
+                                    <div class="my-d-flex my-mt-10 my-gap-6">
                                         <!-- standard button -->
-                                        <button class="my-btn my-secondary-btn top-btn">
-                                            <span class="content">Standard</span>
+                                        <button class="my-btn my-secondary-btn top-btn" role="tab">
+                                            Standard
                                         </button>
                                         <!-- Premium button -->
-                                        <button class="my-btn my-primary-btn top-btn">
-                                            <span class="content">Premium</span>
+                                        <button class="my-btn my-primary-btn top-btn" role="tab">
+                                            Premium
                                         </button>
                                         <!-- Luxury button -->
-                                        <button class="my-btn my-primary-btn top-btn">
-                                            <span class="content">Luxury</span>
+                                        <button class="my-btn my-primary-btn top-btn" role="tab">
+                                            Luxury
                                         </button>
                                     </div>
-
 
                                     <!-- Price  -->
                                     <div class="price my-mt-2">
                                         <div class="my-text-quaternary my-fs-md"> From</div>
                                         <div class="my-d-flex my-mt-2 my-align-end">
-                                            <h4 class="price-text my-d-flex">US$ <span>999.00</span> <span>/</span></h4>
+                                            <h4 class="price-text my-d-flex">US$ <span itemprop="price">999.00</span>
+                                                <span>/</span>
+                                            </h4>
                                             <sup class="person">per person</sup>
                                         </div>
                                     </div>
@@ -6081,10 +6206,10 @@
                     <div class="p-sub-container">
 
                         <!--===============|| Package Summary ||================-->
-                        <div class="package-summery">
+                        <div class="package-summery" itemscope itemtype="https://schema.org/TouristTrip">
                             <div>
-                                <h2 class="section-title">Package Summary</h2>
-                                <p class="desc my-mt-10 my-fs-lg my-text-primary my-fw-noraml">
+                                <h2 class="section-title" itemprop="name">Package Summary</h2>
+                                <p class="desc my-mt-10 my-fs-lg my-text-primary my-fw-noraml" itemprop="description">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     Lorem
                                     Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -6099,8 +6224,9 @@
                                     <div class="my-flex-between">
 
                                         <!-- title -->
-                                        <h3 class="my-text-primary my-fs-xxl">Bangkok + Phuket + Phi Phi Islands most
-                                            Beautiful Places</h3>
+                                        <p class="my-text-primary my-fs-xxl" itemprop="name">Bangkok + Phuket + Phi Phi
+                                            Islands most
+                                            Beautiful Places</p>
 
                                         <div class="right-slider-arrows">
                                             <button class="prev" tabindex="0" aria-label="Previous slide"
@@ -6136,16 +6262,77 @@
 
                                 <!--============ Slider Here ========= -->
                                 <div
-                                    class="swiper my-mt-20 packageSummerySlider swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                    <div class="swiper-wrapper" id="swiper-wrapper-3ca108804c685ed5d"
-                                        aria-live="polite">
+                                    class="swiper my-mt-20 my-pb-15 packageSummerySlider swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                    <div class="swiper-wrapper" role="list" aria-label="List of destinations"
+                                        itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 
 
-                                        <div class="swiper-slide swiper-slide-active" <!-- single item -->
+                                        <div class="swiper-slide swiper-slide-active" role="listitem" itemprop="item"
+                                            itemscope itemtype="https://schema.org/Place">
+                                            <!-- single item -->
                                             <a href="#" class="item">
                                                 <div class="img-wrap">
                                                     <!-- image -->
                                                     <img src="/static/images/tour-category-bottom-right.jpg"
+                                                        alt="tour category" loading="lazy" itemprop="image">
+                                                </div>
+                                                <div class="item-content">
+                                                    <!-- name -->
+                                                    <h4 class="name" itemprop="name">Chiang Mia</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide swiper-slide-active" role="listitem">
+                                            <!-- single item -->
+                                            <a href="#" class="item">
+                                                <div class="img-wrap">
+                                                    <!-- image -->
+                                                    <img src="/static/images/hot-dest (2).jpg" alt="tour category"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <!-- name -->
+                                                    <h4 class="name">Chiang Mia</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="listitem">
+                                            <!-- single item -->
+                                            <a href="#" class="item">
+                                                <div class="img-wrap">
+                                                    <!-- image -->
+                                                    <img src="/static/images/hot-dest (1).jpg" alt="tour category"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <!-- name -->
+                                                    <h4 class="name">Chiang Mia</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide swiper-slide-active" role="listitem">
+                                            <!-- single item -->
+                                            <a href="#" class="item">
+                                                <div class="img-wrap">
+                                                    <!-- image -->
+                                                    <img src="/static/images/top-dest-right1.png" alt="tour category"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="item-content">
+                                                    <!-- name -->
+                                                    <h4 class="name">Chiang Mia</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="swiper-slide swiper-slide-active" role="listitem">
+                                            <!-- single item -->
+                                            <a href="#" class="item">
+                                                <div class="img-wrap">
+                                                    <!-- image -->
+                                                    <img src="/static/images/tour-category-bottom-left.jpg"
                                                         alt="tour category" loading="lazy">
                                                 </div>
                                                 <div class="item-content">
@@ -6155,103 +6342,6 @@
                                             </a>
                                         </div>
 
-                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
-                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
-                                            <!-- single item -->
-                                            <div class="category-item">
-                                                <div class="img-wrap">
-                                                    <img src="/static/images/tour-category-bottom-left.jpg"
-                                                        alt="tour category" loading="lazy">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h3 class="category-name">Couple Tour</h3>
-                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
-                                                        <p class="desc">Choose your destination travels -
-                                                            Service Provider
-                                                            Of
-                                                            International Tour
-                                                            Packages, Domestic Tour &amp; Family Tour Package In
-                                                            Tourgull.</p>
-                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
-                                                            <div class="content">Book Now</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
-                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
-                                            <!-- single item -->
-                                            <div class="category-item">
-                                                <div class="img-wrap">
-                                                    <img src="/static/images/tour-category-bottom-left.jpg"
-                                                        alt="tour category" loading="lazy">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h3 class="category-name">Couple Tour</h3>
-                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
-                                                        <p class="desc">Choose your destination travels -
-                                                            Service Provider
-                                                            Of
-                                                            International Tour
-                                                            Packages, Domestic Tour &amp; Family Tour Package In
-                                                            Tourgull.</p>
-                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
-                                                            <div class="content">Book Now</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
-                                            data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;">
-                                            <!-- single item -->
-                                            <div class="category-item">
-                                                <div class="img-wrap">
-                                                    <img src="/static/images/tour-category-bottom-left.jpg"
-                                                        alt="tour category" loading="lazy">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h3 class="category-name">Couple Tour</h3>
-                                                    <div class="my-mt-0 my-d-flex my-align-end flex-wrap my-gap-10">
-                                                        <p class="desc">Choose your destination travels -
-                                                            Service Provider
-                                                            Of
-                                                            International Tour
-                                                            Packages, Domestic Tour &amp; Family Tour Package In
-                                                            Tourgull.</p>
-                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
-                                                            <div class="content">Book Now</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide" role="group" aria-label="3 / 3"
-                                            data-swiper-slide-index="2" style="width: 335px; margin-right: 20px;">
-                                            <!-- single item -->
-                                            <div class="category-item">
-                                                <div class="img-wrap">
-                                                    <img src="/static/images/tour-category-right-top.jpg"
-                                                        alt="tour category" loading="lazy">
-                                                </div>
-                                                <div class="item-content">
-                                                    <h3 class="category-name">Couple Tour</h3>
-                                                    <div class="my-mt-0 my-d-flex my-align-end my-gap-10">
-                                                        <p class="desc">Choose your destination travels -
-                                                            Service Provider
-                                                            Of
-                                                            International Tour
-                                                            Packages, Domestic Tour &amp; Family Tour Package In
-                                                            Tourgull.</p>
-                                                        <a href="#" class="my-btn my-cart-btn my-primary-btn">
-                                                            <div class="content">Book Now</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
 
@@ -6262,7 +6352,49 @@
                 </div>
             </section>
 
+
+
+
+            <!--
+            ==============================================================
+            =======||   Day by day Itineary Section Start Here    ||======
+            ==============================================================
+            -->
+
+            <section class="day-by-day">
+                <div class="my-container">
+                    <div class="p-sub-container">
+                        <div class="main-head">
+                            <div class="my-flex-between">
+                                <h2 class="section-title">Day-by-Day Itinerary</h2>
+                                <button class="expand-all-btn">Expand all</button>
+                            </div>
+
+                            <div>
+                                <div class="my-d-flex my-mt-10 my-gap-6">
+                                    <!-- standard button -->
+                                    <button class="my-btn my-secondary-btn top-btn" role="tab">
+                                        Standard
+                                    </button>
+                                    <!-- Premium button -->
+                                    <button class="my-btn my-primary-btn top-btn" role="tab">
+                                        Premium
+                                    </button>
+                                    <!-- Luxury button -->
+                                    <button class="my-btn my-primary-btn top-btn" role="tab">
+                                        Luxury
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+
+
+
 
 
 
@@ -6700,11 +6832,18 @@
 
         <script>
 
-            //===========  Top Category  Slider  ===========
+            //===========  Package Summery  Slider  ===========
             const categorySlider = new Swiper(".packageSummerySlider", {
                 slidesPerView: 2,
                 spaceBetween: 16,
                 loop: true,
+                speed: 1000,
+
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
 
                 breakpoints: {
                     320: { slidesPerView: 1 },
@@ -6716,6 +6855,28 @@
                 navigation: {
                     nextEl: ".package-summery .next",
                     prevEl: ".package-summery .prev",
+                }
+            });
+
+
+            //===========  Review  Slider  ===========
+            const reviewSlider = new Swiper(".reviewSlider", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                speed: 2000,
+
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    576: { slidesPerView: 1 },
+                    768: { slidesPerView: 1 },
+                    992: { slidesPerView: 1 },
                 }
             });
         </script>
