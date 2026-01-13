@@ -494,7 +494,6 @@
     color: var(--my-text-tertiary);
 }
 
-
 /*===============  itenary-Car ================*/
 
 .itenary-car .content {
@@ -666,4 +665,53 @@
 
 .day-item .activity-body .wrap {
     margin-top: 8px;
+}
+
+
+
+
+
+
+/* stayin-similar */
+.stayin-similar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+
+}
+
+.stayin-similar .stayin-slider {
+    width: 70%;
+}
+
+.stayin-similar .similar-stayin {
+    width: 30%;
+}
+
+
+.similar-stayin {
+    background-color: var(--my-white);
+    padding: 8px 4px 4px 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--my-border-secondary);
+}
+
+.similar-stayin .right {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    padding: 8px;
+    border-radius: var(--radius-md);
+}
+
+.similar-stayin .right .text {
+    border-radius: var(--radius-sm);
+    border: 1px dashed var(--my-white);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
 }
