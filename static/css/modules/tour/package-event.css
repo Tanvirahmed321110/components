@@ -378,6 +378,7 @@
     border-image-source: linear-gradient(86.4deg, rgba(0, 0, 0, 0.2) 0%, rgba(102, 102, 102, 0.2) 99.43%);
     border: 1px solid #66666635;
     width: fit-content;
+    align-items: stretch;
 }
 
 .card .title {
@@ -388,7 +389,10 @@
 }
 
 .card .card-img {
-    width: 212px;
+    display: flex;
+    border-radius: 8px;
+    margin: 8px;
+    max-width: 350px;
 }
 
 .card-text {
@@ -396,7 +400,7 @@
 }
 
 .card .type {
-    font-size: var(--fs-md);
+    font-size: var(--fs-xs);
 }
 
 .card .type .key {
@@ -427,9 +431,54 @@
 
 /* itenary-car */
 .itenary-car .content {
-    padding: 21px 18px 20px 14px;
+    padding: 21px 18px 20px 18px;
 }
 
+.itenary-car .car-others-info .item {
+    background-color: #E0ECFC;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.itenary-car .car-others-info .key {
+    padding: 4px 6px;
+}
+
+.itenary-car .car-others-info .value {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    width: 24px;
+    height: 26px;
+    border-radius: 4px;
+}
+
+.itenary-car .card-img {
+    /* width: 300px; */
+}
+
+.card .booking-info ul {
+    list-style: disc;
+    padding-left: 32px;
+}
+
+.card .booking-info li {
+    font-size: var(--fs-low);
+    padding-left: 0;
+}
+
+.card .view-button {
+    color: var(--my-secondary-color);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-600);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.card .view-button:hover {
+    color: var(--my-primary-color);
+}
 
 .day-by-day .days {
     position: relative;
@@ -451,6 +500,8 @@
     border: 2px dashed var(--my-secondary-color);
     height: calc(100% - 40px);
 }
+
+
 
 .day-by-day .day-head {
     cursor: pointer;
@@ -515,6 +566,8 @@
     border: 2px dashed var(--my-secondary-color);
     height: calc(100% - 40px);
 }
+
+
 
 .day-item .activity .activity-icon {
     width: 34px;

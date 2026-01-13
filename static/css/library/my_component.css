@@ -74,21 +74,24 @@
 }
 
 .tooltip-text {
+    display: block;
     position: absolute;
     background: var(--my-primary-color);
     color: var(--my-white);
-    padding: 12px 18px;
+    padding: 12px 12px;
     border-radius: 8px;
-    font-size: 14px;
-    width: 220px;
+    font-size: var(--fs-xs);
+    width: 180px;
+    max-width: 240px;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    z-index: 100;
+    z-index: 12;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .tooltip-text::after {
