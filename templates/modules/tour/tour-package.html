@@ -6369,7 +6369,7 @@
                         <div class="main-head">
                             <div class="my-flex-between">
                                 <h2 class="section-title">Day-by-Day Itinerary</h2>
-                                <button class="expand-all-btn">Expand all</button>
+                                <button class="expand-all-btn" id="exapnd-all-btn">Expand all</button>
                             </div>
 
                             <div>
@@ -6390,40 +6390,449 @@
                             </div>
                         </div>
 
-                        <!--==========================|| Body Here ||============================= -->
-                        <div class="itinerary-body my-mt-16">
-                            <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati iure, accusamus
-                                impedit praesentium commodi nostrum officia aliquid ratione quo et ducimus deserunt
-                                quibusdam laborum magni facilis quam vel eos.</ul>
+                        <!--==========================================|| Body Here ||======================================= -->
+                        <div class="itinerary-body">
+                            <div class="days">
 
+                                <!--========================||  single day item  ||==========================-->
+                                <div class="day-item active">
 
-                            <!--============ Itenary Car =============-->
-                            <div class="itenary-car card">
-                                <!-- Content -->
-                                <div class="content">
-                                    <!-- title -->
-                                    <div class="title">Rent a Car</div>
+                                    <!--========================= Day Header ======================= -->
+                                    <div class="day-head my-flex-between my-gap-10">
 
-                                    <!-- Rating -->
-                                    <div class="rating my-mt-4 my-d-flex my-gap-2">
-                                        <span>*</span>
-                                        <span class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
-                                        <div class="card-text my-fs-xs">
-                                            <span>rating</span>
-                                            <span>(very good service)</span>
+                                        <!-- day head left -->
+                                        <div class="left my-d-flex my-align-center my-gap-8">
+                                            <div class="left-icon my-flex-center">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13.3307 1.22607V4.55941M6.66406 1.22607V4.55941"
+                                                        stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10.8333 2.89209H9.16667C6.02397 2.89209 4.45262 2.89209 3.47631 3.8684C2.5 4.84471 2.5 6.41606 2.5 9.55876V11.2254C2.5 14.3681 2.5 15.9395 3.47631 16.9158C4.45262 17.8921 6.02397 17.8921 9.16667 17.8921H10.8333C13.976 17.8921 15.5474 17.8921 16.5237 16.9158C17.5 15.9395 17.5 14.3681 17.5 11.2254V9.55876C17.5 6.41606 17.5 4.84471 16.5237 3.8684C15.5474 2.89209 13.976 2.89209 10.8333 2.89209Z"
+                                                        stroke="white" stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.5 7.89209H17.5" stroke="white" stroke-width="1.25"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M9.99365 11.2261H10.0011M9.99365 14.5594H10.0011M13.3232 11.2261H13.3307M6.66406 11.2261H6.67154M6.66406 14.5594H6.67154"
+                                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+
+                                            <div
+                                                class="day-name my-fs-xl my-text-primary my-fw-bold my-d-flex my-align-center my-gap-2">
+                                                <span>Day 1</span>: <span> Arrive in Bangkok</span>
+                                            </div>
+                                        </div>
+
+                                        <!--Day Head Right -->
+                                        <div class="right">
+
+                                            <!-- arrow icon -->
+                                            <button class="arrow-icon">
+                                                <svg width="16" height="9" viewBox="0 0 16 9" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.625 7.62494C0.625 7.62494 5.78038 0.624998 7.625 0.624998C9.46973 0.624998 14.625 7.625 14.625 7.625"
+                                                        stroke="#FC5A31" stroke-width="1.25" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <!-- Type -->
-                                    <div class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
-                                        <div class="key  my-fs-md my-text-primary">Car Type:</div>
-                                        <div class="value">Sedan Car</div>
-                                    </div>
-                                </div>
 
-                                <!-- right image -->
-                                <div class="img">
-                                    <img class="card-img" src="d" alt="">
+                                    <!--=======================  Day Content  =======================-->
+                                    <div class="day-content">
+                                        <div class="activities">
+
+                                            <!--************  single  activity  item  ************-->
+                                            <div class="activity">
+
+                                                <!-- activity head here -->
+                                                <div class="activity-head my-d-flex my-align-center my-gap-5">
+
+                                                    <!-- activity icon -->
+                                                    <div class="activity-icon my-flex-center">
+                                                        i
+                                                    </div>
+
+                                                    <div class="my-d-flex my-align-center my-gap-3">
+                                                        <!-- activity name -->
+                                                        <div class="activity-name">
+                                                            <strong class="key">Transportation:</strong>
+                                                            <span>Home to Airport Drop</span>
+                                                        </div>
+
+                                                        <!-- Tooltiop Icon -->
+                                                        <div class="my-tooltip">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="7" cy="7" r="7" fill="#F9CB12"
+                                                                    fill-opacity="0.9" />
+                                                                <path
+                                                                    d="M8.46653 3.81283C8.3817 3.90699 8.28525 3.98476 8.17727 4.04617C8.0693 4.10349 7.95549 4.14033 7.83595 4.15669C7.71641 4.16897 7.6026 4.14849 7.49463 4.09529C7.3905 4.04207 7.29988 3.96634 7.22273 3.8681C7.0569 3.66342 6.97397 3.45669 6.97397 3.24792C6.97397 3.03915 7.00484 2.88359 7.06653 2.78125C7.13211 2.67482 7.2131 2.58885 7.3095 2.52336C7.49463 2.39646 7.66818 2.33301 7.83017 2.33301C7.99599 2.33301 8.12326 2.34529 8.21198 2.36985C8.30455 2.39441 8.38938 2.43535 8.46653 2.49266C8.65549 2.62774 8.75 2.79353 8.75 2.99003C8.75 3.18242 8.72302 3.34412 8.66901 3.47511C8.61889 3.60201 8.55136 3.71459 8.46653 3.81283ZM7.28058 10.4567C7.38087 10.4567 7.43099 10.5263 7.43099 10.6655C7.43099 10.8497 7.35194 11.04 7.1938 11.2365C6.9624 11.5231 6.65194 11.6663 6.2624 11.6663C5.815 11.6663 5.50839 11.4739 5.34256 11.0891C5.28087 10.9541 5.25 10.7903 5.25 10.5979C5.25 10.4055 5.28087 10.1927 5.34256 9.95932C5.40814 9.72191 5.48719 9.47424 5.57975 9.21634C5.67616 8.95437 5.78029 8.69033 5.89215 8.42424L6.19876 7.65055C6.42244 7.07336 6.5343 6.69266 6.5343 6.50845C6.5343 6.32424 6.515 6.20349 6.47645 6.14617C6.44174 6.08476 6.40318 6.0377 6.36074 6.00494L6.24504 5.91897C6.20649 5.89033 6.18719 5.84121 6.18719 5.7716C6.18719 5.69792 6.21227 5.62831 6.2624 5.56283C6.31641 5.49735 6.38583 5.44003 6.47066 5.3909C6.64421 5.29673 6.84669 5.24967 7.0781 5.24967C7.64504 5.24967 7.92851 5.40726 7.92851 5.72248C7.92851 6.0909 7.83789 6.51252 7.65661 6.98739C7.47533 7.45814 7.32107 7.83884 7.1938 8.1295L6.84669 8.97687C6.59215 9.59911 6.46488 10.0474 6.46488 10.3216C6.46488 10.5017 6.54971 10.5918 6.71942 10.5918C6.88525 10.5918 7.01062 10.5693 7.09545 10.5242C7.18029 10.4792 7.24203 10.4567 7.28058 10.4567Z"
+                                                                    fill="white" />
+                                                            </svg>
+
+
+
+                                                            <!-- Tooltip Text -->
+                                                            <div class="show-text">
+                                                                Hi Razzak Tooltiop Information here
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- activity body here -->
+                                                <div class="activity-body">
+                                                    <!--============ Itenary Car =============-->
+                                                    <div class="wrap">
+                                                        <div class="itenary-car  card">
+                                                            <!-- Content -->
+                                                            <div class="content">
+                                                                <!-- title -->
+                                                                <div class="title">Rent a Car</div>
+
+                                                                <!-- Rating -->
+                                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                                    <span>*</span>
+                                                                    <span
+                                                                        class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                                    <div class="card-text my-fs-xs">
+                                                                        <span>rating</span>
+                                                                        <span>(very good service)</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Type -->
+                                                                <div
+                                                                    class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                                    <div class="key  my-fs-md my-text-primary">Car Type:
+                                                                    </div>
+                                                                    <div class="value">Sedan Car</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- right image -->
+                                                            <div class="img">
+                                                                <img class="card-img" src="d" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--************  single  activity  item  ************-->
+                                            <div class="activity">
+
+                                                <!-- activity head here -->
+                                                <div class="activity-head my-d-flex my-align-center my-gap-5">
+
+                                                    <!-- activity icon -->
+                                                    <div class="activity-icon my-flex-center">
+                                                        i
+                                                    </div>
+
+                                                    <div class="my-d-flex my-align-center my-gap-3">
+                                                        <!-- activity name -->
+                                                        <div class="activity-name">
+                                                            <strong class="key">Transportation:</strong>
+                                                            <span>Home to Airport Drop</span>
+                                                        </div>
+
+                                                        <!-- Tooltiop Icon -->
+                                                        <div class="my-tooltip">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="7" cy="7" r="7" fill="#F9CB12"
+                                                                    fill-opacity="0.9" />
+                                                                <path
+                                                                    d="M8.46653 3.81283C8.3817 3.90699 8.28525 3.98476 8.17727 4.04617C8.0693 4.10349 7.95549 4.14033 7.83595 4.15669C7.71641 4.16897 7.6026 4.14849 7.49463 4.09529C7.3905 4.04207 7.29988 3.96634 7.22273 3.8681C7.0569 3.66342 6.97397 3.45669 6.97397 3.24792C6.97397 3.03915 7.00484 2.88359 7.06653 2.78125C7.13211 2.67482 7.2131 2.58885 7.3095 2.52336C7.49463 2.39646 7.66818 2.33301 7.83017 2.33301C7.99599 2.33301 8.12326 2.34529 8.21198 2.36985C8.30455 2.39441 8.38938 2.43535 8.46653 2.49266C8.65549 2.62774 8.75 2.79353 8.75 2.99003C8.75 3.18242 8.72302 3.34412 8.66901 3.47511C8.61889 3.60201 8.55136 3.71459 8.46653 3.81283ZM7.28058 10.4567C7.38087 10.4567 7.43099 10.5263 7.43099 10.6655C7.43099 10.8497 7.35194 11.04 7.1938 11.2365C6.9624 11.5231 6.65194 11.6663 6.2624 11.6663C5.815 11.6663 5.50839 11.4739 5.34256 11.0891C5.28087 10.9541 5.25 10.7903 5.25 10.5979C5.25 10.4055 5.28087 10.1927 5.34256 9.95932C5.40814 9.72191 5.48719 9.47424 5.57975 9.21634C5.67616 8.95437 5.78029 8.69033 5.89215 8.42424L6.19876 7.65055C6.42244 7.07336 6.5343 6.69266 6.5343 6.50845C6.5343 6.32424 6.515 6.20349 6.47645 6.14617C6.44174 6.08476 6.40318 6.0377 6.36074 6.00494L6.24504 5.91897C6.20649 5.89033 6.18719 5.84121 6.18719 5.7716C6.18719 5.69792 6.21227 5.62831 6.2624 5.56283C6.31641 5.49735 6.38583 5.44003 6.47066 5.3909C6.64421 5.29673 6.84669 5.24967 7.0781 5.24967C7.64504 5.24967 7.92851 5.40726 7.92851 5.72248C7.92851 6.0909 7.83789 6.51252 7.65661 6.98739C7.47533 7.45814 7.32107 7.83884 7.1938 8.1295L6.84669 8.97687C6.59215 9.59911 6.46488 10.0474 6.46488 10.3216C6.46488 10.5017 6.54971 10.5918 6.71942 10.5918C6.88525 10.5918 7.01062 10.5693 7.09545 10.5242C7.18029 10.4792 7.24203 10.4567 7.28058 10.4567Z"
+                                                                    fill="white" />
+                                                            </svg>
+
+
+
+                                                            <!-- Tooltip Text -->
+                                                            <div class="show-text">
+                                                                Hi Razzak Tooltiop Information here
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- activity body here -->
+                                                <div class="activity-body">
+                                                    <!--============ Itenary Car =============-->
+                                                    <div class="wrap">
+                                                        <div class="itenary-car  card">
+                                                            <!-- Content -->
+                                                            <div class="content">
+                                                                <!-- title -->
+                                                                <div class="title">Rent a Car</div>
+
+                                                                <!-- Rating -->
+                                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                                    <span>*</span>
+                                                                    <span
+                                                                        class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                                    <div class="card-text my-fs-xs">
+                                                                        <span>rating</span>
+                                                                        <span>(very good service)</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Type -->
+                                                                <div
+                                                                    class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                                    <div class="key  my-fs-md my-text-primary">Car Type:
+                                                                    </div>
+                                                                    <div class="value">Sedan Car</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- right image -->
+                                                            <div class="img">
+                                                                <img class="card-img" src="d" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--************  single  activity  item  ************-->
+                                            <div class="activity">
+
+                                                <!-- activity head here -->
+                                                <div class="activity-head my-d-flex my-align-center my-gap-5">
+
+                                                    <!-- activity icon -->
+                                                    <div class="activity-icon my-flex-center">
+                                                        i
+                                                    </div>
+
+                                                    <div class="my-d-flex my-align-center my-gap-3">
+                                                        <!-- activity name -->
+                                                        <div class="activity-name">
+                                                            <strong class="key">Transportation:</strong>
+                                                            <span>Home to Airport Drop</span>
+                                                        </div>
+
+                                                        <!-- Tooltiop Icon -->
+                                                        <div class="my-tooltip">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="7" cy="7" r="7" fill="#F9CB12"
+                                                                    fill-opacity="0.9" />
+                                                                <path
+                                                                    d="M8.46653 3.81283C8.3817 3.90699 8.28525 3.98476 8.17727 4.04617C8.0693 4.10349 7.95549 4.14033 7.83595 4.15669C7.71641 4.16897 7.6026 4.14849 7.49463 4.09529C7.3905 4.04207 7.29988 3.96634 7.22273 3.8681C7.0569 3.66342 6.97397 3.45669 6.97397 3.24792C6.97397 3.03915 7.00484 2.88359 7.06653 2.78125C7.13211 2.67482 7.2131 2.58885 7.3095 2.52336C7.49463 2.39646 7.66818 2.33301 7.83017 2.33301C7.99599 2.33301 8.12326 2.34529 8.21198 2.36985C8.30455 2.39441 8.38938 2.43535 8.46653 2.49266C8.65549 2.62774 8.75 2.79353 8.75 2.99003C8.75 3.18242 8.72302 3.34412 8.66901 3.47511C8.61889 3.60201 8.55136 3.71459 8.46653 3.81283ZM7.28058 10.4567C7.38087 10.4567 7.43099 10.5263 7.43099 10.6655C7.43099 10.8497 7.35194 11.04 7.1938 11.2365C6.9624 11.5231 6.65194 11.6663 6.2624 11.6663C5.815 11.6663 5.50839 11.4739 5.34256 11.0891C5.28087 10.9541 5.25 10.7903 5.25 10.5979C5.25 10.4055 5.28087 10.1927 5.34256 9.95932C5.40814 9.72191 5.48719 9.47424 5.57975 9.21634C5.67616 8.95437 5.78029 8.69033 5.89215 8.42424L6.19876 7.65055C6.42244 7.07336 6.5343 6.69266 6.5343 6.50845C6.5343 6.32424 6.515 6.20349 6.47645 6.14617C6.44174 6.08476 6.40318 6.0377 6.36074 6.00494L6.24504 5.91897C6.20649 5.89033 6.18719 5.84121 6.18719 5.7716C6.18719 5.69792 6.21227 5.62831 6.2624 5.56283C6.31641 5.49735 6.38583 5.44003 6.47066 5.3909C6.64421 5.29673 6.84669 5.24967 7.0781 5.24967C7.64504 5.24967 7.92851 5.40726 7.92851 5.72248C7.92851 6.0909 7.83789 6.51252 7.65661 6.98739C7.47533 7.45814 7.32107 7.83884 7.1938 8.1295L6.84669 8.97687C6.59215 9.59911 6.46488 10.0474 6.46488 10.3216C6.46488 10.5017 6.54971 10.5918 6.71942 10.5918C6.88525 10.5918 7.01062 10.5693 7.09545 10.5242C7.18029 10.4792 7.24203 10.4567 7.28058 10.4567Z"
+                                                                    fill="white" />
+                                                            </svg>
+
+
+
+                                                            <!-- Tooltip Text -->
+                                                            <div class="show-text">
+                                                                Hi Razzak Tooltiop Information here
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- activity body here -->
+                                                <div class="activity-body">
+                                                    <!--============ Itenary Car =============-->
+                                                    <div class="wrap">
+                                                        <div class="itenary-car  card">
+                                                            <!-- Content -->
+                                                            <div class="content">
+                                                                <!-- title -->
+                                                                <div class="title">Rent a Car</div>
+
+                                                                <!-- Rating -->
+                                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                                    <span>*</span>
+                                                                    <span
+                                                                        class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                                    <div class="card-text my-fs-xs">
+                                                                        <span>rating</span>
+                                                                        <span>(very good service)</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Type -->
+                                                                <div
+                                                                    class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                                    <div class="key  my-fs-md my-text-primary">Car Type:
+                                                                    </div>
+                                                                    <div class="value">Sedan Car</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- right image -->
+                                                            <div class="img">
+                                                                <img class="card-img" src="d" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <!--============ Itenary Car =============-->
+                                        <div class="itenary-car my-mt-4 card">
+                                            <!-- Content -->
+                                            <div class="content">
+                                                <!-- title -->
+                                                <div class="title">Rent a Car</div>
+
+                                                <!-- Rating -->
+                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                    <span>*</span>
+                                                    <span class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                    <div class="card-text my-fs-xs">
+                                                        <span>rating</span>
+                                                        <span>(very good service)</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Type -->
+                                                <div class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                    <div class="key  my-fs-md my-text-primary">Car Type:</div>
+                                                    <div class="value">Sedan Car</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- right image -->
+                                            <div class="img">
+                                                <img class="card-img" src="d" alt="">
+                                            </div>
+                                        </div>
+
+                                        <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati
+                                            iure,
+                                            accusamus
+                                            impedit praesentium commodi nostrum officia aliquid ratione quo et ducimus
+                                            deserunt
+                                            quibusdam laborum magni facilis quam vel eos.</ul>
+
+
+                                        <!--============ Itenary Car =============-->
+                                        <div class="itenary-car my-mt-4 card">
+                                            <!-- Content -->
+                                            <div class="content">
+                                                <!-- title -->
+                                                <div class="title">Rent a Car</div>
+
+                                                <!-- Rating -->
+                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                    <span>*</span>
+                                                    <span class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                    <div class="card-text my-fs-xs">
+                                                        <span>rating</span>
+                                                        <span>(very good service)</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Type -->
+                                                <div class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                    <div class="key  my-fs-md my-text-primary">Car Type:</div>
+                                                    <div class="value">Sedan Car</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- right image -->
+                                            <div class="img">
+                                                <img class="card-img" src="d" alt="">
+                                            </div>
+                                        </div>
+                                        <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati
+                                            iure,
+                                            accusamus
+                                            impedit praesentium commodi nostrum officia aliquid ratione quo et ducimus
+                                            deserunt
+                                            quibusdam laborum magni facilis quam vel eos.</ul>
+
+
+                                        <!--============ Itenary Car =============-->
+                                        <div class="itenary-car my-mt-4 card">
+                                            <!-- Content -->
+                                            <div class="content">
+                                                <!-- title -->
+                                                <div class="title">Rent a Car</div>
+
+                                                <!-- Rating -->
+                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                    <span>*</span>
+                                                    <span class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                    <div class="card-text my-fs-xs">
+                                                        <span>rating</span>
+                                                        <span>(very good service)</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Type -->
+                                                <div class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                    <div class="key  my-fs-md my-text-primary">Car Type:</div>
+                                                    <div class="value">Sedan Car</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- right image -->
+                                            <div class="img">
+                                                <img class="card-img" src="d" alt="">
+                                            </div>
+                                        </div>
+                                        <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati
+                                            iure,
+                                            accusamus
+                                            impedit praesentium commodi nostrum officia aliquid ratione quo et ducimus
+                                            deserunt
+                                            quibusdam laborum magni facilis quam vel eos.</ul>
+
+
+                                        <!--============ Itenary Car =============-->
+                                        <div class="itenary-car my-mt-4 card">
+                                            <!-- Content -->
+                                            <div class="content">
+                                                <!-- title -->
+                                                <div class="title">Rent a Car</div>
+
+                                                <!-- Rating -->
+                                                <div class="rating my-mt-4 my-d-flex my-gap-2">
+                                                    <span>*</span>
+                                                    <span class="my-text-rating my-fw-bold my-fs-xs">4.9</span>
+                                                    <div class="card-text my-fs-xs">
+                                                        <span>rating</span>
+                                                        <span>(very good service)</span>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Type -->
+                                                <div class="type my-d-flex my-gap-2 my-align-center my-fw-bold">
+                                                    <div class="key  my-fs-md my-text-primary">Car Type:</div>
+                                                    <div class="value">Sedan Car</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- right image -->
+                                            <div class="img">
+                                                <img class="card-img" src="d" alt="">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -6869,57 +7278,8 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
+        <script src="/static/js/modules/tour/tour_package.js"></script>
 
-        <script>
-
-            //===========  Package Summery  Slider  ===========
-            const categorySlider = new Swiper(".packageSummerySlider", {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                loop: true,
-                speed: 1000,
-
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-
-                breakpoints: {
-                    320: { slidesPerView: 1 },
-                    576: { slidesPerView: 1.5 },
-                    768: { slidesPerView: 1 },
-                    992: { slidesPerView: 4 },
-                },
-
-                navigation: {
-                    nextEl: ".package-summery .next",
-                    prevEl: ".package-summery .prev",
-                }
-            });
-
-
-            //===========  Review  Slider  ===========
-            const reviewSlider = new Swiper(".reviewSlider", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                speed: 2000,
-
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-
-                breakpoints: {
-                    320: { slidesPerView: 1 },
-                    576: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    992: { slidesPerView: 1 },
-                }
-            });
-        </script>
 
     </body>
 

@@ -1,7 +1,15 @@
+const st = [3, 34, 5, 5, 5]
+function getMax(arr) {
+    let maxx = st[0]
 
-let nam = 'Tanvir ahmed'
-let update = nam[nam.length - 1]
+    for (const item of arr) {
+        if (item > maxx) {
+            maxx = item
+        }
+    }
 
-update = 'D'
-console.log(update)
-console.log(nam)
+    return maxx
+}
+
+const check = getMax(st)
+console.log(check)

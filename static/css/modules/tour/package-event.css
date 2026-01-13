@@ -420,13 +420,130 @@
 }
 
 .itinerary-body {
-    padding: 50px 24px;
     box-shadow: var(--n-shadow-2);
-
+    margin-top: 32px;
     border: 1px solid var(--white-20);
 }
 
 /* itenary-car */
 .itenary-car .content {
     padding: 21px 18px 20px 14px;
+}
+
+
+.day-by-day .days {
+    position: relative;
+    padding: 0 24px;
+    padding-right: 12px;
+}
+
+.day-by-day .day-item {
+    margin-top: 32px;
+    position: relative;
+    user-select: none;
+}
+
+.day-by-day .day-item::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 40px;
+    border: 2px dashed var(--my-secondary-color);
+    height: calc(100% - 40px);
+}
+
+.day-by-day .day-head {
+    cursor: pointer;
+}
+
+.day-by-day .day-head .day-name {
+    transition: .25s ease;
+    user-select: none;
+}
+
+.day-by-day .day-head:hover .day-name {
+    color: var(--my-secondary-color);
+}
+
+.day-by-day .day-head .left-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    background-color: var(--my-secondary-color);
+}
+
+
+/* day content */
+.day-by-day .day-content {
+    padding: 0 50px;
+    margin: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, opacity 1.1s ease-in-out;
+    opacity: 0;
+}
+
+.day-by-day .day-item.active .day-content {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.day-item .arrow-icon svg {
+    transition: .8s ease-in-out;
+}
+
+.day-item.active .arrow-icon svg {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+/* activity */
+.day-item .activity {
+    margin-top: 12px;
+    position: relative;
+}
+
+.day-by-day .activity::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    border: 2px dashed var(--my-secondary-color);
+    height: calc(100% - 40px);
+}
+
+.day-item .activity .activity-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-round);
+    background-color: #D1EFFF;
+    box-shadow: var(--shadow-all-md);
+    box-shadow:
+        0px 2px 4px 2px rgba(0, 0, 0, 0.1),
+        0px 5px 5px 0px rgba(0, 0, 0, 0.09),
+        0px 10px 4px 0px rgba(0, 0, 0, 0.05),
+        0px 10px 8px 0px rgba(0, 0, 0, 0.01),
+        0px 20px 9px 0px rgba(0, 0, 0, 0);
+}
+
+.day-item .activity-name {
+    color: var(--my-text-quaternary);
+    font-size: var(--fs-md);
+}
+
+.day-item .activity-name .key {
+    color: var(--my-text-primary);
+}
+
+.day-item .activity-body {
+    padding-left: 44px;
+    position: relative;
+}
+
+.day-item .activity-body .wrap {
+    margin-top: 8px;
 }

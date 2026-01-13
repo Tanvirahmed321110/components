@@ -4,293 +4,52 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>December 2025 & January 2026 Calendar</title>
+        <title>Tooltip Animation 1</title>
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-
             body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 min-height: 100vh;
-                background-color: #f5f5f7;
-                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
             .container {
-                width: 340px;
-                background-color: white;
-                border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                overflow: hidden;
+                background: white;
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             }
 
-            .calendar {
-                padding: 20px;
-            }
 
-            .calendar:first-child {
-                border-bottom: 1px solid #eaeaea;
-            }
 
-            .month-year {
-                font-size: 18px;
-                font-weight: 600;
-                color: #1d1d1f;
-                margin-bottom: 16px;
+            /* Title */
+            h2 {
+                color: #333;
+                margin-bottom: 30px;
                 text-align: center;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            thead th {
-                font-size: 12px;
-                font-weight: 500;
-                color: #86868b;
-                padding-bottom: 8px;
-                text-align: center;
-            }
-
-            tbody td {
-                text-align: center;
-                padding: 8px 0;
-                font-size: 14px;
-                color: #1d1d1f;
-                font-weight: 400;
-            }
-
-            tbody td.empty {
-                color: transparent;
-            }
-
-            .separator {
-                height: 1px;
-                background-color: #eaeaea;
-                margin: 0 20px;
-            }
-
-            .apply-button {
-                display: block;
-                width: 100%;
-                padding: 16px;
-                background-color: #007aff;
-                color: white;
-                border: none;
-                font-size: 16px;
-                font-weight: 500;
-                cursor: pointer;
-                transition: background-color 0.2s;
-            }
-
-            .apply-button:hover {
-                background-color: #0056cc;
-            }
-
-            @media (max-width: 380px) {
-                .container {
-                    width: 100%;
-                    max-width: 340px;
-                }
             }
         </style>
     </head>
 
     <body>
         <div class="container">
-            <div class="calendar">
-                <div class="month-year">December 2025</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Su</th>
-                            <th>Mo</th>
-                            <th>Tu</th>
-                            <th>We</th>
-                            <th>Th</th>
-                            <th>Fr</th>
-                            <th>Sa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="empty"></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>20</td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                            <td>25</td>
-                            <td>26</td>
-                            <td>27</td>
-                        </tr>
-                        <tr>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2>Example 1: Fade In + Slide Up</h2>
+            <div class="tooltip">
+                <div class="tooltip-icon">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="7" fill="#F9CB12" fill-opacity="0.9" />
+                        <path
+                            d="M8.46653 3.81283C8.3817 3.90699 8.28525 3.98476 8.17727 4.04617C8.0693 4.10349 7.95549 4.14033 7.83595 4.15669C7.71641 4.16897 7.6026 4.14849 7.49463 4.09529C7.3905 4.04207 7.29988 3.96634 7.22273 3.8681C7.0569 3.66342 6.97397 3.45669 6.97397 3.24792C6.97397 3.03915 7.00484 2.88359 7.06653 2.78125C7.13211 2.67482 7.2131 2.58885 7.3095 2.52336C7.49463 2.39646 7.66818 2.33301 7.83017 2.33301C7.99599 2.33301 8.12326 2.34529 8.21198 2.36985C8.30455 2.39441 8.38938 2.43535 8.46653 2.49266C8.65549 2.62774 8.75 2.79353 8.75 2.99003C8.75 3.18242 8.72302 3.34412 8.66901 3.47511C8.61889 3.60201 8.55136 3.71459 8.46653 3.81283ZM7.28058 10.4567C7.38087 10.4567 7.43099 10.5263 7.43099 10.6655C7.43099 10.8497 7.35194 11.04 7.1938 11.2365C6.9624 11.5231 6.65194 11.6663 6.2624 11.6663C5.815 11.6663 5.50839 11.4739 5.34256 11.0891C5.28087 10.9541 5.25 10.7903 5.25 10.5979C5.25 10.4055 5.28087 10.1927 5.34256 9.95932C5.40814 9.72191 5.48719 9.47424 5.57975 9.21634C5.67616 8.95437 5.78029 8.69033 5.89215 8.42424L6.19876 7.65055C6.42244 7.07336 6.5343 6.69266 6.5343 6.50845C6.5343 6.32424 6.515 6.20349 6.47645 6.14617C6.44174 6.08476 6.40318 6.0377 6.36074 6.00494L6.24504 5.91897C6.20649 5.89033 6.18719 5.84121 6.18719 5.7716C6.18719 5.69792 6.21227 5.62831 6.2624 5.56283C6.31641 5.49735 6.38583 5.44003 6.47066 5.3909C6.64421 5.29673 6.84669 5.24967 7.0781 5.24967C7.64504 5.24967 7.92851 5.40726 7.92851 5.72248C7.92851 6.0909 7.83789 6.51252 7.65661 6.98739C7.47533 7.45814 7.32107 7.83884 7.1938 8.1295L6.84669 8.97687C6.59215 9.59911 6.46488 10.0474 6.46488 10.3216C6.46488 10.5017 6.54971 10.5918 6.71942 10.5918C6.88525 10.5918 7.01062 10.5693 7.09545 10.5242C7.18029 10.4792 7.24203 10.4567 7.28058 10.4567Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="tooltip-text">
+                    Hi Razzak! This is a smooth fade in + slide up tooltip with bounce effect.
+                </div>
             </div>
-
-            <div class="separator"></div>
-
-            <div class="calendar">
-                <div class="month-year">January 2026</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Su</th>
-                            <th>Mo</th>
-                            <th>Tu</th>
-                            <th>We</th>
-                            <th>Th</th>
-                            <th>Fr</th>
-                            <th>Sa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                        </tr>
-                        <tr>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <td>25</td>
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <button class="apply-button">Apply</button>
         </div>
-
-        <script>
-            // Add today's date highlighting (optional feature)
-            document.addEventListener('DOMContentLoaded', function () {
-                // Get current date
-                const today = new Date();
-                const currentDay = today.getDate();
-                const currentMonth = today.getMonth(); // 0-indexed (0 = January)
-                const currentYear = today.getFullYear();
-
-                // Check if current month/year matches either calendar
-                const decemberCells = document.querySelectorAll('.calendar:first-child td');
-                const januaryCells = document.querySelectorAll('.calendar:last-child td');
-
-                // If current month is December 2025, highlight today
-                if (currentYear === 2025 && currentMonth === 11) {
-                    decemberCells.forEach(cell => {
-                        if (parseInt(cell.textContent) === currentDay) {
-                            cell.style.backgroundColor = '#007aff';
-                            cell.style.color = 'white';
-                            cell.style.borderRadius = '50%';
-                            cell.style.width = '24px';
-                            cell.style.height = '24px';
-                            cell.style.display = 'inline-flex';
-                            cell.style.alignItems = 'center';
-                            cell.style.justifyContent = 'center';
-                            cell.style.margin = '0 auto';
-                        }
-                    });
-                }
-
-                // If current month is January 2026, highlight today
-                if (currentYear === 2026 && currentMonth === 0) {
-                    januaryCells.forEach(cell => {
-                        if (parseInt(cell.textContent) === currentDay) {
-                            cell.style.backgroundColor = '#007aff';
-                            cell.style.color = 'white';
-                            cell.style.borderRadius = '50%';
-                            cell.style.width = '24px';
-                            cell.style.height = '24px';
-                            cell.style.display = 'inline-flex';
-                            cell.style.alignItems = 'center';
-                            cell.style.justifyContent = 'center';
-                            cell.style.margin = '0 auto';
-                        }
-                    });
-                }
-
-                // Add click event to Apply button
-                document.querySelector('.apply-button').addEventListener('click', function () {
-                    alert('Calendar applied! This is a demonstration of the Apply button functionality.');
-                });
-            });
-        </script>
     </body>
 
 </html>
