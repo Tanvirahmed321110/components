@@ -1,6 +1,6 @@
 //===========  Package Summery  Slider  ===========
 const categorySlider = new Swiper(".packageSummerySlider", {
-    slidesPerView: 2,
+    slidesPerView: 4,
     spaceBetween: 16,
     loop: true,
     speed: 2000,
@@ -47,8 +47,8 @@ const reviewSlider = new Swiper(".reviewSlider", {
 });
 
 
-//===========  Stayin  Slider  ===========
-const stayinSlider = new Swiper(".stayin-slider", {
+//===========  common slider 2  ===========
+const commonSlider2 = new Swiper(".common-slider-2", {
     slidesPerView: 2,
     spaceBetween: 8,
     loop: true,
@@ -69,8 +69,11 @@ const stayinSlider = new Swiper(".stayin-slider", {
 });
 
 
-//===========  Place  Slider  ===========
-const placeSlider = new Swiper(".place-sliders", {
+
+
+
+//===========  Common  Slider 3 ===========
+const commonSlider3 = new Swiper(".common-slider-3", {
     slidesPerView: 3,
     spaceBetween: 8,
     loop: true,

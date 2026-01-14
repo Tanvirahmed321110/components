@@ -616,6 +616,7 @@
     padding: 0 24px;
     padding-right: 20px;
     margin: 20px;
+    margin-top: 6px;
     max-height: 0;
     margin-right: 0;
     padding-right: 0;
@@ -644,9 +645,10 @@
 
 
 
-/* activity */
+
+/*===============  Activity Items ================*/
 .day-item .activity {
-    margin-top: 12px;
+    padding-top: 12px;
     position: relative;
 }
 
@@ -654,11 +656,14 @@
     content: '';
     position: absolute;
     left: 15px;
-    top: 40px;
+    top: 52px;
     border: 2px dashed var(--my-secondary-color);
     height: calc(100% - 40px);
 }
 
+.day-by-day .activity:last-child::after {
+    content: unset;
+}
 
 
 .day-item .activity .activity-icon {
@@ -687,10 +692,7 @@
 .day-item .activity-body {
     padding-left: 44px;
     position: relative;
-}
-
-.day-item .activity-body .wrap {
-    margin-top: 8px;
+    padding-top: 12px;
 }
 
 
@@ -698,6 +700,9 @@
 
 
 
+
+
+/*===============  Stayin Similar ================*/
 /* stayin-similar */
 .stayin-similar {
     display: flex;
@@ -748,7 +753,8 @@
 
 
 
-/* place-card */
+
+/*===============  Place Card ================*/
 .place-card {
     position: relative;
     border-radius: var(--radius-md);
@@ -758,6 +764,7 @@
 
 .place-card .img-wrap img {
     position: absolute;
+    height: 100%;
     inset: 0;
 }
 
@@ -817,7 +824,7 @@
 
 
 
-/* Activates */
+/*===============  activates card ================*/
 .activates-card {
     max-width: 600px;
     padding: 6px;
@@ -854,7 +861,8 @@
 
 
 
-/* sub-itenary */
+
+/*===============  Sub Itenary ================*/
 .sub-itenary .sub-itenary-items .icon {
     width: 32px;
     height: 32px;
@@ -880,4 +888,12 @@
 
 .sub-itenary .sub-itenary-items .item:last-child::after {
     content: unset;
+}
+
+
+
+/* train-card */
+.train-card img {
+    max-width: 300px;
+    height: 100%;
 }
