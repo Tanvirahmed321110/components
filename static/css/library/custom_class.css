@@ -2390,6 +2390,10 @@ tr {
     border: 1px solid var(--my-warring-200);
 }
 
+.text-linethrough {
+    text-decoration: line-through;
+}
+
 /*______  Word spacing _____*/
 .my-word-space-1 {
     word-spacing: 1px;
