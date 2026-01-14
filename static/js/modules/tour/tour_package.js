@@ -3,7 +3,7 @@ const categorySlider = new Swiper(".packageSummerySlider", {
     slidesPerView: 2,
     spaceBetween: 16,
     loop: true,
-    speed: 1000,
+    speed: 2000,
 
     autoplay: {
         delay: 3000,
@@ -43,6 +43,28 @@ const reviewSlider = new Swiper(".reviewSlider", {
         576: { slidesPerView: 1 },
         768: { slidesPerView: 1 },
         992: { slidesPerView: 1 },
+    }
+});
+
+
+//===========  Stayin  Slider  ===========
+const stayinSlider = new Swiper(".stayin-slider", {
+    slidesPerView: 2,
+    spaceBetween: 8,
+    loop: true,
+    speed: 2000,
+
+    autoplay: {
+        delay: 1200,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        992: { slidesPerView: 2 },
     }
 });
 

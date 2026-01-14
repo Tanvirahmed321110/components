@@ -465,19 +465,43 @@
 /*===============  Stayin Card ================*/
 .stayin-card {
     background-color: var(--my-white);
-    padding: 8px 4px 4px 8px;
+    padding: 4px;
+    padding-left: 8px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--my-border-secondary);
     align-items: stretch;
     justify-content: space-between;
+    display: flex;
 }
 
 .stayin-card .content {
-    width: 50%;
+    width: 60%;
 }
 
-.stayin-card .card-img {
-    max-width: 100px;
+
+.stayin-card .img-wrap {
+    width: 40%;
+}
+
+.stayin-card .img-wrap {
+    /* background-color: rebeccapurple; */
+}
+
+.stayin-card .img-wrap img {
+    width: 90%;
+    height: 100%;
+    border-radius: 4px;
+    /* aspect-ratio: 8 / 10; */
+}
+
+.stayin-card .content {
+    padding: 4px;
+    padding-left: 0;
+}
+
+.stayin-card .title {
+    font-size: var(--fs-sm);
+    line-height: var(--line-height-sm);
 }
 
 .stayin-card .break-fast-icon,
