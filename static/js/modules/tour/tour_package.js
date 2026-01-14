@@ -69,6 +69,28 @@ const stayinSlider = new Swiper(".stayin-slider", {
 });
 
 
+//===========  Place  Slider  ===========
+const placeSlider = new Swiper(".place-sliders", {
+    slidesPerView: 3,
+    spaceBetween: 8,
+    loop: true,
+    speed: 2000,
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        992: { slidesPerView: 3 },
+    }
+});
+
+
 
 // const dayItems = document.querySelectorAll('.itinerary-body .day-item');
 // const expandAllBtn = document.getElementById('exapnd-all-btn');

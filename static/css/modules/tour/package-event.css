@@ -739,3 +739,72 @@
     flex: 1;
     height: 100%;
 }
+
+
+
+
+
+
+
+/* place-card */
+.place-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 150px;
+}
+
+.place-card .img-wrap img {
+    position: absolute;
+    inset: 0;
+}
+
+.place-card .content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 12px;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .02) 20%, rgba(0, 0, 0, .9) 100%, rgba(0, 0, 0, 99) 100%);
+}
+
+.place-card .view-details {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    font-size: var(--fs-xs);
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.place-card .view-details:hover {
+    background-color: var(--my-primary-color);
+}
+
+.place-card .name {
+    max-width: 50%;
+    line-height: var(--line-height-xs);
+}
+
+.place-card .offer-ribbon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: var(--my-secondary-color);
+    border-radius: 8px 0 8px 0px;
+    color: var(--my-white);
+    z-index: 3;
+    font-size: var(--fs-low);
+    padding: 4px 6px;
+}
+
+
+.place-card .old {
+    font-size: var(--fs-low);
+    text-decoration: line-through;
+    color: var(--my-rating);
+}
+
+.place-card .new {
+
+    color: var(--my-rating);
+}
