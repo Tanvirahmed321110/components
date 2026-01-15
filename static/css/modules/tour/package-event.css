@@ -1163,6 +1163,7 @@
 .expected-budget .price-area .right .my-btn {
     border-radius: var(--radius-xl);
     padding: 10px 24px;
+    transition: .3s;
 }
 
 .expected-budget .price-area .right .book-now {
@@ -1177,4 +1178,14 @@
 .expected-budget .price-area .right .add-to-cart {
     border: 1px solid var(--my-secondary-color);
     color: var(--my-secondary-color);
+}
+
+.expected-budget .price-area .right .add-to-cart:hover {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+    transition: .3s;
+}
+
+.expected-budget .p-price {
+    line-height: var(--line-height-lg);
 }

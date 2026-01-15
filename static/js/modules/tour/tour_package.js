@@ -67,7 +67,9 @@ const commonSlider2 = new Swiper(".common-slider-2", {
         992: { slidesPerView: 2 },
     }
 });
-//===========  common slider 2  ===========
+
+
+//===========  Related slider   ===========
 const relatedProductsSlider = new Swiper(".related-products-slider", {
     slidesPerView: 4,
     spaceBetween: 16,
