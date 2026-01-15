@@ -396,7 +396,11 @@
     border-radius: 8px;
     /* margin: 8px; */
     max-width: 300px;
+    max-height: 300px;
+    height: 100%;
 }
+
+
 
 .card-text {
     color: #000000B2;
@@ -759,7 +763,7 @@
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    min-height: 150px;
+    min-height: 170px;
 }
 
 .place-card .img-wrap img {
@@ -777,12 +781,30 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, .02) 20%, rgba(0, 0, 0, .9) 100%, rgba(0, 0, 0, 99) 100%);
 }
 
-.place-card .view-details {
+.place-card .view-details,
+.view-details-primary,
+.view-details-secondary {
     background-color: var(--my-secondary-color);
     color: var(--my-white);
     font-size: var(--fs-xs);
     padding: 6px 8px;
     border-radius: var(--radius-sm);
+}
+
+.view-details-primary {
+    background-color: var(--my-primary-color);
+}
+
+.view-details-primary:hover {
+    background-color: var(--my-secondary-color);
+}
+
+.view-details-secondary {
+    background-color: var(--my-secondary-color);
+}
+
+.view-details-secondary:hover {
+    background-color: var(--my-primary-color);
 }
 
 .place-card .view-details:hover {
@@ -896,4 +918,30 @@
 .train-card img {
     max-width: 300px;
     height: 100%;
+}
+
+.card img {
+    max-height: 240px;
+}
+
+/* guider-card */
+.guider-card {
+    padding: 4px;
+}
+
+.guider-card .content {
+    padding: 8px;
+}
+
+.guider-card .img img {
+    max-height: 170px;
+    object-fit: cover;
+    object-position: top;
+    padding: 0;
+
+}
+
+/* ship-card */
+.ship-card {
+    max-width: 600px;
 }
