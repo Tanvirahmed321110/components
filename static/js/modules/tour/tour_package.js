@@ -85,6 +85,10 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
         576: { slidesPerView: 1 },
         768: { slidesPerView: 1 },
         992: { slidesPerView: 4 },
+    },
+    navigation: {
+        nextEl: ".related-products .next",
+        prevEl: ".related-products .prev",
     }
 });
 
@@ -110,6 +114,28 @@ const commonSlider3 = new Swiper(".common-slider-3", {
         576: { slidesPerView: 1 },
         768: { slidesPerView: 1 },
         992: { slidesPerView: 3 },
+    }
+});
+
+
+//===========  Expected Budget slider ===========
+const expectedSlider = new Swiper(".expeceted-slider-wrap", {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    loop: true,
+    speed: 2000,
+
+
+
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        992: { slidesPerView: 3 },
+    },
+    navigation: {
+        nextEl: ".expected-budget .next",
+        prevEl: ".expected-budget .prev",
     }
 });
 

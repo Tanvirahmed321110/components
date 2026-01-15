@@ -947,3 +947,234 @@
 .ship-card {
     max-width: 600px;
 }
+
+
+
+
+
+
+
+
+
+/* related-products-wrap */
+.related-products-wrap {
+    padding-bottom: 60px;
+}
+
+.related-products-slider {
+    padding: 12px;
+    padding-bottom: 20px;
+}
+
+.related-products-slider .tour-cart.package {
+    box-shadow: var(--n-shadow-1);
+}
+
+.related-products-wrap .tour-cart.package .new-price {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+}
+
+.related-products .section-title {
+    font-size: var(--fs-3xl);
+}
+
+
+
+
+
+
+
+
+/* support-sec */
+.support-sec {
+    /* background-color: #0000001A; */
+}
+
+.support-sec .left .icon {
+    background-color: #CEFF82;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-round);
+}
+
+.support-sec .right .section-title {
+    font-size: var(--fs-xxl);
+    line-height: var(--fs-xxl);
+}
+
+.support-sec .item {
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #0000001A;
+    transition: .2s ease;
+}
+
+.support-sec .bg-img {
+    height: 100%;
+}
+
+.support-sec .item img {
+    height: 100%;
+}
+
+.support-sec .item .content {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    bottom: 0;
+
+    /* ⭐ blur fade */
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 5%,
+            rgba(0, 0, 0, .9) 10%,
+            rgba(0, 0, 0, .4) 25%,
+            rgba(0, 0, 0, 0) 80%);
+
+}
+
+.support-sec .item .name {
+    line-height: var(--line-height-sm);
+    font-size: var(--fs-md);
+}
+
+.support-sec .item:hover {
+    transform: scale(.98);
+}
+
+
+
+
+
+
+
+
+/* included-sec */
+.included-sec .item .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--my-secondary-color);
+    background-color: #FFE0D9;
+}
+
+
+
+
+
+
+/* Map */
+.map-wrap {
+    position: relative;
+    height: 418px;
+    background-color: rebeccapurple;
+    overflow: hidden;
+}
+
+.map-wrap iframe {
+    height: 100%;
+}
+
+.map-wrap .map-btns {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    max-width: 400px;
+    z-index: 3;
+}
+
+.map-wrap .map-btns .map-btn {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-md);
+}
+
+.map-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #00000024;
+    z-index: 1;
+    transition: .6s ease;
+    transform-origin: bottom;
+}
+
+.map-wrap:hover::after {
+    transform: scale(0);
+    transform-origin: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+/* expected-budget */
+.expected-budget .search-input input {
+    border-radius: var(--radius-pill) !important;
+}
+
+.expected-budget .slider-and-bottom .item {
+    border-radius: var(--radius-xxl);
+    border: 1px solid var(--my-secondary-color);
+    padding: 16px;
+}
+
+.expected-budget .slider-and-bottom .item .bottom {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid var(--my-border-primary);
+}
+
+.expected-budget .slider-and-bottom .item .right-icon {
+    border-radius: var(--radius-round);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--my-border-primary);
+}
+
+.expected-budget .slider-and-bottom .item.active {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+}
+
+.expected-budget .slider-and-bottom .item.active .price,
+.expected-budget .slider-and-bottom .item.active .person,
+.expected-budget .slider-and-bottom .item.active .name,
+.expected-budget .slider-and-bottom .item.active i {
+    color: var(--my-white);
+}
+
+.expected-budget .slider-and-bottom .item.active .right-icon {
+    background-color: var(--my-white);
+}
+
+.expected-budget .price-area .right .my-btn {
+    border-radius: var(--radius-xl);
+    padding: 10px 24px;
+}
+
+.expected-budget .price-area .right .book-now {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+}
+
+.expected-budget .price-area .right .book-now:hover {
+    background-color: var(--my-primary-color);
+}
+
+.expected-budget .price-area .right .add-to-cart {
+    border: 1px solid var(--my-secondary-color);
+    color: var(--my-secondary-color);
+}
