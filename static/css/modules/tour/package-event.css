@@ -432,6 +432,7 @@
 .itinerary-body {
     box-shadow: var(--n-shadow-2);
     margin-top: 32px;
+    padding-bottom: 40px;
     border: 1px solid var(--white-20);
 }
 

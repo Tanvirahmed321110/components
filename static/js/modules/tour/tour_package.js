@@ -67,6 +67,26 @@ const commonSlider2 = new Swiper(".common-slider-2", {
         992: { slidesPerView: 2 },
     }
 });
+//===========  common slider 2  ===========
+const relatedProductsSlider = new Swiper(".related-products-slider", {
+    slidesPerView: 4,
+    spaceBetween: 16,
+    loop: true,
+    speed: 2000,
+
+    autoplay: {
+        delay: 1200,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        992: { slidesPerView: 4 },
+    }
+});
 
 
 
