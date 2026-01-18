@@ -3,236 +3,223 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Complex Flex Layout</title>
+        <title>Reusable Modal with Header Body Footer</title>
+
         <style>
-            /* ===============================
-   FLEX UTILITIES
-================================ */
-            .my-d-flex {
-                display: flex;
+            body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f4f6f8;
             }
 
-            .my-flex-wrap {
-                flex-wrap: wrap;
+            .card {
+                background: #fff;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 8px;
             }
 
-            .my-justify-start {
-                justify-content: flex-start;
-            }
-
-            .my-justify-center {
-                justify-content: center;
-            }
-
-            .my-justify-end {
-                justify-content: flex-end;
-            }
-
-            .my-justify-between {
-                justify-content: space-between;
-            }
-
-            .my-align-start {
-                align-items: flex-start;
-            }
-
-            .my-align-center {
-                align-items: center;
-            }
-
-            .my-align-end {
-                align-items: flex-end;
-            }
-
-            .my-align-stretch {
-                align-items: stretch;
-            }
-
-            .flex-1 {
-                flex: 1;
-            }
-
-            /* ===============================
-   GRID SYSTEM
-================================ */
-            [class*="col-"] {
-                padding: 8px;
-                /* optional gap */
-                box-sizing: border-box;
-            }
-
-            .col-1 {
-                flex: 0 0 8.333%;
-                max-width: 8.333%;
-            }
-
-            .col-2 {
-                flex: 0 0 16.666%;
-                max-width: 16.666%;
-            }
-
-            .col-3 {
-                flex: 0 0 25%;
-                max-width: 25%;
-            }
-
-            .col-4 {
-                flex: 0 0 33.333%;
-                max-width: 33.333%;
-            }
-
-            .col-5 {
-                flex: 0 0 41.666%;
-                max-width: 41.666%;
-            }
-
-            .col-6 {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-
-            .col-8 {
-                flex: 0 0 66.666%;
-                max-width: 66.666%;
-            }
-
-            .col-12 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            /* ===============================
-   DEMO COLORS & SPACING
-================================ */
-            .my-bg-red {
-                background: #e63946;
-                color: #fff;
-            }
-
-            .my-bg-blue {
-                background: #457b9d;
-                color: #fff;
-            }
-
-            .my-bg-gray {
-                background: #e5e5e5;
-            }
-
-            .my-bg-green {
-                background: #2a9d8f;
-                color: #fff;
-            }
-
-            .my-p-2 {
-                padding: 16px;
-            }
-
-            .my-pl-2 {
-                padding-left: 16px;
-            }
-
-            .my-pr-2 {
-                padding-right: 16px;
-            }
-
-            .my-fs-lg {
-                font-size: 20px;
-            }
-
-            .my-fw-bold {
-                font-weight: bold;
-            }
-
-            /* ===============================
-   BUTTON
-================================ */
-            .button {
+            .view-button {
                 padding: 10px 16px;
+                background: #1270bd;
+                color: #fff;
                 border: none;
                 border-radius: 6px;
                 cursor: pointer;
-                color: #fff;
             }
 
-            .button-red {
-                background: #e63946;
-            }
-
-            .button-blue {
-                background: #1d3557;
-            }
-
-            .button-green {
-                background: #2a9d8f;
-            }
-
-            /* ===============================
-   CARD STYLE (optional)
-================================ */
-            .card {
-                border-radius: 8px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
-            .my-d-flex {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 16px;
-                align-items: stretch;
-                /* ensures both columns same height */
-            }
-
-            .left,
-            .right {
-                flex: 0 0 calc(50% - 16px);
-                /* 50% width minus gap */
-                display: flex;
-                flex-direction: column;
-            }
-
-            .wrap {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .text {
-                display: flex;
-                flex: 1;
-                /* take full height of .wrap */
+            /* ================= MODAL ================= */
+            .modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: none;
                 align-items: center;
-                /* vertical center */
                 justify-content: center;
+                z-index: 20;
+            }
+
+            .modal.show {
+                display: flex;
+            }
+
+            .modal-content {
+                background: #fff;
+                width: 90%;
+                max-width: 1080px;
+                max-height: 96vh;
+
+                display: flex;
+                flex-direction: column;
+
+                border-radius: 12px;
+                overflow: hidden;
+                animation: scaleIn 0.5s ease;
+            }
+
+            @keyframes scaleIn {
+                from {
+                    transform: scale(0.75);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .modal-header {
+                padding: 16px;
+                border-bottom: 1px solid #eee;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .modal-body {
+                flex: 1;
+                /* 👈 important */
+                overflow-y: auto;
+                /* 👈 scroll here */
+                padding: 16px;
+            }
+
+            .modal-footer {
+                padding: 16px;
+                border-top: 1px solid #eee;
+
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .close-btn {
+                background: none;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
             }
         </style>
     </head>
 
     <body>
 
-        <!-- ===============================
-     COMPLEX FLEX LAYOUT
-================================ -->
-
-        <div class="my-d-flex my-flex-wrap my-justify-between my-align-stretch">
-
-            <div class=" left col-6" style="background-color: rebeccapurple;">
-                <div class="head">Head</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias consequatur dolorum unde, impedit
-                    sit molestiae, rem iusto incidunt corrupti animi perspiciatis maxime ipsam exercitationem excepturi
-                    saepe expedita eveniet? Itaque, aliquam?</p>
-                <button>Button</button>
-            </div>
-
-            <div class="right col-6" style="background-color: rgb(94, 89, 99);">
-                <div class="wrap">
-                    <div class="text " style="background-color: orange;">Text</div>
-                </div>
-            </div>
-
+        <!-- ================= Cards ================= -->
+        <div class="card">
+            <h3>Car</h3>
+            <button class="view-button" data-modal="car-modal">View Details</button>
         </div>
+
+        <div class="card">
+            <h3>Bus</h3>
+            <button class="view-button" data-modal="bus-modal">View Details</button>
+        </div>
+
+        <!-- ================= Modal: Car ================= -->
+        <div id="car-modal" class="modal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2>Car Details</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                    <p>This is car information.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="close-btn">Cancel</button>
+                    <button>Confirm</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= Modal: Bus ================= -->
+        <div id="bus-modal" class="modal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2>Bus Details</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>This is bus information.</p>
+                    <p>This is bus information.</p>
+                    <p>This is bus information.</p>
+                    <p>This is bus information.</p>
+                    <p>This is bus information.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="close-btn">Close</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= Reusable JS ================= -->
+        <script>
+            (function () {
+
+                document.addEventListener('click', function (e) {
+
+                    // Open modal
+                    const openBtn = e.target.closest('[data-modal]');
+                    if (openBtn) {
+                        const modalId = openBtn.dataset.modal;
+                        const modal = document.getElementById(modalId);
+
+                        if (modal) {
+                            modal.classList.add('show');
+                            document.body.style.overflow = 'hidden';
+                        }
+                        return;
+                    }
+
+                    // Close modal (overlay or close button)
+                    if (
+                        e.target.classList.contains('modal') ||
+                        e.target.classList.contains('close-btn')
+                    ) {
+                        closeAllModals();
+                    }
+                });
+
+                // ESC key close
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') {
+                        closeAllModals();
+                    }
+                });
+
+                function closeAllModals() {
+                    document.querySelectorAll('.modal.show').forEach(modal => {
+                        modal.classList.remove('show');
+                    });
+                    document.body.style.overflow = '';
+                }
+
+            })();
+        </script>
 
     </body>
 
