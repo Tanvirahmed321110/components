@@ -160,12 +160,24 @@ const customerGallerySlider = new Swiper(".customer-gallery-slider", {
 });
 
 
-//============  light box slider for image popup ============
-const lightbox = GLightbox({
-    selector: '.glightbox',
+//============ lightbox for customer gallery ============
+const customerLightbox = GLightbox({
+    selector: '.customer-gallery-sec .glightbox',
     touchNavigation: true,
-    loop: true,
+    loop: false,
     zoomable: true
+});
+
+const productLightbox = GLightbox({
+    selector: '.product-gallery',
+    touchNavigation: true,
+    loop: false,
+    zoomable: true
+});
+
+document.querySelector('.view-all').addEventListener('click', function (e) {
+    e.preventDefault();
+    productLightbox.open();
 });
 
 

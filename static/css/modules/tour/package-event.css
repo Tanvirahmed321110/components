@@ -1070,7 +1070,10 @@
     background-color: #FFE0D9;
 }
 
-
+.included-sec .included-package .icon {
+    border: none;
+    background-color: rgba(0, 128, 0, 0.242);
+}
 
 
 
@@ -1136,6 +1139,10 @@
 */
 .expected-budget .search-input input {
     border-radius: var(--radius-pill) !important;
+}
+
+.expected-budget .swiper-wrapper {
+    padding-bottom: 4px;
 }
 
 .expected-budget .slider-and-bottom .item {

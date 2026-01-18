@@ -2704,7 +2704,7 @@
                                     </div>
 
                                     <!-- Dropdwon -->
-                                    <div class="module-h-dropdwon my-has-scrollbar-sm">
+                                    <div class="module-h-dropdwon  my-has-scrollbar-sm">
                                         <ul class="my-flex-column ">
                                             <li><a href="#" class="d-item">Category 1</a></li>
                                             <li><a href="#" class="d-item">Category 2</a></li>
@@ -3068,7 +3068,7 @@
                                     </div>
 
                                     <!-- Dropdwon -->
-                                    <div class="module-h-dropdwon my-has-scrollbar-sm">
+                                    <div class="module-h-dropdwon my-has-scrollbar-sm ">
                                         <ul class="my-flex-column ">
                                             <li><a href="#" class="d-item">Category 1</a></li>
                                             <li><a href="#" class="d-item">Category 2</a></li>
@@ -5208,7 +5208,7 @@
                                             </div>
 
                                             <div class="app-icon">
-                                                <img src="./static/images/Logo.svg" alt="">
+                                                <img src="/static/images/Logo.svg" alt="" loading="lazy">
                                             </div>
                                         </a>
                                     </li>
@@ -5505,21 +5505,29 @@
                         <div class="bottom-side my-mt-16">
                             <!--============|| Top left Side Here  ||============-->
                             <div class="left">
-                                <a href="#" class="banner-item">
-                                    <img class="my-radius-xxl banner-img" src="/static/images/Tour banner.jpg"
+                                <div class="banner-item ">
+                                    <img class="my-radius-xxl banner-img " src="/static/images/Tour banner.jpg"
                                         alt="banner" loading="lazy">
-                                </a>
+                                </div>
+
                                 <div class="my-grid-2 my-gap-10 my-mt-10">
-                                    <a href="#" class="banner-item">
-                                        <img class="banner-img" src="/static/images/offer (1).png" alt="banner small"
-                                            loading="lazy">
-                                    </a>
-                                    <div href="#" class="banner-item">
-                                        <img class="banner-img" src="/static/images/offer (1).jpg" alt="banner small"
+                                    <div class="banner-item ">
+                                        <img class="banner-img glightbox" src="/static/images/offer (1).png"
+                                            alt="banner small" loading="lazy">
+                                    </div>
+                                    <div class="banner-item ">
+                                        <img class="banner-img " src="/static/images/offer (1).jpg" alt="banner small"
                                             loading="lazy">
 
                                         <a href="#" class="view-all my-btn">View All</a>
                                     </div>
+                                </div>
+
+                                <!-- 🔴 Hidden gallery for lightbox -->
+                                <div style="display:none">
+                                    <a href="/static/images/Tour banner.jpg" class="product-gallery"></a>
+                                    <a href="/static/images/offer (1).png" class="product-gallery"></a>
+                                    <a href="/static/images/offer (1).jpg" class="product-gallery"></a>
                                 </div>
                             </div>
 

@@ -30,32 +30,43 @@ header .module-header-main .m-item .module-h-dropdwon {
     transition: .24s ease;
     max-height: 500px;
     overflow-y: auto;
-    /* transform: scale(0); */
+    padding: 12px;
+}
+
+header .module-header-main .m-item .module-h-dropdwon ul {
+    border: 1px solid #FC5A314D;
+    box-shadow: -4px 4px 8px 0px #0000001A;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 
 header .module-header-main .m-item:hover .module-h-dropdwon {
     top: 34px;
     opacity: 1;
     visibility: visible;
-    z-index: 2;
+    z-index: 10;
     /* transform: scale(1);
     transform-origin: top; */
 }
 
 header .module-header-main .m-item .module-h-dropdwon .d-item {
-    padding: 6px 0px;
-    /* border-bottom: 1px solid #f3f3f3; */
-    width: 100%;
-    font-size: var(--fs-sm);
     font-weight: 600;
-    color: var(--my-text-secondary);
     text-wrap: nowrap;
     word-wrap: nowrap;
+    color: var(--my-secondary-color);
+    font-size: var(--fs-sm);
+    padding: 12px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+    width: 100%;
 }
 
 /* When Hover */
-header .module-header-main .m-item .module-h-dropdwon .d-item:hover {
-    color: var(--my-secondary-color);
+header .module-header-main .m-item .module-h-dropdwon .d-item:hover,
+header .module-header-main .m-item .module-h-dropdwon .d-item.active {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
 }
 
 
