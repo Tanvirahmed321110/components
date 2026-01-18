@@ -140,7 +140,33 @@ const expectedSlider = new Swiper(".expeceted-slider-wrap", {
         prevEl: ".expected-budget .prev",
     }
 });
+//===========  Expected Budget slider ===========
+const customerGallerySlider = new Swiper(".customer-gallery-slider", {
+    slidesPerView: 4,
+    spaceBetween: 16,
+    loop: true,
+    speed: 1200,
 
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        992: { slidesPerView: 4 },
+    },
+    navigation: {
+        nextEl: ".customer-gallery-sec .next",
+        prevEl: ".customer-gallery-sec .prev",
+    }
+});
+
+
+//============  light box slider for image popup ============
+const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true
+});
 
 
 // const dayItems = document.querySelectorAll('.itinerary-body .day-item');
