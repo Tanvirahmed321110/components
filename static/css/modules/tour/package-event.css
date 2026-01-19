@@ -1352,8 +1352,12 @@
 
 .modal .details .desc {
     font-size: var(--fs-md);
-    color: var(--my-text-quaternary);
+    color: #00000080;
     line-height: var(--line-height-md);
+}
+
+.text-black-50 {
+    color: #00000080;
 }
 
 .modal .details-title {
@@ -1498,8 +1502,29 @@
 
 
 
-/* taxi-modal */
+
 .taxi-modal .card-info .item {
+    border-top: 1px solid var(--my-border-secondary);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.taxi-modal .card-info .item:last-child {
     border-bottom: 1px solid var(--my-border-secondary);
-    padding: 4px;
+}
+
+.taxi-modal .card-info .item .key,
+.taxi-modal .card-info .item .value {
+    padding: 12px;
+}
+
+.taxi-modal .card-info .item .key {
+    border-right: 1px solid var(--my-border-secondary);
+    font-weight: var(--fw-600);
+}
+
+.taxi-modal .card-info .item .value {
+    padding-left: 20px;
+    font-size: var(--fs-md);
 }
