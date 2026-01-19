@@ -3,222 +3,213 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Reusable Modal with Header Body Footer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modal Gallery with Hidden View All Images</title>
+
+        <!-- GLightbox CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
         <style>
             body {
-                font-family: Arial, sans-serif;
-                padding: 40px;
-                background: #f4f6f8;
-            }
-
-            .card {
-                background: #fff;
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius: 8px;
-            }
-
-            .view-button {
-                padding: 10px 16px;
-                background: #1270bd;
+                background: #111;
                 color: #fff;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
+                font-family: sans-serif;
+                padding: 20px;
             }
 
-            /* ================= MODAL ================= */
             .modal {
-                position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.6);
-                display: none;
-                align-items: center;
-                justify-content: center;
-                z-index: 20;
+                position: relative;
+                background: #222;
+                padding: 16px;
+                margin-bottom: 50px;
+                border-radius: 12px;
             }
 
-            .modal.show {
+            /* Flex layout for gallery */
+            .image-gallery {
+                display: flex;
+                gap: 24px;
+                width: 100%;
+                height: 282px;
+                position: relative;
+            }
+
+            /* Left side */
+            .gallery-left {
+                width: 40%;
                 display: flex;
             }
 
-            .modal-content {
-                background: #fff;
-                width: 90%;
-                max-width: 1080px;
-                max-height: 96vh;
+            .gallery-left .item {
+                flex: 1;
+                overflow: hidden;
+                border-radius: 12px;
+            }
 
+            /* Right side */
+            .gallery-right {
+                width: 60%;
+                display: flex;
+                gap: 24px;
+            }
+
+            /* Right column left */
+            .gallery-right .left {
+                width: 45%;
                 display: flex;
                 flex-direction: column;
-
-                border-radius: 12px;
-                overflow: hidden;
-                animation: scaleIn 0.5s ease;
+                gap: 24px;
             }
 
-            @keyframes scaleIn {
-                from {
-                    transform: scale(0.75);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-
-            .modal-header {
-                padding: 16px;
-                border-bottom: 1px solid #eee;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .modal-body {
+            .gallery-right .left .top,
+            .gallery-right .left .bottom {
                 flex: 1;
-                /* 👈 important */
-                overflow-y: auto;
-                /* 👈 scroll here */
-                padding: 16px;
+                overflow: hidden;
+                border-radius: 12px;
             }
 
-            .modal-footer {
-                padding: 16px;
-                border-top: 1px solid #eee;
-
+            /* Right column right */
+            .gallery-right .right {
+                width: 55%;
                 display: flex;
-                justify-content: flex-end;
-                gap: 10px;
+                flex-direction: column;
+                gap: 24px;
             }
 
-            .close-btn {
-                background: none;
-                border: none;
-                font-size: 20px;
+            .gallery-right .right .top,
+            .gallery-right .right .bottom {
+                flex: 1;
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            /* Images */
+            .image-gallery img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            /* View All / Total Img button */
+            .view-all,
+            .total-img {
+                position: absolute;
+                bottom: 12px;
+                right: 12px;
+                padding: 6px 12px;
+                border-radius: 6px;
+                color: #fff;
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(255, 255, 255, 0.35);
                 cursor: pointer;
+                font-size: 12px;
+            }
+
+            /* Hidden container for View All images */
+            .view-all-image {
+                display: none;
             }
         </style>
     </head>
 
     <body>
 
-        <!-- ================= Cards ================= -->
-        <div class="card">
-            <h3>Car</h3>
-            <button class="view-button" data-modal="car-modal">View Details</button>
-        </div>
-
-        <div class="card">
-            <h3>Bus</h3>
-            <button class="view-button" data-modal="bus-modal">View Details</button>
-        </div>
-
-        <!-- ================= Modal: Car ================= -->
-        <div id="car-modal" class="modal">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h2>Car Details</h2>
-                    <button class="close-btn">&times;</button>
+        <!-- ================= Modal 1 ================= -->
+        <div class="modal" id="modal1">
+            <h3>Gallery 1</h3>
+            <div class="image-gallery">
+                <div class="gallery-left">
+                    <div class="item">
+                        <img src="https://i.ibb.co.com/ZZgJGYQ/car1.png" alt="">
+                    </div>
+                </div>
+                <div class="gallery-right">
+                    <div class="left">
+                        <div class="top item"><img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt=""></div>
+                        <div class="bottom item"><img src="https://i.ibb.co.com/JFgBcCZX/car3.jpg" alt=""></div>
+                    </div>
+                    <div class="right">
+                        <div class="top item">
+                            <img src="https://i.ibb.co.com/97JM2Dr/car4.jpg" alt="">
+                            <button class="total-img">34</button>
+                        </div>
+                        <div class="bottom item">
+                            <img src="https://i.ibb.co.com/97JM2Dr/car4.jpg" alt="">
+                            <button class="view-all">View All</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="modal-body">
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
-                    <p>This is car information.</p>
+                <!-- Hidden container specific to this modal -->
+                <div class="view-all-image">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
                 </div>
-
-                <div class="modal-footer">
-                    <button class="close-btn">Cancel</button>
-                    <button>Confirm</button>
-                </div>
-
             </div>
         </div>
 
-        <!-- ================= Modal: Bus ================= -->
-        <div id="bus-modal" class="modal">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h2>Bus Details</h2>
-                    <button class="close-btn">&times;</button>
+        <!-- ================= Modal 2 ================= -->
+        <div class="modal" id="modal2">
+            <h3>Gallery 2</h3>
+            <div class="image-gallery">
+                <div class="gallery-left">
+                    <div class="item"><img src="https://i.ibb.co.com/ZZgJGYQ/car1.png" alt=""></div>
+                </div>
+                <div class="gallery-right">
+                    <div class="left">
+                        <div class="top item"><img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt=""></div>
+                        <div class="bottom item"><img src="https://i.ibb.co.com/JFgBcCZX/car3.jpg" alt=""></div>
+                    </div>
+                    <div class="right">
+                        <div class="top item"><img src="https://i.ibb.co.com/97JM2Dr/car4.jpg" alt=""></div>
+                        <div class="bottom item">
+                            <img src="https://i.ibb.co.com/97JM2Dr/car4.jpg" alt="">
+                            <button class="view-all">View All</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="modal-body">
-                    <p>This is bus information.</p>
-                    <p>This is bus information.</p>
-                    <p>This is bus information.</p>
-                    <p>This is bus information.</p>
-                    <p>This is bus information.</p>
+                <!-- Hidden container specific to this modal -->
+                <div class="view-all-image">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
+                    <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg" alt="">
                 </div>
-
-                <div class="modal-footer">
-                    <button class="close-btn">Close</button>
-                </div>
-
             </div>
         </div>
 
-        <!-- ================= Reusable JS ================= -->
+        <!-- ================= GLightbox JS ================= -->
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         <script>
-            (function () {
+            document.addEventListener('click', function (e) {
+                const btn = e.target.closest('.view-all, .total-img');
+                if (!btn) return;
 
-                document.addEventListener('click', function (e) {
+                const gallery = btn.closest('.image-gallery');
+                if (!gallery) return;
 
-                    // Open modal
-                    const openBtn = e.target.closest('[data-modal]');
-                    if (openBtn) {
-                        const modalId = openBtn.dataset.modal;
-                        const modal = document.getElementById(modalId);
+                // hidden container inside this gallery
+                const container = gallery.querySelector('.view-all-image');
+                if (!container) return;
 
-                        if (modal) {
-                            modal.classList.add('show');
-                            document.body.style.overflow = 'hidden';
-                        }
-                        return;
-                    }
+                // destroy previous lightbox if exists
+                if (window.galleryLightbox) window.galleryLightbox.destroy();
 
-                    // Close modal (overlay or close button)
-                    if (
-                        e.target.classList.contains('modal') ||
-                        e.target.classList.contains('close-btn')
-                    ) {
-                        closeAllModals();
-                    }
+                // initialize GLightbox with only hidden images
+                window.galleryLightbox = GLightbox({
+                    elements: [...container.querySelectorAll('img')].map(img => ({
+                        href: img.src,
+                        type: 'image'
+                    })),
+                    loop: true
                 });
 
-                // ESC key close
-                document.addEventListener('keydown', function (e) {
-                    if (e.key === 'Escape') {
-                        closeAllModals();
-                    }
-                });
+                window.galleryLightbox.open();
+            });
 
-                function closeAllModals() {
-                    document.querySelectorAll('.modal.show').forEach(modal => {
-                        modal.classList.remove('show');
-                    });
-                    document.body.style.overflow = '';
-                }
-
-            })();
         </script>
 
     </body>

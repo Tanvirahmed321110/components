@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Cards Slider with Live Lightbox Counter</title>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <!-- GLightbox CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+        <style>
+            body {
+                background: #111;
+                color: #fff;
+                font-family: sans-serif;
+                padding: 20px;
+            }
+
+            .items {
+                display: flex;
+                gap: 24px;
+            }
+
+            .item {
+                background: #222;
+                border-radius: 12px;
+                overflow: hidden;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .item .top {
+                position: relative;
+                height: 200px;
+            }
+
+            .item .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .item .swiper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .item .bottom {
+                padding: 12px;
+            }
+
+            .item .car-name {
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 4px;
+            }
+
+            .item .car-desc {
+                font-size: 14px;
+                color: #aaa;
+            }
+
+            .view-all-btn {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 6px 12px;
+                border-radius: 6px;
+                cursor: pointer;
+                z-index: 4;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h2>Car Cards Slider</h2>
+
+        <div class="items">
+
+            <!-- Car Card 1 -->
+            <div class="item">
+                <div class="top">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://i.ibb.co/ZZgJGYQ/car1.png" alt="Car 1"></div>
+                            <div class="swiper-slide"><img src="https://i.ibb.co/S4dk0z3R/car2.jpg" alt="Car 1"></div>
+                            <div class="swiper-slide"><img src="https://i.ibb.co/JFgBcCZX/car3.jpg" alt="Car 1"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                <div class="bottom">
+                    <div class="car-name">Toyota Corolla</div>
+                    <div class="car-desc">Compact Sedan, 2023 Model</div>
+                </div>
+            </div>
+
+            <!-- Car Card 2 -->
+            <div class="item">
+                <div class="top">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://i.ibb.co/97JM2Dr/car4.jpg" alt="Car 2"></div>
+                            <div class="swiper-slide"><img src="https://i.ibb.co/ZZgJGYQ/car1.png" alt="Car 2"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                <div class="bottom">
+                    <div class="car-name">Honda Civic</div>
+                    <div class="car-desc">Sedan, 2022 Model</div>
+                </div>
+            </div>
+
+            <!-- Car Card 3 -->
+            <div class="item">
+                <div class="top">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://i.ibb.co/S4dk0z3R/car2.jpg" alt="Car 3"></div>
+                            <div class="swiper-slide"><img src="https://i.ibb.co/JFgBcCZX/car3.jpg" alt="Car 3"></div>
+                            <div class="swiper-slide"><img src="https://i.ibb.co/97JM2Dr/car4.jpg" alt="Car 3"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                <div class="bottom">
+                    <div class="car-name">BMW X5</div>
+                    <div class="car-desc">Luxury SUV, 2023 Model</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Single hidden container for GLightbox images -->
+        <div class="hidden-gallery" style="display:none;"></div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- GLightbox JS -->
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+        <script>
+            // Initialize Swipers
+            document.querySelectorAll('.swiper').forEach(swiperEl => {
+                new Swiper(swiperEl, {
+                    loop: true,
+                    navigation: {
+                        nextEl: swiperEl.querySelector('.swiper-button-next'),
+                        prevEl: swiperEl.querySelector('.swiper-button-prev')
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                });
+            });
+
+            const counter = document.getElementById('lightbox-counter');
+
+            // View All button click
+            document.querySelectorAll('.view-all-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const card = btn.closest('.item');
+                    const images = card.querySelectorAll('.swiper-slide img');
+
+                    const container = document.querySelector('.hidden-gallery');
+                    container.innerHTML = '';
+
+                    images.forEach(img => {
+                        const clone = img.cloneNode(true);
+                        container.appendChild(clone);
+                    });
+
+                    // Destroy previous GLightbox instance
+                    if (window.glightbox) window.glightbox.destroy();
+
+                    // Initialize GLightbox
+                    window.glightbox = GLightbox({
+                        elements: [...container.querySelectorAll('img')].map(img => ({
+                            href: img.src,
+                            type: 'image'
+                        })),
+                        loop: true,
+                        onOpen: (instance) => {
+                            counter.style.display = 'block';
+                            counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
+                        },
+                        onSlideChange: (instance) => {
+                            counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
+                        },
+                        onClose: () => {
+                            counter.style.display = 'none';
+                        }
+                    });
+
+                    window.glightbox.open();
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

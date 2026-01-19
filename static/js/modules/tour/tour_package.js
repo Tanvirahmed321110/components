@@ -276,3 +276,94 @@ expandAllBtn.addEventListener('click', function () {
     // Update button text
     expandAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
 });
+
+
+
+
+
+
+
+//==========   image gallery viewer for modal  ==============
+document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.view-all, .total-img');
+    if (!btn) return;
+
+    const gallery = btn.closest('.image-gallery');
+    if (!gallery) return;
+
+    // hidden container inside this gallery
+    const container = gallery.querySelector('.view-all-image');
+    if (!container) return;
+
+    // destroy previous lightbox if exists
+    if (window.galleryLightbox) window.galleryLightbox.destroy();
+
+    // initialize GLightbox with only hidden images
+    window.galleryLightbox = GLightbox({
+        elements: [...container.querySelectorAll('img')].map(img => ({
+            href: img.src,
+            type: 'image'
+        })),
+        loop: true
+    });
+
+    window.galleryLightbox.open();
+});
+
+
+
+
+// Initialize Swipers
+document.querySelectorAll('.card-wrap .card-item .swiper').forEach(swiperEl => {
+    new Swiper(swiperEl, {
+        loop: true,
+        navigation: {
+            nextEl: swiperEl.querySelector('.next'),
+            prevEl: swiperEl.querySelector('.prev')
+        },
+        slidesPerView: 1,
+        spaceBetween: 10
+    });
+});
+
+// const counter = document.getElementById('lightbox-counter');
+
+// View All button click
+document.querySelectorAll('.view-all').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const card = btn.closest('.card-item');
+        const images = card.querySelectorAll('.swiper-slide img');
+
+        const container = document.querySelector('.hidden-gallery');
+        container.innerHTML = '';
+
+        images.forEach(img => {
+            const clone = img.cloneNode(true);
+            container.appendChild(clone);
+        });
+
+        // Destroy previous GLightbox instance
+        if (window.glightbox) window.glightbox.destroy();
+
+        // Initialize GLightbox
+        window.glightbox = GLightbox({
+            elements: [...container.querySelectorAll('img')].map(img => ({
+                href: img.src,
+                type: 'image'
+            })),
+            loop: true,
+            onOpen: (instance) => {
+                counter.style.display = 'block';
+                counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
+            },
+            onSlideChange: (instance) => {
+                counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
+            },
+            onClose: () => {
+                counter.style.display = 'none';
+            }
+        });
+
+        window.glightbox.open();
+    });
+});

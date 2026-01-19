@@ -152,6 +152,7 @@
     line-height: var(--line-height-md);
     font-size: var(--fs-lg);
     color: var(--my-text-primary);
+    font-weight: 400;
 }
 
 .product-hero-wrap .bottom-side .review .profile-img-xl {
@@ -1275,6 +1276,33 @@
 
 .modal .image-gallery .item {
     height: 100%;
+    position: relative;
+}
+
+.modal .image-gallery .view-all,
+.modal .image-gallery .total-img {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--my-white);
+    backdrop-filter: blur(5px);
+    border: 1px solid color-mix(in srgb,
+            currentColor 60%,
+            transparent);
+    display: flex;
+    gap: 8px;
+}
+
+.modal .image-gallery .total-img {
+    border: 1px solid color-mix(in srgb,
+            currentColor 6%,
+            transparent);
+}
+
+.modal .image-gallery .view-all:hover {
+    backdrop-filter: blur(2px);
 }
 
 .modal .image-gallery img {
@@ -1332,4 +1360,146 @@
     font-size: var(--fs-xxl);
     color: var(--my-text-primary);
     font-weight: var(--fw-600);
+}
+
+
+.card-wrap {
+    display: flex;
+    gap: 24px;
+}
+
+.card-wrap .card-item {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--my-border-secondary);
+    padding: 0px;
+    box-shadow: var(--n-shadow-1);
+    transition: .24s ease;
+}
+
+
+
+.card-wrap .card-item::after {
+    content: '';
+    left: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 80%;
+    height: calc(100% - 210px);
+    background-color: var(--my-border-primary);
+    z-index: 0;
+    transition: .2s ease;
+}
+
+.card-wrap .card-item::before {
+    content: '';
+    right: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: calc(100% - 210px);
+    background-color: var(--my-border-primary);
+    z-index: 0;
+    transition: .2s ease;
+}
+
+.card-wrap .card-item:hover::after,
+.card-wrap .card-item:hover::before {
+    width: 5px;
+}
+
+
+.card-wrap .card-item .top {
+    position: relative;
+    width: 100%;
+    height: 222px;
+}
+
+
+.card-wrap .card-item .top .view-all,
+.card-wrap .card-item .top .total-img {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    color: inherit;
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 8px;
+    z-index: 4;
+    font-size: var(--fs-xs);
+    background: #FFFFFF40;
+    font-weight: 600;
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    box-shadow: var(--n-shadow-1);
+
+}
+
+.card-wrap .card-item .top img {
+    border-radius: var(--radius-lg);
+    height: 100%;
+    height: 222px;
+}
+
+.card-wrap .card-item .top .swiper {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.card-wrap .card-item .card-content {
+    padding: 8px 16px;
+    margin-top: 12px;
+}
+
+/* car-price */
+.card-item .card-price {
+    margin-top: 20px;
+    background-color: var(--my-border-secondary);
+    padding: 12px;
+    border-radius: var(--radius-md);
+
+}
+
+.card-item .card-price .my-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+.card-item .card-price .old {
+    text-decoration: line-through;
+    font-weight: 500;
+    color: var(--my-text-quaternary);
+    display: flex;
+
+}
+
+.card-item .key span {
+    white-space: nowrap;
+}
+
+.card-item .card-ribbon-rigth {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: var(--my-secondary-color);
+    z-index: 2;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: var(--fs-xs);
+    color: var(--my-white);
+}
+
+
+
+
+
+/* taxi-modal */
+.taxi-modal .card-info .item {
+    border-bottom: 1px solid var(--my-border-secondary);
+    padding: 4px;
 }
