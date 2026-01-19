@@ -889,3 +889,50 @@ document.querySelectorAll(".my-tab-section").forEach(section => {
         });
     });
 });
+
+
+
+
+
+
+// Modal
+function modal() {
+
+    document.addEventListener('click', function (e) {
+
+        // Open modal
+        const openBtn = e.target.closest('[data-modal]');
+        if (openBtn) {
+            const modalId = openBtn.dataset.modal;
+            const modal = document.getElementById(modalId);
+
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            return;
+        }
+
+        // Close modal (overlay or close button)
+        const closeBtn = e.target.closest('.modal-close-btn');
+        if (closeBtn || e.target.classList.contains('modal')) {
+            closeAllModals();
+        }
+    });
+
+    // ESC key close
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+
+    function closeAllModals() {
+        document.querySelectorAll('.modal.show').forEach(modal => {
+            modal.classList.remove('show');
+        });
+        document.body.style.overflow = '';
+    }
+}
+
+modal()

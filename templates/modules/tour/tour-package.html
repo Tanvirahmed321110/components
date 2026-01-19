@@ -6858,7 +6858,9 @@
                                                                 </div>
 
                                                                 <!-- modal open button  -->
-                                                                <button class="view-button">View Details</button>
+                                                                <button class="view-button modal-open-btn"
+                                                                    data-modal="car-modal">View
+                                                                    Details</button>
                                                             </div>
                                                         </div>
 
@@ -6869,76 +6871,171 @@
                                                                 loading="lazy">
                                                         </div>
 
-                                                        <!--#######################||  Car MOdal Here   ||######################-->
-                                                        <div class="modal show">
-                                                            <div class="modal-content">
-                                                                <div class="modal-">
-                                                                    <button class="modal-close-btn">
-                                                                        <i class="ri-close-line"></i>
-                                                                    </button>
-                                                                </div>
+                                                        <!--##############################||   Car MOdal Here   ||#############################-->
+                                                        <div class="modal show" id="car-modal">
+                                                            <div class="modal-content lg">
+                                                                <!-- modal-header -->
+                                                                <button class="modal-close-btn">
+                                                                    <i class="ri-close-line"></i>
+                                                                </button>
 
-                                                                <!--================||  Modal Body Here  ||================-->
-                                                                <div class="modal-body">
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>
-                                                                    <p>info here</p>fgfg
-                                                                </div>
+                                                                <!--=======================||  Modal Body Here  ||=======================-->
+                                                                <di v class="modal-body">
+
+                                                                    <!--================||  Header Here  ||================-->
+                                                                    <div
+                                                                        class="head my-d-flex my-align-start my-gap-16">
+                                                                        <!-- left -->
+                                                                        <div class="left ">
+                                                                            <!-- title -->
+                                                                            <div class="section-title">Tanvir Enterpirse
+                                                                            </div>
+                                                                            <!-- location -->
+                                                                            <p
+                                                                                class="my-d-flex my-align-center my-gap-2 my-mt-2">
+                                                                                <svg width="20" height="20"
+                                                                                    viewBox="0 0 20 20" fill="none"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path
+                                                                                        d="M14.9987 15C16.0359 15.3537 16.6654 15.8183 16.6654 16.3271C16.6654 17.4351 13.6806 18.3333 9.9987 18.3333C6.3168 18.3333 3.33203 17.4351 3.33203 16.3271C3.33203 15.8183 3.96142 15.3537 4.9987 15"
+                                                                                        stroke="#181D27"
+                                                                                        stroke-width="1.25"
+                                                                                        stroke-linecap="round" />
+                                                                                    <path
+                                                                                        d="M12.5 7.91699C12.5 9.29774 11.3807 10.417 10 10.417C8.61925 10.417 7.5 9.29774 7.5 7.91699C7.5 6.53628 8.61925 5.41699 10 5.41699C11.3807 5.41699 12.5 6.53628 12.5 7.91699Z"
+                                                                                        stroke="#181D27"
+                                                                                        stroke-width="1.25" />
+                                                                                    <path
+                                                                                        d="M10 1.66699C13.3823 1.66699 16.25 4.52368 16.25 7.98941C16.25 11.5103 13.3357 13.9812 10.6437 15.6613C10.4476 15.7742 10.2257 15.8337 10 15.8337C9.77425 15.8337 9.55242 15.7742 9.35625 15.6613C6.66937 13.9647 3.75 11.5225 3.75 7.98941C3.75 4.52368 6.61767 1.66699 10 1.66699Z"
+                                                                                        stroke="#181D27"
+                                                                                        stroke-width="1.25" />
+                                                                                </svg>
+                                                                                <span
+                                                                                    class="my-fw-bold my-fs-md">Pattaya,
+                                                                                    Thailand </span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="rating my-d-flex my-gap-4 my-align-center">
+                                                                            <span
+                                                                                class="my-fs-xxl my-secondary-color my-fw-bold ">4.5</span>
+                                                                            <span class="my-fs-md my-flex-center">
+                                                                                <i class="ri-star-fill"></i>
+                                                                                <i class="ri-star-fill"></i>
+                                                                                <i class="ri-star-fill"></i>
+                                                                                <i class="ri-star-fill"></i>
+                                                                                <i class="ri-star-line"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="my-text-quaternary my-text-underline">review</span>
+                                                                            <span
+                                                                                class="my-secondary-color my-fw-medium">509</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!--================||  Content  ||================-->
+                                                                    <div>
+                                                                        <!--=========== image gallery ==========-->
+                                                                        <div class=" image-gallery my-mt-16">
+                                                                            <!-- gallery left -->
+                                                                            <div class="gallery-left ">
+                                                                                <div class="item">
+                                                                                    <img src="https://i.ibb.co.com/ZZgJGYQ/car1.png"
+                                                                                        alt="" loading="lazy">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- gallery right -->
+                                                                            <div class="gallery-right ">
+
+                                                                                <!-- left -->
+                                                                                <div
+                                                                                    class="left my-flex-column my-gap-6">
+                                                                                    <div class="top item">
+                                                                                        <img src="https://i.ibb.co.com/S4dk0z3R/car2.jpg"
+                                                                                            alt="car" loading="lazy">
+                                                                                    </div>
+                                                                                    <div class="bottom item">
+                                                                                        <img src="https://i.ibb.co.com/JFgBcCZX/car3.jpg"
+                                                                                            alt="car" loading="lazy">
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <!-- right -->
+                                                                                <div class="right">
+                                                                                    <div class="top item">
+                                                                                        <img src="https://i.ibb.co.com/97JM2Dr/car4.jpg"
+                                                                                            alt="car" loading="lazy">
+                                                                                    </div>
+                                                                                    <div class="bottom item">
+                                                                                        <img src="https://i.ibb.co.com/97JM2Dr/car4.jpg"
+                                                                                            alt="car" loading="lazy">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!--================||  Details  ||================-->
+                                                                    <div class="details my-mt-16">
+                                                                        <div class="details-title">
+                                                                            Company
+                                                                            Highlights</div>
+                                                                        <div class="my-flex-column my-gap-6 my-mt-8">
+
+                                                                            <p class="desc">
+                                                                                Common amenities include free Wi-Fi,
+                                                                                luggage
+                                                                                storage, daily housekeeping, dry
+                                                                                cleaning
+                                                                                and laundry service. The hotel offers
+                                                                                24-hour front desk and concierge
+                                                                                facility
+                                                                                for your added convenience. The hotel
+                                                                                staff
+                                                                                is fluent in English. The property has a
+                                                                                designated smoking area. Withdraw
+                                                                                instant
+                                                                                cash from the ATM located just 80 m from
+                                                                                the
+                                                                                property.
+                                                                            </p>
+
+                                                                            <p class="desc">
+                                                                                Opened in 2016, Panmanee Hotel offers 40
+                                                                                spacious and comfortable rooms with
+                                                                                modern
+                                                                                décor and amenities. Enjoy Asian and
+                                                                                American breakfast at the hotel. The
+                                                                                hotel
+                                                                                offers room service facility. The hotel
+                                                                                offers free parking facility.</p>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="">
+                                                                        <div class="details-title my-mt-16">Vehicle
+                                                                            types details
+                                                                        </div>
+                                                                        <div class="details-title my-mt-16">Vehicle
+                                                                            types details
+                                                                        </div>
+                                                                        <div class="details-title my-mt-16">Vehicle
+                                                                            types details
+                                                                        </div>
+                                                                        <div class="details-title my-mt-16">Vehicle
+                                                                            types details
+                                                                        </div>
+
+
+                                                                        <!-- car items -->
+                                                                        <div class="items my-mt-16">
+                                                                            <div class="item"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </di>
                                                                 <!-- <div class="modal-footer"></div> -->
                                                             </div>
                                                         </div>
@@ -7112,7 +7209,8 @@
                                                             <div class="my-mt-5 see-more">
 
                                                                 <!-- button -->
-                                                                <button class="see-more-btn">See More Option</button>
+                                                                <button class="see-more-btn"
+                                                                    data-modal="flight-modal">See More Option</button>
                                                             </div>
 
 
@@ -7396,6 +7494,13 @@
                                                     </div>
 
                                                     <!--============ Itenary Flight === ==========-->
+                                                    <div class="modal" id="flight-modal">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                hello
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 

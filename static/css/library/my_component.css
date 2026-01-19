@@ -16,17 +16,30 @@
 .modal-content {
     background: #fff;
     width: 90%;
-    max-width: 1080px;
-    max-height: 96vh;
+    max-width: 700px;
+    max-height: 90vh;
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     overflow: hidden;
     animation: scaleIn 0.5s ease;
     position: relative;
     user-select: auto;
 }
 
+/* Modal LG */
+.modal-content.lg {
+    border-radius: var(--radius-xxl);
+    width: 90%;
+    max-width: 1100px;
+    max-height: 94vh;
+}
+
+.modal-content.lg .modal-body {
+    padding: 28px;
+}
+
+/* Modal MD */
 
 /* Scrollbar width */
 .modal-body::-webkit-scrollbar {
@@ -35,15 +48,15 @@
 
 /* Track */
 .modal-body::-webkit-scrollbar-track {
-    border: 1px solid var(--my-border-primary);
+    /* border: 1px solid var(--my-border-primary); */
     border-radius: 0px;
     margin: 0;
 }
 
 /* Thumb */
 .modal-body::-webkit-scrollbar-thumb {
-    background-color: #797474b2;
-    border-radius: 0px;
+    background-color: #79747489;
+    border-radius: 10px;
 }
 
 /* Thumb hover */
