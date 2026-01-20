@@ -367,3 +367,25 @@ document.querySelectorAll('.view-all').forEach(btn => {
         window.glightbox.open();
     });
 });
+
+
+
+
+// =================|| Bus Modal Slider ||=================
+const mediaSlider = new Swiper('.medile-slider', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    speed: 1000,
+    autoplay: true,
+
+    navigation: {
+        nextEl: '.medile-slider .next',
+        prevEl: '.medile-slider .prev',
+    },
+
+    pagination: {
+        el: '.medile-slider .swiper-pagination',
+        clickable: true,
+    },
+});
