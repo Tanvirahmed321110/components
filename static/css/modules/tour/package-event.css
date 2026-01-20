@@ -1383,6 +1383,7 @@
     padding: 0px;
     box-shadow: var(--n-shadow-1);
     transition: .24s ease;
+    padding-bottom: 8px;
 }
 
 
@@ -1446,7 +1447,7 @@
 }
 
 .card-wrap .card-item .top img {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     height: 100%;
     height: 222px;
 }
@@ -1486,16 +1487,17 @@
     white-space: nowrap;
 }
 
-.card-item .card-ribbon-rigth {
+.card-item .card-ribbon-right {
     position: absolute;
     right: 8px;
     top: 8px;
     background-color: var(--my-secondary-color);
     z-index: 2;
-    padding: 6px 8px;
+    padding: 5px 6px;
     border-radius: 4px;
-    font-size: var(--fs-xs);
+    font-size: var(--fs-low);
     color: var(--my-white);
+    box-shadow: var(--n-shadow-1);
 }
 
 
@@ -1503,28 +1505,52 @@
 
 
 
-.taxi-modal .card-info .item {
+.modal .card-info .item {
     border-top: 1px solid var(--my-border-secondary);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 
-.taxi-modal .card-info .item:last-child {
+.modal .card-info .item:last-child {
     border-bottom: 1px solid var(--my-border-secondary);
 }
 
-.taxi-modal .card-info .item .key,
-.taxi-modal .card-info .item .value {
+.modal .card-info .item .key,
+.modal .card-info .item .value {
     padding: 12px;
 }
 
-.taxi-modal .card-info .item .key {
+.modal .card-info .item .key {
     border-right: 1px solid var(--my-border-secondary);
     font-weight: var(--fw-600);
 }
 
-.taxi-modal .card-info .item .value {
+.modal .card-info .item .value {
     padding-left: 20px;
     font-size: var(--fs-md);
+}
+
+.modal .card-info .item .key {
+    gap: 10px;
+
+}
+
+.modal .card-info .item .key svg {
+    width: 20px;
+}
+
+
+
+
+/* hotel-modal */
+.hotel-modal .card-item .value {
+    color: var(--my-text-primary);
+    font-weight: 600;
+    font-size: var(--fs-md);
+}
+
+.modal .card-item .key svg {
+    width: 20px;
+    max-height: 18px;
 }
