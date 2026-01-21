@@ -5,7 +5,7 @@
 
 
 .p-sub-container {
-    width: 70.58333%;
+    /* width: 70.58333%; */
 }
 
 .p-sub-container .section-title {
@@ -211,11 +211,10 @@
 .package-information-wrap {
     display: flex;
     align-items: flex-start;
-    gap: 2.66667%;
 }
 
 .information-left {
-    width: 70.58333%;
+    /* width: 70.58333%; */
 }
 
 /* highlights-items */
@@ -232,19 +231,25 @@
 }
 
 
+.event-package-main {
+    display: flex;
+    gap: 2.66667%;
+}
+
+.event-package-content {
+    width: 70.58333%;
+}
 
 /* Price Card */
-.package-information .price-card,
-.package-information .event-price-card {
+.packevent-package-main .price-card,
+.event-package-main .event-price-card {
     width: 26.75%;
     min-width: 350px;
     flex: 1;
     display: flex;
-    position: sticky;
-    top: 100px;
 }
 
-.package-information .price-card-wrap {
+.event-package-main .price-card-wrap {
     background-color: var(--my-white);
     padding: 26px 20px;
     display: flex;
@@ -252,6 +257,9 @@
     height: fit-content;
     border-radius: var(--radius-xxl);
     box-shadow: var(--n-shadow-2);
+    margin-top: 60px;
+    position: sticky;
+    top: 20px;
 }
 
 .package-information .price-card .top-btn,
@@ -775,7 +783,7 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     min-height: 190px;
-    min-width: 280px;
+    min-width: 276px;
 }
 
 .swiper .place-card {

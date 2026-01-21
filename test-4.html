@@ -3,604 +3,270 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Car Rental Details</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title>Deluxe Double Bed Room | Hotel Booking</title>
+
+        <!-- SEO Meta -->
+        <meta name="description"
+            content="Book deluxe double bed room with modern facilities, free Wi-Fi, breakfast and instant confirmation.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Basic CSS -->
         <style>
             * {
+                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
             body {
-                background-color: #f7f9fc;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.6;
+                background: #f5f7fa;
                 color: #333;
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
             }
 
-            .container {
-                width: 100%;
+            /* Layout */
+            .package-information {
                 max-width: 1200px;
                 margin: 0 auto;
-            }
-
-            .page-title {
-                text-align: center;
-                margin-bottom: 30px;
-                color: #2c3e50;
-            }
-
-            .page-title h1 {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
-            }
-
-            .page-title p {
-                color: #7f8c8d;
-                font-size: 1.1rem;
-            }
-
-            .car-card {
-                background-color: white;
-                border-radius: 16px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-                overflow: hidden;
-                margin-bottom: 30px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .car-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-            }
-
-            .car-header {
+                padding: 40px 20px;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 25px 30px;
-                background: linear-gradient(135deg, #fc5a31 0%, #ff7a57 100%);
-                color: white;
+                gap: 3%;
+                align-items: flex-start;
             }
 
-            .car-name {
-                font-size: 1.8rem;
-                font-weight: 700;
-            }
-
-            .car-type {
-                display: inline-block;
-                background-color: rgba(255, 255, 255, 0.2);
-                padding: 5px 15px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-                margin-left: 15px;
-            }
-
-            .car-price {
-                text-align: right;
-            }
-
-            .price-amount {
-                font-size: 2.2rem;
-                font-weight: 700;
-            }
-
-            .price-period {
-                font-size: 1rem;
-                opacity: 0.9;
-            }
-
-            .car-details {
-                display: flex;
-                padding: 0;
-                flex-wrap: wrap;
-            }
-
-            .car-image-section {
+            /* Left content */
+            .package-details {
                 flex: 1;
-                min-width: 300px;
+                background: #fff;
                 padding: 30px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                background-color: #f8fafc;
-            }
-
-            .car-image {
-                width: 100%;
-                max-width: 400px;
-                height: auto;
                 border-radius: 12px;
-                margin-bottom: 20px;
             }
 
-            .car-specs {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-                width: 100%;
+            .package-details header {
+                margin-bottom: 24px;
             }
 
-            .spec-item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 12px 20px;
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                min-width: 100px;
-            }
-
-            .spec-icon {
-                color: #fc5a31;
-                font-size: 1.5rem;
+            .package-details h1 {
+                font-size: 28px;
                 margin-bottom: 8px;
             }
 
-            .spec-value {
-                font-weight: 700;
-                font-size: 1.2rem;
-                color: #2c3e50;
+            .package-details .subtitle {
+                color: #666;
+                font-size: 16px;
             }
 
-            .spec-label {
-                font-size: 0.85rem;
-                color: #7f8c8d;
-                margin-top: 3px;
+            .package-details h2 {
+                font-size: 20px;
+                margin: 32px 0 12px;
             }
 
-            .car-info-section {
-                flex: 1.2;
-                min-width: 300px;
-                padding: 30px;
-                border-left: 1px solid #eee;
+            .package-details p {
+                margin-bottom: 16px;
             }
 
-            .section-title {
-                font-size: 1.4rem;
-                color: #2c3e50;
-                margin-bottom: 25px;
-                padding-bottom: 10px;
-                border-bottom: 2px solid #fc5a31;
-                display: inline-block;
+            .package-details ul {
+                padding-left: 20px;
             }
 
-            .info-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-                margin-bottom: 30px;
+            .package-details li {
+                margin-bottom: 8px;
             }
 
-            .info-item {
-                display: flex;
-                align-items: center;
-                padding: 15px;
-                background-color: #f8fafc;
-                border-radius: 10px;
-                transition: background-color 0.2s;
+            /* Sticky Price Card */
+            .price-card {
+                position: sticky;
+                top: 100px;
+                flex: 0 0 320px;
             }
 
-            .info-item:hover {
-                background-color: #f0f5ff;
+            .price-box {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 24px;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
             }
 
-            .info-icon {
-                width: 50px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #ffece7;
-                border-radius: 10px;
-                margin-right: 15px;
-                color: #fc5a31;
-                flex-shrink: 0;
+            .price-label {
+                font-size: 14px;
+                color: #777;
             }
 
-            .info-content {
-                flex-grow: 1;
+            .price {
+                font-size: 32px;
+                font-weight: bold;
+                margin: 10px 0 16px;
+                color: #e65f00;
             }
 
-            .info-label {
-                font-size: 0.9rem;
-                color: #7f8c8d;
-                margin-bottom: 5px;
+            .price span {
+                font-size: 14px;
+                font-weight: normal;
+                color: #555;
             }
 
-            .info-value {
-                font-weight: 700;
-                font-size: 1.1rem;
-                color: #2c3e50;
+            .price-features {
+                list-style: none;
+                margin-bottom: 20px;
             }
 
-            .card-info {
-                margin-top: 10px;
+            .price-features li {
+                margin-bottom: 8px;
+                font-size: 14px;
             }
 
-            .card-info ul {
-                list-style-type: none;
-            }
-
-            .card-info .item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 18px 0;
-                border-bottom: 1px solid #eee;
-            }
-
-            .card-info .item:last-child {
-                border-bottom: none;
-            }
-
-            .card-info .key {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-
-            .key svg {
-                width: 22px;
-                height: 22px;
-            }
-
-            .my-fs-md {
-                font-size: 1.1rem;
-            }
-
-            .my-text-primary {
-                color: #2c3e50;
-            }
-
-            .my-fw-medium {
-                font-weight: 600;
-            }
-
-            .my-fw-bold {
-                font-weight: 700;
-            }
-
-            .value {
-                text-align: right;
-                font-size: 1.1rem;
-            }
-
-            .value span {
-                color: #fc5a31;
-                font-weight: 700;
-                margin-right: 5px;
-            }
-
-            .card-actions {
-                padding: 25px 30px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-top: 1px solid #eee;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            .features-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-
-            .feature-tag {
-                background-color: #e8f4ff;
-                color: #2980b9;
-                padding: 8px 15px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .btn-primary {
-                background-color: #fc5a31;
-                color: white;
-                border: none;
-                padding: 14px 30px;
-                border-radius: 10px;
-                font-size: 1.1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: background-color 0.3s, transform 0.2s;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .btn-primary:hover {
-                background-color: #e54a21;
-                transform: translateY(-2px);
-            }
-
-            .btn-outline {
-                background-color: transparent;
-                color: #fc5a31;
-                border: 2px solid #fc5a31;
-                padding: 12px 28px;
-                border-radius: 10px;
-                font-size: 1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.3s;
-            }
-
-            .btn-outline:hover {
-                background-color: #ffece7;
-            }
-
-            @media (max-width: 992px) {
-                .car-details {
-                    flex-direction: column;
-                }
-
-                .car-info-section {
-                    border-left: none;
-                    border-top: 1px solid #eee;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .car-header {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 15px;
-                }
-
-                .car-price {
-                    text-align: left;
-                }
-
-                .card-actions {
-                    flex-direction: column;
-                    align-items: stretch;
-                }
-
-                .features-list {
-                    justify-content: center;
-                    margin-bottom: 15px;
-                }
-
-                .action-buttons {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                }
-
-                .btn-primary,
-                .btn-outline {
-                    width: 100%;
-                    justify-content: center;
-                }
-
-                .page-title h1 {
-                    font-size: 2rem;
-                }
-            }
-
-            .badge {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                background-color: #2ecc71;
-                color: white;
-                padding: 6px 15px;
-                border-radius: 20px;
-                font-size: 0.8rem;
-                font-weight: 600;
-                z-index: 1;
-            }
-
-            .car-image-container {
-                position: relative;
+            .book-btn {
                 width: 100%;
+                padding: 14px;
+                border: none;
+                border-radius: 8px;
+                background: #fc5a31;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .book-btn:hover {
+                background: #e04e2a;
+            }
+
+            /* Responsive */
+            @media (max-width: 900px) {
+                .package-information {
+                    flex-direction: column;
+                }
+
+                .price-card {
+                    position: static;
+                    width: 100%;
+                }
             }
         </style>
     </head>
 
     <body>
-        <div class="container">
-            <div class="page-title">
-                <h1>Car Rental Details</h1>
-                <p>Complete information about your selected vehicle</p>
-            </div>
 
-            <div class="car-card">
-                <div class="car-header">
-                    <div>
-                        <div class="car-name">Toyota Camry 2023 <span class="car-type">Sedan</span></div>
-                        <p style="margin-top: 5px; opacity: 0.9;">Comfort, style, and performance combined</p>
-                    </div>
-                    <div class="car-price">
-                        <div class="price-amount">$45<small style="font-size: 1.5rem;">.99</small></div>
-                        <div class="price-period">per day</div>
-                    </div>
-                </div>
+        <main>
 
-                <div class="car-details">
-                    <div class="car-image-section">
-                        <div class="car-image-container">
-                            <div class="badge">Most Popular</div>
-                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                                alt="Toyota Camry" class="car-image">
-                        </div>
+            <section class="package-information" aria-labelledby="room-title">
 
-                        <div class="car-specs">
-                            <div class="spec-item">
-                                <div class="spec-icon">
-                                    <i class="fas fa-gas-pump"></i>
-                                </div>
-                                <div class="spec-value">Hybrid</div>
-                                <div class="spec-label">Fuel Type</div>
-                            </div>
+                <!-- LEFT CONTENT -->
+                <article class="package-details">
 
-                            <div class="spec-item">
-                                <div class="spec-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <div class="spec-value">Automatic</div>
-                                <div class="spec-label">Transmission</div>
-                            </div>
+                    <header>
+                        <h1 id="room-title">Deluxe Double Bed Room</h1>
+                        <p class="subtitle">
+                            Luxury stay with comfort & modern facilities
+                        </p>
+                    </header>
 
-                            <div class="spec-item">
-                                <div class="spec-icon">
-                                    <i class="fas fa-user-friends"></i>
-                                </div>
-                                <div class="spec-value">5 Seats</div>
-                                <div class="spec-label">Capacity</div>
-                            </div>
+                    <section>
+                        <h2>Room Description</h2>
+                        <p>
+                            The deluxe double bed room is designed for couples and families
+                            who want a comfortable and relaxing stay. The room features
+                            modern furniture, soft lighting and a peaceful environment.
+                        </p>
+                    </section>
 
-                            <div class="spec-item">
-                                <div class="spec-icon">
-                                    <i class="fas fa-suitcase"></i>
-                                </div>
-                                <div class="spec-value">2 Large</div>
-                                <div class="spec-label">Luggage</div>
-                            </div>
-                        </div>
-                    </div>
+                    <section>
+                        <h2>Room Facilities</h2>
+                        <ul>
+                            <li>Air Conditioning</li>
+                            <li>Free High-Speed Wi-Fi</li>
+                            <li>Complimentary Breakfast</li>
+                            <li>Smart TV</li>
+                            <li>Private Bathroom</li>
+                        </ul>
+                    </section>
 
-                    <div class="car-info-section">
-                        <h3 class="section-title">Rental Details</h3>
+                    <section>
+                        <h2>Hotel Policies</h2>
+                        <p>
+                            Check-in time starts from 12:00 PM and check-out is before
+                            11:00 AM. Free cancellation is available up to 24 hours
+                            before check-in.
+                        </p>
+                    </section>
 
-                        <div class="info-grid">
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <div class="info-label">Rental Period</div>
-                                    <div class="info-value">3 Days (June 15-18, 2023)</div>
-                                </div>
-                            </div>
+                    <section>
+                        <h2>Location</h2>
+                        <p>
+                            Located near the city center with easy access to shopping
+                            malls, restaurants and public transportation.
+                        </p>
+                    </section>
 
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <div class="info-label">Pick-up Location</div>
-                                    <div class="info-value">Downtown Rental Center</div>
-                                </div>
-                            </div>
+                    <!-- Extra content to test sticky -->
+                    <section>
+                        <h2>Additional Information</h2>
+                        <p>
+                            This room is perfect for business travelers and tourists.
+                            Daily housekeeping ensures cleanliness and comfort throughout
+                            your stay.
+                        </p>
+                        <p>
+                            Enjoy a peaceful night with premium bedding and soundproof
+                            walls for uninterrupted sleep.
+                        </p>
+                    </section>
 
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-id-card"></i>
-                                </div>
-                                <div class="info-content">
-                                    <div class="info-label">Included</div>
-                                    <div class="info-value">Insurance, Unlimited Miles</div>
-                                </div>
-                            </div>
+                </article>
 
-                            <div class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <div class="info-label">Mileage</div>
-                                    <div class="info-value">Unlimited</div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- RIGHT STICKY PRICE CARD -->
+                <aside class="price-card" aria-label="Room pricing and booking">
 
-                        <h3 class="section-title">Pick-up & Drop-off</h3>
+                    <div class="price-box">
+                        <p class="price-label">Starting from</p>
 
-                        <!-- Your provided HTML structure for car items -->
-                        <div class="card-info">
-                            <ul>
-                                <!-- single item -->
-                                <li class="item">
-                                    <div class="key my-d-flex my-gap-2 ">
-                                        <svg width="19" height="22" viewBox="0 0 19 22" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M15.701 2.70989C12.1091 -0.903296 6.28365 -0.903296 2.69183 2.70989C0.409148 5.00612 -0.420254 8.20809 0.197948 11.1597C0.288514 11.592 0.712311 11.869 1.14459 11.7785C1.5769 11.688 1.85391 11.2641 1.76339 10.8318C1.25046 8.3829 1.93992 5.73488 3.82612 3.83749C6.79258 0.853361 11.6002 0.853361 14.5667 3.83749C17.5357 6.82422 17.5357 11.6686 14.5667 14.6553L8.62923 20.6281C8.31787 20.9413 8.31939 21.4476 8.63259 21.759C8.94583 22.0704 9.45216 22.0689 9.76352 21.7556L15.701 15.7829C19.2901 12.1724 19.2901 6.32045 15.701 2.70989Z"
-                                                fill="#FC5A31" />
-                                            <path
-                                                d="M6.83164 13.3965V4.92525H10.0083C10.6591 4.92525 11.2051 5.04658 11.6463 5.28925C12.0903 5.53192 12.4254 5.86558 12.6515 6.29025C12.8803 6.71215 12.9948 7.19197 12.9948 7.72969C12.9948 8.27293 12.8803 8.75551 12.6515 9.17741C12.4226 9.59932 12.0848 9.93161 11.6381 10.1743C11.1913 10.4142 10.6412 10.5341 9.98767 10.5341H7.88227V9.27255H9.78085C10.1614 9.27255 10.473 9.20637 10.7157 9.074C10.9583 8.94164 11.1376 8.75964 11.2534 8.52801C11.372 8.29637 11.4312 8.03027 11.4312 7.72969C11.4312 7.42912 11.372 7.16439 11.2534 6.93552C11.1376 6.70664 10.9569 6.52877 10.7115 6.40193C10.4689 6.27232 10.1559 6.20752 9.77258 6.20752H8.36622V13.3965H6.83164Z"
-                                                fill="#FC5A31" />
-                                        </svg>
-                                        <span class="my-fs-md my-text-primary my-fw-medium">Pick-Up</span>
-                                    </div>
-                                    <div class="value my-fw-bold my-text-primary">
-                                        <span>10:00;</span>Dhaka Biman Bondar
-                                    </div>
-                                </li>
-                                <!-- single item -->
-                                <li class="item">
-                                    <div class="key my-d-flex my-gap-2 ">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M12.525 14.6014C12.814 13.7556 13.6167 13.2021 14.5018 13.2021H19.9342C20.8194 13.2021 21.6221 13.7556 21.911 14.6014L22.3999 16.0323C22.7681 15.8809 23.2 16.0242 23.4004 16.38C23.6173 16.7649 23.481 17.2528 23.096 17.4697L23.055 17.4927C23.6386 17.9424 24.0181 18.6415 24.0181 19.4386V21.9477C24.0181 23.1008 23.0656 24.0023 21.9324 24.0023C21.0018 24.0023 20.1931 23.3944 19.9336 22.5386H14.5024C14.2429 23.3944 13.4343 24.0023 12.5037 24.0023C11.3704 24.0023 10.418 23.1008 10.418 21.9477V19.4386C10.418 18.6498 10.7897 17.9569 11.363 17.5068L11.297 17.4697C10.912 17.2528 10.7757 16.7649 10.9926 16.38C11.1999 16.0121 11.6546 15.8713 12.0306 16.0489L12.525 14.6014ZM13.4081 16.9658L14.0392 15.1186C14.1002 14.9398 14.2802 14.8022 14.5018 14.8022H19.9342C20.1559 14.8022 20.3359 14.9398 20.3969 15.1186L21.0279 16.9658H13.4081ZM13.5751 19.0568C13.1333 19.0568 12.7751 19.4149 12.7751 19.8568C12.7751 20.2986 13.1333 20.6568 13.5751 20.6568H14.4323C14.8741 20.6568 15.2323 20.2986 15.2323 19.8568C15.2323 19.4149 14.8741 19.0568 14.4323 19.0568H13.5751ZM19.7895 19.0568C19.3477 19.0568 18.9894 19.4149 18.9894 19.8568C18.9894 20.2986 19.3477 20.6568 19.7895 20.6568H20.6466C21.0885 20.6568 21.4466 20.2986 21.4466 19.8568C21.4466 19.4149 21.0885 19.0568 20.6466 19.0568H19.7895Z"
-                                                fill="#FC5A31" />
-                                            <path
-                                                d="M2.69521 2.71095C6.28844 -0.903651 12.1162 -0.903651 15.7095 2.71095C17.993 5.00809 18.8228 8.21132 18.2043 11.1641C18.1137 11.5966 17.6898 11.8737 17.2573 11.7831C16.8248 11.6926 16.5477 11.2685 16.6383 10.8361C17.1514 8.3862 16.4617 5.73713 14.5747 3.839C11.6071 0.853696 6.79757 0.853696 3.82994 3.839C0.859713 6.82691 0.859713 11.6732 3.82994 14.6611L9.76972 20.6362C10.0812 20.9495 10.0797 21.4561 9.76636 21.7676C9.45299 22.0791 8.94647 22.0776 8.63499 21.7642L2.69521 15.7892C-0.895384 12.1772 -0.895384 6.32294 2.69521 2.71095Z"
-                                                fill="#FC5A31" />
-                                            <path
-                                                d="M8.90684 12.6006H6.03509V4.12602H8.96477C9.80616 4.12602 10.5289 4.29568 11.1331 4.63499C11.74 4.97155 12.2062 5.45569 12.5317 6.08742C12.8572 6.71915 13.02 7.47502 13.02 8.35503C13.02 9.23779 12.8558 9.99642 12.5276 10.6309C12.202 11.2654 11.7317 11.7523 11.1165 12.0916C10.5041 12.4309 9.76754 12.6006 8.90684 12.6006ZM7.57028 11.2723H8.83236C9.42271 11.2723 9.91513 11.1647 10.3096 10.9495C10.7041 10.7316 11.0007 10.4075 11.1993 9.97711C11.3979 9.544 11.4972 9.00331 11.4972 8.35503C11.4972 7.70675 11.3979 7.16881 11.1993 6.74122C11.0007 6.31087 10.7069 5.98949 10.3179 5.77707C9.93168 5.5619 9.45167 5.45431 8.87787 5.45431H7.57028V11.2723Z"
-                                                fill="#FC5A31" />
-                                        </svg>
-                                        <span class="my-fs-md my-text-primary my-fw-medium">Drop-Off</span>
-                                    </div>
-                                    <div class="value my-fw-bold my-text-primary">
-                                        <span>10:00;</span>Dhaka Biman Bondar
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                        <p class="price">
+                            ৳3,500 <span>/ night</span>
+                        </p>
 
-                <div class="card-actions">
-                    <div class="features-list">
-                        <div class="feature-tag">
-                            <i class="fas fa-shield-alt"></i> Free Cancellation
-                        </div>
-                        <div class="feature-tag">
-                            <i class="fas fa-snowflake"></i> Air Conditioning
-                        </div>
-                        <div class="feature-tag">
-                            <i class="fas fa-wifi"></i> Free Wi-Fi
-                        </div>
-                        <div class="feature-tag">
-                            <i class="fas fa-car"></i> Unlimited Mileage
-                        </div>
-                    </div>
+                        <ul class="price-features">
+                            <li>✔ Free breakfast</li>
+                            <li>✔ No booking fee</li>
+                            <li>✔ Instant confirmation</li>
+                        </ul>
 
-                    <div class="action-buttons">
-                        <button class="btn-primary">
-                            <i class="fas fa-check-circle"></i> Confirm Reservation
-                        </button>
-                        <button class="btn-outline">
-                            <i class="fas fa-info-circle"></i> More Details
+                        <button class="book-btn">
+                            Book Now
                         </button>
                     </div>
-                </div>
-            </div>
 
-            <div style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 0.9rem;">
-                <p>Need help? Call our customer service at 1-800-CAR-RENTAL</p>
-            </div>
-        </div>
+                </aside>
+
+            </section>
+
+        </main>
+
     </body>
 
 </html>
+
+
+
+
+
+
+<section style="display: flex;">
+    <article>
+        <section>
+            <h2>Price</h2>
+            <p>lroem</p>
+        </section>
+        <section>
+            <h2>more</h2>
+            <p>lroem</p>
+        </section>
+        <section>
+            <h2>deta</h2>
+            <p>lroem</p>
+        </section>
+    </article>
+
+    <aside style="position: sticky;">
+        price card
+    </aside>
+</section>
