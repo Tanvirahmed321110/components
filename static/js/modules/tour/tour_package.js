@@ -258,24 +258,26 @@ dayItems.forEach(item => {
 });
 
 // Expand/Collapse all functionality
-expandAllBtn.addEventListener('click', function () {
-    allExpanded = !allExpanded;
+if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', function () {
+        allExpanded = !allExpanded;
 
-    dayItems.forEach(item => {
-        const arrowIcon = item.querySelector('.arrow-icon');
+        dayItems.forEach(item => {
+            const arrowIcon = item.querySelector('.arrow-icon');
 
-        if (allExpanded) {
-            // Expand all
-            item.classList.add('active');
-        } else {
-            // Collapse all
-            item.classList.remove('active');
-        }
+            if (allExpanded) {
+                // Expand all
+                item.classList.add('active');
+            } else {
+                // Collapse all
+                item.classList.remove('active');
+            }
+        });
+
+        // Update button text
+        expandAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
     });
-
-    // Update button text
-    expandAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
-});
+}
 
 
 

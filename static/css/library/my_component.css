@@ -25,6 +25,7 @@
     animation: scaleIn 0.5s ease;
     position: relative;
     user-select: auto;
+    z-index: 20;
 }
 
 /* Modal LG */
