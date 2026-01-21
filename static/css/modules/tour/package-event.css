@@ -26,11 +26,19 @@
 
 }
 
+.tour-type.event {
+    background-color: var(--my-primary-color);
+}
+
 .category-wrap .cart-category {
     font-size: var(--fs-sm);
     padding: 5px 16px;
     line-height: var(--line-height-lg);
     border-radius: var(--radius-md);
+}
+
+.cart-category.rail-tour {
+    background-color: var(--my-secondary-color);
 }
 
 
@@ -1672,4 +1680,36 @@
     max-height: 500px;
     width: 100%;
     border-radius: var(--radius-sm);
+}
+
+.package-information .highlights-items p.value,
+.package-information .highlights-items div.key {
+    display: inline;
+}
+
+
+
+.package-information .meet-up-point-wrap {
+    display: flex;
+    gap: 50px;
+}
+
+.package-information .cheking .body {
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--my-border-secondary);
+    box-shadow: var(--n-shadow-1);
+    display: flex;
+    padding-right: 24px;
+}
+
+.package-information .arrow {
+    width: 100px;
+
+}
+
+.package-information .meet-up-point .map img {
+    max-height: 100px;
+    border-radius: 4px;
+
 }
