@@ -212,13 +212,10 @@
     display: flex;
     align-items: flex-start;
     gap: 2.66667%;
-    align-items: stretch;
-    /* 32px equivalent in % */
 }
 
 .information-left {
     width: 70.58333%;
-    /* 847px equivalent */
 }
 
 /* highlights-items */
@@ -243,6 +240,8 @@
     min-width: 350px;
     flex: 1;
     display: flex;
+    position: sticky;
+    top: 100px;
 }
 
 .package-information .price-card-wrap {
@@ -1817,4 +1816,16 @@
     height: 30px;
     color: var(--my-secondary-color);
     font-weight: var(--fw-600);
+}
+
+
+.event-price-card .extra-room .bed {
+    width: 56px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--my-border-primary);
+}
+
+.event-price-card .total {
+    /* border-top: 1px solid var(--my-border-secondary); */
 }
