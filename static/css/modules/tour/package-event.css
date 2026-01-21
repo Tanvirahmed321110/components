@@ -174,14 +174,6 @@
     color: var(--my-rating);
 }
 
-
-
-
-
-
-
-
-
 /* tour-info */
 .product-hero-wrap .tour-info .item {
     background-color: #f5f5f5;
@@ -208,14 +200,7 @@
     font-size: var(--fs-3xl);
 }
 
-.package-information-wrap {
-    display: flex;
-    align-items: flex-start;
-}
 
-.information-left {
-    /* width: 70.58333%; */
-}
 
 /* highlights-items */
 .package-information .highlights-items .icon {
@@ -231,6 +216,7 @@
 }
 
 
+/*==============||  event packge main layout  ||===============*/
 .event-package-main {
     display: flex;
     gap: 2.66667%;
@@ -240,7 +226,7 @@
     width: 70.58333%;
 }
 
-/* Price Card */
+/*==============||  Price and Event Price Card Sticky  ||===============*/
 .packevent-package-main .price-card,
 .event-package-main .event-price-card {
     width: 26.75%;
@@ -1695,12 +1681,23 @@
     border-radius: var(--radius-sm);
 }
 
+
+
+
+
+
+
+
+
+/*
+==================================================
+=====||   Event Package Page  Start Here   ||=====
+==================================================
+*/
 .package-information .highlights-items p.value,
 .package-information .highlights-items div.key {
     display: inline;
 }
-
-
 
 .package-information .meet-up-point-wrap {
     display: flex;
