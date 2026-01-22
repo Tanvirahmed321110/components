@@ -1585,6 +1585,7 @@
 .modal .slider-area .left img,
 .modal .slider-area .right img {
     height: 100%;
+    max-height: unset;
 }
 
 .modal .slider-area .right::after,
@@ -1878,6 +1879,15 @@
         flex: 1;
         display: flex;
     }
+
+    .stayin-similar .similar-stayin {
+        width: 50%;
+    }
+
+    .place-card .name {
+        max-width: 60%;
+        line-height: var(--line-height-xs);
+    }
 }
 
 @media (max-width:1080px) {
@@ -1920,6 +1930,7 @@
     .package-information .meet-up-point-wrap {
         display: flex;
         gap: 28px;
+        flex-wrap: wrap;
     }
 
     .tour-type .icon {
@@ -1949,15 +1960,56 @@
 
     .sub-itenary .sub-itenary-items .item .left .my-d-flex.my-gap-2 {
         flex: 1;
-        background-color: red;
     }
 
     .sub-itenary .sub-itenary-items .item .left .key {
         min-width: 120px;
+        max-width: 120px;
     }
 
     .sub-itenary .sub-itenary-items .item .right {
         width: 20%;
-        background-color: orange;
+    }
+}
+
+@media (max-width:991px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card .content {
+        order: 2;
+        width: 100%;
+    }
+
+    .card .img,
+    .card .img-wrap {
+        order: 1;
+        width: 100%;
+    }
+
+    .stayin-similar .similar-stayin,
+    .stayin-similar .stayin-slider {
+        width: 100%;
+    }
+
+    .day-by-day .day-head .left-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .day-by-day .day-head .day-name {
+        font-size: var(--fs-lg);
+        line-height: 1.2;
+        flex-wrap: wrap;
+    }
+
+    .day-by-day .day-head .day-head .left {
+        gap: 12px;
+    }
+
+    .day-by-day .day-head .day-head .right strong {
+        font-size: var(--fs-sm);
+        line-height: 1.4;
     }
 }

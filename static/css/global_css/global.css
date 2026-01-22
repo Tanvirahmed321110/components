@@ -64,7 +64,7 @@
     /* Break Point */
     --breakpoint-xs: 480px;
     --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
+    --breakpoint-md: 767px;
     --breakpoint-lg: 1400px;
 
 
@@ -1012,9 +1012,10 @@ header {
 =================||    Header Top    ||===================
 */
 header .header-top {
-    border-bottom: 1px solid var(--my-primary-color-30);
-    padding-top: 24px;
-    padding-bottom: 12px;
+    /* border-bottom: 1px solid var(--my-primary-color-30); */
+    border-bottom: 1px solid var(--my-border-secondary);
+    padding-top: 16px;
+    padding-bottom: 16px;
     position: relative;
     gap: 60px;
 }
@@ -1429,6 +1430,10 @@ header .profile-dropdown .head {
 /*
 =================||    Header Main    ||===================
 */
+header .header-main {
+    margin-top: 0;
+}
+
 header .header-main .item {
     font-weight: var(--fw-600);
     font-size: var(--fs-md);
@@ -1731,11 +1736,15 @@ footer .footer-bottom .left {
     }
 
     header .header-top .right {
-        gap: 12px !important;
+        gap: 24px !important;
     }
 
     header .header-top .right .my-grid-4 {
         gap: 20px;
+    }
+
+    header .header-top .right .meddile {
+        gap: 8px;
     }
 
     header .other-btns ul {
@@ -1794,7 +1803,7 @@ footer .footer-bottom .left {
 
 
 
-@media(max-width:768px) {
+@media(max-width:767px) {
 
     :root {
         /*______  Font Size  ______ */

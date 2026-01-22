@@ -13,8 +13,8 @@ const categorySlider = new Swiper(".packageSummerySlider", {
 
     breakpoints: {
         320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
-        768: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        991: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
     },
 
@@ -64,7 +64,7 @@ const commonSlider2 = new Swiper(".common-slider-2", {
         320: { slidesPerView: 1 },
         576: { slidesPerView: 1 },
         768: { slidesPerView: 1 },
-        992: { slidesPerView: 2 },
+        1080: { slidesPerView: 2 },
     }
 });
 
@@ -115,7 +115,7 @@ const commonSlider3 = new Swiper(".common-slider-3", {
         320: { slidesPerView: 1 },
         576: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
+        1080: { slidesPerView: 3 },
     }
 });
 
