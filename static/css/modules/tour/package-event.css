@@ -230,7 +230,7 @@
 .packevent-package-main .price-card,
 .event-package-main .event-price-card {
     width: 26.75%;
-    min-width: 350px;
+    min-width: 320px;
     flex: 1;
     display: flex;
 }
@@ -1833,4 +1833,131 @@
 
 .event-price-card .total {
     /* border-top: 1px solid var(--my-border-secondary); */
+}
+
+
+
+
+@media (max-width:1439px) {
+
+    .place-card .view-details,
+    .view-details-primary,
+    .view-details-secondary {
+        padding: 6px 7px;
+    }
+}
+
+
+@media (max-width:1280px) {
+    .customer-reviews-sec .item {
+        padding: 16px;
+    }
+
+    .customer-reviews-sec .item .name {
+        line-height: var(--line-height-sm);
+        font-size: var(--fs-md);
+    }
+
+
+    .support-sec .item {
+        max-height: 200px;
+    }
+
+    .event-package-content {
+        width: calc(100% - 370px);
+    }
+
+    .product-hero-wrap .tour-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .packevent-package-main .price-card,
+    .event-package-main .event-price-card {
+        width: 26.75%;
+        min-width: 280px;
+        flex: 1;
+        display: flex;
+    }
+}
+
+@media (max-width:1080px) {
+
+    .customer-reviews-sec .item .name span {
+        display: none;
+    }
+
+    .product-hero-wrap .tour-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .event-package-content {
+        width: calc(100% - 320px);
+    }
+
+
+    .packevent-package-main .price-card,
+    .event-package-main .event-price-card {
+        min-width: 270px;
+    }
+
+    .event-price-card .my-btn {
+        padding: 12px 16px;
+        font-size: var(--fs-sm);
+    }
+
+    .day-by-day .days {
+        padding: 0 12px;
+        padding-top: 24px;
+        border-radius: 12px;
+    }
+
+    .itinerary-body {
+        border-radius: 16px;
+        padding-bottom: 24px;
+    }
+
+    .package-information .meet-up-point-wrap {
+        display: flex;
+        gap: 28px;
+    }
+
+    .tour-type .icon {
+        bottom: -31px;
+    }
+
+    /*===============  Place Card ================*/
+    .place-card {
+        position: relative;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        min-height: 160px;
+        min-width: 260px;
+    }
+
+    .sub-itenary-items {
+        padding-left: 0;
+    }
+
+    .sub-itenary .sub-itenary-items .icon {
+        min-width: 32px;
+    }
+
+    .sub-itenary .sub-itenary-items .item .left {
+        flex: 1;
+    }
+
+    .sub-itenary .sub-itenary-items .item .left .my-d-flex.my-gap-2 {
+        flex: 1;
+        background-color: red;
+    }
+
+    .sub-itenary .sub-itenary-items .item .left .key {
+        min-width: 120px;
+    }
+
+    .sub-itenary .sub-itenary-items .item .right {
+        width: 20%;
+        background-color: orange;
+    }
 }

@@ -6,16 +6,16 @@ const categorySlider = new Swiper(".packageSummerySlider", {
     speed: 2000,
 
     autoplay: {
-        delay: 3000,
+        delay: 1600,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
 
     breakpoints: {
         320: { slidesPerView: 1 },
-        576: { slidesPerView: 1.5 },
-        768: { slidesPerView: 1 },
-        992: { slidesPerView: 4 },
+        576: { slidesPerView: 1 },
+        768: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 },
     },
 
     navigation: {
@@ -85,8 +85,8 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     breakpoints: {
         320: { slidesPerView: 1 },
         576: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
-        992: { slidesPerView: 4 },
+        768: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 },
     },
     navigation: {
         nextEl: ".related-products .next",
@@ -114,7 +114,7 @@ const commonSlider3 = new Swiper(".common-slider-3", {
     breakpoints: {
         320: { slidesPerView: 1 },
         576: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
         992: { slidesPerView: 3 },
     }
 });
@@ -150,7 +150,7 @@ const customerGallerySlider = new Swiper(".customer-gallery-slider", {
     breakpoints: {
         320: { slidesPerView: 1 },
         576: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
+        768: { slidesPerView: 3 },
         992: { slidesPerView: 4 },
     },
     navigation: {

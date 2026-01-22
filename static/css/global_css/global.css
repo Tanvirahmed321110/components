@@ -2101,7 +2101,7 @@ footer .footer-bottom .left {
     .event-cart .cart-content .title {
         margin-top: 4px;
         font-size: 9px;
-        line-height: var(--line-height-low);
+        line-height: var(--line-height-low) !important;
     }
 
     .event-cart .star-avg .my-text-rating {
@@ -2110,7 +2110,7 @@ footer .footer-bottom .left {
     }
 
     .event-cart .pick-up-location {
-        font-size: 6px;
+        font-size: 6px !important;
         line-height: 12px;
     }
 
@@ -2119,11 +2119,11 @@ footer .footer-bottom .left {
     }
 
     .event-cart .total-seats div {
-        font-size: 6px;
+        font-size: 6px !important;
     }
 
     .event-cart .new-price {
-        font-size: var(--fs-low);
+        font-size: var(--fs-low) !important;
         line-height: var(--line-height-low);
         margin-top: 0;
     }
@@ -2202,7 +2202,7 @@ footer .footer-bottom .left {
     }
 
     .tour-cart.package .hover-content {
-        padding: 10px 6px;
+        padding: 10px 8px;
         padding-bottom: 4px;
     }
 
@@ -2270,8 +2270,14 @@ footer .footer-bottom .left {
         display: block;
     }
 
-    .tour-cart.package .rating {
+    .tour-cart.package .rating,
+    .tour-cart.package .visiable-content .rating {
         font-size: 8px;
+    }
+
+    .tour-cart.package .visiable-content .avg-rating,
+    .tour-cart.package .visiable-content .rating span {
+        font-size: 8px !important;
     }
 
     .tour-cart.package .rating .star i {
@@ -2302,8 +2308,8 @@ footer .footer-bottom .left {
         margin-top: -8px;
     }
 
-    .tour-cart.package .price .old-price,
-    .tour-cart.package .per-person {
+    .package.tour-cart .visiable-content .old-price,
+    .package.tour-cart .visiable-content .per-person {
         font-size: 6px;
     }
 
@@ -2314,7 +2320,7 @@ footer .footer-bottom .left {
 
     .cart-category {
         font-size: 6px;
-        line-height: var(--line-height-low);
+        line-height: 10px;
         color: var(--my-white);
         font-weight: var(--fw-500);
         border-radius: var(--radius-xs);

@@ -131,6 +131,12 @@
                 background: #e04e2a;
             }
 
+            .delete-btn,
+            .input-box {
+                padding: 12px;
+
+            }
+
             /* Responsive */
             @media (max-width: 900px) {
                 .package-information {
@@ -233,6 +239,12 @@
                         <button class="book-btn">
                             Book Now
                         </button>
+
+                        <div class="box" style="margin-top: 16px;">
+                            <div class="pass">Password</div>
+                            <input class="input-box" type="text">
+                            <button class="delete-btn" disabled>delete</button>
+                        </div>
                     </div>
 
                 </aside>
@@ -241,32 +253,25 @@
 
         </main>
 
+
+
+        <script>
+            const password = document.querySelector('.pass')
+            const input = document.querySelector('.input-box')
+            const button = document.querySelector('.delete-btn')
+
+            input.addEventListener('input', function () {
+                button.disabled = input.value.trim().toLowerCase() !== 'delete'
+            })
+
+
+            button.addEventListener('click', function () {
+                password.style.display = 'none'
+                button.disabled = true
+                input.value = ''
+                input.focus()
+            })
+        </script>
     </body>
 
 </html>
-
-
-
-
-
-
-<section style="display: flex;">
-    <article>
-        <section>
-            <h2>Price</h2>
-            <p>lroem</p>
-        </section>
-        <section>
-            <h2>more</h2>
-            <p>lroem</p>
-        </section>
-        <section>
-            <h2>deta</h2>
-            <p>lroem</p>
-        </section>
-    </article>
-
-    <aside style="position: sticky;">
-        price card
-    </aside>
-</section>

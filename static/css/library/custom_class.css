@@ -5198,7 +5198,15 @@ tr {
 
 
 /*___________||  Responsive Start Here  ||___________ */
-@media(max-width:1400px) {
+@media(max-width:1439px) {
+
+    /*____________  Reused Class  ____________*/
+    .my-container,
+    .my-container-sm,
+    .my-container-cart {
+        width: 92.33%;
+    }
+
     .my-grid-lg-1 {
         grid-template-columns: repeat(1, 1fr) !important;
     }

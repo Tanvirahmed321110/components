@@ -398,12 +398,12 @@ search-group .my-input-control input::placeholder {
 
 
 
-.filter-sec .tour-cart.package .cart-title {
+.tour-cart.package .cart-title {
     font-size: var(--fs-lg);
     line-height: var(--line-height-md);
 }
 
-.filter-sec .tour-cart .price .new-price {
+.tour-cart .price .new-price {
     font-size: 20px;
 }
 
@@ -412,22 +412,22 @@ search-group .my-input-control input::placeholder {
 }
 
 /* Event Cart */
-.filter-sec .event-cart {
+.event-cart {
     min-height: 300px;
     max-height: 490px;
 }
 
-.filter-sec .pick-up-location {
+.pick-up-location {
     color: var(--my-rating);
     font-weight: 600;
 }
 
-.filter-sec .event-cart .cart-content .title {
+.event-cart .cart-content .title {
     margin-top: 0px;
     font-size: var(--fs-lg);
 }
 
-.filter-sec .event-cart .cart-content .sub-title {
+.event-cart .cart-content .sub-title {
     font-size: var(--fs-sm);
 }
 
@@ -511,7 +511,7 @@ search-group .my-input-control input::placeholder {
         font-size: var(--fs-lg);
     }
 
-    .filter-sec .tour-cart .price .new-price {
+    .tour-cart .price .new-price {
         font-size: var(--fs-lg);
         line-height: var(--line-height-sm);
     }
@@ -525,8 +525,8 @@ search-group .my-input-control input::placeholder {
     }
 
     .tour-cart.package .hover-content {
-        padding: 10px;
-        padding-bottom: 16px
+        padding: 8px;
+        padding-bottom: 12px
     }
 
     .tour-cart.package .rating div {
@@ -708,12 +708,12 @@ search-group .my-input-control input::placeholder {
         line-height: var(--line-height-low);
     }
 
-    .filter-sec .tour-cart.package .cart-title {
+    .tour-cart.package .cart-title {
         font-size: var(--fs-low);
         line-height: var(--line-height-low);
     }
 
-    .filter-sec .tour-cart .price .new-price {
+    .tour-cart .price .new-price {
         font-size: 12px;
         line-height: 16px;
     }
