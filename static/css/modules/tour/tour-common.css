@@ -465,8 +465,12 @@ search-group .my-input-control input::placeholder {
 }
 
 .sub-continental .section-head .section-sub-title {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
     line-height: var(--line-height-sm);
+}
+
+.top-destnation-sec .search-input {
+    max-width: 280px;
 }
 
 

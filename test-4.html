@@ -3,275 +3,135 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Deluxe Double Bed Room | Hotel Booking</title>
-
-        <!-- SEO Meta -->
-        <meta name="description"
-            content="Book deluxe double bed room with modern facilities, free Wi-Fi, breakfast and instant confirmation.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Basic CSS -->
+        <title>Wave Button Hover Effect</title>
         <style>
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
+            :root {
+                --my-primary-color: #2563eb;
+                --my-secondary-color: #22c55e;
+                --my-white: #ffffff;
             }
 
             body {
-                font-family: Arial, Helvetica, sans-serif;
-                line-height: 1.6;
-                background: #f5f7fa;
-                color: #333;
-            }
-
-            /* Layout */
-            .package-information {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 40px 20px;
+                font-family: Arial, sans-serif;
+                background: #0f172a;
+                min-height: 100vh;
                 display: flex;
-                gap: 3%;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: center;
             }
 
-            /* Left content */
-            .package-details {
-                flex: 1;
-                background: #fff;
-                padding: 30px;
-                border-radius: 12px;
+            .btn-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
             }
 
-            .package-details header {
-                margin-bottom: 24px;
-            }
-
-            .package-details h1 {
-                font-size: 28px;
-                margin-bottom: 8px;
-            }
-
-            .package-details .subtitle {
-                color: #666;
+            /* Base button */
+            .my-btn {
+                position: relative;
+                /* overflow: hidden; */
+                padding: 16px 36px;
                 font-size: 16px;
-            }
-
-            .package-details h2 {
-                font-size: 20px;
-                margin: 32px 0 12px;
-            }
-
-            .package-details p {
-                margin-bottom: 16px;
-            }
-
-            .package-details ul {
-                padding-left: 20px;
-            }
-
-            .package-details li {
-                margin-bottom: 8px;
-            }
-
-            /* Sticky Price Card */
-            .price-card {
-                position: sticky;
-                top: 100px;
-                flex: 0 0 320px;
-            }
-
-            .price-box {
-                background: #ffffff;
+                font-weight: 600;
+                color: var(--my-white);
+                background: transparent;
+                border: 2px solid currentColor;
                 border-radius: 12px;
-                padding: 24px;
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            .price-label {
-                font-size: 14px;
-                color: #777;
-            }
-
-            .price {
-                font-size: 32px;
-                font-weight: bold;
-                margin: 10px 0 16px;
-                color: #e65f00;
-            }
-
-            .price span {
-                font-size: 14px;
-                font-weight: normal;
-                color: #555;
-            }
-
-            .price-features {
-                list-style: none;
-                margin-bottom: 20px;
-            }
-
-            .price-features li {
-                margin-bottom: 8px;
-                font-size: 14px;
-            }
-
-            .book-btn {
-                width: 100%;
-                padding: 14px;
-                border: none;
-                border-radius: 8px;
-                background: #fc5a31;
-                color: #fff;
-                font-size: 16px;
                 cursor: pointer;
+                z-index: 1;
             }
 
-            .book-btn:hover {
-                background: #e04e2a;
+            /* wave layer */
+            .my-btn::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -100%;
+                width: 180%;
+                height: 300%;
+                transform: translateX(-50%) scaleY(0);
+                transform-origin: bottom;
+                border-radius: 50%;
+                transition: transform 0.5s cubic-bezier(.66, 0, .34, 1),
+                    bottom 0.7s cubic-bezier(.66, 0, .34, 1);
+                z-index: 2;
             }
 
-            .delete-btn,
-            .input-box {
-                padding: 12px;
-
+            /* hover wave */
+            .my-btn:hover::after {
+                transform: translateX(-50%) scaleY(1);
+                bottom: -18%;
+                color: var(--my-primary-color);
+                background-color: var(--my-primary-color);
             }
 
-            /* Responsive */
-            @media (max-width: 900px) {
-                .package-information {
-                    flex-direction: column;
-                }
+            /* Button variations */
+            .primary-btn {
+                color: var(--my-primary-color);
+            }
 
-                .price-card {
-                    position: static;
-                    width: 100%;
-                }
+            .primary-btn::after {
+                background-color: var(--my-primary-color);
+            }
+
+            .secondary-btn {
+                color: var(--my-secondary-color);
+            }
+
+            .secondary-btn::after {
+                background-color: var(--my-secondary-color);
+            }
+
+            .outline-btn {
+                color: #f97316;
+            }
+
+            .outline-btn::after {
+                background-color: #f97316;
+            }
+
+            .dark-btn {
+                color: #e5e7eb;
+                border-color: #e5e7eb;
+            }
+
+            .dark-btn::after {
+                background-color: #334155;
+            }
+
+            /* text color change on hover */
+            .my-btn:hover {
+                color: #ffffff;
             }
         </style>
     </head>
 
     <body>
 
-        <main>
+        <div class="btn-wrapper">
 
-            <section class="package-information" aria-labelledby="room-title">
+            <!-- Example 1 -->
+            <button class="my-btn primary-btn">
+                Primary Wave
+            </button>
 
-                <!-- LEFT CONTENT -->
-                <article class="package-details">
+            <!-- Example 2 -->
+            <button class="my-btn secondary-btn">
+                Secondary Wave
+            </button>
 
-                    <header>
-                        <h1 id="room-title">Deluxe Double Bed Room</h1>
-                        <p class="subtitle">
-                            Luxury stay with comfort & modern facilities
-                        </p>
-                    </header>
+            <!-- Example 3 -->
+            <button class="my-btn outline-btn">
+                Orange Wave
+            </button>
 
-                    <section>
-                        <h2>Room Description</h2>
-                        <p>
-                            The deluxe double bed room is designed for couples and families
-                            who want a comfortable and relaxing stay. The room features
-                            modern furniture, soft lighting and a peaceful environment.
-                        </p>
-                    </section>
+            <!-- Example 4 -->
+            <button class="my-btn dark-btn">
+                Dark Wave
+            </button>
 
-                    <section>
-                        <h2>Room Facilities</h2>
-                        <ul>
-                            <li>Air Conditioning</li>
-                            <li>Free High-Speed Wi-Fi</li>
-                            <li>Complimentary Breakfast</li>
-                            <li>Smart TV</li>
-                            <li>Private Bathroom</li>
-                        </ul>
-                    </section>
+        </div>
 
-                    <section>
-                        <h2>Hotel Policies</h2>
-                        <p>
-                            Check-in time starts from 12:00 PM and check-out is before
-                            11:00 AM. Free cancellation is available up to 24 hours
-                            before check-in.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2>Location</h2>
-                        <p>
-                            Located near the city center with easy access to shopping
-                            malls, restaurants and public transportation.
-                        </p>
-                    </section>
-
-                    <!-- Extra content to test sticky -->
-                    <section>
-                        <h2>Additional Information</h2>
-                        <p>
-                            This room is perfect for business travelers and tourists.
-                            Daily housekeeping ensures cleanliness and comfort throughout
-                            your stay.
-                        </p>
-                        <p>
-                            Enjoy a peaceful night with premium bedding and soundproof
-                            walls for uninterrupted sleep.
-                        </p>
-                    </section>
-
-                </article>
-
-                <!-- RIGHT STICKY PRICE CARD -->
-                <aside class="price-card" aria-label="Room pricing and booking">
-
-                    <div class="price-box">
-                        <p class="price-label">Starting from</p>
-
-                        <p class="price">
-                            ৳3,500 <span>/ night</span>
-                        </p>
-
-                        <ul class="price-features">
-                            <li>✔ Free breakfast</li>
-                            <li>✔ No booking fee</li>
-                            <li>✔ Instant confirmation</li>
-                        </ul>
-
-                        <button class="book-btn">
-                            Book Now
-                        </button>
-
-                        <div class="box" style="margin-top: 16px;">
-                            <div class="pass">Password</div>
-                            <input class="input-box" type="text">
-                            <button class="delete-btn" disabled>delete</button>
-                        </div>
-                    </div>
-
-                </aside>
-
-            </section>
-
-        </main>
-
-
-
-        <script>
-            const password = document.querySelector('.pass')
-            const input = document.querySelector('.input-box')
-            const button = document.querySelector('.delete-btn')
-
-            input.addEventListener('input', function () {
-                button.disabled = input.value.trim().toLowerCase() !== 'delete'
-            })
-
-
-            button.addEventListener('click', function () {
-                password.style.display = 'none'
-                button.disabled = true
-                input.value = ''
-                input.focus()
-            })
-        </script>
     </body>
 
 </html>

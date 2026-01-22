@@ -654,6 +654,8 @@
     text-wrap: nowrap;
     transition: background 0.3s;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 button {
@@ -674,13 +676,19 @@ button:active,
 
 .my-btn::after {
     content: '';
-    left: 0px;
-    top: 0px;
-    width: 100%;
+    left: -30%;
+    width: 160%;
     position: absolute;
-    height: 0%;
-    transition: .3s ease-in-out;
+    height: 220%;
+    transition: .5s ease;
     z-index: 1;
+    border-radius: 50%;
+    transform: translateY(85%);
+
+}
+
+.my-btn:hover::after {
+    transform: translateY(-1%) scale(1.2);
 }
 
 .my-btn.my-primary-btn::after {
