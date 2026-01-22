@@ -3,11 +3,6 @@
 }
 
 
-
-.p-sub-container {
-    /* width: 70.58333%; */
-}
-
 .p-sub-container .section-title {
     font-size: var(--fs-3xl);
 }
@@ -22,8 +17,7 @@
 .tour-type .icon {
     position: absolute;
     right: 0;
-    bottom: -34px;
-
+    bottom: -33px;
 }
 
 .tour-type.event {
@@ -248,17 +242,24 @@
     top: 20px;
 }
 
-.package-information .price-card .top-btn,
+.price-card .top-btn,
 .day-by-day .top-btn {
     font-size: var(--fs-md);
     font-weight: 600;
     width: 100%;
     border-radius: var(--radius-sm);
+    background-color: var(--my-primary-color);
+    color: var(--my-white);
 }
 
-.package-information .price-card .top-btn::after,
-.day-by-day .top-btn::after {
-    content: unset;
+.price-card .top-btn:hover,
+.day-by-day .top-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+.day-by-day .top-btn.active,
+.price-card .top-btn.active {
+    background-color: var(--my-secondary-color);
 }
 
 .day-by-day .top-btn {

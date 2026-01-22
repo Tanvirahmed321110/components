@@ -679,7 +679,7 @@ button:active,
     width: 100%;
     position: absolute;
     height: 0%;
-    transition: .45s ease;
+    transition: .3s ease-in-out;
     z-index: 1;
 }
 
