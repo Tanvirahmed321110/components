@@ -8973,6 +8973,17 @@ tr {
     }
 }
 
+@media (max-width:991px) {
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .mobile-show {
+        display: block;
+    }
+}
+
 
 /*________  Responsive for small Device  ________*/
 @media (max-width:768px) {
@@ -11120,13 +11131,6 @@ tr {
 
 
 
-    .mobile-hide {
-        display: none;
-    }
-
-    .mobile-show {
-        display: block;
-    }
 }
 
 
