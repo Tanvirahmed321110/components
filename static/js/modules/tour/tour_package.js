@@ -83,8 +83,8 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     },
 
     breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
+        320: { slidesPerView: 1.5 },
+        576: { slidesPerView: 1.5 },
         768: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
     },
@@ -130,8 +130,8 @@ const expectedSlider = new Swiper(".expeceted-slider-wrap", {
 
 
     breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
+        320: { enabled: false, },
+        767: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
         992: { slidesPerView: 3 },
     },
@@ -148,8 +148,8 @@ const customerGallerySlider = new Swiper(".customer-gallery-slider", {
     speed: 1200,
 
     breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
+        320: { slidesPerView: 2 },
+        576: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         992: { slidesPerView: 4 },
     },
@@ -388,6 +388,27 @@ const mediaSlider = new Swiper('.medile-slider', {
 
     pagination: {
         el: '.medile-slider .swiper-pagination',
+        clickable: true,
+    },
+});
+
+
+
+// ============== Hero Slider For Mobile ================
+// ============== Hero Slider For Mobile ================
+const heroSliderMobile = new Swiper('.hero-slider-mobile-wrap', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    speed: 1200,
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
         clickable: true,
     },
 });

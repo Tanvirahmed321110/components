@@ -12,6 +12,7 @@
     padding: 11px 12px;
     background-color: var(--my-secondary-color);
     position: relative;
+    width: fit-content;
 }
 
 .tour-type .icon {
@@ -318,7 +319,8 @@
 =====||   Package Summary Start Here     ||=====
 ================================================
 */
-.packageSummerySlider .item {
+.packageSummerySlider .item,
+.package-summery-items-mobile .item {
     position: relative;
     height: 200px;
     width: 100%;
@@ -328,7 +330,8 @@
 
 
 
-.packageSummerySlider .item::after {
+.packageSummerySlider .item::after,
+.package-summery-items-mobile .item::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -339,13 +342,15 @@
     z-index: 1;
 }
 
-.packageSummerySlider .item img {
+.packageSummerySlider .item img,
+.package-summery-items-mobile .item img {
     position: absolute;
     inset: 0;
     height: 100%;
 }
 
-.packageSummerySlider .item .item-content {
+.packageSummerySlider .item .item-content,
+.package-summery-items-mobile .item .item-content {
     z-index: 2;
     position: absolute;
     bottom: 16px;
@@ -355,7 +360,8 @@
 
 
 
-.packageSummerySlider .item .item-content .name {
+.packageSummerySlider .item .item-content .name,
+.package-summery-items-mobile .item .item-content .name {
     color: var(--my-white);
     font-size: var(--fs-xl);
     transition: .3s ease;
@@ -1994,17 +2000,17 @@
 
     .price-card {
         order: 1;
-        max-width: 500px;
+        max-width: 400px;
         width: 100%;
     }
 
     .event-package-main .price-card-wrap {
-        padding: 20px 20px;
-        padding-top: 4px;
+        padding: 24px 24px;
+        padding-top: 8px;
         display: flex;
         width: 100%;
         margin-top: 0px;
-        margin-bottom: 32px;
+        margin-bottom: 0px;
     }
 
     /* Product Hero */
@@ -2092,7 +2098,8 @@
     .tour-map,
     .included-sec,
     .support-sec,
-    .day-by-day {
+    .day-by-day,
+    .package-information-wrap {
         padding: 32px 0;
     }
 
@@ -2103,5 +2110,206 @@
     .package-summery {
         padding-bottom: 0;
         padding-top: 32px;
+    }
+
+    .package-information .section-title {
+        font-size: var(--fs-xxl);
+    }
+
+    .highlights-items .info {
+        font-size: var(--fs-lg);
+    }
+
+    .p-sub-container .section-title,
+    .related-products .section-title {
+        font-size: var(--fs-xxl);
+    }
+}
+
+
+@media (max-width:767px) {
+    .expeceted-slider-wrap .swiper-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .expeceted-slider-wrap .swiper-wrapper .swiper-slide {
+        width: 100% !important;
+        max-width: unset;
+    }
+
+    .expected-budget .right-slider-arrows {
+        display: none;
+    }
+
+
+    /*========================||  Hero Section  ||=====================*/
+    .product-hero {
+        margin-top: 16px;
+    }
+
+    .product-hero .section-title {
+        font-size: var(--fs-3xl);
+        line-height: var(--line-height-xxl);
+    }
+
+    .product-hero .short-desc {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-md);
+    }
+
+    .category-wrap .cart-category {
+        font-size: var(--fs-xs);
+        padding: 2px 12px;
+        line-height: var(--line-height-lg);
+        border-radius: var(--radius-md);
+    }
+
+    .product-hero-wrap .compare-and-other .compare {
+        font-weight: 400;
+        padding: 6px 16px;
+        font-size: var(--fs-sm);
+    }
+
+    .product-hero-wrap .compare-and-other .btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .product-hero-wrap .bottom-side {
+        display: none;
+    }
+
+    .product-hero-wrap .top-side {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-section-mobile {
+        position: relative;
+    }
+
+    .product-hero-wrap .tour-type {
+        display: none;
+    }
+
+    .product-hero-wrap .compare-and-other {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hero-section-mobile .tour-type {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        z-index: 3;
+        background-color: var(--my-white);
+        padding: 6px 12px;
+    }
+
+    .hero-section-mobile .tour-type .name {
+        font-size: var(--fs-low);
+        color: var(--my-primary-color);
+        font-weight: var(--fw-700);
+        margin-top: 2px;
+    }
+
+    .tour-type .icon {
+        bottom: -21px;
+    }
+
+    .hero-slider-mobile .item {
+        height: 230px;
+    }
+
+    .hero-section-mobile .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--my-white);
+        border-radius: 50px;
+        opacity: 1;
+        transition: width 0.35s ease, background-color 0.35s ease;
+    }
+
+    .hero-slider-mobile .swiper-pagination-bullet-active {
+        width: 28px;
+        background-color: var(--my-secondary-color);
+    }
+
+    /* tour-info */
+    .product-hero-wrap .tour-info {
+        width: 99%;
+    }
+
+    .tour-info .item {
+        padding: 8px;
+    }
+
+    .tour-info .item .icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tour-info .item .key span {
+        white-space: nowrap;
+    }
+
+    .tour-info .item .key span,
+    .tour-info .item .key,
+    .tour-info .item .value,
+    .tour-info .item .value p {
+        font-size: var(--fs-xs);
+        line-height: 18px;
+    }
+
+    .tour-info .item .value {
+        word-wrap: wrap;
+    }
+
+    /* highlights tour */
+    .highlights-items .info {
+        font-size: var(--fs-sm);
+        line-height: var(--line-height-sm);
+        color: var(--my-text-quaternary);
+    }
+
+    /* package-summery */
+    .package-summery .right-slider-arrows {
+        display: none;
+    }
+
+    .package-summery .name {
+        font-weight: var(--fw-600);
+        font-size: var(--fs-xl);
+    }
+
+    .packageSummerySlider {
+        display: none;
+    }
+
+    .packageSummerySlider .item .item-content .name,
+    .package-summery-items-mobile .item .item-content .name {
+        font-size: var(--fs-md);
+    }
+
+
+    /* day-by-day  */
+    .day-by-day .section-title {
+        font-size: var(--fs-xl);
+    }
+
+
+    .day-by-day .top-btn {
+        border-radius: 4px;
+        padding: 5px 16px;
+        font-size: var(--fs-xs);
+        width: fit-content;
+    }
+
+    .expand-all-btn {
+        font-size: var(--fs-xs);
+        color: var(--my-secondary-color);
     }
 }

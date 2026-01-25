@@ -2207,7 +2207,7 @@ footer .footer-bottom .left {
     }
 
     .mobile-header .logo img {
-        width: 84px;
+        width: 100px;
     }
 
 
@@ -2934,35 +2934,26 @@ footer .footer-bottom .left {
         width: 290px;
     }
 
+    .mobile-header .logo img {
+        width: 100px;
+    }
 
+}
 
-    @media (max-width: 420px) {
-        .search-menu-wrapper .module-menus .item {
-            padding: 8px 0;
-        }
+@media (max-width: 420px) {
+    .search-menu-wrapper .module-menus .item {
+        padding: 8px 0;
+    }
 
-        .event-cart .cart-img {
-            aspect-ratio: unset;
-        }
-
-        .event-cart .cart-img img {}
+    .event-cart .cart-img {
+        aspect-ratio: unset;
     }
 
 
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-    /* event page */
-    .event-play-btn {
-        background-color: var(--my-secondary-color);
-    }
+header {
+    background-color: var(--my-primary-color);
+    color: var(--my-white);
+}
