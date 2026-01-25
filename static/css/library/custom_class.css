@@ -2140,9 +2140,14 @@ tr {
     display: block;
 }
 
+.my-d-inline {
+    display: inline;
+}
+
 .my-d-inline-block {
     display: inline-block;
 }
+
 
 .my-text-uppercase {
     text-transform: uppercase;

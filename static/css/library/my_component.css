@@ -4594,6 +4594,11 @@ input[type=number] {
 \*________________________________*/
 @media (max-width:768px) {
 
+    .video-play-btn {
+        width: 42px;
+        height: 42px;
+    }
+
     .pagination .pages.my-d-flex {
         display: none !important;
     }

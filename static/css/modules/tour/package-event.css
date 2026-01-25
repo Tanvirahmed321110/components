@@ -277,7 +277,7 @@
     background-color: var(--my-primary-color);
 }
 
-.package-information .price-card .price-text {
+.price-card .price-text {
     font-size: var(--fs-xxl);
     color: var(--my-text-primary)
 }
@@ -288,7 +288,7 @@
     font-weight: var(--fw-400);
 }
 
-.package-information .price-card .date-guest button {
+.price-card .date-guest button {
     padding: 6px;
     border-radius: var(--radius-sm);
     font-size: var(--fs-md);
@@ -1981,7 +1981,6 @@
 
     .event-package-main {
         flex-direction: column;
-        padding-top: 32px;
     }
 
     .event-package-content {
@@ -2089,8 +2088,7 @@
     .tour-map,
     .included-sec,
     .support-sec,
-    .day-by-day,
-    .package-information-wrap {
+    .day-by-day {
         padding: 32px 0;
     }
 
@@ -2114,6 +2112,10 @@
     .p-sub-container .section-title,
     .related-products .section-title {
         font-size: var(--fs-xxl);
+    }
+
+    .package-information-wrap {
+        padding-top: 16px;
     }
 }
 
@@ -2308,5 +2310,66 @@
     .included-sec .item .flex-1 {
         font-size: var(--fs-md);
         line-height: var(--line-height-md);
+    }
+
+
+    /* mobile-price-card */
+    .mobile-price-card {
+        border: 1px solid var(--my-border-secondary);
+        padding: 20px;
+        padding-top: 4px;
+        border-radius: 20px;
+    }
+
+    .price-card .top-btn {
+        font-size: var(--fs-sm);
+    }
+
+    .price-card .price-text {
+        font-size: var(--fs-xxl);
+        color: var(--my-text-primary);
+        font-weight: 700;
+    }
+
+    .price-card .person {
+        font-size: var(--fs-sm);
+        color: var(--my-text-quaternary);
+    }
+
+
+
+    /* day by day */
+    .day-by-day .day-head .day-name {
+        font-size: var(--fs-md);
+        display: inline;
+        flex: 1;
+    }
+
+    .day-by-day .activity::after {
+        content: unset;
+        position: absolute;
+        left: 15px;
+        top: 52px;
+        border: 2px dashed var(--my-secondary-color);
+        height: calc(100% - 40px);
+    }
+
+    .day-item .activity-body {
+        padding-left: 0px;
+        /* padding-top: 12px; */
+    }
+
+    .activity-head .my-d-flex.my-align-center.my-gap-3 {
+        flex: 1;
+        display: inline;
+    }
+
+    .day-item .activity-name {
+        line-height: var(--line-height-sm);
+        font-size: var(--fs-sm);
+    }
+
+    .day-item .activity {
+        padding-top: 24px;
     }
 }
