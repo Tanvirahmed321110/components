@@ -1837,7 +1837,10 @@
     /* border-top: 1px solid var(--my-border-secondary); */
 }
 
-
+.highlights-items .icon {
+    width: 42px !important;
+    height: 42px !important;
+}
 
 
 @media (max-width:1439px) {
@@ -1973,7 +1976,64 @@
     }
 }
 
+
+
+
+/* For Tab */
 @media (max-width:991px) {
+
+    .event-package-main {
+        flex-direction: column;
+        padding-top: 32px;
+    }
+
+    .event-package-content {
+        width: calc(100% - 0px);
+        order: 2;
+    }
+
+    .price-card {
+        order: 1;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .event-package-main .price-card-wrap {
+        padding: 20px 20px;
+        padding-top: 4px;
+        display: flex;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 32px;
+    }
+
+    /* Product Hero */
+    .product-hero-wrap .bottom-side .left {
+        width: 60%;
+    }
+
+    .product-hero-wrap .bottom-side .right {
+        width: 38%;
+    }
+
+    .product-hero-wrap .top-side {
+        gap: 30px;
+    }
+
+    .product-hero-wrap .tour-info {
+        padding: 16px 0;
+    }
+
+    /* review slider */
+    .product-hero-wrap .bottom-side .review .desc {
+        line-height: var(--line-height-sm);
+        font-size: var(--fs-md);
+    }
+
+    .product-hero-wrap .bottom-side .review .right p {
+        font-size: var(--fs-xs);
+    }
+
     .card {
         flex-direction: column;
     }
@@ -2012,5 +2072,36 @@
     .day-by-day .day-head .day-head .right strong {
         font-size: var(--fs-sm);
         line-height: 1.4;
+    }
+
+
+
+    /* package-summery */
+    .package-summery .my-fs-xxl {
+        line-height: var(--line-height-lg);
+        margin-top: 12px;
+    }
+
+
+    /* expected-budget */
+    .expected-budget {
+        padding: 32px 0;
+    }
+
+    .customer-reviews-sec,
+    .tour-map,
+    .included-sec,
+    .support-sec,
+    .day-by-day {
+        padding: 32px 0;
+    }
+
+    .related-products-wrap {
+        padding-top: 32px;
+    }
+
+    .package-summery {
+        padding-bottom: 0;
+        padding-top: 32px;
     }
 }
