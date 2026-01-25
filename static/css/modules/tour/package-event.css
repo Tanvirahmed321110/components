@@ -1198,17 +1198,8 @@
 .expected-budget .price-area .right .my-btn {
     border-radius: var(--radius-xl);
     padding: 10px 24px;
-    transition: .3s;
 }
 
-.expected-budget .price-area .right .book-now {
-    background-color: var(--my-secondary-color);
-    color: var(--my-white);
-}
-
-.expected-budget .price-area .right .book-now:hover {
-    background-color: var(--my-primary-color);
-}
 
 .expected-budget .price-area .right .add-to-cart {
     border: 1px solid var(--my-secondary-color);
@@ -2311,5 +2302,11 @@
     .expand-all-btn {
         font-size: var(--fs-xs);
         color: var(--my-secondary-color);
+    }
+
+    /* included-sec */
+    .included-sec .item .flex-1 {
+        font-size: var(--fs-md);
+        line-height: var(--line-height-md);
     }
 }
