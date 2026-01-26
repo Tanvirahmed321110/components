@@ -197,13 +197,13 @@
     display: block;
 }
 
-.desktop-hide {
+/* .desktop-hide {
     display: none;
 }
 
 .desktop-show {
     display: block;
-}
+} */
 
 .w-dropdown-wrap-parent {
     position: relative;

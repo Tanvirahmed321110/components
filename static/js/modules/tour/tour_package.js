@@ -106,14 +106,14 @@ const commonSlider3 = new Swiper(".common-slider-3", {
     speed: 2000,
 
     autoplay: {
-        delay: 2000,
+        delay: 2012300,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
 
     breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
+        320: { slidesPerView: 1.5 },
+        576: { slidesPerView: 1.5 },
         768: { slidesPerView: 2 },
         1080: { slidesPerView: 3 },
     }

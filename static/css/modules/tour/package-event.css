@@ -2250,7 +2250,7 @@
 
     /* tour-info */
     .product-hero-wrap .tour-info {
-        width: 99%;
+        width: 97%;
     }
 
     .tour-info .item {
@@ -2522,6 +2522,113 @@
     }
 
 
+    .similar-stayin .right .text {
+        font-size: var(--fs-sm);
+    }
+
+
+    /* place card */
+    .place-card .name {
+        font-size: var(--fs-xs);
+    }
+
+    .place-card .locaiton-view {
+        font-size: var(--fs-low);
+        gap: 4px;
+    }
+
+    .place-card .view-details {
+        padding: 2px 8px;
+        font-size: 8px;
+        line-height: var(--line-height-xs);
+        border-radius: 4px;
+    }
+
+    .place-card .offer-ribbon {
+        font-size: 8px;
+    }
+
+    .sub-itenary .sub-itenary-items .item .left .key {
+        min-width: fit-content;
+        max-width: fit-content;
+        display: inline;
+        font-size: 8px;
+    }
+
+    .sub-itenary .sub-itenary-items .item .value {
+        font-size: 8px;
+        display: inline;
+        line-height: var(--line-height-low);
+    }
+
+    .sub-itenary .sub-itenary-items .right {
+        font-size: 8px;
+    }
+
+    .sub-itenary .sub-itenary-items .icon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+    }
+
+    .sub-itenary .sub-itenary-items .icon svg {
+        height: 16px;
+        width: 16px;
+    }
+
+    .sub-itenary .sub-itenary-items .item {
+        padding-bottom: 12px;
+        position: relative;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .sub-itenary .sub-itenary-items .item .left .my-d-flex.my-gap-2 {
+        flex: 1;
+        display: inline;
+        line-height: var(--line-height-low);
+    }
+
+    .food-slider .activates-card .img-wrap img {
+        width: 100%;
+        max-width: 320px;
+        max-height: 100px;
+        border-radius: 4px;
+        margin: 0;
+    }
+
+    .food-slider .new {
+        font-size: var(--fs-xs);
+    }
+
+    .food-slider .activates-card .view-details {
+        font-size: var(--fs-low);
+        padding: 4px 8px;
+    }
+
+    .food-slider .card {
+        gap: 0px !important;
+    }
+
+
+    .food-slider .card .key,
+    .food-slider .card .value {
+        font-size: var(--fs-low);
+        line-height: var(--line-height-low);
+    }
+
+    .food-slider .card .key {
+        line-height: var(--line-height-sm);
+    }
+
+    .food-slider .card .title {
+        font-size: var(--fs-sm);
+    }
+
+    .food-slider .card .content {
+        padding: 2px;
+        padding-top: 8px;
+    }
 }
 
 
