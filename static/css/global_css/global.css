@@ -2853,12 +2853,12 @@ footer .footer-bottom .left {
     }
 
     .tour-cart.package .old-wrap {
-        margin-top: -8px;
+        margin-top: -2px;
     }
 
     .package.tour-cart .visiable-content .old-price,
     .package.tour-cart .visiable-content .per-person {
-        font-size: 6px;
+        font-size: 8px;
     }
 
     /* hover conent */

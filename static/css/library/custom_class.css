@@ -6978,6 +6978,7 @@ tr {
 
     .my-flex-md-between {
         justify-content: space-between;
+        display: flex;
     }
 
     .my-align-md-start {

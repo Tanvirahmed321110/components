@@ -267,6 +267,10 @@
     width: unset;
 }
 
+.days .day-item:last-child .day-content {
+    padding: 0;
+}
+
 .day-by-day .top-btn:hover,
 .package-information .price-card .top-btn:hover {
     background-color: var(--my-secondary-color);
@@ -1980,6 +1984,10 @@
     .sub-itenary .sub-itenary-items .item .right {
         width: 20%;
     }
+
+    .itinerary-body {
+        margin-top: 24px;
+    }
 }
 
 
@@ -1987,6 +1995,40 @@
 
 /* For Tab */
 @media (max-width:991px) {
+    .section-title {
+        font-size: clamp(20px, 4.5vw, 28px) !important;
+        line-height: 1.3;
+    }
+
+    .support-sec .item {
+        border-radius: var(--radius-md);
+    }
+
+    .customer-reviews-sec .item h3 {
+        font-size: var(--fs-sm);
+    }
+
+    .expected-budget .p-price {
+        font-size: var(--fs-lg);
+    }
+
+    .support-sec .item .name {
+        font-size: var(--fs-sm);
+    }
+
+
+    .view-details-secondary {
+        white-space: nowrap;
+        padding: 6px 8px;
+    }
+
+    .support-sec .item .content {
+        justify-content: space-between;
+    }
+
+    .related-products-slider {
+        padding: 8px;
+    }
 
     .event-package-main {
         flex-direction: column;
@@ -2110,6 +2152,7 @@
         padding-top: 32px;
     }
 
+
     .package-information .section-title {
         font-size: var(--fs-xxl);
     }
@@ -2129,6 +2172,10 @@
 
     .card.my-grid-2 {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-main {
+        padding-bottom: 16px;
     }
 }
 
@@ -2283,6 +2330,11 @@
         font-size: var(--fs-sm);
         line-height: var(--line-height-sm);
         color: var(--my-text-quaternary);
+    }
+
+    .package-summery .desc {
+        font-size: var(--fs-md);
+        margin-top: 4px;
     }
 
     /* package-summery */
@@ -2552,17 +2604,17 @@
         min-width: fit-content;
         max-width: fit-content;
         display: inline;
-        font-size: 8px;
+        font-size: var(--fs-low);
     }
 
     .sub-itenary .sub-itenary-items .item .value {
-        font-size: 8px;
+        font-size: var(--fs-low);
         display: inline;
         line-height: var(--line-height-low);
     }
 
     .sub-itenary .sub-itenary-items .right {
-        font-size: 8px;
+        font-size: var(--fs-low);
     }
 
     .sub-itenary .sub-itenary-items .icon {
@@ -2628,6 +2680,34 @@
     .food-slider .card .content {
         padding: 2px;
         padding-top: 8px;
+    }
+
+    /* guider card */
+    .guider-card.card {
+        border-radius: var(--radius-xxl);
+        border: none;
+        gap: 0px;
+        padding: 8px;
+    }
+
+    .guider-card.card .content {
+        padding-bottom: 0;
+    }
+
+    .guider-card.card img {
+        border-radius: var(--radius-lg);
+    }
+
+    .card img {
+        border-radius: var(--radius-lg);
+    }
+
+    .activates-card .img-wrap img {
+        width: 100%;
+        max-width: 320px;
+        max-height: 160px;
+        border-radius: var(--radius-lg);
+        margin: 0;
     }
 }
 
