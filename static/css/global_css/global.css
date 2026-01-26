@@ -179,12 +179,29 @@
 
 }
 
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
 
 .hide {
     display: none;
 }
 
 .show {
+    display: block;
+}
+
+.desktop-hide {
+    display: none;
+}
+
+.desktop-show {
     display: block;
 }
 
@@ -710,13 +727,22 @@
 
 
 /*==============||  Tour Cart Start Here  ||===============*/
+
+.tour-cart-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
 .tour-cart {
+    width: 100%;
     height: 480px;
     border-radius: var(--radius-xxl);
     position: relative;
     cursor: pointer;
     box-shadow: var(--n-shadow-2);
 }
+
 
 .tour-cart .cart-img {
     position: relative;
@@ -2930,6 +2956,10 @@ footer .footer-bottom .left {
 
 
 @media (max-width: 767px) {
+    .my-container {
+        padding: 0 16px;
+    }
+
     .m-sidebar {
         width: 290px;
     }
@@ -2948,8 +2978,6 @@ footer .footer-bottom .left {
     .event-cart .cart-img {
         aspect-ratio: unset;
     }
-
-
 
 }
 

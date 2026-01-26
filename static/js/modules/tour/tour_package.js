@@ -55,15 +55,15 @@ const commonSlider2 = new Swiper(".common-slider-2", {
     speed: 2000,
 
     autoplay: {
-        delay: 1200,
+        delay: 121200,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
 
     breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
+        320: { slidesPerView: 1.5 },
+        576: { slidesPerView: 1.5 },
+        768: { slidesPerView: 1.5 },
         1080: { slidesPerView: 2 },
     }
 });
@@ -77,7 +77,7 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     speed: 2000,
 
     autoplay: {
-        delay: 1200,
+        delay: 121200,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
@@ -140,7 +140,9 @@ const expectedSlider = new Swiper(".expeceted-slider-wrap", {
         prevEl: ".expected-budget .prev",
     }
 });
-//===========  Expected Budget slider ===========
+
+
+//===========  Customer Gallery Budget slider ===========
 const customerGallerySlider = new Swiper(".customer-gallery-slider", {
     slidesPerView: 4,
     spaceBetween: 16,
