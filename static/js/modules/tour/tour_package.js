@@ -62,7 +62,7 @@ const commonSlider2 = new Swiper(".common-slider-2", {
 
     breakpoints: {
         320: { slidesPerView: 1.5 },
-        576: { slidesPerView: 1.5 },
+        480: { slidesPerView: 1.5 },
         768: { slidesPerView: 1.5 },
         1080: { slidesPerView: 2 },
     }
@@ -84,7 +84,7 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
 
     breakpoints: {
         320: { slidesPerView: 1.5 },
-        576: { slidesPerView: 1.5 },
+        480: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
     },
@@ -151,7 +151,7 @@ const customerGallerySlider = new Swiper(".customer-gallery-slider", {
 
     breakpoints: {
         320: { slidesPerView: 2 },
-        576: { slidesPerView: 2 },
+        480: { slidesPerView: 3 },
         768: { slidesPerView: 3 },
         992: { slidesPerView: 4 },
     },
