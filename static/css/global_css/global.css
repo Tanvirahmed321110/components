@@ -767,7 +767,6 @@
 .package.tour-cart .visiable-content {
     position: relative;
     position: absolute;
-    /* margin-top: -176px; */
     padding: 20px 22px 10px 16px;
     z-index: 2;
     bottom: 0;
@@ -776,7 +775,6 @@
     background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.01));
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    /* backdrop-filter: blur(50px); */
 }
 
 .package.tour-cart .star {
@@ -1728,7 +1726,8 @@ footer .footer-bottom .left {
 
     .my-container-cart {
         margin-right: 0;
-        width: 99%;
+        width: 100%;
+        padding-left: 5%;
         padding-right: 0;
     }
 
@@ -2426,7 +2425,8 @@ footer .footer-bottom .left {
     .my-container-cart {
         margin-right: 0;
         width: 100%;
-        padding: 0 16px;
+        padding: 0;
+        padding-left: 5%;
     }
 
     .swiper.other-common-slider {
@@ -2623,16 +2623,21 @@ footer .footer-bottom .left {
 
     .event-cart .cart-img img {
         border-radius: var(--radius-md);
-        max-height: 100px;
+        max-height: 200px;
     }
 
     .event-cart .cart-content {
         padding: 0px;
     }
 
+    .event-cart .cart-btn {
+        font-size: clamp(12px, 2.2vw, 16px);
+        ;
+    }
+
     .cart-btn {
         font-size: 8px;
-        padding: 0px 12px;
+        padding: 8px 12px;
         border-radius: 8px !important;
     }
 
@@ -2648,17 +2653,17 @@ footer .footer-bottom .left {
 
     .event-cart .cart-content .title {
         margin-top: 4px;
-        font-size: 9px;
-        line-height: var(--line-height-low) !important;
+        font-size: 12px;
+        line-height: var(--line-height-xs) !important;
     }
 
     .event-cart .star-avg .my-text-rating {
         color: var(--my-rating);
-        font-size: 6px;
+        font-size: 8px;
     }
 
     .event-cart .pick-up-location {
-        font-size: 6px !important;
+        font-size: 8px !important;
         line-height: 12px;
     }
 
@@ -2667,7 +2672,7 @@ footer .footer-bottom .left {
     }
 
     .event-cart .total-seats div {
-        font-size: 6px !important;
+        font-size: 8px !important;
     }
 
     .event-cart .new-price {
@@ -2677,7 +2682,7 @@ footer .footer-bottom .left {
     }
 
     .event-cart .old-price {
-        font-size: 6px;
+        font-size: 8px;
     }
 
     .event-cart .per-person {
@@ -2686,6 +2691,12 @@ footer .footer-bottom .left {
 
     .event-cart .btns-wrap {
         margin-top: 0;
+    }
+
+    .event-cart .top {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     /*
@@ -2756,8 +2767,8 @@ footer .footer-bottom .left {
 
     .cart-tag-left {
         position: absolute;
-        left: 6px;
-        top: 6px;
+        left: 8px;
+        top: 8px;
         font-size: 8px;
         padding: 3px 6px;
         border-radius: 6px 0 6px 0;
@@ -2820,7 +2831,9 @@ footer .footer-bottom .left {
 
     .tour-cart.package .rating,
     .tour-cart.package .visiable-content .rating {
-        font-size: 8px;
+        font-size: clamp(12px, calc(8px + (100vw - 376px) * 0.003), 14px);
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
 
     .tour-cart.package .visiable-content .avg-rating,
@@ -2838,9 +2851,9 @@ footer .footer-bottom .left {
     }
 
     .tour-cart.package .days {
-        font-size: clamp(8px,
+        font-size: clamp(12px,
                 calc(8px + (100vw - 375px) * 0.004),
-                12px);
+                14px);
         color: var(--my-rating)
     }
 
@@ -2851,7 +2864,7 @@ footer .footer-bottom .left {
     }
 
     .tour-cart.package .start-from {
-        font-size: 8px;
+        font-size: clamp(10px, calc(8px + (100vw - 376px) * 0.003), 12px);
     }
 
     .tour-cart.package .old-wrap {
@@ -2869,13 +2882,14 @@ footer .footer-bottom .left {
     }
 
     .cart-category {
-        font-size: clamp(6px, calc(6px + (100vw - 376px) * 0.003), 8px);
+        font-size: clamp(8px, calc(6px + (100vw - 376px) * 0.003), 12px);
         line-height: 10px;
         color: var(--my-white);
         font-weight: var(--fw-500);
         border-radius: var(--radius-xs);
-        padding: 1px 3px;
+        padding: 2px 4px;
         display: inline-block;
+        white-space: nowrap;
     }
 
     .tour-cart.package .hover-content .cart-title {
@@ -2884,13 +2898,13 @@ footer .footer-bottom .left {
     }
 
     .tour-cart.package .hover-content .dest {
-        font-size: clamp(8px, calc(8px + (100vw - 376px) * 0.003), 12px);
+        font-size: clamp(10px, calc(8px + (100vw - 376px) * 0.003), 12px);
         margin-top: 2px;
     }
 
     .tour-cart.package .hover-content .rating div,
     .tour-cart.package .hover-content .rating span {
-        font-size: 8px;
+        font-size: clamp(10px, calc(6px + (100vw - 376px) * 0.003), 12px);
     }
 
 

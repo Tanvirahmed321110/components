@@ -424,11 +424,11 @@ search-group .my-input-control input::placeholder {
 
 .event-cart .cart-content .title {
     margin-top: 0px;
-    font-size: var(--fs-lg);
+    /* font-size: var(--fs-lg); */
 }
 
 .event-cart .cart-content .sub-title {
-    font-size: var(--fs-sm);
+    /* font-size: var(--fs-sm); */
 }
 
 
@@ -712,15 +712,14 @@ search-group .my-input-control input::placeholder {
 
     /* tourcart package */
     .tour-cart.package .hover-content .cart-title {
-        font-size: clamp(10px, 2.2vw, 14px);
+        font-size: clamp(12px, 2.2vw, 18px);
         margin-top: 4px;
         line-height: 1.3;
     }
 
     .tour-cart.package .cart-title {
-        font-size: clamp(10px, 2.2vw, 14px);
-        line-height: var(--line-height-low);
-        line-height: 1.3;
+        font-size: clamp(14px, 2.2vw, 18px);
+        line-height: 1.4;
     }
 
     .tour-cart .price .new-price {
