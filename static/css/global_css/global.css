@@ -1275,16 +1275,27 @@ header .profile-dropdown .head {
     margin-top: 6px;
 }
 
-.swiper.other-common-slider .right-slider-arrows,
-.swiper .right-slider-arrows {
+.swiper.other-common-slider .right-slider-arrows .next,
+.swiper.other-common-slider .right-slider-arrows .prev,
+.swiper .right-slider-arrows .next,
+.swiper .right-slider-arrows .prev {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 3%;
     z-index: 5;
     transform: translate(-50%, -50%);
-    width: 98%;
+    width: 40px;
     justify-content: space-between;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper .right-slider-arrows .next,
+.swiper.other-common-slider .right-slider-arrows .next {
+    left: unset;
+    right: 0;
 }
 
 .swiper.other-common-slider .right-slider-arrows button {
@@ -3021,6 +3032,5 @@ footer .footer-bottom .left {
 }
 
 header {
-    background-color: var(--my-primary-color);
     color: var(--my-white);
 }
