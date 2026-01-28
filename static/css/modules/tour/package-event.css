@@ -2274,7 +2274,7 @@
     .event-package-main .event-price-card {
         margin: 0 auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 540px;
     }
 
     .package-information-wrap {
@@ -2956,6 +2956,16 @@
 
     .meet-up-point .my-fs-md {
         font-size: var(--fs-md);
+    }
+
+    .meet-up-point .address svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .related-products-wrap .tour-cart.package .new-price {
+        font-size: var(--fs-md);
+        font-weight: 700;
     }
 }
 

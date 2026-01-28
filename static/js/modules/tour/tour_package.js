@@ -83,7 +83,7 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     },
 
     breakpoints: {
-        320: { slidesPerView: 1.8 },
+        320: { slidesPerView: 1.4 },
         480: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
