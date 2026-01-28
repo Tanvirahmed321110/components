@@ -183,7 +183,7 @@ const mapview = new Swiper(".map-slider", {
             spaceBetween: 12,
         },
         991: {
-            slidesPerView: 2.4, // Tablet
+            slidesPerView: 2.5, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -267,12 +267,12 @@ const slider_bottom = new Swiper(".slider-bottom .bottom", {
 var swiper = new Swiper(".brandSwiper", {
     slidesPerView: 5,
     spaceBetween: 30,
-    loop: false, // ❗ Stop infinite sliding
+    loop: true, // ❗ Stop infinite sliding
     watchOverflow: true,
     speed: 800,
     autoplay: {
         delay: 0, // no gap between transitions
-        disableOnInteraction: true,
+        // disableOnInteraction: true,
     },
     speed: 5000, // higher = slower, smoother
     freeMode: true, // enables smooth continuous movement

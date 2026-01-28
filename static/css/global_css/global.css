@@ -589,13 +589,11 @@
 .event-cart .cart-img {
     width: 100%;
     cursor: pointer;
-    aspect-ratio: 16/9;
 }
 
 .event-cart .cart-img img {
     border-radius: var(--radius-xl);
     width: 100%;
-    aspect-ratio: 16/9;
 }
 
 .event-cart .cart-content {
@@ -615,6 +613,7 @@
     line-height: var(--line-height-sm);
     font-weight: var(--fw-400);
     color: var(--my-secondary-color);
+    margin-top: 8px;
 }
 
 .event-cart .cart-content .title {
