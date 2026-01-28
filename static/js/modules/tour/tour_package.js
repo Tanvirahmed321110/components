@@ -12,7 +12,7 @@ const categorySlider = new Swiper(".packageSummerySlider", {
     },
 
     breakpoints: {
-        320: { slidesPerView: 1 },
+        320: { slidesPerView: 2 },
         768: { slidesPerView: 2 },
         991: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
@@ -83,7 +83,7 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     },
 
     breakpoints: {
-        320: { slidesPerView: 1.5 },
+        320: { slidesPerView: 1.8 },
         480: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },

@@ -1780,6 +1780,10 @@
     border-radius: var(--radius-xxl);
 }
 
+.event-price-card .section-title {
+    font-size: var(--fs-xxl);
+}
+
 .event-price-card .cart-bottom {
     padding-top: 32px;
     border-top: 1px solid var(--my-border-secondary);
@@ -2087,9 +2091,16 @@
     }
 
     .support-sec .item .name {
-        font-size: var(--fs-sm);
+        font-size: clamp(12px,
+                calc(12px + (100vw - 375px) * 0.00442),
+                14px);
     }
 
+    .policy-sec li {
+        font-size: clamp(16px,
+                calc(12px + (100vw - 375px) * 0.00442),
+                18px);
+    }
 
     .view-details-secondary {
         white-space: nowrap;
@@ -2098,6 +2109,12 @@
 
     .support-sec .item .content {
         justify-content: space-between;
+        gap: 4px;
+    }
+
+    .highlights-items .key,
+    .highlights-items .value {
+        font-size: var(--fs-md);
     }
 
     .related-products-slider {
@@ -2252,10 +2269,40 @@
         line-height: 1.4;
     }
 
+
+    .packevent-package-main .price-card,
+    .event-package-main .event-price-card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .package-information-wrap {
+        padding-top: 32px;
+    }
+
+    .event-price-card .price-card-wrap {
+        margin-top: 16px;
+    }
+
+    .day-by-day {
+        padding-top: 0px;
+    }
+
+    .customer-gallery-sec {
+        margin-top: 32px;
+    }
 }
 
 
 @media (max-width:767px) {
+
+
+    .related-products-slider {
+        padding: 0px;
+        padding-bottom: 12px;
+    }
+
     .card {
         min-width: unset;
     }
@@ -2288,7 +2335,7 @@
 
     .product-hero .section-title {
         font-size: var(--fs-3xl);
-        line-height: var(--line-height-xxl);
+        line-height: var(--line-height-xl);
     }
 
     .product-hero .short-desc {
@@ -2807,9 +2854,110 @@
         border-radius: var(--radius-lg);
         margin: 0;
     }
+
+    .day-head .right div {
+        font-size: var(--fs-sm);
+        line-height: 20px;
+    }
+
+
+
+    .event-price-card .price-card-wrap {
+        padding-top: 20px;
+    }
+
+    .packevent-package-main .price-card .name {
+        font-size: var(--fs-lg);
+    }
+
+    .price-card-wrap .item-head {
+        font-size: var(--fs-lg);
+        border-bottom: 1px solid var(--my-border-secondary);
+        padding-bottom: 4px;
+    }
+
+    .price-card-wrap .my-text-quaternary.my-fs-md.my-mt-2 {
+        font-size: var(--fs-sm);
+        margin-top: 2px;
+    }
+
+    .price-card-wrap .price .new {
+        font-size: var(--fs-sm);
+    }
+
+    .price-card-wrap .my-fs-md {
+        font-size: var(--fs-sm);
+    }
+
+    .price-card-wrap .item-sub-head {
+        font-size: var(--fs-md);
+    }
+
+    .price-card-wrap .total-price {
+        font-size: var(--fs-lg);
+    }
+
+    .event-price-card .quantity input {
+        font-size: var(--fs-xs);
+    }
+
+    .price-card-wrap .bdt {
+        font-size: var(--fs-xs);
+    }
+
+    .package-summery {
+        padding-bottom: 0;
+        padding-top: 0px;
+    }
+
+    .itinerary-body {
+        margin-top: 0px;
+    }
+
+    .package-information-wrap {
+        padding-top: 0px;
+    }
+
+    .package-summery.tour {
+        padding-top: 32px;
+    }
+
+    .itinerary-body.tour {
+        margin-top: 32px;
+    }
+
+    .package-information-wrap.event {
+        margin-top: 32px;
+    }
+
+
+    /* Meet up point Event  */
+    .package-information .cheking .body {
+        padding: 16px;
+    }
+
+    .meet-up-point .cheking,
+    .meet-up-point .cheking {
+        width: 100%;
+    }
+
+    .meet-up-point .time {
+        font-size: var(--fs-sm);
+    }
+
+    .meet-up-point .body,
+    .meet-up-point .address {
+        width: 100%;
+    }
+
+    .meet-up-point .location-wrap {
+        flex: 1;
+    }
+
+    .meet-up-point .my-fs-md {
+        font-size: var(--fs-md);
+    }
 }
-
-
 
 
 
