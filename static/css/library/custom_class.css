@@ -5209,7 +5209,12 @@ tr {
     .my-container,
     .my-container-sm,
     .my-container-cart {
-        width: 92.33%;
+        width: 100%;
+        padding: 0 6%;
+    }
+
+    .my-container-cart {
+        padding-right: 0;
     }
 
     .my-grid-lg-1 {

@@ -399,37 +399,27 @@ search-group .my-input-control input::placeholder {
 
 
 .tour-cart.package .cart-title {
-    font-size: var(--fs-lg);
-    line-height: var(--line-height-md);
+    font-size: clamp(14px,
+            calc(14px + (100vw - 375px) * 0.0094),
+            24px);
+    line-height: 1.3;
 }
 
-.tour-cart .price .new-price {
-    font-size: 20px;
-}
+
 
 .package.tour-cart .visiable-content {
     padding: 20px 12px 10px 12px;
 }
 
-/* Event Cart */
-.event-cart {
-    min-height: 300px;
-    max-height: 490px;
-}
+
 
 .pick-up-location {
     color: var(--my-rating);
     font-weight: 600;
 }
 
-.event-cart .cart-content .title {
-    margin-top: 0px;
-    /* font-size: var(--fs-lg); */
-}
 
-.event-cart .cart-content .sub-title {
-    /* font-size: var(--fs-sm); */
-}
+
 
 
 
