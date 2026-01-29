@@ -100,6 +100,10 @@ const recentView = new Swiper(".recently-view-slider", {
             slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
+        991: {
+            slidesPerView: 2.8, // Tablet
+            spaceBetween: 16,
+        },
         1280: {
             slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
@@ -125,6 +129,10 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
         },
         768: {
             slidesPerView: 2.2, // Tablet
+            spaceBetween: 16,
+        },
+        991: {
+            slidesPerView: 2.8, // Tablet
             spaceBetween: 16,
         },
         1280: {
@@ -155,6 +163,10 @@ const bestDeal = new Swiper(".best-deal-slider", {
             slidesPerView: 2.2, // Tablet
             spaceBetween: 16,
         },
+        991: {
+            slidesPerView: 2.8, // Tablet
+            spaceBetween: 16,
+        },
         1280: {
             slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
@@ -183,7 +195,7 @@ const mapview = new Swiper(".map-slider", {
             spaceBetween: 12,
         },
         991: {
-            slidesPerView: 2.5, // Tablet
+            slidesPerView: 2.8, // Tablet
             spaceBetween: 16,
         },
         1280: {

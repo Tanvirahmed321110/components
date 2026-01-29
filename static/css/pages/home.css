@@ -708,13 +708,6 @@
 }
 
 
-.recently-view .slider-controls,
-.trip-plan-area .slider-controls {
-    /* position: unset; */
-    right: 9%;
-    top: -74px;
-}
-
 /* .recently-view-area .my-slider,
 .recommendation-area .my-slider,
 .best-deal-area .my-slider,
@@ -2221,7 +2214,7 @@
 
 
     .m-trip-plan .items .item .content {
-        padding: 8px;
+        padding: 12px;
     }
 
     .m-trip-plan .items .item .title {
@@ -2239,7 +2232,7 @@
         border-radius: var(--radius-pill);
         width: 100%;
         text-align: center;
-        padding: 8px 12px;
+        padding: 12px 12px;
         font-weight: 600;
     }
 
@@ -2340,9 +2333,9 @@
     }
 
     .our-achivements .items .item {
-        padding: 14px 0;
+        padding: 16px 0;
         gap: 8px;
-        aspect-ratio: 16 /16;
+        /* aspect-ratio: 16 /16; */
         justify-content: center;
     }
 
@@ -2355,7 +2348,7 @@
     .our-achivements .item .section-title {
         font-weight: var(--fw-600);
         color: var(--my-primary-color);
-        font-size: var(--fs-3xl);
+        font-size: var(--fs-xxl);
     }
 
     .our-achivements .bg-img {
@@ -2479,5 +2472,20 @@
 
     .blog-items {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .testimonial .item .mail {
+        font-size: var(--fs-xs);
+    }
+
+    .testimonial .item h5 {
+        font-size: var(--fs-md);
+        line-height: 1.2;
+    }
+
+    .testimonial .item .desc {
+        font-size: var(--fs-sm);
     }
 }

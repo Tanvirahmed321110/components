@@ -594,6 +594,7 @@
 .event-cart .cart-img img {
     border-radius: var(--radius-xl);
     width: 100%;
+    height: 220px;
 }
 
 .event-cart .cart-content {
@@ -1282,6 +1283,7 @@ header .profile-dropdown .head {
     padding-bottom: 80px;
     position: relative;
     padding-left: 8px;
+    width: 100%;
 }
 
 .swiper.other-common-slider .section-btn-wrapper {
@@ -2505,7 +2507,7 @@ footer .footer-bottom .left {
         border-radius: var(--radius-sm);
         border: 1px solid var(--my-border-gray);
         color: var(--my-primary-color);
-        font-size: var(--fs-xs);
+        font-size: var(--fs-sm);
     }
 
     .section-btn-wrapper {
@@ -2738,6 +2740,7 @@ footer .footer-bottom .left {
         background-color: #F5F5F5;
         overflow: hidden;
         position: relative;
+        width: 100%;
     }
 
 

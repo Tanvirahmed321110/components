@@ -486,7 +486,8 @@
 .popular-tour-cart .img-wrap img {
     border-radius: var(--radius-xxl);
     width: 100%;
-    aspect-ratio: 16/11;
+    height: 220px;
+    /* aspect-ratio: 16/13; */
 }
 
 .popular-tour-cart .item-content {
@@ -761,10 +762,10 @@
     width: 50%;
 }
 
-.plan-items-wrapper .tripSlider {
-    float: 1;
-}
 
+.left-side .tripSlider .right-slider-arrows .prev {
+    left: 6%;
+}
 
 /*
 =====  Trip plan single item =====
@@ -951,11 +952,11 @@
 .swiper.other-common-slider .right-slider-arrows,
 .swiper .right-slider-arrows {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     z-index: 5;
-    transform: translate(-50%, -50%);
-    width: 98%;
+    transform: translate(-50%, -45%);
+    width: 100%;
     justify-content: space-between;
     z-index: 1;
 }
