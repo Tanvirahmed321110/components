@@ -1833,35 +1833,6 @@
     flex: 1;
 }
 
-.event-price-card .quantity .qty-btns {
-    padding: 4px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--my-secondary-color);
-    background-color: var(--my-secondary-color);
-}
-
-.event-price-card .quantity .btn {
-    color: var(--my-white);
-    font-size: var(--fs-xl);
-    padding: 4px;
-    cursor: pointer;
-    flex: 1;
-    line-height: var(--line-height-low);
-    padding-bottom: 6px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-}
-
-.event-price-card .quantity .btn:hover {
-    border: 1px solid var(--my-rating);
-}
-
-.event-price-card .quantity input {
-    width: 35px;
-    height: 30px;
-    color: var(--my-secondary-color);
-    font-weight: var(--fw-600);
-}
 
 
 .event-price-card .extra-room .bed {

@@ -2,16 +2,24 @@ body {
     background-color: var(--my-bg-secondary);
 }
 
+header {
+    background-color: var(--my-bg-secondary);
+}
+
+.section-title {
+    font-size: var(--fs-xxl);
+}
+
 /* sec-sub-title */
 .sec-sub-title {
-    font-size: var(--fs-3xl);
+    font-size: var(--fs-xxl);
     font-weight: 600;
     color: var(--my-text-primary);
 }
 
 .adventure-sec .head {
     background-color: #FEFAF2;
-    padding: 33px 29px;
+    padding: 24px 29px;
     box-shadow: var(--n-shadow-2);
     border-radius: var(--radius-lg);
     cursor: pointer;
@@ -30,7 +38,7 @@ body {
 
 .adventure-sec .adventure-area {
     display: grid;
-    grid-template-columns: 1fr minmax(260px, 30%);
+    grid-template-columns: 1fr minmax(260px, 25%);
     gap: 32px;
     margin-top: 60px;
 }
@@ -43,7 +51,6 @@ body {
 }
 
 .adventure-sec .adventure-right {
-    background-color: red;
     border-radius: var(--radius-xl);
 }
 
@@ -62,11 +69,114 @@ body {
 
 /* ================ Body Item Here ================ */
 .adventure-sec .body .item {
-    padding: 10px 16px;
+    padding: 12px 16px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--my-border-secondary);
 }
 
 .adventure-sec .body .item .item-head {
     line-height: 100%;
+}
+
+.adventure-sec .body .item .item-value {
+    line-height: 100%;
+}
+
+
+/* ================ Aadventure Right Change Date and How many ================ */
+.adventure-sec .change-date,
+.adventure-sec .how-many {
+    border-radius: var(--radius-lg);
+    padding: 10px;
+    border: 1px solid var(--my-border-primary);
+    width: 100%;
+    background-color: var(--my-white);
+}
+
+.adventure-sec .change-date .inner,
+.adventure-sec .how-many .inner {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--my-border-secondary);
+    width: 100%;
+}
+
+.adventure-sec .adventure-right .date-adults-btn {
+    padding: 12px 12px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-sm);
+    border: 1px solid var(--my-border-secondary);
+    width: 70%;
+}
+
+.border-top-bottom {
+    border-top: 1px solid var(--my-border-secondary);
+    border-bottom: 1px solid var(--my-border-secondary);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--my-border-secondary);
+}
+
+.adventure-sec .adventure-right .qty-btns input {
+    font-size: var(--fs-sm);
+}
+
+
+
+
+
+
+
+/*================================||  Cart and Items Details Section Start Here  ||=================================*/
+.items-cart-sec-wrap {
+    display: grid;
+    grid-template-columns: 1fr minmax(260px, 25%);
+    gap: 32px;
+    align-items: start;
+}
+
+/* Sticky cart */
+.cart-summery {
+    position: sticky;
+    top: 100px;
+}
+
+.items-details-top {
+    height: 2222px;
+}
+
+
+
+
+
+/*================================||  Items Details TOp  ||=================================*/
+.items-details-top {
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--my-border-primary);
+    padding: 32px;
+}
+
+.items-details-top .items-details-top-inner {
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--my-border-secondary);
+    padding: 16px;
+}
+
+
+
+
+
+
+/*================================||  Cart Summery  ||=================================*/
+.cart-summery {
+    background-color: var(--my-red);
+    border-radius: var(--radius-lg);
+    padding: 12px;
+}
+
+.flight-progress {
+    width: 100%;
+    width: 300px;
+    max-width: 320px;
+    position: relative;
 }

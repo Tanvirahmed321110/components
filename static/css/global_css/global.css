@@ -1345,6 +1345,43 @@ header .profile-dropdown .head {
 
 
 /*
+====== Qunty Buttons and input ======
+*/
+
+.qty-btns {
+    padding: 4px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--my-secondary-color);
+    background-color: var(--my-secondary-color);
+}
+
+.qty-btns .btn {
+    color: var(--my-white);
+    font-size: var(--fs-xl);
+    padding: 4px 8px;
+    cursor: pointer;
+    flex: 1;
+    line-height: var(--line-height-low);
+    padding-bottom: 6px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: c;
+}
+
+.qty-btns .btn:hover {
+    border: 1px solid var(--my-rating);
+}
+
+.qty-btns input {
+    width: 35px;
+    height: 30px;
+    color: var(--my-secondary-color);
+    font-weight: var(--fw-600);
+}
+
+/*
 ====== Account ======
 */
 .click-dropdown-parent .login-have-no {
