@@ -1,0 +1,72 @@
+body {
+    background-color: var(--my-bg-secondary);
+}
+
+/* sec-sub-title */
+.sec-sub-title {
+    font-size: var(--fs-3xl);
+    font-weight: 600;
+    color: var(--my-text-primary);
+}
+
+.adventure-sec .head {
+    background-color: #FEFAF2;
+    padding: 33px 29px;
+    box-shadow: var(--n-shadow-2);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+}
+
+.adventure-sec .head .radio {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-round);
+    padding: 4px;
+    border: 4px solid var(--my-white);
+    padding: 4px;
+    outline: 4px solid var(--my-secondary-color);
+    background-color: var(--my-secondary-color);
+}
+
+.adventure-sec .adventure-area {
+    display: grid;
+    grid-template-columns: 1fr minmax(260px, 30%);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.adventure-sec .adventure-left {
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--my-border-primary);
+    background-color: var(--my-white);
+}
+
+.adventure-sec .adventure-right {
+    background-color: red;
+    border-radius: var(--radius-xl);
+}
+
+
+
+
+
+
+
+/* ================ Adventure Sec Body ================ */
+.adventure-sec .body {
+    border: 1px solid var(--my-border-secondary);
+}
+
+
+
+/* ================ Body Item Here ================ */
+.adventure-sec .body .item {
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--my-border-secondary);
+}
+
+.adventure-sec .body .item .item-head {
+    line-height: 100%;
+}
