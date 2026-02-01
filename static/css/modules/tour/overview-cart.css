@@ -143,6 +143,7 @@ header {
     grid-template-columns: 1fr minmax(320px, 25%);
     gap: 32px;
     align-items: start;
+    padding-bottom: 60px;
 }
 
 /* Sticky cart */
@@ -172,6 +173,7 @@ header {
 
 .items-details-top-inner .my-btn-pill {
     padding: 10px 24px;
+    font-size: var(--fs-sm);
 }
 
 
@@ -396,7 +398,7 @@ header {
 
 .items-details-bottom .card .view-details-btn {
     border-bottom: 1px solid var(--my-secondary-color);
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     color: var(--my-secondary-color);
     transition: .2s;
     display: flex;
@@ -419,6 +421,7 @@ header {
 
 .items-details-bottom .card .my-btn-pill {
     padding: 8px 22px;
+    font-size: var(--fs-sm);
 }
 
 .items-details-bottom .card .pricing {
