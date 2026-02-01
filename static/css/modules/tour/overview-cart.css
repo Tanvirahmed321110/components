@@ -21,9 +21,10 @@ header {
 .adventure-sec .head {
     background-color: #FEFAF2;
     padding: 24px 29px;
-    box-shadow: var(--n-shadow-2);
     border-radius: var(--radius-lg);
     cursor: pointer;
+    border: 1px solid var(--my-white-off);
+    box-shadow: var(--n-shadow-1);
 }
 
 .adventure-sec .head .section-title {
@@ -147,12 +148,9 @@ header {
 /* Sticky cart */
 .cart-summery {
     position: sticky;
-    top: 100px;
+    top: 16px;
 }
 
-.items-details-top {
-    /* height: 2222px; */
-}
 
 
 
@@ -285,6 +283,7 @@ header {
     padding: 16px;
     border-radius: var(--radius-xxl);
     border: 1px solid var(--my-border-primary);
+    perspective: 1000px;
 }
 
 .items-details-bottom .card .card-inner {
@@ -297,14 +296,42 @@ header {
     align-items: center;
 }
 
+.items-details-bottom .card:hover {
+    border-color: var(--my-secondary-color);
+}
+
+.items-details-bottom .card .img-wrap {
+    border-radius: var(--radius-lg);
+    transition: transform .6s ease;
+    transform-style: preserve-3d;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.items-details-bottom .card img {
+    transition: 1s ease;
+}
+
+
+/* when hover */
+.items-details-bottom .card:hover .img-wrap {
+    transform: rotateX(1deg) rotateY(-180deg);
+}
+
+.items-details-bottom .card:hover img {
+    transform: translateZ(0px) scale(1.1);
+}
+
 .items-details-bottom .card .card-inner .img-wrap {
     width: 40%;
+    height: 100%;
 }
 
 .items-details-bottom .card .card-inner .img-wrap img {
     border-radius: var(--radius-lg);
     border: 1px solid var(--my-white-off);
     max-height: 300px;
+    min-height: 100%;
 }
 
 .items-details-bottom .card .card-inner .card-content {
@@ -326,11 +353,17 @@ header {
 }
 
 .items-details-bottom .card .sub-title {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
 }
 
 .items-details-bottom .card .title-sm {
     font-size: var(--fs-md);
+}
+
+.card .booking-start .item {
+    max-width: 180px;
+    font-weight: 500;
+    color: var(--my-text-primary);
 }
 
 
@@ -393,6 +426,10 @@ header {
     font-weight: 400;
 }
 
+
+.items-details-bottom .card .meet {
+    max-width: 400px;
+}
 
 
 
