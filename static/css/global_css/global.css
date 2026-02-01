@@ -1375,8 +1375,8 @@ header .profile-dropdown .head {
 }
 
 .qty-btns input {
-    width: 35px;
-    height: 30px;
+    width: 32px;
+    height: 28px;
     color: var(--my-secondary-color);
     font-weight: var(--fw-600);
 }

@@ -79,6 +79,10 @@ header {
     border: 1px solid var(--my-border-secondary);
 }
 
+.adventure-sec .body .item.free {
+    padding: 24px 16px;
+}
+
 .adventure-sec .body .item .item-head {
     line-height: 100%;
 }
@@ -147,7 +151,7 @@ header {
 }
 
 .items-details-top {
-    height: 2222px;
+    /* height: 2222px; */
 }
 
 
@@ -273,6 +277,132 @@ header {
 .cart-summery .pay-btn {
     padding: 16px 24px;
 }
+
+
+/*===================  Item Details Bottom Day Cards  ====================  */
+.items-details-bottom .card {
+    display: flex;
+    padding: 16px;
+    border-radius: var(--radius-xxl);
+    border: 1px solid var(--my-border-primary);
+}
+
+.items-details-bottom .card .card-inner {
+    display: flex;
+    padding: 12px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--my-border-secondary);
+    flex: 1;
+    gap: 32px;
+    align-items: center;
+}
+
+.items-details-bottom .card .card-inner .img-wrap {
+    width: 40%;
+}
+
+.items-details-bottom .card .card-inner .img-wrap img {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--my-white-off);
+    max-height: 300px;
+}
+
+.items-details-bottom .card .card-inner .card-content {
+    flex: 1;
+}
+
+
+/* title sub-title and title sm */
+.items-details-bottom .card .title,
+.items-details-bottom .card .sub-title,
+.items-details-bottom .card .title-sm {
+    color: var(--my-text-primary);
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.items-details-bottom .card .title {
+    font-size: var(--fs-xxl);
+}
+
+.items-details-bottom .card .sub-title {
+    font-size: var(--fs-lg);
+}
+
+.items-details-bottom .card .title-sm {
+    font-size: var(--fs-md);
+}
+
+
+/* Rating */
+.items-details-bottom .card .rating .avg {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--my-white);
+    background-color: var(--my-secondary-color);
+}
+
+.items-details-bottom .card .rating .stars i {
+    color: var(--my-rating);
+    font-size: var(--fs-md);
+}
+
+
+/* total review */
+.items-details-bottom .card .total-review {
+    color: var(--my-secondary-color);
+    border-bottom: 1px solid var(--my-secondary-color);
+    font-size: var(--fs-sm);
+    transition: .2s ease;
+}
+
+.items-details-bottom .card .total-review:hover {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+}
+
+.items-details-bottom .card .view-details-btn {
+    border-bottom: 1px solid var(--my-secondary-color);
+    font-size: var(--fs-md);
+    color: var(--my-secondary-color);
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.items-details-bottom .card .view-details-btn i {
+    transition: .2s;
+}
+
+.items-details-bottom .card .view-details-btn:hover i {
+    transform: translateX(4px);
+}
+
+.items-details-bottom .card .view-details-btn:hover {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+}
+
+.items-details-bottom .card .my-btn-pill {
+    padding: 8px 22px;
+}
+
+.items-details-bottom .card .pricing {
+    font-size: var(--fs-xs);
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
