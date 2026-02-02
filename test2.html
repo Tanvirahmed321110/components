@@ -3,212 +3,205 @@
 
     <head>
         <meta charset="UTF-8">
+        <title>Custom Dropdown with Label Click</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Car Cards Slider with Live Lightbox Counter</title>
-
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-        <!-- GLightbox CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
         <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
             body {
-                background: #111;
-                color: #fff;
-                font-family: sans-serif;
-                padding: 20px;
+                background: #f4f6f8;
+                padding: 40px;
             }
 
-            .items {
-                display: flex;
-                gap: 24px;
-            }
-
-            .item {
-                background: #222;
+            .form-wrapper {
+                max-width: 420px;
+                margin: auto;
+                background: #fff;
+                padding: 24px;
                 border-radius: 12px;
-                overflow: hidden;
-                flex: 1;
-                display: flex;
-                flex-direction: column;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
             }
 
-            .item .top {
+            .my-input-control {
                 position: relative;
-                height: 200px;
+                margin-bottom: 24px;
             }
 
-            .item .swiper {
-                width: 100%;
-                height: 100%;
-            }
-
-            .item .swiper img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 12px 12px 0 0;
-            }
-
-            .item .bottom {
-                padding: 12px;
-            }
-
-            .item .car-name {
-                font-weight: bold;
-                font-size: 16px;
-                margin-bottom: 4px;
-            }
-
-            .item .car-desc {
+            .label {
+                display: inline-block;
                 font-size: 14px;
-                color: #aaa;
+                font-weight: 600;
+                margin-bottom: 6px;
+                color: #333;
+                cursor: pointer;
             }
 
-            .view-all-btn {
-                position: absolute;
-                bottom: 10px;
-                right: 10px;
-                background: rgba(0, 0, 0, 0.5);
-                color: #fff;
-                border: none;
-                padding: 6px 12px;
-                border-radius: 6px;
+            /* Selected box */
+            .dropdown-selected {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 14px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
                 cursor: pointer;
-                z-index: 4;
+                background: #fff;
+            }
+
+            .dropdown-selected span {
+                color: #444;
+            }
+
+            .arrow-icon {
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid #555;
+                border-bottom: 2px solid #555;
+                transform: rotate(45deg);
+                transition: .25s ease;
+            }
+
+            /* Options */
+            .dropdown-options {
+                position: absolute;
+                width: 100%;
+                top: calc(100% + 6px);
+                background: #fff;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+                list-style: none;
+                padding: 6px 0;
+                margin: 0;
+                display: none;
+                z-index: 20;
+                max-height: 200px;
+                overflow-y: auto;
+            }
+
+            .dropdown-options li {
+                padding: 10px 14px;
+                cursor: pointer;
+                transition: background .2s;
+            }
+
+            .dropdown-options li:hover {
+                background: #f1f1f1;
+            }
+
+            /* Active */
+            .custom-dropdown.active .dropdown-options {
+                display: block;
+            }
+
+            .custom-dropdown.active .arrow-icon {
+                transform: rotate(-135deg);
+            }
+
+            /* Error */
+            .error-message {
+                display: none;
                 font-size: 12px;
+                color: #d93025;
+                margin-top: 6px;
+            }
+
+            .custom-dropdown.error .dropdown-selected {
+                border-color: #d93025;
+            }
+
+            .custom-dropdown.error .error-message {
+                display: block;
             }
         </style>
     </head>
 
     <body>
 
-        <h2>Car Cards Slider</h2>
+        <div class="form-wrapper">
 
-        <div class="items">
+            <!-- Dropdown 1 -->
+            <div class="my-input-control custom-dropdown">
+                <label class="label">Title</label>
 
-            <!-- Car Card 1 -->
-            <div class="item">
-                <div class="top">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://i.ibb.co/ZZgJGYQ/car1.png" alt="Car 1"></div>
-                            <div class="swiper-slide"><img src="https://i.ibb.co/S4dk0z3R/car2.jpg" alt="Car 1"></div>
-                            <div class="swiper-slide"><img src="https://i.ibb.co/JFgBcCZX/car3.jpg" alt="Car 1"></div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <button class="view-all-btn">View All</button>
+                <div class="dropdown-selected">
+                    <span>Select Title</span>
+                    <div class="arrow-icon"></div>
                 </div>
-                <div class="bottom">
-                    <div class="car-name">Toyota Corolla</div>
-                    <div class="car-desc">Compact Sedan, 2023 Model</div>
-                </div>
+
+                <ul class="dropdown-options">
+                    <li data-value="1">Title One</li>
+                    <li data-value="2">Title Two</li>
+                    <li data-value="3">Title Three</li>
+                </ul>
+
+                <input type="hidden" name="title">
+                <small class="error-message">Please select a title</small>
             </div>
 
-            <!-- Car Card 2 -->
-            <div class="item">
-                <div class="top">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://i.ibb.co/97JM2Dr/car4.jpg" alt="Car 2"></div>
-                            <div class="swiper-slide"><img src="https://i.ibb.co/ZZgJGYQ/car1.png" alt="Car 2"></div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <button class="view-all-btn">View All</button>
-                </div>
-                <div class="bottom">
-                    <div class="car-name">Honda Civic</div>
-                    <div class="car-desc">Sedan, 2022 Model</div>
-                </div>
-            </div>
+            <!-- Dropdown 2 -->
+            <div class="my-input-control custom-dropdown">
+                <label class="label">Category</label>
 
-            <!-- Car Card 3 -->
-            <div class="item">
-                <div class="top">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://i.ibb.co/S4dk0z3R/car2.jpg" alt="Car 3"></div>
-                            <div class="swiper-slide"><img src="https://i.ibb.co/JFgBcCZX/car3.jpg" alt="Car 3"></div>
-                            <div class="swiper-slide"><img src="https://i.ibb.co/97JM2Dr/car4.jpg" alt="Car 3"></div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <button class="view-all-btn">View All</button>
+                <div class="dropdown-selected">
+                    <span>Select Category</span>
+                    <div class="arrow-icon"></div>
                 </div>
-                <div class="bottom">
-                    <div class="car-name">BMW X5</div>
-                    <div class="car-desc">Luxury SUV, 2023 Model</div>
-                </div>
+
+                <ul class="dropdown-options">
+                    <li data-value="family">Family</li>
+                    <li data-value="business">Business</li>
+                    <li data-value="other">Other</li>
+                </ul>
+
+                <input type="hidden" name="category">
+                <small class="error-message">Please select a category</small>
             </div>
 
         </div>
 
-        <!-- Single hidden container for GLightbox images -->
-        <div class="hidden-gallery" style="display:none;"></div>
-
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <!-- GLightbox JS -->
-        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
         <script>
-            // Initialize Swipers
-            document.querySelectorAll('.swiper').forEach(swiperEl => {
-                new Swiper(swiperEl, {
-                    loop: true,
-                    navigation: {
-                        nextEl: swiperEl.querySelector('.swiper-button-next'),
-                        prevEl: swiperEl.querySelector('.swiper-button-prev')
-                    },
-                    slidesPerView: 1,
-                    spaceBetween: 10
+            document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+                const selected = dropdown.querySelector('.dropdown-selected');
+                const label = dropdown.querySelector('.label');
+                const options = dropdown.querySelectorAll('.dropdown-options li');
+                const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+                const text = selected.querySelector('span');
+
+                function toggleDropdown() {
+                    document.querySelectorAll('.custom-dropdown').forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+                    dropdown.classList.toggle('active');
+                }
+
+                selected.addEventListener('click', e => {
+                    e.stopPropagation();
+                    toggleDropdown();
+                });
+
+                label.addEventListener('click', e => {
+                    e.stopPropagation();
+                    toggleDropdown();
+                });
+
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        text.textContent = option.textContent;
+                        hiddenInput.value = option.dataset.value;
+                        dropdown.classList.remove('active');
+                        dropdown.classList.remove('error');
+                    });
                 });
             });
 
-            const counter = document.getElementById('lightbox-counter');
-
-            // View All button click
-            document.querySelectorAll('.view-all-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const card = btn.closest('.item');
-                    const images = card.querySelectorAll('.swiper-slide img');
-
-                    const container = document.querySelector('.hidden-gallery');
-                    container.innerHTML = '';
-
-                    images.forEach(img => {
-                        const clone = img.cloneNode(true);
-                        container.appendChild(clone);
-                    });
-
-                    // Destroy previous GLightbox instance
-                    if (window.glightbox) window.glightbox.destroy();
-
-                    // Initialize GLightbox
-                    window.glightbox = GLightbox({
-                        elements: [...container.querySelectorAll('img')].map(img => ({
-                            href: img.src,
-                            type: 'image'
-                        })),
-                        loop: true,
-                        onOpen: (instance) => {
-                            counter.style.display = 'block';
-                            counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
-                        },
-                        onSlideChange: (instance) => {
-                            counter.textContent = `Image ${instance.index + 1} of ${images.length}`;
-                        },
-                        onClose: () => {
-                            counter.style.display = 'none';
-                        }
-                    });
-
-                    window.glightbox.open();
+            // Close on outside click
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.custom-dropdown').forEach(d => {
+                    d.classList.remove('active');
                 });
             });
         </script>

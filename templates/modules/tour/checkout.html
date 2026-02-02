@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Card Overview</title>
+        <title>Checkout</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
@@ -4703,7 +4703,7 @@
                                 <!--===================|| Head Left ||===================-->
                                 <div class="left my-d-flex my-gap-12 my-align-center">
                                     <div class="radio"></div>
-                                    <h1 class="section-title">Your Tour Summary </h1>
+                                    <h1 class="section-title ">Your Tour Summary </h1>
                                 </div>
 
                                 <!--===================|| Head Right  ||==================-->
@@ -5317,1190 +5317,114 @@
                             <div class="">
 
                                 <!--====================================|| Items Details ||=========================================-->
-                                <div class="items-details">
-                                    <!--=======================|| Items Details  Top||========================-->
-                                    <div class="items-details-top">
-                                        <div class="flight-all-details items-details-top-inner">
-                                            <h2 class="section-title">Flight All Details</h2>
+                                <form action="#">
+                                    <!--=======================|| Flying Form ||========================-->
+                                    <div class="flying-form form">
 
-                                            <!--============ Departure ============-->
-                                            <div class="departure">
-                                                <div class="item-details-top-head my-d-flex my-align-center my-gap-4">
-                                                    <h3 class="my-text-primary my-fs-xxl">Departure</h3>
-                                                    <img class="my-w-14" src="/static/images/biman.png" alt="icon"
-                                                        loading="lazy">
+                                        <!--==========  Head  =========-->
+                                        <div class="head">
+                                            <h3 class="my-fs-xxl my-text-primary">Who's Flying?</h3>
+                                            <p class="my-fs-md my-text-quaternary">Traveler name must match your
+                                                Government-issued photo ID
+                                                exactly.</p>
+
+                                            <!-- Required -->
+                                            <div class="required">
+                                                <div class=" my-d-flex my-gap-2 my-align-center my-mt-8">
+                                                    <span class="my-secondary-color my-fs-md my-fw-bold">*</span>
+                                                    <div class="my-fs-xl my-fw-bold my-text-primary">Required</div>
                                                 </div>
 
+                                                <p class="my-fs-md my-text-primary my-mt-4">
+                                                    DAC Dhaka-KUL Kuala Lumpur ; Tue 10 Feb 2026
+                                                </p>
+                                            </div>
 
-                                                <!-- ============ departure body ============ -->
-                                                <div class="departure-body my-mt-12">
-                                                    <div class="my-d-flex my-align-center my-gap-30">
-                                                        <div class="start-end my-d-flex my-align-center my-gap-8">
-                                                            <div class="start my-flex-column my-gap-0 flex-shrink-0">
-                                                                <!-- date -->
-                                                                <div class="date my-fs-md my-text-primary">Tue 10 Feb
-                                                                    2026
-                                                                </div>
-                                                                <!-- time -->
-                                                                <div
-                                                                    class="time my-fw-bolder my-fs-md my-text-primary my-mt-1">
-                                                                    <span>18:15</span>-<span>07:30 </span>
-                                                                </div>
-                                                                <!-- location -->
-                                                                <div class="my-fs-md my-text-primary">Dhaka (DAC)</div>
-                                                            </div>
+                                            <!-- adult -->
+                                            <div class="adult my-mt-8 border-bottom my-pb-8">
+                                                <div class="my-fs-xxl my-fw-bold ">Adult</div>
+                                                <div class="my-d-flex my-align-center my-gap-4">
+                                                    <span class="my-fw-bold my-fs-md my-text-quaternary">Booking For
+                                                    </span>
+                                                    <i class="ri-arrow-left-s-line my-fs-lg my-text-quaternary"></i>
+                                                    <span
+                                                        class="my-fw-bold my-fs-md  my-text-quaternary  my-text-quaternary">Child
+                                                    </span>
 
-                                                            <!-- time range -->
-                                                            <div
-                                                                class="flight-progress my-d-flex my-align-center my-gap-3">
-                                                                <div class="plane my-mt-6">
-                                                                    <svg width="36" height="25" viewBox="0 0 36 25"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.60547 23.2637H34.0259V24.7373H1.60547V23.2637Z"
-                                                                            fill="#90A4AE" />
-                                                                        <path
-                                                                            d="M5.11556 4.00725L3.32522 4.11262L5.74515 10.1641L12.2438 8.52076L11.6104 8.47919C10.8262 8.42775 10.0817 8.11763 9.49217 7.59887L5.59001 4.16108C5.45672 4.05214 5.28749 3.99763 5.11556 4.00725Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M19.6106 12.1016L11.7044 6.37195L15.133 6.17083L27.8406 11.6179L19.6106 12.1016Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M35.3061 9.80537C35.2318 8.53673 33.1329 7.18023 30.4017 7.3409C28.7485 7.43802 24.3349 7.69711 17.3139 8.10966C10.8363 8.49006 4.32707 9.61792 4.32707 9.61792L4.4448 11.6183C4.4448 11.6183 12.074 13.9234 18.3222 13.5563C32.93 12.6975 35.3804 11.074 35.3061 9.80537Z"
-                                                                            fill="#03A9F4" />
-                                                                        <path
-                                                                            d="M16.8829 12.2636L11.1127 19.4838L14.5421 19.2829L25.1129 11.7799L16.8829 12.2636Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M5.83192 11.5372L3.44375 13.0538L5.51229 12.9322L9.82087 11.3032L5.83192 11.5372Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M33.0526 9.48084C33.0526 9.48084 34.2763 9.16416 34.9402 8.92707C34.7903 8.73206 34.597 8.54525 34.366 8.37121L33.3344 8.43196L33.0526 9.48084Z"
-                                                                            fill="#35495D" />
-                                                                    </svg>
+                                                    <i class="ri-arrow-left-s-line my-fs-lg  my-text-quaternary"></i>
+                                                    <span class="my-fw-bold my-fs-md  my-text-quaternary">Family </span>
+                                                </div>
+                                            </div>
 
-                                                                </div>
-
-                                                                <div class="my-text-center flex-1">
-                                                                    <div class="time my-secondary-color my-fw-bold">
-                                                                        (11h
-                                                                        15min)</div>
-                                                                    <div class="progress-line">
-                                                                        <span class="dot"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <!-- end -->
-                                                            <div class="start my-flex-column my-gap-0 flex-shrink-0">
-                                                                <!-- date -->
-                                                                <div class="date my-fs-md my-text-primary">Tue 10 Feb
-                                                                    2026
-                                                                </div>
-                                                                <!-- time -->
-                                                                <div
-                                                                    class="time my-fw-bolder my-fs-md my-text-primary my-mt-1">
-                                                                    <span>18:15</span>-<span>07:30 </span>
-                                                                </div>
-                                                                <!-- location -->
-                                                                <div class="my-fs-md my-text-primary">Dhaka (DAC)</div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- class fare -->
-                                                        <div class="class-fare my-flex-column ">
-                                                            <div class="my-secondary-color my-fw-bold my-fs-md">Class/
-                                                                Fare
-                                                            </div>
-                                                            <div class="my-secondary-color my-fw-bold my-fs-md">
-                                                                Economy/Saver</div>
-                                                        </div>
+                                            <!-- Booking For -->
+                                            <div class="booking-for my-mt-8">
+                                                <div class="my-fs-xl my-fw-bold my-text-primary">Booking For</div>
+                                                <div class="my-mt-8 my-flex-column my-gap-6">
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <input type="radio" name="user_type" id="self">
+                                                        <label for="self" class="my-fs-md my-fw-bold my-text-primary">
+                                                            My Self
+                                                        </label>
                                                     </div>
 
-                                                    <!--======== Bagage and Change ======== -->
-                                                    <div class="my-d-flex my-align-center my-gap-12 my-mt-6">
-                                                        <div class="my-d-flex my-align-center my-gap-6 bag">
-                                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M1.76482 18.7266H1.17969V20.482C1.17969 20.7923 1.30298 21.09 1.52245 21.3095C1.74192 21.5289 2.03958 21.6522 2.34995 21.6522C2.66032 21.6522 2.95798 21.5289 3.17745 21.3095C3.39691 21.09 3.52021 20.7923 3.52021 20.482V18.7266H1.76482Z"
-                                                                    fill="#7A3E1A" />
-                                                                <path
-                                                                    d="M21.6499 18.7266H19.8945V20.482C19.8945 20.7923 20.0178 21.09 20.2373 21.3095C20.4568 21.5289 20.7544 21.6522 21.0648 21.6522C21.3752 21.6522 21.6728 21.5289 21.8923 21.3095C22.1118 21.09 22.2351 20.7923 22.2351 20.482V18.7266H21.6499Z"
-                                                                    fill="#7A3E1A" />
-                                                                <path
-                                                                    d="M21.6498 2.34375H1.75539C0.785916 2.34375 0 3.12967 0 4.09914V18.1423C0 19.1117 0.785916 19.8977 1.75539 19.8977H21.6498C22.6193 19.8977 23.4052 19.1117 23.4052 18.1423V4.09914C23.4052 3.12967 22.6193 2.34375 21.6498 2.34375Z"
-                                                                    fill="#E8594A" />
-                                                                <path
-                                                                    d="M21.0769 13.457H11.7148V14.6273H21.0769V13.457Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0712 10.5352H4.6875V11.7054H21.0712V10.5352Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0836 7.60742H2.35938V8.77768H21.0836V7.60742Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0836 4.68359H2.35938V5.85385H21.0836V4.68359Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0769 16.3828H11.7148V17.5531H21.0769V16.3828Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M15.2262 1.75539C15.2262 1.28983 15.0412 0.843342 14.712 0.514142C14.3828 0.184943 13.9363 0 13.4708 0H9.96C9.49444 0 9.04795 0.184943 8.71875 0.514142C8.38955 0.843342 8.20461 1.28983 8.20461 1.75539C8.20461 1.91058 8.14296 2.05941 8.03323 2.16914C7.9235 2.27887 7.77467 2.34052 7.61948 2.34052H6.44922V3.51078H7.61948C8.08504 3.51078 8.53153 3.32584 8.86073 2.99664C9.18993 2.66744 9.37487 2.22095 9.37487 1.75539C9.37487 1.60021 9.43652 1.45138 9.54625 1.34164C9.65598 1.23191 9.80482 1.17026 9.96 1.17026H13.4708C13.626 1.17026 13.7748 1.23191 13.8845 1.34164C13.9943 1.45138 14.0559 1.60021 14.0559 1.75539C14.0559 2.22095 14.2409 2.66744 14.5701 2.99664C14.8993 3.32584 15.3457 3.51078 15.8113 3.51078H16.9816V2.34052H15.8113C15.6561 2.34052 15.5073 2.27887 15.3976 2.16914C15.2878 2.05941 15.2262 1.91058 15.2262 1.75539Z"
-                                                                    fill="#7A3E1A" />
-                                                            </svg>
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <input type="radio" name="user_type" id="family" checked>
+                                                        <label for="family" class="my-fs-md my-fw-bold my-text-primary">
+                                                            Family
+                                                        </label>
+                                                    </div>
 
-                                                            <div class="my-text-primary my-fs-md my-fw-bold">Checked
-                                                                baggage: 25Kg</div>
-                                                        </div>
-                                                        <div class="change-fee my-d-flex my-align-center my-gap-6">
-                                                            <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                                    <div class="my-d-flex my-align-center my-gap-4">
+                                                        <input type="radio" name="user_type" id="others">
+                                                        <label for="others" class="my-fs-md my-fw-bold my-text-primary">
+                                                            Others
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--==========  Inputs Groups  =========-->
+                                        <div class="input-groups my-mt-20">
+                                            <div class="my-grid-2">
+
+                                                <!-- Title -->
+                                                <div class="my-input-control custom-dropdown">
+                                                    <label class="">Title</label>
+
+                                                    <div class="dropdown-selected">
+                                                        <span class="text">Select Title</span>
+                                                        <div class="arrow-icon">
+                                                            <svg width="12" height="9" viewBox="0 0 17 9" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M13.75 5.97727H15.9167M13.75 10.1591H15.9167M5.08333 14.3409H15.9167M5.08333 18.5227H15.9167M20.25 5.97727H25.125C26.022 5.97727 26.75 6.67982 26.75 7.54545V20.6136C26.75 21.4455 26.4076 22.2432 25.7981 22.8314C25.1886 23.4196 24.362 23.75 23.5 23.75M20.25 5.97727V20.6136C20.25 21.4455 20.5924 22.2432 21.2019 22.8314C21.8114 23.4196 22.638 23.75 23.5 23.75M20.25 5.97727V2.31818C20.25 1.45255 19.522 0.75 18.625 0.75H2.375C1.478 0.75 0.75 1.45255 0.75 2.31818V20.6136C0.75 21.4455 1.09241 22.2432 1.7019 22.8314C2.3114 23.4196 3.13805 23.75 4 23.75H23.5M5.08333 5.97727H9.41667V10.1591H5.08333V5.97727Z"
-                                                                    stroke="#FC5A31" stroke-width="1.5"
+                                                                <path d="M0.75 8.25L8.25 0.750001L15.75 8.25"
+                                                                    stroke="#4D4543" stroke-width="1.5"
                                                                     stroke-linecap="round" stroke-linejoin="round" />
                                                             </svg>
-
-                                                            <div>
-                                                                <p class="my-text-primary my-fs-md">Change fee: USD
-                                                                    100.00</p>
-                                                                <p class="my-text-primary my-fs-md">No-Show Penalty
-                                                                    USD 200.00
-                                                                </p>
-                                                            </div>
                                                         </div>
                                                     </div>
 
-                                                    <!-- view and change button here -->
-                                                    <div class="my-d-flex my-align-center my-gap-30 my-mt-6">
-                                                        <button
-                                                            class="my-secondary-color my-fs-md my-text-underline">View
-                                                            Details fare
-                                                            Condition</button>
-                                                        <button class="my-btn my-primary-btn my-btn-pill">
-                                                            <span class="content">
-                                                                Change
-                                                                Fare</span>
-                                                        </button>
+                                                    <div class="wrap">
+                                                        <ul class="dropdown-options">
+                                                            <li class="item active" data-value="1">Title One</li>
+                                                            <li class="item" data-value="2">Title Two</li>
+                                                            <li class="item" data-value="3">Title Three</li>
+                                                        </ul>
                                                     </div>
-                                                </div>
-                                            </div>
 
-
-                                            <!--============ Return ============-->
-                                            <div class="departure my-mt-16">
-                                                <div class="item-details-top-head my-d-flex my-align-center my-gap-4  ">
-                                                    <h3 class="my-text-primary  my-fs-xxl">Return</h3>
-                                                    <img class="my-w-14" src="/static/images/biman.png" alt="icon"
-                                                        loading="lazy">
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="hidden" name="title" class="error">
+                                                    <small class="error-message">Please select a title</small>
                                                 </div>
 
-
-                                                <!-- ============ departure body ============ -->
-                                                <div class="departure-body my-mt-12">
-                                                    <div class="my-d-flex my-align-center my-gap-30">
-                                                        <div class="start-end my-d-flex my-align-center my-gap-8">
-                                                            <div class="start my-flex-column my-gap-0 flex-shrink-0">
-                                                                <!-- date -->
-                                                                <div class="date my-fs-md my-text-primary">Tue 10 Feb
-                                                                    2026
-                                                                </div>
-                                                                <!-- time -->
-                                                                <div
-                                                                    class="time my-fw-bolder my-fs-md my-text-primary my-mt-1">
-                                                                    <span>18:15</span>-<span>07:30 </span>
-                                                                </div>
-                                                                <!-- location -->
-                                                                <div class="my-fs-md my-text-primary">Dhaka (DAC)</div>
-                                                            </div>
-
-                                                            <!-- time range -->
-                                                            <div
-                                                                class="flight-progress my-d-flex my-align-center my-gap-3">
-                                                                <div class="plane my-mt-6">
-                                                                    <svg width="36" height="25" viewBox="0 0 36 25"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M1.60547 23.2637H34.0259V24.7373H1.60547V23.2637Z"
-                                                                            fill="#90A4AE" />
-                                                                        <path
-                                                                            d="M5.11556 4.00725L3.32522 4.11262L5.74515 10.1641L12.2438 8.52076L11.6104 8.47919C10.8262 8.42775 10.0817 8.11763 9.49217 7.59887L5.59001 4.16108C5.45672 4.05214 5.28749 3.99763 5.11556 4.00725Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M19.6106 12.1016L11.7044 6.37195L15.133 6.17083L27.8406 11.6179L19.6106 12.1016Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M35.3061 9.80537C35.2318 8.53673 33.1329 7.18023 30.4017 7.3409C28.7485 7.43802 24.3349 7.69711 17.3139 8.10966C10.8363 8.49006 4.32707 9.61792 4.32707 9.61792L4.4448 11.6183C4.4448 11.6183 12.074 13.9234 18.3222 13.5563C32.93 12.6975 35.3804 11.074 35.3061 9.80537Z"
-                                                                            fill="#03A9F4" />
-                                                                        <path
-                                                                            d="M16.8829 12.2636L11.1127 19.4838L14.5421 19.2829L25.1129 11.7799L16.8829 12.2636Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M5.83192 11.5372L3.44375 13.0538L5.51229 12.9322L9.82087 11.3032L5.83192 11.5372Z"
-                                                                            fill="#1565C0" />
-                                                                        <path
-                                                                            d="M33.0526 9.48084C33.0526 9.48084 34.2763 9.16416 34.9402 8.92707C34.7903 8.73206 34.597 8.54525 34.366 8.37121L33.3344 8.43196L33.0526 9.48084Z"
-                                                                            fill="#35495D" />
-                                                                    </svg>
-
-                                                                </div>
-
-                                                                <div class="my-text-center flex-1">
-                                                                    <div class="time my-secondary-color my-fw-bold">
-                                                                        (11h
-                                                                        15min)</div>
-                                                                    <div class="progress-line">
-                                                                        <span class="dot"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <!-- end -->
-                                                            <div class="start my-flex-column my-gap-0 flex-shrink-0">
-                                                                <!-- date -->
-                                                                <div class="date my-fs-md my-text-primary">Tue 10 Feb
-                                                                    2026
-                                                                </div>
-                                                                <!-- time -->
-                                                                <div
-                                                                    class="time my-fw-bolder my-fs-md my-text-primary my-mt-1">
-                                                                    <span>18:15</span>-<span>07:30 </span>
-                                                                </div>
-                                                                <!-- location -->
-                                                                <div class="my-fs-md my-text-primary">Dhaka (DAC)</div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- class fare -->
-                                                        <div class="class-fare my-flex-column ">
-                                                            <div class="my-secondary-color my-fw-bold my-fs-md">Class/
-                                                                Fare
-                                                            </div>
-                                                            <div class="my-secondary-color my-fw-bold my-fs-md">
-                                                                Economy/Saver</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--======== Bagage and Change ======== -->
-                                                    <div class="my-d-flex my-align-center my-gap-12 my-mt-6">
-                                                        <div class="my-d-flex my-align-center my-gap-6 bag">
-                                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M1.76482 18.7266H1.17969V20.482C1.17969 20.7923 1.30298 21.09 1.52245 21.3095C1.74192 21.5289 2.03958 21.6522 2.34995 21.6522C2.66032 21.6522 2.95798 21.5289 3.17745 21.3095C3.39691 21.09 3.52021 20.7923 3.52021 20.482V18.7266H1.76482Z"
-                                                                    fill="#7A3E1A" />
-                                                                <path
-                                                                    d="M21.6499 18.7266H19.8945V20.482C19.8945 20.7923 20.0178 21.09 20.2373 21.3095C20.4568 21.5289 20.7544 21.6522 21.0648 21.6522C21.3752 21.6522 21.6728 21.5289 21.8923 21.3095C22.1118 21.09 22.2351 20.7923 22.2351 20.482V18.7266H21.6499Z"
-                                                                    fill="#7A3E1A" />
-                                                                <path
-                                                                    d="M21.6498 2.34375H1.75539C0.785916 2.34375 0 3.12967 0 4.09914V18.1423C0 19.1117 0.785916 19.8977 1.75539 19.8977H21.6498C22.6193 19.8977 23.4052 19.1117 23.4052 18.1423V4.09914C23.4052 3.12967 22.6193 2.34375 21.6498 2.34375Z"
-                                                                    fill="#E8594A" />
-                                                                <path
-                                                                    d="M21.0769 13.457H11.7148V14.6273H21.0769V13.457Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0712 10.5352H4.6875V11.7054H21.0712V10.5352Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0836 7.60742H2.35938V8.77768H21.0836V7.60742Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0836 4.68359H2.35938V5.85385H21.0836V4.68359Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M21.0769 16.3828H11.7148V17.5531H21.0769V16.3828Z"
-                                                                    fill="#D13E37" />
-                                                                <path
-                                                                    d="M15.2262 1.75539C15.2262 1.28983 15.0412 0.843342 14.712 0.514142C14.3828 0.184943 13.9363 0 13.4708 0H9.96C9.49444 0 9.04795 0.184943 8.71875 0.514142C8.38955 0.843342 8.20461 1.28983 8.20461 1.75539C8.20461 1.91058 8.14296 2.05941 8.03323 2.16914C7.9235 2.27887 7.77467 2.34052 7.61948 2.34052H6.44922V3.51078H7.61948C8.08504 3.51078 8.53153 3.32584 8.86073 2.99664C9.18993 2.66744 9.37487 2.22095 9.37487 1.75539C9.37487 1.60021 9.43652 1.45138 9.54625 1.34164C9.65598 1.23191 9.80482 1.17026 9.96 1.17026H13.4708C13.626 1.17026 13.7748 1.23191 13.8845 1.34164C13.9943 1.45138 14.0559 1.60021 14.0559 1.75539C14.0559 2.22095 14.2409 2.66744 14.5701 2.99664C14.8993 3.32584 15.3457 3.51078 15.8113 3.51078H16.9816V2.34052H15.8113C15.6561 2.34052 15.5073 2.27887 15.3976 2.16914C15.2878 2.05941 15.2262 1.91058 15.2262 1.75539Z"
-                                                                    fill="#7A3E1A" />
-                                                            </svg>
-
-                                                            <div class="my-text-primary my-fs-md my-fw-bold">Checked
-                                                                baggage: 25Kg</div>
-                                                        </div>
-                                                        <div class="change-fee my-d-flex my-align-center my-gap-6">
-                                                            <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M13.75 5.97727H15.9167M13.75 10.1591H15.9167M5.08333 14.3409H15.9167M5.08333 18.5227H15.9167M20.25 5.97727H25.125C26.022 5.97727 26.75 6.67982 26.75 7.54545V20.6136C26.75 21.4455 26.4076 22.2432 25.7981 22.8314C25.1886 23.4196 24.362 23.75 23.5 23.75M20.25 5.97727V20.6136C20.25 21.4455 20.5924 22.2432 21.2019 22.8314C21.8114 23.4196 22.638 23.75 23.5 23.75M20.25 5.97727V2.31818C20.25 1.45255 19.522 0.75 18.625 0.75H2.375C1.478 0.75 0.75 1.45255 0.75 2.31818V20.6136C0.75 21.4455 1.09241 22.2432 1.7019 22.8314C2.3114 23.4196 3.13805 23.75 4 23.75H23.5M5.08333 5.97727H9.41667V10.1591H5.08333V5.97727Z"
-                                                                    stroke="#FC5A31" stroke-width="1.5"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-
-                                                            <div>
-                                                                <p class="my-text-primary my-fs-md">Change fee: USD
-                                                                    100.00</p>
-                                                                <p class="my-text-primary my-fs-md">No-Show Penalty
-                                                                    USD 200.00
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- view and change button here -->
-                                                    <div class="my-d-flex my-align-center my-gap-30 my-mt-6">
-                                                        <button
-                                                            class="my-secondary-color my-fs-md my-text-underline">View
-                                                            Details fare
-                                                            Condition</button>
-                                                        <button class="my-btn my-primary-btn my-btn-pill">
-                                                            <span class="content">
-                                                                Change
-                                                                Fare</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                </div>
-                                <!--=================================|| Items Details Bottom ||=======================================-->
-                                <div class="items-details-bottom my-mt-25">
-                                    <h2 class="section-title">Day 1: Arrive in Bangkok </h2>
+                                </form>
 
-                                    <!--=====================|| All Days Here ||==================-->
-                                    <div class="day-items">
 
-                                        <!--=================  Car Card Here  =================-->
-                                        <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                            <div class="card">
-                                                <div class="card-inner">
-
-                                                    <!--========== Card Image =========-->
-                                                    <div class="img-wrap">
-                                                        <img src="/static/images/car (1).jpg" alt="card image"
-                                                            loading="lazy">
-                                                    </div>
-
-                                                    <!--=========== Card Content ==========-->
-                                                    <div class="card-content">
-                                                        <div class="title-sm">Home to Airport Pick-up</div>
-                                                        <div class="title my-mt-3">Sedan Car <span class="pricing">(or
-                                                                Similar
-                                                                intermediate)</span></div>
-
-                                                        <!-- date -->
-                                                        <div class="date my-mt-10 my-text-primary my-fs-sm"> <span>Tue
-                                                                10 Feb
-                                                                2026
-                                                                ;</span> <span>
-                                                                12:00PM-12:00AM</span>
-                                                        </div>
-
-                                                        <!-- rating -->
-                                                        <div class="rating my-d-flex my-align-center my-gap-3 my-my-6">
-                                                            <div class="avg">4.5</div>
-                                                            <div class="stars my-d-flex ">
-                                                                <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i> <i
-                                                                    class="ri-star-half-fill"></i>
-                                                                <!-- <i class="ri-star-line"></i> -->
-                                                            </div>
-
-                                                            <!-- total review -->
-                                                            <a href="#" class="total-review my-d-flex my-gap-2"><span
-                                                                    class="">2540</span>Review</a>
-                                                        </div>
-
-                                                        <p class="my-text-primary">Full Coverage
-                                                            (Non-Refundable)</p>
-
-                                                        <div
-                                                            class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                            <a href="#" class="view-details-btn">View Details <i
-                                                                    class="ri-arrow-right-s-line"></i>
-                                                            </a>
-                                                            <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                    class="content">Change Car</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!--=================  Stayin Card Here  =================-->
-                                        <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                            <div class="card">
-                                                <div class="card-inner">
-
-                                                    <!--========== Card Image =========-->
-                                                    <div class="img-wrap">
-                                                        <img src="/static/images/hotel-cart6 (2).jpg" alt="card image"
-                                                            loading="lazy">
-                                                    </div>
-
-                                                    <!--=========== Card Content ==========-->
-                                                    <div class="card-content">
-                                                        <div class="title">Stayin </div>
-                                                        <!-- date -->
-                                                        <div class="date my-mt-2 my-text-primary my-fs-sm"> <span>Tue 10
-                                                                Feb
-                                                                2026
-                                                                ;</span> <span>
-                                                                12:00PM-12:00AM</span>
-                                                        </div>
-                                                        <div class="sub-title my-mt-8">Sun Premium Hotel</div>
-
-
-
-                                                        <!-- rating -->
-                                                        <div class="my-d-flex my-align-center my-gap-24 flex-wrap">
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.5</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i> <i
-                                                                        class="ri-star-half-fill"></i>
-                                                                    <!-- <i class="ri-star-line"></i> -->
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">2540</span>Review</a>
-                                                            </div>
-
-                                                            <div>
-                                                                <div class="my-secondary-color my-fw-bold">Class/ Fare
-                                                                </div>
-                                                                <div class="my-secondary-color my-fw-bold">Economy/Saver
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <p class="my-text-primary">Non -Refundable</p>
-
-                                                        <div class="my-mt-8">
-                                                            <div class="title-sm">Deluxe Room</div>
-                                                            <div class="my-d-flex my-gap-8 my-mt-3">
-
-                                                                <!-- time -->
-                                                                <div class="my-d-flex my-align-center my-gap-4">
-                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M7.68359 5.13672V8.63672L9.91087 10.2276"
-                                                                            stroke="#FC5A31" stroke-width="2"
-                                                                            stroke-linecap="round" />
-                                                                        <path
-                                                                            d="M13.7875 4.06234C12.8765 2.72338 11.5294 1.74172 9.97576 1.28462C8.42212 0.827516 6.75805 0.923259 5.26709 1.55553C3.77613 2.18781 2.55053 3.31749 1.79911 4.7521C1.04769 6.18671 0.816952 7.83748 1.1462 9.42315C1.47546 11.0088 2.34433 12.4313 3.60478 13.4481C4.86523 14.465 6.43927 15.0133 8.0587 14.9997C9.67813 14.9862 11.2428 14.4115 12.486 13.3736C13.7292 12.3358 14.5741 10.899 14.8767 9.30802"
-                                                                            stroke="#FC5A31" stroke-width="2" />
-                                                                        <path
-                                                                            d="M10.8633 3.86381H13.7269L13.4087 1.31836"
-                                                                            stroke="#FC5A31" stroke-width="2"
-                                                                            stroke-linecap="round" />
-                                                                    </svg>
-
-                                                                    <p class="my-text-primary my-fs-md">2 Night ( check
-                                                                        -in Feb2
-                                                                        )</p>
-                                                                </div>
-
-                                                                <!-- time -->
-                                                                <div
-                                                                    class="my-d-flex my-align-center my-gap-4 flex-wrap">
-                                                                    <svg width="20" height="14" viewBox="0 0 18 12"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <rect x="0.25" y="0.25" width="0.5"
-                                                                            height="11.5" stroke="#FC5A31"
-                                                                            stroke-width="0.5" />
-                                                                        <rect x="17.75" y="9.25" width="0.5"
-                                                                            height="17.5"
-                                                                            transform="rotate(90 17.75 9.25)"
-                                                                            stroke="#FC5A31" stroke-width="0.5" />
-                                                                        <rect x="17.75" y="11.75" width="0.5"
-                                                                            height="10.5"
-                                                                            transform="rotate(-180 17.75 11.75)"
-                                                                            stroke="#FC5A31" stroke-width="0.5" />
-                                                                        <rect x="9.25" y="1.75" width="0.5" height="8.5"
-                                                                            transform="rotate(-90 9.25 1.75)"
-                                                                            stroke="#FC5A31" stroke-width="0.5" />
-                                                                        <rect x="9.25" y="1.25" width="0.5" height="8.5"
-                                                                            stroke="#FC5A31" stroke-width="0.5" />
-                                                                        <circle cx="5" cy="5" r="2.25" stroke="#FC5A31"
-                                                                            stroke-width="1.5" />
-                                                                    </svg>
-
-                                                                    <p class="my-text-primary my-fs-md">1 Queen bed Or 2
-                                                                        Twin
-                                                                        Beds</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div
-                                                            class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                            <div class="my-d-flex my-gap-6">
-                                                                <a href="#" class="view-details-btn">View Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <a href="#" class="view-details-btn">Stay Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                            </div>
-                                                            <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                    class="content">Change Room</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!--=================  Taxi Or Urer Card Here  =================-->
-                                        <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                            <div class="card">
-                                                <div class="card-inner">
-
-                                                    <!--========== Card Image =========-->
-                                                    <div class="img-wrap">
-                                                        <img src="https://i.ibb.co.com/0Vr9ZgZZ/taxi.jpg" alt="taxi"
-                                                            loading="lazy">
-                                                    </div>
-
-                                                    <!--=========== Card Content ==========-->
-                                                    <div class="card-content">
-
-                                                        <div class="title-sm">Home Pick-Up & Droup-Up</div>
-                                                        <div class="title my-mt-2">Car Rent </div>
-                                                        <div class="sub-title my-mt-3">
-                                                            Taxi/Uber
-                                                            <span class="pricing">(or
-                                                                Similar
-                                                                intermediate)</span>
-                                                        </div>
-
-                                                        <!-- date -->
-                                                        <div class="date my-mt-10 my-text-primary my-fs-md"> <span>Tue
-                                                                10 Feb
-                                                                2026
-                                                                ;</span> <span>
-                                                                12:00PM-12:00AM</span>
-                                                        </div>
-
-                                                        <!-- rating -->
-                                                        <div class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                            <div class="avg">4.5</div>
-                                                            <div class="stars my-d-flex ">
-                                                                <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i> <i
-                                                                    class="ri-star-half-fill"></i>
-                                                                <!-- <i class="ri-star-line"></i> -->
-                                                            </div>
-
-                                                            <!-- total review -->
-                                                            <a href="#" class="total-review my-d-flex my-gap-2"><span
-                                                                    class="">2540</span>Review</a>
-                                                        </div>
-
-                                                        <p class="my-text-primary">Full Coverage
-                                                            (Non-Refundable)</p>
-
-                                                        <div
-                                                            class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                            <a href="#" class="view-details-btn">View Details <i
-                                                                    class="ri-arrow-right-s-line"></i>
-                                                            </a>
-                                                            <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                    class="content">Change Car</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <!--=================  Paid Activity Dhaka University Card Here  =================-->
-                                        <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                            <div class="card">
-                                                <div class="card-inner">
-
-                                                    <!--========== Card Image =========-->
-                                                    <div class="img-wrap">
-                                                        <img src="https://i.ibb.co.com/4R1g4FM7/hotel.jpg" alt="hotel"
-                                                            loading="lazy">
-                                                    </div>
-
-                                                    <!--=========== Card Content ==========-->
-                                                    <div class="card-content">
-
-                                                        <div class="title-sm">Paid Activity</div>
-                                                        <div class="title my-mt-0">Evening at Leisure </div>
-                                                        <!-- date -->
-                                                        <div class="date my-mt-2 my-text-primary my-fs-sm"> <span>Tue
-                                                                Mon, Feb 2
-                                                                ;</span> <span>
-                                                                (12:00AM-9:00PM)</span>
-                                                        </div>
-                                                        <div class="sub-title my-mt-8">
-                                                            Dhaka University
-                                                        </div>
-
-
-                                                        <!-- rating -->
-                                                        <div class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                            <div class="avg">4.0</div>
-                                                            <div class="stars my-d-flex ">
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-fill"></i>
-                                                                <i class="ri-star-line"></i>
-                                                            </div>
-
-                                                            <!-- total review -->
-                                                            <a href="#" class="total-review my-d-flex my-gap-2"><span
-                                                                    class="">120</span>Review</a>
-                                                        </div>
-
-                                                        <div class="title-sm my-mt-12 meet">
-                                                            Meet-Up Point / Pick-up:
-                                                            <span
-                                                                class="my-fs-md my-fw-bold my-secondary-color">MotiJhil,
-                                                                Sapla Chottor, Sonali Bank.</span>
-                                                        </div>
-
-                                                        <div
-                                                            class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                            <a href="#" class="view-details-btn">View Details <i
-                                                                    class="ri-arrow-right-s-line"></i>
-                                                            </a>
-                                                            <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                    class="content">Change Location</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-                                    <!--==================================|| Day 2 Start Here  ||======================================-->
-                                    <div class="my-mt-24">
-                                        <h2 class="section-title">Day 2: Dhaka City Tour & Cultural Exploration </h2>
-
-                                        <!--=====================|| All Days Here ||==================-->
-                                        <div class="day-items">
-
-                                            <!--=================  Paid Activity Dhaka University Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/4R1g4FM7/hotel.jpg"
-                                                                alt="hotel" loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-
-                                                            <div class="title-sm">Paid Package Activity</div>
-                                                            <div class="title my-mt-0">Dhaka City Tour</div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    Mon, Feb 2
-                                                                    ;</span> <span>
-                                                                    (12:00AM-9:00PM)</span>
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.0</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">120</span>Review</a>
-                                                            </div>
-
-                                                            <div class="title-sm my-mt-12 meet">
-                                                                Half Day Dhaka City Tour:
-                                                                <span class="my-fs-md my-fw-bold my-secondary-color">4
-                                                                    pick-Up Location , old Phuket Town, Wat Chalone, Big
-                                                                    Buddha, Karon View Point, Naka Weekend Market</span>
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">View Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Location</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--=================  Paid Activity Dhaka University Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/ycfMkBrF/food.jpg" alt="food"
-                                                                loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-
-                                                            <div class="my-fw-bold my-text-primary">Preferred Food Item
-                                                            </div>
-                                                            <div class="title my-mt-1">Indian Food</div>
-                                                            <div class="sub-title">Michelin Food Join-in Tour</div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    Mon, Feb 2
-                                                                    ;</span> <span>
-                                                                    (12:00AM-9:00PM)</span>
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.0</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">120</span>Review</a>
-                                                            </div>
-
-                                                            <div class="desc my-text-primary my-mt-10 meet my-fs-md">
-                                                                Indian Fresh Plater Item with Roti, chapati, naan, or
-                                                                poori. chutney, pickles (achar), and crispy.
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-8 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">View Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Location</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--=================  Car Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/5g142p1r/place2.jpg"
-                                                                alt="place2" loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-                                                            <div class="title-sm">Paid Activity</div>
-                                                            <div class="title my-mt-3">Thai Cineplex with Riverfront
-                                                            </div>
-
-                                                            <!-- date -->
-                                                            <div class="date my-mt-3 my-text-primary my-fs-md">
-                                                                <span>Tue
-                                                                    10 Feb
-                                                                    2026
-                                                                    ;</span> <span>
-                                                                    12:00PM-12:00AM</span>
-                                                            </div>
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-8">
-                                                                <div class="avg">4.5</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i> <i
-                                                                        class="ri-star-half-fill"></i>
-                                                                    <!-- <i class="ri-star-line"></i> -->
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">2540</span>Review</a>
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-12 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">View Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Car</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <!--==================================|| Day 3 Start Here  ||======================================-->
-                                    <div class="my-mt-24 day">
-                                        <h2 class="section-title">Day 3 : Bangkok to Phuket – Beach Escape </h2>
-
-                                        <!--=====================|| All Days Here ||==================-->
-                                        <div class="day-items">
-
-                                            <!--=================  Train Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/39XyVDQB/train.jpg"
-                                                                alt="train" loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-
-                                                            <div class="title my-mt-0">Train</div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    Mon, Feb 2
-                                                                    ;</span> <span>
-                                                                    (12:00AM-9:00PM)</span>
-                                                            </div>
-                                                            <div class="title-sm">Bangkok to Phuket Journey bt Train
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.0</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">120</span>Review</a>
-                                                            </div>
-
-                                                            <div class="my-fs-sm my-fw-bold my-text-primary my-mt-12">
-                                                                Train Including Facilities: <span
-                                                                    class="my-fw-medium my-secondary-color">Food like
-                                                                    breakfast &
-                                                                    Lunch</span>
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-10 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">View Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--=================  Guided  Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/qwXB5JL/guider.jpg"
-                                                                alt="guider" loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-
-                                                            <div class="title ">Guided Tour </div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    Mon, Feb 2
-                                                                    ;</span> <span>
-                                                                    (12:00AM-9:00PM)</span>
-                                                            </div>
-                                                            <div class="my-fw-bold my-text-primary"> Gaider Name:
-                                                                <span class="my-fw-bold my-secondary-color">Md Tanvir
-                                                                    Ahmed</span>
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.0</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">120</span>Review</a>
-                                                            </div>
-
-                                                            <div class="my-text-primary my-fw-bold my-mt-10 meet">
-                                                                Full Day Phuket City Tour:
-                                                                <span class="my-fw-medium my-secondary-color"> 4
-                                                                    pick-Up Location , old Phuket Town, Wat Chalone, Big
-                                                                    Buddha, Karon View Point, Naka Weekend Market.
-                                                                </span>
-                                                            </div>
-
-                                                            <div class="my-d-flex my-gap-24 my-mt-10 booking-start">
-                                                                <!-- booking for  -->
-                                                                <div class="my-fs-sm item">Booking For : <span
-                                                                        class="my-fw-bold my-secondary-color">Full
-                                                                        Day Phuket City
-                                                                        Tour</span></div>
-                                                                <!-- start from -->
-                                                                <div class="my-fs-sm item">Start From:
-                                                                    <span class="my-fw-bold my-secondary-color">HOtel
-                                                                        Sheraton (10:00AM)</span>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <!-- card buttons -->
-                                                            <div
-                                                                class="card-btns my-mt-8 my-d-flex  my-align-center my-gap-16">
-                                                                <!-- view button -->
-                                                                <a href="#" class="view-details-btn">Location Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <!-- change location -->
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Location</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!--=================  Ship Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/VcVy9VCY/ship.jpg" alt="ship"
-                                                                loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-                                                            <div class="title ">Gulf of Thailand Curies tour
-                                                            </div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    10 Feb
-                                                                    2026
-                                                                    ;</span> <span>
-                                                                    12:00PM-12:00AM</span>
-                                                            </div>
-                                                            <div class="title-sm my-mt-2">2-Days Gulf of thailand Curies
-                                                                Tour
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.5</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i> <i
-                                                                        class="ri-star-half-fill"></i>
-                                                                    <!-- <i class="ri-star-line"></i> -->
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">2540</span>Review</a>
-                                                            </div>
-
-                                                            <div class="my-fw-bold my-text-primary  my-mt-10 meet">
-                                                                2 Days Thailand Curies Tour:
-                                                                <span class="my-fw-medium my-secondary-color">
-                                                                    4
-                                                                    pick-Up Location , old Phuket Town, Wat Chalone, Big
-                                                                    Buddha, Karon View Point, Naka Weekend Market.
-                                                                </span>
-                                                            </div>
-
-                                                            <div class="my-d-flex my-gap-24 my-mt-8 booking-start">
-                                                                <!-- booking for  -->
-                                                                <div class="my-fs-sm item">Event Deration : <span
-                                                                        class="my-fw-bold my-secondary-color">2
-                                                                        Days</span></div>
-                                                                <!-- start from -->
-                                                                <div class="my-fs-sm item">Pick-Up:
-                                                                    <span
-                                                                        class="my-fw-bold my-secondary-color">Available</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-10 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">Event Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Car</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <!--=================  Curies SHip OR Similar Card Here  =================-->
-                                            <div class="day-item my-mt-12 my-flex-column my-gap-16">
-                                                <div class="card">
-                                                    <div class="card-inner">
-
-                                                        <!--========== Card Image =========-->
-                                                        <div class="img-wrap">
-                                                            <img src="https://i.ibb.co.com/wFtdpxP5/similarship.jpg"
-                                                                alt="similarship" loading="lazy">
-                                                        </div>
-
-                                                        <!--=========== Card Content ==========-->
-                                                        <div class="card-content">
-                                                            <div class="title ">Gulf of Thailand Curies tour
-                                                            </div>
-                                                            <!-- date -->
-                                                            <div class="date my-mt-2 my-text-primary my-fs-sm">
-                                                                <span>Tue
-                                                                    10 Feb
-                                                                    2026
-                                                                    ;</span> <span>
-                                                                    12:00PM-12:00AM</span>
-                                                            </div>
-                                                            <div class="title-sm my-mt-2">2-Days Gulf of thailand Curies
-                                                                Tour
-                                                            </div>
-
-
-                                                            <!-- rating -->
-                                                            <div
-                                                                class="rating my-d-flex my-align-center my-gap-3 my-my-4">
-                                                                <div class="avg">4.5</div>
-                                                                <div class="stars my-d-flex ">
-                                                                    <i class="ri-star-fill"></i> <!-- filled star -->
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i> <i
-                                                                        class="ri-star-half-fill"></i>
-                                                                    <!-- <i class="ri-star-line"></i> -->
-                                                                </div>
-
-                                                                <!-- total review -->
-                                                                <a href="#"
-                                                                    class="total-review my-d-flex my-gap-2"><span
-                                                                        class="">2540</span>Review</a>
-                                                            </div>
-
-                                                            <div class="my-fs-sm my-fw-bold my-text-primary my-mt-8 ">
-                                                                2 Days Thailand Curies Tour:
-                                                                <span class="my-fs-sm my-fw-medium my-secondary-color">
-                                                                    4
-                                                                    pick-Up Location , old Phuket Town, Wat Chalone, Big
-                                                                    Buddha, Karon View Point, Naka Weekend Market.
-                                                                </span>
-                                                            </div>
-
-                                                            <div class="my-d-flex my-gap-24 my-mt-8 booking-start">
-                                                                <!-- booking for  -->
-                                                                <div class="my-fs-sm item">Departure: <span
-                                                                        class="my-fw-bold my-secondary-color"> 10:00 AM
-                                                                        Dhaka Biman Bandar</span></div>
-                                                                <!-- start from -->
-                                                                <div class="my-fs-sm item">Arrival:
-                                                                    <span class="my-fw-bold my-secondary-color">10:00PM
-                                                                        Dhaka Biman Bandar</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div
-                                                                class="card-btns my-mt-10 my-d-flex  my-align-center my-gap-16">
-                                                                <a href="#" class="view-details-btn">Ticket Details <i
-                                                                        class="ri-arrow-right-s-line"></i>
-                                                                </a>
-                                                                <button class="my-btn my-primary-btn my-btn-pill"> <span
-                                                                        class="content">Change Car</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <!--=================================|| Good TO Know  ||=======================================-->
                                 <div class="good-to-know my-mt-30 my-bg-white my-p-12 my-radius-xl">
@@ -7810,6 +6734,68 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
 
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+                dropdowns.forEach(dropdown => {
+
+                    const label = dropdown.querySelector('label');
+                    const selected = dropdown.querySelector('.dropdown-selected');
+                    const wrap = dropdown.querySelector('.wrap');
+                    const items = dropdown.querySelectorAll('.dropdown-options .item')
+                    const hiddenInput = dropdown.querySelector('input[type="hidden"]')
+
+
+                    if (!label || !selected || !wrap || !items || !hiddenInput) { return }
+
+                    const toggle = (e) => {
+                        e.stopPropagation();
+
+                        // Toggle only this dropdown
+                        wrap.classList.toggle('active');
+                        selected.classList.toggle('active');
+                    };
+
+                    // Click on dropdown head
+                    selected.addEventListener('click', toggle);
+
+
+                    label.addEventListener('click', toggle);
+
+                    // click on item
+                    items.forEach(item => {
+                        item.addEventListener('click', (e) => {
+                            e.stopPropagation()
+                            const itemText = item.textContent.trim()
+                            selected.querySelector('.text').textContent = itemText
+
+                            // Set active class
+                            items.forEach(i => i.classList.remove('active'));
+                            item.classList.add('active');
+
+                            // Set hidden input value
+                            hiddenInput.value = item.dataset.value;
+
+                            // Close dropdown
+                            wrap.classList.remove('active');
+                            selected.classList.remove('active');
+                        })
+                    })
+                });
+
+                // Click outside → close all
+                document.addEventListener('click', () => {
+                    document.querySelectorAll('.custom-dropdown .wrap').forEach(w => w.classList.remove('active'));
+                    document.querySelectorAll('.dropdown-selected').forEach(s => s.classList.remove('active'));
+                });
+
+            });
+
+
+        </script>
 
     </body>
 
