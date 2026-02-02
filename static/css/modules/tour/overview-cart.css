@@ -536,17 +536,29 @@ header {
 
 
 /* Droopdwon Head */
+
+
 .dropdown-selected {
     border: 1px solid var(--my-border-primary);
     background: #0F46381A;
     border-radius: 4px;
-    padding: 14px;
+    padding: 13px;
     color: var(--primary-80);
     font-weight: 600;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     user-select: none;
+}
+
+
+.input-groups .my-input-control input {
+    border: 1px solid var(--my-border-primary);
+    background: #0F46381A;
+    border-radius: 4px;
+    padding: 13px;
+    color: var(--primary-80);
+    font-weight: 600;
 }
 
 .dropdown-selected svg {
@@ -557,20 +569,27 @@ header {
     transform: rotate(180deg);
 }
 
-.custome-dropdwon label,
+.custom-dropdown label,
 .my-input-control label {
     color: var(--my-text-primary);
     font-weight: 600;
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     margin-bottom: 12px;
     cursor: pointer;
     display: inline-block;
+}
+
+.my-input-control .error {
+    border-color: red;
 }
 
 .custom-dropdown {
     position: relative;
 }
 
+.custom-dropdown:has(input.error) .dropdown-selected {
+    border-color: red;
+}
 
 /* Dropdwon Here */
 .custom-dropdown .wrap {
@@ -589,6 +608,7 @@ header {
     transform: translateY(-10px);
     transition: all 0.25s ease;
     z-index: -1;
+    box-shadow: var(--n-shadow-1);
 
 }
 
@@ -627,4 +647,82 @@ header {
 .custom-dropdown .dropdown-options .item:hover {
     background-color: var(--my-primary-color);
     color: var(--my-white);
+}
+
+.disability {
+    box-shadow: var(--n-shadow-1);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--my-white-off);
+}
+
+.disability input {
+    border-color: var(--my-border-secondary);
+    padding: 12px;
+    background: #0F46381A;
+}
+
+.input-groups .my-grid-2 {
+    align-items: flex-start;
+}
+
+.special-req {
+    margin-top: -74px;
+}
+
+.adult-2 {
+    border-top: 1px solid var(--my-border-secondary);
+    padding-top: 12px;
+}
+
+.required {
+    color: var(--my-secondary-color);
+}
+
+.payment-item {
+    padding: 20px;
+    border-radius: var(--radius-md);
+    background-color: #F6F7F9;
+    max-width: 600px;
+}
+
+.max-600 {
+    max-width: 600px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    border-color: var(--my-secondary-color);
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    border-color: var(--my-secondary-color);
+    background-color: var(--my-secondary-color);
+}
+
+input[type=radio]:checked::after {
+    background-color: var(--my-white);
+}
+
+.form .info {
+    background-color: #FFE4DD;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    color: var(--my-text-primary);
+    max-width: 600px;
+}
+
+.form .book-btn {
+    padding: 16px;
+}
+
+.form-ul {
+    padding-left: 16px;
+}
+
+.form-ul li {
+    color: var(--my-text-primary);
+    font-weight: 600;
+    list-style: disc;
 }

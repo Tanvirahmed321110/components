@@ -5342,17 +5342,17 @@
 
                                             <!-- adult -->
                                             <div class="adult my-mt-8 border-bottom my-pb-8">
-                                                <div class="my-fs-xxl my-fw-bold ">Adult</div>
+                                                <div class="my-fs-xl my-fw-bold my-text-primary">Adult 1</div>
                                                 <div class="my-d-flex my-align-center my-gap-4">
-                                                    <span class="my-fw-bold my-fs-md my-text-quaternary">Booking For
+                                                    <span class="my-fw-bold my-fs-sm my-text-quaternary">Booking For
                                                     </span>
-                                                    <i class="ri-arrow-left-s-line my-fs-lg my-text-quaternary"></i>
+                                                    <i class="ri-arrow-left-s-line my-fs-md my-text-quaternary"></i>
                                                     <span
-                                                        class="my-fw-bold my-fs-md  my-text-quaternary  my-text-quaternary">Child
+                                                        class="my-fw-bold my-fs-sm  my-text-quaternary  my-text-quaternary">Child
                                                     </span>
 
-                                                    <i class="ri-arrow-left-s-line my-fs-lg  my-text-quaternary"></i>
-                                                    <span class="my-fw-bold my-fs-md  my-text-quaternary">Family </span>
+                                                    <i class="ri-arrow-left-s-line my-fs-sm  my-text-quaternary"></i>
+                                                    <span class="my-fw-bold my-fs-sm  my-text-quaternary">Family </span>
                                                 </div>
                                             </div>
 
@@ -5362,21 +5362,21 @@
                                                 <div class="my-mt-8 my-flex-column my-gap-6">
                                                     <div class="my-d-flex my-align-center my-gap-4">
                                                         <input type="radio" name="user_type" id="self">
-                                                        <label for="self" class="my-fs-md my-fw-bold my-text-primary">
+                                                        <label for="self" class="my-fs-sm my-fw-bold my-text-primary">
                                                             My Self
                                                         </label>
                                                     </div>
 
                                                     <div class="my-d-flex my-align-center my-gap-4">
                                                         <input type="radio" name="user_type" id="family" checked>
-                                                        <label for="family" class="my-fs-md my-fw-bold my-text-primary">
+                                                        <label for="family" class="my-fs-sm my-fw-bold my-text-primary">
                                                             Family
                                                         </label>
                                                     </div>
 
                                                     <div class="my-d-flex my-align-center my-gap-4">
                                                         <input type="radio" name="user_type" id="others">
-                                                        <label for="others" class="my-fs-md my-fw-bold my-text-primary">
+                                                        <label for="others" class="my-fs-sm my-fw-bold my-text-primary">
                                                             Others
                                                         </label>
                                                     </div>
@@ -5386,11 +5386,12 @@
                                         </div>
 
                                         <!--==========  Inputs Groups  =========-->
-                                        <div class="input-groups my-mt-20">
-                                            <div class="my-grid-2">
+                                        <div class="input-groups my-mt-20 my-flex-column my-gap-12">
 
-                                                <!-- Title -->
-                                                <div class="my-input-control custom-dropdown">
+                                            <div class="my-grid-2  my-gap-16">
+
+                                                <!-- For  Title -->
+                                                <div class="custom-dropdown">
                                                     <label class="">Title</label>
 
                                                     <div class="dropdown-selected">
@@ -5419,11 +5420,507 @@
                                                 </div>
 
                                             </div>
+
+
+                                            <!-- first and last name -->
+                                            <div class="my-grid-2  my-gap-16">
+                                                <!-- For First Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Name</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!-- For Last Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Last Name</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+                                            </div>
+
+                                            <!-- date of birth and gender -->
+                                            <div class="my-grid-2  my-gap-16">
+                                                <!-- Date of birth -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Date of Birth</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!--  Gender  -->
+                                                <div class="custom-dropdown">
+                                                    <label class="">I'd Type</label>
+
+                                                    <div class="dropdown-selected">
+                                                        <span class="text">Select Your type</span>
+                                                        <div class="arrow-icon">
+                                                            <svg width="12" height="9" viewBox="0 0 17 9" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0.75 8.25L8.25 0.750001L15.75 8.25"
+                                                                    stroke="#4D4543" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="wrap">
+                                                        <ul class="dropdown-options">
+                                                            <li class="item active" data-value="1">Title One</li>
+                                                            <li class="item" data-value="2">Title Two</li>
+                                                            <li class="item" data-value="3">Title Three</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="hidden" name="title" class="error">
+                                                    <small class="error-message">Please select a Gender</small>
+                                                </div>
+                                            </div>
+
+                                            <!-- email and Phone  -->
+                                            <div class="my-grid-2  my-gap-16">
+                                                <!-- For First Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Email</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="email" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!-- For First Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Phone</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+                                            </div>
+
+                                            <!--======== id type and disablility ========= -->
+                                            <div class="my-grid-2  my-gap-16">
+
+                                                <!--  Id Type  -->
+                                                <div class="custom-dropdown">
+                                                    <label class="">I'd Type</label>
+
+                                                    <div class="dropdown-selected">
+                                                        <span class="text">Select Your type</span>
+                                                        <div class="arrow-icon">
+                                                            <svg width="12" height="9" viewBox="0 0 17 9" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0.75 8.25L8.25 0.750001L15.75 8.25"
+                                                                    stroke="#4D4543" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="wrap">
+                                                        <ul class="dropdown-options">
+                                                            <li class="item active" data-value="1">Title One</li>
+                                                            <li class="item" data-value="2">Title Two</li>
+                                                            <li class="item" data-value="3">Title Three</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="hidden" name="title" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!-- Disablity -->
+                                                <div class="">
+                                                    <div class="my-fs-sm my-fw-bold my-text-primary">Any Disablity?
+                                                    </div>
+                                                    <div class="my-d-flex my-mt-4 my-gap-8">
+                                                        <div class="my-d-flex my-gap-4">
+                                                            <input type="radio" checked>
+                                                            <label for="" class=" my-fw-bold">Yes</label>
+                                                        </div>
+                                                        <div class="my-d-flex my-gap-4">
+                                                            <input type="radio">
+                                                            <label for="" class="my-fw-bold">No</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- disability -->
+                                                    <div class="disability my-mt-8">
+                                                        <p class="my-fs-sm"> Please write your Disability and any
+                                                            requests in English.
+                                                            (Optional)</p>
+                                                        <input type="text" class="my-mt-4"
+                                                            placeholder="Text your request">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--======== Special Reuest ========= -->
+                                            <div class="my-grid-2  my-gap-16">
+
+                                                <div class="special-req">
+                                                    <div class="my-fw-bold my-text-primary my-fs-md">Special Requests
+                                                    </div>
+                                                    <p class="my-text-quaternary">Special requests can’t be guaranteed,
+                                                        but the property will do
+                                                        it’s best to meet your needs.</p>
+
+                                                    <!-- Special Reuest -->
+                                                    <div class="my-input-control my-mt-8">
+                                                        <div class="my-fs-sm my-fw-bold my-text-primary">Please write
+                                                            your
+                                                            requests in English. (Optional)
+                                                        </div>
+                                                        <input type="text" class="my-mt-4"
+                                                            placeholder="Text your request">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!--============ adult 2 ===========  -->
+                                            <div class="adult-2">
+                                                <div class="my-fs-xl my-fw-bold my-text-primary">Adult 1</div>
+                                                <!-- first and last name -->
+                                                <div class="my-grid-2  my-gap-16">
+                                                    <!-- For First Name -->
+                                                    <div class="my-input-control">
+                                                        <label class="name">Name</label>
+
+                                                        <!-- if you will error class add the input then show error sms  -->
+                                                        <input type="text" name="name" class="">
+                                                        <small class="error-message">Please select a title</small>
+                                                    </div>
+
+                                                    <!-- For Last Name -->
+                                                    <div class="my-input-control">
+                                                        <label class="name">Last Name</label>
+
+                                                        <!-- if you will error class add the input then show error sms  -->
+                                                        <input type="text" name="name" class="">
+                                                        <small class="error-message">Please select a title</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
 
-                                </form>
 
+                                    <!--=======================|| Flying Form ||========================-->
+                                    <div class="flying-form form my-mt-30">
+
+                                        <!--==========  Head  =========-->
+                                        <div class="head">
+                                            <h3 class="my-fs-xxl my-text-primary">Who's Flying?</h3>
+                                            <p class="my-fs-md my-text-quaternary">Traveler name must match your
+                                                Government-issued photo ID
+                                                exactly.</p>
+
+                                            <!-- Required -->
+                                            <div class="required">
+                                                <div class=" my-d-flex my-gap-2 my-align-center my-mt-8">
+                                                    <span class="my-secondary-color my-fs-md my-fw-bold">*</span>
+                                                    <div class="my-fs-xl my-fw-bold my-text-primary">Required</div>
+                                                </div>
+
+                                                <p class="my-fs-md my-text-primary my-mt-4">
+                                                    Solitaire Bangkok Sukhumvit 11 ; Tue 10 Feb 2026
+                                                </p>
+                                            </div>
+
+                                            <!-- adult -->
+                                            <div class="adult my-mt-8 border-bottom my-pb-8">
+                                                <div class="my-fs-xl my-fw-bold my-text-primary">Room 1: 2 Adult</div>
+                                            </div>
+                                        </div>
+
+                                        <!--==========  Inputs Groups  =========-->
+                                        <div class="input-groups my-mt-10 my-flex-column my-gap-12">
+
+                                            <!-- first and last name -->
+                                            <div class="my-grid-1  my-gap-12">
+                                                <!-- For First Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Name</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!-- For Last Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Last Name</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+                                            </div>
+
+
+                                            <div>
+                                                <div class="my-fs-xl my-fw-bold my-text-primary">
+                                                    Grand Transportation
+                                                </div>
+                                                <p>Please tell us who will be the primary contact. Must be an adult.</p>
+                                            </div>
+
+                                            <!-- first and last name -->
+                                            <div class="my-grid-1  my-gap-12">
+                                                <!-- For First Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Name <span class="required">*</span></label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+
+                                                <!-- For Last Name -->
+                                                <div class="my-input-control">
+                                                    <label class="name">Last Name</label>
+
+                                                    <!-- if you will error class add the input then show error sms  -->
+                                                    <input type="text" name="name" class="">
+                                                    <small class="error-message">Please select a title</small>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--=======================|| Choose Payment Schedule ||========================-->
+                                    <div class="form my-mt-30">
+                                        <div class="my-fs-xl my-fw-bold my-text-primary">Choose Payment Schedule</div>
+
+                                        <div class="my-flex-column my-gap-8 my-mt-8 ">
+                                            <div class="my-d-flex my-align-center my-gap-4 payment-item">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold my-text-primary">$
+                                                    202.22 today & the remaining $ 533.32 on 27 Nov,
+                                                    2025
+                                                </label>
+                                            </div>
+
+
+                                            <div class="my-d-flex my-align-center my-gap-4 payment-item">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold my-text-primary">Pay the full amount of
+                                                    $ 456456.456 today
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--=======================|| Add Payment Details ||========================-->
+                                    <div class="form my-mt-16">
+                                        <div>
+                                            <div class="my-fs-xl my-fw-bold my-text-primary">Add Payment details</div>
+                                            <p class="info my-mt-8">This is a secure and SSL encryted. Your credit card
+                                                details
+                                                are safe.</p>
+                                        </div>
+
+                                        <div class="my-mt-12">
+                                            <div class="my-fs-md my-fw-bold my-text-primary">Select Your Payment Method
+                                            </div>
+                                            <div class="my-d-flex my-align-center my-gap-4 payment-item my-mt-6">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold my-text-primary">Pay By Card
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="my-grid-1 input-groups my-gap-12 my-mt-12">
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">Cardholder Name</label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">Card Number <span class="required">*</span></label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">Expiry Date <span class="required">*</span></label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">CVC <span class="required">*</span></label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">Phone Number <span class="required">*</span></label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+                                            <div class="custom-dropdown max-600">
+                                                <label class="">Billing Country</label>
+
+                                                <div class="dropdown-selected ">
+                                                    <span class="text">Select Title</span>
+                                                    <div class="arrow-icon">
+                                                        <svg width="12" height="9" viewBox="0 0 17 9" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.75 8.25L8.25 0.750001L15.75 8.25"
+                                                                stroke="#4D4543" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wrap">
+                                                    <ul class="dropdown-options">
+                                                        <li class="item active" data-value="1">Title One</li>
+                                                        <li class="item" data-value="2">Title Two</li>
+                                                        <li class="item" data-value="3">Title Three</li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="hidden" name="title" class="">
+                                                <small class="error-message">Please select a title</small>
+                                            </div>
+                                            <!-- For Last Name -->
+                                            <div class="my-input-control max-600">
+                                                <label class="name">Zip Code <span class="required">*</span></label>
+
+                                                <!-- if you will error class add the input then show error sms  -->
+                                                <input type="text" name="name" class="">
+                                                <small class="error-message">Zip Code</small>
+                                            </div>
+
+                                            <!-- Pay With Paypal -->
+                                            <div class="my-d-flex my-align-center my-gap-4 payment-item my-mt-6">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold my-text-primary">Pay By Paypal
+                                                </label>
+                                            </div>
+                                            <!-- Pay with Google Pay -->
+                                            <div class="my-d-flex my-align-center my-gap-4 payment-item my-mt-6">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold my-text-primary">Pay with Google Pay
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="my-flex-column my-gap-12 my-mt-12">
+                                            <div class="my-d-flex my-gap-4 max-600">
+                                                <input type="checkbox">
+                                                <label for="#" class="my-text-primary my-line-height-sm">I accept
+                                                    Tourgull<a href="#" class="my-secondary-color text-hover-primary">
+                                                        Teams &
+                                                        Conditions</a> and <a href="#"
+                                                        class="my-secondary-color text-hover-primary text-hover-underline">Privacy
+                                                        Policy</a>,
+                                                    and Realistic Asia’s <a href=""
+                                                        class="my-secondary-color text-hover-primary">Payment,
+                                                        Cancellation and refund
+                                                        conditions.</a></label>
+                                            </div>
+
+
+                                            <!-- Book Button -->
+                                            <div class="my-w-100-p max-600">
+                                                <button class="my-btn my-primary-btn book-btn my-w-100-p"><span
+                                                        class="content">Book 1
+                                                        Space</span></button>
+                                            </div>
+
+                                            <div class=" max-600 my-flex-center my-flex-column">
+                                                <p class="my-text-quaternary">You will be changed $203.33 now.</p>
+                                                <p class="my-mt-2 my-text-quaternary">The remaining balance is due
+                                                    on 27
+                                                    Now, 2025 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--=======================|| Are You Travelling for work?(Optional)? ||========================-->
+                                    <div class="form my-mt-30">
+                                        <div class="">
+                                            <div class="my-fs-xl my-fw-bold my-text-primary">Are You Travelling for
+                                                work?(Optional)?
+                                            </div>
+                                            <div class="my-d-flex my-mt-8 my-gap-8">
+                                                <div class="my-d-flex my-gap-4">
+                                                    <input type="radio">
+                                                    <label for="" class=" my-fw-bold">Yes</label>
+                                                </div>
+                                                <div class="my-d-flex my-gap-4">
+                                                    <input type="radio">
+                                                    <label for="" class="my-fw-bold">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--=======================|| Are You Travelling for work?(Optional)? ||========================-->
+                                    <div class="form my-mt-30">
+                                        <div class="my-fs-xl my-fw-bold my-text-primary">Do You Have a Pet/Animal?
+                                        </div>
+                                        <div class="my-d-flex my-mt-8 my-gap-8">
+                                            <div class="my-d-flex my-gap-4">
+                                                <input type="radio">
+                                                <label for="" class=" my-fw-bold">Yes</label>
+                                            </div>
+                                            <div class="my-d-flex my-gap-4">
+                                                <input type="radio">
+                                                <label for="" class="my-fw-bold">No</label>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-mt-8 my-line-height-md">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. <a href="#" class="my-secondary-color"> See
+                                                More</a>
+                                        </p>
+
+                                        <ul class="my-flex-column my-gap-8 my-mt-8 form-ul">
+                                            <li>Carrier Size: Soft-sided carriers are recommended (max dimensions: 18 x
+                                                11 x 11 inches).</li>
+                                            <li>Restrictions: Pets are not allowed in First/Business class on certain
+                                                long-haul flights (e.g., Boeing 777-200/300, 787-8/9).</li>
+                                            <li>Number of pets: Limited to 7 per flight on mainline and fewer on
+                                                regional aircraft.</li>
+                                        </ul>
+                                    </div>
+                                </form>
 
 
                                 <!--=================================|| Good TO Know  ||=======================================-->
