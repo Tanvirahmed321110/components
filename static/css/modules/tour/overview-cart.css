@@ -3,7 +3,9 @@ body {
 }
 
 header {
-    background-color: var(--my-bg-secondary);
+    background-color: var(--my-white);
+
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
@@ -19,12 +21,12 @@ header {
 }
 
 .adventure-sec .head {
-    background-color: #FEFAF2;
+    /* background-color: #FEFAF2; */
+    background-color: #fff;
     padding: 24px 29px;
     border-radius: var(--radius-lg);
     cursor: pointer;
-    border: 1px solid var(--my-white-off);
-    box-shadow: var(--n-shadow-1);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .adventure-sec .head .section-title {
@@ -52,8 +54,8 @@ header {
 .adventure-sec .adventure-left {
     padding: 32px;
     border-radius: var(--radius-xl);
-    border: 1px solid var(--my-border-primary);
     background-color: var(--my-white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .adventure-sec .adventure-right {
@@ -98,9 +100,9 @@ header {
 .adventure-sec .how-many {
     border-radius: var(--radius-lg);
     padding: 10px;
-    border: 1px solid var(--my-border-primary);
     width: 100%;
     background-color: var(--my-white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .adventure-sec .change-date .inner,
@@ -146,13 +148,6 @@ header {
     padding-bottom: 60px;
 }
 
-/* Sticky cart */
-.cart-summery {
-    position: sticky;
-    top: 16px;
-}
-
-
 
 
 
@@ -160,9 +155,8 @@ header {
 /*================================||  Items Details TOp  ||=================================*/
 .items-details-top {
     border-radius: var(--radius-xl);
-    border: 1px solid var(--my-border-primary);
     padding: 32px;
-    box-shadow: var(--n-shadow-1);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .items-details-top .items-details-top-inner {
@@ -185,9 +179,12 @@ header {
     background-color: var(--my-white);
     border-radius: var(--radius-xl);
     padding: 24px 10px;
-    border: 1px solid var(--my-border-primary);
     padding-bottom: 8px;
-    /* box-shadow: var(--n-shadow-1); */
+    border: 1px solid var(--my-white-off);
+
+    position: sticky;
+    top: 16px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .cart-summery .cart-inner {
@@ -284,8 +281,9 @@ header {
     display: flex;
     padding: 16px;
     border-radius: var(--radius-xxl);
-    border: 1px solid var(--my-border-primary);
+    /* border: 1px solid var(--my-border-primary); */
     perspective: 1000px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .items-details-bottom .card .card-inner {
@@ -502,7 +500,8 @@ header {
 
 /*=============== Good To Know ==============*/
 .good-to-know {
-    border: 1px solid var(--my-border-primary);
+    border: 1px solid var(--my-white-off);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
 }
 
 .good-to-know .section-title {
@@ -532,6 +531,8 @@ header {
     padding: 30px;
     border-radius: var(--radius-xl);
     background-color: var(--my-white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    border: none;
 }
 
 

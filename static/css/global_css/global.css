@@ -136,11 +136,11 @@
     --n-shadow-1: -5px 5px 10px rgba(0, 0, 0, 0.1);
     --n-shadow-2: 0px 4px 16px 0px #0000001F;
 
-    --n-shadow-all-1: 0 0 3px 1px #0000001A,
-        0 0 5px 2px #00000017,
-        0 0 7px 3px #0000000D,
-        0 0 8px 4px #00000003,
-        0 0 9px 5px #00000000;
+    --n-shadow-all-1: 0 0 2px 20px #ffffff07,
+        0 0 5px 2px #b1aeae17,
+        0 0 7px 2px #0000000D,
+        0 0 8px 2px #00000003,
+        0 0 9px 2px #00000000;
 
     --n-shadow-all-2: 0px 14px 31px 0px #0000001A,
         0px 55px 56px 0px #00000017,
