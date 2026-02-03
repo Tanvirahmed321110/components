@@ -519,9 +519,6 @@ search-group .my-input-control input::placeholder {
         font-size: var(--fs-low);
     }
 
-    .my-fs-xs {
-        font-size: var(--fs-low);
-    }
 
     .tour-cart.package .hover-content {
         padding: 8px;

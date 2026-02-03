@@ -647,7 +647,7 @@
     border-radius: var(--radius-lg);
     transition: .3s linear;
     gap: 8px;
-    font-size: var(--fs-md);
+    font-size: clamp(var(--fs-xs), 1.75vw, var(--fs-md));
     line-height: var(--line-height-sm);
     box-sizing: border-box;
     width: fit-content;
