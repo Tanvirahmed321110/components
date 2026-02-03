@@ -3,134 +3,208 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Wave Button Hover Effect</title>
+        <title>Custom Searchable Dropdown</title>
         <style>
-            :root {
-                --my-primary-color: #2563eb;
-                --my-secondary-color: #22c55e;
-                --my-white: #ffffff;
-            }
-
             body {
                 font-family: Arial, sans-serif;
-                background: #0f172a;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                padding: 40px;
+                background: #f7f7f7;
             }
 
-            .btn-wrapper {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-
-            /* Base button */
-            .my-btn {
+            .custom-dropdown {
+                width: 300px;
+                margin-bottom: 30px;
                 position: relative;
-                /* overflow: hidden; */
-                padding: 16px 36px;
-                font-size: 16px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 6px;
                 font-weight: 600;
-                color: var(--my-white);
-                background: transparent;
-                border: 2px solid currentColor;
-                border-radius: 12px;
+            }
+
+            .dropdown-selected {
+                border: 1px solid #ccc;
+                padding: 10px 12px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 cursor: pointer;
-                z-index: 1;
+                background: #fff;
             }
 
-            /* wave layer */
-            .my-btn::after {
-                content: "";
+            .dropdown-selected.active {
+                border-color: #4d90fe;
+            }
+
+            .dropdown-selected .text {
+                outline: none;
+                cursor: text;
+            }
+
+            .wrap {
                 position: absolute;
-                left: 50%;
-                bottom: -100%;
-                width: 180%;
-                height: 300%;
-                transform: translateX(-50%) scaleY(0);
-                transform-origin: bottom;
-                border-radius: 50%;
-                transition: transform 0.5s cubic-bezier(.66, 0, .34, 1),
-                    bottom 0.7s cubic-bezier(.66, 0, .34, 1);
-                z-index: 2;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                margin-top: 6px;
+                max-height: 180px;
+                overflow-y: auto;
+                display: none;
+                z-index: 10;
             }
 
-            /* hover wave */
-            .my-btn:hover::after {
-                transform: translateX(-50%) scaleY(1);
-                bottom: -18%;
-                color: var(--my-primary-color);
-                background-color: var(--my-primary-color);
+            .wrap.active {
+                display: block;
             }
 
-            /* Button variations */
-            .primary-btn {
-                color: var(--my-primary-color);
+            .dropdown-options {
+                list-style: none;
+                padding: 0;
+                margin: 0;
             }
 
-            .primary-btn::after {
-                background-color: var(--my-primary-color);
+            .dropdown-options .item {
+                padding: 10px 12px;
+                cursor: pointer;
             }
 
-            .secondary-btn {
-                color: var(--my-secondary-color);
+            .dropdown-options .item:hover,
+            .dropdown-options .item.active {
+                background: #f1f1f1;
             }
 
-            .secondary-btn::after {
-                background-color: var(--my-secondary-color);
-            }
-
-            .outline-btn {
-                color: #f97316;
-            }
-
-            .outline-btn::after {
-                background-color: #f97316;
-            }
-
-            .dark-btn {
-                color: #e5e7eb;
-                border-color: #e5e7eb;
-            }
-
-            .dark-btn::after {
-                background-color: #334155;
-            }
-
-            /* text color change on hover */
-            .my-btn:hover {
-                color: #ffffff;
+            .error-message {
+                color: red;
+                font-size: 12px;
+                display: none;
             }
         </style>
     </head>
 
     <body>
 
-        <div class="btn-wrapper">
+        <!-- Dropdown 1 -->
+        <div class="custom-dropdown">
+            <label>Title</label>
 
-            <!-- Example 1 -->
-            <button class="my-btn primary-btn">
-                Primary Wave
-            </button>
+            <div class="dropdown-selected">
+                <span class="text">Select Title</span>
+                <span>▼</span>
+            </div>
 
-            <!-- Example 2 -->
-            <button class="my-btn secondary-btn">
-                Secondary Wave
-            </button>
+            <div class="wrap">
+                <ul class="dropdown-options">
+                    <li class="item" data-value="1">Title One</li>
+                    <li class="item" data-value="2">Title Two</li>
+                    <li class="item" data-value="3">Title Three</li>
+                    <li class="item" data-value="4">Bangla</li>
+                    <li class="item" data-value="5">Bangla desh</li>
+                    <li class="item" data-value="6">বাংলা ভাষা</li>
+                </ul>
+            </div>
 
-            <!-- Example 3 -->
-            <button class="my-btn outline-btn">
-                Orange Wave
-            </button>
-
-            <!-- Example 4 -->
-            <button class="my-btn dark-btn">
-                Dark Wave
-            </button>
-
+            <input type="hidden" name="title">
+            <small class="error-message">Please select a title</small>
         </div>
+
+        <!-- Dropdown 2 -->
+        <div class="custom-dropdown">
+            <label>Country</label>
+
+            <div class="dropdown-selected">
+                <span class="text">Select Country</span>
+                <span>▼</span>
+            </div>
+
+            <div class="wrap">
+                <ul class="dropdown-options">
+                    <li class="item" data-value="bd">Bangladesh</li>
+                    <li class="item" data-value="in">India</li>
+                    <li class="item" data-value="pk">Pakistan</li>
+                    <li class="item" data-value="np">Nepal</li>
+                    <li class="item" data-value="বাংলাদেশ">বাংলাদেশ</li>
+                </ul>
+            </div>
+
+            <input type="hidden" name="country">
+        </div>
+
+        <script>
+            const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const label = dropdown.querySelector('label');
+                const selected = dropdown.querySelector('.dropdown-selected');
+                const textEl = dropdown.querySelector('.text');
+                const wrap = dropdown.querySelector('.wrap');
+                const items = dropdown.querySelectorAll('.dropdown-options .item');
+                const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+
+                if (!label || !selected || !textEl || !wrap || !hiddenInput) return;
+
+                textEl.setAttribute('contenteditable', 'true');
+                textEl.setAttribute('spellcheck', 'false');
+
+                const openDropdown = (e) => {
+                    e.stopPropagation();
+                    closeAll();
+                    wrap.classList.add('active');
+                    selected.classList.add('active');
+                    placeCursorAtEnd(textEl);
+                };
+
+                selected.addEventListener('click', openDropdown);
+                label.addEventListener('click', openDropdown);
+
+                // Filter while typing (Bangla supported)
+                textEl.addEventListener('input', () => {
+                    const value = textEl.textContent.trim().toLowerCase();
+
+                    items.forEach(item => {
+                        const text = item.textContent.toLowerCase();
+                        item.style.display = text.includes(value) ? 'block' : 'none';
+                    });
+
+                    wrap.classList.add('active');
+                });
+
+                // Select item
+                items.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        textEl.textContent = item.textContent.trim();
+                        hiddenInput.value = item.dataset.value;
+
+                        items.forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+
+                        wrap.classList.remove('active');
+                        selected.classList.remove('active');
+                    });
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', closeAll);
+
+            function closeAll() {
+                document.querySelectorAll('.wrap').forEach(w => w.classList.remove('active'));
+                document.querySelectorAll('.dropdown-selected').forEach(s => s.classList.remove('active'));
+            }
+
+            // Cursor helper
+            function placeCursorAtEnd(el) {
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(el);
+                range.collapse(false);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        </script>
 
     </body>
 

@@ -23,7 +23,7 @@ header {
 .adventure-sec .head {
     /* background-color: #FEFAF2; */
     background-color: #fff;
-    padding: 24px 29px;
+    padding: 24px 30px;
     border-radius: var(--radius-lg);
     cursor: pointer;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
@@ -77,8 +77,8 @@ header {
 
 /* ================ Body Item Here ================ */
 .adventure-sec .body .item {
-    padding: 12px 16px;
-    border-radius: var(--radius-sm);
+    padding: 16px 16px;
+    border-radius: var(--radius-md);
     border: 1px solid var(--my-border-secondary);
 }
 
@@ -156,13 +156,14 @@ header {
 .items-details-top {
     border-radius: var(--radius-xl);
     padding: 32px;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-1);
+    background-color: var(--my-white);
 }
 
 .items-details-top .items-details-top-inner {
     border-radius: var(--radius-xl);
     border: 1px solid var(--my-border-secondary);
-    padding: 24px;
+    padding: 28px;
 }
 
 .items-details-top-inner .my-btn-pill {
@@ -362,22 +363,24 @@ header {
 
 .card .booking-start .item {
     max-width: 180px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--my-text-primary);
 }
 
 
 /* Rating */
 .items-details-bottom .card .rating .avg {
-    padding: 4px 8px;
+    padding: 4px 4px;
     border-radius: 4px;
     color: var(--my-white);
     background-color: var(--my-secondary-color);
+    font-size: var(--fs-xs);
+    font-weight: 500;
 }
 
 .items-details-bottom .card .rating .stars i {
     color: var(--my-rating);
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
 }
 
 
@@ -385,7 +388,7 @@ header {
 .items-details-bottom .card .total-review {
     color: var(--my-secondary-color);
     border-bottom: 1px solid var(--my-secondary-color);
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     transition: .2s ease;
 }
 
@@ -406,6 +409,7 @@ header {
 
 .items-details-bottom .card .view-details-btn i {
     transition: .2s;
+    width: 10px;
 }
 
 .items-details-bottom .card .view-details-btn:hover i {
@@ -726,4 +730,36 @@ input[type=radio]:checked::after {
     color: var(--my-text-primary);
     font-weight: 600;
     list-style: disc;
+}
+
+
+
+
+
+
+
+
+
+
+/* For Lg Device */
+@media (max-width:1439px) {
+    .adventure-sec .head {
+        padding: 24px;
+    }
+
+    .adventure-sec .adventure-left {
+        padding: 24px;
+    }
+
+    .adventure-sec .adventure-left .body {
+        padding: 24px;
+    }
+
+    .items-details-top {
+        padding: 24px;
+    }
+
+    .items-details-top .items-details-top-inner {
+        padding: 24px;
+    }
 }

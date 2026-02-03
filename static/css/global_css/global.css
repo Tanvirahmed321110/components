@@ -133,6 +133,8 @@
     /* ________ Gradient ________ */
     --gradient-login: linear-gradient(to right, #173e57c9, #919fa7d6);
 
+    --shadow-1: 0 0 24px rgba(0, 0, 0, 0.1);
+
     --n-shadow-1: -5px 5px 10px rgba(0, 0, 0, 0.1);
     --n-shadow-2: 0px 4px 16px 0px #0000001F;
 
