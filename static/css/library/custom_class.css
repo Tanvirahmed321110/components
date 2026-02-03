@@ -5217,6 +5217,43 @@ tr {
         padding-right: 0;
     }
 
+    /* font size */
+    .my-fs-lg-low {
+        font-size: var(--fs-low);
+    }
+
+    .my-fs-lg-xs {
+        font-size: var(--fs-xs);
+    }
+
+    .my-fs-lg-sm {
+        font-size: var(--fs-sm);
+    }
+
+    .my-fs-lg-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-lg-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-lg-lg {
+        font-size: var(--fs-lg);
+    }
+
+    .my-fs-lg-xl {
+        font-size: var(--fs-xl);
+    }
+
+    .my-fs-lg-xxl {
+        font-size: var(--fs-xxl);
+    }
+
+    .my-fs-lg-3xl {
+        font-size: var(--fs-3xl);
+    }
+
     .my-grid-lg-1 {
         grid-template-columns: repeat(1, 1fr) !important;
     }
@@ -6947,6 +6984,38 @@ tr {
     .my-container {
         padding: 0 5%;
         width: 100%;
+    }
+
+    .my-fs-md-low {
+        font-size: var(--fs-low);
+    }
+
+    .my-fs-md-xs {
+        font-size: var(--fs-xs);
+    }
+
+    .my-fs-md-sm {
+        font-size: var(--fs-sm);
+    }
+
+    .my-fs-md-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-md-lg {
+        font-size: var(--fs-lg);
+    }
+
+    .my-fs-md-xl {
+        font-size: var(--fs-xl);
+    }
+
+    .my-fs-md-xxl {
+        font-size: var(--fs-xxl);
+    }
+
+    .my-fs-md-3xl {
+        font-size: var(--fs-3xl);
     }
 
     .my-flex-md-column {
@@ -8999,6 +9068,41 @@ tr {
 /*________  Responsive for small Device  ________*/
 
 @media (max-width:768px) {
+
+    /* font size */
+    .my-fs-sm-low {
+        font-size: var(--fs-low);
+    }
+
+    .my-fs-sm-xs {
+        font-size: var(--fs-xs);
+    }
+
+    .my-fs-sm-sm {
+        font-size: var(--fs-sm);
+    }
+
+    .my-fs-sm-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-sm-lg {
+        font-size: var(--fs-lg);
+    }
+
+    .my-fs-sm-xl {
+        font-size: var(--fs-xl);
+    }
+
+    .my-fs-sm-xxl {
+        font-size: var(--fs-xxl);
+    }
+
+    .my-fs-sm-3xl {
+        font-size: var(--fs-3xl);
+    }
+
+
 
     .mobile-hide-sm {
         display: none;
@@ -11157,6 +11261,41 @@ tr {
 
 /*________  Responsive for xs  Device  ________*/
 @media (max-width:480px) {
+
+    /* font size */
+    .my-fs-xs-low {
+        font-size: var(--fs-low);
+    }
+
+    .my-fs-xs-xs {
+        font-size: var(--fs-xs);
+    }
+
+    .my-fs-xs-sm {
+        font-size: var(--fs-sm);
+    }
+
+    .my-fs-xs-md {
+        font-size: var(--fs-md);
+    }
+
+    .my-fs-xs-lg {
+        font-size: var(--fs-lg);
+    }
+
+    .my-fs-xs-xl {
+        font-size: var(--fs-xl);
+    }
+
+    .my-fs-xs-xxl {
+        font-size: var(--fs-xxl);
+    }
+
+    .my-fs-xs-3xl {
+        font-size: var(--fs-3xl);
+    }
+
+
     .my-p-xs-0 {
         padding: 0px;
     }

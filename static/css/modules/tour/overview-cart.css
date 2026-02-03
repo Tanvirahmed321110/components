@@ -762,4 +762,13 @@ input[type=radio]:checked::after {
     .items-details-top .items-details-top-inner {
         padding: 24px;
     }
+
+    .items-details-bottom .card .card-inner {
+        gap: 24px;
+    }
+
+    .items-details-bottom .card .title-sm {
+        font-size: var(--fs-sm);
+    }
+
 }
