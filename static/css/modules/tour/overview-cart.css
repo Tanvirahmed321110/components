@@ -979,4 +979,8 @@ input[type=radio]:checked::after {
         font-size: var(--fs-sm);
         font-size: 13px;
     }
+
+    .items-details-bottom .card .card-inner .img-wrap img {
+        max-height: 260px;
+    }
 }
