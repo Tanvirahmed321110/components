@@ -649,6 +649,10 @@
 
 
 /* bottom */
+.tour-category-body .right-items .bottom-items .swiper {
+    padding-top: 24px;
+}
+
 .tour-category-body .right-items .bottom-items .category-item {
     height: 328px;
 }
@@ -977,7 +981,9 @@
 ===========================================
 */
 .faq-wrapper.section-main {
-    padding-bottom: 36px;
+    padding-bottom: 0px;
+    background-color: var(--my-bg-secondary);
+    padding: 60px 0;
 }
 
 .faq-wrapper .head {
@@ -1014,16 +1020,23 @@
 }
 
 .faq-wrapper .head h5 {
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-xl);
     font-weight: 600;
 }
 
+.faq-wrapper .head i {
+    font-size: 22px;
+}
 
 .faq-wrapper .faq-items .faq-item {
     max-width: 768px;
     padding: 12px;
     border-radius: var(--radius-xl);
     transition: .2s ease;
+    background-color: var(--my-white);
+    /* border: 1px solid var(--my-white-off); */
+    /* box-shadow: var(--n-shadow-1); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
 }
 
 .faq-wrapper .faq-items .faq-item:hover,
