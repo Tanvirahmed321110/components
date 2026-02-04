@@ -226,14 +226,10 @@
 =====||   Recent View Start Here    ||=====
 ======================================
 */
-.recent-view.section-main {
-    padding-bottom: 0;
+.recently-view-slider.swiper {
+    padding-bottom: 16px;
 }
 
-
-.best-deal.section-main {
-    padding-bottom: 40px;
-}
 
 .best-deal-area .best-deal-slider {
     width: 100%;
