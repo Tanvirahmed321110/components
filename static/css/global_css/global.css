@@ -183,6 +183,7 @@
 
 .swiper-wrapper {
     align-items: stretch;
+    height: fit-content;
 }
 
 .swiper-slide {
@@ -352,7 +353,6 @@
 }
 
 .swiper.other-common-slider {
-    padding-bottom: 60px;
     position: relative;
     padding-top: 16px;
 }
@@ -1043,7 +1043,7 @@
 ======================================
 */
 header {
-    background-color: var(--my-white);
+    background-color: var(--my-primary-color);
     padding: 0px 0px 0px 0px;
     border-bottom: 1px solid var(--my-border-secondary);
 }
@@ -1053,12 +1053,16 @@ header {
 =================||    Header Top    ||===================
 */
 header .header-top {
-    /* border-bottom: 1px solid var(--my-primary-color-30); */
-    border-bottom: 1px solid var(--my-border-secondary);
-    padding-top: 16px;
-    padding-bottom: 16px;
+    /* border: 1px solid var(--primary-80); */
+    box-shadow: var(--shadow-1);
     position: relative;
     gap: 60px;
+    background-color: var(--white-20);
+    background-color: var(--my-border-secondary);
+    padding: 16px;
+    padding-top: 16px;
+    /* border-radius: 0px 0px 12px 12px; */
+    border-radius: 0% 0% 28% 28%;
 }
 
 header .header-top .search-input {
@@ -1069,6 +1073,7 @@ header .header-top .search-input {
 header .header-top .search-input input {
     border-radius: var(--radius-lg);
     border-color: var(--my-border-secondary);
+    background-color: var(--my-white);
 }
 
 header .header-top .click-dropdown-btn {
@@ -1283,14 +1288,13 @@ header .profile-dropdown .head {
 
 
 .swiper.other-common-slider {
-    padding-bottom: 80px;
     position: relative;
     padding-left: 8px;
     width: 100%;
 }
 
 .swiper.other-common-slider .section-btn-wrapper {
-    margin-top: 6px;
+    margin-top: 32px;
 }
 
 .swiper.other-common-slider .right-slider-arrows .next,
@@ -1524,12 +1528,17 @@ header .header-main {
     margin-top: 0;
 }
 
+header .header-main ul {
+    gap: 32px;
+}
+
 header .header-main .item {
-    font-weight: var(--fw-600);
+    font-weight: var(--fw-400);
     font-size: var(--fs-md);
     transition: .2s linear;
     padding-left: 8px;
     text-wrap: nowrap;
+    color: var(--my-border-secondary);
 }
 
 header .header-main .item:hover,
@@ -1570,7 +1579,7 @@ footer {
     margin-top: auto;
     background-color: var(--my-primary-color);
     font-size: var(--fs-lg);
-    padding: 120px 0;
+    padding: 80px 0;
     color: var(--my-white);
     margin-top: clamp(32px, 4.5vw, 80px);
 }
