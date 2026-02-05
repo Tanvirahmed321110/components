@@ -1185,9 +1185,9 @@
 
 .testimonial .item {
     padding: 32px;
-    background-color: var(--my-bg-secondary);
+    background-color: var(--my-white);
     border-radius: var(--radius-xl);
-    border: 1px solid var(--my-border-color);
+    border: 1px solid var(--my-border-secondary);
     transition: .2s ease;
     max-height: 280px;
 }
@@ -1732,17 +1732,11 @@
 ===============================================
 */
 @media (max-width: 1080px) {
-    .testimonial .item {
-        padding-bottom: 0;
-    }
 
     .g-hero {
         margin-top: 16px;
     }
 
-    .section-main {
-        padding: 40px 0;
-    }
 
     /*
     ================||   Achivements Section Start Here  ||================
@@ -1755,9 +1749,18 @@
     ================||   Subcribe Section Start Here  ||================
     */
     .subcribe-sec .left-side {
-        padding: 96px 16px 16px 0px;
-        height: 500px;
+        padding: 32px 24px 24px 0px;
+        height: 300px;
     }
+
+    .subcribe-area {
+        padding: 24px;
+    }
+
+    .subcribe-sec .left-side .my-mt-24 {
+        margin-top: 24px;
+    }
+
 
     .subcribe-sec .right-side {
         margin-top: -50px;
@@ -1770,7 +1773,7 @@
     }
 
     .subcribe-sec .subcribe-area {
-        height: 1000px;
+        height: 800px;
     }
 
     .subcribe-sec .right-side .img-wrapper img {
@@ -2157,7 +2160,7 @@
 
     .m-best-deal .img-wrap img,
     .m-map-area .img-wrap img {
-        aspect-ratio: 16/11;
+        aspect-ratio: 16/10;
     }
 
     .m-best-deal .section-title {
@@ -2227,13 +2230,13 @@
 
     .m-trip-plan .items .item img {
         width: 100%;
-        aspect-ratio: 16 / 12;
+        aspect-ratio: 16 / 10;
         object-fit: cover;
     }
 
 
     .m-trip-plan .items .item .content {
-        padding: 12px;
+        padding: 16px;
     }
 
     .m-trip-plan .items .item .title {
@@ -2307,7 +2310,7 @@
     }
 
     .our-blog-mobile .blog-items .item .img-wrap img {
-        aspect-ratio: 16 / 12;
+        aspect-ratio: 16 / 10;
         object-fit: cover;
     }
 
@@ -2396,10 +2399,7 @@
 
     /*===============  Get Touch  ===================*/
     .get-touch .get-touch-area {
-        box-shadow: unset !important;
-        background-color: #FAFAFA;
-        padding: 32px 0;
-        padding-bottom: 40px;
+        padding: 40px 0;
     }
 
     .get-touch .wrap {

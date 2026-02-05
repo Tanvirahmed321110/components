@@ -97,7 +97,7 @@ const recentView = new Swiper(".recently-view-slider", {
             spaceBetween: 12,
         },
         768: {
-            slidesPerView: 2.2, // Tablet
+            slidesPerView: 2.5, // Tablet
             spaceBetween: 16,
         },
         991: {
