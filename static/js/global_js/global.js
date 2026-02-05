@@ -122,15 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Dropdown Toggle
     function dropdownToggleF() {
-        const btns = document.querySelectorAll('.click-dropdown-btn');
+        const btns = document.querySelectorAll('.click-dropdown-btn, .w-dropdown-btn');
 
         if (btns) {
             btns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
                     e.stopPropagation(); // prevent outside click handler from firing immediately
 
-                    const dropdownParent = btn.closest('.click-dropdown-parent');
-                    const dropdown = dropdownParent.querySelector('.click-dropdown');
+                    const dropdownParent = btn.closest('.click-dropdown-parent,.w-dropdown-wrap-parent');
+                    const dropdown = dropdownParent.querySelector('.click-dropdown , .w-dropdown-wrap');
 
                     // Close all other dropdowns + buttons first
                     document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
@@ -151,9 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Click outside to close
         document.addEventListener('click', function (e) {
             if (!e.target.closest('.click-dropdown-parent') || e.target.closest('.login-have-no')) {
-                document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
-                    parent.querySelector('.click-dropdown')?.classList.remove('active');
-                    parent.querySelector('.click-dropdown-btn')?.classList.remove('active');
+                document.querySelectorAll('.click-dropdown-parent,.w-dropdown-wrap-parent').forEach(parent => {
+                    parent.querySelector('.click-dropdown,.w-dropdown-wrap')?.classList.remove('active');
+                    parent.querySelector('.click-dropdown-btn,.w-dropdown-btn')?.classList.remove('active');
                 });
                 removeLoginHaveNoActive();
             }
@@ -960,7 +960,7 @@ function cardHover() {
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
-            card.style.transition = 'transform 0.3s'; // smooth reset
+            card.style.transition = 'transform .4s'; // smooth reset
         });
     });
 }

@@ -37,7 +37,7 @@ header .module-header-main .m-item .module-h-dropdwon {
 header .module-header-main .m-item .module-h-dropdwon ul {
     border: 1px solid #FC5A314D;
     box-shadow: -4px 4px 8px 0px #0000001A;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     overflow: hidden;
     gap: 0;
 }
@@ -401,9 +401,7 @@ search-group .my-input-control input::placeholder {
 
 
 .tour-cart.package .cart-title {
-    font-size: clamp(14px,
-            calc(14px + (100vw - 375px) * 0.0094),
-            24px);
+    font-size: clamp(14px, 1.5vw, 24px);
     line-height: 1.3;
 }
 
@@ -434,10 +432,11 @@ search-group .my-input-control input::placeholder {
 
 /* Top Destnation Page Start */
 .top-destnation-sec .section-head {
-    max-width: 844px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 700px;
+    text-align: left;
 }
+
+
 
 .top-destnation-sec .tab-btn {
     padding: 8px 14px;
@@ -466,14 +465,26 @@ search-group .my-input-control input::placeholder {
 }
 
 
+.top-destnation-sec .section-title,
+.top-destnation-sec .section-sub-title {
+    text-align: left;
+}
+
+.main-sec .section-head {
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 
-
+.main-sec .section-title,
+.main-sec .section-sub-title {
+    text-align: center;
+}
 
 @media(max-width:1439px) {
     .filter-sec .event-cart .cart-content .title {
-        font-size: var(--fs-md);
+        /* font-size: var(--fs-md); */
     }
 
 }
@@ -549,7 +560,7 @@ search-group .my-input-control input::placeholder {
 
 
     header .module-header-main .m-item:hover .module-h-dropdwon {
-        padding: 12px 20px;
+        padding: 12px 12px;
         width: fit-content;
         top: 48px;
         left: 50%;
@@ -561,14 +572,20 @@ search-group .my-input-control input::placeholder {
         overflow-x: hidden;
     }
 
+    header .header-main .module-header-main-wrap {
+        gap: 12px !important;
+    }
+
     header .module-header-main .m-item .content {
         font-size: var(--fs-sm);
         padding: 6px 8px;
         cursor: pointer;
+        color: var(--my-primary-color);
+        font-weight: 600;
     }
 
     header .module-header-main .m-item .module-h-dropdwon .d-item {
-        padding: 6px 0px;
+        padding: 12px 12px;
         font-size: var(--fs-xs);
     }
 

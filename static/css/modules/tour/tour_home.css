@@ -420,10 +420,6 @@
     gap: 20px;
 }
 
-.top-trending-dest-body .right .right-top .dest-item,
-.top-trending-dest-body .right .right-bottom .dest-item {
-    /* background-color: red; */
-}
 
 .top-trending-dest-body .right .right-top {
     height: 270px;
@@ -1363,9 +1359,6 @@
         color: var(--my-secondary-color);
         width: 20px;
     }
-
-
-    /* header */
 
 
 
