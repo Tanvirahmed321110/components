@@ -3,207 +3,63 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Custom Searchable Dropdown</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Directional Hover Card</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                padding: 40px;
-                background: #f7f7f7;
-            }
-
-            .custom-dropdown {
-                width: 300px;
-                margin-bottom: 30px;
-                position: relative;
-            }
-
-            label {
-                display: block;
-                margin-bottom: 6px;
-                font-weight: 600;
-            }
-
-            .dropdown-selected {
-                border: 1px solid #ccc;
-                padding: 10px 12px;
-                border-radius: 6px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
+                height: 100vh;
+                background: #f0f0f0;
+            }
+
+            .event-cart {
+                width: 300px;
+                height: 500px;
+                padding: 16px;
+                border-radius: 24px;
+                background-color: #fff;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: transform 0.3s ease;
+                transform-style: preserve-3d;
                 cursor: pointer;
-                background: #fff;
-            }
-
-            .dropdown-selected.active {
-                border-color: #4d90fe;
-            }
-
-            .dropdown-selected .text {
-                outline: none;
-                cursor: text;
-            }
-
-            .wrap {
-                position: absolute;
-                width: 100%;
-                background: #fff;
-                border: 1px solid #ccc;
-                border-radius: 6px;
-                margin-top: 6px;
-                max-height: 180px;
-                overflow-y: auto;
-                display: none;
-                z-index: 10;
-            }
-
-            .wrap.active {
-                display: block;
-            }
-
-            .dropdown-options {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .dropdown-options .item {
-                padding: 10px 12px;
-                cursor: pointer;
-            }
-
-            .dropdown-options .item:hover,
-            .dropdown-options .item.active {
-                background: #f1f1f1;
-            }
-
-            .error-message {
-                color: red;
-                font-size: 12px;
-                display: none;
             }
         </style>
     </head>
 
     <body>
 
-        <!-- Dropdown 1 -->
-        <div class="custom-dropdown">
-            <label>Title</label>
-
-            <div class="dropdown-selected">
-                <span class="text">Select Title</span>
-                <span>▼</span>
-            </div>
-
-            <div class="wrap">
-                <ul class="dropdown-options">
-                    <li class="item" data-value="1">Title One</li>
-                    <li class="item" data-value="2">Title Two</li>
-                    <li class="item" data-value="3">Title Three</li>
-                    <li class="item" data-value="4">Bangla</li>
-                    <li class="item" data-value="5">Bangla desh</li>
-                    <li class="item" data-value="6">বাংলা ভাষা</li>
-                </ul>
-            </div>
-
-            <input type="hidden" name="title">
-            <small class="error-message">Please select a title</small>
-        </div>
-
-        <!-- Dropdown 2 -->
-        <div class="custom-dropdown">
-            <label>Country</label>
-
-            <div class="dropdown-selected">
-                <span class="text">Select Country</span>
-                <span>▼</span>
-            </div>
-
-            <div class="wrap">
-                <ul class="dropdown-options">
-                    <li class="item" data-value="bd">Bangladesh</li>
-                    <li class="item" data-value="in">India</li>
-                    <li class="item" data-value="pk">Pakistan</li>
-                    <li class="item" data-value="np">Nepal</li>
-                    <li class="item" data-value="বাংলাদেশ">বাংলাদেশ</li>
-                </ul>
-            </div>
-
-            <input type="hidden" name="country">
+        <div class="event-cart">
+            <h2>Event Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Date: 10 Feb 2026</p>
         </div>
 
         <script>
-            const dropdowns = document.querySelectorAll('.custom-dropdown');
+            const card = document.querySelector('.event-cart');
 
-            dropdowns.forEach(dropdown => {
-                const label = dropdown.querySelector('label');
-                const selected = dropdown.querySelector('.dropdown-selected');
-                const textEl = dropdown.querySelector('.text');
-                const wrap = dropdown.querySelector('.wrap');
-                const items = dropdown.querySelectorAll('.dropdown-options .item');
-                const hiddenInput = dropdown.querySelector('input[type="hidden"]');
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-                if (!label || !selected || !textEl || !wrap || !hiddenInput) return;
+                // Determine which side the cursor is on
+                const sideX = x < rect.width / 2 ? -1 : 1; // left = -1, right = 1
+                const sideY = y < rect.height / 2 ? -1 : 1; // top = -1, bottom = 1
 
-                textEl.setAttribute('contenteditable', 'true');
-                textEl.setAttribute('spellcheck', 'false');
+                const rotateX = 5 * sideY; // tilt forward/backward
+                const rotateY = 5 * sideX; // tilt left/right
 
-                const openDropdown = (e) => {
-                    e.stopPropagation();
-                    closeAll();
-                    wrap.classList.add('active');
-                    selected.classList.add('active');
-                    placeCursorAtEnd(textEl);
-                };
-
-                selected.addEventListener('click', openDropdown);
-                label.addEventListener('click', openDropdown);
-
-                // Filter while typing (Bangla supported)
-                textEl.addEventListener('input', () => {
-                    const value = textEl.textContent.trim().toLowerCase();
-
-                    items.forEach(item => {
-                        const text = item.textContent.toLowerCase();
-                        item.style.display = text.includes(value) ? 'block' : 'none';
-                    });
-
-                    wrap.classList.add('active');
-                });
-
-                // Select item
-                items.forEach(item => {
-                    item.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        textEl.textContent = item.textContent.trim();
-                        hiddenInput.value = item.dataset.value;
-
-                        items.forEach(i => i.classList.remove('active'));
-                        item.classList.add('active');
-
-                        wrap.classList.remove('active');
-                        selected.classList.remove('active');
-                    });
-                });
+                card.style.transform = `perspective(250px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.96)`;
             });
 
-            // Close on outside click
-            document.addEventListener('click', closeAll);
-
-            function closeAll() {
-                document.querySelectorAll('.wrap').forEach(w => w.classList.remove('active'));
-                document.querySelectorAll('.dropdown-selected').forEach(s => s.classList.remove('active'));
-            }
-
-            // Cursor helper
-            function placeCursorAtEnd(el) {
-                const range = document.createRange();
-                const sel = window.getSelection();
-                range.selectNodeContents(el);
-                range.collapse(false);
-                sel.removeAllRanges();
-                sel.addRange(range);
-            }
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(250px) rotateX(0deg) rotateY(0deg) scale(1)';
+            });
         </script>
 
     </body>

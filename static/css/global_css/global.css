@@ -588,6 +588,11 @@
     max-height: 500px;
 }
 
+/*
+.event-cart:hover {
+    transform: perspective(250px) rotateX(4deg) scale(0.96);
+} */
+
 .event-cart .cart-img {
     width: 100%;
     cursor: pointer;
@@ -757,6 +762,9 @@
     box-shadow: var(--n-shadow-2);
 }
 
+/* .tour-cart:hover {
+    transform: perspective(250px) rotateX(4deg) scale(0.96);
+} */
 
 .tour-cart .cart-img {
     position: relative;
@@ -853,6 +861,8 @@
 .tour-cart .content-wrapper {
     /* position: relative; */
 }
+
+
 
 .tour-cart.package .hover-content {
     position: absolute;

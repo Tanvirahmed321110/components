@@ -936,3 +936,32 @@ function modal() {
 }
 
 modal()
+
+
+
+function cardHover() {
+    const cards = document.querySelectorAll('.event-cart, .tour-cart');
+
+    if (!cards) { return }
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Calculate rotation based on position percentage
+            const rotateY = ((x / rect.width) - 0.5) * 10; // -5deg to 5deg
+            const rotateX = ((y / rect.height) - 0.5) * -10; // -5deg to 5deg (invert Y)
+
+            card.style.transform = `perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.96)`;
+            card.style.transition = 'transform 0.1s'; // quick response
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)';
+            card.style.transition = 'transform 0.3s'; // smooth reset
+        });
+    });
+}
+cardHover()
