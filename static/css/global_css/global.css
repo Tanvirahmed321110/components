@@ -444,7 +444,7 @@
 }
 
 .hot-dest-cart .title {
-    font-size: var(--fs-3xl);
+    font-size: var(--fs-xxl);
     font-weight: var(--fw-600);
     color: var(--my-white);
 }

@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const blogSwiper = new Swiper(".blog-swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
+    speed: 1200,
     loop: true,
     navigation: {
         nextEl: ".next",
