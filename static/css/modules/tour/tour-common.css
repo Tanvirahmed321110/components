@@ -486,14 +486,14 @@ search-group .my-input-control input::placeholder {
 
 /* other-page-sce */
 .other-page-sce .tour-cart.package .cart-title {
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.5vw, 18px);
     line-height: 1.3;
 }
 
 .top-destnation-sec .tour-cart .price .new-price {
     font-weight: var(--fw-700);
-    font-size: var(--fs-xl);
-    line-height: var(--line-height-lg);
+    font-size: clamp(12px, 1.5vw, 20px);
+    line-height: var(--line-height-sm);
 }
 
 .other-page-sce .visiable-content .price-rating {
@@ -794,7 +794,7 @@ search-group .my-input-control input::placeholder {
     }
 
     .package.tour-cart .visiable-content {
-        padding: 6px 6px;
+        padding: 8px;
         padding-top: 20px;
     }
 
@@ -853,4 +853,57 @@ search-group .my-input-control input::placeholder {
     .filter-sec-wrap {
         padding-bottom: 20px;
     }
+
+
+    .hot-dest-cart .title {
+        font-size: var(--fs-lg);
+        line-height: var(--line-height-lg);
+    }
+
+
+    .hot-dest-cart .content {
+        padding-left: 12px;
+        padding-bottom: 18px;
+    }
+
+    .other-page-sce .tour-cart.package .price .my-fs-xs {
+        font-size: 8px;
+    }
+
+    .hot-dest-cart .sub-title {
+        font-size: var(--fs-xs);
+    }
+
+    .hot-dest-cart .my-fs-xs {
+        font-size: var(--fs-low);
+    }
+
+
+
+    .hot-dest-cart .explore-btn {
+        position: unset;
+        display: block;
+        box-shadow: unset;
+        margin-top: 4px;
+    }
+
+    .hot-dest-cart .content {
+        padding-left: 12px;
+        padding-bottom: 12px;
+    }
+
+    .hot-dest-cart .img-wrapper::after {
+        height: 70%;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, .6) 0%,
+                rgba(0, 0, 0, 0.5) 40%,
+                rgba(0, 0, 0, 0.4) 70%,
+                rgba(0, 0, 0, .0) 100%);
+    }
+
+    .filter-area .tab-btns {
+        padding: 12px 8px;
+        gap: 4px;
+    }
+
 }
