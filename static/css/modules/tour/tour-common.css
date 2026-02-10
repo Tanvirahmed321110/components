@@ -482,6 +482,30 @@ search-group .my-input-control input::placeholder {
     text-align: center;
 }
 
+
+
+/* other-page-sce */
+.other-page-sce .tour-cart.package .cart-title {
+    font-size: clamp(14px, 1.5vw, 18px);
+    line-height: 1.3;
+}
+
+.top-destnation-sec .tour-cart .price .new-price {
+    font-weight: var(--fw-700);
+    font-size: var(--fs-xl);
+    line-height: var(--line-height-lg);
+}
+
+.other-page-sce .visiable-content .price-rating {
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
 @media(max-width:1439px) {
     .filter-sec .event-cart .cart-content .title {
         /* font-size: var(--fs-md); */

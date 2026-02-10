@@ -214,10 +214,10 @@
 }
 
 .w-dropdown-wrap-parent .w-dropdown-btn {
-    padding: 6px 16px;
+    padding: 4px 16px;
     border: 1px solid var(--my-border-color);
     border-radius: 28px;
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     cursor: pointer;
     user-select: none;
 }
@@ -232,7 +232,6 @@
     background-color: var(--my-white);
     box-shadow:
         -3px 4px 26px 0px rgba(0, 0, 0, 0.1),
-        /* উপরের দিকে কম উঠবে */
         -13px 10px 48px 0px rgba(0, 0, 0, 0.08),
         -29px 20px 64px 0px rgba(0, 0, 0, 0.05),
         -51px 30px 76px 0px rgba(0, 0, 0, 0.02),
