@@ -647,7 +647,7 @@ search-group .my-input-control input::placeholder {
         position: relative;
     }
 
-    .m-search-menu-wrapper .search-fields .input-item,
+    /* .m-search-menu-wrapper .search-fields .input-item,
     .m-search-menu-wrapper .search-fields .search-button {
         position: relative;
     }
@@ -713,7 +713,7 @@ search-group .my-input-control input::placeholder {
 
     .m-search-menu-wrapper input[type="checkbox"]:checked::after {
         font-size: 10px;
-    }
+    } */
 
 
     /* tourcart package */
