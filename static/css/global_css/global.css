@@ -2011,18 +2011,18 @@ footer .footer-bottom {
 
     header .m-search-menu .left-icon svg {
         position: absolute;
-        left: -41px;
-        top: -95px;
+        left: -60px;
+        top: 40px;
         z-index: 1;
-        transform: rotate(-12deg);
+        transform: rotate(4deg);
     }
 
     header .m-search-menu .right-icon svg {
         position: absolute;
-        right: -34px;
-        top: -95px;
+        right: 12px;
+        top: 40px;
         z-index: 1;
-        transform: rotate(12deg);
+        transform: rotate(6deg);
     }
 
     header .search-menu-wrapper {
@@ -2475,6 +2475,7 @@ footer .footer-bottom {
         font-size: 14px;
         flex-direction: column;
         box-shadow: var(--shadow-1);
+        background-color: var(--my-white);
     }
 
     .search-menu-wrapper .module-menus .item.active svg rect {
@@ -3131,6 +3132,116 @@ footer .footer-bottom {
 
 @media (max-width: 767px) {
 
+
+    .m-search-menu-wrapper .top-grid {
+        display: grid;
+        grid-template-columns: 1fr 24px 1fr;
+    }
+
+    /* m-search-menu-wrapper */
+    .m-search-menu-wrapper .top-grid {
+        display: grid;
+        grid-template-columns: 1fr 24px 1fr;
+    }
+
+    .m-search-menu-wrapper .bottom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .m-search-menu-wrapper .swap-btn-wrap {
+        position: relative;
+    }
+
+    .m-search-menu-wrapper .swap-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #00000080;
+        background-color: var(--my-white);
+        position: absolute;
+        left: -3px;
+        top: 3px;
+        z-index: 2;
+    }
+
+    header .m-search-menu {
+        overflow: unset;
+        position: relative;
+    }
+
+    .m-search-menu-wrapper .search-fields .input-item,
+    .m-search-menu-wrapper .search-fields .search-button {
+        position: relative;
+    }
+
+    .m-search-menu-wrapper .search-fields .input-item input {
+        border: .5px solid #00000080;
+        background-color: var(--my-white);
+        border-radius: 4px;
+        width: 100%;
+        font-size: var(--fs-low);
+        padding: 10px 12px;
+    }
+
+    .m-search-menu-wrapper .search-fields .text-icon {
+        position: absolute;
+        font-size: 10px;
+        left: 12px;
+        top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--my-text-primary);
+    }
+
+    .m-search-menu-wrapper .search-fields {
+        margin-top: 32px;
+    }
+
+    .m-search-menu-wrapper .search-fields .search-button {
+        background-color: var(--my-primary-color);
+        border-radius: 4px;
+        border: 1px solid #00000080;
+        position: relative;
+        font-size: 10px;
+        text-align: left;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .m-search-menu-wrapper .search-fields .search-button .content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+        font-size: var(--fs-low);
+    }
+
+    .m-search-menu-wrapper .checkbox-input {
+        font-size: var(--fs-xs);
+        color: var(--my-text-primary);
+    }
+
+    .m-search-menu-wrapper .checkbox-input input {
+        border: 1px solid #00000080;
+        border-radius: 2px;
+    }
+
+    .m-search-menu-wrapper input[type="checkbox"],
+    .m-search-menu-wrapper input[type="radio"] {
+        width: 12px;
+        height: 12px;
+        border-color: var(--my-secondary-color);
+    }
+
+    .m-search-menu-wrapper input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
 
 
     header .header-main ul {

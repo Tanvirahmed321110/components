@@ -1973,6 +1973,7 @@
         border-radius: 12px;
         padding: 12px;
         padding-top: 8px;
+        box-shadow: var(--shadow-1);
     }
 
     .m-bottom-sidebar .module-name {
@@ -2062,6 +2063,10 @@
 ================================================
 */
 @media (max-width: 991px) {
+
+    header {
+        border-bottom: none;
+    }
 
     .tab-contents {
         margin-top: 16px;
