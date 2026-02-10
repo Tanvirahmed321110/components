@@ -501,6 +501,42 @@ search-group .my-input-control input::placeholder {
 }
 
 
+.hot-dest-cart {
+    box-shadow: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hot-dest-cart:hover {
+    animation: unset !important;
+}
+
+.hot-dest-cart .content {
+    width: 100%;
+}
+
+.hot-dest-cart .explore-btn {
+    position: absolute;
+    bottom: -48px;
+    right: 16px;
+    transition: .4s ease;
+    z-index: 4;
+    box-shadow:
+        0 -6px 12px rgba(255, 255, 255, 0.4),
+        0 16px 16px rgba(255, 255, 255, 0.25);
+
+}
+
+
+.hot-dest-cart:hover::after {
+    bottom: 0%;
+}
+
+.hot-dest-cart:hover .explore-btn {
+    bottom: 16px;
+    right: 16px;
+    z-index: 31;
+}
 
 
 

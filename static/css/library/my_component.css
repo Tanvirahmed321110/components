@@ -708,7 +708,8 @@ button:active,
     background-color: var(--my-secondary-color) !important;
 }
 
-.my-btn .content {
+.my-btn .content,
+.btn-content {
     position: relative;
     z-index: 2;
     width: 100%;
