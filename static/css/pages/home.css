@@ -449,6 +449,25 @@
     height: 230px;
 }
 
+.offer-sec .offer-cart .video-btn{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--my-primary-color);
+}
+.offer-sec .offer-cart .video-btn:hover{
+    background-color: var(--my-secondary-color);
+    backdrop-filter: unset;
+}
 .offer-sec .offer-cart.full {
     height: 385px;
 }

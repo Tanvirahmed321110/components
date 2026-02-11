@@ -1006,8 +1006,8 @@
 =====||   Related Product  Start Here     ||=====
 =============================================
 */
-.related-products-wrap {
-    padding-bottom: 60px;
+.section-main.related-products-wrap {
+    margin-bottom: 0;
 }
 
 .related-products-slider {
@@ -1275,7 +1275,7 @@
 */
 
 .customer-reviews-sec .item {
-    padding: 32px;
+    padding: 20px;
     border: 1px solid #D9D9D9;
     border-radius: 20px;
     transition: .2s ease;
