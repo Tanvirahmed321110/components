@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // funciton active
+    // function active
     function activeF(selector) {
         const items = document.querySelectorAll(selector)
 

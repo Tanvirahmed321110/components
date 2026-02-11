@@ -587,7 +587,7 @@
     font-size: var(--fs-low);
     line-height: var(--line-height-sm);
     border-radius: var(--radius-md);
-    padding: 4px 12px;
+    padding: 4px 8px;
 }
 
 .offer-sec .rating span {

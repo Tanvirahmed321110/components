@@ -73,6 +73,16 @@
     background-color: transparent;
 }
 
+.product-hero .video-play-btn {
+    background-color: var(--my-primary-color);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.product-hero .video-play-btn:hover {
+    background-color: var(--my-secondary-color);
+}
 
 /**************
  bottom-side

@@ -26,7 +26,6 @@
     position: relative;
     user-select: auto;
     z-index: 20;
-    display: none;
 }
 
 /* Modal LG */
