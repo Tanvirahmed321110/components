@@ -834,9 +834,7 @@
 
 .package.tour-cart .cart-title {
     font-weight: var(--fw-600);
-    font-size: clamp(14px,
-            calc(14px + (100vw - 375px) * 0.0094),
-            24px);
+        font-size: clamp(14px, 1.4vw, 24px);
     line-height: 1.3;
     color: var(--my-white);
 }

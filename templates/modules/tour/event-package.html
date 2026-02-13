@@ -4961,10 +4961,11 @@
 
 
                             <!-- compare and other buttons -->
-                            <div class="my-d-flex my-gap-8 my-align-center compare-and-other">
-                                <div class="my-d-flex my-gap-8 my-align-center">
-                                    <a class="btn my-flex-center outline" href="#"><svg width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="my-d-flex my-gap-8  my-gap-md-4 my-align-center compare-and-other">
+                                <div class="my-d-flex my-gap-6  my-gap-md-4 my-align-center">
+                                    <!-- share btn -->
+                                    <a class="btn my-flex-center outline tooltip" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M17.5 5.41797C17.5 6.79868 16.3807 7.91797 15 7.91797C13.6192 7.91797 12.5 6.79868 12.5 5.41797C12.5 4.03726 13.6192 2.91797 15 2.91797C16.3807 2.91797 17.5 4.03726 17.5 5.41797Z"
                                                 stroke="#FC5A31" stroke-width="1.25" />
@@ -4974,12 +4975,19 @@
                                             <path
                                                 d="M17.5 14.582C17.5 15.9628 16.3807 17.082 15 17.082C13.6192 17.082 12.5 15.9628 12.5 14.582C12.5 13.2013 13.6192 12.082 15 12.082C16.3807 12.082 17.5 13.2013 17.5 14.582Z"
                                                 stroke="#FC5A31" stroke-width="1.25" />
-                                            <path d="M7.27344 8.95661L12.6901 6.45703M7.27344 11.0404L12.6901 13.5399"
-                                                stroke="#FC5A31" stroke-width="1.25" />
+                                            <path d="M7.27344 8.95661L12.6901 6.45703M7.27344 11.0404L12.6901 13.5399" stroke="#FC5A31"
+                                                stroke-width="1.25" />
                                         </svg>
+                                    
+                                        <!-- tooltip text -->
+                                        <div class="tooltip-text">
+                                            Share Now
+                                        </div>
                                     </a>
-                                    <a class="btn my-flex-center" href="#"><svg width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    
+                                    <!-- add planner -->
+                                    <a class="btn my-flex-center tooltip" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.432 5.01953V19.3726C16.432 19.7189 16.127 20 15.7511 20H0.680923C0.305053 20 0 19.7189 0 19.3726V5.01953H16.432Z"
                                                 fill="#EFEFEF" />
@@ -4998,18 +5006,12 @@
                                             <path
                                                 d="M13.1184 2.80247C12.7424 2.80247 12.4375 2.5215 12.4375 2.17504V0.627427C12.4375 0.280962 12.7424 0 13.1184 0C13.4944 0 13.7993 0.280962 13.7993 0.627427V2.17504C13.7993 2.52163 13.4944 2.80247 13.1184 2.80247Z"
                                                 fill="#EFEFEF" />
-                                            <path
-                                                d="M14.5039 8.25439L15.6758 7.17461L18.6388 9.90482L17.4669 10.9846L14.5039 8.25439Z"
-                                                fill="#F0C020" />
+                                            <path d="M14.5039 8.25439L15.6758 7.17461L18.6388 9.90482L17.4669 10.9846L14.5039 8.25439Z" fill="#F0C020" />
                                             <path
                                                 d="M15.6836 7.17379L16.6666 6.26803C17.1611 5.8124 17.9614 5.81328 18.455 6.26803L19.63 7.35072C20.1236 7.80561 20.1244 8.54296 19.63 8.9986L18.647 9.90435L15.6836 7.17379Z"
                                                 fill="#F3613F" />
-                                            <path
-                                                d="M17.4736 10.9845L12.418 15.642L9.45508 12.9118L14.5098 8.25342L17.4736 10.9845Z"
-                                                fill="#72C3EC" />
-                                            <path
-                                                d="M14.5098 8.25342L9.45508 12.9118L12.418 15.642L17.4736 10.9845L14.5098 8.25342Z"
-                                                fill="#72C3EC" />
+                                            <path d="M17.4736 10.9845L12.418 15.642L9.45508 12.9118L14.5098 8.25342L17.4736 10.9845Z" fill="#72C3EC" />
+                                            <path d="M14.5098 8.25342L9.45508 12.9118L12.418 15.642L17.4736 10.9845L14.5098 8.25342Z" fill="#72C3EC" />
                                             <path
                                                 d="M12.4175 15.6421L10.1703 16.3025L8.53881 16.7818C8.34107 16.8399 8.1545 16.6681 8.21755 16.4858L8.73778 14.9825L9.45452 12.9119L12.4175 15.6421Z"
                                                 fill="#F9B59D" />
@@ -5032,15 +5034,43 @@
                                                 d="M7.0335 14.9761H3.31116C3.12309 14.9761 2.9707 15.1165 2.9707 15.2898C2.9707 15.4631 3.12309 15.6035 3.31116 15.6035H7.0335C7.22157 15.6035 7.37396 15.4631 7.37396 15.2898C7.37396 15.1165 7.22157 14.9761 7.0335 14.9761Z"
                                                 fill="#FC5A31" />
                                         </svg>
+                                    
+                                        <!-- tooltip text -->
+                                        <div class="tooltip-text">
+                                            Add to Planner
+                                        </div>
                                     </a>
-                                    <a class="btn my-flex-center" href="#"><svg width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <!-- add to wishlist -->
+                                    <a class="btn my-flex-center tooltip" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M8.67689 16.6411C6.32582 14.883 1.66797 10.8636 1.66797 7.24667C1.66797 4.85599 3.42235 2.91797 5.83464 2.91797C7.08464 2.91797 8.33464 3.33464 10.0013 5.0013C11.668 3.33464 12.918 2.91797 14.168 2.91797C16.5802 2.91797 18.3346 4.85599 18.3346 7.24667C18.3346 10.8636 13.6768 14.883 11.3257 16.6411C10.5346 17.2326 9.46805 17.2326 8.67689 16.6411Z"
-                                                stroke="white" stroke-width="1.25" stroke-linecap="round"
-                                                stroke-linejoin="round" />
+                                                stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
+                                    
+                                        <!-- tooltip text -->
+                                        <div class="tooltip-text">
+                                            Add to Wishlist
+                                        </div>
                                     </a>
+
+                                    <!-- add to cart -->
+                                    <a class="btn my-flex-center tooltip" href="#">
+                                        <!-- Cart Icon -->
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 3H5L6.5 14H18L20 6H7" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <circle cx="9" cy="20" r="1.5" fill="white" />
+                                            <circle cx="17" cy="20" r="1.5" fill="white" />
+                                        </svg>
+                                    
+                                        <!-- Tooltip text -->
+                                        <div class="tooltip-text">
+                                            Add to Cart
+                                        </div>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>

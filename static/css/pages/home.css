@@ -2542,4 +2542,9 @@
     .testimonial .item .desc {
         font-size: var(--fs-sm);
     }
+
+    .get-touch .my-btn {
+        font-size: var(--fs-sm);
+        line-height: 28px;
+    }
 }
