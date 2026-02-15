@@ -283,96 +283,6 @@ body {
     background-color: rebeccapurple;
 }
 
-.hotel-cart.tour-filter-cart .cart-content {
-    padding: 14px;
-}
-
-.hotel-cart.tour-filter-cart {
-    padding: 6px;
-    box-shadow: unset;
-    position: relative;
-    background-color: var(--my-white);
-    border-radius: var(--radius-xl);
-    transition: .3s ease;
-    box-shadow: var(--shadow-1);
-}
-
-.hotel-cart.tour-filter-cart .sub-title {
-    font-size: var(--fs-md);
-}
-
-.hotel-cart.tour-filter-cart .title {
-    margin-top: 8px;
-    color: var(--my-text-primary);
-    font-size: var(--fs-lg);
-    line-height: var(--line-height-lg);
-    font-weight: var(--fw-600);
-    transition: .2s ease;
-}
-
-.hotel-cart.tour-filter-cart .title:hover {
-    color: var(--my-secondary-color);
-}
-
-.hotel-cart.tour-filter-cart img {
-    border-radius: var(--radius-xl);
-    transition: .2s ease;
-}
-
-/* .hotel-cart.tour-filter-cart:hover~.hotel-cart.tour-filter-cart,
-.hotel-cart.tour-filter-cart:has(~ .hotel-cart.tour-filter-cart:hover) {
-    opacity: 0.8;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-} */
-
-.hotel-cart.tour-filter-cart:hover img {
-    transform: scale(1.02);
-}
-
-.hotel-cart.tour-filter-cart .cart-tag-left {
-    left: 14px;
-    top: 14px;
-    line-height: var(--line-height-sm);
-}
-
-.hotel-cart.tour-filter-cart .cart-btn {
-    background-color: var(--my-primary-color);
-    padding: 8px 16px;
-}
-
-
-.hotel-cart.tour-filter-cart .rating {
-    font-size: var(--fs-md);
-    margin-top: 12px;
-}
-
-.hotel-cart.tour-filter-cart .price .new-price {
-    font-size: var(--fs-lg);
-    color: var(--my-text-primary);
-    line-height: var(--line-height-md);
-    font-weight: 600;
-}
-
-
-
-.hotel-cart.tour-filter-cart .price-and-btn {
-    gap: 28px;
-}
-
-.hotel-cart.tour-filter-cart .price .old-price {
-    font-size: var(--fs-xs);
-    color: var(--my-orange);
-}
-
-.hotel-cart.tour-filter-cart .rating .rating-text {
-    color: var(--text-quaternary);
-}
-
-.hotel-cart.tour-filter-cart .rating .star-avg {
-    color: var(--my-rating);
-    font-weight: 600;
-}
-
 .filter-overlay {
     display: none;
 }
@@ -420,9 +330,6 @@ body {
         gap: 20px;
     }
 
-    .hotel-cart.tour-filter-cart .cart-content {
-        padding: 8px;
-    }
 
     .cart-btn {
         background-color: var(--my-primary-color);
@@ -569,91 +476,5 @@ body {
         padding-bottom: 12px;
     }
 
-    .hotel-cart.tour-filter-cart {
-        padding: 0px;
-        box-shadow: unset;
-        border-radius: 4px;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-img img {
-        height: unset;
-        border-radius: 4px;
-        /* aspect-ratio: 16 / 12; */
-    }
-
-    .hotel-cart.tour-filter-cart .cart-tag-left {
-        left: 5px;
-        top: 5px;
-        line-height: var(--line-height-sm);
-    }
-
-
-    .hotel-cart.tour-filter-cart .cart-tag-wishlist {
-        right: 5px;
-        top: 5px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-tag-wishlist i {
-        font-size: var(--fs-sm);
-    }
-
-    .hotel-cart.tour-filter-cart .cart-content {
-        padding: 8px;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-content .sub-title {
-        font-size: var(--fs-sm);
-    }
-
-    .hotel-cart.tour-filter-cart .cart-content .title {
-        margin-top: -2px;
-        font-size: var(--fs-md);
-        line-height: var(--line-height-lg);
-    }
-
-    .hotel-cart.tour-filter-cart .cart-content .rating {
-        margin-top: 0px;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-content .rating .star-avg,
-    .hotel-cart.tour-filter-cart .cart-content .rating .rating-text {
-        font-size: 10px;
-    }
-
-    .hotel-cart.tour-filter-cart .star-avg i {
-        margin-top: 0px;
-    }
-
-    .hotel-cart.tour-filter-cart .price .new-price {
-        font-size: var(--fs-sm);
-        line-height: var(--line-height-xs);
-    }
-
-    .hotel-cart.tour-filter-cart .price .old-price {
-        color: var(--my-orange);
-        font-size: var(--fs-low);
-        margin-top: 0px;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-btn {
-        font-size: var(--fs-low);
-        padding: 6px 8px;
-        border-radius: 4px !important;
-    }
-
-    .hotel-cart.tour-filter-cart .price-and-btn {
-        gap: 16px;
-    }
-
-    .hotel-cart.tour-filter-cart .cart-btn .content {
-        line-height: 12px;
-    }
-
-    .hotel-cart.tour-filter-cart .price-and-btn {
-        margin-top: 2px;
-        align-items: end;
-    }
+  
 }

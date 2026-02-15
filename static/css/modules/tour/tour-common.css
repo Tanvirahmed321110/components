@@ -363,7 +363,7 @@ search-group .my-input-control input::placeholder {
 .filter-header .click-dropdown-btn {
     padding: 5px 18px;
     border-radius: var(--radius-pill);
-    font-size: var(--fs-lg);
+    font-size: clamp(14px, 1.2vw, 18px);
     font-weight: 400 !important;
     border: 1px solid var(--my-border-color);
     line-height: var(--line-height-md);
@@ -409,6 +409,7 @@ search-group .my-input-control input::placeholder {
 
 .package.tour-cart .visiable-content {
     padding: 20px 12px 10px 12px;
+    padding-bottom: 12px;
 }
 
 
@@ -487,7 +488,7 @@ search-group .my-input-control input::placeholder {
 /* other-page-sce */
 .other-page-sce .tour-cart.package .cart-title {
     font-size: clamp(12px, 1.5vw, 18px);
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .top-destnation-sec .tour-cart .price .new-price {
@@ -780,7 +781,7 @@ search-group .my-input-control input::placeholder {
     .tour-cart.package .hover-content .cart-title {
         font-size: clamp(12px, 2.2vw, 18px);
         margin-top: 4px;
-        line-height: 1.3;
+        line-height: 1.4;
     }
 
     .tour-cart.package .cart-title {
@@ -796,6 +797,7 @@ search-group .my-input-control input::placeholder {
     .package.tour-cart .visiable-content {
         padding: 8px;
         padding-top: 20px;
+        padding-bottom: 12px;
     }
 
     .filter-sec .filter-head .filter-btn {
