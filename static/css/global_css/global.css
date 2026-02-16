@@ -1235,8 +1235,48 @@ header .header-top .click-dropdown-btn.active::after {
 header .header-top .other-btns .item {
     padding: 0px;
     color: var(--my-text-primary);
+    position: relative;
 }
 
+header .header-top .other-btns .item .badge,
+.mobile-header .right .item .badge {
+    position: absolute;
+    top: -6px;
+    right: 6px;
+    border-radius: var(--radius-md);
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    display: inline-block;
+    font-size: var(--fs-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 14px;
+    animation: badgePop .6s ease 10;
+}
+
+
+.mobile-header .right .item .badge {
+    right: -6px;
+    font-size: var(--fs-low);
+    width: 12px;
+    height: 14px;
+}
+
+@keyframes badgePop {
+    0% {
+        transform: scale(.5);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 /*
 ======  Profile Dropdown Button  ======
@@ -3264,9 +3304,28 @@ footer .footer-bottom {
         background-color: var(--my-white);
     }
 
+
     header .header-main {
         padding: 12px 16px;
         padding-bottom: 16px !important;
+    }
+
+    /* m-search */
+    .mobile-header .search input {
+        border-radius: var(--radius-pill);
+        padding: 6px 8px;
+        font-size: 10px;
+        line-height: 1.3;
+        border-color: var(--my-border-secondary);
+        max-width: 200px;
+    }
+
+    .mobile-header .search input::placeholder {
+        font-size: 12px !important;
+    }
+
+    .mobile-header .right .item svg {
+        width: 22px;
     }
 
     .my-container {
@@ -3379,5 +3438,9 @@ footer .footer-bottom {
     .tour-cart.package .hover-content .price-btn {
         gap: 2px;
         margin-top: 0;
+    }
+
+    .m-trip-plan .items .item .content {
+        padding: 12px;
     }
 }
