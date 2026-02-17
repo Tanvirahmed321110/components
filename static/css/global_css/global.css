@@ -909,7 +909,7 @@
 }
 
 .tour-cart .hover-content .new-price {
-    color: var(--my-primary-color);
+    color: var(--my-text-primary);
 }
 
 .tour-cart .hover-content .star,
@@ -2860,7 +2860,7 @@ footer .footer-bottom {
     }
 
     .event-cart .pick-up-location {
-        font-size: 10px !important;
+        font-size: 10px;
         line-height: 12px;
     }
 
@@ -2869,11 +2869,11 @@ footer .footer-bottom {
     }
 
     .event-cart .total-seats div {
-        font-size: var(--fs-xs) !important;
+        font-size: var(--fs-xs);
     }
 
     .event-cart .new-price {
-        font-size: var(--fs-lg) !important;
+        font-size: var(--fs-lg);
         line-height: var(--line-height-low);
         margin-top: 0;
     }
@@ -3323,12 +3323,18 @@ footer .footer-bottom {
 
     .event-cart,
     .tour-cart {
-        height: 300px;
+        height: 290px;
+        border-radius: var(--radius-md);
     }
 
     .tour-cart.package {
-        height: 300px;
+        height: 290px;
         min-height: unset;
+        border-radius: var(--radius-md);
+    }
+
+    .tour-cart.package .hover-content {
+        border-radius: var(--radius-lg);
     }
 
     .event-cart .new-price {
@@ -3379,13 +3385,13 @@ footer .footer-bottom {
     }
 
     .cart-category {
-        padding: 2px 2px;
+        padding: 2px 4px;
     }
 
     .package.tour-cart .visiable-content {
         padding: 8px;
         padding-bottom: 12px;
-        background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.0));
+        background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.0));
     }
 
     .tour-cart.package .visiable-content .cart-title {
@@ -3395,12 +3401,58 @@ footer .footer-bottom {
 
     .tour-cart.package .rating,
     .tour-cart.package .visiable-content .rating {
-        font-size: clamp(8px, 1vw, 14px);
+        font-size: clamp(8px, 1vw, 12px);
         flex-wrap: wrap;
     }
+
+    .tour-cart.package .hover-content .dest {
+        font-size: clamp(8px, calc(8px + (100vw - 376px) * 0.003), 12px);
+    }
+
+    .tour-cart.package .old-price-wrap {
+        line-height: 1;
+    }
+
+    /* event cart */
+    .event-cart .cart-content .title {
+        font-size: clamp(11px, 3vw, 14px);
+        min-height: calc(12px * 2);
+    }
+
+    .event-cart .star-avg i,
+    .event-cart .star-avg div,
+    .event-cart .star-avg span {
+        font-size: 8px;
+    }
+
+    .event-cart .star-avg div {
+        font-size: 8px
+    }
+
+    .event-cart .star-avg .my-text-rating {
+        color: var(--my-rating);
+        font-size: 8px;
+    }
+
+
+    .event-cart .total-seats div,
+    .event-cart .total-seats span {
+        font-size: clamp(8px, 1vw, 12px);
+        font-weight: 500;
+    }
+
+    .event-cart .per-person {
+        display: none;
+    }
+
 }
 
 @media (max-width: 480px) {
+
+    .tour-cart.package .visiable-content .per-person {
+        display: none;
+    }
+
     .search-menu-wrapper .module-menus .item {
         padding: 8px 0;
     }
