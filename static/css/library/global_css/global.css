@@ -2834,7 +2834,7 @@ footer .footer-bottom {
 
     .cart-btn.my-btn {
         padding: 6px 14px;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         font-size: clamp(10px,
                 calc(10px + (100vw - 375px) * 0.0019),
                 14px);
@@ -2896,7 +2896,67 @@ footer .footer-bottom {
         gap: 2px;
     }
 
+    /*
+    ==========  Mobile Tour Cart  ==========
+    */
+    .m-tour-cart {
+        border-radius: 12px;
+        background-color: #F5F5F5;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
 
+
+    .m-tour-cart .content {
+        padding: 16px;
+    }
+
+    .m-tour-cart .content .top-text {
+        color: var(--m-gray);
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    .m-tour-cart .content .name,
+    .m-tour-cart .content .price {
+        font-weight: 600;
+        font-size: var(--fs-sm);
+        line-height: var(--line-height-xs);
+        color: var(--my-text-primary);
+    }
+
+    .m-tour-cart .content .price {
+        font-size: var(--fs-xs);
+        padding-bottom: 2px;
+    }
+
+    .m-tour-cart .content .total-review {
+        color: var(--m-gray);
+    }
+
+    .m-tour-cart .rating {
+        font-size: var(--fs-low);
+        color: var(--my-rating);
+    }
+
+    .m-tour-cart .rating .star i {
+        font-size: 14px;
+        color: var(--my-rating);
+    }
+
+    /* Cart Ribbon */
+    .m-tour-cart .cart-ribbon {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 1;
+        background-color: var(--my-secondary-color);
+        padding: 4px 8px;
+        border-radius: var(--radius-pill);
+        color: var(--my-white);
+        font-size: 8px;
+    }
 
     .tour-cart.package .hover-content {
         padding: 10px 12px;
@@ -3031,11 +3091,11 @@ footer .footer-bottom {
     }
 
     .cart-category {
-        font-size: clamp(7px, calc(6px + (100vw - 376px) * 0.003), 12px);
+        font-size: clamp(8px, calc(6px + (100vw - 376px) * 0.003), 12px);
         line-height: 10px;
         color: var(--my-white);
         font-weight: var(--fw-500);
-        border-radius: 4px;
+        border-radius: var(--radius-xs);
         padding: 2px 4px;
         display: inline-block;
         white-space: nowrap;
@@ -3326,11 +3386,6 @@ footer .footer-bottom {
         height: 300px;
     }
 
-    .tour-cart.package {
-        height: 300px;
-        min-height: unset;
-    }
-
     .event-cart .new-price {
         font-size: var(--fs-sm) !important;
     }
@@ -3351,53 +3406,6 @@ footer .footer-bottom {
         background-color: var(--my-white) !important;
     }
 
-
-    .tour-cart.package .hover-content {
-        padding: 8px;
-    }
-
-    .tour-cart.package .hover-content .cart-title {
-        font-size: clamp(11px, 3vw, 14px);
-        margin-top: 4px;
-        line-height: 1.3;
-        /* color: var(--my-text-primary); */
-    }
-
-    .tour-cart .price-btn-area {
-        margin-top: 0;
-        gap: 8px;
-    }
-
-    .tour-cart .price .old-price {
-        font-size: var(--fs-low);
-        color: var(--my-orange);
-        font-weight: var(--fw-400);
-    }
-
-    .tour-cart.package .start-from {
-        font-size: var(--fs-low);
-    }
-
-    .cart-category {
-        padding: 2px 2px;
-    }
-
-    .package.tour-cart .visiable-content {
-        padding: 8px;
-        padding-bottom: 12px;
-        background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.0));
-    }
-
-    .tour-cart.package .visiable-content .cart-title {
-        line-height: 1.3;
-        font-size: clamp(11px, 3vw, 14px);
-    }
-
-    .tour-cart.package .rating,
-    .tour-cart.package .visiable-content .rating {
-        font-size: clamp(8px, 1vw, 14px);
-        flex-wrap: wrap;
-    }
 }
 
 @media (max-width: 480px) {
@@ -3424,7 +3432,7 @@ footer .footer-bottom {
     }
 
     .tour-cart.package .hover-content .cart-btn {
-        padding: 6px 12px;
+        padding: 4px 12px;
     }
 
     .tour-cart.package .hover-content .price-btn {
