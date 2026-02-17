@@ -3445,6 +3445,16 @@ footer .footer-bottom {
         display: none;
     }
 
+
+    /* recently-view-area */
+    .recently-view-area .head-area {
+        display: none;
+    }
+
+    .section-title {
+        font-size: var(--fs-xl);
+        line-height: 1.4;
+    }
 }
 
 @media (max-width: 480px) {
