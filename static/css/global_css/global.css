@@ -650,6 +650,10 @@
     font-size: var(--fs-xs);
 }
 
+.other-page-sce .event-cart .new-price {
+    font-size: var(--fs-xl);
+}
+
 .event-cart .cart-content .title:hover {
     color: var(--my-secondary-color);
     cursor: pointer;
