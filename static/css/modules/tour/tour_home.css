@@ -478,12 +478,12 @@
 .popular-tour-cart .img-wrap img {
     border-radius: var(--radius-xxl);
     width: 100%;
-    height: 220px;
+    height: 200px;
     /* aspect-ratio: 16/13; */
 }
 
 .popular-tour-cart .item-content {
-    padding: 0px 12px 30px 12px;
+    padding: 0px 12px 20px 12px;
 }
 
 .popular-tour-cart .item-content .name {
@@ -645,8 +645,23 @@
 
 
 /* bottom */
-.tour-category-body .right-items .bottom-items .swiper {
+.tour-category-body .right-items .bottom-items {
     padding-top: 24px;
+}
+
+.tour-category-body .right-items .bottom-items .swiper {
+    border-radius: var(--radius-xxl);
+    overflow: hidden;
+}
+
+.tour-category-body .right-items .bottom-items .right-slider-arrows {
+    width: 96%;
+}
+
+.tour-category-body .swiper .right-slider-arrows .next,
+.tour-category-body .swiper.other-common-slider .right-slider-arrows .next {
+    left: unset;
+    right: -18px;
 }
 
 .tour-category-body .right-items .bottom-items .category-item {
@@ -1360,6 +1375,7 @@
     .search-input input {
         padding: 10px 12px;
         border-radius: 28px;
+        background-color: var(--my-white);
     }
 
     .search-input svg,
@@ -1379,7 +1395,7 @@
     /* recently view */
     .recent-view.section-main,
     .best-deal.section-main {
-        padding: 16px 0;
+        /* padding: 16px 0; */
     }
 
     .recent-view.section-main {
@@ -1610,6 +1626,7 @@
     .m-trip-plan {
         background-color: #f5f5f5;
         padding: 32px 0;
+        padding-top: 16px;
     }
 
     .m-trip-plan .plan-create-btn {
@@ -1721,6 +1738,7 @@
     /* Top Tour Categories */
     .tour-category {
         background-color: var(--section-bg);
+        margin-bottom: 0;
     }
 
     .m-tour-category .head .left {
@@ -1832,7 +1850,7 @@
 
     /* hot dest */
     .hot-destination .head .left {
-        max-width: 170px;
+        max-width: 190px;
     }
 
     .hot-destination .hot-dest-cart .content {
@@ -1847,6 +1865,10 @@
 
     .hot-dest-cart .sub-title {
         font-size: var(--fs-xs);
+    }
+
+    .hot-destination .section-title {
+        font-size: var(--fs-lg);
     }
 
     .hot-dest-cart .search-input svg,
@@ -1870,7 +1892,7 @@
     }
 
     .tab-contents {
-        margin-top: 0px;
+        margin-top: 16px;
     }
 
     .best-deal-area .best-deal-slider {
@@ -1881,6 +1903,6 @@
     .popular-tour-cart .img-wrap img {
         border-radius: var(--radius-lg);
         width: 100%;
-        height: 120px;
+        height: 230px;
     }
 }

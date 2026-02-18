@@ -3508,7 +3508,7 @@ footer .footer-bottom {
     }
 
     .tour-cart.package .visiable-content .price-rating {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .tour-cart.package .hover-content .cart-btn {

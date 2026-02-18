@@ -847,10 +847,10 @@ search-group .my-input-control input::placeholder {
         padding-top: 20px;
     }
 
-    .tour-cart.package {
+    /* .tour-cart.package {
         height: 100%;
         min-height: 290px;
-    }
+    } */
 
     .filter-sec-wrap {
         padding-bottom: 20px;

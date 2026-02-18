@@ -6068,7 +6068,7 @@
 
 
                                 <!-- Body -->
-                                <div class="swiper other-common-slider recently-view-slider my-mt-4 my-mt-sm-0">
+                                <div class="swiper other-common-slider recently-view-slider my-mt-4 my-mt-sm-8">
                                     <div class="swiper-wrapper " aria-live="polite">
 
                                         <div class="swiper-slide swiper-slide-active" role="group">
@@ -6460,7 +6460,7 @@
                                                         </div>
 
                                                         <!-- Seats and Price -->
-                                                        <div class="my-mt-5 my-mt-sm-0 my-flex-between ">
+                                                        <div class="my-mt-5 my-mt-sm-2 my-flex-between ">
                                                             <!--====== Total and Availabe Seat =====-->
                                                             <div class="total-seats">
                                                                 <div class="my-text-primary">Total Seats: <span
@@ -11146,7 +11146,8 @@
                                                         </div>
                                                         <div class="item-content">
                                                             <h3 class="category-name">Couple Tour</h3>
-                                                            <div class="my-mt-0 my-d-flex my-align-end my-gap-10">
+                                                            <div
+                                                                class="my-mt-0 my-d-flex my-align-end my-gap-10 flex-wrap">
                                                                 <p class="desc">Choose your destination travels -
                                                                     Service Provider
                                                                     Of
@@ -12406,10 +12407,10 @@
 
 
         <!--
-            ================================================
-            =======||  Footer Section  Start Here   ||======
-            ================================================
-            -->
+        ================================================
+        =======||  Footer Section  Start Here   ||======
+        ================================================
+        -->
         <footer class="">
             <div class="my-container">
 
@@ -12740,15 +12741,18 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1.5, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     480: {
-                        slidesPerView: 1.8, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     768: {
-                        slidesPerView: 2.9, // Tablet
+                        slidesPerView: 2.5, // Tablet
+                        spaceBetween: 16,
+                    }, 991: {
+                        slidesPerView: 3, // Tablet
                         spaceBetween: 16,
                     },
                     1280: {
@@ -12777,15 +12781,19 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1.5, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     480: {
-                        slidesPerView: 1.8, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     768: {
-                        slidesPerView: 2.9, // Tablet
+                        slidesPerView: 2.5, // Tablet
+                        spaceBetween: 16,
+                    },
+                    991: {
+                        slidesPerView: 3, // Tablet
                         spaceBetween: 16,
                     },
                     1280: {
@@ -12814,15 +12822,19 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1.5, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     480: {
-                        slidesPerView: 1.8, // Mobile
+                        slidesPerView: 2.05, // Mobile
                         spaceBetween: 12,
                     },
                     768: {
-                        slidesPerView: 2.9, // Tablet
+                        slidesPerView: 2.5, // Tablet
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 3, // Tablet
                         spaceBetween: 16,
                     },
                     1280: {
@@ -12879,6 +12891,11 @@
                 slidesPerView: 2,
                 spaceBetween: 20,
                 loop: true,
+                speed: 1500,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
 
                 breakpoints: {
                     320: { slidesPerView: 1 },
