@@ -190,7 +190,7 @@ const mapview = new Swiper(".map-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.5, // Mobile
+            slidesPerView: 2.1, // Mobile
             spaceBetween: 12,
         },
         768: {
@@ -294,7 +294,7 @@ var swiper = new Swiper(".brandSwiper", {
     freeModeMomentum: true, // keeps constant speed
     allowTouchMove: true, // optional: prevent dragging
     breakpoints: {
-        320: { slidesPerView: 3, spaceBetween: 10 },
+        320: { slidesPerView: 3, spaceBetween: 16 },
         576: { slidesPerView: 3, spaceBetween: 15 },
         768: { slidesPerView: 4, spaceBetween: 20 },
         1024: { slidesPerView: 5, spaceBetween: 30 }

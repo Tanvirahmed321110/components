@@ -1258,6 +1258,11 @@
     position: relative;
 }
 
+.our-brand-area img {
+    object-fit: contain;
+    max-height: 80px;
+}
+
 .our-brand-area .brandSwiper::before {
     content: "";
     position: absolute;
@@ -2214,7 +2219,7 @@
 
     .m-trip-plan .m-create-trip-plan-btn {
         background-color: var(--my-primary-color);
-        padding: 12px 16px;
+        padding: 12px 24px;
         font-size: var(--fs-md);
         font-weight: 600;
         border-radius: var(--radius-pill);
@@ -2481,6 +2486,28 @@
         max-width: 240px;
     }
 
+
+    .m-trip-plan-bg {
+        position: relative;
+        max-height: 240px;
+    }
+
+    .m-trip-plan-bg img {
+        max-height: 220px;
+    }
+
+    .m-trip-plan-bg .m-create-trip-plan-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .m-trip-plan.section-main {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -2517,6 +2544,10 @@
         line-height: 28px;
     }
 
+    .recently-view {
+        margin-top: 16px;
+    }
+
     .recently-view .swiper-slide {
         padding-bottom: 0px;
     }
@@ -2524,5 +2555,41 @@
     .swiper.other-common-slider {
         position: relative;
         padding-top: 0px;
+    }
+
+    .m-trip-plan {
+        padding: 32px 0;
+    }
+
+    .m-trip-plan .m-create-trip-plan-btn {
+        font-size: var(--fs-sm);
+    }
+
+    .testimonial .section-sub-title {
+        max-width: 280px;
+        margin: auto;
+        margin-top: 16px;
+    }
+
+    .our-blog {
+        padding-top: 16px;
+    }
+
+    .our-blog .section-sub-title {
+        max-width: 266px;
+    }
+
+
+
+    .get-touch .get-touch-area .my-btn {
+        padding: 12px 36px;
+        border-radius: var(--radius-pill);
+        font-size: var(--fs-sm);
+    }
+
+    .our-achivements {
+        background-color: var(--my-bg-secondary);
+        padding: 32px 0;
+        position: relative;
     }
 }
