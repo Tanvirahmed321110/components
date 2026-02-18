@@ -564,6 +564,10 @@
     transition: .3s ease;
 }
 
+.bottom-items .category-item .my-cart-btn {
+    border-radius: 6px;
+}
+
 .tour-category-body .category-item:hover {
     transform: translateY(-8px);
 }
@@ -763,6 +767,13 @@
     left: 6%;
 }
 
+.trip-plan .right-slider-arrows,
+.trip-plan .right-slider-arrows {
+    position: absolute;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
 /*
 =====  Trip plan single item =====
 */
@@ -831,7 +842,10 @@
     font-weight: 700;
 }
 
-
+.plan-items-wrapper .left-side {
+    border-radius: var(--radius-xxl);
+    overflow: hidden;
+}
 
 
 .plan-items-wrapper .item .content .tag {
@@ -909,7 +923,7 @@
 
 .trip-plan .btns-wrap .my-btn {
     border-radius: 40px;
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     padding: 12px 18px;
 }
 
@@ -932,7 +946,7 @@
 }
 
 .trip-plan.section-main {
-    padding-bottom: 36px;
+    padding-bottom: 0px;
 }
 
 .trip-plan .swiper {
