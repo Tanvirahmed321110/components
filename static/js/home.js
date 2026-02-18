@@ -112,6 +112,8 @@ const recentView = new Swiper(".recently-view-slider", {
     },
 });
 
+
+
 //===========  Recommendation Slider  ===========
 const recommendationSlider = new Swiper(".recommendation-slider", {
     slidesPerView: 3.5,
@@ -125,7 +127,7 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.4, // Mobile
+            slidesPerView: 2.1, // Mobile
             spaceBetween: 12,
         },
         768: {
@@ -157,7 +159,7 @@ const bestDeal = new Swiper(".best-deal-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1.5, // Mobile
+            slidesPerView: 2.1, // Mobile
             spaceBetween: 12,
         },
         768: {

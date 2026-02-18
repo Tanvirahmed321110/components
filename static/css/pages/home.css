@@ -2092,11 +2092,6 @@
         color: var(--my-text-tertiary);
     }
 
-    .section-main {
-        padding: 32px 0;
-    }
-
-
 
     /* Worldwide Hot Dest */
     .hot-destination .search-input {
@@ -2504,9 +2499,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-
-
     .testimonial .item .mail {
         font-size: var(--fs-xs);
     }
@@ -2523,5 +2515,14 @@
     .get-touch .my-btn {
         font-size: var(--fs-sm);
         line-height: 28px;
+    }
+
+    .recently-view .swiper-slide {
+        padding-bottom: 0px;
+    }
+
+    .swiper.other-common-slider {
+        position: relative;
+        padding-top: 0px;
     }
 }
