@@ -642,6 +642,14 @@
     min-height: calc(1.3em * 2);
 }
 
+.other-page-sce .event-cart .cart-content .title {
+    font-size: clamp(12px, 1.5vw, 18px) !important;
+}
+
+.other-page-sce .event-cart .cart-content .sub-title {
+    font-size: var(--fs-xs);
+}
+
 .event-cart .cart-content .title:hover {
     color: var(--my-secondary-color);
     cursor: pointer;
@@ -2596,6 +2604,7 @@ footer .footer-bottom {
         border-radius: 28px;
         font-size: var(--fs-xs);
         cursor: pointer;
+        background-color: var(--my-white);
     }
 
     .w-dropdown-wrap {
