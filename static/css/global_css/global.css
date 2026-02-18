@@ -2578,6 +2578,18 @@ footer .footer-bottom {
         --m-border-secondary: #D5D7DA;
     }
 
+    header .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .search input {
+        max-width: 300px;
+        width: 100%;
+        border-radius: var(--radius-pill);
+    }
+
     .w-dropdown-wrap-parent .w-dropdown-btn {
         padding: 4px 16px;
         border: 1px solid var(--my-border-color);
@@ -3115,20 +3127,7 @@ footer .footer-bottom {
     footer .footer-top .left {
         max-width: 100%;
     }
-}
 
-
-
-
-
-@media (max-width: 767px) {
-
-    .see-more {
-        display: block;
-        text-decoration: underline;
-        color: var(--my-secondary-color);
-        font-size: var(--fs-xs);
-    }
 
 
     .m-search-menu-wrapper .top-grid {
@@ -3179,15 +3178,15 @@ footer .footer-bottom {
         background-color: var(--my-white);
         border-radius: 4px;
         width: 100%;
-        font-size: var(--fs-low);
-        padding: 10px 12px;
+        font-size: var(--fs-xs);
+        padding: 12px 12px;
     }
 
     .m-search-menu-wrapper .search-fields .text-icon {
         position: absolute;
         font-size: 10px;
         left: 12px;
-        top: 12px;
+        top: 14px;
         display: flex;
         align-items: center;
         gap: 4px;
@@ -3217,28 +3216,35 @@ footer .footer-bottom {
         align-items: center;
         gap: 12px;
         justify-content: center;
-        font-size: var(--fs-low);
-    }
-
-    .m-search-menu-wrapper .checkbox-input {
         font-size: var(--fs-xs);
-        color: var(--my-text-primary);
     }
 
-    .m-search-menu-wrapper .checkbox-input input {
-        border: 1px solid #00000080;
-        border-radius: 2px;
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .see-more {
+        display: block;
+        text-decoration: underline;
+        color: var(--my-secondary-color);
+        font-size: var(--fs-xs);
     }
 
-    .m-search-menu-wrapper input[type="checkbox"],
-    .m-search-menu-wrapper input[type="radio"] {
-        width: 12px;
-        height: 12px;
-        border-color: var(--my-secondary-color);
+    .m-search-menu-wrapper .search-fields .input-item input {
+        font-size: var(--fs-low);
+        padding: 10px 12px;
     }
 
-    .m-search-menu-wrapper input[type="checkbox"]:checked::after {
-        font-size: 10px;
+    .m-search-menu-wrapper .search-fields .text-icon {
+        top: 12px;
+    }
+
+    .m-search-menu-wrapper .search-fields .search-button .content {
+        font-size: var(low);
     }
 
 

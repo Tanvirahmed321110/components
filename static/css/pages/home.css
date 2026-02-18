@@ -2508,6 +2508,11 @@
     .m-trip-plan.section-main {
         margin-bottom: 0;
     }
+
+    .m-bottom-sidebar .grid-view .item {
+        aspect-ratio: unset;
+        padding: 32px;
+    }
 }
 
 
@@ -2518,6 +2523,11 @@
 
 
 @media(max-width:767px) {
+    .m-bottom-sidebar .grid-view .item {
+        aspect-ratio: unset;
+        padding: 16px;
+    }
+
     .our-blog-mobile .blog-items .item .content {
         padding: 8px;
     }
