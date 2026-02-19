@@ -677,8 +677,9 @@
 }
 
 .tour-category-body .right-items .bottom-items .item-content .desc {
-    font-size: 8px;
+    font-size: var(--fs-low);
     width: 138px;
+    line-height: 1.5;
 }
 
 .tour-category-body .right-items .bottom-items .item-content .my-btn {
@@ -779,7 +780,11 @@
 
 
 .left-side .tripSlider .right-slider-arrows .prev {
-    left: 6%;
+    left: 3%;
+}
+
+.left-side .tripSlider .right-slider-arrows .next {
+    right: -3%;
 }
 
 .trip-plan .right-slider-arrows,

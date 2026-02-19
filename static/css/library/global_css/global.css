@@ -609,7 +609,7 @@
 }
 
 .event-cart .cart-content {
-    padding: 8px 12px 12px 12px;
+    padding: 8px 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

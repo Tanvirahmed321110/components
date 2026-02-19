@@ -1,7 +1,24 @@
+/* other page sce */
 .other-page-sce .tour-cart,
 .other-page-sce .event-cart {
-    height: 460px !important;
+    height: 440px !important;
 }
+
+.other-page-sce .event-cart .cart-img img {
+    height: 200px;
+}
+
+.other-page-sce .event-cart .cart-content .sub-title {
+    margin-top: 0px;
+}
+
+.other-page-sce .event-cart .cart-content {
+    padding: 8px 4px;
+    padding-bottom: 4px;
+}
+
+
+
 
 
 header .module-header-main .m-item {
