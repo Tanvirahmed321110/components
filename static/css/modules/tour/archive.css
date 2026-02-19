@@ -165,6 +165,10 @@ body {
 }
 
 
+.map-view-sec.filter-sec .filter-head {
+    padding-bottom: 0;
+}
+
 
 
 
