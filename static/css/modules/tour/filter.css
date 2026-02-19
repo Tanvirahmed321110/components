@@ -93,6 +93,21 @@ body {
     overflow-x: hidden;
 }
 
+
+/* filter date item */
+.filter-sidebar .date .date-item {
+    padding: 9px 12px;
+    border: 1px solid var(--my-border-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
 .filter-item .item-content {
     max-height: 0;
     overflow-y: hidden;

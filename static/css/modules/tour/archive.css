@@ -170,9 +170,16 @@ body {
 }
 
 
+/*===============  nearby destination  section ===============*/
+.nearby-destination {
+    margin-top: clamp(32px, 5vw, 60px);
+}
 
-
-
+.nearby-destination .swiper.other-common-slider {
+    position: relative;
+    padding-left: 0px;
+    width: 100%;
+}
 
 
 
