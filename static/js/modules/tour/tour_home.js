@@ -275,7 +275,7 @@ const tripSlider = new Swiper('.tripSlider', {
     speed: 1500,
 
     autoplay: {
-        delay: 4000,
+        delay: 400230,
         disableOnInteraction: false,
     },
 

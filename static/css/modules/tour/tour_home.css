@@ -815,7 +815,7 @@
     top: unset;
     height: 56%;
     background: linear-gradient(to top,
-            rgba(14, 14, 14, 0.94),
+            rgba(14, 14, 14, 0.5),
             rgba(14, 14, 14, 0.4) 35%,
             rgba(14, 14, 14, 0.3) 70%,
             rgba(14, 14, 14, 0.01)100%);
@@ -867,6 +867,17 @@
     overflow: hidden;
 }
 
+.plan-items-wrapper .left-side .item .item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.plan-items-wrapper .left-side .item .item-content .title {
+    text-align: center;
+    width: 100%;
+}
 
 .plan-items-wrapper .item .content .tag {
     position: absolute;

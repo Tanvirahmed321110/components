@@ -31,12 +31,12 @@ header .module-header-main .m-item .content {
     align-items: center;
     gap: 4px;
     color: var(--my-text-secondary);
-    font-weight: var(--fw-400);
+    font-weight: var(--fw-600);
     font-size: var(--fs-md);
     line-height: var(--line-height-md);
     padding: 6px 8px;
     cursor: pointer;
-    color: var(--my-border-secondary);
+    /* color: var(--my-border-secondary); */
 }
 
 

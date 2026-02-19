@@ -1072,7 +1072,7 @@
 ======================================
 */
 header {
-    background-color: var(--my-primary-color);
+    background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
     border-bottom: 1px solid var(--my-border-secondary);
 }
@@ -1083,15 +1083,11 @@ header {
 */
 header .header-top {
     /* border: 1px solid var(--primary-80); */
-    box-shadow: var(--shadow-1);
+    /* box-shadow: var(--shadow-1); */
     position: relative;
     gap: 60px;
-    background-color: var(--white-20);
-    background-color: var(--my-border-secondary);
-    padding: 16px;
+    padding: 16px 0;
     padding-top: 16px;
-    /* border-radius: 0px 0px 12px 12px; */
-    border-radius: 0% 0% 28% 28%;
 }
 
 header .header-top .search-input {
@@ -1605,12 +1601,12 @@ header .header-main ul {
 }
 
 header .header-main .item {
-    font-weight: var(--fw-400);
+    font-weight: var(--fw-600);
     font-size: var(--fs-md);
     transition: .2s linear;
     padding-left: 8px;
     text-wrap: nowrap;
-    color: var(--my-border-secondary);
+    /* color: var(--my-border-secondary); */
 }
 
 header .header-main .item:hover,
