@@ -154,6 +154,15 @@ body {
 }
 
 
+.max-780 {
+    max-width: 780px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.my-secondary-color.section-title {
+    color: var(--my-secondary-color);
+}
 
 
 
@@ -190,7 +199,6 @@ body {
 
     .other-page-sce .visiable-content .price-rating {
         margin-top: 0px;
-        flex-direction: column;
     }
 
     .other-page-sce .tour-cart.package .old-wrap {
