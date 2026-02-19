@@ -1,3 +1,9 @@
+.other-page-sce .tour-cart,
+.other-page-sce .event-cart {
+    height: 460px !important;
+}
+
+
 header .module-header-main .m-item {
     position: relative;
     white-space: nowrap;
@@ -370,6 +376,7 @@ search-group .my-input-control input::placeholder {
     user-select: none;
     text-wrap: nowrap;
     width: fit-content;
+    background-color: var(--my-white);
 }
 
 .filter-sec .filter-head .filter-btn {
