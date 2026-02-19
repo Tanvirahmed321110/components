@@ -795,15 +795,14 @@
 ==========||  Tour Cart Visiable  ||===========
 */
 .package.tour-cart .visiable-content {
-    position: relative;
     position: absolute;
-    padding: 20px 22px 10px 16px;
+    /* padding: 20px 22px 10px 16px; */
     z-index: 2;
     bottom: 0;
     left: 0;
     width: 100%;
     padding-top: 40px !important;
-    background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.01));
+    background: linear-gradient(to top, rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.5), rgba(14, 14, 14, 0.01)) !important;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
 }
@@ -3007,7 +3006,7 @@ footer .footer-bottom {
     .package.tour-cart .visiable-content {
         padding: 10px 12px;
         padding-bottom: 12px;
-        background: linear-gradient(to top, rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.0));
+        background: linear-gradient(to top, rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 0.4), rgba(14, 14, 14, 0.3), rgba(14, 14, 14, 0.0));
         z-index: 2;
     }
 

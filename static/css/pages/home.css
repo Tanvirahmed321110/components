@@ -302,7 +302,6 @@
 
 
 
-
 .offer-sec .left-btns .item {
     display: flex;
     gap: 12px;
@@ -457,13 +456,14 @@
     z-index: 3;
     top: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    transform: translate(-40%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--my-primary-color);
+    background-color: #FFFFFF66;
 }
+
 
 .offer-sec .offer-cart .video-btn:hover {
     background-color: var(--my-secondary-color);
