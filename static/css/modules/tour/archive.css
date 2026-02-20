@@ -175,7 +175,8 @@ body {
     margin-top: clamp(32px, 5vw, 60px);
 }
 
-.nearby-destination .swiper.other-common-slider {
+.nearby-destination .swiper.other-common-slider,
+.most-visited-cities .swiper.other-common-slider {
     position: relative;
     padding-left: 0px;
     width: 100%;

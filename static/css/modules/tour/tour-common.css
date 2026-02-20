@@ -567,8 +567,25 @@ search-group .my-input-control input::placeholder {
     z-index: 12;
 }
 
+/* sub-filter-btns */
+.sub-filter-btns {
+    gap: 16px;
+}
 
+.sub-filter-btns .f-btn {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: var(--my-secondary-color);
+    border: 1px solid var(--my-border-secondary);
+    font-weight: 500;
+    font-size: var(--fs-md);
+}
 
+.sub-filter-btns .f-btn:hover,
+.sub-filter-btns .f-btn.active {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+}
 
 
 @media(max-width:1439px) {
