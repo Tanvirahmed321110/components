@@ -1,7 +1,7 @@
 /* other page sce */
 .other-page-sce .tour-cart,
 .other-page-sce .event-cart {
-    height: 440px !important;
+    height: 440px;
 }
 
 .other-page-sce .event-cart .cart-img img {
@@ -545,14 +545,14 @@ search-group .my-input-control input::placeholder {
 
 .hot-dest-cart .explore-btn {
     position: absolute;
-    border: 2px solid white;
+    border: 2px solid var(--my-text-placeholder);
     bottom: -48px;
     right: 8px;
     transition: .4s ease;
     z-index: 4;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.35),
+    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.35),
         0 0 40px rgba(255, 255, 255, 0.2),
-        0 0 60px rgba(255, 255, 255, 0.15);
+        0 0 60px rgba(255, 255, 255, 0.15); */
     border-radius: 8px 9px 8px !important;
 }
 
@@ -631,11 +631,22 @@ search-group .my-input-control input::placeholder {
     }
 
 
+
+    .other-page-sce .tour-cart,
+    .other-page-sce .event-cart {
+        height: 300px;
+    }
+
 }
 
 
 /* MObile Responsive Start Here */
 @media (max-width: 768px) {
+
+    .other-page-sce .tour-cart,
+    .other-page-sce .event-cart {
+        height: 270px;
+    }
 
     header .module-header-main .m-item {
         position: static;
@@ -884,6 +895,11 @@ search-group .my-input-control input::placeholder {
         padding-bottom: 20px;
     }
 
+    /* hot dest cart */
+    .hot-dest-cart {
+        height: 200px;
+    }
+
 
     .hot-dest-cart .title {
         font-size: var(--fs-lg);
@@ -906,6 +922,8 @@ search-group .my-input-control input::placeholder {
 
     .hot-dest-cart .my-fs-xs {
         font-size: var(--fs-low);
+        margin-top: 0;
+
     }
 
 
@@ -914,7 +932,10 @@ search-group .my-input-control input::placeholder {
         position: unset;
         display: block;
         box-shadow: unset;
-        margin-top: 4px;
+        margin-top: 8px;
+        padding: 4px 19px;
+        border: none;
+        border-radius: 6px;
     }
 
     .hot-dest-cart .content {
