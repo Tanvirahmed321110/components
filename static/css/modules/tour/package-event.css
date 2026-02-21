@@ -1456,6 +1456,13 @@
 }
 
 
+.modal .swiper .right-slider-arrows .prev {
+    left: 8%;
+}
+
+.modal .swiper .right-slider-arrows .next {
+    right: -4%;
+}
 
 .card-wrap .card-item::after {
     content: '';
@@ -1465,7 +1472,7 @@
     width: 0px;
     height: 80%;
     height: calc(100% - 210px);
-    background-color: var(--my-border-primary);
+    background-color: var(--my-secondary-color);
     z-index: 0;
     transition: .2s ease;
 }
@@ -1477,7 +1484,7 @@
     bottom: 0;
     width: 0px;
     height: calc(100% - 210px);
-    background-color: var(--my-border-primary);
+    background-color: var(--my-secondary-color);
     z-index: 0;
     transition: .2s ease;
 }
@@ -1487,6 +1494,9 @@
     width: 5px;
 }
 
+.card-wrap .card-item.active {
+    width: 5px;
+}
 
 .card-wrap .card-item .top {
     position: relative;
