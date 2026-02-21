@@ -77,13 +77,13 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
     speed: 2000,
 
     autoplay: {
-        delay: 121200,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
 
     breakpoints: {
-        320: { slidesPerView: 1.4 },
+        320: { slidesPerView: 1.8 },
         480: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },

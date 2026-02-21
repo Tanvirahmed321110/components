@@ -1077,6 +1077,9 @@ header {
     border-bottom: 1px solid var(--my-border-secondary);
 }
 
+header.active {
+    box-shadow: var(--shadow-1);
+}
 
 /*
 =================||    Header Top    ||===================
