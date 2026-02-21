@@ -396,7 +396,8 @@ search-group .my-input-control input::placeholder {
     background-color: var(--my-white);
 }
 
-.filter-sec .filter-head .filter-btn {
+.filter-sec .filter-head .filter-btn,
+.filter-head .filter-btn {
     display: flex;
     align-items: center;
     padding: 8px 16px;
