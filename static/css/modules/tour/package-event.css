@@ -480,27 +480,74 @@
 
 
 /*===============  itenary-flight ================*/
-.itenary-flight .flight-left {
-    padding-right: 40px;
+.itenary-flight {
+    width: 700px;
+    position: relative;
+    height: 300px;
+    padding: 16px;
 }
 
-.itenary-flight .flight-right {
-    padding-left: 40px;
-    border-left: 1px solid var(--my-secondary-color);
-}
-
-.itenary-flight .see-more-btn {
-    background-color: var(--my-white);
-    padding: 6px 8px;
+.itenary-flight::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #14161e43;
     border-radius: 4px;
-    font-weight: 600;
-    color: #0032F999;
-    box-shadow: var(--n-shadow-2);
 }
 
+.itenary-flight .wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.worldatlas.com/r/w960-q80/upload/62/9d/28/shutterstock-553131187.jpg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius-md);
+}
 
-.taxi-car .card-img {
-    max-width: 250px;
+.itenary-flight .wrap .itenary-flight-items {
+    width: 70%;
+    height: 298px;
+}
+
+.itenary-flight .item {
+    background-color: var(--my-white);
+    padding: 16px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 4;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.itenary-flight .item .item-details {
+    width: 55%;
+    flex: 1;
+}
+
+.itenary-flight .item .item-img {
+    width: 44%;
+    height: 100%;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    border-radius: var(--radius-sm);
+}
+
+.itenary-flight .item .item-img button {
+    position: absolute;
+    bottom: 12px;
+    display: none;
+}
+
+.itenary-flight .item .item-img img {
+    border-radius: var(--radius-sm);
+    max-height: unset;
 }
 
 .taxi-car .content {
