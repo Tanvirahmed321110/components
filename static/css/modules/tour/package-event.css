@@ -82,9 +82,10 @@
 }
 
 .product-hero .video-play-btn {
-    background-color: var(--my-primary-color);
+    background-color: #FFFFFF40;
     top: 50%;
     transform: translate(-50%, -50%);
+    backdrop-filter: blur(4px);
 }
 
 
@@ -118,7 +119,6 @@
     overflow: hidden;
     border-radius: var(--radius-xxl);
     transition: .4s ease;
-    background-color: red;
 }
 
 .product-hero-wrap .bottom-side .banner-item .view-all {
@@ -134,23 +134,7 @@
     background-color: #FFFFFF40;
 }
 
-.product-hero-wrap .bottom-side .banner-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0%;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    transition: 1s ease;
-    background-color: rgba(163, 31, 163, 0.193);
-    transform: translateY(300px);
-}
 
-.product-hero-wrap .bottom-side .banner-item:hover::after {
-    height: 100%;
-    transform: translateY(-300px);
-}
 
 .product-hero-wrap .bottom-side .banner-img {
     border-radius: var(--radius-xxl);
@@ -481,9 +465,9 @@
 
 /*===============  itenary-flight ================*/
 .itenary-flight {
-    width: 700px;
+    width: 650px;
     position: relative;
-    height: 300px;
+    height: 250px;
     padding: 16px;
 }
 
@@ -491,7 +475,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #14161e43;
+    background-color: #14161e32;
     border-radius: 4px;
 }
 
@@ -504,45 +488,55 @@
     background-position: center;
     background-size: cover;
     border-radius: var(--radius-md);
+    overflow-y: visible;
 }
 
 .itenary-flight .wrap .itenary-flight-items {
     width: 70%;
-    height: 298px;
+    height: 248px;
 }
 
 .itenary-flight .item {
     background-color: var(--my-white);
-    padding: 16px;
     border-radius: 6px;
     position: relative;
     z-index: 4;
-    width: 75%;
+    width: 74%;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     align-items: stretch;
+    margin: 0 auto;
 }
 
 .itenary-flight .item .item-details {
     width: 55%;
     flex: 1;
+    padding: 16px;
 }
 
 .itenary-flight .item .item-img {
-    width: 44%;
+    width: calc(45% - 12px);
     height: 100%;
     position: relative;
     align-self: stretch;
     display: flex;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
+    padding: 8px;
 }
 
 .itenary-flight .item .item-img button {
     position: absolute;
-    bottom: 12px;
-    display: none;
+    bottom: 16px;
+    z-index: 2;
+    background-color: var(--my-primary-color);
+    padding: 12px 20px;
+    color: var(--my-white);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    left: 16px;
+    width: calc(100% - 32px);
 }
 
 .itenary-flight .item .item-img img {

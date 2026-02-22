@@ -2203,6 +2203,10 @@ tr {
     color: var(--my-border-gray);
 }
 
+.my-text-gray-2 {
+    color: var(--my-text-gray);
+}
+
 
 .my-text-quaternary {
     color: var(--my-text-quaternary);
