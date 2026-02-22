@@ -127,7 +127,7 @@ const recommendationSlider = new Swiper(".recommendation-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2.1, // Mobile
+            slidesPerView: 2.05, // Mobile
             spaceBetween: 12,
         },
         768: {
@@ -159,7 +159,7 @@ const bestDeal = new Swiper(".best-deal-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2.1, // Mobile
+            slidesPerView: 2.05, // Mobile
             spaceBetween: 12,
         },
         768: {
@@ -190,7 +190,7 @@ const mapview = new Swiper(".map-slider", {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2.1, // Mobile
+            slidesPerView: 2.05, // Mobile
             spaceBetween: 12,
         },
         768: {
