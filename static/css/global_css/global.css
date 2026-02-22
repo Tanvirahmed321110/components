@@ -1104,8 +1104,8 @@ header .header-top .search-input {
 
 header .header-top .search-input input {
     border-radius: var(--radius-lg);
-    border-color: var(--my-border-secondary);
-    background-color: var(--my-white);
+    border-color: var(--my-border-primary);
+    background-color: var(--my-bg-secondary);
 }
 
 header .header-top .click-dropdown-btn {
