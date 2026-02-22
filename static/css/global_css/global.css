@@ -1074,7 +1074,7 @@
 header {
     background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
-    border-bottom: 1px solid var(--my-border-secondary);
+    border-bottom: 1px solid var(--my-white-off);
 }
 
 header.active {
@@ -1084,6 +1084,10 @@ header.active {
 /*
 =================||    Header Top    ||===================
 */
+header .header-top-wrap {
+    border-bottom: 1px solid var(--my-white-off);
+}
+
 header .header-top {
     /* border: 1px solid var(--primary-80); */
     /* box-shadow: var(--shadow-1); */
@@ -1300,10 +1304,27 @@ header .profile-dropdown {
     border-radius: var(--radius-xxl);
 }
 
-.wrapper.my-has-scrollbar-sm {
-    /* max-height: 450px;
-    overflow-y: auto; */
+
+
+/*
+=================||    Header Top    ||===================
+*/
+
+.main-header-wrap {
+    transition: .3s ease;
 }
+
+.main-header-wrap.active {
+    background-color: var(--my-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    box-shadow: var(--n-shadow-2);
+}
+
+
 
 /* Chrome, Safari, Edge */
 .wrapper.my-has-scrollbar-sm::-webkit-scrollbar {

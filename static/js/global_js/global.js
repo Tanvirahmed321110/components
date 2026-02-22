@@ -1074,8 +1074,19 @@ initGridListToggle();
 
 
 
+// =============== Desktop Header =============
+const desktopHeader = document.querySelector('header .main-header-wrap')
 
-
+if (desktopHeader) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            desktopHeader.classList.add('active')
+        }
+        else {
+            desktopHeader.classList.remove('active')
+        }
+    })
+}
 
 
 
@@ -1084,7 +1095,7 @@ const mobileHeader = document.querySelector('header .mobile-header')
 
 if (mobileHeader) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
+        if (window.scrollY > 300) {
             mobileHeader.classList.add('active')
         }
         else {
