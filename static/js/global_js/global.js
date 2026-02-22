@@ -1070,3 +1070,25 @@ function initGridListToggle() {
 
 // Usage
 initGridListToggle();
+
+
+
+
+
+
+
+
+
+// =============== Mobile Header =============
+const mobileHeader = document.querySelector('header .mobile-header')
+
+if (mobileHeader) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+            mobileHeader.classList.add('active')
+        }
+        else {
+            mobileHeader.classList.remove('active')
+        }
+    })
+}
