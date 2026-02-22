@@ -947,7 +947,7 @@
 }
 
 .section-btn.my-btn {
-    padding: 16px 60px;
+    padding: 16px 48px;
     font-weight: var(--fw-700);
     line-height: var(--line-height-md);
     border-radius: var(--radius-xxl) !important;
@@ -1196,9 +1196,10 @@ header .profile-dropdown.click-dropdown {
 
 header .click-dropdown-parent .click-dropdown.lg {
     max-width: 1220px;
-    box-shadow: var(--shadow-all-sm);
+    box-shadow: var(--shadow-1);
     max-height: 600px;
     overflow-y: auto;
+    border-radius: var(--radius-xxl);
 }
 
 header .header-top .other-btns .item:hover,
@@ -1480,6 +1481,7 @@ header .profile-dropdown {
     height: 28px;
     color: var(--my-secondary-color);
     font-weight: var(--fw-600);
+    padding-left: 6px;
 }
 
 /*
