@@ -93,15 +93,17 @@ const relatedProductsSlider = new Swiper(".related-products-slider", {
         prevEl: ".related-products .prev",
     }
 });
-//===========  Related slider   ===========
+
+
+//===========  Flight  slider   ===========
 const flightSlider = new Swiper(".itenary-flight-slider", {
-    slidesPerView: 4,
-    spaceBetween: 16,
+    slidesPerView: 1,
+    spaceBetween: 8,
     loop: true,
     speed: 2000,
 
     autoplay: {
-        delay: 300,
+        delay: 2400,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
@@ -112,10 +114,6 @@ const flightSlider = new Swiper(".itenary-flight-slider", {
         768: { slidesPerView: 1 },
         1280: { slidesPerView: 1 },
     },
-    // navigation: {
-    //     nextEl: ".related-products .next",
-    //     prevEl: ".related-products .prev",
-    // }
 });
 
 
