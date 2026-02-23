@@ -112,12 +112,12 @@ const recentView = new Swiper(".recently-view-slider", {
         },
         1280: {
             slidesPerView: 3.5, // Desktop
-            spaceBetween: 20,
-        },
-        1439: {
-            slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
-        }
+        },
+        1500: {
+            slidesPerView: 3.7, // Desktop
+            spaceBetween: 24,
+        },
     },
 });
 
@@ -153,12 +153,12 @@ const bestDeal = new Swiper(".best-deal-slider", {
         },
         1280: {
             slidesPerView: 3.5, // Desktop
-            spaceBetween: 20,
-        },
-        1439: {
-            slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
-        }
+        },
+        1500: {
+            slidesPerView: 3.7, // Desktop
+            spaceBetween: 24,
+        },
 
     },
 });
@@ -194,12 +194,12 @@ const trendingSlider = new Swiper(".trending-tour-slider", {
         },
         1280: {
             slidesPerView: 3.5, // Desktop
-            spaceBetween: 20,
-        },
-        1439: {
-            slidesPerView: 3.5, // Desktop
             spaceBetween: 24,
-        }
+        },
+        1500: {
+            slidesPerView: 3.7, // Desktop
+            spaceBetween: 24,
+        },
     },
 });
 
@@ -227,12 +227,14 @@ const popularTourSlider = new Swiper('.popular-tour-slider', {
             slidesPerView: 3,
             grid: { rows: 2 }
         },
-        1024: {
-            slidesPerView: 3.5,
+        1280: {
+            slidesPerView: 3.5, // Desktop
+            spaceBetween: 24,
             grid: { rows: 2 }
         },
-        1440: {
-            slidesPerView: 4.2,
+        1500: {
+            slidesPerView: 3.7, // Desktop
+            spaceBetween: 24,
             grid: { rows: 2 }
         },
 

@@ -81,6 +81,8 @@
     width: 100%;
 }
 
+
+
 .offer-wrapper .offer-item .bottom-content .rating .left {
     color: var(--my-rating);
 }
@@ -201,13 +203,18 @@
 }
 
 
-.offer-wrapper .slider-nav button {
-    color: #000;
+.offer-wrapper .offer-item .right-slider-arrows button {
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--my-white);
+    border-radius: var(--radius-md);
     border: 1px solid var(--my-border-gray);
-    background-color: transparent;
 }
-
 
 .offer-wrapper .slider-nav button:hover {
     background-color: var(--my-white);
@@ -692,7 +699,7 @@
 .tour-category-body .right-items .bottom-items .category-item .item-content {
     box-shadow: unset;
     border-radius: var(--radius-xxl);
-    border: 5px solid var(--my-border-secondary);
+    border: 5px solid var(--my-white-off);
 }
 
 .popular-tour-cart img {

@@ -7,6 +7,17 @@ body {
 =====||   Filter Hero Section    ||=====
 ========================================
 */
+.filter-sidebar .filter-close-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 13;
+    display: block;
+    background-color: red;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
 .filter-body-wrap {
     display: flex;
     flex-direction: column;
@@ -85,6 +96,7 @@ body {
     display: block;
     position: relative;
     z-index: 13;
+    padding-top: 16px;
 }
 
 .filter-sidebar .filter-item {
@@ -471,16 +483,7 @@ body {
         overflow-y: auto;
     }
 
-    .filter-sidebar .filter-close-btn {
-        position: absolute;
-        right: 16px;
-        top: 16px;
-        z-index: 13;
-        display: block;
-        background-color: red;
-        padding: 6px 10px;
-        border-radius: 4px;
-    }
+
 
     .filter-sec {
         background-color: var(--section-bg);
