@@ -1888,6 +1888,25 @@
     border-top: 1px solid var(--my-border-secondary);
 }
 
+.event-price-card .cart-bottom .btns .tab-btn {
+    outline: 1px solid var(--my-primary-color);
+}
+
+.event-price-card .cart-bottom .btns .tab-btn.active {
+    background-color: var(--my-primary-color);
+    color: var(--my-white);
+    border: 1px solid transparent;
+}
+
+.event-price-card .cart-bottom .btns .tab-btn:hover {
+    color: var(--my-secondary-color);
+}
+
+.event-price-card .cart-bottom .btns .tab-btn.active:hover {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+}
+
 .event-price-card .my-btn {
     padding: 14px 18px;
     border-radius: var(--radius-xl);
@@ -1895,24 +1914,10 @@
     transition: .2s ease;
 }
 
-.event-price-card .fill {
-    background-color: var(--my-primary-color);
-    color: var(--my-white);
-}
 
-.event-price-card .fill:hover {
-    background-color: var(--my-secondary-color);
+.event-price-card .my-input-control input {
+    border-color: var(--my-border-primary);
 }
-
-.event-price-card .outline {
-    border: 1px solid var(--my-primary-color);
-}
-
-.event-price-card .outline:hover {
-    border-color: var(--my-secondary-color);
-    color: var(--my-secondary-color)
-}
-
 
 .event-booking .item {
     display: flex;
