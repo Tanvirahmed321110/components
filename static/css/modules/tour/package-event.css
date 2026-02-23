@@ -177,10 +177,38 @@
 }
 
 
+/* guest-dropdown */
+.guest-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--my-white);
+    box-shadow: var(--shadow-1);
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    z-index: 12;
+}
 
+.guest-dropdown .head .item {
+    border: 1px solid var(--my-border-primary);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+}
 
+.guest-dropdown .head .item input {
+    border: none;
+    max-width: 160px;
+    padding: 2px;
+}
 
+.guest-dropdown .head .item input::placeholder {
+    font-weight: 600;
+}
 
+.guest-dropdown .head .item input:focus {
+    outline: none;
+}
 
 
 
