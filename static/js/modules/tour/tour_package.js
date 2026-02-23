@@ -103,7 +103,7 @@ const flightSlider = new Swiper(".itenary-flight-slider", {
     speed: 2000,
 
     autoplay: {
-        delay: 2400,
+        delay: 24023230,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },

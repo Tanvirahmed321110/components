@@ -1150,7 +1150,7 @@
 .support-sec .item .content {
     display: flex;
     align-items: end;
-    justify-content: end;
+    justify-content: space-between;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2148,6 +2148,13 @@
 
 /* For Tab */
 @media (max-width:991px) {
+
+    header .m-search-menu .left-icon svg,
+    header .m-search-menu .right-icon svg {
+        display: none;
+    }
+
+
     .section-title {
         font-size: clamp(20px, 4.5vw, 28px) !important;
         line-height: 1.3;
@@ -2211,6 +2218,10 @@
         width: 100%;
         margin: 0 auto;
         margin-top: 32px;
+        box-shadow: var(--shadow-1);
+        padding: 16px;
+        border-radius: var(--radius-xl);
+        padding-top: 0;
     }
 
     .event-package-main .price-card-wrap {
@@ -2395,11 +2406,13 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        transform: unset !important;
     }
 
     .expeceted-slider-wrap .swiper-wrapper .swiper-slide {
         width: 100% !important;
         max-width: unset;
+        margin-right: 0 !important;
     }
 
     .expected-budget .right-slider-arrows {
@@ -2447,6 +2460,8 @@
     .product-hero-wrap .top-side {
         flex-direction: column;
         gap: 20px;
+        overflow: hidden;
+        width: 100%;
     }
 
     .hero-section-mobile {
@@ -3045,6 +3060,71 @@
     .related-products-wrap .tour-cart.package .new-price {
         font-size: var(--fs-md);
         font-weight: 700;
+    }
+
+    .section-main {
+        padding-bottom: 0px;
+    }
+
+    .product-hero-wrap .tour-info {
+        padding: 0px 0;
+    }
+
+    .package-summery.tour {
+        padding-top: 0px;
+    }
+
+    /*===============  itenary-flight ================*/
+    .itenary-flight {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        padding: 16px;
+    }
+
+    .itenary-flight .wrap .itenary-flight-items {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .itenary-flight .itenary-flight-slider {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        transform: translateX(-50%);
+    }
+
+    .itenary-flight .itenary-flight-slider .item {
+        flex-direction: column-reverse;
+        gap: 12;
+        padding: 8px;
+
+    }
+
+    .itenary-flight .item .item-details {
+        width: 100%;
+        flex: 1;
+        padding: 0px;
+    }
+
+    .itenary-flight .item .item-img img {
+        border-radius: var(--radius-sm);
+        max-height: 150px;
+    }
+
+    .itenary-flight .item .item-img {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .itenary-flight .item-details .my-mt-8 {
+        margin-top: 4px;
     }
 }
 
