@@ -487,11 +487,12 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+
+
     .filter-sidebar.active {
         width: calc(100% - 32px);
         background-color: var(--my-white);
         border-radius: 20px;
-        /* border: 1px solid var(--my-border-color); */
         padding: 0px 16px;
         box-shadow: var(--n-shadow-2);
         /* display: none; */
@@ -516,5 +517,9 @@ body {
         padding-bottom: 12px;
     }
 
+
+    .filter-sec {
+        background-color: var(--my-white);
+    }
 
 }
