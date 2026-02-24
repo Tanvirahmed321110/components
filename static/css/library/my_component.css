@@ -4039,27 +4039,35 @@ input[type=number] {
 
 
 /* For Website Calendar */
-.calendar-wrap.active {
-    display: block;
+.calendar-main,
+.outlet {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
 }
 
+.outlet.active {
+    display: flex;
+}
+
+.calendar-main.active {
+    display: flex;
+}
+
+
 .calendar-wrap {
-    display: none;
-    position: fixed;
-    z-index: 12;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--my-white);
     max-width: 660px;
     width: fit-content;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-all-sm);
     padding: 20px;
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.12),
-        0 4px 120px rgba(0, 0, 0, 0.08),
-        0 0 0 221px rgba(0, 0, 0, 0.2);
+    background-color: var(--my-white);
 }
 
 .calendar-wrap table {
@@ -4121,7 +4129,7 @@ input[type=number] {
 }
 
 .calendar-wrap .btn {
-    padding: 8px 12px;
+    padding: 6px 10px;
     font-size: var(--fs-sm);
     border-radius: var(--radius-sm);
     border: 1px solid var(--my-border-primary);
