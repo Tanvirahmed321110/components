@@ -594,6 +594,10 @@ search-group .my-input-control input::placeholder {
         /* font-size: var(--fs-md); */
     }
 
+    .other-page-sce .tour-cart,
+    .other-page-sce .event-cart {
+        height: 420px;
+    }
 }
 
 

@@ -80,6 +80,8 @@ body {
     display: flex;
     align-items: stretch;
     gap: 40px;
+    position: sticky;
+    top: 12px;
 }
 
 .filter-sidebar {
@@ -129,10 +131,30 @@ body {
 
 /* when active/open */
 .filter-item.active .item-content {
-    max-height: 600px;
+    max-height: 400px;
     width: 100%;
     padding-left: 2px;
+    overflow-y: scroll;
     /* adjust your content height */
+}
+
+.filter-item.active .item-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.filter-item.active .item-content::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.filter-item.active .item-content::-webkit-scrollbar-thumb {
+    background: var(--my-border-primary);
+    border-radius: 10px;
+}
+
+.filter-item.active .item-content::-webkit-scrollbar-thumb:hover {
+    background: var(--my-secondary-color);
+    cursor: pointer;
 }
 
 .filter-item .filter-item-btn svg {

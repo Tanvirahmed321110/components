@@ -26,6 +26,7 @@ filterSidebarToggleF()
 
 
 
+
 // filter button toggle
 // function filterButtonF() {
 //     const sidebarBtn = document.getElementById("sidebar-filter-btn");
@@ -65,19 +66,19 @@ function filterButtonF() {
     const sidebar = document.getElementById("filter-sidebar");
     const filterCloseBtn = sidebar.querySelector('.filter-close-btn');
     const filterSection = document.getElementById("filter-section");
-    const overlay = document.getElementById("filter-overlay");
+    // const overlay = document.getElementById("filter-overlay");
 
-    if (!sidebarBtn || !sidebar || !filterSection || !overlay || !filterCloseBtn) return;
+    if (!sidebarBtn || !sidebar || !filterSection || !filterCloseBtn) return;
 
     sidebarBtn.addEventListener("click", () => {
         sidebar.classList.toggle("active");
         filterSection.classList.toggle("active");
-        overlay.classList.toggle("active");
+        // overlay.classList.toggle("active");
     });
 
     // when click filter close btn for mobile
     filterCloseBtn.addEventListener("click", closeFilter);
-    overlay.addEventListener("click", closeFilter);
+    // overlay.addEventListener("click", closeFilter);
 
     //  outside click only for <=768px
     document.addEventListener("click", (e) => {
@@ -96,7 +97,7 @@ function filterButtonF() {
     function closeFilter() {
         sidebar.classList.remove("active");
         filterSection.classList.remove("active");
-        overlay.classList.remove("active");
+        // overlay.classList.remove("active");
     }
 }
 
