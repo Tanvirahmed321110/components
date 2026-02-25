@@ -656,9 +656,12 @@ search-group .my-input-control input::placeholder {
 
     .other-page-sce .tour-cart,
     .other-page-sce .event-cart {
-        height: 300px;
+        height: 348px;
     }
 
+    .other-page-sce .event-cart .cart-content .sub-title {
+        margin-top: 4px;
+    }
 }
 
 

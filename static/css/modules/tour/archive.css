@@ -252,4 +252,13 @@ body {
         gap: 12px;
     }
 
+    .map-view-sec .m-tabs .tab-btns-w {
+        background-color: var(--my-primary-color);
+        padding: 12px;
+        border-radius: var(--radius-lg);
+    }
+
+    .map-view-sec .m-tabs .tab-btns-w .tab-btn {
+        color: var(--my-white);
+    }
 }

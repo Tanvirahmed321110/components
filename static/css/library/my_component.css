@@ -4749,6 +4749,18 @@ input[type=number] {
         height: 12px;
     }
 
+
+
+    .modal-content.lg .modal-body {
+        padding: 24px 16px;
+    }
+
+    .modal-close-btn {
+        top: 24px;
+        right: 16px;
+    }
+
+
 }
 
 
