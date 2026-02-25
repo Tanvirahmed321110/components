@@ -103,7 +103,7 @@ const flightSlider = new Swiper(".itenary-flight-slider", {
     speed: 2000,
 
     autoplay: {
-        delay: 2400,
+        delay: 240340,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
@@ -418,7 +418,6 @@ const mediaSlider = new Swiper('.medile-slider', {
 
 
 
-// ============== Hero Slider For Mobile ================
 // ============== Hero Slider For Mobile ================
 const heroSliderMobile = new Swiper('.hero-slider-mobile-wrap', {
     slidesPerView: 1,

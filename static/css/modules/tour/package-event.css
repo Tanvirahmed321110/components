@@ -1532,6 +1532,9 @@
     font-weight: var(--fw-600);
 }
 
+span {
+    white-space: nowrap;
+}
 
 .card-wrap {
     display: flex;
@@ -2707,9 +2710,10 @@
 
     /* day by day */
     .day-by-day .day-head .day-name {
-        font-size: var(--fs-md);
+        font-size: clamp(14px, 2vw, 17px);
         display: inline;
         flex: 1;
+        line-height: 1.5;
     }
 
     .day-by-day .activity::after {
@@ -3190,6 +3194,130 @@
     .itenary-flight .item-details .my-mt-8 {
         margin-top: 4px;
     }
+
+
+    .card-item .value,
+    .hotel-modal .card-item .value {
+        font-size: var(--fs-xs);
+    }
+
+    .modal .image-gallery .view-all,
+    .modal .image-gallery .total-img {
+        font-size: var(--fs-low);
+        padding: 6px 10px;
+        right: 4px;
+        bottom: 4px;
+
+    }
+
+    .modal .card-info .item .key span,
+    .modal .card-info .item .key {
+        font-size: var(--fs-xs);
+    }
+
+    .modal .card-info .item .value,
+    .modal .card-info .item .value span {
+        font-size: var(--fs-xs);
+    }
+
+    .modal .card-info .item .key svg {
+        width: 18px;
+        height: 16px;
+    }
+
+
+    .card-item svg,
+    .modal .card-info .card-item svg {
+        height: 15px;
+        width: 15px;
+    }
+
+    .modal .card-item .key svg {
+        width: 18px;
+        max-height: 16px;
+    }
+
+
+    .modal .image-gallery {
+        gap: 12px;
+        height: 170px;
+        margin-top: 24px;
+    }
+
+    .facility-items svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .card-item .car-name {
+        font-size: var(--fs-md);
+    }
+
+    .card-wrap .card-item .card-content {
+        margin-top: 4px;
+    }
+
+    .card-features {
+        margin-top: 8px;
+    }
+
+    .modal .cart-btn.my-btn {
+        padding: 6px 14px;
+        border-radius: 6px !important;
+        font-size: clamp(12px,
+                calc(12px + (100vw - 375px) * 0.0019),
+                14px);
+    }
+
+    .item .key span {
+        white-space: unset;
+    }
+
+    .card-price .new {
+        font-size: 20px;
+    }
+
+
+    .details-ul-wrap .flex-wrap {
+        gap: 12px;
+    }
+
+    .details-ul-wrap li {
+        font-size: var(--fs-xs);
+    }
+
+    .details-ul-wrap li::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .food-modal .food-items .item {
+        padding: 4px 8px;
+        border-right: none;
+    }
+
+    .modal .slider-area {
+        height: 250px;
+    }
+
+    .modal .slider-area .medile-slider .item {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal .slider-area .medile-slider .item img {
+        /* height: 90%; */
+        width: 100%;
+    }
+
+    .modal .slider-area .left,
+    .modal .slider-area .right {
+        width: 12%;
+        position: relative;
+    }
 }
 
 
@@ -3219,4 +3347,5 @@
     .map-wrap .map-btns .map-btn {
         font-size: var(--fs-sm);
     }
+
 }
