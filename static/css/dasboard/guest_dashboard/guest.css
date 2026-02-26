@@ -27,11 +27,10 @@ header {
     padding: 0;
 }
 
-header .header-main {
-    border-bottom: 1px solid var(--my-white-off);
+
+.main-header-wrap.active {
+    top: -7px;
 }
-
-
 
 header .header-top {
     position: relative;
@@ -41,7 +40,7 @@ header .header-top {
 header .header-main {
     margin-top: 6px;
     padding-bottom: 6px;
-    border-top: 1px solid var(--my-border-secondary);
+    border-top: 1px solid var(--my-white-off);
 }
 
 .main-content-header {
@@ -59,10 +58,27 @@ header .header-main .my-gap-14 {
 
 
 header .click-dropdown-parent .click-dropdown {
-    top: 65px;
+    top: 44px;
 }
 
+header .header-top .click-dropdown-btn.active::after {
+    top: 18px;
+    opacity: 1;
+    display: block;
+}
 
+header .header-top .dasboard-container {
+    position: relative;
+}
+
+.calendar .calendar-footer button {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 50%;
+    border: 1px solid var(--my-border-primary) !important;
+}
 
 /*
 =======================================
@@ -485,7 +501,7 @@ aside.active .ads-video .video-slider-wrap:hover .video-play {
 */
 main {
     background-color: var(--my-white-off);
-    margin-top: 25px;
+    margin-top: 0px;
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
     z-index: 2;
@@ -940,11 +956,30 @@ circle {
 /*
 =========||  Mobile  Start Here  ||===========
 */
-@media (max-width:769px) {
-    header .header-main {
+@media (max-width:767px) {
+    header {
+        position: fixed;
+        top: 0;
+    }
+
+    .main-header-wrap.active {
+        background-color: var(--my-white);
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        box-shadow: unset;
         border-bottom: 0px solid var(--my-white-off);
     }
 
+    header .header-top {
+        padding-top: 0px !important;
+    }
+
+    header .header-main .item {
+        font-size: var(--fs-sm);
+    }
 
     .m-sidebar-close.sidebar-close-btn {
         padding: 12px !important;
@@ -1019,7 +1054,7 @@ circle {
     main {
         width: 100%;
         flex-basis: unset;
-        margin-top: 125px;
+        margin-top: 12px;
         background-color: var(--my-white);
         padding: 0;
     }
@@ -1151,7 +1186,8 @@ circle {
     }
 
     .upcoming-trips .items .item .title {
-        font-size: var(--fs-sm);
+        font-size: var(--fs-xs);
+        margin-top: 0;
     }
 
     .upcoming-trips .my-btn-sm,
@@ -1183,7 +1219,7 @@ circle {
     }
 
     .booking-status .item .title {
-        font-size: var(--fs-lg);
+        font-size: var(--fs-md);
         font-weight: 600;
     }
 
@@ -1347,6 +1383,16 @@ circle {
     .pagination .pages.my-d-flex {
         /* display: none !important; */
     }
+
+    .compare-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .my-btn-sm svg {
+        width: 22px;
+        height: 20px;
+    }
 }
 
 
@@ -1354,6 +1400,7 @@ circle {
 
     .calendar .date {
         padding: 12px 4px;
+        margin-top: 0;
     }
 
     .dates-grid {
