@@ -4305,6 +4305,10 @@ tr {
 
 }
 
+.my-align-stretch {
+    align-items: stretch;
+}
+
 
 
 .flex-fit {

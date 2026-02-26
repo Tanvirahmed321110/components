@@ -1693,6 +1693,250 @@ button.video-play-btn:active {
 
 
 
+/*_______________________________
+__________||  Login 1  ||________
+________________________________*/
+.login2 {
+    background: linear-gradient(90deg, #f4efef, #f4f6fd);
+    /* background-color: var(--my-border-secondary); */
+    padding: 40px;
+}
+
+.login2-container {
+    width: 850px;
+    height: 550px;
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.login2 .form-box {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    border-radius: var(--radius-xxl);
+    overflow: hidden;
+}
+
+.login2 .forget-pass {
+    color: var(--my-text-quaternary);
+    font-size: var(--fs-sm);
+}
+
+.login2 .forget-pass:hover {
+    color: var(--my-secondary-color);
+}
+
+.login2 .form-box form {
+    width: 100%;
+}
+
+.login2 .form-box .my-input-control input {
+    /* background-color: #eee; */
+    color: var(--my-primary-color);
+    width: 100%;
+    padding-right: 50px;
+}
+
+.login2 .form-box .my-input-control input::placeholder {
+    color: #888;
+    color: var(--my-text-placeholder);
+}
+
+
+
+/* button */
+.login2 .form-box .my-btn {
+    width: 100%;
+    height: 44px;
+    /* background-color: #7494ec;
+    background-color: var(--my-primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #fff; */
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.login2 .form-box .my-btn:hover {
+    background-color: var(--my-secondary-color);
+}
+
+/* social-login */
+.login2 .social-login .item {
+    padding: 11px 12px;
+    border: 1px solid var(--my-border-primary);
+    border-radius: var(--radius-sm);
+}
+
+.login2 .social-login .item i {
+    color: var(--my-primary-color);
+    font-size: var(--fs-md);
+}
+
+.login2 .social-login .item:hover {
+    border-color: var(--my-primary-color);
+}
+
+.login2 .social-login .item .right-icon {
+    background-color: rebeccapurple !important;
+}
+
+.my-input-control .right-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    z-index: 2;
+    padding: 3px;
+    font-size: var(--fs-md);
+    background-color: var(--my-border-secondary);
+    height: 100%;
+    width: 34px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.login2 .social-login .item i {
+    transition: .2s linear;
+    color: var(--my-text-tertiary);
+}
+
+.login2 .social-login .item:hover i {
+    color: var(--my-primary-color);
+}
+
+/* form box register */
+.login2 .form-box.register {
+    visibility: hidden;
+    display: none;
+}
+
+.login2-container .toggle-wrap {
+    border-radius: var(--fs-xl);
+}
+
+.login2-container .form-toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: unset;
+}
+
+.login2-container .form-toggle-box .toggle-btn {
+    padding: 12px 18px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    min-width: 100px;
+}
+
+
+
+.login2 .form-toggle-box .toggle-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #7494ec;
+
+    background-color: var(--my-primary-color);
+    /* background-color: var(--my-border-primary); */
+    left: 0px;
+    border-top-right-radius: 140px;
+    border-bottom-right-radius: 140px;
+    color: white;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    z-index: 13;
+    visibility: hidden;
+    display: none;
+}
+
+
+
+/* active class */
+.login2 .form-toggle-box .toggle-wrap.toggle-login.active {
+    visibility: visible;
+    display: flex;
+}
+
+.login2 .form-toggle-box .toggle-wrap.toggle-register.active {
+    visibility: visible;
+    display: flex;
+}
+
+.login2 .form-box.register.active {
+    right: 0;
+    z-index: 4;
+    visibility: visible;
+    display: flex;
+}
+
+
+
+/* OTP BOx */
+.otp-box {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.otp-box input {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--my-border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.otp-box input:focus {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Optional: remove arrows in number input (Chrome, Edge) */
+.otp-box input::-webkit-outer-spin-button,
+.otp-box input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* For Radio Tab */
+.radio-content {
+    display: none;
+}
+
+.radio-content.active {
+    display: flex;
+}
+
 
 
 
@@ -1706,7 +1950,6 @@ button.video-play-btn:active {
     .my-card {
         padding: 12px;
     }
-
 
 
     .my-btn.my-btn-pill {
