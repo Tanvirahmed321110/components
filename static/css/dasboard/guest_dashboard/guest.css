@@ -13,14 +13,12 @@
 }
 
 .dasboard-container-wrapper {
-    margin-top: 125px;
     width: 100%;
     min-height: 100%;
 }
 
 
 header {
-    position: fixed;
     left: 0;
     right: 0;
     padding-bottom: 0;
@@ -36,14 +34,14 @@ header .header-main {
 
 
 header .header-top {
-    border-bottom: 1px solid var(--my-border-gray);
-    padding-top: 2px;
     position: relative;
+    padding-bottom: 0;
 }
 
 header .header-main {
     margin-top: 6px;
     padding-bottom: 6px;
+    border-top: 1px solid var(--my-border-secondary);
 }
 
 .main-content-header {
@@ -71,12 +69,13 @@ header .click-dropdown-parent .click-dropdown {
 =====||   Sidebar Start Here    ||=====
 =======================================
 */
-.sidebar-close-btn {
+.sidebar-close-btn.my-btn {
     position: absolute;
     top: 8px;
     right: 8px;
     background-color: var(--my-secondary-color);
     z-index: 4;
+    border-color: var(--my-secondary-color);
 }
 
 .m-sidebar-close.sidebar-close-btn {
@@ -101,9 +100,9 @@ aside.sidebar {
 }
 
 .aside-wrapper {
-    /* position: sticky; */
-    top: 125px;
-    height: calc(100dvh - 125px);
+    /* position: sticky;
+    top: 10px;
+    height: calc(100dvh - 10px); */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -440,7 +439,7 @@ aside.active .video-slider-wrap:hover .btn-wrap {
 
 /* ads-modal  */
 .ads-modal .my-video {
-    width: 500px;
+    width: 100%;
     min-height: 400px;
 }
 
@@ -486,7 +485,7 @@ aside.active .ads-video .video-slider-wrap:hover .video-play {
 */
 main {
     background-color: var(--my-white-off);
-    /* margin-top: 125px; */
+    margin-top: 25px;
     border-left: 1px solid var(--my-white-off);
     transition: .3s linear;
     z-index: 2;
