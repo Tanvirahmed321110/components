@@ -1054,7 +1054,7 @@ circle {
     main {
         width: 100%;
         flex-basis: unset;
-        margin-top: 12px;
+        margin-top: 130px;
         background-color: var(--my-white);
         padding: 0;
     }
