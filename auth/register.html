@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
+        <title>Register</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./static/css/library/custom_class.css">
         <link rel="stylesheet" href="./static/css/library/my_component.css">
@@ -26,11 +26,17 @@
                             <!-- top -->
                             <div class="my-flex-center my-flex-column top">
                                 <img class="my-w-75" src="/static/images/Logo.svg" alt="logo" loading="lazy">
-                                <h1 class="my-fs-xxl my-fs-sm-xl my-text-primary my-mt-4">Login</h1>
+                                <h1 class="my-fs-xxl my-fs-sm-xl my-text-primary my-mt-4">Create Account</h1>
                             </div>
 
                             <!-- input -->
                             <div class="my-mt-16 my-mt-sm-8 my-flex-column my-gap-8">
+                                <!-- for email -->
+                                <div class="my-input-control">
+                                    <label for="">Full Name</label>
+                                    <input type="text" class="my-mt-4" placeholder="Enter Full Name">
+                                    <div class="error-message">Error</div>
+                                </div>
                                 <!-- for email -->
                                 <div class="my-input-control">
                                     <label for="">Eamil Address</label>
@@ -46,13 +52,6 @@
                                     <div class="error-message">Error</div>
                                 </div>
 
-                                <div class="my-w-100-p  my-text-right">
-                                    <a href="#"
-                                        class="forget-password my-text-gray2 my-fw-normal text-hover-secondary my-fs-sm-xs "
-                                        style="text-decoration: underline;">Forget
-                                        Password?</a>
-                                </div>
-
                                 <div class="my-d-flex my-gap-4 my-align-start">
                                     <input type="checkbox">
                                     <label for="" class="checkbox-text my-d-flex my-fs-sm-xs" style="max-width: 370px;">
@@ -66,8 +65,7 @@
 
                                 <!-- login button -->
                                 <button class="my-btn my-primary-btn my-w-100-p my-mt-8 submit-btn"><span
-                                        class="content">Log
-                                        in</span>
+                                        class="content">Create Account</span>
                                 </button>
                             </div>
                         </form>
@@ -111,9 +109,8 @@
                         </div>
 
                         <div class="bottom my-mt-16 my-flex-center">
-                            <div class="my-text-gray-2 my-fs-sm-xs">Don't have an account? <a href="/auth/register.html"
-                                    class="my-secondary-color my-fw-bold my-fs-sm-xs">Create
-                                    Account</a></div>
+                            <div class="my-text-gray-2 my-fs-sm-xs">Already have an account? <a href="/auth/login.html"
+                                    class="my-secondary-color my-fw-bold my-fs-sm-xs">Login here</a></div>
                         </div>
                     </div>
 
@@ -209,7 +206,6 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="/static/js/global_js/global.js"></script>
         <script>
             const authSlider = new Swiper(".authSlider", {
                 loop: true,
