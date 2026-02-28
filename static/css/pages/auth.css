@@ -16,11 +16,18 @@ body {
     width: 100%;
 }
 
-
+.auth-wrapper .content {
+    max-width: 460px;
+}
 
 .auth label {
     color: var(--my-text-primary);
     font-size: var(--fs-md);
+}
+
+.auth input {
+    border-color: #D5D7DA;
+    padding: 10px 12px;
 }
 
 .auth input::placeholder {
@@ -49,9 +56,43 @@ body {
 
 
 
+.swiper {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    border-radius: var(--radius-xxl);
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
 
 
+.swiper-pagination {
+    bottom: 20px !important;
+}
 
+.swiper-pagination-bullet {
+    background: var(--my-white);
+    opacity: 0.8;
+    width: 29%;
+    height: 6px;
+    border-radius: 4px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--my-secondary-color);
+    opacity: 1;
+}
+
+.swiper-pagination {
+    top: 75% !important;
+    bottom: auto !important;
+    transform: translateY(-50%);
+}
 
 /* or-area */
 .or {
@@ -71,7 +112,7 @@ body {
 .or-area .my-outline-btn {
     padding: 11px 12px;
     color: var(--my-text-primary);
-    border-color: var(--my-border-secondary);
+    border-color: #D5D7DA;
     font-size: 14px;
 }
 
