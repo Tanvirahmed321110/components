@@ -14,6 +14,8 @@ body {
 
 .auth-wrapper {
     width: 100%;
+    height: inherit;
+    min-height: 450px;
 }
 
 .auth-wrapper .content {
@@ -154,6 +156,12 @@ body {
     z-index: 4;
     border-radius: var(--radius-xxl);
 }
+
+.forget .images .item-bg::after {
+    content: unset;
+}
+
+
 
 .auth .images .item-bg img {
     border-radius: var(--radius-xxl);
