@@ -1,13 +1,23 @@
-const { Component, mount, useState, xml } = owl;
+import { Footer } from './components/Footer.js';
+const { Component, mount, useState, xml, } = owl;
+
 
 // --- ১. সাব-কম্পোনেন্ট: Card (একক কার্ড ডিজাইন) ---
 class CardItem extends Component {
+
+
+    // এখানে ফাংশনটি ডিফাইন করতে হবে
+    onUpdateClick() {
+        // props এর মাধ্যমে আসা onUpdate ফাংশনটি কল করা হচ্ছে
+        this.props.onUpdate(this.props.card.id);
+    }
 
     static template = xml`
         <div class="card p-4 border rounded shadow-sm bg-white hover:shadow-md transition">
             <div class="name font-bold text-lg text-indigo-700"><t t-esc="props.card.name"/></div>
             <div class="desc text-sm text-gray-600 my-2"><t t-esc="props.card.description"/></div>
             <div class="point font-mono text-indigo-500 font-bold">Point: <t t-esc="props.card.point"/></div>
+            <button style="margin-top:8px" t-on-click="onUpdateClick">Add</button>
         </div>
     `;
 }
@@ -38,20 +48,6 @@ class Header extends Component {
 }
 
 
-// --- ৩. ফুটার কম্পোনেন্ট ---
-class Footer extends Component {
-    static template = xml`
-        <footer>
-            <div class="container">
-                <div style="display: flex;justify-content: space-between;">
-                    <p>@copy right</p>
-                    <p>Footer Description Here.</p>
-                </div>
-            </div>
-        </footer>
-
-    `;
-}
 
 // --- Sidebar ---
 class Sidebar extends Component {
@@ -95,6 +91,14 @@ class MainApp extends Component {
         })
     }
 
+    // এই ফাংশনটি পয়েন্ট আপডেট করবে
+    updateCardPoint(cardId) {
+        const card = this.state.cards.find(c => c.id === cardId);
+        if (card) {
+            card.point += 1; // এখানে স্টেট আপডেট হচ্ছে
+        }
+    }
+
 
     static template = xml`
 
@@ -108,7 +112,7 @@ class MainApp extends Component {
                                 <h2>Main Conent Here</h2>
                                 <div class="cards">
                                     <t t-foreach="state.cards" t-as="item" t-key="item.id">
-                                        <CardItem card="item"/>
+                                        <CardItem card="item" onUpdate="updateCardPoint.bind(this)" />
                                     </t>
                                     </div>
                             </div>
