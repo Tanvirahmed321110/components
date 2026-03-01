@@ -1,15 +1,11 @@
-body {
-    background-color: var(--my-bg-secondary);
-}
-
 .auth {
     max-width: 1300px;
     width: 1040px;
-    margin: 0 auto;
     box-shadow: var(--shadow-1);
     padding: 32px;
     border-radius: var(--radius-3xl);
     background-color: var(--my-white);
+    margin-top: 60px;
 }
 
 .auth-wrapper {
