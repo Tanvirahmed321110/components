@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,
+.body {
+    background-color: #888;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: #999;
+    padding: 12px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.sidebar {
+    padding: 24px;
+    border: 1px solid rebeccapurple;
+    background-color: wheat;
+    color: black;
+    border-radius: 12px;
+}
+
+
+.main {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 48px;
+}
