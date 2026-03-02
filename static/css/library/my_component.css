@@ -736,6 +736,7 @@ button:active,
 .my-btn.my-btn-pill {
     border-radius: var(--radius-pill);
     padding: 13px 26px;
+    border: 1px solid var(--my-border-primary);
 }
 
 .my-btn.my-btn-sm {

@@ -17,7 +17,7 @@ class CardItem extends Component {
             <div class="name font-bold text-lg text-indigo-700"><t t-esc="props.card.name"/></div>
             <div class="desc text-sm text-gray-600 my-2"><t t-esc="props.card.description"/></div>
             <div class="point font-mono text-indigo-500 font-bold">Point: <t t-esc="props.card.point"/></div>
-            <button style="margin-top:8px" t-on-click="onUpdateClick">Add</button>
+            <button style="margin-top:12px" t-on-click="onUpdateClick">Add</button>
         </div>
     `;
 }
@@ -27,7 +27,12 @@ class CardItem extends Component {
 class Header extends Component {
     setup() {
         this.state = useState({
-            headerItems: ['Home', 'About', 'Contact', 'Information']
+            headerItems: [
+                { name: 'Home', link: 'index.html' },
+                { name: 'About', link: '/owlTest/test2/pages/about.html' },
+                { name: 'Contact', link: 'contact.html' },
+                { name: 'Information', link: 'information.html' }
+            ]
         })
     }
 
@@ -35,10 +40,10 @@ class Header extends Component {
         <header>
             <div class="container">
                 <div style="display: flex;align-items: center;justify-content: space-between;">
-                    <h2>Logo.</h2>
+                    <h1 style="font-weight:700">Logo.</h1>
                     <ul style="display: flex;gap: 24px;">
-                        <t t-foreach="state.headerItems" t-key="item" t-as="item">
-                            <li><a href="#" t-esc="item">Home</a></li>
+                        <t t-foreach="state.headerItems" t-key="item.name" t-as="item">
+                            <li><a t-att-href="item.link" t-esc="item.name">Home</a></li>
                         </t>
                     </ul>
                 </div>
@@ -62,7 +67,7 @@ class Sidebar extends Component {
         <aside class="right-sidebar">
             <h3>Right Sidebar</h3>
             <h4 style="margin-top: 24px;"> All Points</h4>
-            <ul style="margin-top: 8px;display: flex;flex-direction: column;gap: 4px;">
+            <ul class="point" style="margin-top: 8px;display: flex;flex-direction: column;gap: 4px;">
                <t t-foreach="state.sidePoints" t-as="item" t-key="item">
                     <li t-esc="item">Point one</li>
                </t>

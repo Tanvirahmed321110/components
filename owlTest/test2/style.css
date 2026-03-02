@@ -109,3 +109,20 @@ main {
     color: orange;
     font-weight: 600;
 }
+
+button {
+    padding: 7px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.point li {
+    opacity: .75;
+    font-weight: 500;
+    color: wheat;
+}
