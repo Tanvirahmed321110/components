@@ -269,7 +269,7 @@
 .tab-content .generat-link input {
     border-radius: 0;
     background-color: var(--my-white);
-    border-width: 4px;
+    border-width: 1px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }

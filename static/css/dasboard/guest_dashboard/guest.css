@@ -94,6 +94,10 @@ header .header-top .dasboard-container {
     border-color: var(--my-secondary-color);
 }
 
+.sidebar-close-btn.my-btn::after {
+    content: unset;
+}
+
 .m-sidebar-close.sidebar-close-btn {
     padding: 12px;
 }
@@ -718,8 +722,21 @@ circle {
     font-size: var(--fs-xl);
 }
 
+.view-btn {
+    padding: 6px 8px;
+    border: 1px solid var(--my-border-primary);
+    border-radius: var(--radius-md);
+}
 
-@media (max-width:1400px) {
+.copy-btn {
+    overflow: visible;
+}
+
+.copy-btn::after {
+    content: unset;
+}
+
+@media (max-width:1439px) {
     aside {
         flex-basis: 20%;
         border-right: 0;
@@ -736,6 +753,13 @@ circle {
         height: 220px;
     }
 
+    .sidebar .bottom nav .item {
+        font-size: var(--fs-sm);
+    }
+
+    header .header-main .item {
+        font-size: 15px;
+    }
 }
 
 

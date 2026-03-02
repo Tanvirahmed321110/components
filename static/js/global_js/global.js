@@ -760,7 +760,31 @@ mSidebarDropdwonF()
 
 
 
+function commonDropdown2(btn, item) {
+    // 1️⃣ Get selected text
+    const text = item.querySelector(".text")?.textContent.trim();
 
+    // 2️⃣ Get selected image
+    const img = item.querySelector("img");
+    const imgSrc = img?.getAttribute("src");
+    const imgAlt = img?.getAttribute("alt");
+
+    // 3️⃣ Update button text
+    if (text) {
+        btn.textContent = text.length > 16
+            ? text.slice(0, 16) + "…"
+            : text;
+    }
+
+    // 4️⃣ Update button image
+    const parent = btn.closest(".click-dropdown-parent");
+    const btnImg = parent.querySelector(".click-dropdown-btn img");
+
+    if (btnImg && imgSrc) {
+        btnImg.src = imgSrc;
+        btnImg.alt = imgAlt || "selected image";
+    }
+}
 
 
 //=========  For common dropdwon 2 and Filter head  ===========
@@ -1086,7 +1110,7 @@ const desktopHeader = document.querySelector('header .main-header-wrap')
 
 if (desktopHeader) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 200) {
             desktopHeader.classList.add('active')
         }
         else {
