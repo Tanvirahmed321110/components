@@ -135,48 +135,6 @@
 /*
         <div class="my-tooltip"><div>hover me </div><div class="show-text">hello </div></div>
 */
-.my-tooltip {
-    position: relative;
-    cursor: pointer;
-    height: fit-content;
-}
-
-.my-tooltip .show-text {
-    position: absolute;
-    bottom: -32px;
-    right: 2px;
-    z-index: 20;
-    background-color: var(--my-primary-color);
-    color: var(--my-white-off);
-    padding: 6px 8px;
-    border-radius: 2px;
-    font-size: var(--fs-low);
-    transition: .2s;
-    opacity: 0;
-    max-width: 300px;
-    text-wrap: nowrap;
-    visibility: hidden;
-    height: fit-content;
-}
-
-.my-tooltip .show-text::after {
-    content: '';
-    position: absolute;
-    top: -16px;
-    right: 0;
-    clip-path: polygon(48% 26%, 100% 100%, 100% 45%);
-    height: 25px;
-    width: 25px;
-    background-color: var(--my-primary-color);
-    z-index: 12;
-}
-
-.my-tooltip:hover .show-text {
-    transform: translateY(0px);
-    opacity: 1;
-    visibility: visible;
-}
-
 
 /* Example 1: Fade In + Slide Up */
 .tooltip {
@@ -207,7 +165,7 @@
 .tooltip .tooltip-text {
     display: block;
     position: absolute;
-    background: var(--my-primary-color);
+    background: var(--my-primary);
     color: var(--my-white);
     padding: 12px 12px;
     border-radius: 8px;
@@ -301,8 +259,6 @@
     visibility: visible;
     transform: translateY(-50%) translateX(0);
 }
-
-/*___________||  Tooltip Start Here  ||___________ */
 
 
 
@@ -424,17 +380,34 @@
 /*______________________________*\
   ||     Card  Start Here     ||
 \*______________________________*/
-.my-card {
+.card {
     position: relative;
-    overflow: hidden;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--my-border-color);
-    background-color: var(--my-white);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--my-border-primary);
+    background-color: var(--my-bg-card);
 }
 
 
+.card-sm {
+    padding: 8px;
+    border-radius: var(--radius-md);
+}
 
+.card-md {
+    border-radius: var(--radius-lg);
+    padding: 12px;
+}
+
+.card-lg {
+    border-radius: var(--radius-xl);
+    padding: 16px;
+}
+
+.card-xl {
+    padding: 20px;
+    border-radius: var(--radius-xxl);
+}
 
 
 /*______________________________*\
@@ -500,7 +473,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 14px;
 }
 
 .my-btn .btn-loader span {
