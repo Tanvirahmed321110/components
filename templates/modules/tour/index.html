@@ -5548,7 +5548,7 @@
                                     </button>
 
                                     <div>
-                                        <div class="bottom-search">
+                                        <div class="bottom-search tabs">
                                             <!--=========||   For Background Image   ||========-->
                                             <div class="tab-container">
                                                 <!-- Left Arrow -->
@@ -5560,7 +5560,7 @@
                                                     <ul class="my-d-flex search-tabs my-gap-2 my-align-center">
                                                         <!-- single tab button -->
                                                         <li>
-                                                            <button class="tab-btn active">
+                                                            <button class="tab-btn active" data-tab="tour">
                                                                 <svg width="21" height="22" viewBox="0 0 21 22"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -5574,7 +5574,7 @@
 
                                                         <!-- single tab button -->
                                                         <li>
-                                                            <button class="tab-btn">
+                                                            <button class="tab-btn " data-tab="activites">
                                                                 <svg width="21" height="22" viewBox="0 0 21 22"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -5688,7 +5688,8 @@
                                                  When active class add then show this form
                                                 -->
                                                 <form action="#"
-                                                    class="my-d-flex active my-gap-5 search-group my-align-center my-justify-between">
+                                                    class="my-d-flex tab-content active my-gap-5 search-group my-align-center my-justify-between"
+                                                    id="tour">
                                                     <!-- Where To -->
                                                     <div class="my-input-control where-to">
                                                         <label for="Destination">Where to?*</label>
@@ -5702,7 +5703,7 @@
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
                                                                     stroke-width="1.66667" stroke-linecap="round"
-                                                                    stroke-linejoin="round" />
+                                                                    stroke-linejoin="round"></path>
                                                             </svg>
                                                         </label>
                                                         <input type="text" placeholder="Choose date">
@@ -5715,7 +5716,7 @@
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
                                                                     stroke-width="1.66667" stroke-linecap="round"
-                                                                    stroke-linejoin="round" />
+                                                                    stroke-linejoin="round"></path>
                                                             </svg>
                                                         </label>
                                                         <input type="text" placeholder="Choose Type ">
@@ -5746,45 +5747,62 @@
 
                                                 <!--========||   For Activites   ||========-->
                                                 <form action="#"
-                                                    class="my-d-flex  my-gap-5 search-group my-align-center my-justify-between">
-                                                    <div class="my-input-control big">
-                                                        <label for="Destination">Destination</label>
-                                                        <input type="text" value="Cox's Bazar">
+                                                    class="my-d-flex tab-content my-gap-5 search-group my-align-center my-justify-between"
+                                                    id="activites">
+                                                    <!-- Where To -->
+                                                    <div class="my-input-control where-to">
+                                                        <label for="Destination">Where to?*</label>
+                                                        <input type="text" placeholder="where are you going now?"
+                                                            value="">
                                                     </div>
-                                                    <div class="my-d-flex my-gap-5 small my-align-center">
-                                                        <div class="my-input-control">
-                                                            <label for="">Check in</label>
-                                                            <input type="date">
-                                                        </div>
-                                                        <div class="my-input-control">
-                                                            <label for="">Stay</label>
-                                                            <input type="date">
-                                                        </div>
+
+                                                    <!-- Date -->
+                                                    <div class="my-input-control date">
+                                                        <label for="">Date <svg width="20" height="20"
+                                                                viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
+                                                                    stroke-width="1.66667" stroke-linecap="round"
+                                                                    stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </label>
+                                                        <input type="text" placeholder="Choose date">
                                                     </div>
+
+                                                    <!-- Tour Type -->
                                                     <div class="my-input-control">
-                                                        <label for="">Check out</label>
-                                                        <input type="date">
+                                                        <label for="">Type Tour<svg width="20" height="20"
+                                                                viewBox="0 0 20 20" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE"
+                                                                    stroke-width="1.66667" stroke-linecap="round"
+                                                                    stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </label>
+                                                        <input type="text" placeholder="Choose Type ">
                                                     </div>
-                                                    <div>
-                                                        <button class="my-btn my-primary-btn s-btn ">
-                                                            <span class="content">
-                                                                <svg width="25" height="25" viewBox="0 0 27 27"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M20.1953 20.1945L25.7509 25.75"
-                                                                        stroke="white" stroke-width="1.5"
-                                                                        stroke-linecap="round" stroke-linejoin="round">
-                                                                    </path>
-                                                                    <path
-                                                                        d="M22.9723 11.8611C22.9723 5.72461 17.9977 0.75 11.8612 0.75C5.72463 0.75 0.75 5.72461 0.75 11.8611C0.75 17.9976 5.72463 22.9722 11.8612 22.9722C17.9977 22.9722 22.9723 17.9976 22.9723 11.8611Z"
-                                                                        stroke="white" stroke-width="1.5"
-                                                                        stroke-linecap="round" stroke-linejoin="round">
-                                                                    </path>
-                                                                </svg>
 
-                                                            </span>
-                                                        </button>
+                                                    <!-- Search Button Here -->
+                                                    <a href="./filter.html" class="my-btn my-primary-btn s-btn ">
+                                                        <span class="content my-d-flex my-align-center my-gap-4">
 
-                                                    </div>
+                                                            <svg width="16" height="16" viewBox="0 0 27 27" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M20.1953 20.1945L25.7509 25.75" stroke="white"
+                                                                    stroke-width="1.5" stroke-linecap="round"
+                                                                    stroke-linejoin="round"></path>
+                                                                <path
+                                                                    d="M22.9723 11.8611C22.9723 5.72461 17.9977 0.75 11.8612 0.75C5.72463 0.75 0.75 5.72461 0.75 11.8611C0.75 17.9976 5.72463 22.9722 11.8612 22.9722C17.9977 22.9722 22.9723 17.9976 22.9723 11.8611Z"
+                                                                    stroke="white" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg>
+
+                                                            Search
+
+                                                        </span>
+                                                    </a>
+
                                                 </form>
                                             </div>
                                         </div>

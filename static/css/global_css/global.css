@@ -1133,6 +1133,11 @@ header .header-top .search-input input {
     background-color: var(--my-bg-secondary);
 }
 
+header .header-top .search-input input:focus {
+    outline: unset;
+    border-color: var(--primary-80);
+}
+
 header .header-top .click-dropdown-btn {
     padding: 0;
 }
@@ -2969,8 +2974,8 @@ footer .footer-bottom {
 
     .event-cart .new-price {
         font-size: var(--fs-lg);
-        line-height: var(--line-height-low);
         margin-top: 0;
+        line-height: 1;
     }
 
     .event-cart .old-price {
@@ -3422,7 +3427,7 @@ footer .footer-bottom {
     .m-bottom-sidebar .content .item .name {
         color: var(--my-primary-color);
         font-weight: 500;
-        font-size: clamp(12px, 7.45px + 1.21vw, 14px);
+        font-size: clamp(12px, 1.6vw, 14px);
 
     }
 
