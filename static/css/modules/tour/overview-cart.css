@@ -1,14 +1,16 @@
 body {
     background-color: var(--my-bg-secondary);
 }
+
 .section-title {
-    font-size: clamp(var(--fs-md), 2.4vw, var(--fs-3xl));
+    font-size: clamp(var(--fs-lg), 2.4vw, var(--fs-3xl));
+    line-height: 1.3;
 }
 
 
 /* sec-sub-title */
 .sec-sub-title {
-    font-size: clamp(var(--fs-md), 2.4vw, var(--fs-3xl));
+    font-size: clamp(var(--fs-lg), 2.4vw, var(--fs-3xl));
     font-weight: 600;
     color: var(--my-text-primary);
 }
@@ -505,7 +507,8 @@ body {
 }
 
 .good-to-know .section-title {
-    font-size: clamp(var(--fs-md), 2.5vw, var(--fs-xxl));
+    font-size: clamp(var(--fs-xl), 2.5vw, var(--fs-xxl));
+    line-height: 1.3;
 }
 
 .good-to-know .item p {
@@ -975,5 +978,76 @@ input[type=radio]:checked::after {
 
     .items-details-bottom .card .card-inner .img-wrap img {
         max-height: 260px;
+    }
+}
+
+
+
+
+
+
+@media (max-width:767px) {
+    .adventure-sec .adventure-area {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .adventure-sec .adventure-left {
+        padding: 16px;
+        padding-top: 8px;
+    }
+
+    .adventure-sec .adventure-left .body {
+        margin-top: 12px;
+    }
+
+    .items-cart-sec-wrap {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cart-summery {
+        padding-top: 12px;
+    }
+
+    .cart-summery .cart-inner {
+        margin-top: 12px;
+    }
+
+    .good-to-know {
+        margin-top: 40px;
+        padding: 20px;
+        padding-top: 16px;
+    }
+
+    .good-to-know .items {
+        margin-top: 20px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .form p,
+    .form li {
+        font-size: var(--fs-xs);
+        line-height: 1.6;
+    }
+
+    .form .info {
+        background-color: #FFE4DD;
+        padding: 8px 12px;
+        font-size: var(--fs-low);
+    }
+
+    .input-groups .my-input-control input {
+        padding: 12px;
+        border-radius: var(--radius-md);
+    }
+
+    .form .book-btn {
+        padding: 16px;
+        font-size: var(--fs-md);
+        border-radius: var(--radius-pill);
     }
 }

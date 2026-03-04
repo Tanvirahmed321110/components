@@ -5012,7 +5012,9 @@ input[type=number] {
         height: 30px;
     }
 
-
+    label {
+        font-size: var(--fs-sm);
+    }
 }
 
 
