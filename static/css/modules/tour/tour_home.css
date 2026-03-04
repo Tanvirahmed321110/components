@@ -181,8 +181,8 @@
 
 .offer-wrapper .slider-nav {
     position: absolute;
-    top: 22px;
-    right: 26px;
+    top: 20px;
+    right: 20px;
     z-index: 9999;
     display: flex;
     gap: 12px;
