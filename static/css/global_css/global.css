@@ -1205,6 +1205,8 @@ header {
     background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
     box-shadow: var(--shadow-1);
+    z-index: 2;
+    position: relative;
 }
 
 header.active {

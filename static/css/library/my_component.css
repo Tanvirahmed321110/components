@@ -131,22 +131,24 @@
 
 /* breadcrumb */
 .breadcrumb-sec {
-    /* background-color: var(--my-white);
-    padding: 24px 0; */
+    border-bottom: 1px solid var(--my-white-off);
+    padding: 16px 0;
+    margin-bottom: 24px;
+    background-color: var(--my-white);
 }
 
 .breadcrumb {
-    margin: 24px 0;
     display: flex;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
-    margin-top: 32px;
+    padding-left: 4px;
 }
 
 .breadcrumb li a {
     color: var(--my-text-primary);
     position: relative;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .breadcrumb li a:hover {
@@ -157,7 +159,7 @@
     content: '>';
     position: absolute;
     top: 0px;
-    right: -16px;
+    right: -18px;
     color: var(--my-text-primary);
 }
 
