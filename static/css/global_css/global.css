@@ -1194,6 +1194,104 @@
 
 
 
+/*===============  Popular Tour Cart  ==============*/
+.popular-tour-cart {
+    background-color: var(--my-white);
+    padding: 8px;
+    border-radius: var(--radius-xxl);
+    box-shadow: 0px 4px 16px 0px #0000001F;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-tour-cart .img-wrap {
+    width: 100%;
+}
+
+.popular-tour-cart .img-wrap img {
+    border-radius: var(--radius-xl);
+    width: 100%;
+    height: 220px;
+}
+
+.popular-tour-cart .item-content {
+    padding: 0px 12px 20px 12px;
+}
+
+.popular-tour-cart .item-content .name {
+    color: var(--my-text-primary);
+    font-size: var(--fs-xxl);
+}
+
+.popular-tour-cart .item-content .total-tour {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--my-text-primary);
+}
+
+.popular-tour-cart .item-content .activities {
+    font-size: var(--fs-xs);
+
+}
+
+.popular-tour-cart .item-content .right {
+    display: flex;
+    /* flex: 1; */
+}
+
+.popular-tour-cart .item-content .right .my-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.popular-tour-slider .swiper-slide {
+    height: auto;
+    /* Let Grid handle the height */
+}
+
+.popular-tour-slider .swiper-wrapper {
+    align-items: start;
+    padding-top: 12px;
+}
+
+.popular-body {
+    position: relative;
+}
+
+.popular-tour .right-slider-arrows {
+    position: absolute;
+    top: -70px;
+    z-index: 4;
+    right: 9%;
+}
+
+.popular-tour .ribbon {
+    animation: unset;
+    left: 0px;
+    right: unset;
+    top: -2px;
+    font-size: var(--fs-xs);
+    border-radius: 0;
+}
+
+
+/* Midlle and right */
+.offer-ribbon,
+.offer-wrapper .right-offers .offer-item .offer-ribbon {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    z-index: 3;
+    background-color: var(--my-secondary-color);
+    line-height: var(--line-height-lg);
+    font-size: var(--fs-low);
+    color: var(--my-white);
+    padding: 2px 8px;
+}
+
+
+
 
 
 /*
