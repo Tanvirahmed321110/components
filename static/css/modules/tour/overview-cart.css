@@ -1041,8 +1041,12 @@ input[type=radio]:checked::after {
     }
 
     .input-groups .my-input-control input {
-        padding: 12px;
+        padding: 10px;
         border-radius: var(--radius-md);
+    }
+
+    .dropdown-selected {
+        padding: 8px;
     }
 
     .form .book-btn {

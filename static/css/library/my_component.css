@@ -129,6 +129,40 @@
 }
 
 
+/* breadcrumb */
+.breadcrumb {
+    margin: 24px 0;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.breadcrumb li a {
+    color: var(--my-text-primary);
+}
+
+.breadcrumb li a::after {
+    content: '>';
+    position: absolute;
+    top: 2px;
+    left: 12px;
+    color: var(--my-text-primary);
+}
+
+.breadcrumb li a.active {
+    color: var(--my-text-desc);
+}
+
+
+
+
+
+
+
+
+
+
+
 /*_________________________________*\
   ||     Tooltip  Start Here     ||
 \*_________________________________*/
