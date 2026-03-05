@@ -209,6 +209,60 @@
     display: block;
 } */
 
+
+
+
+
+/* Create trip btn */
+.create-trip-btn {
+    position: absolute;
+    right: 0%;
+    top: 49%;
+    transform: translate(-0%, -49%);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 40px;
+    border-radius: var(--radius-pill);
+    background-color: var(--my-secondary-color);
+    z-index: 2;
+    text-wrap: nowrap;
+    font-size: var(--fs-xl);
+    color: var(--my-white);
+    font-weight: var(--fw-600);
+    transition: .3s linear;
+}
+
+.create-trip-btn.other-page {
+    position: unset;
+    margin-top: 32px;
+    padding: 10px 24px;
+    font-size: var(--fs-md);
+    gap: 8px;
+}
+
+.create-trip-btn:hover {
+    background-color: var(--my-primary-color);
+}
+
+.create-trip-btn .first-icon {
+    position: absolute;
+    top: -8px;
+    left: -10px;
+}
+
+.create-trip-btn svg {
+    height: 30px;
+}
+
+.create-trip-btn .first-icon svg {
+    height: 48px;
+    width: fit-content;
+}
+
+
 .w-dropdown-wrap-parent {
     position: relative;
 
@@ -374,6 +428,45 @@
 
 .hot-destination .my-grid-sm-2 {
     perspective: 1000px;
+}
+
+
+
+.hot-dest-cart {
+    box-shadow: none !important;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hot-dest-cart:hover {
+    animation: unset !important;
+}
+
+.hot-dest-cart .content {
+    width: 100%;
+}
+
+.hot-dest-cart .explore-btn {
+    position: absolute;
+    border: 0px solid var(--my-text-placeholder);
+    bottom: 16px;
+    right: -150px;
+    transition: .44s ease;
+    z-index: 4;
+    border-radius: 8px 9px 8px !important;
+    backdrop-filter: blur(6px);
+    background-color: rgba(102, 95, 95, 0.356);
+}
+
+
+.hot-dest-cart:hover::after {
+    bottom: 0%;
+}
+
+.hot-dest-cart:hover .explore-btn {
+    right: 12px;
+    z-index: 12;
 }
 
 .hot-dest-cart {
@@ -1111,7 +1204,7 @@
 header {
     background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
-    border-bottom: 1px solid transparent;
+    box-shadow: var(--shadow-1);
 }
 
 header.active {

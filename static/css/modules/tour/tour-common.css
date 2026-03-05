@@ -522,44 +522,6 @@ search-group .my-input-control input::placeholder {
 }
 
 
-.hot-dest-cart {
-    box-shadow: none !important;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.hot-dest-cart:hover {
-    animation: unset !important;
-}
-
-.hot-dest-cart .content {
-    width: 100%;
-}
-
-.hot-dest-cart .explore-btn {
-    position: absolute;
-    border: 2px solid var(--my-text-placeholder);
-    bottom: -48px;
-    right: 8px;
-    transition: .4s ease;
-    z-index: 4;
-    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.35),
-        0 0 40px rgba(255, 255, 255, 0.2),
-        0 0 60px rgba(255, 255, 255, 0.15); */
-    border-radius: 8px 9px 8px !important;
-}
-
-
-.hot-dest-cart:hover::after {
-    bottom: 0%;
-}
-
-.hot-dest-cart:hover .explore-btn {
-    bottom: 8px;
-    right: 8px;
-    z-index: 12;
-}
 
 /* sub-filter-btns */
 .sub-filter-btns {

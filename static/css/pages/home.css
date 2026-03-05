@@ -973,54 +973,6 @@
 }
 
 
-/* Create trip btn */
-.trip-plan-area .right .create-trip-btn {
-    position: absolute;
-    right: 0%;
-    top: 49%;
-    transform: translate(-0%, -49%);
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    padding: 16px 40px;
-    border-radius: var(--radius-pill);
-    background-color: var(--my-secondary-color);
-    z-index: 2;
-    text-wrap: nowrap;
-    font-size: var(--fs-xl);
-    color: var(--my-white);
-    font-weight: var(--fw-600);
-    transition: .3s linear;
-}
-
-.trip-plan-area .right .create-trip-btn:hover {
-    background-color: var(--my-primary-color);
-}
-
-.trip-plan-area .right .create-trip-btn .first-icon {
-    position: absolute;
-    top: -48px;
-    left: -40px;
-}
-
-.trip-plan-area .img-btn {
-    position: relative;
-    z-index: 1;
-    height: 128px;
-}
-
-.trip-plan-area .btn-wrap {
-    position: absolute;
-    top: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.trip-plan-area .btn-wrap .my-btn {
-    text-wrap: nowrap;
-}
 
 
 .plan-items-wrapper {
