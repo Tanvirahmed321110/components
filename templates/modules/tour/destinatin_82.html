@@ -4,8 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Destination 1</title>
+        <title>Destination 82</title>
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/static/css/library/custom_class.css">
         <link rel="stylesheet" href="/static/css/library/my_component.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
@@ -13,8 +14,9 @@
         <link rel="stylesheet" href="/static/css/modules/tour/filter.css">
         <link rel="stylesheet" href="/static/css/modules/tour/tour-common.css">
         <link rel="stylesheet" href="/static/css/modules/tour/archive.css">
-
     </head>
+
+
 
     <body>
         <!--
@@ -42,7 +44,7 @@
                             <div class="search-input  my-input-control flex-1 ">
                                 <input type="text" placeholder="Search " aria-label="Search">
                                 <span>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17 17L21 21" stroke="#FC5A31" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
@@ -3295,7 +3297,7 @@
 
 
                     <!--==================||   For Header Menu And Search Start Here   ||==================-->
-                    <div class="desktop-hide mobile-show m-search-menu">
+                    <div class="desktop-hide mobile-show-sm m-search-menu">
 
                         <!-- Left icon -->
                         <div class="left-icon"><svg width="209" height="209" viewBox="0 0 209 209" fill="none"
@@ -5225,6 +5227,7 @@
 
 
         <main>
+
             <!--
             ============================================
             =======||   Breadcrumb Start Here   ||======
@@ -5270,17 +5273,250 @@
 
 
 
+
+
+
             <!--
-            ========================================================
-            =======||   World Wide Destination Start Here   ||======
-            ========================================================
+            ==========================================================
+            =======||   Most Visited Cities Section Start Here   ||======
+            ==========================================================
             -->
-            <section class="  section-main other-page-sce world-dest-sec">
+            <section class=" section-main">
+                <div class="most-visited-cities">
+                    <div class="">
+                        <div class="most-visited-cities-wrap">
+
+                            <!-- Head -->
+                            <div class="my-container">
+                                <div class="head my-flex-between">
+                                    <h2 class="section-title my-secondary-color">
+                                        Most Popular Cities in the USA
+                                    </h2>
+
+
+                                    <!--========  Slider Next Prev Button  =======-->
+                                    <div class="right-slider-arrows">
+                                        <button class="prev" tabindex="0" aria-label="Previous slide"
+                                            aria-controls="swiper-wrapper-aca8fab88c1a3db5" aria-disabled="true">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE" stroke-width="1.25"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M9.16791 15.0018C9.16791 15.0018 4.16798 11.3193 4.16797 10.0017C4.16796 8.68408 9.16799 5.00171 9.16799 5.00171"
+                                                    stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+
+
+                                        </button>
+                                        <button class="next" tabindex="0" aria-label="Next slide"
+                                            aria-controls="swiper-wrapper-aca8fab88c1a3db5" aria-disabled="false">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.418 10H4.16797" stroke="#A4A7AE" stroke-width="1.25"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
+                                                    stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="my-container-cart">
+
+
+                                <!--=================== Body Items ==================-->
+                                <div
+                                    class="swiper other-common-slider most-visited-cities-slider my-mt-8 my-mt-sm-8 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                    <div class="swiper-wrapper " aria-live="polite"
+                                        id="swiper-wrapper-aca8fab88c1a3db5">
+
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (2).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (3).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (1).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (3).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (1).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (5).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (4).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+            <!--
+            ==========================================================
+            =======||   Most Visited Cities Section Start Here   ||======
+            ==========================================================
+            -->
+            <section class="top-destnation-sec continental-wise  section-main other-page-sce world-dest-sec">
                 <div class="my-container">
                     <div class="top-destnation-wrap my-tab-section">
-                        <div class="my-align-center my-d-flex my-text-center my-gap-8 my-w-100-p">
-                            <div class="section-head my-w-100-p" style="max-width: 844px;margin: 0 auto;">
-                                <h2 class="section-title my-text-center">
+                        <div class="my-flex-between my-gap-8">
+                            <div class="section-head">
+                                <h2 class="section-title my-text-center my-secondary-color">
                                     World Wide Destination
                                 </h2>
                                 <p class="section-sub-title my-mt-6">
@@ -5335,6 +5571,100 @@
                                     </div>
                                 </div>
 
+                                <!--==============|| Single Cart |=============-->
+                                <div class="hot-dest-cart">
+                                    <!-- img wrap -->
+                                    <div class="img-wrapper">
+                                        <img src="/static/images/hot-dest (3).jpg" alt="cart img" loading="lazy">
+                                    </div>
+
+                                    <!-- Cart Content -->
+                                    <div class="content">
+                                        <h3 class="title">South East Asia</h3>
+                                        <p class="my-mt-2 sub-title">11 Countries</p>
+                                        <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist Destination </p>
+
+                                        <!-- Explore Button -->
+                                        <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                class="btn-content">Explore</span></a>
+                                    </div>
+                                </div>
+
+                                <!--==============|| Single Cart |=============-->
+                                <div class="hot-dest-cart">
+                                    <!-- img wrap -->
+                                    <div class="img-wrapper">
+                                        <img src="/static/images/hot-dest (2).jpg" alt="cart img" loading="lazy">
+                                    </div>
+
+                                    <!-- Cart Content -->
+                                    <div class="content">
+                                        <h3 class="title">East Asia</h3>
+                                        <p class="my-mt-2 sub-title">11 Countries</p>
+                                        <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist Destination </p>
+
+                                        <!-- Explore Button -->
+                                        <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                class="btn-content">Explore</span></a>
+                                    </div>
+                                </div>
+                                <!--==============|| Single Cart |=============-->
+                                <div class="hot-dest-cart">
+                                    <!-- img wrap -->
+                                    <div class="img-wrapper">
+                                        <img src="/static/images/hot-dest (1).jpg" alt="cart img" loading="lazy">
+                                    </div>
+
+                                    <!-- Cart Content -->
+                                    <div class="content">
+                                        <h3 class="title">MENA</h3>
+                                        <p class="my-mt-2 sub-title">15 Countries</p>
+                                        <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist Destination </p>
+
+                                        <!-- Explore Button -->
+                                        <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                class="btn-content">Explore</span></a>
+                                    </div>
+                                </div>
+
+
+                                <!--==============|| Single Cart |=============-->
+                                <div class="hot-dest-cart">
+                                    <!-- img wrap -->
+                                    <div class="img-wrapper">
+                                        <img src="/static/images/hot-dest (4).jpg" alt="cart img" loading="lazy">
+                                    </div>
+
+                                    <!-- Cart Content -->
+                                    <div class="content">
+                                        <h3 class="title">Central Asia</h3>
+                                        <p class="my-mt-2 sub-title">5 Countries</p>
+                                        <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist Destination </p>
+
+                                        <!-- Explore Button -->
+                                        <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                class="btn-content">Explore</span></a>
+                                    </div>
+                                </div>
+
+                                <!--==============|| Single Cart |=============-->
+                                <div class="hot-dest-cart">
+                                    <!-- img wrap -->
+                                    <div class="img-wrapper">
+                                        <img src="/static/images/hot-dest (1).jpg" alt="cart img" loading="lazy">
+                                    </div>
+
+                                    <!-- Cart Content -->
+                                    <div class="content">
+                                        <h3 class="title">South Asia</h3>
+                                        <p class="my-mt-2 sub-title">8 Countries</p>
+                                        <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist Destination </p>
+
+                                        <!-- Explore Button -->
+                                        <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                class="btn-content">Explore</span></a>
+                                    </div>
+                                </div>
 
                                 <!--==============|| Single Cart |=============-->
                                 <div class="hot-dest-cart">
@@ -5442,24 +5772,35 @@
             </section>
 
 
-
-
-
             <!--
-            ==========================================
-            =======||   Map View Start Here   ||======
-            ===========================================
+            ==========================================================
+            =======||   Map View and Filter Section Start Here   ||======
+            ==========================================================
             -->
-            <section class=" map-view-sec other-page-sce main-sec section-main  filter-sec my-pt-sm-16">
+            <section class=" map-view-sec other-page-sce main-sec section-main  filter-sec my-pt-sm-16"
+                id="filter-section">
                 <div class="my-container">
                     <div class="top-destnation-wrap my-tab-section">
 
                         <!--============= Header =============-->
                         <div class="my-flex-between">
                             <!-- head -->
-                            <h2 class="my-secondary-color section-title">Map View</h2>
+                            <h2 class="my-secondary-color section-title">View Map In New York City</h2>
 
-
+                            <div class="search-input my-input-control mobile-hide">
+                                <input type="text" placeholder="Search " aria-label="Search">
+                                <span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 17L21 21" stroke="#FC5A31" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                                            stroke="#FC5A31" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
 
 
@@ -6200,9 +6541,318 @@
 
 
 
-                        <!--=================================|| sidebar and items Here  p||=============================-->
-                        <div class="sidebar-and-items my-mt-24 ">
+                        <div class="filter-sec-wrap my-p-relative ">
+                            <div class="my-flex-column m">
+                                <!--=============================||  Filter Head  ||===========================-->
+                                <div class="filter-head filter-header my-flex-between ">
+                                    <!--=============|| Left Side ||==============-->
+                                    <div class="left my-d-flex my-align-center  my-gap-18">
+                                        <button class="filter-btn" id="sidebar-filter-btn">
+                                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.93182 2.35H20.75M8.93182 2.35C8.93182 2.77435 8.74026 3.18131 8.39929 3.48137C8.05831 3.78143 7.59585 3.95 7.11364 3.95C6.63142 3.95 6.16896 3.78143 5.82799 3.48137C5.48701 3.18131 5.29545 2.77435 5.29545 2.35M8.93182 2.35C8.93182 1.92565 8.74026 1.51869 8.39929 1.21863C8.05831 0.918571 7.59585 0.75 7.11364 0.75C6.63142 0.75 6.16896 0.918571 5.82799 1.21863C5.48701 1.51869 5.29545 1.92565 5.29545 2.35M5.29545 2.35H0.75M8.93182 15.15H20.75M8.93182 15.15C8.93182 15.5743 8.74026 15.9813 8.39929 16.2814C8.05831 16.5814 7.59585 16.75 7.11364 16.75C6.63142 16.75 6.16896 16.5814 5.82799 16.2814C5.48701 15.9813 5.29545 15.5743 5.29545 15.15M8.93182 15.15C8.93182 14.7257 8.74026 14.3187 8.39929 14.0186C8.05831 13.7186 7.59585 13.55 7.11364 13.55C6.63142 13.55 6.16896 13.7186 5.82799 14.0186C5.48701 14.3187 5.29545 14.7257 5.29545 15.15M5.29545 15.15H0.75M16.2045 8.75H20.75M16.2045 8.75C16.2045 9.17435 16.013 9.58131 15.672 9.88137C15.331 10.1814 14.8686 10.35 14.3864 10.35C13.9042 10.35 13.4417 10.1814 13.1007 9.88137C12.7597 9.58131 12.5682 9.17435 12.5682 8.75M16.2045 8.75C16.2045 8.32565 16.013 7.91869 15.672 7.61863C15.331 7.31857 14.8686 7.15 14.3864 7.15C13.9042 7.15 13.4417 7.31857 13.1007 7.61863C12.7597 7.91869 12.5682 8.32565 12.5682 8.75M12.5682 8.75H0.75"
+                                                    stroke="#A4A7AE" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                            <span class="text">Filter</span>
+                                        </button>
 
+                                        <!-- Found Result Text For Desktop -->
+                                        <p class="found-result mobile-hide  my-fs-md my-fw-bold">20 Tours found</p>
+                                    </div>
+
+                                    <div class="search-input my-input-control mobile-hide">
+                                        <input type="text" placeholder="Search " aria-label="Search">
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17 17L21 21" stroke="#FC5A31" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                                                    stroke="#FC5A31" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- Found Result Text For Mobile -->
+                            <p class="found-result mobile-show  desktop-hide my-fs-md my-fw-bold my-pb-0 my-mt-4">20
+                                Tours
+                                found</p>
+                        </div>
+
+
+                        <!--=================================|| sidebar and items Here  p||=============================-->
+                        <div class="sidebar-and-items ">
+                            <!--================||  sidebar  ||===============-->
+                            <div class="filter-sidebar" id="filter-sidebar">
+
+
+                                <!-- desktop hide mobile show -->
+                                <button class="desktop-hide  mobile-show filter-close-btn">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.75 8.75L8.75 0.75M0.75 0.75L8.75 8.75" stroke="white"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
+
+                                <!--==============||  Filter Item  Date  ||==============-->
+                                <div class="filter-item date active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between my-w-100-p ">
+                                        <div class="text my-fs-xl my-fw-bold">Date</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content">
+                                        <div class="my-flex-between my-mt-6 my-gap-8">
+                                            <button class="date-item my-border my-p-4 my-radius-sm">Today</button>
+                                            <button class="date-item">Tomorrow</button>
+                                        </div>
+
+                                        <div class="date-btn date-item my-mt-12">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.5 0.75V3M15 0.75V3M0.75 16.5V5.25C0.75 4.65326 0.987053 4.08097 1.40901 3.65901C1.83097 3.23705 2.40326 3 3 3H16.5C17.0967 3 17.669 3.23705 18.091 3.65901C18.5129 4.08097 18.75 4.65326 18.75 5.25V16.5M0.75 16.5C0.75 17.0967 0.987053 17.669 1.40901 18.091C1.83097 18.5129 2.40326 18.75 3 18.75H16.5C17.0967 18.75 17.669 18.5129 18.091 18.091C18.5129 17.669 18.75 17.0967 18.75 16.5M0.75 16.5V9C0.75 8.40326 0.987053 7.83097 1.40901 7.40901C1.83097 6.98705 2.40326 6.75 3 6.75H16.5C17.0967 6.75 17.669 6.98705 18.091 7.40901C18.5129 7.83097 18.75 8.40326 18.75 9V16.5M9.75 10.5H9.758V10.508H9.75V10.5ZM9.75 12.75H9.758V12.758H9.75V12.75ZM9.75 15H9.758V15.008H9.75V15ZM7.5 12.75H7.508V12.758H7.5V12.75ZM7.5 15H7.508V15.008H7.5V15ZM5.25 12.75H5.258V12.758H5.25V12.75ZM5.25 15H5.258V15.008H5.25V15ZM12 10.5H12.008V10.508H12V10.5ZM12 12.75H12.008V12.758H12V12.75ZM12 15H12.008V15.008H12V15ZM14.25 10.5H14.258V10.508H14.25V10.5ZM14.25 12.75H14.258V12.758H14.25V12.75Z"
+                                                    stroke="#FC5A31" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                            <span>All Date</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--==============||  Filter Item Price ||==============-->
+
+                                <div class="filter-item active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between">
+                                        <div class="text my-fs-xl my-fw-bold">Price Range</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content">
+
+                                        <!-- SLIDER BOX -->
+                                        <div class="price-range my-mt-8" id="price-slider"></div>
+
+                                        <div class="my-flex-between my-gap-8 p-inputs my-mt-16">
+                                            <!-- min price -->
+                                            <div class="p-input">
+                                                <label for="min-price">Min. Price</label>
+                                                <input type="text" id="min-price" placeholder="$0">
+                                            </div>
+
+                                            <!-- max price -->
+                                            <div class="p-input">
+                                                <label for="max-price">Max. Price</label>
+                                                <input type="text" id="max-price" placeholder="$500">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--==============||  Filter Item Tour Type  ||==============-->
+                                <div class="filter-item active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between">
+                                        <div class="text my-fs-xl my-fw-bold">Tour Types</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content">
+                                        <ul class="items-wrap my-flex-column my-gap-8">
+                                            <li class="item">
+                                                <input checked type="checkbox" name="test" id="test">
+                                                <label for="test">Daily tour</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="test2">
+                                                <label for="test2">Group tour</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Package tour</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Private tour</label>
+                                            </li>
+                                        </ul>
+                                        <button class="show-more-btn">Show more</button>
+                                    </div>
+                                </div>
+
+
+                                <!--==============||  Filter Item Activates  ||==============-->
+                                <div class="filter-item active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between">
+                                        <div class="text my-fs-xl my-fw-bold">Activates</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content">
+                                        <ul class="items-wrap my-flex-column my-gap-8">
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">City tours</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Cultural & thematic tours</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Family friendly tours</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Holiday & seasonal tours</label>
+                                            </li>
+                                        </ul>
+
+                                        <button class="show-more-btn">Show more</button>
+                                    </div>
+                                </div>
+
+
+                                <!--==============||  Filter Item Durations  ||==============-->
+                                <div class="filter-item active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between">
+                                        <div class="text my-fs-xl my-fw-bold">Durations</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content ">
+                                        <ul class="items-wrap my-flex-column my-gap-8">
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">0 - 3 hours</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">1 - 3 days</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">12 - 15 days</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">18 - 21 hours</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">19 - 22 hours</label>
+                                            </li>
+                                        </ul>
+
+                                        <button class="show-more-btn">Show more</button>
+                                    </div>
+                                </div>
+
+                                <!--==============||  Filter Item Durations  ||==============-->
+                                <div class="filter-item active">
+
+                                    <!-- collapse and Open Btn -->
+                                    <div class="filter-item-btn my-flex-between">
+                                        <div class="text my-fs-xl my-fw-bold">Time of Day</div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A4A7AE" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+
+                                    <!--========== item content here =========-->
+                                    <div class="item-content">
+                                        <ul class="items-wrap my-flex-column my-gap-8">
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Morning, 8 AM - 12 PM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Evening, 5 PM - 12 AM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                            </li>
+                                            <li class="item">
+                                                <input type="checkbox" name="" id="">
+                                                <label for="#">Afternoon, 12 PM - 5 PM</label>
+                                            </li>
+                                        </ul>
+
+                                        <button class="show-more-btn">Show more</button>
+                                    </div>
+
+                                    <!--========== Reset Button  Here =========-->
+                                    <div class="my-mt-16  my-w-100-p">
+                                        <button class="my-btn my-secondary-btn my-w-100-p">
+                                            <span class="content">Reset Filters</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!--===================================||  Top Destination Contents  ||==================================-->
                             <div class="items flex-1 my-mt-0 tab-contents">
@@ -6550,8 +7200,7 @@
 
                                         <!--=================|| Single Tour Cart Start Here  ||==================-->
                                         <div class="tour-cart-wrapper">
-                                            <div class="tour-cart package"
-                                                style="transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1); transition: transform 0.4s;">
+                                            <div class="tour-cart package">
                                                 <!--==========|| Visiable Content  ||===========-->
                                                 <div class="cart-img">
                                                     <img src="https://i.ibb.co.com/LdXkRqfK/tourcart3.png"
@@ -7220,8 +7869,7 @@
 
                                         <!--=================|| Single Tour Cart Start Here  ||==================-->
                                         <div class="tour-cart-wrapper">
-                                            <div class="tour-cart package"
-                                                style="transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1); transition: transform 0.4s;">
+                                            <div class="tour-cart package">
                                                 <!--==========|| Visiable Content  ||===========-->
                                                 <div class="cart-img">
                                                     <img src="https://i.ibb.co.com/LdXkRqfK/tourcart3.png"
@@ -8926,207 +9574,348 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+            <!--
+            ==============================================
+            =======||   Destination Details Start Here   ||======
+            ==============================================
+            -->
+            <section class="section-main my-mt-32">
+                <div class="my-container">
+                    <div class="destination-details my-grid-2 my-gap-16 my-align-start">
+
+                        <!--===============|| Left Details ||==============-->
+                        <div class="left-details">
+                            <div>
+                                <h2 class="section-title">About Bangkok, TG</h2>
+                                <p class="desc my-mt-6 my-fs-lg my-text-quaternary">
+                                    The United States (USA) is a large North American federal republic of 50 states,
+                                    known
+                                    for
+                                    its diverse population, varied geography (from mountains to plains), and powerful,
+                                    advanced
+                                    mixed economy.
+                                    <button class="see-more"> See More </button>
+                                </p>
+                            </div>
+
+                            <!--========= General Info ========= -->
+                            <div class="general-info my-mt-12">
+                                <div class="cart-title">General Info</div>
+                                <ul class="my-flex-column my-gap-6 my-mt-4 items">
+
+                                    <!-- single item -->
+                                    <li class="item">
+                                        <div class="key">Government: </div>
+                                        <p class="my-d-flex value my-gap-2">
+                                            A constitutional federal republic with a president as head of state and
+                                            government its diverse population, varied geograph
+                                            <button class="see-more">See More</button>
+                                        </p>
+                                    </li>
+                                    <!-- single item -->
+                                    <li class="item">
+                                        <div class="key">Economy: </div>
+                                        <p class="my-d-flex value my-gap-2">
+                                            An advanced mixed economy with significant private freedom, strong in
+                                            technology significant private
+                                            <button class="see-more">See More</button>
+                                        </p>
+                                    </li>
+                                    <!-- single item -->
+                                    <li class="item">
+                                        <div class="key">People & Culture: </div>
+                                        <p class="my-d-flex value my-gap-2">
+                                            A nation of immigrants, resulting in high ethnic and racial diversity
+                                            <button class="see-more">See More</button>
+                                        </p>
+                                    </li>
+                                    <!-- single item -->
+                                    <li class="item">
+                                        <div class="key">Key Cities: </div>
+                                        <p class="my-d-flex value my-gap-2">
+                                            Washington, D.C. (capital), New York City (cultural hub)
+                                            <button class="see-more">See More</button>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--===============|| Right Map Details ||==============-->
+                        <div class="right-details my-flex-center my-flex-column">
+
+                            <!-- map -->
+                            <div class="map-wrapper ">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d742397.5368759931!2d87.0896651!3d24.9781784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1694695650000"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+
+                            <!-- Details -->
+                            <div class="my-mt-12 map-details-wrap ">
+                                <h3 class="my-text-center my-text-primary my-fw-bold">Best time to visit</h3>
+
+                                <div class="map-details my-d-flex my-align-center my-justify-center my-gap-16  ">
+                                    <div class="my-mt-6 my-d-flex my-gap-8 my-flex-column">
+                                        <div>
+                                            <div class="my-text-primary my-fs-md key my-fw-bold">MAY-JUN</div>
+                                            <div class="value my-mt-2 my-fs-sm my-text-quaternary">Late Sprint</div>
+                                        </div>
+                                        <div>
+                                            <div class="my-text-primary my-fs-md key my-fw-bold">APR - SEP</div>
+                                            <div class="value my-mt-2 my-fs-sm my-text-quaternary">Baseball Season</div>
+                                        </div>
+                                    </div>
+                                    <div class="my-mt-2 my-flex-column my-gap-8">
+                                        <div>
+                                            <div class="my-text-primary my-fs-md key my-fw-bold">Currency</div>
+                                            <div class="value my-mt-2 my-fs-sm my-text-quaternary">Doller($)</div>
+                                        </div>
+                                        <div>
+                                            <div class="my-text-primary my-fs-md key my-fw-bold">MAY-JUN</div>
+                                            <div class="value my-mt-2 my-fs-sm my-text-quaternary">Late Sprint</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--
+            ==========================================================
+            =======||   Nearby Destination Section Start Here   ||======
+            ==========================================================
+            -->
+            <section class="">
+                <div class="nearby-destination">
+                    <div class="">
+                        <div class="nearby-destination-wrap">
+
+                            <!-- Head -->
+                            <div class="my-container">
+                                <div class="head my-flex-between">
+                                    <h2 class="section-title my-secondary-color">
+                                        Nearby Destination
+                                    </h2>
+
+
+                                    <!--========  Slider Next Prev Button  =======-->
+                                    <div class="right-slider-arrows">
+                                        <button class="prev" tabindex="0" aria-label="Previous slide"
+                                            aria-controls="swiper-wrapper-aca8fab88c1a3db5" aria-disabled="true">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE" stroke-width="1.25"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M9.16791 15.0018C9.16791 15.0018 4.16798 11.3193 4.16797 10.0017C4.16796 8.68408 9.16799 5.00171 9.16799 5.00171"
+                                                    stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+
+
+                                        </button>
+                                        <button class="next" tabindex="0" aria-label="Next slide"
+                                            aria-controls="swiper-wrapper-aca8fab88c1a3db5" aria-disabled="false">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.418 10H4.16797" stroke="#A4A7AE" stroke-width="1.25"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
+                                                    stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="my-container-cart">
+
+
+                                <!--=================== Body Items ==================-->
+                                <div
+                                    class="swiper other-common-slider nearby-destination-slider my-mt-8 my-mt-sm-8 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                    <div class="swiper-wrapper " aria-live="polite"
+                                        id="swiper-wrapper-aca8fab88c1a3db5">
+
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (2).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (3).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (1).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (3).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (1).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (5).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group">
+                                            <!--=================|| hot-dest-cart Start Here  ||==================-->
+                                            <div class="hot-dest-cart">
+                                                <!-- img wrap -->
+                                                <div class="img-wrapper">
+                                                    <img src="/static/images/hot-dest (4).jpg" alt="cart img"
+                                                        loading="lazy">
+                                                </div>
+
+                                                <!-- Cart Content -->
+                                                <div class="content">
+                                                    <h3 class="title">Central Asia</h3>
+                                                    <p class="my-mt-2 sub-title">5 Countries</p>
+                                                    <p class="my-text-white my-mt-6 my-fs-xs">50+ Major Tourist
+                                                        Destination </p>
+
+                                                    <!-- Explore Button -->
+                                                    <a class="my-btn my-primary-btn explore-btn cart-btn" href="#"><span
+                                                            class="btn-content">Explore</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-
-
-
-        <!--======= filter overlay ========-->
-        <div class="filter-overlay" id="filter-overlay"></div>
-
-        <!--=======================|| calendar Here (when  .active class add then show) ||=======================-->
-        <div class="calendar-main outlet">
-            <div class="calendar-wrap">
-
-                <div class="my-grid-2 my-gap-sm-8 my-gap-16">
-                    <!--================|| Left Side Here ||===============-->
-                    <div class="left">
-
-                        <!-- Header Here -->
-                        <div class="head my-d-flex my-align-center my-gap-12">
-
-                            <!-- perv button -->
-                            <button class="prev btn">
-                                <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE" stroke-width="1.25"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M9.16791 15.0016C9.16791 15.0016 4.16798 11.3191 4.16797  10.0015C4.16796 8.68396 9.16799 5.00159 9.16799 5.00159"
-                                        stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <!-- month name -->
-                            <div class="month-name my-fw-bold my-fs-md">December 2025</div>
-                        </div>
-
-
-                        <table class="my-mt-sm-4 my-mt-8">
-                            <thead>
-                                <tr>
-                                    <th>Su</th>
-                                    <th>Mo</th>
-                                    <th>Tu</th>
-                                    <th>We</th>
-                                    <th>Th</th>
-                                    <th>Fr</th>
-                                    <th>Sa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="empty"></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td class="active">9</td>
-                                    <td class="selected">10</td>
-                                    <td class="selected">11</td>
-                                    <td class="selected">12</td>
-                                    <td class="selected">13</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td>31</td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-
-
-                    <!--================|| Left Side Here ||===============-->
-                    <div class="right">
-
-                        <!-- Header Here -->
-                        <div class="head my-d-flex my-align-center my-justify-end my-gap-12">
-
-                            <!-- month name -->
-                            <div class="month-name my-fw-bold my-fs-md">Januray 2025</div>
-
-                            <!-- next button -->
-                            <button class="next btn">
-                                <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.418 10H4.16797" stroke="#FC5A31" stroke-width="1.25"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
-                                        stroke="#FC5A31" stroke-width="1.25" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-
-                            </button>
-
-                        </div>
-
-
-                        <table class="my-mt-sm-4 my-mt-8">
-                            <thead>
-                                <tr>
-                                    <th>Su</th>
-                                    <th>Mo</th>
-                                    <th>Tu</th>
-                                    <th>We</th>
-                                    <th>Th</th>
-                                    <th>Fr</th>
-                                    <th>Sa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="empty"></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
-                                    <td>13</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="apply-btn-wrap  my-d-flex my-justify-end my-mt-sm-8 my-mt-12">
-                    <button class="my-btn my-primary-btn">
-                        <span class="content">Apply</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-
-
 
 
 
@@ -9367,8 +10156,83 @@
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="/static/js/global_js/global.js"></script>
         <script src="/static/js/modules/tour/filter.js"></script>
+
+        <script>
+            //===========  Most Visitied cities Slider  ===========
+            const mostVisited = new Swiper(".most-visited-cities-slider", {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+                loop: true, // ❗ Stop infinite sliding
+                watchOverflow: true,
+                speed: 1200,
+                navigation: {
+                    nextEl: ".most-visited-cities .next",
+                    prevEl: ".most-visited-cities .prev",
+                }, autoplay: {
+                    delay: 2500, // 2.5 seconds
+                    disableOnInteraction: false, // keep autoplay after swipe
+                    pauseOnMouseEnter: true, // pause on hover (optional)
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2.1, // Mobile
+                        spaceBetween: 12,
+                    },
+                    768: {
+                        slidesPerView: 2.8, // Tablet
+                        spaceBetween: 16,
+                    },
+                    991: {
+                        slidesPerView: 3.5, // Tablet
+                        spaceBetween: 16,
+                    },
+                    1280: {
+                        slidesPerView: 4.3, // Desktop
+                        spaceBetween: 24,
+                    },
+                },
+            });
+
+
+            //===========  Nearby Destination Slider  ===========
+            const recentView = new Swiper(".nearby-destination-slider", {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+                loop: true, // ❗ Stop infinite sliding
+                watchOverflow: true,
+                speed: 1200,
+                navigation: {
+                    nextEl: ".nearby-destination-wrap .next",
+                    prevEl: ".nearby-destination-wrap .prev",
+                }, autoplay: {
+                    delay: 2500, // 2.5 seconds
+                    disableOnInteraction: false, // keep autoplay after swipe
+                    pauseOnMouseEnter: true, // pause on hover (optional)
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2.1, // Mobile
+                        spaceBetween: 12,
+                    },
+                    768: {
+                        slidesPerView: 2.8, // Tablet
+                        spaceBetween: 16,
+                    },
+                    991: {
+                        slidesPerView: 3.5, // Tablet
+                        spaceBetween: 16,
+                    },
+                    1280: {
+                        slidesPerView: 4.3, // Desktop
+                        spaceBetween: 24,
+                    },
+                },
+            });
+        </script>
 
     </body>
 
