@@ -183,6 +183,13 @@ body {
 }
 
 
+.dest-banner-sec {
+    margin-top: -24px;
+}
+
+.dest-banner img {
+    max-height: 400px;
+}
 
 
 
