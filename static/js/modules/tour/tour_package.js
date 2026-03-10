@@ -435,3 +435,35 @@ const heroSliderMobile = new Swiper('.hero-slider-mobile-wrap', {
         clickable: true,
     },
 });
+
+
+
+
+
+
+
+
+//  ====================   Meet Up Sliders  ====================
+const meetupSliders = document.querySelectorAll(".meetup-slider");
+
+if (meetupSliders.length > 0) {
+
+    meetupSliders.forEach((slider) => {
+
+        const nextBtn = slider.querySelector(".next");
+        const prevBtn = slider.querySelector(".prev");
+
+        new Swiper(slider, {
+            slidesPerView: 5,
+            spaceBetween: 16,
+            loop: true,
+
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+            }
+        });
+
+    });
+
+}

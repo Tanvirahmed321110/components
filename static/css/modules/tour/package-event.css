@@ -979,6 +979,8 @@
     z-index: 2;
     font-size: var(--fs-low);
     padding: 4px 6px;
+    width: fit-content;
+    line-height: 1.4;
 }
 
 
@@ -989,7 +991,6 @@
 }
 
 .place-card .new {
-
     color: var(--my-rating);
 }
 
@@ -1955,6 +1956,10 @@ span {
     border-color: var(--my-border-primary);
 }
 
+.event-price-card .my-input-control input::placeholder {
+    color: var(--my-gray);
+}
+
 .event-booking .item {
     display: flex;
     justify-content: space-between;
@@ -1989,6 +1994,89 @@ span {
 .highlights-items .icon {
     width: 42px !important;
     height: 42px !important;
+}
+
+
+.meet-up-modal {
+    width: 100% !important;
+    flex: 1 !important;
+}
+
+.meet-up-modal .border {
+    border-bottom: 1px solid var(--my-border-primary);
+    width: 100%;
+    margin: 32px 0;
+}
+
+.meet-up-modal .meet-up-item {
+    width: 100%;
+    border-right: 1px solid var(--my-secondary-color);
+}
+
+.meet-up-modal .modal-content {
+    overflow: unset;
+}
+
+.meet-up-modal.modal .right-slider-arrows {
+    width: 100%;
+}
+
+.meet-up-modal .right-slider-arrows .next,
+.meet-up-modal .right-slider-arrows .prev {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    justify-content: space-between;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-80);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--my-border-secondary);
+    box-shadow: var(--shadow-1);
+}
+
+.meet-up-modal .right-slider-arrows .next svg path,
+.meet-up-modal .right-slider-arrows .prev svg path {
+    stroke: white;
+}
+
+.meet-up-modal .right-slider-arrows .next {
+    left: unset;
+    right: 0;
+}
+
+.modal.meet-up-modal .swiper .right-slider-arrows .next {
+    right: 0%;
+}
+
+.modal.meet-up-modal .swiper .right-slider-arrows .prev {
+    left: 4%;
+}
+
+
+.meet-up-modal .select-btn {
+    padding: 5px 32px;
+    font-size: var(--fs-xs);
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+    border-radius: var(--radius-xs);
+}
+
+.meet-up-modal .text {
+    color: var(--my-text-placeholder);
+}
+
+.meet-up-modal .select-btn:hover {
+    background-color: var(--my-primary-color);
+}
+
+.faq-items .faq-item {
+    border: 1px solid var(--my-white-off);
 }
 
 
