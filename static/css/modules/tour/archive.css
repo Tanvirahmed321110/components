@@ -6,6 +6,10 @@ body {
     margin-bottom: 0;
 }
 
+.map-view-sec.continent {
+    margin-bottom: clamp(32px, 5vw, 80px);
+}
+
 .map-view-sec .map-wrapper {
     position: relative;
     border-radius: var(--radius-md);

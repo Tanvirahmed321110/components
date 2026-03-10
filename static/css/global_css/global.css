@@ -1561,7 +1561,7 @@ header .profile-dropdown {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 20 !important;
     box-shadow: var(--n-shadow-2);
 }
 
