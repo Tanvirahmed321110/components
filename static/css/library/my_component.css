@@ -174,6 +174,127 @@
 
 
 
+
+
+
+
+
+
+/* dest-dropdown */
+.dest-dropdown {
+    background-color: var(--my-white);
+    max-width: 800px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-1);
+    padding: 32px;
+}
+
+.dest-dropdown .search {
+    border-color: var(--my-border-primary);
+    padding: 12px;
+    border-radius: var(--radius-md);
+}
+
+.dest-dropdown .grid-item {
+    border: 1px solid var(--my-border-secondary);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--radius-lg);
+}
+
+.dest-dropdown .grid-item .items {
+    padding: 16px;
+}
+
+.dest-dropdown .grid-item label,
+.dest-dropdown .grid-item input {
+    color: var(--my-secondary-color);
+    border-color: var(--my-secondary-color);
+}
+
+.dest-dropdown .grid-item input {
+    padding: 0;
+    border-width: 1px;
+}
+
+.dest-dropdown .grid-item input:checked {
+    background-color: var(--my-secondary-color);
+}
+
+.dest-dropdown input[type="checkbox"]:checked::after {
+    font-size: 10px;
+}
+
+.dest-dropdown .grid-item input::after {
+    background-color: var(--my-secondary-color);
+}
+
+.dest-dropdown .grid-item-head {
+    padding: 12px;
+    border-bottom: 1px solid var(--my-border-secondary);
+    text-align: center;
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--my-text-primary);
+}
+
+.dest-dropdown .country-btn {
+    padding: 8px 24px;
+    font-size: var(--fs-md);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--my-text-primary);
+}
+
+.dest-dropdown .country-btn.active,
+.dest-dropdown .country-btn:hover {
+    background-color: var(--my-secondary-color);
+    color: var(--my-white);
+}
+
+
+
+.dest-dropdown .grid-item .items {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+/* Scrollbar width */
+.dest-dropdown .grid-item .items::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Scrollbar background */
+.dest-dropdown .grid-item .items::-webkit-scrollbar-track {
+    background: #FC5A314D;
+}
+
+/* Scrollbar thumb */
+.dest-dropdown .grid-item .items::-webkit-scrollbar-thumb {
+    background: var(--my-secondary-color);
+    border-radius: 10px;
+}
+
+/* Hover on thumb */
+.grid-item .items::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-80);
+}
+
+.dest-dropdown input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* common style */
 .line-clamp {
     display: -webkit-box;
