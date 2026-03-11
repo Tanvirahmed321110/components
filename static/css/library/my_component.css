@@ -558,6 +558,7 @@
     line-height: 1.4;
 }
 
+
 /* Arrow */
 .tooltip-right .tooltip-text::after {
     content: '';
