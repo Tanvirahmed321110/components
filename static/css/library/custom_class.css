@@ -5629,18 +5629,22 @@ tr {
     /* font size */
     .my-fs-sm-low {
         font-size: var(--fs-low);
+        line-height: 1.4;
     }
 
     .my-fs-sm-xs {
         font-size: var(--fs-xs);
+        line-height: 1.4;
     }
 
     .my-fs-sm-sm {
         font-size: var(--fs-sm);
+        line-height: 1.4;
     }
 
     .my-fs-sm-md {
         font-size: var(--fs-md);
+        line-height: 1.4;
     }
 
     .my-fs-sm-lg {
