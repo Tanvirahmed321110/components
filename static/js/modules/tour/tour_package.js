@@ -461,9 +461,61 @@ if (meetupSliders.length > 0) {
             navigation: {
                 nextEl: nextBtn,
                 prevEl: prevBtn,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 12
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 14
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 16
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 16
+                }
             }
         });
 
+    });
+
+}
+
+
+
+//  ====================   Meet Up Modal   ====================
+const meetUpModalOpen = document.getElementById("meet-up-modal-open-btn");
+const meetUpModal = document.getElementById("meet-up-modal");
+
+if (meetUpModalOpen && meetUpModal) {
+
+    meetUpModalOpen.addEventListener("click", () => {
+        meetUpModal.classList.add("show");
+    });
+
+}
+
+
+
+//  ====================   Support Modal   ====================
+const supportModal = document.getElementById("support-modal");
+const suppportModalOpenBtns = document.querySelectorAll(".supoort-wrap .view-details-secondary");
+
+if (supportModal && suppportModalOpenBtns.length) {
+
+    suppportModalOpenBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            supportModal.classList.add("show");
+        });
     });
 
 }

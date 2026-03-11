@@ -4689,6 +4689,33 @@
 
 
         <main>
+            <!--
+            ============================================
+            =======||   Breadcrumb Start Here   ||======
+            ============================================
+            -->
+            <section class="breadcrumb-sec">
+                <div class="my-container">
+                    <ul class="breadcrumb" itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Home</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Tour</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="active" href="#" itemprop="name">Bangkok + Phuket + Phi Phi Islandss</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
 
             <!--
             =================================================
@@ -5768,7 +5795,9 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="body my-bg-white my-mt-4 my-cursor-pointer">
+                                                    <!-- modal open btn -->
+                                                    <div class="body my-bg-white my-mt-4 my-cursor-pointer"
+                                                        id="meet-up-modal-open-btn">
                                                         <div class="start">
                                                             <div class="my-text-primary my-fs-md my-fw-bold">Start</div>
                                                             <p class="my-mt-4 my-text-primary">Jan 21-2025</p>
@@ -5795,9 +5824,15 @@
 
 
 
-                                                    <!--=======================|| Meetup Point Dropdonw Here  (active class add then show it) ||========================= -->
-                                                    <div class="modal show meet-up-modal">
-                                                        <div class="modal-content lg my-p-16">
+                                                    <!--=======================|| Meetup Point Modal Here  (show class add then show it) ||========================= -->
+                                                    <div class="modal  meet-up-modal" id="meet-up-modal">
+                                                        <div
+                                                            class="modal-content lg my-py-24 my-px-16 my-py-md-20 my-px-sm-8">
+
+                                                            <!-- modal close button -->
+                                                            <button class="modal-close-btn"><i
+                                                                    class="ri-close-line"></i>
+                                                            </button>
 
                                                             <!-- Slider 1 -->
                                                             <div class="swiper meetup-slider " style="width: 100%; ">
@@ -20802,7 +20837,7 @@
 
                                         <!-- content -->
                                         <div class="content">
-                                            <div class="my-mt-4 my-text-quaternary my-fs-normal my-fs-md">Lorem ipsum
+                                            <div class="my-mt-4 my-text-quaternary my-fw-normal my-fs-md">Lorem ipsum
                                                 dolor sit amet
                                                 consectetur adipisicing
                                                 elit.
@@ -20822,7 +20857,7 @@
 
                                         <!-- content -->
                                         <div class="content">
-                                            <div class="my-mt-4 my-text-quaternary my-fs-normal my-fs-md">Lorem ipsum
+                                            <div class="my-mt-4 my-text-quaternary my-fw-normal my-fs-md">Lorem ipsum
                                                 dolor sit amet
                                                 consectetur adipisicing
                                                 elit.
@@ -20842,7 +20877,7 @@
 
                                         <!-- content -->
                                         <div class="content">
-                                            <div class="my-mt-4 my-text-quaternary my-fs-normal my-fs-md">Lorem ipsum
+                                            <div class="my-mt-4 my-text-quaternary my-fw-normal my-fs-md">Lorem ipsum
                                                 dolor sit amet
                                                 consectetur adipisicing
                                                 elit.
@@ -20862,7 +20897,7 @@
 
                                         <!-- content -->
                                         <div class="content">
-                                            <div class="my-mt-4 my-text-quaternary my-fs-normal my-fs-md">Lorem ipsum
+                                            <div class="my-mt-4 my-text-quaternary my-fw-normal my-fs-md">Lorem ipsum
                                                 dolor sit amet
                                                 consectetur adipisicing
                                                 elit.
