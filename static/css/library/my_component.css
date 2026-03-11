@@ -26,6 +26,7 @@
     position: relative;
     user-select: auto;
     z-index: 20;
+    width: fit-content;
 }
 
 /* Modal LG */
@@ -118,6 +119,11 @@
     transition: .2s ease;
     box-shadow: var(--n-shadow-1);
     z-index: 2;
+}
+
+.modal-close-btn.sm {
+    right: 12px;
+    top: 12px;
 }
 
 .modal-close-btn:hover {
@@ -503,6 +509,70 @@
 
 /* Hover show */
 .tooltip-left:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+
+/* right */
+/* right tooltip */
+.tooltip-right {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Icon */
+.tooltip-right .tooltip-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Tooltip box */
+.tooltip-right .tooltip-text {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-12px);
+    background: var(--my-primary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: var(--fs-xs);
+    width: 180px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    height: fit-content;
+    line-height: 1.4;
+}
+
+/* Arrow */
+.tooltip-right .tooltip-text::after {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+    border-right-color: var(--my-primary-color);
+    margin-right: -1px;
+    /* fix gap */
+}
+
+/* Hover show */
+.tooltip-right:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) translateX(0);
@@ -4524,7 +4594,7 @@ input[type=number] {
     width: fit-content;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-all-sm);
-    padding: 20px;
+    /* padding: 20px; */
     background-color: var(--my-white);
 }
 

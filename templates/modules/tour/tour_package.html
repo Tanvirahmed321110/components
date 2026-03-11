@@ -32282,80 +32282,126 @@
         <div class="filter-overlay" id="filter-overlay"></div>
 
 
-        <!--=======================|| Guest Dropdwon Here (active class add then show it) ||========================= -->
-        <div class="guest-dropdown outlet active">
-            <div class="wrap">
+        <!--=======================|| Guest Modal Here (show class add then show it) ||========================= -->
+        <div class="guest-dropdown  modal" id="guest-modal">
+            <div class="modal-content">
 
-                <!-- head -->
-                <div class="head my-flex-between my-gap-8">
-                    <div class="item my-fw-bold my-fs-md my-fs-sm-xs">
-                        <span>3 Adults</span> - <span>1 Child</span>
-                    </div>
-
-                    <!-- Promo Code -->
-                    <div class="promo-code item">
-                        <input type="text" placeholder="Promo Code">
-                    </div>
+                <div class="modal-header">
+                    <h4 class="my-text-primary">Header Here</h4>
+                    <button class="modal-close-btn sm"><i class="ri-close-line"></i>
+                    </button>
                 </div>
 
-                <!-- body -->
-                <div class="body my-mt-12 my-flex-column my-gap-8">
-
-                    <!-- adults -->
-                    <div class="item my-flex-between my-gap-8">
-                        <div class="left my-fw-bold my-text-primary">
-                            <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
-                                Adults <span>i</span>
-                            </div>
-                            <p class="my-fw-bold my-text-gray2">from 12 year</p>
+                <div class="modal-body">
+                    <!-- head -->
+                    <div class="head my-flex-between my-gap-8">
+                        <div class="item my-fw-bold my-fs-md my-fs-sm-xs">
+                            <span>3 Adults</span> - <span>1 Child</span>
                         </div>
 
-                        <div>
-                            <div class="qty-btns flex-1 my-d-flex my-gap-3">
-                                <button class="my-flex-center btn">-</button>
-                                <input type="text" value="2">
-                                <button class="btn my-flex-center">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- adults -->
-                    <div class="item my-flex-between my-gap-8">
-                        <div class="left my-fw-bold my-text-primary">
-                            <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
-                                Children
-                                <span>i</span>
-                            </div>
-                            <p class="my-fw-bold my-text-gray2">from 12 year</p>
-                        </div>
-
-                        <div>
-                            <div class="qty-btns flex-1 my-d-flex my-gap-3">
-                                <button class="my-flex-center btn">-</button>
-                                <input type="text" value="1">
-                                <button class="btn my-flex-center">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Infant -->
-                    <div class="item my-flex-between my-gap-8">
-                        <div class="left my-fw-bold my-text-primary">
-                            <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
-                                Adults <span>i</span>
-                            </div>
-                            <p class="my-fw-bold my-text-gray2">from 0-1 year</p>
-                        </div>
-
-                        <div>
-                            <div class="qty-btns flex-1 my-d-flex my-gap-3">
-                                <button class="my-flex-center btn">-</button>
-                                <input type="text" value="0">
-                                <button class="btn my-flex-center">+</button>
-                            </div>
+                        <!-- Promo Code -->
+                        <div class="promo-code item">
+                            <input type="text" placeholder="Promo Code">
                         </div>
                     </div>
 
-                    <div class="my-d-flex my-align-end my-justify-end my-w-100-p my-mt-4">
-                        <button class="my-btn my-primary-btn"><span class="content">Apply</span></button>
+                    <!-- body -->
+                    <div class="body my-mt-12 my-flex-column my-gap-8">
+
+                        <!-- adults -->
+                        <div class="item my-flex-between my-gap-8">
+                            <div class="left my-fw-bold my-text-primary">
+                                <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
+                                    Adults
+                                    <!-- tooltip -->
+                                    <div class="tooltip tooltip-right">
+                                        <svg width="16" height="16" viewBox="0 0 11 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.375 3.70833V5.79167M10.375 5.375C10.375 6.03161 10.2457 6.68179 9.9944 7.28842C9.74312 7.89505 9.37483 8.44624 8.91053 8.91053C8.44624 9.37483 7.89504 9.74312 7.28842 9.9944C6.68179 10.2457 6.03161 10.375 5.375 10.375C4.71839 10.375 4.06821 10.2457 3.46158 9.9944C2.85495 9.74312 2.30376 9.37483 1.83947 8.91053C1.37517 8.44624 1.00688 7.89505 0.755602 7.28842C0.504329 6.68179 0.375 6.03161 0.375 5.375C0.375 4.04892 0.901784 2.77715 1.83947 1.83947C2.77715 0.901784 4.04892 0.375 5.375 0.375C6.70108 0.375 7.97285 0.901784 8.91053 1.83947C9.84821 2.77715 10.375 4.04892 10.375 5.375ZM5.375 7.45833H5.37944V7.46278H5.375V7.45833Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <div class=" tooltip-text">
+                                            Show Tooltip Information here
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <p class="my-fw-bold my-text-gray2">from 12 year</p>
+                            </div>
+
+                            <div>
+                                <div class="qty-btns flex-1 my-d-flex my-gap-3">
+                                    <button class="my-flex-center btn">-</button>
+                                    <input type="text" value="2">
+                                    <button class="btn my-flex-center">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- adults -->
+                        <div class="item my-flex-between my-gap-8">
+                            <div class="left my-fw-bold my-text-primary">
+                                <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
+                                    Children
+                                    <!-- tooltip -->
+                                    <div class="tooltip tooltip-right">
+                                        <svg width="16" height="16" viewBox="0 0 11 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.375 3.70833V5.79167M10.375 5.375C10.375 6.03161 10.2457 6.68179 9.9944 7.28842C9.74312 7.89505 9.37483 8.44624 8.91053 8.91053C8.44624 9.37483 7.89504 9.74312 7.28842 9.9944C6.68179 10.2457 6.03161 10.375 5.375 10.375C4.71839 10.375 4.06821 10.2457 3.46158 9.9944C2.85495 9.74312 2.30376 9.37483 1.83947 8.91053C1.37517 8.44624 1.00688 7.89505 0.755602 7.28842C0.504329 6.68179 0.375 6.03161 0.375 5.375C0.375 4.04892 0.901784 2.77715 1.83947 1.83947C2.77715 0.901784 4.04892 0.375 5.375 0.375C6.70108 0.375 7.97285 0.901784 8.91053 1.83947C9.84821 2.77715 10.375 4.04892 10.375 5.375ZM5.375 7.45833H5.37944V7.46278H5.375V7.45833Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <div class=" tooltip-text">
+                                            Show Tooltip Information here
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="my-fw-bold my-text-gray2">from 12 year</p>
+                            </div>
+
+                            <div>
+                                <div class="qty-btns flex-1 my-d-flex my-gap-3">
+                                    <button class="my-flex-center btn">-</button>
+                                    <input type="text" value="1">
+                                    <button class="btn my-flex-center">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Infant -->
+                        <div class="item my-flex-between my-gap-8">
+                            <div class="left my-fw-bold my-text-primary">
+                                <div class="my-fw-medium my-d-flex my-align-center my-gap-2 my-fs-md">
+                                    Adults <!-- tooltip -->
+                                    <div class="tooltip tooltip-right">
+                                        <svg width="16" height="16" viewBox="0 0 11 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.375 3.70833V5.79167M10.375 5.375C10.375 6.03161 10.2457 6.68179 9.9944 7.28842C9.74312 7.89505 9.37483 8.44624 8.91053 8.91053C8.44624 9.37483 7.89504 9.74312 7.28842 9.9944C6.68179 10.2457 6.03161 10.375 5.375 10.375C4.71839 10.375 4.06821 10.2457 3.46158 9.9944C2.85495 9.74312 2.30376 9.37483 1.83947 8.91053C1.37517 8.44624 1.00688 7.89505 0.755602 7.28842C0.504329 6.68179 0.375 6.03161 0.375 5.375C0.375 4.04892 0.901784 2.77715 1.83947 1.83947C2.77715 0.901784 4.04892 0.375 5.375 0.375C6.70108 0.375 7.97285 0.901784 8.91053 1.83947C9.84821 2.77715 10.375 4.04892 10.375 5.375ZM5.375 7.45833H5.37944V7.46278H5.375V7.45833Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <div class=" tooltip-text">
+                                            Show Tooltip Information here
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="my-fw-bold my-text-gray2">from 0-1 year</p>
+                            </div>
+
+                            <div>
+                                <div class="qty-btns flex-1 my-d-flex my-gap-3">
+                                    <button class="my-flex-center btn">-</button>
+                                    <input type="text" value="0">
+                                    <button class="btn my-flex-center">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-d-flex my-align-end my-justify-end my-w-100-p my-mt-4">
+                            <button class="my-btn my-primary-btn"><span class="content">Apply</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32364,193 +32410,204 @@
 
 
 
-        <!--=======================|| calendar Here (when  .active class add then show) ||=======================-->
-        <div class="calendar-main ">
-            <div class="calendar-wrap">
+        <!--=======================|| calendar Here (when  .show class add then show) ||=======================-->
+        <div class="calendar-main modal ">
+            <div class="calendar-wrap modal-content">
 
-                <div class="my-grid-2 my-gap-sm-8 my-gap-16">
-                    <!--================|| Left Side Here ||===============-->
-                    <div class="left">
-
-                        <!-- Header Here -->
-                        <div class="head my-d-flex my-align-center my-gap-12">
-
-                            <!-- perv button -->
-                            <button class="prev btn">
-                                <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE" stroke-width="1.25"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M9.16791 15.0016C9.16791 15.0016 4.16798 11.3191 4.16797  10.0015C4.16796 8.68396 9.16799 5.00159 9.16799 5.00159"
-                                        stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-
-                            <!-- month name -->
-                            <div class="month-name my-fw-bold my-fs-md my-fs-sm-xs">December 2025</div>
-                        </div>
-
-
-                        <table class="my-mt-sm-4 my-mt-8">
-                            <thead>
-                                <tr>
-                                    <th>Su</th>
-                                    <th>Mo</th>
-                                    <th>Tu</th>
-                                    <th>We</th>
-                                    <th>Th</th>
-                                    <th>Fr</th>
-                                    <th>Sa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="empty"></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td class="active">9</td>
-                                    <td class="selected">10</td>
-                                    <td class="selected">11</td>
-                                    <td class="selected">12</td>
-                                    <td class="selected">13</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td>31</td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-
-
-                    <!--================|| Left Side Here ||===============-->
-                    <div class="right">
-
-                        <!-- Header Here -->
-                        <div class="head my-d-flex my-align-center my-justify-end my-gap-12">
-
-                            <!-- month name -->
-                            <div class="month-name my-fw-bold my-fs-md my-fs-sm-xs">Januray 2025</div>
-
-                            <!-- next button -->
-                            <button class="next btn">
-                                <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.418 10H4.16797" stroke="#FC5A31" stroke-width="1.25"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
-                                        stroke="#FC5A31" stroke-width="1.25" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-
-                            </button>
-
-                        </div>
-
-
-                        <table class="my-mt-sm-4 my-mt-8">
-                            <thead>
-                                <tr>
-                                    <th>Su</th>
-                                    <th>Mo</th>
-                                    <th>Tu</th>
-                                    <th>We</th>
-                                    <th>Th</th>
-                                    <th>Fr</th>
-                                    <th>Sa</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="empty"></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
-                                    <td>13</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                    <td>26</td>
-                                    <td>27</td>
-                                </tr>
-                                <tr>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                    <td class="empty"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="modal-header">
+                    <h4 class="my-text-primary">Calender</h4>
+                    <!-- modal close button -->
+                    <button class="modal-close-btn sm">
+                        <i class="ri-close-line"></i>
+                    </button>
                 </div>
 
-                <div class="apply-btn-wrap  my-d-flex my-justify-end my-mt-sm-8 my-mt-12">
-                    <button class="my-btn my-primary-btn">
-                        <span class="content">Apply</span>
-                    </button>
+
+                <div class="modal-body">
+                    <div class="my-grid-2 my-gap-sm-8 my-gap-16 my-mt-4">
+                        <!--================|| Left Side Here ||===============-->
+                        <div class="left">
+
+                            <!-- Header Here -->
+                            <div class="head my-d-flex my-align-center my-gap-12">
+
+                                <!-- perv button -->
+                                <button class="prev btn">
+                                    <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.58203 10.0017H15.832" stroke="#A4A7AE" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M9.16791 15.0016C9.16791 15.0016 4.16798 11.3191 4.16797  10.0015C4.16796 8.68396 9.16799 5.00159 9.16799 5.00159"
+                                            stroke="#A4A7AE" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
+                                <!-- month name -->
+                                <div class="month-name my-fw-bold my-fs-md my-fs-sm-xs">December 2025</div>
+                            </div>
+
+
+                            <table class="my-mt-sm-4 my-mt-8">
+                                <thead>
+                                    <tr>
+                                        <th>Su</th>
+                                        <th>Mo</th>
+                                        <th>Tu</th>
+                                        <th>We</th>
+                                        <th>Th</th>
+                                        <th>Fr</th>
+                                        <th>Sa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="empty"></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td class="active">9</td>
+                                        <td class="selected">10</td>
+                                        <td class="selected">11</td>
+                                        <td class="selected">12</td>
+                                        <td class="selected">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td>31</td>
+                                        <td class="empty"></td>
+                                        <td class="empty"></td>
+                                        <td class="empty"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                        <!--================|| Left Side Here ||===============-->
+                        <div class="right">
+
+                            <!-- Header Here -->
+                            <div class="head my-d-flex my-align-center my-justify-end my-gap-12">
+
+                                <!-- month name -->
+                                <div class="month-name my-fw-bold my-fs-md my-fs-sm-xs">Januray 2025</div>
+
+                                <!-- next button -->
+                                <button class="next btn">
+                                    <svg width="12" height="12" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.418 10H4.16797" stroke="#FC5A31" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.832 15C10.832 15 15.832 11.3176 15.832 10C15.832 8.68233 10.832 5 10.832 5"
+                                            stroke="#FC5A31" stroke-width="1.25" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+                            <table class="my-mt-sm-4 my-mt-8">
+                                <thead>
+                                    <tr>
+                                        <th>Su</th>
+                                        <th>Mo</th>
+                                        <th>Tu</th>
+                                        <th>We</th>
+                                        <th>Th</th>
+                                        <th>Fr</th>
+                                        <th>Sa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="empty"></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td class="empty"></td>
+                                        <td class="empty"></td>
+                                        <td class="empty"></td>
+                                        <td class="empty"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="apply-btn-wrap  my-d-flex my-justify-end my-mt-sm-8 my-gap-8 my-mt-12">
+                        <button class="my-btn my-primary-btn">
+                            <span class="content">Apply</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
