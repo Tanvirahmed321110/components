@@ -41,6 +41,7 @@ body {
     padding: 4px;
     outline: 4px solid var(--my-secondary-color);
     background-color: var(--my-secondary-color);
+    flex-shrink: 0;
 }
 
 .adventure-sec .adventure-area {
@@ -1120,12 +1121,22 @@ input[type=radio]:checked::after {
         gap: 24px;
     }
 
+    .left-cart-items {
+        order: 2;
+    }
+
     .cart-summery {
         padding-top: 12px;
+        position: unset;
+        order: 1;
     }
 
     .cart-summery .cart-inner {
         margin-top: 12px;
+    }
+
+    .cart-summery .pay-btn {
+        border-radius: var(--radius-pill);
     }
 
     .good-to-know {

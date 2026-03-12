@@ -1937,6 +1937,8 @@ footer .footer-top .left {
     max-width: 440px;
 }
 
+
+
 .my-w-8 {
     width: 16px;
 }
@@ -4015,5 +4017,9 @@ footer .footer-bottom {
     footer .footer-top .right .item ul {
         gap: 12px;
         margin-top: 12px;
+    }
+
+    footer .footer-bottom .left p {
+        font-size: var(--fs-sm);
     }
 }
