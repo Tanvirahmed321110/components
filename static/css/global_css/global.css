@@ -3374,8 +3374,8 @@ footer .footer-bottom {
     }
 
     .cart-category {
-        font-size: clamp(7px, calc(6px + (100vw - 376px) * 0.003), 12px);
-        line-height: 10px;
+        font-size: clamp(6px, calc(6px + (100vw - 376px) * 0.003), 12px);
+        line-height: 1.5;
         color: var(--my-white);
         font-weight: var(--fw-500);
         border-radius: 4px;
@@ -3762,7 +3762,7 @@ footer .footer-bottom {
 
     .event-cart .cart-img img {
         border-radius: var(--radius-md);
-        max-height: 110px;
+        max-height: 100px;
     }
 
     .event-cart,
@@ -3887,6 +3887,11 @@ footer .footer-bottom {
     .tour-cart.package .visiable-content .rating {
         font-size: clamp(8px, 2.2vw, 12px);
         flex-wrap: wrap;
+        display: none;
+    }
+
+    .other-page-sce .event-cart .cart-img img {
+        border-radius: var(--radius-md);
     }
 
     .tour-cart.package .hover-content .dest {

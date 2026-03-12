@@ -504,6 +504,12 @@ search-group .my-input-control input::placeholder {
 .other-page-sce .event-cart .cart-content .cart-title {
     font-size: clamp(12px, 1.5vw, 20px) !important;
     line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* max 2 line */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .top-destnation-sec .tour-cart .price .new-price {
@@ -625,7 +631,7 @@ search-group .my-input-control input::placeholder {
 
     .other-page-sce .tour-cart,
     .other-page-sce .event-cart {
-        height: 260px;
+        height: 230px;
     }
 
     header .module-header-main .m-item {
@@ -799,7 +805,7 @@ search-group .my-input-control input::placeholder {
     .tour-cart.package .hover-content .cart-title {
         font-size: clamp(12px, 2.2vw, 18px);
         margin-top: 4px;
-        line-height: 1.4;
+        line-height: 1.3;
     }
 
     .tour-cart.package .cart-title {
@@ -850,6 +856,15 @@ search-group .my-input-control input::placeholder {
     .filter-sec .event-cart .cart-content .title {
         margin-top: 4px;
         font-size: 10px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        /* max 2 line */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 16px;
+        height: 16px;
     }
 
     .filter-sec .event-cart .cart-content .sub-title {
