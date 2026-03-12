@@ -5626,6 +5626,18 @@ tr {
 
 @media (max-width:768px) {
 
+    .my-text-sm-left {
+        text-align: left;
+    }
+
+    .my-text-sm-right {
+        text-align: right;
+    }
+
+    .my-text-sm-center {
+        text-align: center;
+    }
+
     /* font size */
     .my-fs-sm-low {
         font-size: var(--fs-low);

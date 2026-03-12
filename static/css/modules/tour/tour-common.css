@@ -827,7 +827,7 @@ search-group .my-input-control input::placeholder {
     .filter-sec .filter-head .filter-btn {
         display: flex;
         align-items: center;
-        padding: 6px 12px;
+        padding: 4px 12px;
         gap: 8px;
         font-size: var(--fs-sm);
         background-color: var(--my-white);
@@ -1083,6 +1083,10 @@ search-group .my-input-control input::placeholder {
         box-shadow: unset;
         border: 1px solid var(--my-border-primary);
         width: 100%;
+    }
+
+    .filter-sec .filter-head {
+        padding: 16px 0;
     }
 }
 

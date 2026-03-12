@@ -2344,7 +2344,7 @@ footer .footer-bottom {
 }
 
 
-@media (max-width:991px) {
+@media (max-width:1080px) {
 
     header .mobile-header {
         border-bottom: 1px solid var(--my-white-off);
@@ -2869,6 +2869,21 @@ footer .footer-bottom {
     }
 
 
+    .other-page-sce .event-cart .cart-img img {
+        border-radius: var(--radius-xl);
+        width: 100%;
+        height: 150px;
+    }
+
+    .cart-btn.my-btn {
+        padding: 6px 14px;
+        border-radius: 6px !important;
+        font-size: clamp(10px,
+                calc(10px + (100vw - 375px) * 0.0019),
+                14px);
+        line-height: 1.6;
+    }
+
 }
 
 
@@ -2920,7 +2935,7 @@ footer .footer-bottom {
     }
 
     .w-dropdown-wrap-parent .w-dropdown-btn {
-        padding: 4px 16px;
+        padding: 3px 16px;
         border: 1px solid var(--my-border-color);
         border-radius: 28px;
         font-size: var(--fs-xs);
@@ -3164,24 +3179,13 @@ footer .footer-bottom {
         aspect-ratio: unset;
     }
 
-    .event-cart .cart-img img {
-        border-radius: var(--radius-md);
-        max-height: 170px;
-    }
+
 
     .event-cart .cart-content {
         padding: 4px;
     }
 
 
-
-    .cart-btn.my-btn {
-        padding: 6px 14px;
-        border-radius: 6px !important;
-        font-size: clamp(10px,
-                calc(10px + (100vw - 375px) * 0.0019),
-                14px);
-    }
 
     .event-cart .cart-content .price-and-btn {
         flex: 1;
@@ -3696,6 +3700,18 @@ footer .footer-bottom {
 
 
 @media (max-width: 767px) {
+    .create-trip-btn.other-page {
+        padding: 8px 24px;
+        background-color: var(--my-primary-color);
+    }
+
+    .soft-pagination {
+        margin-top: 32px;
+    }
+
+    .cart-btn.my-btn {
+        line-height: 2.2;
+    }
 
     .see-more {
         display: block;
@@ -3980,6 +3996,27 @@ footer .footer-bottom {
 
     .tour-cart.package .visiable-content {
         border-radius: var(--radius-md);
+    }
+
+    .tab-btns-w .tab-btn.active {
+        background-color: var(--my-primary-color);
+    }
+
+    .tab-btns-w .tab-btn {
+        padding: 6px 12px;
+        border-radius: var(--radius-pill);
+        border: 1px solid var(--my-border-gray);
+        color: var(--my-primary-color);
+        font-size: var(--fs-sm);
+        white-space: nowrap;
+    }
+
+    .soft-pagination .page,
+    .soft-pagination .jumper,
+    .soft-pagination .next,
+    .soft-pagination .prev {
+        width: 28px;
+        height: 28px;
     }
 }
 

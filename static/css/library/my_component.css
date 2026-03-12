@@ -5137,9 +5137,6 @@ input[type=number] {
         height: 42px;
     }
 
-    .pagination .pages.my-d-flex {
-        display: none !important;
-    }
 
     /* Hide scrollbar  */
     .hide-scroll-wrapper {
