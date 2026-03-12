@@ -4689,6 +4689,32 @@
 
         <main>
             <!--
+            ============================================
+            =======||   Breadcrumb Start Here   ||======
+            ============================================
+            -->
+            <section class="breadcrumb-sec">
+                <div class="my-container">
+                    <ul class="breadcrumb" itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Home</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <span itemprop="name">Tour</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="active" href="#" itemprop="name">Checkout</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!--
             ========================================================
             =======||   Your Adventure Section Start Here   ||======
             ========================================================
@@ -5155,7 +5181,7 @@
                                 </div>
 
                                 <!--=========================|| Adventure Right  ||========================-->
-                                <div class="adventure-right my-flex-column my-flex-between">
+                                <div class="adventure-right my-flex-column my-flex-between my-gap-16 my-gap-sm-8">
 
                                     <!--================|| Change Date  ||==============-->
                                     <div class="change-date">
@@ -5175,7 +5201,7 @@
                                             </div>
 
                                             <!-- child adults -->
-                                            <div class="my-d-flex my-gap-4 my-p-6 adults border-top-bottom">
+                                            <div class="my-d-flex my-gap-4 my-p-6 adults border-top-bottom ">
                                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -5193,7 +5219,7 @@
                                             <div class=" my-gap-6 my-p-6 my-flex-column date-adults">
 
                                                 <!-- for date btn -->
-                                                <div class="date my-flex-column ">
+                                                <div class="date my-flex-column change-item">
                                                     <button class="date-adults-btn my-flex-between ">
                                                         <div class="left my-d-flex my-align-center my-gap-4">
                                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
@@ -5215,12 +5241,12 @@
 
                                                     </button>
 
-                                                    <!-- dropdown -->
-                                                    <div></div>
+                                                    <!-- dropdown active class add then show  -->
+                                                    <div class="dropdown"></div>
                                                 </div>
 
                                                 <!-- for date btn -->
-                                                <div class="date my-flex-column ">
+                                                <div class="date my-flex-column change-item">
                                                     <button class="date-adults-btn my-flex-between ">
                                                         <div class="left my-d-flex my-align-center my-gap-4">
                                                             <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
@@ -5241,8 +5267,40 @@
                                                         </svg>
                                                     </button>
 
-                                                    <!-- dropdown -->
-                                                    <div></div>
+                                                    <!-- dropdown active class add then show  -->
+                                                    <div class="dropdown"></div>
+                                                </div>
+
+                                                <!-- for Time btn -->
+                                                <div class="date my-flex-column ">
+                                                    <button class="date-adults-btn my-flex-between ">
+                                                        <div class="left my-d-flex my-align-center my-gap-4">
+                                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M7.5 2.83333V7.5H11M14.5 7.5C14.5 8.41925 14.3189 9.32951 13.9672 10.1788C13.6154 11.0281 13.0998 11.7997 12.4497 12.4497C11.7997 13.0998 11.0281 13.6154 10.1788 13.9672C9.32951 14.3189 8.41925 14.5 7.5 14.5C6.58075 14.5 5.6705 14.3189 4.82122 13.9672C3.97194 13.6154 3.20026 13.0998 2.55025 12.4497C1.90024 11.7997 1.38463 11.0281 1.03284 10.1788C0.68106 9.32951 0.5 8.41925 0.5 7.5C0.5 5.64348 1.2375 3.86301 2.55025 2.55025C3.86301 1.2375 5.64348 0.5 7.5 0.5C9.35652 0.5 11.137 1.2375 12.4497 2.55025C13.7625 3.86301 14.5 5.64348 14.5 7.5Z"
+                                                                    stroke="#FC5A31" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+
+
+                                                            <span>8:00 AM</span>
+                                                        </div>
+                                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M6.94179 0H1.00352C0.173846 0 -0.294965 0.952092 0.210896 1.60971L3.18003 5.46959C3.58033 5.98997 4.36498 5.98997 4.76528 5.46959L7.73442 1.60971C8.24028 0.952092 7.77147 0 6.94179 0Z"
+                                                                fill="#FC5A31" />
+                                                        </svg>
+                                                    </button>
+
+                                                    <!-- dropdown active class add then show  -->
+                                                    <div class="dropdown"></div>
+                                                </div>
+
+                                                <div>
+                                                    <button
+                                                        class="my-fs-md my-fw-bold my-secondary-color my-text-underline">Cancel</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -5459,7 +5517,7 @@
                                             <div class="my-grid-2 my-grid-md-1 my-gap-16  my-gap-md-12">
                                                 <!-- For First Name -->
                                                 <div class="my-input-control">
-                                                    <label class="name">Name</label>
+                                                    <label class="name">First Name</label>
 
                                                     <!-- if you will error class add the input then show error sms  -->
                                                     <input type="text" name="name" class="">
@@ -5489,10 +5547,10 @@
 
                                                 <!--  Gender  -->
                                                 <div class="custom-dropdown">
-                                                    <label class="">I'd Type</label>
+                                                    <label class="">Gender</label>
 
                                                     <div class="dropdown-selected">
-                                                        <span class="text">Select Your type</span>
+                                                        <span class="text">Gender</span>
                                                         <div class="arrow-icon">
                                                             <svg width="12" height="9" viewBox="0 0 17 9" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
@@ -5505,9 +5563,8 @@
 
                                                     <div class="wrap">
                                                         <ul class="dropdown-options">
-                                                            <li class="item active" data-value="1">Title One</li>
-                                                            <li class="item" data-value="2">Title Two</li>
-                                                            <li class="item" data-value="3">Title Three</li>
+                                                            <li class="item active" data-value="1">Male</li>
+                                                            <li class="item" data-value="2">Female</li>
                                                         </ul>
                                                     </div>
 
@@ -5571,7 +5628,7 @@
                                                 </div>
 
                                                 <!-- Disablity -->
-                                                <div class="">
+                                                <div class="any-disablity">
                                                     <div class="my-fs-sm my-fw-bold my-text-primary">Any Disablity?
                                                     </div>
                                                     <div class="my-d-flex my-mt-4 my-gap-8">
@@ -5623,22 +5680,13 @@
                                             <div class="adult-2">
                                                 <div
                                                     class="my-fs-xl my-fw-bold my-text-primary my-fs-md-lg my-fs-sm-md">
-                                                    Adult 1
+                                                    Adult 2
                                                 </div>
                                                 <!-- first and last name -->
                                                 <div class="my-grid-2  my-grid-md-1  my-gap-16  my-gap-md-12">
                                                     <!-- For First Name -->
-                                                    <div class="my-input-control">
-                                                        <label class="name">Name</label>
-
-                                                        <!-- if you will error class add the input then show error sms  -->
-                                                        <input type="text" name="name" class="">
-                                                        <small class="error-message">Please select a title</small>
-                                                    </div>
-
-                                                    <!-- For Last Name -->
-                                                    <div class="my-input-control">
-                                                        <label class="name">Last Name</label>
+                                                    <div class="my-input-control my-mt-4">
+                                                        <label class="name">First Name</label>
 
                                                         <!-- if you will error class add the input then show error sms  -->
                                                         <input type="text" name="name" class="">
@@ -5656,7 +5704,7 @@
 
                                         <!--==========  Head  =========-->
                                         <div class="head">
-                                            <h3 class="my-fs-xxl my-text-primary">Who's Flying?</h3>
+                                            <h3 class="my-fs-xxl my-text-primary">Who’s Check in ?</h3>
                                             <p class="my-fs-md my-text-quaternary">Traveler name must match your
                                                 Government-issued photo ID
                                                 exactly.</p>
@@ -5691,19 +5739,18 @@
                                             <div class="my-grid-2 my-grid-md-1 my-gap-12">
                                                 <!-- For First Name -->
                                                 <div class="my-input-control">
-                                                    <label class="name">Name</label>
+                                                    <label class="name">First Name</label>
 
                                                     <!-- if you will error class add the input then show error sms  -->
                                                     <input type="text" name="name" class="">
                                                     <small class="error-message">Please select a title</small>
                                                 </div>
-
-                                                <!-- For Last Name -->
+                                                <!-- For Email -->
                                                 <div class="my-input-control">
-                                                    <label class="name">Last Name</label>
+                                                    <label class="name">Email</label>
 
                                                     <!-- if you will error class add the input then show error sms  -->
-                                                    <input type="text" name="name" class="">
+                                                    <input type="email" name="name" class="">
                                                     <small class="error-message">Please select a title</small>
                                                 </div>
                                             </div>
@@ -5721,7 +5768,8 @@
                                             <div class="my-grid-2 my-grid-md-1  my-gap-12">
                                                 <!-- For First Name -->
                                                 <div class="my-input-control">
-                                                    <label class="name">Name <span class="required">*</span></label>
+                                                    <label class="name">First Name <span
+                                                            class="required">*</span></label>
 
                                                     <!-- if you will error class add the input then show error sms  -->
                                                     <input type="text" name="name" class="">
@@ -5730,10 +5778,10 @@
 
                                                 <!-- For Last Name -->
                                                 <div class="my-input-control">
-                                                    <label class="name">Last Name</label>
+                                                    <label class="name">Email</label>
 
                                                     <!-- if you will error class add the input then show error sms  -->
-                                                    <input type="text" name="name" class="">
+                                                    <input type="email" name="email" class="">
                                                     <small class="error-message">Please select a title</small>
                                                 </div>
                                             </div>

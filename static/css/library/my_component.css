@@ -5294,31 +5294,12 @@ input[type=number] {
     label {
         font-size: var(--fs-sm);
     }
-}
 
-
-/*________________________________*\
-  ||     Responsive For 480px     ||
-\*________________________________*/
-@media screen and (max-width: var(--breakpoint-xs)) {
-
-    .my-slider.for-xs-1 .slider-item {
-        min-width: calc(100% - 60px);
-        width: 100%;
+    .breadcrumb-sec {
+        padding: 12px 0;
     }
 
-    .my-slider.for-xs-2 .slider-item {
-        min-width: calc(50% - 60px);
-        width: 100%;
-    }
-
-    .my-slider.for-xs-3 .slider-item {
-        min-width: calc(33% - 60px);
-        width: 100%;
-    }
-
-    .my-slider.for-xs-4 .slider-item {
-        min-width: calc(25% - 60px);
-        width: 100%;
+    .breadcrumb-sec li a {
+        font-size: var(--fs-xs);
     }
 }

@@ -134,7 +134,26 @@ body {
 }
 
 
+/* change item button and dropdown */
+.change-item {
+    position: relative;
+}
 
+.change-item .dropdown {
+    padding: 12px;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--my-red);
+    width: 100%;
+    border-radius: var(--radius-md);
+    left: 0;
+    bottom: -24px;
+    display: none;
+}
+
+.change-item .dropdown.active {
+    display: block;
+}
 
 
 
@@ -1135,8 +1154,23 @@ input[type=radio]:checked::after {
         margin-top: 12px;
     }
 
+    .adventure-sec .head .radio {
+        width: 14px;
+        height: 14px;
+    }
+
+    .adventure-sec .adventure-area {
+        margin-top: 24px;
+    }
+
+    .adventure-sec-wrap .rght svg {
+        height: 16px;
+        width: 18px;
+    }
+
     .cart-summery .pay-btn {
         border-radius: var(--radius-pill);
+        font-size: var(--fs-sm);
     }
 
     .good-to-know {
@@ -1176,7 +1210,16 @@ input[type=radio]:checked::after {
 
     .form .book-btn {
         padding: 16px;
-        font-size: var(--fs-md);
+        font-size: var(--fs-sm);
         border-radius: var(--radius-pill);
+    }
+
+    .any-disablity {
+        margin-top: -54px;
+    }
+
+    .adventure-sec .body .item {
+        border-radius: var(--radius-lg);
+        border: 1px solid #D5D7DA;
     }
 }
