@@ -3807,12 +3807,12 @@ footer .footer-bottom {
 
     .event-cart,
     .tour-cart {
-        height: 270px;
+        height: 230px;
         border-radius: var(--radius-md);
     }
 
     .tour-cart.package {
-        height: 270px;
+        height: 230px;
         min-height: unset;
         border-radius: var(--radius-md);
     }
@@ -3905,7 +3905,13 @@ footer .footer-bottom {
     /* event cart */
     .event-cart .cart-content .title {
         font-size: clamp(11px, 3vw, 14px);
-        min-height: calc(12px * 2);
+        min-height: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    .event-cart .btns-wrap {
+        margin-top: 4px;
     }
 
     .event-cart .star-avg i,
