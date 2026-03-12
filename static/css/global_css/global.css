@@ -233,6 +233,7 @@
     color: var(--my-white);
     font-weight: var(--fw-600);
     transition: .3s linear;
+    z-index: 1;
 }
 
 .create-trip-btn.other-page {
@@ -249,7 +250,7 @@
 
 .create-trip-btn .first-icon {
     position: absolute;
-    top: -8px;
+    top: -15px;
     left: -10px;
 }
 
