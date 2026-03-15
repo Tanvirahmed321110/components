@@ -2120,6 +2120,9 @@ footer .footer-bottom {
 
 
 @media(max-width:1439px) {
+    .popular-tour-cart .img-wrap img {
+        height: 196px;
+    }
 
     .event-cart {
         padding: 8px;
@@ -2268,6 +2271,10 @@ footer .footer-bottom {
 
 
 @media(max-width:1080px) {
+
+    .popular-tour-cart .img-wrap img {
+        height: 170px;
+    }
 
 
     footer .footer-top .left {
@@ -2966,7 +2973,27 @@ footer .footer-bottom {
         padding: 10px;
     }
 
+    .popular-tour-cart .img-wrap img {
+        height: 140px;
+    }
 
+    .popular-tour-cart .item-content {
+        padding: 4px;
+        margin-top: 8px;
+    }
+
+    .popular-tour-cart .item-content .name {
+        color: var(--my-text-primary);
+        font-size: var(--fs-lg);
+    }
+
+    .popular-tour-cart .item-content .total-tour {
+        font-size: var(--fs-xs);
+    }
+
+    .popular-tour-cart .item-content .activities {
+        font-size: var(--fs-low);
+    }
 
     .w-dropdown-wrap .item {
         color: var(--my-secondary-color);

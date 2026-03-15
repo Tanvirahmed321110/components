@@ -1351,7 +1351,7 @@
 
 .our-achivements .items {
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 
 .our-achivements .items .item {
@@ -1564,6 +1564,14 @@
 */
 @media (max-width:1439px) {
 
+
+    .our-achivements .items .item {
+        padding: 32px 0;
+    }
+
+    .our-achivements .section-title {
+        font-size: var(--fs-3xl);
+    }
 
     .offer-sec .offer-cart .bottom .title {
         font-size: var(--fs-lg);
