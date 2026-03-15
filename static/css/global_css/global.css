@@ -910,6 +910,7 @@
     height: 480px;
     border-radius: var(--radius-xxl);
     position: relative;
+    z-index: 1;
     cursor: pointer;
     box-shadow: var(--shadow-1);
 }
@@ -2948,6 +2949,7 @@ footer .footer-bottom {
         --m-border-secondary: #D5D7DA;
     }
 
+
     header .search {
         display: flex;
         align-items: center;
@@ -4115,5 +4117,9 @@ footer .footer-bottom {
 
     footer .footer-bottom .left p {
         font-size: var(--fs-sm);
+    }
+
+    .sidebar-and-items {
+        position: relative !important;
     }
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        /* grid container */
+        .destination-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            align-items: start;
+            background-color: rebeccapurple;
+            /* important */
+        }
+
+        /* mobile */
+        @media(max-width:768px) {
+            .destination-details {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /* demo style */
+        .left {
+            background: #e0f2fe;
+            padding: 20px;
+        }
+
+        .right {
+            background: #fde68a;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="destination-details">
+
+        <div class="left">
+            <h2>Left Content</h2>
+            <p>
+                This column has more content so it becomes taller.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+
+        <div class="right">
+            <h2>Right Content</h2>
+            <p>
+                This column has small content.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
