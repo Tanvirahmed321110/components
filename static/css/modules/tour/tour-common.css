@@ -676,7 +676,7 @@ search-group .my-input-control input::placeholder {
 
 
     .search-menu-wrapper {
-        padding: 0px 0;
+        /* padding: 0px 0; */
     }
 
     header .m-search-menu .left-icon svg {
@@ -693,8 +693,8 @@ search-group .my-input-control input::placeholder {
 
     header .m-search-menu .right-icon svg {
         position: absolute;
-        right: 12px;
-        top: 40px;
+        right: -25px;
+        top: 42px;
         z-index: 1;
         transform: rotate(6deg);
     }
@@ -728,7 +728,7 @@ search-group .my-input-control input::placeholder {
     }
 
     header .m-search-menu {
-        overflow: unset;
+        overflow-x: unset;
         position: relative;
     }
 
@@ -863,8 +863,8 @@ search-group .my-input-control input::placeholder {
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        min-height: 16px;
-        height: 16px;
+        min-height: 14px;
+        height: 14px;
     }
 
     .filter-sec .event-cart .cart-content .sub-title {
@@ -873,7 +873,7 @@ search-group .my-input-control input::placeholder {
 
     .filter-sec .event-cart .cart-btn {
         font-size: 10px;
-        padding: 0px 12px;
+        padding: 6px 12px;
     }
 
     .trending-wrap {
@@ -892,7 +892,7 @@ search-group .my-input-control input::placeholder {
 
     /* hot dest cart */
     .hot-dest-cart {
-        height: 200px;
+        height: 190px;
         border-radius: var(--radius-lg);
     }
 

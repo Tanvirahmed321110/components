@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /*________  Tag Style  ________ */
@@ -23,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 /* For WebKit browsers: Chrome, Edge, Safari */

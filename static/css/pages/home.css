@@ -861,6 +861,7 @@
     border-radius: var(--radius-xl);
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .map-view .head .left {
@@ -1973,6 +1974,7 @@
     .offer-section-mobile {
         background-color: var(--my-bg-secondary);
         padding-bottom: 16px;
+        margin-top: 32px;
         /* height: 220px; */
     }
 
@@ -2097,7 +2099,7 @@
         border-radius: var(--radius-pill);
         width: 100%;
         text-align: center;
-        padding: 12px 12px;
+        padding: 10px 12px;
         font-weight: 600;
     }
 
@@ -2433,5 +2435,9 @@
         background-color: var(--my-bg-secondary);
         padding: 32px 0;
         position: relative;
+    }
+
+    .m-trip-plan .items .item .my-btn {
+        font-size: var(--fs-xs);
     }
 }
