@@ -243,6 +243,15 @@ body {
 }
 
 @media (max-width:768px) {
+    .grids {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, 170px) !important;
+        gap: 12px;
+        justify-content: unset;
+        align-items: unset;
+    }
+
+
     .destination-details {
         padding: 16px;
     }
