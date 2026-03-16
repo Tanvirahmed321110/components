@@ -559,7 +559,9 @@
 }
 
 
-
+.filter-sec-wrap.pb-0 {
+    padding-bottom: 0 !important;
+}
 
 
 
@@ -576,7 +578,7 @@
     font-size: var(--fs-xs);
     background-color: var(--my-secondary-color);
     color: var(--my-white);
-    z-index: 4;
+    z-index: 1;
     padding: 6px 8px;
     font-weight: var(--fw-400);
     border-radius: 12px 0 12px 0;
