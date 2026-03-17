@@ -1544,6 +1544,7 @@
     .subcribe-sec .subcribe-area {
         height: auto;
         border-radius: 12px;
+        padding: 16px;
     }
 
     .subcribe-sec .left-side {

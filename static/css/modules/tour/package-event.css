@@ -2,6 +2,9 @@
     padding-bottom: 0;
 }
 
+.breadcrumb-sec {
+    margin-bottom: 0px;
+}
 
 .p-sub-container .section-title {
     font-size: var(--fs-3xl);
@@ -2516,6 +2519,18 @@ span {
 
 
 @media (max-width:767px) {
+    .related-products-wrap {
+        padding-top: 0px;
+    }
+
+    .day-head {
+        gap: 12px;
+    }
+
+    .day-head span {
+        white-space: wrap;
+    }
+
     .modal .card-wrap {
         display: flex;
         gap: 24px;
