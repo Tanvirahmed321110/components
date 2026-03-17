@@ -403,6 +403,186 @@
 
 
 
+
+
+
+/*===================  Overview and Card Day Cards  ====================  */
+.items-details-bottom .card {
+    display: flex;
+    padding: 12px;
+    border-radius: var(--radius-xxl);
+    /* border: 1px solid var(--my-border-primary); */
+    perspective: 1000px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+}
+
+.items-details-bottom .card .card-inner {
+    display: flex;
+    padding: 0px;
+    border-radius: var(--radius-xl);
+    /* border: 1px solid var(--my-border-secondary); */
+    flex: 1;
+    gap: 16px;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.items-details-bottom .card:hover {
+    border-color: var(--my-secondary-color);
+}
+
+.items-details-bottom .card .img-wrap {
+    border-radius: var(--radius-lg);
+    transition: transform .6s ease;
+    transform-style: preserve-3d;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.items-details-bottom .card img {
+    transition: 1s ease;
+}
+
+
+/* when hover */
+.items-details-bottom .card:hover .img-wrap {
+    transform: rotateX(1deg) rotateY(-180deg);
+}
+
+.items-details-bottom .card:hover img {
+    transform: translateZ(0px) scale(1.1);
+}
+
+.items-details-bottom .card .card-inner .img-wrap {
+    width: 100%;
+    height: 180px;
+}
+
+.items-details-bottom .card .card-inner .img-wrap img {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--my-white-off);
+    height: 100%;
+}
+
+.items-details-bottom .card .card-inner .card-content {
+    flex: 1;
+    padding-left: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.items-details-bottom .card .card-btns {
+    gap: 4px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* title sub-title and title sm */
+.items-details-bottom .card .title,
+.items-details-bottom .card .sub-title,
+.items-details-bottom .card .title-sm {
+    color: var(--my-text-primary);
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.items-details-bottom .card .title {
+    font-size: clamp(14px, 1.3vw, 24px);
+    line-height: 1.1;
+}
+
+.items-details-bottom .card .sub-title {
+    font-size: var(--fs-xl);
+}
+
+.items-details-bottom .card .title-sm {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+.card .booking-start .item {
+    max-width: 180px;
+    font-weight: 600;
+    color: var(--my-text-primary);
+}
+
+
+/* Rating */
+.items-details-bottom .card .rating .avg {
+    padding: 4px 4px;
+    border-radius: 4px;
+    color: var(--my-white);
+    background-color: var(--my-secondary-color);
+    font-size: var(--fs-xs);
+    font-weight: 500;
+}
+
+.items-details-bottom .card .rating .stars i {
+    color: var(--my-rating);
+    font-size: var(--fs-sm);
+}
+
+
+/* total review */
+.items-details-bottom .card .total-review {
+    color: var(--my-secondary-color);
+    border-bottom: 1px solid var(--my-secondary-color);
+    font-size: var(--fs-xs);
+    transition: .2s ease;
+}
+
+.items-details-bottom .card .total-review:hover {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+}
+
+.items-details-bottom .card .view-details-btn {
+    border-bottom: 1px solid var(--my-secondary-color);
+    font-size: var(--fs-sm);
+    color: var(--my-secondary-color);
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.items-details-bottom .card .view-details-btn i {
+    transition: .2s;
+    width: 10px;
+}
+
+.items-details-bottom .card .view-details-btn:hover i {
+    transform: translateX(4px);
+}
+
+.items-details-bottom .card .view-details-btn:hover {
+    color: var(--my-primary-color);
+    border-color: var(--my-primary-color);
+}
+
+.items-details-bottom .card .my-btn-pill {
+    padding: 8px 20px;
+    font-size: var(--fs-sm);
+}
+
+.items-details-bottom .card .pricing {
+    font-size: var(--fs-xs);
+    font-weight: 400;
+}
+
+
+.items-details-bottom .card .meet {
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+
+
 .tab-content article {
     display: flex;
 }
@@ -563,7 +743,11 @@
     padding-bottom: 0 !important;
 }
 
-
+.card-note {
+    background-color: var(--my-secondary-color);
+    width: fit-content;
+    color: var(--my-white);
+}
 
 
 
