@@ -1473,7 +1473,7 @@
     position: absolute;
     top: 0;
     left: -1px;
-    z-index: 3;
+    z-index: 1;
     background-color: var(--my-secondary-color);
     line-height: var(--line-height-lg);
     font-size: var(--fs-low);
@@ -3760,7 +3760,10 @@ footer .footer-bottom {
     }
 
     .m-search-menu-wrapper .search-fields {
-        margin-top: 32px;
+        margin-top: 24px;
+    }
+
+    .m-search-menu-wrapper {
         padding-bottom: 16px;
     }
 
@@ -4257,6 +4260,37 @@ footer .footer-bottom {
     .soft-pagination .prev {
         width: 28px;
         height: 28px;
+    }
+
+    footer .footer-top .left {
+        max-width: 100%;
+    }
+
+    footer .footer-top .left .desc {
+        font-size: var(--fs-sm);
+        font-weight: 400;
+    }
+
+    .popular-tour-cart .img-wrap img {
+        height: 100px;
+    }
+
+    .popular-tour-cart .item-content {
+        padding: 0px;
+        margin-top: 4px;
+    }
+
+    .popular-tour-cart .cart-btn.my-btn {
+        padding: 6px 8px;
+    }
+
+    .popular-tour-cart .item-content .name {
+        font-size: var(--fs-md);
+        line-height: 1.5;
+    }
+
+    .popular-tour-cart .img-wrap img {
+        border-radius: var(--radius-md);
     }
 }
 
