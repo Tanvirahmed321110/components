@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const dropdownParent = btn.closest('.click-dropdown-parent,.w-dropdown-wrap-parent');
                     const dropdown = dropdownParent.querySelector('.click-dropdown , .w-dropdown-wrap');
 
+
                     // Close all other dropdowns + buttons first
                     document.querySelectorAll('.click-dropdown-parent').forEach(parent => {
                         if (parent !== dropdownParent) {

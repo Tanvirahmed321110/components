@@ -401,6 +401,12 @@
 
 
 
+.tab-btns-w .tab-btn.active,
+.tab-btns-w .tab-btn:hover {
+    background-color: var(--my-primary-color);
+    color: var(--my-white);
+}
+
 
 
 
@@ -3258,7 +3264,7 @@ footer .footer-bottom {
     }
 
     .search-input input {
-        padding: 10px 8px;
+        padding: 8px 8px;
     }
 
     .search-input input::placeholder {
@@ -3938,6 +3944,9 @@ footer .footer-bottom {
 
 
 @media (max-width: 767px) {
+    .m-trip-plan .items .item .content {
+        padding: 12px;
+    }
 
     header {
         overflow: hidden;
@@ -3946,6 +3955,7 @@ footer .footer-bottom {
     .create-trip-btn.other-page {
         padding: 8px 24px;
         background-color: var(--my-primary-color);
+        font-size: var(--fs-sm);
     }
 
     .soft-pagination {
@@ -4146,7 +4156,11 @@ footer .footer-bottom {
     .tour-cart.package .visiable-content .rating {
         font-size: clamp(8px, 2.2vw, 12px);
         flex-wrap: wrap;
-        display: none;
+        line-height: 1.1;
+    }
+
+    .tour-cart.package .visiable-content .rating .star span {
+        line-height: 1.1;
     }
 
     .other-page-sce .event-cart .cart-img img {

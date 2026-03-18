@@ -732,33 +732,10 @@
 =====================================================
 */
 
-.recently-view .swiper-slide {
-    padding-bottom: 20px;
-}
-
-/* .recently-view .swiper.other-common-slider {
-    padding-bottom: 40px;
-} */
 
 .recently-view.section-main {
     padding-bottom: 0;
 }
-
-
-/* .recently-view-area .my-slider,
-.recommendation-area .my-slider,
-.best-deal-area .my-slider,
-.map-view .my-slider {
-    padding-bottom: 16px;
-}
-
-.recently-view-area .section-btn-wrapper,
-.recommendation-area .section-btn-wrapper,
-.best-deal-area .section-btn-wrapper,
-.map-view .section-btn-wrapper {
-    margin-top: 24px;
-} */
-
 
 
 
@@ -767,9 +744,6 @@
 =====||   Recommendation  Section Start Here    ||=====
 =======================================================
 */
-.recommendation.section-main {
-    /* padding-bottom: 40px; */
-}
 
 .m-recommendation .m-tour-cart {
     background-color: var(--my-white);
@@ -785,18 +759,6 @@
 
 
 
-
-
-
-
-/*
-==================================================
-=====||   Best Deal  Section Start Here    ||=====
-==================================================
-*/
-.best-deal.section-main {
-    /* padding-bottom: 40px; */
-}
 
 
 
@@ -817,10 +779,6 @@
 =====||   Hot Destination Section Start Here    ||=====
 =======================================================
 */
-.hot-destination {
-    /* padding: 60px 0; */
-}
-
 
 .hot-destination .head .left {
     max-width: 490px;
@@ -1937,7 +1895,7 @@
     }
 
     .hot-destination .head .left {
-        max-width: 196px;
+        max-width: 190px;
         width: 100%;
     }
 
@@ -2347,6 +2305,10 @@
         aspect-ratio: unset;
         padding: 32px;
     }
+
+    .our-achivements .section-title {
+        font-size: var(--fs-xl);
+    }
 }
 
 
@@ -2357,6 +2319,7 @@
 
 
 @media(max-width:767px) {
+
     .m-bottom-sidebar .grid-view .item {
         aspect-ratio: unset;
         padding: 16px;
@@ -2439,5 +2402,9 @@
 
     .m-trip-plan .items .item .my-btn {
         font-size: var(--fs-xs);
+    }
+
+    .m-trip-plan .items .item .content {
+        padding: 12px;
     }
 }
