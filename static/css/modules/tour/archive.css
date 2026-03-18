@@ -85,13 +85,17 @@ body {
     font-weight: 500;
 }
 
-
+.swiper.other-common-slider {
+    padding-bottom: 0px;
+}
 
 /* =================================|| Destination Details Page ||============================= */
 .destination-details {
     padding: 24px;
     border-radius: var(--radius-xl);
     border: 1px solid #FC5A3180;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .destination-details .section-title {
@@ -243,6 +247,18 @@ body {
 }
 
 @media (max-width:768px) {
+    .filter-sec-wrap {
+        padding-bottom: 0px;
+    }
+
+    .sidebar-and-items {
+        margin-top: 4px;
+    }
+
+    header .header-main {
+        padding: 4px 8px;
+    }
+
     .grids {
         grid-template-columns: repeat(2, 1fr);
         grid-template-columns: repeat(auto-fit, 164px) !important;
