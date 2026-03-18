@@ -2226,7 +2226,6 @@ footer .footer-top .footer-nav-item:hover::after {
 =================||    Footer Bottom    ||===================
 */
 
-
 footer .footer-bottom .left {
     display: flex;
     align-items: flex-end;
@@ -2275,6 +2274,34 @@ footer .footer-bottom {
 
 .footer-bottom .footer-social-icons a:hover svg {
     transform: rotate(360deg);
+}
+
+
+
+.map-view-tabs.tab-btns {
+    background-color: var(--my-primary-color);
+    padding: 12px 32px;
+    border-radius: var(--radius-pill);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: -48px;
+}
+
+.map-view-tabs.tab-btns .tab-btn {
+    color: var(--my-white);
+    border: none;
+    cursor: pointer;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.map-view-tabs.tab-btns .tab-btn.active {
+    background-color: var(--my-secondary-color);
 }
 
 @keyframes pulse {
