@@ -8,6 +8,10 @@
     margin-top: 60px;
 }
 
+.my-w-75 {
+    max-width: 150px;
+}
+
 .auth-wrapper {
     width: 100%;
     height: inherit;
