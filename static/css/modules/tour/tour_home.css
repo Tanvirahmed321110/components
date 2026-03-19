@@ -233,9 +233,6 @@
 =====||   Recent View Start Here    ||=====
 ======================================
 */
-.recently-view-slider.swiper {
-    padding-bottom: 16px;
-}
 
 
 .best-deal-area .best-deal-slider {
@@ -332,6 +329,11 @@
     z-index: 12;
 }
 
+.popular-tour-area .ribbon {
+    padding: 4px 8px;
+    padding-top: 6px;
+    line-height: 1.6;
+}
 
 
 @keyframes offerMove {
@@ -462,7 +464,7 @@
 ======================================
 */
 .popular-tour .head {
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .popular-tour .head .section-sub-title {

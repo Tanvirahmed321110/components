@@ -1413,7 +1413,7 @@
 }
 
 .popular-tour-cart .item-content {
-    padding: 0px 12px 20px 12px;
+    padding: 0px 12px 12px 12px;
 }
 
 .popular-tour-cart .item-content .name {
@@ -2287,7 +2287,7 @@ footer .footer-bottom {
     align-items: center;
     width: fit-content;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     margin: 0 auto;
     margin-top: -48px;
 }
