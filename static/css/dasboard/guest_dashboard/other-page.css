@@ -402,6 +402,15 @@
     flex: 1;
 }
 
+@media (max-width:1439px) {
+    .copon-offer .popular-copons .item {
+        color: var(--my-white-off);
+        border: 0px solid var(--my-white);
+        box-shadow: var(---shadow-1);
+        transition: border .4s linear;
+    }
+}
+
 @media (max-width:1284px) {
     .filter-header .search-input.show-mobile {
         display: flex !important;

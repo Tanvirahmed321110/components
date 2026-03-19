@@ -1319,6 +1319,24 @@
     overflow-x: auto;
 }
 
+
+/* For Ads Modal */
+.ads-modal .modal-footer {
+    border-color: var(--my-border-secondary);
+}
+
+/* ads-modal  */
+.ads-modal .my-video {
+    width: 100%;
+    min-height: 400px;
+    min-width: 480px;
+}
+
+.ads-modal .prev-btn,
+.ads-modal .next-btn {
+    border-color: var(--my-border-primary) !important;
+}
+
 /*
 ========  Title  ========
 */

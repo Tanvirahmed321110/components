@@ -115,9 +115,6 @@ aside.sidebar {
     transition: .3s linear;
     position: relative;
     min-height: 100dvh;
-    /* border-right: 8px solid var(--my-white); */
-    /* position: sticky; */
-    min-width: 220px;
 }
 
 .aside-wrapper {
@@ -462,6 +459,7 @@ aside.active .video-slider-wrap:hover .btn-wrap {
 .ads-modal .my-video {
     width: 100%;
     min-height: 400px;
+    min-width: 480px;
 }
 
 .ads-modal .my-video video {
@@ -738,8 +736,35 @@ circle {
 }
 
 @media (max-width:1439px) {
+    aside.sidebar {
+        flex-basis: 25%;
+        width: 25%;
+        background-color: var(--my-primary-color);
+        color: var(--my-white);
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        box-shadow: var(--shadow-lg);
+        transition: .3s linear;
+        position: relative;
+        min-height: 100dvh;
+    }
+
+    .invite-wishlist.my-grid-remain-450 {
+        grid-template-columns: 1fr 400px;
+    }
+
+    .invite-wishlist .item {
+        align-items: flex-start;
+    }
+
+    .invite-wishlist .item .flex-shring-no img {
+        width: 88px;
+        height: fit-content
+    }
+
     aside {
-        flex-basis: 20%;
+        flex-basis: 30%;
         border-right: 0;
     }
 
@@ -761,46 +786,63 @@ circle {
     header .header-main .item {
         font-size: 15px;
     }
-}
 
-
-
-
-@media (max-width:1080px) {
-    .dasboard-container {
-        width: 100%;
+    .upcoming-trips .items {
+        gap: 16px;
     }
 
-    .main-content-header {
-        padding-right: 20px;
+    .upcoming-trips .items .item {
+        align-items: flex-start;
+        padding: 12px;
     }
 
-    aside.sidebar {
-        flex-basis: 29%;
-        width: 29%;
-        background-color: var(--my-primary-color);
-        color: var(--my-white);
-        display: flex;
-        /* top: 125px; */
-        flex-direction: column;
-        z-index: 2;
-        box-shadow: var(--shadow-lg);
-        transition: .3s linear;
-        position: relative;
-        min-height: 100dvh;
-        /* border-right: 8px solid var(--my-white); */
+    .upcoming-trips .items .item .my-fs-md {
+        font-size: var(--fs-sm);
     }
 
+    .upcoming-trips .items .item .title {
+        font-size: var(--fs-sm) !important;
+        line-height: 1.4;
+    }
 
+    .upcoming-trips .items .item .title {
+        font-size: var(--fs-sm) !important;
+        line-height: 1.4;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .upcoming-trips .items .item .flex-shring-no img {
+        width: 80px;
+        height: auto;
+    }
 
     .total-points {
-        width: 25%;
+        width: 150px;
+        height: 140px;
+        align-items: center;
+        justify-content: center;
     }
 
     .points .items .item {
-        padding: 12px 4px;
+        padding: 16px 4px;
+    }
+
+    #barChart {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+        box-sizing: border-box;
+        height: 310px !important;
+        width: 341px;
+        width: 100%;
     }
 }
+
+
 
 
 @media (max-width:1280px) {
@@ -915,7 +957,37 @@ circle {
 
 }
 
-@media (max-width:1084px) {
+@media (max-width:1080px) {
+    .dasboard-container {
+        width: 100%;
+    }
+
+    .main-content-header {
+        padding-right: 20px;
+    }
+
+    aside.sidebar {
+        flex-basis: 29%;
+        width: 29%;
+        background-color: var(--my-primary-color);
+        color: var(--my-white);
+        display: flex;
+        /* top: 125px; */
+        flex-direction: column;
+        z-index: 2;
+        box-shadow: var(--shadow-lg);
+        transition: .3s linear;
+        position: relative;
+        min-height: 100dvh;
+        /* border-right: 8px solid var(--my-white); */
+    }
+
+
+
+    .points .items .item {
+        padding: 12px 4px;
+    }
+
     .chart.my-grid-350-remain {
         grid-template-columns: 1fr;
     }
@@ -949,7 +1021,10 @@ circle {
     .t-for-work-table {
         max-width: 555px;
     }
+
 }
+
+
 
 
 @media (max-width:991px) {
@@ -1147,7 +1222,7 @@ circle {
     .points-sec {
         display: flex;
         flex-direction: column;
-        padding: 16px;
+        padding: 0px;
     }
 
     .points-text .text {
@@ -1167,11 +1242,11 @@ circle {
 
     .points-sec .items {
         flex-basis: 100%;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .points .items .item {
-        padding: 16px 4px;
+        padding: 16px 8px;
         border-radius: var(--radius-xl);
         box-shadow: 0px 1px 2px 0px #0A0D120D;
     }
@@ -1417,6 +1492,17 @@ circle {
     .my-btn-sm svg {
         width: 22px;
         height: 20px;
+    }
+
+    /* ads-modal  */
+    .ads-modal .my-video {
+        width: 100%;
+        min-height: 400px;
+        min-width: 320px;
+    }
+
+    .invite-wishlist.my-grid-remain-450 {
+        grid-template-columns: 1fr;
     }
 }
 
