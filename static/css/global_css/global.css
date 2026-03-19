@@ -1315,6 +1315,10 @@
     padding: clamp(32px, 5vw, 80px) 0;
 }
 
+.common-table-1-wrapper {
+    overflow-x: auto;
+}
+
 /*
 ========  Title  ========
 */

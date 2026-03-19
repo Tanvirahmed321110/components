@@ -117,6 +117,7 @@ aside.sidebar {
     min-height: 100dvh;
     /* border-right: 8px solid var(--my-white); */
     /* position: sticky; */
+    min-width: 220px;
 }
 
 .aside-wrapper {
@@ -278,7 +279,7 @@ aside .bottom {
 */
 
 .sidebar .bottom .miscellaneous-nav .item {
-    font-size: var(--fs-md);
+    /* font-size: var(--fs-md); */
 }
 
 .sidebar .bottom .miscellaneous-nav {
@@ -745,7 +746,7 @@ circle {
 
 
     .booking-upcoming {
-        grid-template-columns: 270px 1fr 300px;
+        grid-template-columns: 260px 1fr 260px;
     }
 
     .points .total-points .progress-ring {
