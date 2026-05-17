@@ -1521,7 +1521,7 @@
 header {
     background-color: var(--my-white);
     padding: 0px 0px 0px 0px;
-    z-index: 2;
+    z-index: 3;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }

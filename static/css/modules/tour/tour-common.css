@@ -95,6 +95,30 @@ header .module-header-main .m-item .module-h-dropdwon .d-item.active {
 ======================================
 */
 
+
+ .suggestion-dropdown {
+    position: absolute;
+    background-color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 0px 0px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* remove top shadow */
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-dropdown .item {
+    padding: 4px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.suggestion-dropdown .item:hover {
+    color: var(--my-secondary-color);
+}
+
 .g-hero {
     margin-top: 32px;
 }
